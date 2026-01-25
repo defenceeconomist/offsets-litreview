@@ -1,0 +1,31 @@
+project:
+  output-dir: _output
+  type: website
+  title: "Offsets"
+
+website:
+  title: "Offsets"
+  sidebar: 
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents: 
+      - text: "Welcome"
+        href: index.qmd
+      - section: "PRISMA"
+        contents:
+        - auto: "prisma/**.qmd"
+      - section: "Article Notes"
+        href: article-notes.qmd
+        contents:
+        - auto: "article-notes/**.qmd"
+      - section: Reports
+        contents:
+        - auto: "reports/**.qmd"
+format:
+  html:
+    html-math-method: katex
+
+toc: true
+number-sections: true
+bibliography: references.bib  

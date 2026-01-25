@@ -1,0 +1,106 @@
+---
+title: "Death spiral of European offset?"
+date: 2021-01-20
+citation:
+  type: article-journal
+  author:
+    - family: Matthews
+      given: Ron
+    - family: Anicetti
+      given: Jonata
+  container-title: "Defense & Security Analysis"
+  volume: 36
+  issue: 4
+  page: 453-454
+  issued: 2021-01-20
+  doi: 10.1080/14751798.2020.1857917
+categories:
+  - Defence procurement
+  - Offsets
+  - EU law & regulation
+  - Defence industrial policy
+keywords:
+  - Procurement Directive 2009/81/EC
+  - Article 346
+  - EDTIB
+  - Direct offsets
+  - Indirect offsets
+  - Infringement proceedings
+  - Government-to-government procurement
+  - OCCAR
+  - NATO
+tags:
+  - European Union
+  - defence offsets
+  - procurement regulation
+  - competition policy
+  - industrial participation
+  - defence budgets
+  - Brexit
+  - Covid-19
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Summary
+
+This short article reviews how EU Procurement Directive 2009/81/EC has constrained defence offsets by narrowing the use of Article 346 derogations. It argues that indirect offsets have largely disappeared in Europe and direct offsets are declining, aligning with a broader global trend among advanced economies. The authors contend that many offset policies historically imposed ambitious quotas and penalty structures that delivered limited durable industrial upgrading while embedding cost premia and anti-competitive behaviours. Evidence presented is suggestive rather than comprehensive (Commission reporting, enforcement actions, and contractor survey indications). The paper raises the possibility that offsets persist via extra-Directive channels (collaboration, OCCAR, G2G/FMS), including “under the table” arrangements, and asks whether the Directive accelerates EDTIB consolidation under fiscal constraints and post-Brexit dynamics.
+
+## Key takeaways
+
+- Directive 2009/81/EC reduced routine reliance on Article 346 to justify offset demands.
+- Indirect offsets effectively eradicated; direct offsets sharply constrained.
+- Decline in offsets mirrors a global shift among advanced economies (e.g., reduced US liabilities; Australia abandoned offsets; Kuwait suspended its programme).
+- Offset regimes often failed to deliver high-value investment/employment; may increase procurement cost (premia, inefficiency, anti-competitive behaviour).
+- Enforcement increased post-transposition: formal notices (2016) and infringement proceedings (2018).
+- Offsets may persist via extra-Directive procurement routes (collaborative programmes, OCCAR, G2G/FMS), including informal/implicit forms.
+
+## Realist synthesis coding (CMO)
+
+```yaml
+cmo:
+  - id: EU-Offsets-Directive-01
+    context:
+      - Mature European defence-industrial markets with legal constraints on domestic preference
+      - EU competitive tendering norm; derogations permitted only on genuine national security grounds (Article 346)
+    mechanism:
+      - Legal tightening reduces feasibility of mandated offset quotas
+      - Buyers and suppliers shift procurement into exempt channels (collaboration, OCCAR, G2G/FMS)
+      - Substitution of formal offsets into informal/implicit industrial participation (“under the table”)
+    outcome:
+      - Indirect offsets collapse; direct offsets decline
+      - Higher share of procurement routed through extra-Directive mechanisms
+      - Potential strengthening of EDTIB via collaboration (rather than offsets)
+    strength_of_evidence: low-to-moderate
+    notes:
+      - Evidence base described as “patchy”; relies on Commission reporting & enforcement signals
+```
+
+## Meta (indexing)
+
+```yaml
+meta:
+  countries:
+    - EU
+    - UK
+    - France
+    - Germany
+  institutions:
+    - European Commission
+    - European Court of Justice
+    - OCCAR
+    - NATO
+  concepts:
+    - offsets
+    - industrial participation
+    - derogations
+    - competition
+    - procurement reform
+    - defence industrial base
+    - informal compliance
+  laws_policies:
+    - 2009/81/EC
+    - Article 346
+```

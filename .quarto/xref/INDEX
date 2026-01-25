@@ -70,5 +70,14 @@
   },
   "reports/02-research-strategy.qmd": {
     "02-research-strategy.html": "78f7635b"
+  },
+  "reports/realist-evidence-synthesis.qmd": {
+    "realist-evidence-synthesis.html": "ba69a4c4"
+  },
+  "reports/03-screening.qmd": {
+    "03-screening.html": "86884929"
+  },
+  "prisma/scorpus/search_log_annex.qmd": {
+    "search_log_annex.html": "a215d85c"
   }
 }
