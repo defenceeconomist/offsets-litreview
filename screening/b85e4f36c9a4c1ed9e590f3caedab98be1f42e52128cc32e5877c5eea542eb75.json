@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "Defence Offsets and Industrial Development",
+    "author_year": "Bezuidenhout, 2022",
+    "document_type": "academic"
+  },
+  "screening": {
+    "addresses_offsets_policy": "Yes",
+    "addresses_alliance_outcomes": "Partial",
+    "identifies_mechanisms": "Yes",
+    "specifies_contextual_conditions": "Yes",
+    "positive_or_mixed_cases": "Yes",
+    "negative_or_friction_cases": "Yes"
+  },
+  "evidence_assessment": {
+    "evidence_type": "comparative_analysis",
+    "transparency_level": "Medium",
+    "cmo_extractability": "High"
+  },
+  "analytic_notes": {
+    "key_contexts": [
+      "Emerging economies using offsets to build defence-industrial capacity",
+      "Arms imports from advanced supplier states",
+      "Variation in domestic absorptive and institutional capacity"
+    ],
+    "key_mechanisms": [
+      "Technology transfer and licensed production via offset obligations",
+      "Supplier incentives to integrate local firms into defence supply chains",
+      "Learning-by-doing and capability accumulation over repeated programmes"
+    ],
+    "key_outcomes": [
+      "Partial upgrading of domestic defence industries",
+      "Mixed effects on delivery timelines and cost efficiency",
+      "Conditional spillovers into civilian industrial sectors"
+    ],
+    "noted_risks_or_mitigations": [
+      "Risk of shallow transfer where absorptive capacity is low",
+      "Alliance friction from schedule slippage and renegotiation",
+      "Mitigation through phased offsets and capability-matched requirements"
+    ]
+  },
+  "decision": {
+    "inclusion_decision": "Include",
+    "confidence": "High",
+    "exclusion_reason": null
+  }
+}

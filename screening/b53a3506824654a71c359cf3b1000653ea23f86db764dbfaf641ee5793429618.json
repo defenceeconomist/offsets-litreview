@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Corruption Risks in Defence Offsets",
+    "author_year": "Transparency International, 2004",
+    "document_type": "think_tank"
+  },
+  "screening": {
+    "addresses_offsets_policy": "Yes",
+    "addresses_alliance_outcomes": "Partial",
+    "identifies_mechanisms": "Partial",
+    "specifies_contextual_conditions": "Yes",
+    "positive_or_mixed_cases": "No",
+    "negative_or_friction_cases": "Yes"
+  },
+  "evidence_assessment": {
+    "evidence_type": "legal_policy_analysis",
+    "transparency_level": "Medium",
+    "cmo_extractability": "Medium"
+  },
+  "analytic_notes": {
+    "key_contexts": [
+      "High-value defence procurement with mandated offsets",
+      "Weak transparency and oversight in offset contracting",
+      "Cross-border arms trade involving multiple suppliers and governments"
+    ],
+    "key_mechanisms": [
+      "Offsets increase contractual complexity, creating opaque side agreements",
+      "Discretion in offset fulfilment enables rent-seeking and influence-peddling",
+      "Lack of standardisation undermines monitoring and accountability"
+    ],
+    "key_outcomes": [
+      "Increased corruption risk in defence procurement",
+      "Potential erosion of trust between partner governments",
+      "Programme delays and inefficiencies"
+    ],
+    "noted_risks_or_mitigations": [
+      "Corruption and reputational risk for allied programmes",
+      "Mitigation via transparency requirements and independent audit"
+    ]
+  },
+  "decision": {
+    "inclusion_decision": "Include_contextual",
+    "confidence": "Medium",
+    "exclusion_reason": null
+  }
+}

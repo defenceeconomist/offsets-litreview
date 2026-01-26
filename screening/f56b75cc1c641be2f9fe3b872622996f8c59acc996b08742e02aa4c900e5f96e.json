@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "POWER PRIMARY 2025",
+    "author_year": "Unknown, c.2025",
+    "document_type": "policy"
+  },
+  "screening": {
+    "addresses_offsets_policy": "Partial",
+    "addresses_alliance_outcomes": "Yes",
+    "identifies_mechanisms": "Partial",
+    "specifies_contextual_conditions": "Yes",
+    "positive_or_mixed_cases": "Partial",
+    "negative_or_friction_cases": "Partial"
+  },
+  "evidence_assessment": {
+    "evidence_type": "policy",
+    "transparency_level": "Low",
+    "cmo_extractability": "Medium"
+  },
+  "analytic_notes": {
+    "key_contexts": [
+      "Multinational defence cooperation and alliance-based force development",
+      "Strategic competition and supply-chain resilience concerns",
+      "Industrial policy linked to defence capability and readiness"
+    ],
+    "key_mechanisms": [
+      "Industrial participation used to strengthen domestic and allied supply chains",
+      "Capability co-development to improve interoperability and delivery speed",
+      "Policy alignment as a coordination mechanism among partners"
+    ],
+    "key_outcomes": [
+      "Enhanced alliance interoperability and resilience",
+      "Improved readiness through coordinated industrial planning",
+      "Potential trade-offs between national industrial goals and collective efficiency"
+    ],
+    "noted_risks_or_mitigations": [
+      "Risk of fragmentation if industrial priorities diverge",
+      "Mitigation via common standards and joint programme governance"
+    ]
+  },
+  "decision": {
+    "inclusion_decision": "Include_contextual",
+    "confidence": "Low",
+    "exclusion_reason": null
+  }
+}

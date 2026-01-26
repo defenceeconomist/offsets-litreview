@@ -1,0 +1,1322 @@
+[
+  # Records for 01‑introduction‑and‑overview.pdf
+  {
+    cmo_id: "intro_overview_CMO_001",
+    citekey: "intro_overview",
+    country: [],
+    programme: [],
+    locator: "p. 1",
+    quote: "An off‑the‑shelf purchase might involve compromise over the system's capability and will generate little domestic economic benefit",
+    paraphrase: "Off‑the‑shelf defence purchases from foreign suppliers offer the lowest initial cost but provide almost no domestic industrial work and create a dependence on vendors for spares and upgrades, compromising capability and economic benefits.",
+    C:
+      {
+        offset_policy_design: [],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["supply_dependency_risk", "local_industry_neglect"],
+        mechanism_narrative: "Because off‑the‑shelf contracts leave all development and production work with the foreign vendor, there is no incentive to build local capacity; this limits domestic employment and makes the buyer dependent on the seller for future support and upgrades."
+      },
+    O:
+      {
+        outcomes_positive: ["lower_initial_costs"],
+        outcomes_negative: ["limited_domestic_benefits", "supply_dependency", "capability_compromise"]
+      },
+    rq_tags: ["RQ1"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["theory", "expert_commentary"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "intro_overview_CMO_002",
+    citekey: "intro_overview",
+    country: [],
+    programme: [],
+    locator: "p. 2",
+    quote: "Restrictions are usually imposed on the type of goods eligible for inclusion towards the offset, and certain types of work might be weighted more heavily",
+    paraphrase: "Defence offset agreements often restrict the goods that count toward obligations and apply higher multipliers to R&D or similar activities, steering suppliers toward high‑value local work rather than low‑value purchases.",
+    C:
+      {
+        offset_policy_design: ["direct", "indirect", "R_and_D"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["weighting_incentive", "eligibility_constraints"],
+        mechanism_narrative: "By weighting research and high‑technology work more favourably and restricting eligible goods, the purchaser encourages suppliers to invest in domestic R&D and technology transfer instead of satisfying obligations with unrelated, low‑value items."
+      },
+    O:
+      {
+        outcomes_positive: ["incentivised_R&D", "controlled_scope", "improved_technology_transfer"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2", "RQ3"],
+    relevance_score: 2,
+    confidence: 0.55,
+    evidence_type: ["expert_commentary"],
+    direction: "positive"
+  },
+
+  # Records for 03‑the‑defence‑offsets‑policy‑in‑australia.pdf
+  {
+    cmo_id: "australia_offsets_CMO_001",
+    citekey: "australia_offsets",
+    country: ["Australia"],
+    programme: [],
+    locator: "p. 3",
+    quote: "Such arrangements merely shift the initiative away from the purchaser and give suppliers scope for opportunism at the expense of the buyer",
+    paraphrase: "Mandatory offset schemes in Australia remove the buyer's ability to negotiate flexible contracts and instead give suppliers greater leverage. As a result, suppliers behave opportunistically and the scheme offers no additional benefit over freely negotiated arrangements.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["opportunism_by_supplier", "workshare_politicisation"],
+        mechanism_narrative: "Because offsets are mandated irrespective of the contract’s suitability, suppliers can manipulate workshare to their advantage, reducing the purchaser’s bargaining power and politicising the distribution of industrial work."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["reduced_buyer_power", "supplier_opportunism", "inefficiency"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["theory", "expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "australia_offsets_CMO_002",
+    citekey: "australia_offsets",
+    country: ["Australia"],
+    programme: [],
+    locator: "p. 4",
+    quote: "cost and delivery time penalties must be justified for each item in terms of their contribution to independent supply and support compared with alternatives",
+    paraphrase: "Australian policy encourages domestic involvement in design, development and production so that equipment can be maintained and adapted locally. Higher costs and schedule delays are accepted only when they enhance independence and support compared with foreign alternatives.",
+    C:
+      {
+        offset_policy_design: ["local_content", "co_production"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["self_reliance_incentive", "learning_by_doing"],
+        mechanism_narrative: "By involving domestic firms in production and support, the government builds knowledge and facilities necessary for self‑reliance. Accepting higher costs and delays acts as an investment in independence and operational readiness."
+      },
+    O:
+      {
+        outcomes_positive: ["independent_supply", "knowledge_transfer", "industrial_capability"],
+        outcomes_negative: ["higher_costs", "delivery_delays"]
+      },
+    rq_tags: ["RQ2", "RQ3"],
+    relevance_score: 3,
+    confidence: 0.75,
+    evidence_type: ["official_report", "expert_commentary"],
+    direction: "mixed"
+  },
+
+  # Records for 04‑offsets‑and‑weapons‑procurement‑the‑belgium‑experience.pdf
+  {
+    cmo_id: "belgium_offsets_CMO_001",
+    citekey: "belgium_offsets",
+    country: ["Belgium"],
+    programme: [],
+    locator: "p. 85",
+    quote: "Offsets represent a means of ensuring economic development while exercising a certain degree of leverage over the contractor",
+    paraphrase: "Belgian policymakers see offsets not primarily as a way to reduce purchase price but as tools to secure domestic economic benefits. By imposing local content and technology transfer obligations, they leverage foreign suppliers to create jobs, grow high‑tech industries and improve the balance of payments.",
+    C:
+      {
+        offset_policy_design: ["direct", "indirect", "technology_transfer", "local_content"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["leverage_for_economic_development", "supply_chain_integration_incentive"],
+        mechanism_narrative: "Requiring suppliers to invest in domestic production and transfer know‑how gives the government bargaining power to achieve macroeconomic goals such as employment growth, high‑technology development and improved trade balance."
+      },
+    O:
+      {
+        outcomes_positive: ["employment_growth", "high_tech_industry_growth", "balance_of_payments_improvement", "technology_transfer_success"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ4"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["comparative_analysis", "official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "belgium_offsets_CMO_002",
+    citekey: "belgium_offsets",
+    country: ["Belgium"],
+    programme: [],
+    locator: "p. 86",
+    quote: "Offsets are not only market‑distorting, but also economically inefficient, especially in the long‑run",
+    paraphrase: "The Belgian experience shows that offsets distort markets and create long‑term inefficiencies. Firms become dependent on subsidised orders and lobby for protection, leading to overcapacity, limited cooperation, and a failure to restructure the defence industry.",
+    C:
+      {
+        offset_policy_design: ["direct", "indirect"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["market_distortion", "rent_seeking_brokers", "dependency_on_offsets"],
+        mechanism_narrative: "By tying defence contracts to domestic workshare and unrelated purchases, offsets introduce rigidities and encourage firms to seek political protection rather than competitiveness, creating dependency and preventing efficient restructuring."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["market_distortion", "long_term_inefficiency", "dependency", "overcapacity", "heavy_lobbying"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["comparative_analysis", "expert_commentary"],
+    direction: "negative"
+  },
+
+  # Records for 05‑in‑search‑of‑a‑strategy‑the‑evolution‑of‑canadian‑defence‑industrial‑and‑regional‑benefits‑policy.pdf
+  {
+    cmo_id: "canada_offsets_CMO_001",
+    citekey: "canada_offsets",
+    country: [],
+    programme: [],
+    locator: "p. 107",
+    quote: "Industrial offsets are viewed negatively because they promote inefficient allocation of resources, undermine competitiveness and productivity, and distort trade",
+    paraphrase: "Although industrial offsets are widely used, they are criticised for distorting trade, undermining competitiveness and allocating resources inefficiently. States nevertheless pursue them to secure political, economic, social and security objectives and to avoid dependence on foreign suppliers.",
+    C:
+      {
+        offset_policy_design: ["direct", "indirect", "technology_transfer"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["political_incentives", "security_motivations", "resource_distortion"],
+        mechanism_narrative: "Governments accept the inefficiencies of offsets because they prioritise job creation, regional development and supply security; these political and security incentives outweigh concerns about economic efficiency."
+      },
+    O:
+      {
+        outcomes_positive: ["maintained_defence_industrial_capacity", "avoidance_of_foreign_dependence"],
+        outcomes_negative: ["inefficient_resource_allocation", "trade_distortion", "reduced_competitiveness"]
+      },
+    rq_tags: ["RQ3"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["expert_commentary", "theory"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "canada_offsets_CMO_002",
+    citekey: "canada_offsets",
+    country: ["Canada"],
+    programme: [],
+    locator: "p. 108",
+    quote: "The net result has not only meant the inefficient allocation of limited defence resources, but also inefficient and inconsistent offset decisions",
+    paraphrase: "Canadian defence procurement decisions are driven by industrial and regional benefits rather than security needs. This political focus results in inefficient allocation of resources and inconsistent offset decisions, as officials try to balance economic and political pressures.",
+    C:
+      {
+        offset_policy_design: ["local_content", "indirect"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["political_influence", "inefficient_decision_making"],
+        mechanism_narrative: "When offset policies aim primarily at regional economic gains, procurement officials choose suppliers and packages based on political distribution rather than military utility, leading to inconsistent decisions and inefficient use of funds."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["inefficient_resource_allocation", "inconsistent_offsets", "neglected_security"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["case_study", "expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "canada_offsets_CMO_003",
+    citekey: "canada_offsets",
+    country: ["Canada"],
+    programme: ["EH‑101"],
+    locator: "p. 109",
+    quote: "The cancellation serves as a useful indicator of the underlying structural and political impediments to the development of a successful long‑term defence offset strategy",
+    paraphrase: "The termination of Canada's EH‑101 helicopter offset package underscores how structural and political barriers can derail offset programmes. Cancelling the programme harmed military capabilities and illustrates the difficulty of sustaining a long‑term offset strategy in the face of domestic political constraints.",
+    C:
+      {
+        offset_policy_design: ["co_production", "licensed_production"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["political_impediments", "programme_fragmentation"],
+        mechanism_narrative: "Political opposition and institutional obstacles prevented Canada from implementing the EH‑101 offset plan, leading to its cancellation and depriving the armed forces of anticipated capabilities."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["capability_gap", "programme_cancellation", "undermined_trust"]
+      },
+    rq_tags: ["RQ5"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["case_study"],
+    direction: "negative"
+  },
+
+  # Records for 06‑offsets‑and‑french‑arms‑exports.pdf
+  {
+    cmo_id: "france_offsets_CMO_001",
+    citekey: "france_offsets",
+    country: ["Belgium", "Denmark", "Netherlands", "Norway", "Germany", "France", "United States"],
+    programme: ["F‑16", "Mirage F1"],
+    locator: "p. 139",
+    quote: "General Dynamics, bidding with the F‑16, estimated that their offset would generate jobs for up to 5000 staff",
+    paraphrase: "In the 1974 NATO fighter competition, both Dassault and General Dynamics offered large offset packages—high local manufacturing shares, job creation and price guarantees—to secure the order. These generous offsets influenced the buyers’ decision and set a precedent for future competitions.",
+    C:
+      {
+        offset_policy_design: ["co_production", "local_content", "technology_transfer"],
+        procurement_context: ["multinational_programme", "competitive_tender"]
+      },
+    M:
+      {
+        mechanism_label: ["supply_chain_integration_incentive", "bid_competition_incentive"],
+        mechanism_narrative: "To win a large multinational order, suppliers promised to place substantial manufacturing work locally and create thousands of jobs. Aligning industrial benefits with procurement aims made their bids more attractive and shaped the contract outcome."
+      },
+    O:
+      {
+        outcomes_positive: ["job_creation", "industrial_participation", "price_guarantee", "precedent_for_future_offsets"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ4"],
+    relevance_score: 3,
+    confidence: 0.75,
+    evidence_type: ["case_study", "official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "france_offsets_CMO_002",
+    citekey: "france_offsets",
+    country: ["United States", "Belgium", "Denmark", "Netherlands", "Norway", "Germany"],
+    programme: ["NATO fighter replacement"],
+    locator: "p. 140",
+    quote: "if US arms sales to NATO fell then there was the possibility that American forces in Europe would be cut",
+    paraphrase: "U.S. legislation linked arms sales revenues to the cost of stationing U.S. troops in Europe, implying that reduced arms sales could trigger troop withdrawals. This politicised offsets and created anxiety among European buyers, turning procurement into a tool of strategic leverage.",
+    C:
+      {
+        offset_policy_design: ["indirect"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["political_leverage", "threat_of_troop_withdrawal"],
+        mechanism_narrative: "By offsetting troop costs against arms sales, Congress introduced a condition that reductions in purchases could lead to reduced U.S. military presence. This pressured allies and politicised procurement decisions."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["political_pressure", "fear_of_troop_withdrawal", "alliance_strain"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report", "expert_commentary"],
+    direction: "negative"
+  },
+
+  # Records for 07‑offset‑benefits‑in‑greek‑defence‑procurement‑policy‑developments‑and‑some‑empirical‑evidence.pdf
+  {
+    cmo_id: "greece_offsets_CMO_001",
+    citekey: "greece_offsets",
+    country: ["Greece"],
+    programme: [],
+    locator: "p. 168",
+    quote: "Expenditures on goods in Categories I and II are weighted with a base factor of 2 or 3, while Category III goods are weighted 18",
+    paraphrase: "Greek offset directives divide obligations into three categories. Co‑production and defence purchases in Categories I and II receive high credit (weights 2 or 3), whereas indirect offsets like exports and tourism receive a low credit (weight 18). Suppliers must post a 10% performance guarantee and replace any unfulfilled transactions, ensuring offsets prioritise domestic manufacturing and technology transfer.",
+    C:
+      {
+        offset_policy_design: ["co_production", "local_content", "indirect", "technology_transfer", "licensed_production"],
+        procurement_context: ["single_nation_procurement", "high_tech_sensitive"]
+      },
+    M:
+      {
+        mechanism_label: ["weighting_incentive", "performance_guarantee", "supply_chain_integration_incentive"],
+        mechanism_narrative: "The weighting factors encourage suppliers to invest in domestic production and technology rather than peripheral activities, while the performance guarantee and replacement requirement ensure that commitments are fulfilled, thus focusing offsets on tangible industrial benefits."
+      },
+    O:
+      {
+        outcomes_positive: ["prioritised_co_production", "technology_transfer", "compliance_assurance"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2", "RQ3"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["official_report", "interview"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "greece_offsets_CMO_002",
+    citekey: "greece_offsets",
+    country: ["Greece"],
+    programme: [],
+    locator: "p. 164",
+    quote: "Offsets might prove beneficial for the development of the Greek defence industry, provided that the appropriate policy measures create a defence industrial base capable of assimilating future offset benefits programmes",
+    paraphrase: "Offsets will only benefit Greece if policies build a capable defence industrial base. Without domestic capacity to absorb technology and work, offset programmes risk failing to deliver meaningful development.",
+    C:
+      {
+        offset_policy_design: ["co_production", "technology_transfer", "local_content"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["technology_absorption", "industrial_base_maturity"],
+        mechanism_narrative: "The effectiveness of offsets depends on the recipient's ability to learn and integrate new technologies. A weak industrial base cannot assimilate transfers, so benefits materialise only when capacity is developed alongside offsets."
+      },
+    O:
+      {
+        outcomes_positive: ["industrial_development", "successful_technology_absorption"],
+        outcomes_negative: ["ineffectiveness_of_offsets"]
+      },
+    rq_tags: ["RQ2", "RQ5"],
+    relevance_score: 2,
+    confidence: 0.65,
+    evidence_type: ["expert_commentary"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "greece_offsets_CMO_003",
+    citekey: "greece_offsets",
+    country: ["Greece"],
+    programme: [],
+    locator: "p. 163",
+    quote: "Co‑production, work‑sharing and licensed production save R&D costs, provide work for skilled labour, maintain domestic defence capacity and offer access to new technology",
+    paraphrase: "Shared‑production procurement methods such as co‑production and licensing reduce duplicative R&D expenditures, sustain skilled employment, maintain defence capacity and give domestic firms access to advanced technology, partly compensating for the high cost of defence equipment.",
+    C:
+      {
+        offset_policy_design: ["co_production", "licensed_production", "technology_transfer"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["cost_sharing", "learning_by_doing", "technology_absorption"],
+        mechanism_narrative: "By sharing development and production with foreign partners, Greece avoids duplicating costly R&D and gains access to new know‑how. Domestic firms learn through participation, preserve skills and balance the national trade account."
+      },
+    O:
+      {
+        outcomes_positive: ["reduced_R&D_costs", "employment_for_skilled_labour", "maintained_defence_capacity", "technology_gain"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2", "RQ4"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["expert_commentary"],
+    direction: "positive"
+  },
+
+  # Records for 08‑defense‑industrialisation‑through‑offsets‑the‑case‑of‑japan.pdf
+  {
+    cmo_id: "japan_offsets_CMO_001",
+    citekey: "japan_offsets",
+    country: ["Japan"],
+    programme: [],
+    locator: "p. 177",
+    quote: "Technology transfer, particularly offsets, has been the driving force behind the development of post‑war Japan's defense industry",
+    paraphrase: "Japan’s defence sector grew into a substantial and diversified industry by relying on technology transfer through licensed production offsets. These agreements allowed Japanese firms to absorb foreign know‑how and, by the 1990s, supply over 90 per cent of the country's defence needs.",
+    C:
+      {
+        offset_policy_design: ["licensed_production", "technology_transfer"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["technology_absorption", "learning_by_doing", "supply_chain_integration_incentive"],
+        mechanism_narrative: "Licensed production agreements provided Japanese companies with access to advanced technology and production processes. Repeated use of these offsets allowed them to master and improve the technology, building a robust domestic defence industry."
+      },
+    O:
+      {
+        outcomes_positive: ["strong_defence_industrial_base", "high_domestic_supply", "technology_independence"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ4", "RQ2"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["case_study", "descriptive_statistics"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "japan_offsets_CMO_002",
+    citekey: "japan_offsets",
+    country: ["Japan", "United States"],
+    programme: ["Patriot"],
+    locator: "p. 199",
+    quote: "The Defense Department rejected the request that Japanese firms have access to all software in co‑producing the Patriot missile",
+    paraphrase: "U.S. export control restrictions limited Japanese access to critical software and technical data for the co‑produced Patriot missile. Fears of technology leakage led the Pentagon to withhold guidance and target‑identification software, hampering full technology transfer and leaving Japan dependent on U.S. support.",
+    C:
+      {
+        offset_policy_design: ["licensed_production", "technology_transfer"],
+        procurement_context: ["export_controls_present", "ITAR_like_constraints"]
+      },
+    M:
+      {
+        mechanism_label: ["export_control_friction", "technology_access_restriction"],
+        mechanism_narrative: "Concerns about potential diversion of sensitive technology prompted the U.S. to restrict Japanese access to key software and data. These controls weakened the effectiveness of the offset by denying Japan the know‑how needed to operate and support the system independently."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["incomplete_technology_transfer", "continued_dependence", "program_constraints"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 3,
+    confidence: 0.75,
+    evidence_type: ["official_report", "expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "japan_offsets_CMO_003",
+    citekey: "japan_offsets",
+    country: ["Japan"],
+    programme: ["ASM‑1", "SSM‑1"],
+    locator: "p. 200",
+    quote: "Imported know‑how has been channelled to specific contractors; the ASM‑1 anti‑ship missile, developed to replace the US‑supplied Harpoon, emerged from this strategy",
+    paraphrase: "Japan’s defence agency targeted the diffusion of foreign technology to a small group of contractors. Combining imported know‑how with domestic R&D enabled these firms to develop indigenous missiles like the ASM‑1 and SSM‑1, demonstrating successful technology absorption and learning‑by‑doing.",
+    C:
+      {
+        offset_policy_design: ["technology_transfer", "co_production", "R_and_D"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["industrial_targeting", "learning_by_doing", "technology_absorption"],
+        mechanism_narrative: "By concentrating imported technology in selected firms, the government ensured focused assimilation and encouraged joint development. These firms leveraged the knowledge to create new domestic systems, bolstering Japan’s autonomous defence capabilities."
+      },
+    O:
+      {
+        outcomes_positive: ["indigenous_missile_development", "enhanced_R&D_capabilities", "industry_growth"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ4", "RQ2"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["case_study"],
+    direction: "positive"
+  },
+
+  # Records for 09‑saudi‑arabia‑and‑offsets.pdf
+  {
+    cmo_id: "saudi_offsets_CMO_001",
+    citekey: "saudi_offsets",
+    country: ["Saudi Arabia"],
+    programme: [],
+    locator: "p. 226",
+    quote: "Offset defence purchases may be very expensive because of technology transfer ... sellers ... consider it their right to recoup these costs",
+    paraphrase: "Saudi Arabia seeks technology transfer through offsets, but suppliers often raise prices to recover their R&D investment. This makes offset contracts costly and reduces their economic attractiveness, even when governments recoup some costs through export levies.",
+    C:
+      {
+        offset_policy_design: ["technology_transfer", "co_production", "licensed_production"],
+        procurement_context: ["single_nation_procurement", "high_tech_sensitive"]
+      },
+    M:
+      {
+        mechanism_label: ["cost_premium_for_technology", "supplier_price_recoupment"],
+        mechanism_narrative: "Because the seller has invested heavily in developing the technology, it increases the contract price to recover these costs when transferring technology through offsets. Administrative expenses further inflate the price, making the deal expensive for the buyer."
+      },
+    O:
+      {
+        outcomes_positive: ["access_to_technology"],
+        outcomes_negative: ["higher_costs", "budget_strain", "limited_economic_gain"]
+      },
+    rq_tags: ["RQ3"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["official_report", "expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "saudi_offsets_CMO_002",
+    citekey: "saudi_offsets",
+    country: ["Saudi Arabia"],
+    programme: [],
+    locator: "p. 227",
+    quote: "The technology transfer sounds very attractive, but the use of the technology requires a highly skilled workforce ... It makes the buying nation, at best, a branch factory",
+    paraphrase: "Technology transfer through offsets promises modern know‑how, but without a skilled workforce and strong R&D capacity the buyer cannot exploit it. In such cases the country merely becomes an assembly branch of the foreign supplier and gains little lasting capability.",
+    C:
+      {
+        offset_policy_design: ["technology_transfer", "licensed_production", "training"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["skills_gap_constraints", "technology_absorption_limitation"],
+        mechanism_narrative: "Effective technology transfer requires engineers and technicians capable of learning and improving the imported processes. Where such skills are scarce, offsets yield only assembly work and fail to build indigenous competence, perpetuating dependence."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["limited_technology_transfer", "continued_dependence", "branch_factory_status"]
+      },
+    rq_tags: ["RQ3", "RQ5"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["theory", "expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "saudi_offsets_CMO_003",
+    citekey: "saudi_offsets",
+    country: ["Saudi Arabia"],
+    programme: [],
+    locator: "p. 226",
+    quote: "Offsets can offer a way of buying into a market ... Joint ventures established under offset regimes can offer continued access after the primary deal has ended",
+    paraphrase: "For foreign companies, offset requirements encourage the creation of joint ventures that provide a pathway into Saudi Arabia’s closed markets. By offering local economic benefits, suppliers secure a long‑term presence in the Kingdom even after the defence contract ends.",
+    C:
+      {
+        offset_policy_design: ["FDI", "indirect"],
+        procurement_context: ["single_nation_procurement", "high_tech_sensitive"]
+      },
+    M:
+      {
+        mechanism_label: ["market_entry_incentive", "trusted_partnering"],
+        mechanism_narrative: "Offset policies require foreign firms to invest locally and partner with Saudi companies. These investments open otherwise closed markets and build trust, allowing the supplier to continue operating in the country long after the initial sale."
+      },
+    O:
+      {
+        outcomes_positive: ["access_to_closed_markets", "long_term_business_partnerships", "economic_diversification"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2", "RQ4"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["case_study"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "saudi_offsets_CMO_004",
+    citekey: "saudi_offsets",
+    country: ["Saudi Arabia"],
+    programme: [],
+    locator: "p. 228",
+    quote: "Manufacture and assembly under licence is difficult because the equipment share is small and there is a shortage of skilled workers, so there is no pressing requirement to establish factories",
+    paraphrase: "Licensed manufacture and assembly of defence systems is impractical in Saudi Arabia. Defence contracts contain little hardware content and the country’s small population and limited skilled workforce mean there is no need to build defence‑specific factories; focus should instead be on dual‑use industries.",
+    C:
+      {
+        offset_policy_design: ["licensed_production", "co_production"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["skills_gap_constraints", "economic_scale_limitation"],
+        mechanism_narrative: "Because defence contracts include little equipment for local manufacture and skilled labour is scarce, establishing local assembly plants would yield limited benefits. Thus, licensed production offers little incentive for building a defence industrial base."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["limited_local_production", "ineffective_technology_transfer"]
+      },
+    rq_tags: ["RQ5"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "spain_offsets_CMO_001",
+    citekey: "spain_offsets",
+    country: ["Spain"],
+    programme: ["F-18"],
+    locator: "p. 8",
+    quote: "offset programme was used to justify F-18s because it would create jobs and transfer technology",
+    paraphrase: "Spain justified its expensive F‑18 fighter purchase by promising that offset obligations would create jobs and transfer technology to domestic high‑tech industries, thus gaining public and political support despite high costs.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "technology_transfer", "direct"],
+        procurement_context: ["single_nation_procurement", "high_tech_sensitive"]
+      },
+    M:
+      {
+        mechanism_label: ["political_acceptance_incentive", "technology_transfer_incentive"],
+        mechanism_narrative: "By requiring high‑technology and local industry offsets, the government could claim that the fighter purchase would boost employment and technological capability, offsetting public opposition to the high price."
+      },
+    O:
+      {
+        outcomes_positive: ["job_creation", "technology_transfer", "political_support"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "spain_offsets_CMO_002",
+    citekey: "spain_offsets",
+    country: ["Spain"],
+    programme: ["F-18"],
+    locator: "pp. 8–9",
+    quote: "the agreement required 40% high‑tech work and 10% technology transfer, with the government covering additional costs due to inefficiencies",
+    paraphrase: "Spain’s F‑18 offset agreement mandated that 40% of offset obligations involve advanced technologies and 10% involve technology transfer. Because Spanish firms were still learning, the government subsidised additional costs, hoping to cultivate a high‑tech industrial base.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "technology_transfer", "direct"],
+        procurement_context: ["single_nation_procurement", "high_tech_sensitive"]
+      },
+    M:
+      {
+        mechanism_label: ["learning_curve_subsidy", "technology_transfer_incentive"],
+        mechanism_narrative: "Imposing high‑technology and transfer requirements with government subsidies encourages foreign suppliers to provide advanced work while offsetting cost overruns, enabling domestic firms to climb the learning curve and acquire new skills."
+      },
+    O:
+      {
+        outcomes_positive: ["technology_absorption", "industrial_base_development"],
+        outcomes_negative: ["cost_overruns"]
+      },
+    rq_tags: ["RQ2","RQ3"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["official_report"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "spain_offsets_CMO_003",
+    citekey: "spain_offsets",
+    country: ["Spain"],
+    programme: ["F-18"],
+    locator: "pp. 26–27",
+    quote: "administrative burdens, unclear eligibility and long duration made the programme difficult; smaller targeted co-production agreements are easier",
+    paraphrase: "The scale and complexity of Spain’s F‑18 offset programme led to administrative overload, ambiguous eligibility criteria and vulnerability to economic shocks. These problems suggest that smaller, targeted co‑production agreements are more manageable and deliver better results.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "co_production"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["administrative_overload", "programme_fragmentation"],
+        mechanism_narrative: "A large offset programme with many proposals overwhelms management capacity and creates confusion about what qualifies, leading to delays and inefficiencies; focusing on specific co‑production projects reduces complexity and aligns incentives."
+      },
+    O:
+      {
+        outcomes_positive: ["programme_manageability"],
+        outcomes_negative: ["implementation_delays", "low_net_benefit"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "spain_offsets_CMO_004",
+    citekey: "spain_offsets",
+    country: ["Spain"],
+    programme: [],
+    locator: "pp. 35–36",
+    quote: "offset experience created niche expertise enabling Spain to join joint programmes like Harrier and Eurofighter",
+    paraphrase: "Over time, Spain’s offset experience allowed domestic firms to build niche expertise. This expertise, combined with foreign investment and joint ventures, enabled Spain to participate in multinational programmes such as the Harrier and Eurofighter, signalling a shift from offsets toward industrial cooperation.",
+    C:
+      {
+        offset_policy_design: ["technology_transfer", "FDI", "joint_venture"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["capability_upgradation", "trusted_partnering"],
+        mechanism_narrative: "Offsets acted as a catalyst for developing specialised skills and attracting foreign equity. These capacities fostered trust between Spanish and foreign firms, paving the way for participation in international joint ventures and cooperative programmes."
+      },
+    O:
+      {
+        outcomes_positive: ["participation_in_joint_programmes", "industrial_base_strengthening", "trusted_partnering"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["case_study"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "swiss_offsets_CMO_001",
+    citekey: "swiss_offsets",
+    country: ["Switzerland"],
+    programme: ["F-5"],
+    locator: "pp. 5–6",
+    quote: "Inexperience and naive expectations slowed progress; Swiss firms thought offsets guaranteed orders while U.S. contractors warned of delays",
+    paraphrase: "During Switzerland’s initial F‑5 offset programme, both Swiss firms and U.S. suppliers were inexperienced. Swiss industry assumed offsets would automatically bring orders, while U.S. contractors cautioned that tooling and workforce development would take time. This mismatch in expectations slowed the programme.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["learning_curve_issues", "implementation_naivety"],
+        mechanism_narrative: "Lack of experience with offsets led buyers to overestimate benefits and suppliers to underestimate complexity, producing unrealistic expectations and delays in developing qualified local production capabilities."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["implementation_delays", "administrative_burden"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["case_study"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "swiss_offsets_CMO_002",
+    citekey: "swiss_offsets",
+    country: ["Switzerland"],
+    programme: ["F-5"],
+    locator: "p. 26",
+    quote: "licensed production and co-production help train maintenance personnel, acquire production technology, produce spare parts and reduce dependence on foreign sources",
+    paraphrase: "Swiss offset policy values licensed production and co‑production because these arrangements train local maintenance crews, teach production technologies, enable in‑country manufacturing of spare parts and upgrades, and lessen reliance on foreign suppliers for sustainment.",
+    C:
+      {
+        offset_policy_design: ["licensed_production", "co_production"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["technology_absorption", "skills_development", "security_of_supply"],
+        mechanism_narrative: "By requiring local involvement in production and maintenance, offsets provide hands‑on training and transfer know‑how, building a domestic capability to maintain and upgrade systems and ensuring supply security."
+      },
+    O:
+      {
+        outcomes_positive: ["local_support_capability", "reduced_dependency", "interoperability"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ1","RQ2","RQ4"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["case_study"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "swiss_offsets_CMO_003",
+    citekey: "swiss_offsets",
+    country: ["Switzerland"],
+    programme: ["F-5"],
+    locator: "p. 9",
+    quote: "indirect offsets are accepted only if they strengthen companies involved in armament production",
+    paraphrase: "Swiss offset policy permits indirect offsets mainly when they contribute to the national defence industrial base, rather than generating general welfare benefits. Purchases of commercial goods count only if they bolster armament-related firms.",
+    C:
+      {
+        offset_policy_design: ["indirect"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["sector_targeting", "defence_industry_support"],
+        mechanism_narrative: "Restricting indirect offsets to defence-related companies channels investments and orders towards firms that contribute to national military capabilities rather than dispersing benefits across unrelated sectors."
+      },
+    O:
+      {
+        outcomes_positive: ["industrial_base_strengthening", "technology_absorption"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "swiss_offsets_CMO_004",
+    citekey: "swiss_offsets",
+    country: ["Switzerland"],
+    programme: ["F-5"],
+    locator: "pp. 32–33",
+    quote: "Parliament accepted up to 10% higher costs for offset purchases but questioned the accuracy of cost estimates and creative accounting",
+    paraphrase: "Swiss lawmakers tolerate defence purchases costing up to 10% more because of offset obligations but worry that contractors may hide true costs and distort accounts, making it difficult to verify the premium and evaluate offsets’ value.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["cost_premium_rationalisation", "financial_opacity"],
+        mechanism_narrative: "Accepting a cost premium for offsets creates leeway for price inflation; if accounting is opaque, buyers cannot reliably gauge whether the offsets deliver value proportional to their extra cost."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["cost_overruns", "lack_of_transparency"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "swiss_offsets_CMO_005",
+    citekey: "swiss_offsets",
+    country: ["Switzerland"],
+    programme: [],
+    locator: "p. 35",
+    quote: "raising the contract threshold, attesting offset-related purchases and increasing offset percentages aimed to cut costs and ensure compliance",
+    paraphrase: "To reduce administrative costs and encourage contractors to act in good faith, Switzerland raised the minimum contract value triggering offsets, increased the offset requirement from 30% to 50% or more, and required firms to certify that their claimed sales were offset-related.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "performance_guarantee"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["compliance_enforcement", "administrative_simplification"],
+        mechanism_narrative: "By tightening eligibility and raising offset goals while asking companies to attest to their claims, the government reduces the volume of small offsets, focusing on larger deals and enhancing accountability."
+      },
+    O:
+      {
+        outcomes_positive: ["administrative_efficiency", "improved_compliance"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ3","RQ4"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "uk_offsets_CMO_001",
+    citekey: "uk_offsets",
+    country: ["United Kingdom"],
+    programme: ["AWACS"],
+    locator: "p. 10",
+    quote: "press alleged that low-tech tasks and work which would have happened anyway were counted as offsets, so there were few jobs created",
+    paraphrase: "Critics of the UK’s AWACS offset deal argued that the programme counted low‑technology or existing tasks as offset work. As a result, the offsets generated far fewer new jobs than promised.",
+    C:
+      {
+        offset_policy_design: ["indirect"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["opportunistic_accounting", "misclassification_of_work"],
+        mechanism_narrative: "Without strict criteria, contractors can claim credit for routine or low‑tech tasks as offset work, inflating the apparent value of the offsets while delivering little new activity."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["low_job_creation", "market_distortion"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["media_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "uk_offsets_CMO_002",
+    citekey: "uk_offsets",
+    country: ["United Kingdom"],
+    programme: ["AWACS"],
+    locator: "p. 12",
+    quote: "monitoring found only 1,279 jobs sustained and 113 created despite large offset commitments",
+    paraphrase: "Official monitoring of the AWACS offset revealed that despite large financial commitments, only about 1,279 jobs were sustained and 113 new jobs were created, far below the numbers promised by the supplier.",
+    C:
+      {
+        offset_policy_design: ["indirect"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["limited_employment_generation", "overestimation_of_benefits"],
+        mechanism_narrative: "Even with significant offset credit, the actual employment impact may be minimal because many offset activities are capital‑intensive or substitutes for existing work rather than new opportunities."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["low_job_creation", "inefficient_resource_allocation"]
+      },
+    rq_tags: ["RQ5"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "uk_offsets_CMO_003",
+    citekey: "uk_offsets",
+    country: ["United Kingdom"],
+    programme: [],
+    locator: "pp. 47–48",
+    quote: "industry called for a stronger UK offset policy, noting that Belgium, Denmark and others require 100% offsets with technology conditions and penalties",
+    paraphrase: "UK defence companies urged the government to adopt tougher offset rules because competitors in Belgium, Denmark and other countries impose mandatory 100% offsets with technology transfer conditions and penalties. Without reciprocity, UK firms argue they face unfair competition.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "technology_transfer"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["policy_competition", "demand_parity"],
+        mechanism_narrative: "When other countries impose strict offset requirements, domestic firms urge their government to adopt similar policies to level the playing field, creating a race to higher offset demands."
+      },
+    O:
+      {
+        outcomes_positive: ["policy_harmonisation"],
+        outcomes_negative: ["increased_costs"]
+      },
+    rq_tags: ["RQ3","RQ4"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["industry_survey"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "uk_offsets_CMO_004",
+    citekey: "uk_offsets",
+    country: ["United Kingdom"],
+    programme: [],
+    locator: "p. 50",
+    quote: "surveys found an average cost premium of about 14.4% for offsets, usually borne by the buyer",
+    paraphrase: "Studies of UK defence exporters indicate that fulfilling offset obligations adds an average cost premium of around 14.4%, and this extra cost is normally passed on to the procuring government.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["price_premium_transfer", "cost_burden_shift"],
+        mechanism_narrative: "Offset requirements raise production costs, and suppliers recover this premium by increasing the price charged to buyers, transferring the financial burden of offsets to the government."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["increased_procurement_costs"]
+      },
+    rq_tags: ["RQ3"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["descriptive_statistics"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "uk_offsets_CMO_005",
+    citekey: "uk_offsets",
+    country: ["United Kingdom"],
+    programme: [],
+    locator: "p. 53",
+    quote: "large financial sums produce modest impact; current policy may not compensate industry adequately for buying foreign systems",
+    paraphrase: "Despite substantial offset expenditures, the real benefits in terms of jobs, technology and competitiveness are small. Current UK offset policy may not sufficiently compensate industry for procuring foreign defence systems over domestic alternatives.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["ineffective_compensation", "limited_returns"],
+        mechanism_narrative: "Mandatory offsets may fail to deliver proportional benefits if they substitute for existing work or lack long‑term value, leaving domestic industry undercompensated for importing foreign equipment."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["low_job_creation", "limited_technology_gain"]
+      },
+    rq_tags: ["RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "us_offsets_CMO_001",
+    citekey: "us_offset_policy",
+    country: ["US"],
+    programme: [],
+    locator: "pp. 5–6",
+    quote: "early licensed production programmes like the F‑86 and F‑104 were designed to help allies assimilate U.S. technology rather than sell aircraft",
+    paraphrase: "The United States used early licensed production programmes, such as for the F‑86 and F‑104 fighters, to assist allies in absorbing U.S. weapons technology and building their own defence industries instead of simply selling aircraft.",
+    C:
+      {
+        offset_policy_design: ["licensed_production"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["technology_transfer_incentive", "capability_building"],
+        mechanism_narrative: "By licensing production abroad, the U.S. provided allies with detailed technical data, training and tools, enabling them to learn from production and enhance their own defence capabilities while improving interoperability."
+      },
+    O:
+      {
+        outcomes_positive: ["interoperability", "ally_capability_growth", "technology_absorption"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ1","RQ2","RQ4"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["historical_case"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "us_offsets_CMO_002",
+    citekey: "us_offset_policy",
+    country: ["US"],
+    programme: [],
+    locator: "p. 13",
+    quote: "Section 825 required reporting on offset deals but DoD delayed issuing regulations and stonewalled implementation",
+    paraphrase: "Legislation mandated reporting and negotiating to limit the adverse effects of offsets, but the U.S. Department of Defense avoided implementing regulations, leaving offset policy fragmented and lacking transparency.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["regulatory_stonewalling", "policy_conflict"],
+        mechanism_narrative: "Conflicts between legislative mandates and executive preferences led the defence department to resist issuing rules, undermining attempts to monitor and control offsets."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["lack_of_transparency", "policy_inconsistency"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "us_offsets_CMO_003",
+    citekey: "us_offset_policy",
+    country: ["US"],
+    programme: [],
+    locator: "pp. 15–16",
+    quote: "negotiations to limit adverse effects have been fact‑finding only because countries pursue their own political goals",
+    paraphrase: "Although U.S. law calls for consultations to mitigate negative effects of offsets, discussions with buying countries have mostly gathered information rather than limiting offsets because each country pursues its own political objectives.",
+    C:
+      {
+        offset_policy_design: ["multinational_agreement"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["insincere_consultation", "political_prioritisation"],
+        mechanism_narrative: "Lacking enforcement mechanisms and facing divergent national interests, consultations on offset effects become perfunctory, yielding little progress toward reducing distortions."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["limited_mitigation", "continued_offset_pressure"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["official_report"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "israel_offsets_CMO_001",
+    citekey: "israel_practitioner",
+    country: ["Israel"],
+    programme: [],
+    locator: "pp. 37–38",
+    quote: "Industrial Cooperation aims to link Israeli companies with foreign technology leaders to form long‑term partnerships for subcontracting, R&D and technology transfer",
+    paraphrase: "Israel’s Industrial Cooperation programme encourages foreign contractors to establish long‑term partnerships with Israeli firms. These partnerships involve subcontracting, joint R&D, technology transfer, capital investment and global marketing, strengthening Israel’s defence and high‑tech industries.",
+    C:
+      {
+        offset_policy_design: ["technology_transfer", "R_and_D", "FDI"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["long_term_partnership", "supply_chain_integration_incentive"],
+        mechanism_narrative: "By structuring offsets around collaborations and investments rather than one‑off transactions, Israel fosters enduring relationships that integrate its firms into global supply chains and promote sustained innovation."
+      },
+    O:
+      {
+        outcomes_positive: ["technology_absorption", "joint_R_and_D", "market_access"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 3,
+    confidence: 0.8,
+    evidence_type: ["interview","case_study"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "israel_offsets_CMO_002",
+    citekey: "israel_practitioner",
+    country: ["Israel"],
+    programme: [],
+    locator: "pp. 42–43",
+    quote: "the guidelines require a minimum of 35% offset, offer high credits for R&D and capital investment, and include no liquidated damages clause",
+    paraphrase: "Israel’s flexible offset guidelines mandate roughly 35% of contract value in industrial cooperation, but there are no penalty clauses. High credit multipliers encourage projects in R&D, capital investments and software, giving contractors incentives to propose high‑value initiatives.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "R_and_D", "investment"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["flexibility_incentive", "innovation_incentive"],
+        mechanism_narrative: "Low mandatory levels and generous credit for advanced activities allow contractors to pursue innovative projects with Israeli partners, enhancing mutual benefit without fear of financial penalties."
+      },
+    O:
+      {
+        outcomes_positive: ["meaningful_projects", "innovation"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 2,
+    confidence: 0.7,
+    evidence_type: ["official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "israel_offsets_CMO_003",
+    citekey: "israel_practitioner",
+    country: ["Israel"],
+    programme: [],
+    locator: "p. 45",
+    quote: "legislation will make offsets mandatory, mainly targeting civil sector companies not currently covered",
+    paraphrase: "Israel plans to enact a law making offset obligations mandatory for civil-sector companies that currently refuse them; this extension is not expected to significantly impact defence contractors who already comply.",
+    C:
+      {
+        offset_policy_design: ["mandatory"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["legal_requirements", "scope_expansion"],
+        mechanism_narrative: "By legally expanding mandatory offsets to the civil sector, the government aims to ensure broader participation in industrial cooperation and to capture economic spillovers beyond defence."
+      },
+    O:
+      {
+        outcomes_positive: ["broadened_scope", "industrial_base_strengthening"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2"],
+    relevance_score: 1,
+    confidence: 0.5,
+    evidence_type: ["official_report"],
+    direction: "positive"
+  },
+  {
+    cmo_id: "israel_offsets_CMO_004",
+    citekey: "israel_practitioner",
+    country: ["Israel"],
+    programme: ["Peace Marble/Fox fighter procurement"],
+    locator: "p. 47",
+    quote: "offset competition spiralled to offers of 70% or more and led to concerns about domestic job losses",
+    paraphrase: "During Israel’s fighter procurement competitions, bidders increased their offset offers beyond 70% to outdo rivals. This spiralling competition raised fears that direct work given abroad would displace jobs at home, prompting calls for government intervention to set limits.",
+    C:
+      {
+        offset_policy_design: ["mandatory", "competitive"],
+        procurement_context: ["single_nation_procurement"]
+      },
+    M:
+      {
+        mechanism_label: ["offset_competition_escalation", "job_loss_fears"],
+        mechanism_narrative: "In a competitive environment, contractors offer ever‑larger offsets to win contracts. When these promises involve high levels of direct work abroad, domestic stakeholders worry about losing jobs, leading to demands for regulation."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["spiralling_obligations", "domestic_job_displacement"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["case_study"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "concluding_offsets_CMO_001",
+    citekey: "concluding_remarks",
+    country: [],
+    programme: [],
+    locator: "pp. 3–4",
+    quote: "data deficiencies and lack of transparency make it hard to evaluate whether offset work is genuinely new or would have happened anyway",
+    paraphrase: "Evaluations of offset programmes are hampered by poor data and transparency. Without detailed information on the nature of offset work, it is difficult to determine if activities are truly additional or merely rebadged existing orders.",
+    C:
+      {
+        offset_policy_design: [],
+        procurement_context: []
+      },
+    M:
+      {
+        mechanism_label: ["data_transparency_issue"],
+        mechanism_narrative: "Incomplete or opaque reporting means that policymakers and analysts cannot assess whether offsets create new capabilities or simply label existing transactions as offset fulfilment."
+      },
+    O:
+      {
+        outcomes_positive: [],
+        outcomes_negative: ["difficulty_evaluation", "limited_accountability"]
+      },
+    rq_tags: ["RQ3","RQ5"],
+    relevance_score: 2,
+    confidence: 0.5,
+    evidence_type: ["expert_commentary"],
+    direction: "negative"
+  },
+  {
+    cmo_id: "concluding_offsets_CMO_002",
+    citekey: "concluding_remarks",
+    country: [],
+    programme: [],
+    locator: "p. 5",
+    quote: "vendors underestimated costs and buyers thought offsets guaranteed orders; later, penalties improved compliance",
+    paraphrase: "In early offset programmes, suppliers miscalculated the costs and complexity of delivering offset work and purchasing countries assumed offsets would guarantee orders. Experience led to a transition from ‘best endeavours’ to penalty‑backed commitments, improving performance.",
+    C:
+      {
+        offset_policy_design: ["voluntary", "penalty_backed"],
+        procurement_context: []
+      },
+    M:
+      {
+        mechanism_label: ["learning_by_doing", "best_endeavours_limitations"],
+        mechanism_narrative: "The mismatch between expectations and realities taught both suppliers and buyers that voluntary promises were ineffective; introducing penalties incentivised more realistic planning and compliance."
+      },
+    O:
+      {
+        outcomes_positive: ["improved_compliance"],
+        outcomes_negative: ["initial_failures"]
+      },
+    rq_tags: ["RQ3"],
+    relevance_score: 2,
+    confidence: 0.6,
+    evidence_type: ["historical_case"],
+    direction: "mixed"
+  },
+  {
+    cmo_id: "concluding_offsets_CMO_003",
+    citekey: "concluding_remarks",
+    country: [],
+    programme: [],
+    locator: "pp. 6–7",
+    quote: "there has been a move towards focused offsets such as equity investments, joint ventures and credit banking to sustain long‑term collaboration",
+    paraphrase: "Recent offset policies have shifted from broad and diffuse obligations to targeted measures like equity investments, joint ventures and credit banking. These mechanisms encourage continuous work and deeper industrial partnerships instead of short‑term transactions.",
+    C:
+      {
+        offset_policy_design: ["joint_venture", "FDI"],
+        procurement_context: ["multinational_programme"]
+      },
+    M:
+      {
+        mechanism_label: ["joint_venture_foundation", "credit_banking_incentive"],
+        mechanism_narrative: "Targeting offsets towards shared ownership and long‑term investments creates lasting ties between foreign and domestic firms. Banking credits encourages sustained collaboration rather than one‑off deals."
+      },
+    O:
+      {
+        outcomes_positive: ["long_term_collaboration", "sustained_work", "trusted_partnering"],
+        outcomes_negative: []
+      },
+    rq_tags: ["RQ2","RQ4"],
+    relevance_score: 3,
+    confidence: 0.7,
+    evidence_type: ["expert_commentary"],
+    direction: "positive"
+  }
+]
