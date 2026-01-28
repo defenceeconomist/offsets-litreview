@@ -1,0 +1,112 @@
+---
+title: "Trends in the Defence Offsets Market"
+categories:
+  - Defence procurement
+  - Offsets and industrial participation
+  - Defence industrial policy
+keywords:
+  - defence offsets
+  - industrial participation
+  - countertrade
+  - technology transfer
+  - multipliers
+  - direct offsets
+  - indirect offsets
+  - EDTIB
+  - export markets
+  - MENA
+  - APAC
+tags:
+  - defence offsets
+  - industrial participation
+  - arms trade
+  - defence procurement
+  - industrial policy
+  - technology transfer
+  - European defence industry
+  - export strategy
+  - offset regulation
+  - offset compliance
+citation:
+  type: report
+  title: "Trends in the Defence Offsets Market"
+  author:
+    - family: Ungaro
+      given: Alessandro R.
+  publisher: "Istituto Affari Internazionali (IAI) – Rome"
+  event: "17th Annual International Conference on Economics and Security (ICES)"
+---
+
+## Analytical summary
+
+Ungaro argues that defence offsets are growing in economic and political importance as global defence demand shifts: US and European budgets contract while fast-developing and high-spending countries expand procurement. In that context, offsets—understood as additional reciprocal commitments beyond the core sale—are increasingly central to deal-making, and accumulated global obligations are presented as very large (with consulting estimates cited in the paper). The note clarifies key offset concepts (direct vs indirect; agreement vs transaction; credit value vs actual value via multipliers) and then synthesises market trends: rising obligations, a move by recipient states towards more “direct” offset demands (co-development/co-production and technology transfer), and stronger monitoring/penalty regimes. From a European perspective, the paper highlights a tension between EU efforts to discourage offsets within the single market and the continued (and strategically used) offset demands in non-EU markets that European firms are targeting for growth. Ungaro concludes that these dynamics can threaten European firms’ competitiveness and the wider European Defence Technological and Industrial Base (EDTIB) technological edge, especially as firms—under pressure to export for short-term survival—may not fully account for long-term capability erosion.
+
+## Key takeaways
+
+- Offsets are framed as increasingly important as defence demand shifts towards non-EU markets and European firms rely more on exports.
+- The paper distinguishes **direct offsets** (linked to the procured system) from **indirect offsets** (unrelated), plus “defence-related” vs “non-defence-related” indirect offsets.
+- **Credit value** can exceed **actual value** through **multipliers**, allowing recipient states to steer supplier behaviour towards preferred activities (notably technology transfer).
+- Consulting forecasts cited suggest rising cumulative global offset obligations, with strong growth in APAC and/or MENA depending on the source.
+- Recipient countries are described as moving from indirect towards direct offsets, emphasising **Transfer of Technology (ToT)** and long-term partnerships.
+- Growing obligations create **financial** and **reputational** risks for suppliers if commitments become hard to fulfil.
+- EU policy discouraging offsets contrasts with non-EU strategic use of offsets as industrial policy to build local DTIB capability.
+- Effective absorption of offset investments is presented as challenging; offsets need to link to broader R&D/R&T and capability-building plans to have durable effects.
+
+## Realist synthesis coding
+
+### CMO 1: Budget shifts drive exporter dependence on offset-heavy markets
+- **Context:** Shrinking European defence budgets and constrained domestic demand; strong competition for non-EU procurement.
+- **Mechanism:** European firms prioritise exports and accept ambitious offset requirements to win access and contracts.
+- **Outcome:** Increased exposure to large offset obligations, with heightened financial/reputational risk and potential pressure on competitiveness.  
+
+### CMO 2: Recipient industrial policy shifts offsets towards ToT and co-production
+- **Context:** Non-EU states (e.g., Brazil, India, Turkey, South Korea) seek to build DTIB capacity and enter global supply chains.
+- **Mechanism:** Offset policies increasingly require direct offsets (co-development/co-production/licensed production) and ToT as deal conditions.
+- **Outcome:** More demanding offset packages centred on capability transfer and longer-term industrial partnerships.  
+
+### CMO 3: Multipliers steer supplier behaviour but complicate value assessment
+- **Context:** Recipient governments need leverage to prioritise “high value” activities within an offset programme.
+- **Mechanism:** Multipliers raise credited offset value for targeted activities (e.g., technology transfer), separating credited fulfilment from actual spend.
+- **Outcome:** Supplier incentives align with recipient priorities, while analysts and policymakers must distinguish credit vs actual value when judging impact.  
+
+### CMO 4: Weak European-level assessment increases long-run EDTIB risk
+- **Context:** Fragmented European defence/industrial/export-control policies; limited shared assessment of offsets’ system-wide effects.
+- **Mechanism:** Firms optimise for short-term deal success and profitability, without fully accounting for long-term impacts on EDTIB technological edge.
+- **Outcome:** Potential erosion of European technological competitiveness, even if individual firms achieve near-term export gains.
+
+## Meta-index tags
+
+**Document type**
+- Conference paper / report
+
+**Core concepts**
+- Defence offsets
+- Industrial participation
+- Offset obligations
+- Direct vs indirect offsets
+- Technology transfer (ToT)
+
+**Offset instruments mentioned**
+- Co-development
+- Co-production
+- Licensed production
+- Subcontracting
+- Training
+- Technology transfer
+- Financing activities
+- Multipliers
+
+**Regions / markets emphasised**
+- European Union (EU)
+- APAC
+- MENA
+- Non-EU export markets
+
+**Policy and governance points**
+- EU stance against offsets in procurement (Directive 2009/81 cited)
+- Monitoring bodies and stronger compliance/penalties (e.g., India’s DOMW mentioned)
+
+**Risks highlighted**
+- Financial liability from unfulfilled obligations
+- Reputational risk
+- Potential impacts on EDTIB competitiveness and technological edge
