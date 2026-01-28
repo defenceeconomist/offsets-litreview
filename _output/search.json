@@ -471,7 +471,7 @@
     "href": "cmo/cmo-statements.html",
     "title": "1 Extracted CMO Statements",
     "section": "",
-    "text": "1 Extracted CMO Statements\n\nreadr::read_csv(\"data/cmo_statement.csv\") |&gt;\n    DT::datatable()\n\nRows: 208 Columns: 19\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (17): cmo_id, citekey, country, programme, locator, quote, paraphrase, C...\ndbl  (2): relevance_score, confidence\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.",
+    "text": "1 Extracted CMO Statements\n\nreadr::read_csv(\"data/cmo_statement.csv\") |&gt;\n    DT::datatable(\n      filter = \"top\",\n      options = list(\n        pageLength = 25,\n        autoWidth = TRUE,\n        scrollX = TRUE\n      )\n    )\n\nRows: 244 Columns: 25\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (23): cmo_id, citekey, country, programme, locator, quote, paraphrase, C...\ndbl  (2): relevance_score, confidence\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.",
     "crumbs": [
       "CMO",
       "Extracted CMO Statements"

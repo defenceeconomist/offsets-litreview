@@ -7,5 +7,12 @@ knitr::opts_knit$set(root.dir = here::here())
 
 ```{r}
 readr::read_csv("data/cmo_statement.csv") |>
-    DT::datatable()
+    DT::datatable(
+      filter = "top",
+      options = list(
+        pageLength = 25,
+        autoWidth = TRUE,
+        scrollX = TRUE
+      )
+    )
 ```
