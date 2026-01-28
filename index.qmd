@@ -82,6 +82,107 @@ These themes are drawn from `reports/realist-evidence-synthesis.qmd` and the CMO
    - Verify each key claim against at least two sources (or clearly mark single-source claims).
    - Ensure each research question has a direct, traceable answer and supporting evidence list.
 
+## Mechanism Map (Draft)
+
+The mechanism map clusters recurring CMO mechanisms into core pathways and links them to the contextual conditions that shape alliance-relevant outcomes.
+
+1. **Technology transfer / learning-by-doing**
+   - **Mechanisms:** learning_by_doing, technology_absorption, technology_transfer_incentive, local_MRO_capacity_building.
+   - **Typical contexts:** mandatory or direct offsets; licensed production/co-production; technology-transfer and training requirements; single-nation procurement with high-tech sensitivity.
+   - **Alliance-relevant outcomes when conditions are strong:** improved sustainment capacity, local upgrade capability, readiness support, and occasional interoperability gains through shared standards.
+   - **Failure modes:** weak absorptive capacity, short production runs, or limited access to critical design data lead to shallow transfer and continued dependence.
+
+2. **Supply-chain integration / trusted partnering**
+   - **Mechanisms:** supply_chain_integration_incentive, trusted_partnering, market_access_strategy.
+   - **Typical contexts:** industrial participation or partnership-oriented schemes; co-production/joint ventures; multinational programme participation; voluntary or flexible offset policies.
+   - **Alliance-relevant outcomes when conditions are strong:** durable industrial collaboration, shared sustainment roles, and more predictable access to spares and upgrades.
+   - **Failure modes:** programme fragmentation, unclear eligibility criteria, or politicised workshare can crowd out efficient suppliers and weaken integration.
+
+3. **Governance opacity / rent-seeking**
+   - **Mechanisms:** governance_transparency, rent_seeking_brokers, workshare_politicisation, programme_fragmentation, market_distortion, cost_premium_padding.
+   - **Typical contexts:** large mandatory or indirect offsets; long-dated obligations; weak monitoring or audit capacity; regional development requirements.
+   - **Alliance-relevant outcomes when conditions are weak:** cost inflation, delayed delivery, trust erosion, and reduced readiness due to diversion of resources.
+   - **Mitigating conditions:** clear eligibility rules, enforceable penalties, transparent reporting, and tighter focus on high-value activities.
+
+4. **Export-control friction / legal constraint**
+   - **Mechanisms:** export_control_friction, legal_restriction.
+   - **Typical contexts:** multinational programmes with sensitive technologies; ITAR-like constraints; government-to-government procurement.
+   - **Alliance-relevant outcomes:** constrained technology access and delayed integration can reduce interoperability and limit the depth of collaboration.
+   - **Mitigating conditions:** pre-negotiated licensing pathways, early technology-security alignment, and realistic transfer scopes.
+
+5. **Resource diversion / industrial erosion**
+   - **Mechanisms:** opportunity_cost, resource_diversion, industrial_erosion.
+   - **Typical contexts:** direct offsets that prioritize domestic capacity without clear competitive niches; protectionist local-content mandates.
+   - **Alliance-relevant outcomes:** weaker competitiveness and slower modernisation can reduce long-term readiness and partnership attractiveness.
+
+## Annex: CMO Table Counts (data/cmo_statement.csv)
+
+Counts below are generated from the consolidated CMO table and provide a quick index for where the evidence currently concentrates.
+
+**Top mechanism labels (n):**
+
+| Mechanism label | n |
+| --- | ---: |
+| programme_fragmentation | 33 |
+| learning_by_doing | 32 |
+| supply_chain_integration_incentive | 32 |
+| technology_absorption | 28 |
+| governance_transparency | 26 |
+| rent_seeking_brokers | 19 |
+| trusted_partnering | 17 |
+| local_MRO_capacity_building | 13 |
+| export_control_friction | 11 |
+| workshare_politicisation | 8 |
+| market_distortion | 7 |
+| resource_diversion | 6 |
+| competitor_creation | 4 |
+| opportunity_cost | 4 |
+| cost_premium_padding | 3 |
+
+**Top offset policy design contexts (n):**
+
+| Offset policy design | n |
+| --- | ---: |
+| mandatory | 80 |
+| technology_transfer | 78 |
+| co_production | 42 |
+| direct | 40 |
+| indirect | 35 |
+| licensed_production | 31 |
+| local_content | 19 |
+| voluntary | 14 |
+| industrial_participation | 9 |
+| training | 9 |
+| MRO | 8 |
+| R_and_D | 8 |
+
+**Top procurement contexts (n):**
+
+| Procurement context | n |
+| --- | ---: |
+| single_nation_procurement | 157 |
+| multinational_programme | 39 |
+| high_tech_sensitive | 15 |
+| export_controls_present | 8 |
+| government_to_government | 4 |
+| licensed_production | 4 |
+| regional_development | 4 |
+| state_owned_enterprises | 4 |
+| ITAR_like_constraints | 3 |
+| competitive_tender | 2 |
+| political_environment | 2 |
+| privatization | 2 |
+
+**Research question tag counts (n):**
+
+| RQ tag | n |
+| --- | ---: |
+| RQ3 | 161 |
+| RQ5 | 116 |
+| RQ2 | 100 |
+| RQ4 | 85 |
+| RQ1 | 32 |
+
 ## Progress Log
 
 - **2026-01-24:** Captured Scopus exports and EBSCO metadata; compiled Taylor & Francis export and relevance list. (`prisma/scorpus/*.bib`, `prisma/EBSCO-Metadata-01_24_2026.bibtex`, `prisma/tandf defence AND offsets (24 Jan 26).csv`, `prisma/tandf_relevant_keys.txt`)
