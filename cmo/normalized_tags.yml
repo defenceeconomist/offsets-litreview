@@ -1,0 +1,23 @@
+version: 1
+notes: Canonicalize spelling and reduce duplicate tags across sources.
+aliases:
+  cost_premiums: cost_premium
+  higher_prices: higher_price
+  inefficiencies: inefficiency
+  informal_offsets: informal_offset
+  offset_programme: offset_program
+  offset_programmes: offset_program
+  offset_programs: offset_program
+  offset_regimes: offset_regime
+  offset_requirements: offset_requirement
+  defence_contracts: defense_contracts
+  defence_cooperation: defense_cooperation
+  defence_industrial_base: defense_industrial_base
+  defence_market: defense_market
+  defence_offsets: defense_offsets
+  defence_procurement: defense_procurement
+  defence_spending: defense_spending
+  improved_defence_capacity: improved_defense_capacity
+  naval_programme: naval_program
+  programme_unsuccessful: program_unsuccessful
+  standardisation: standardization

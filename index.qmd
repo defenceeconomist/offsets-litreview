@@ -9,188 +9,61 @@ A realist evidence synthesis and comparative case mapping of defence offsets/ind
 - Surface recurring risks (e.g., cost inflation, governance/opacity, corruption, export-control friction) and mitigation approaches.
 - Map comparative country cases that demonstrate positive, negative, or mixed outcomes under different offset regimes.
 
-These aims are operationalized in the research questions in `reports/01-research-question.qmd`.
+## Research Questions
 
-## Methods
+1. Under what contexts do offsets/industrial participation mechanisms enable alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability)?
+2. Which mechanisms systematically hinder those outcomes, and through what governance or market conditions?
+3. How do policy design choices (mandatory vs. voluntary, direct vs. indirect, transparency/enforcement) shape collaboration depth and risk profiles across cases?
+4. How can each pathway be summarized with enabling/limiting conditions and alliance-relevant outcomes?
+5. What recurrent pathways can be mapped across countries to explain positive, negative, or mixed outcomes?
 
-- **Realist evidence synthesis (CMO):** Extracts Context-Mechanism-Outcome configurations from sources to explain what works, for whom, and under what conditions.
+## Method
+
+- **Realist evidence synthesis (CMO):** Extracts Context-Mechanism-Outcome configurations from sources, then clusters mechanism tags into a small set of pathways (themes) to explain what works, for whom, and under what conditions; thematic summaries link pathways to alliance-relevant outcomes and enabling or constraining contexts.
 - **Comparative case mapping:** Uses a consistent rubric to compare countries and programmes on policy design, depth of collaboration, alliance integration markers, and documented risks.
 - **Two-lane search strategy:** Parallel searches for (1) offsets/industrial participation literature and (2) alliance-relevant industrial cooperation/interoperability literature to avoid terminology gaps.
 - **Evidence mix:** Academic literature plus targeted grey literature (government policy, audits, NATO/EU material, and governance analyses).
 
-Full methodology and search strategy are detailed in `reports/02-research-strategy.qmd`.
+In practice, the realist synthesis proceeds by extracting discrete CMO statements from each source, tagging contexts, mechanisms, and outcomes, and then grouping mechanisms into a small number of thematic pathways. Those pathways are summarized against alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability) and the contextual conditions that enable or constrain them. The mechanism map provides a traceable bridge from individual CMO records to thematic findings.
 
-## Data & Artifacts
+**CMO workflow (short):**
+1. Extract CMO statements from sources and record context, mechanism, and outcome tags.
+2. Normalize tags and consolidate CMO records across sources.
+3. Cluster mechanism tags into pathway themes (mechanism map).
+4. Summarize each pathway with enabling/limiting conditions and alliance-relevant outcomes.
+5. Trace claims back to source CMO records for verification.
 
-- **CMO extraction (YAML):**
-  - `cmo/arms_trade.yml`
-  - `cmo/economic_offsets_book.yml`
-- **CMO narrative summaries:**
-  - `cmo/arms_trade.qmd` (chapters 1-20)
-  - `cmo/countertrade.qmd`
-- **PRISMA/logs and search exports:**
-  - `prisma/prisma.qmd`
-  - `prisma/search_logs.yml`
-  - `prisma/scorpus/*.bib`
-  - `prisma/EBSCO-Metadata-01_24_2026.bibtex`
-  - `prisma/tandf defence AND offsets (24 Jan 26).csv`
-- **Synthesis draft:**
-  - `reports/realist-evidence-synthesis.qmd`
+**How the research questions are answered (outputs):**
+- **RQ1 (enabling contexts):** pathway briefs that link *typical contexts* to alliance-relevant outcomes; cross-case notes on when those contexts recur.
+- **RQ2 (hindering mechanisms):** pathway failure modes plus governance/market conditions (e.g., opacity, politicised workshare, export-control constraints) and any mitigating conditions.
+- **RQ3 (policy design choices):** case mapping against a common rubric (mandatory/voluntary; direct/indirect; transparency/enforcement) and comparison of collaboration depth, alliance markers, and risk profiles.
 
-## Initial Findings (Preliminary)
 
-- Offsets often raise acquisition costs and are vulnerable to **opacity and rent-seeking** when obligations are long-dated and weakly enforced; buyers may pay a premium without commensurate industrial benefit.
-- **Policy design matters:** flexible or partnership-oriented schemes (e.g., variable offsets, strategic alliances) can encourage genuine collaboration, while rigid mandates are linked to gaming, delay, and weak additionality.
-- **Absorptive capacity is pivotal:** technology transfer succeeds more often where local industry, skills, and governance are strong; otherwise, benefits are short-lived or spill into non-defence sectors.
-- **Governance risks are recurrent:** complex offset packages create corruption and accountability risks, especially where monitoring is limited or intermediaries dominate.
-- **Alliance-relevant outcomes are mixed:** offsets can deepen supply-chain integration and sustainment roles, but also create friction via export-control constraints, programme fragmentation, or distorted market incentives.
+## Mechanism Map
 
-These themes are drawn from `reports/realist-evidence-synthesis.qmd` and the CMO records in `cmo/*.yml` and `cmo/*.qmd`.
-
-## Synthesis Plan (Answering the Research Questions)
-
-1. **Consolidate the evidence base**
-   - Merge CMO records from `cmo/*.yml` and narrative notes in `cmo/*.qmd` into a single working table (context, mechanism, outcome, evidence type, confidence, country/programme).
-   - Tag each record to one or more research questions (RQ1-RQ5) using the existing `rq_tags` plus manual review where tags are missing.
-
-2. **Build a mechanism map**
-   - Cluster mechanisms into a small set of core pathways (e.g., technology transfer/learning-by-doing; supply-chain integration; governance opacity/rent-seeking; export-control friction).
-   - For each pathway, summarize the contextual conditions under which it produces alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability).
-
-3. **Answer RQ1 (Alliance relevance and mechanisms)**
-   - Synthesize mechanism clusters into short, evidence-backed statements describing how offsets affect alliance outcomes and under what conditions.
-   - Highlight high-confidence mechanisms and flag contested or low-confidence areas.
-
-4. **Answer RQ2 (Conditions for durable collaboration)**
-   - Identify cases where offsets coincide with deep collaboration (co-development, co-production, shared sustainment).
-   - Extract enabling conditions (policy design, absorptive capacity, governance, export-control environment).
-
-5. **Answer RQ3 (Risks and mitigation)**
-   - Aggregate negative outcomes (cost inflation, delays, corruption, market distortion, programme fragmentation).
-   - Map mitigation measures reported in the literature (transparency requirements, enforcement, targeted multipliers, capability thresholds).
-
-6. **Answer RQ4-RQ5 (Comparative cases)**
-   - Build a concise case matrix: policy design, collaboration depth, alliance markers, risks, confidence.
-   - Classify each case as positive, negative, or mixed and explain classification with 2-3 evidence points.
-
-7. **Draft synthesis outputs**
-   - Produce a 1-2 page findings section organized by mechanisms and conditions.
-   - Produce a short comparative case annex (table + narrative notes).
-   - Add a limitations section (evidence gaps, attribution limits, time period coverage).
-
-8. **Quality checks**
-   - Verify each key claim against at least two sources (or clearly mark single-source claims).
-   - Ensure each research question has a direct, traceable answer and supporting evidence list.
-
-## Mechanism Map (Draft)
-
-The mechanism map clusters recurring CMO mechanisms into core pathways and links them to the contextual conditions that shape alliance-relevant outcomes.
+The mechanism map clusters recurring CMO mechanisms into core pathways and links them to contextual conditions shaping alliance-relevant outcomes. The tag-to-theme lookup is maintained in `cmo/mechanism_map.yml`.
 
 1. **Technology transfer / learning-by-doing**
-   - **Mechanisms:** learning_by_doing, technology_absorption, technology_transfer_incentive, local_MRO_capacity_building.
-   - **Typical contexts:** mandatory or direct offsets; licensed production/co-production; technology-transfer and training requirements; single-nation procurement with high-tech sensitivity.
-   - **Alliance-relevant outcomes when conditions are strong:** improved sustainment capacity, local upgrade capability, readiness support, and occasional interoperability gains through shared standards.
-   - **Failure modes:** weak absorptive capacity, short production runs, or limited access to critical design data lead to shallow transfer and continued dependence.
+   - **Enabling conditions:** direct or mandatory offsets tied to specific capabilities; licensed production/co-production with explicit training and knowledge-transfer clauses; sufficient absorptive capacity (skills, facilities, learning time); access to design data and sustainment documentation within security constraints.
+   - **Limiting conditions:** weak absorptive capacity; short production runs; restricted access to design data/technical baselines; narrow scopes that stop at assembly; misaligned incentives that prioritize credit over capability.
+   - **Alliance-relevant outcomes:** stronger sustainment and repair/upgrade capacity (readiness); reduced single-point dependence for spares/maintenance (security of supply); occasional interoperability gains via shared standards and common configurations.
 
 2. **Supply-chain integration / trusted partnering**
-   - **Mechanisms:** supply_chain_integration_incentive, trusted_partnering, market_access_strategy.
-   - **Typical contexts:** industrial participation or partnership-oriented schemes; co-production/joint ventures; multinational programme participation; voluntary or flexible offset policies.
-   - **Alliance-relevant outcomes when conditions are strong:** durable industrial collaboration, shared sustainment roles, and more predictable access to spares and upgrades.
-   - **Failure modes:** programme fragmentation, unclear eligibility criteria, or politicised workshare can crowd out efficient suppliers and weaken integration.
+   - **Enabling conditions:** partnership-oriented industrial participation; co-production/joint ventures with clear commercial logic; multinational programme participation; transparent eligibility criteria and stable workshare rules; quality/security standards that make firms "trusted" suppliers.
+   - **Limiting conditions:** programme fragmentation; politicised workshare; ambiguous eligibility criteria that favour non-competitive placements; weak primes/integrators incentives to sustain suppliers beyond contract minimums.
+   - **Alliance-relevant outcomes:** durable industrial collaboration (partnership durability); shared sustainment roles and predictable upgrade pathways (readiness); more reliable access to spares, repairs, and subcomponents (security of supply); improved integration via common processes and standards (interoperability).
 
 3. **Governance opacity / rent-seeking**
-   - **Mechanisms:** governance_transparency, rent_seeking_brokers, workshare_politicisation, programme_fragmentation, market_distortion, cost_premium_padding.
-   - **Typical contexts:** large mandatory or indirect offsets; long-dated obligations; weak monitoring or audit capacity; regional development requirements.
-   - **Alliance-relevant outcomes when conditions are weak:** cost inflation, delayed delivery, trust erosion, and reduced readiness due to diversion of resources.
-   - **Mitigating conditions:** clear eligibility rules, enforceable penalties, transparent reporting, and tighter focus on high-value activities.
+   - **Enabling conditions (for avoiding harm):** clear eligibility rules; enforceable penalties and milestone-based crediting; transparent reporting and audit trails; tighter focus on high-value, verifiable activities; credible oversight capacity.
+   - **Limiting conditions:** large mandatory or indirect offsets with long-dated obligations; weak audit/monitoring; regional development quotas that diffuse accountability; complex crediting that enables rent-seeking and corruption risk.
+   - **Alliance-relevant outcomes:** when limiting conditions dominate, higher cost and delayed delivery reduce readiness; trust erosion and perceived unfairness weaken partnership durability; diverted resources can crowd out interoperable modernization and shared capability priorities.
 
 4. **Export-control friction / legal constraint**
-   - **Mechanisms:** export_control_friction, legal_restriction.
-   - **Typical contexts:** multinational programmes with sensitive technologies; ITAR-like constraints; government-to-government procurement.
-   - **Alliance-relevant outcomes:** constrained technology access and delayed integration can reduce interoperability and limit the depth of collaboration.
-   - **Mitigating conditions:** pre-negotiated licensing pathways, early technology-security alignment, and realistic transfer scopes.
+   - **Enabling conditions:** pre-negotiated licensing pathways and re-transfer permissions; early technology-security alignment between partners; realistic transfer scopes matched to classification and programme needs; governance that anticipates compliance timelines.
+   - **Limiting conditions:** sensitive technologies embedded in multinational programmes; restrictive export-control regimes and compliance delays; misaligned expectations about what can be transferred; late-stage licensing that blocks integration work.
+   - **Alliance-relevant outcomes:** constrained technology access and delayed integration reduce interoperability; limits on co-development/co-production reduce collaboration depth and partnership durability; bottlenecks in parts/data access can weaken security of supply and readiness.
 
 5. **Resource diversion / industrial erosion**
-   - **Mechanisms:** opportunity_cost, resource_diversion, industrial_erosion.
-   - **Typical contexts:** direct offsets that prioritize domestic capacity without clear competitive niches; protectionist local-content mandates.
-   - **Alliance-relevant outcomes:** weaker competitiveness and slower modernisation can reduce long-term readiness and partnership attractiveness.
-
-## Annex: CMO Table Counts (data/cmo_statement.csv)
-
-Counts below are generated from the consolidated CMO table and provide a quick index for where the evidence currently concentrates.
-
-**Top mechanism labels (n):**
-
-| Mechanism label | n |
-| --- | ---: |
-| programme_fragmentation | 33 |
-| learning_by_doing | 32 |
-| supply_chain_integration_incentive | 32 |
-| technology_absorption | 28 |
-| governance_transparency | 26 |
-| rent_seeking_brokers | 19 |
-| trusted_partnering | 17 |
-| local_MRO_capacity_building | 13 |
-| export_control_friction | 11 |
-| workshare_politicisation | 8 |
-| market_distortion | 7 |
-| resource_diversion | 6 |
-| competitor_creation | 4 |
-| opportunity_cost | 4 |
-| cost_premium_padding | 3 |
-
-**Top offset policy design contexts (n):**
-
-| Offset policy design | n |
-| --- | ---: |
-| mandatory | 80 |
-| technology_transfer | 78 |
-| co_production | 42 |
-| direct | 40 |
-| indirect | 35 |
-| licensed_production | 31 |
-| local_content | 19 |
-| voluntary | 14 |
-| industrial_participation | 9 |
-| training | 9 |
-| MRO | 8 |
-| R_and_D | 8 |
-
-**Top procurement contexts (n):**
-
-| Procurement context | n |
-| --- | ---: |
-| single_nation_procurement | 157 |
-| multinational_programme | 39 |
-| high_tech_sensitive | 15 |
-| export_controls_present | 8 |
-| government_to_government | 4 |
-| licensed_production | 4 |
-| regional_development | 4 |
-| state_owned_enterprises | 4 |
-| ITAR_like_constraints | 3 |
-| competitive_tender | 2 |
-| political_environment | 2 |
-| privatization | 2 |
-
-**Research question tag counts (n):**
-
-| RQ tag | n |
-| --- | ---: |
-| RQ3 | 161 |
-| RQ5 | 116 |
-| RQ2 | 100 |
-| RQ4 | 85 |
-| RQ1 | 32 |
-
-## Progress Log
-
-- **2026-01-24:** Captured Scopus exports and EBSCO metadata; compiled Taylor & Francis export and relevance list. (`prisma/scorpus/*.bib`, `prisma/EBSCO-Metadata-01_24_2026.bibtex`, `prisma/tandf defence AND offsets (24 Jan 26).csv`, `prisma/tandf_relevant_keys.txt`)
-- **2026-01-24:** Logged PRISMA-style search counts and preliminary screening outcomes. (`prisma/prisma.qmd`)
-- **2026-01-XX:** Drafted research questions and critique/refinement. (`reports/01-research-question.qmd`)
-- **2026-01-XX:** Drafted methodology and two-lane search strategy. (`reports/02-research-strategy.qmd`)
-- **2026-01-XX:** Built CMO narratives for the first 20 chapters on defence offsets. (`cmo/arms_trade.qmd`)
-- **2026-01-XX:** Structured CMO extractions in YAML for arms-trade and economic offsets sources. (`cmo/arms_trade.yml`, `cmo/economic_offsets_book.yml`)
-- **2026-01-XX:** Compiled a realist synthesis draft with regional case evidence and thematic mechanisms. (`reports/realist-evidence-synthesis.qmd`)
-
-Note: Dates marked 2026-01-XX reflect items currently in the repo without explicit timestamps embedded in the files.
+   - **Enabling conditions:** domestic investments focused on viable competitive niches; capability choices aligned with alliance standards and long-term sustainment demand; disciplined use of local content so it complements (rather than replaces) efficient allied supply chains.
+   - **Limiting conditions:** direct offsets that prioritize domestic capacity without viable niches; protectionist local-content mandates; pressure to redirect procurement spend toward low-productivity activity; sustained fragmentation that prevents scale and learning.
+   - **Alliance-relevant outcomes:** weaker competitiveness and slower modernization reduce readiness; reduced attractiveness as a partner and increased friction in collaboration weaken partnership durability; inefficient substitution can make security of supply worse (higher cost and lower reliability) even if nominal localization increases.
