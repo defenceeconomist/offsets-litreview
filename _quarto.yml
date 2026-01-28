@@ -2,6 +2,8 @@ project:
   output-dir: _output
   type: website
   title: "Offsets"
+  resources:
+    - data/cmo_statements.csv
 
 website:
   title: "Offsets"
@@ -12,6 +14,10 @@ website:
     contents: 
       - text: "Home"
         href: index.qmd
+      - text: "Findings"
+        href: findings.qmd
+      - text: "CMO Explorer"
+        href: explorer.qmd
 format:
   html:
     html-math-method: katex

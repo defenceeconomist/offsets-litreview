@@ -3,7 +3,7 @@
 #' consolidate_cmo()
 consolidate_cmo <- function(
   cmo_dir = "cmo",
-  output_csv = "data/cmo_statement.csv",
+  output_csv = "data/cmo_statements.csv",
   normalized_tags_file = "cmo/normalized_tags.yml",
   mechanism_map_file = "cmo/mechanism_map.yml"
 ) {
@@ -106,7 +106,8 @@ consolidate_cmo <- function(
 
     split_tags_str <- function(x) {
       if (is.null(x) || is.na(x) || x == "") return(character())
-      strsplit(x, ";", fixed = TRUE)[[1]]
+      # Accept semicolons, commas, or whitespace as separators.
+      strsplit(x, "[,;\\s]+")[[1]]
     }
 
     map_themes_keys <- function(tags_str) {
@@ -132,6 +133,23 @@ consolidate_cmo <- function(
         character(1)
       )
       paste(labels, collapse = ";")
+    }
+
+    # Warn on unmapped mechanism tags to keep the map coverage visible.
+    all_mech_tags <- unique(unlist(vapply(out$mechanism_tags, split_tags_str, character(0))))
+    all_mech_tags <- all_mech_tags[all_mech_tags != ""]
+    if (length(all_mech_tags) > 0) {
+      unmapped <- setdiff(all_mech_tags, names(tag_to_theme))
+      if (length(unmapped) > 0) {
+        warning(
+          sprintf(
+            "Unmapped mechanism tags (%d): %s",
+            length(unmapped),
+            paste(sort(unmapped), collapse = ", ")
+          ),
+          call. = FALSE
+        )
+      }
     }
 
     out$mechanism_theme_keys <- vapply(out$mechanism_tags, map_themes_keys, character(1))
