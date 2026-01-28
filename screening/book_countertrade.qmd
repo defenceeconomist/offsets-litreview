@@ -1,0 +1,169 @@
+**Research questions**
+
+* **RQ1 (Alliance relevance and mechanisms):** through what mechanisms do offset or industrial participation policies affect interoperability, standardisation, security of supply, readiness and the ability to contribute rapidly to NATO operations?
+* **RQ2 (Durable collaboration):** under what conditions do offsets lead to durable industrial collaboration with allies and close partners—such as co‑development, co‑production, licensed production, shared sustainment/MRO or integration into trusted supply chains?
+* **RQ3 (Risks and mitigation):** what partnership risks are most commonly associated with offsets—corruption vulnerability, export‑control friction, programme fragmentation, market distortion, cost/schedule impacts—and what mitigation measures or governance designs are reported?
+* **RQ4 (Positive comparative cases):** which countries combine a continuing offset/industrial participation policy with high levels of allied programme integration, and what policy design features appear to enable that coexistence?
+* **RQ5 (Negative/mixed cases):** which countries exhibit offset‑related frictions that undermine partnership or alliance integration outcomes (e.g. deal failure, supplier withdrawal, interoperability delays, diplomatic disputes), and what policy design features appear implicated?
+
+---
+
+### Chapter 1 – Introduction and overview
+
+This chapter defines offsets and countertrade, distinguishing direct vs. indirect forms and outlining how some programmes weight credits for R&D and technology transfer.  It notes that off‑the‑shelf procurement is cheaper but yields little domestic benefit, whereas indigenous production and offsets can build a national industrial base.  The author explains that offsets involve mandatory or voluntary commitments by suppliers to invest or purchase in the buyer’s country, and stresses that evaluating offsets requires balancing economic gains against potential inefficiencies.
+
+* **RQ1:** 0.5 – The chapter touches on supply‑chain integration and technology transfer but lacks detailed mechanisms connecting offsets to alliance readiness.
+* **RQ2:** 0.5 – It introduces conditions such as direct vs. indirect offsets and weighting for technology transfer but does not specify when durable collaborations emerge.
+* **RQ3:** 0.5 – It notes that offsets can generate inefficiencies and supply risks, implying potential cost/schedule impacts, but offers little on mitigation.
+* **RQ4:** 0 – No comparative cases; the focus is definitional.
+* **RQ5:** 0 – Does not discuss negative cases.
+
+### Chapter 2 – Countertrade and offsets: an overview of theory and evidence
+
+The second chapter could not be accessed due to digital restrictions.  It reportedly offers a theoretical and empirical survey of countertrade and offset practices, exploring how governments require vendors to spend a share of contract value in the buyer’s economy.  The available abstract indicates that such demands can increase the cost of equipment, reduce buyers’ negotiating power and raise concerns about technology transfer and industrial‑base erosion.
+
+* **RQ1:** 0 – With no detailed evidence, no assessment of alliance mechanisms is possible.
+* **RQ2:** 0 – Conditions for durable collaboration are not described.
+* **RQ3:** 0.5 – The abstract highlights concerns about cost premiums and technology‑transfer risks.
+* **RQ4:** 0 – No positive cases are detailed.
+* **RQ5:** 0 – No specific negative cases are discussed.
+
+### Chapter 3 – The defence offsets policy in Australia
+
+This chapter argues that mandatory offset schemes provide no procurement advantage; they shift initiative away from the buyer and allow suppliers to behave opportunistically.  It emphasises that local industry involvement is vital for self‑reliance but notes that such participation imposes cost and delivery penalties, which must be justified by the value of independent supply and support.
+
+* **RQ1:** 0.5 – The discussion of self‑reliance and cost/delivery penalties touches on security of supply and readiness.
+* **RQ2:** 0.5 – It notes that local involvement can promote self‑reliance but lacks examples of long‑term co‑production partnerships.
+* **RQ3:** 1 – The chapter directly highlights programme fragmentation and supplier opportunism as risks, and warns of cost penalties for local involvement.
+* **RQ4:** 0 – No positive comparative case.
+* **RQ5:** 1 – The findings illustrate a negative case where mandatory offsets produce opportunism and inefficiencies.
+
+### Chapter 4 – Offsets and weapons procurement: the Belgium experience
+
+Belgium’s offset policy is portrayed as politically advantageous, providing macroeconomic benefits such as employment, growth of high‑tech industries, balance‑of‑payments improvements and technology transfer.  However, the chapter also notes that offsets distort markets, introduce rigidities, lead to dependency and overcapacity, encourage heavy lobbying and raise costs.
+
+* **RQ1:** 0 – The focus is on domestic economic impacts rather than alliance readiness.
+* **RQ2:** 0.5 – It hints that offsets can support high‑tech sectors but does not discuss durable collaboration; it notes later inefficiencies and dependency.
+* **RQ3:** 1 – The chapter highlights risks of market distortion, overcapacity and cost premiums.
+* **RQ4:** 0.5 – Belgium initially gained employment and technology transfer, but these benefits were short‑term.
+* **RQ5:** 1 – Long‑term negative effects such as dependency and lobbying illustrate offset‑related frictions.
+
+### Chapter 5 – In search of a strategy: the evolution of Canadian defence industrial and regional benefits policy
+
+Canada’s Industrial & Regional Benefits (IRB) programme is driven mainly by political and economic considerations; despite recognition that industrial offsets often lead to inefficient resource allocation, governments continue to pursue them for regional development and political reasons.  The paper argues that decisions based on IRBs lead to inefficient allocation of defence resources and inconsistent offset decisions.  The cancellation of the EH‑101 helicopter offset package illustrates structural and political impediments to long‑term strategies.
+
+* **RQ1:** 0 – The chapter focuses on domestic industrial and political objectives rather than alliance mechanisms.
+* **RQ2:** 0 – It does not discuss conditions for durable collaboration.
+* **RQ3:** 1 – It highlights political risk, inconsistent decisions and inefficiency as key risks.
+* **RQ4:** 0 – No positive cases.
+* **RQ5:** 1 – The EH‑101 cancellation demonstrates negative outcomes when political factors override technical considerations.
+
+### Chapter 6 – Offsets and French arms exports
+
+In the 1974 North European fighter competition, French and US suppliers offered generous offset packages: Dassault proposed 70 % local manufacturing, while General Dynamics offered 5,000 jobs and local currency payments.  Offsets became decisive in the procurement decision, and the French government viewed them as a tool to secure jobs and exports.  The chapter notes that US congressional debates linked troop levels in Europe to arms exports, highlighting political leverage.
+
+* **RQ1:** 0.5 – The case shows how offsets influenced alliance negotiations and political commitment, hinting at security‑of‑supply considerations.
+* **RQ2:** 0.5 – Large co‑production promises reflect attempts at durable collaboration, but the chapter provides little on long‑term outcomes.
+* **RQ3:** 0.5 – Political risk is evident, as US lawmakers threatened troop withdrawal to compel sales.
+* **RQ4:** 0.5 – The competition illustrates a positive case where offsets secured export success and local jobs.
+* **RQ5:** 0.5 – The political linkage between arms exports and troop deployment suggests potential diplomatic frictions.
+
+### Chapter 7 – Offset benefits in Greek defence procurement: policy developments and empirical evidence
+
+Greece’s offset policy divides obligations into categories weighted by type of work; co‑production and licensed production receive higher credits, and suppliers must post a 10 % performance guarantee with penalties for unmet obligations.  Co‑production and licensed production save R&D costs, provide skilled employment, maintain defence capacity and offer access to new technology.  However, the benefits are conditional on Greece building a domestic industrial base capable of absorbing the programmes.
+
+* **RQ1:** 0.5 – The emphasis on co‑production and licensed production implies improved maintenance and potential interoperability but does not explicitly link to NATO readiness.
+* **RQ2:** 1 – The weighted credit system and performance guarantees aim to foster durable collaboration.
+* **RQ3:** 0.5 – The chapter mentions performance guarantees and penalties but not broader risks.
+* **RQ4:** 0.5 – Greece attempts to combine offsets with integration into allied programmes, but success depends on industrial capacity.
+* **RQ5:** 0.5 – Without a strong industrial base, offsets may not deliver the promised benefits.
+
+### Chapter 8 – Defence industrialisation through offsets: the case of Japan
+
+Technology transfer via licensed production has been the driving force behind Japan’s post‑war defence industrial development.  Licensed production programmes allowed Japan to acquire advanced know‑how and develop a substantial indigenous industry.  The chapter notes that US export‑control friction sometimes impedes co‑production; for example, the Pentagon withheld software needed to co‑produce the Patriot missile because of concerns about technology leakage.  Nevertheless, Japan successfully channelled imported know‑how to domestic contractors, leading to indigenous systems like the ASM‑1 anti‑ship missile.
+
+* **RQ1:** 1 – Licensed production improved interoperability, standardisation and readiness by allowing Japan to manufacture and sustain allied equipment.
+* **RQ2:** 1 – Japan’s experience shows that licensed production and technology transfer lead to durable industrial collaboration.
+* **RQ3:** 0.5 – Export‑control friction is identified as a risk, but mitigation is not deeply discussed.
+* **RQ4:** 1 – Japan is a positive case combining offsets with high integration; its design features include intensive technology transfer and licensed production.
+* **RQ5:** 0.5 – US export‑control restrictions occasionally hindered co‑production.
+
+### Chapter 9 – Saudi Arabia and offsets
+
+Saudi Arabia uses offset programmes to diversify its economy and form long‑term partnerships through joint ventures, technology transfer and investment.  However, technology transfer tends to increase the cost of defence purchases as sellers recoup R&D expenses.  The buyer often lacks the skilled workforce to absorb technology, turning offsets into branch‑plant factories.  Offsets provide foreign firms access to an otherwise closed market via joint ventures, yet licensed manufacturing is difficult because equipment volumes are small and local skills are limited.
+
+* **RQ1:** 0.5 – The discussion relates to security of supply and sustainment but lacks detail on interoperability or readiness.
+* **RQ2:** 0.5 – Long‑term partnerships and joint ventures aim at durable collaboration but success is uncertain due to limited capacity.
+* **RQ3:** 1 – Key risks include high costs (as sellers recoup R&D), lack of workforce capacity and impracticability of licensed manufacture.
+* **RQ4:** 0 – There is no evidence of high allied integration; benefits remain aspirational.
+* **RQ5:** 1 – The inability to absorb technology and high costs illustrate negative outcomes.
+
+### Chapter 10 – The teeth of the little tigers: offsets, defence production and economic development in South Korea and Taiwan
+
+This chapter could not be accessed in full.  Based on secondary references, it examines how South Korea and Taiwan (“little tigers”) used offsets and defence production programmes to develop their economies.  Without the full text, no detailed evaluation is possible.
+
+* **RQ1:** 0 – Insufficient information to assess alliance mechanisms.
+* **RQ2:** 0 – Durable collaboration conditions are not described.
+* **RQ3:** 0 – Risks and mitigation measures cannot be assessed.
+* **RQ4:** 0 – No evidence of positive comparative cases can be cited.
+* **RQ5:** 0 – No negative cases described.
+
+### Chapter 11 – From offsets to industrial cooperation: Spain’s changing strategies as an arms importer
+
+The Spanish government used the F‑18 offset programme to justify an expensive purchase, promising jobs and technology transfer.  The offset agreement required that at least 40 % of work involve high‑technology and 10 % involve technology transfer; Spain agreed to cover additional costs because its firms were on a learning curve.  Implementation proved burdensome due to ambiguous eligibility criteria and the high volume of proposals.  After this experience Spain shifted from large offsets to industrial cooperation, encouraging joint ventures and equity investments in domestic firms.
+
+* **RQ1:** 0.5 – The case touches on supply‑chain integration and readiness insofar as Spain wanted to reduce dependence via maintenance‑related work.
+* **RQ2:** 1 – High‑tech and transfer quotas, along with subsidies for learning, were intended to build durable collaboration; Spain’s later shift to joint ventures illustrates conditions fostering long‑term cooperation.
+* **RQ3:** 1 – The chapter emphasises administrative burden and ambiguous criteria as major risks, and notes cost overruns due to inefficiencies.
+* **RQ4:** 0.5 – Spain eventually developed niche expertise and participated in joint programmes; however, the initial offset programme struggled.
+* **RQ5:** 1 – The need for subsidies and the high default rate illustrate negative outcomes.
+
+### Chapter 12 – US–Swiss F‑5 transaction and the evolution of Swiss offset policy
+
+Switzerland’s first offset experience (F‑5 Peace Alps I) was hampered by inexperience: Swiss firms expected automatic orders and were confused by US procurement paperwork; progress was slow.  Swiss policy values licensed production and co‑production because they train maintenance personnel, transfer production technology, provide spare‑parts capability and reduce dependence.  Parliament accepted paying up to 10 % more for equipment to obtain offsets but worried about accurate cost estimates and “creative accounting”.  Later policies raised the offset percentage from 30 % to 50 % and then 100 %, increased the minimum contract size subject to offsets and required firms to attest that purchases were offset‑related.
+
+* **RQ1:** 1 – Licensed production/co‑production enhances maintenance capability and supply security.
+* **RQ2:** 1 – The emphasis on training, technology transfer and spares shows conditions for durable collaboration.
+* **RQ3:** 1 – Early programmes reveal risks from naïve expectations and administrative burdens; cost‑premium concerns highlight financial risk.
+* **RQ4:** 0.5 – Switzerland has integrated with allies while maintaining offsets, but the chapter does not compare widely.
+* **RQ5:** 0.5 – Early difficulties illustrate negative aspects; later reforms suggest improvement.
+
+### Chapter 13 – The UK experience with offsets
+
+The UK’s AWACS purchase included a 130 % offset commitment; critics argued the offset counted low‑tech work and orders that would have occurred anyway.  Monitoring data showed that the programme sustained about 1,279 jobs and created 113 jobs—far below the contractor’s claim of 40,000 man‑years.  Surveys found that offsets impose a mean cost premium of about 14.4 % and that the buyer generally bears this cost.  Industry complained that UK policy is relatively weak compared with other European countries and called for reciprocity and penalties.
+
+* **RQ1:** 0 – The chapter is about domestic economic effects rather than alliance mechanisms.
+* **RQ2:** 0 – There is little discussion of durable collaboration.
+* **RQ3:** 1 – It highlights risks of misclassification (counting low‑tech work), poor additionality and cost premiums.
+* **RQ4:** 0 – No positive case emerges; benefits were minimal.
+* **RQ5:** 1 – The discrepancy between promised and actual jobs and the cost premium illustrate negative outcomes.
+
+### Chapter 14 – US offset policy
+
+Early US programmes such as the F‑86 and F‑104 licensed‑production deals were designed to help allied nations absorb American technology rather than purely sell aircraft.  Later legislation (Section 825 of the National Defence Authorization Act) requires the Executive to report on offset deals and negotiate with partners to limit adverse impacts, but the Department of Defense delayed issuing implementing regulations.  Consultations with offset‑demanding countries have largely been fact‑finding exercises because partner governments pursue their own political and economic objectives.  The chapter observes that US offset policy is marked by conflicting legislative and executive positions, resulting in an ambivalent stance.
+
+* **RQ1:** 1 – Licensed production programmes improved allies’ interoperability and sustainment.
+* **RQ2:** 0.5 – The policy acknowledges offsets’ role in helping allies absorb technology, but the lack of coherent strategy hinders long‑term collaboration.
+* **RQ3:** 0.5 – The DoD’s failure to implement legislation is a governance risk.
+* **RQ4:** 0.5 – US early programmes are positive examples of technology‑sharing, but the chapter offers limited comparative analysis.
+* **RQ5:** 0.5 – The ambivalent stance can undermine allied trust, although specific negative cases are not detailed.
+
+### Chapter 15 – The business of offset: a practitioner’s perspective – case study Israel
+
+Israel’s Industrial Cooperation programme aims to link domestic companies with foreign technology leaders, creating long‑term partnerships for subcontracting, R&D, technology transfer, investment and access to global markets.  Guidelines stipulate that at least 35 % of contract value must be offset; the policy gives high credit for R&D, capital investment and software and does not mandate direct/indirect splits or impose liquidated damages.  Legislation is being prepared to make offsets mandatory for civil‑sector companies.  Offset competition in fighter procurement led firms to offer more than 70 % in offsets, prompting concerns about job losses and calls for government intervention.
+
+* **RQ1:** 0.5 – Long‑term partnerships and technology transfer may improve Israel’s ability to sustain allied equipment, but the chapter does not address NATO operations directly.
+* **RQ2:** 1 – The programme is explicitly designed to foster durable industrial collaboration, and high credit for R&D encourages deep partnerships.
+* **RQ3:** 0.5 – The chapter notes competitive risks (spiralling offset offers) but offers limited discussion of corruption or export controls.
+* **RQ4:** 1 – Israel appears to combine mandatory industrial participation with high levels of integration through long‑term partnerships and flexible credits.
+* **RQ5:** 0.5 – Offset competition shows potential negative impacts (job losses and cost pressures).
+
+### Chapter 16 – Concluding remarks
+
+The concluding chapter stresses that evaluation of offsets is hampered by data deficiencies; many programmes report only financial size without specifying whether work is new.  Early offset programmes involved unrealistic expectations and misperceptions; vendors underestimated costs and buyers assumed offsets guaranteed orders.  Over time, agreements moved from “best endeavours” to penalty‑backed commitments, and there has been a shift towards more focused measures such as joint ventures, equity investments and banking offset credits to sustain industrial partnerships.  The chapter concludes that although offsets may decline in some regions, competitive pressures mean they are unlikely to disappear entirely.
+
+* **RQ1:** 0.5 – The chapter notes that shifting from broad offsets to targeted joint ventures could improve supply security.
+* **RQ2:** 0.5 – It identifies conditions for more durable collaboration (joint ventures and equity investments).
+* **RQ3:** 1 – It highlights risks such as data deficiencies and unrealistic expectations and suggests mitigation through penalties and focused measures.
+* **RQ4:** 0.5 – The move towards joint ventures is presented as a positive evolution but without country examples.
+* **RQ5:** 0.5 – The discussion implies that early offsets led to delays and disputes due to misperceptions.

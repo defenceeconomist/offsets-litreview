@@ -10,18 +10,26 @@ website:
     search: true
     collapse-level: 1
     contents: 
-      - text: "Welcome"
+      - text: "Home"
         href: index.qmd
+      - section: Chapters
+        contents:
+        - auto: "chapters/**.qmd"
+      - section: Research
+        contents:
+        - auto: "research/**.qmd"
+      - section: "Screening"
+        contents:
+        - auto: "screening/**.qmd"
+      - section: CMO
+        contents:
+        - auto: "cmo/**.qmd"
+      - section: Offset Regimes by Country
+        contents:
+        - auto: "offset-regimes/**.qmd"
       - section: "PRISMA"
         contents:
         - auto: "prisma/**.qmd"
-      - section: "Article Notes"
-        href: article-notes.qmd
-        contents:
-        - auto: "article-notes/**.qmd"
-      - section: Reports
-        contents:
-        - auto: "reports/**.qmd"
 format:
   html:
     html-math-method: katex

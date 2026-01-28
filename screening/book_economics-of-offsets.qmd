@@ -1,0 +1,233 @@
+Below are the five research questions and a per‑chapter assessment.  Scores are: **1** (highly relevant), **0.5** (partially relevant) and **0** (not relevant).  Each justification briefly explains why the chapter speaks (or not) to the question, and short summaries are supported with citations from the uploaded PDFs.
+
+### Research questions
+
+1. **Alliance relevance and mechanisms** – How do offsets or industrial participation policies affect alliance outcomes such as interoperability, standardisation, security of supply, readiness, and rapid NATO contributions?
+2. **Conditions for durable collaboration** – Under what conditions do offsets lead to durable allied collaboration (co‑development, co‑production, licensed production, shared sustainment/MRO, trusted supply chains)?
+3. **Risks and mitigation** – What partnership risks (e.g., corruption, export‑control friction, programme fragmentation, market distortion, cost/schedule impacts) are associated with offsets, and what mitigation measures or governance designs reduce these risks?
+4. **Positive comparative cases** – Which countries maintain offset policies yet achieve high levels of allied programme integration and industrial collaboration, and what policy design features enable this?
+5. **Negative or mixed comparative cases** – Which countries exhibit offset‑related frictions undermining partnership or integration (e.g., deal failure, supplier withdrawal, delays, diplomatic disputes), and what policy features appear implicated?
+
+### Chapter summaries and relevance scoring
+
+#### Chapter 1 – Do offsets mitigate or magnify the military burden?
+
+* **Summary:** This chapter argues that offsets are primarily marketing tools and often increase costs and risks.  It shows how offset obligations are fulfilled long after contracts, creating enforcement problems; misclassified “offset” activities (e.g., AWACS orders) distort trade; offsets inflate prices and divert resources; direct offsets create military jobs at the expense of civilian productivity; barter offsets circumvent financial constraints but do little for development.  Overall, the chapter portrays offsets as magnifying the military burden.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Highlights how offsets can undermine readiness and efficiency but gives little on interoperability.
+  * **RQ2:** 0 – Does not discuss durable collaboration.
+  * **RQ3:** 1 – Provides many risk examples (price inflation, misclassification, resource diversion) and implies mitigation through enforcement.
+  * **RQ4:** 0 – No positive cases.
+  * **RQ5:** 1 – Describes negative economic consequences and programme distortions.
+
+#### Chapter 2 – Using procurement offsets as an economic development strategy
+
+* **Summary:** Focusing on economic development goals, this chapter reviews variable and mandatory offset policies, highlighting Australia’s Partnerships for Development (PfD) programme that waived offsets for strategic alliances and allowed flexibility.  It finds that variable offset policies helped achieve technology‑transfer objectives and emphasises the need for skilled negotiators.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Links offsets to technology transfer but not directly to NATO interoperability.
+  * **RQ2:** 1 – Explains conditions (flexible, alliance‑oriented policies) under which offsets foster durable collaboration.
+  * **RQ3:** 0.5 – Notes complexity but not detailed risks.
+  * **RQ4:** 1 – Cites Australia’s positive variable policy as a comparative case.
+  * **RQ5:** 0.5 – Only briefly notes difficulties with large, rigid offset schemes.
+
+#### Chapter 3 – Mandatory defence offsets: conceptual foundations
+
+* **Summary:** This conceptual chapter defines offsets as bundling of separate transactions and cautions that suppliers often fulfil obligations after contracts, giving them scope to renege.  It lists typical offset elements such as technology transfer, training and through‑life support.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Provides generic mechanisms but little on alliance outcomes.
+  * **RQ2:** 0 – Does not address durable collaboration.
+  * **RQ3:** 1 – Highlights enforcement risks when obligations are back‑loaded.
+  * **RQ4:** 0 – No comparative cases.
+  * **RQ5:** 0.5 – Implies negative consequences if obligations are not enforced.
+
+#### Chapter 4 – Economic aspects of arms‑trade offsets
+
+* **Summary:** The chapter critiques offsets from an economic perspective, arguing that technology transfer seldom builds self‑sustaining capacity, that indirect offsets often displace trade rather than create new trade, and that suppliers frequently dump outdated technology.  It notes that unions oppose offsets due to job losses and price inflation.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Offers a general mechanism (offsets undermine efficiency), but little on alliance‑specific metrics.
+  * **RQ2:** 0 – Does not cover durable collaboration.
+  * **RQ3:** 1 – Discusses trade displacement, price inflation and outdated technology.
+  * **RQ4:** 0 – No positive cases.
+  * **RQ5:** 1 – Shows how offsets can harm domestic industries and partnerships.
+
+#### Chapter 5 – Arms trade as illiberal trade
+
+* **Summary:** This study argues that offsets create cross‑national supply chains where defence sellers buy components, market unrelated goods or transfer technology as part of deals; it cites hyper‑specialisation, as with the F‑16 co‑production where Dutch firm DAF became a long‑term subcontractor.  It notes that US services shifted to facilitating offsets, causing firms to view offsets as normal business, with transaction costs estimated at 7–10 % of sale value.  Offsets also replace domestic jobs.
+* **Scores:**
+
+  * **RQ1:** 1 – Describes mechanisms linking offsets to supply‑chain integration, readiness costs and interoperability.
+  * **RQ2:** 0.5 – Shows long‑term subcontracting, but emphasises negative impacts.
+  * **RQ3:** 1 – Discusses transaction costs and job displacement risks.
+  * **RQ4:** 0.5 – Notes F‑16 cooperation as a rare durable case.
+  * **RQ5:** 1 – Highlights negative outcomes such as hyper‑specialisation and domestic job losses.
+
+#### Chapter 6 – Defence offsets: policy versus pragmatism
+
+* **Summary:** This chapter distinguishes between idealised offset policies and pragmatic practices.  It notes that some countries, like Pakistan and Brunei, forgo offsets due to urgent security needs or treaties, while others adopt flexible “best endeavours” approaches, emphasising trust and long‑term partnerships.  It warns that strict offset prescriptions lead to stress and non‑fulfilment.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Touches on readiness when countries prioritise quick acquisition.
+  * **RQ2:** 1 – Highlights trust‑based partnerships and flexible design as conditions for durable collaboration.
+  * **RQ3:** 1 – Identifies risks from rigid prescriptions and the need for realistic policies.
+  * **RQ4:** 0.5 – Provides examples of countries balancing offsets and cooperation.
+  * **RQ5:** 0.5 – Notes negative experiences with prescriptive policies but few country‑specific cases.
+
+#### Chapter 7 – Comparing British and German offset strategies
+
+* **Summary:** The UK treats offsets as industrial participation; IP bids must be defence‑related, new and cost‑neutral.  The C‑130J procurement embedded SMEs into the supply chain and the UK does not offer multipliers for tech transfer, crediting only commercially successful technology.  The UK advocates waiving offsets within Europe to reduce fragmentation.  Germany historically insisted on domestic production and technology transfer, which built a strong industry but later supported a domestic cartel.
+* **Scores:**
+
+  * **RQ1:** 1 – Shows mechanisms enhancing supply‑chain integration and standardisation.
+  * **RQ2:** 1 – Explains how British policy fosters durable cooperation (supply‑chain embedding, tech‑transfer credit).
+  * **RQ3:** 0.5 – Notes risks of domestic cartels and fragmentation.
+  * **RQ4:** 1 – UK and Germany provide positive comparative cases.
+  * **RQ5:** 0.5 – Highlights Germany’s later cartel issues but not major alliance frictions.
+
+#### Chapter 8 – Offsets and the Joint Strike Fighter in the UK and the Netherlands
+
+* **Summary:** This chapter analyses JSF offset negotiations.  BAE’s exclusive partnership with Lockheed Martin may leave other partners dependent, raising concerns about win‑lose outcomes.  Dutch assessments ranked the JSF ahead of offset‑rich alternatives but noted that technology transfer depends on US approval; transaction costs of offsets were 7–10 %.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Discusses supply‑chain dependence but not core NATO metrics.
+  * **RQ2:** 1 – Highlights conditions (exclusive partnerships, technology access) for durable collaboration.
+  * **RQ3:** 1 – Notes risks from export‑control friction and transaction costs.
+  * **RQ4:** 0.5 – Presents the Netherlands’ case but with mixed conclusions.
+  * **RQ5:** 0.5 – Notes potential negative outcomes but lacks direct evidence of frictions.
+
+#### Chapter 9 – Nordic offset policies: changes and challenges
+
+* **Summary:** Surveying Denmark, Finland, Norway and Sweden, this chapter notes that Denmark caps offsets at 30 % to avoid overburdening a small industry, while Nordic governments increasingly prioritise domestic participation in development, manufacture and sustainment.  Policies have become more specific, multipliers reduced, and evaluation is case‑by‑case.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Discusses participation and sustainment but little on interoperability.
+  * **RQ2:** 1 – Shows how limits and prioritised technology fields encourage durable collaboration.
+  * **RQ3:** 1 – Addresses risks of impossible obligations and the need for realistic caps.
+  * **RQ4:** 0.5 – Denmark and Sweden serve as modest positive examples.
+  * **RQ5:** 0.5 – Limited discussion of frictions; some risks acknowledged.
+
+#### Chapter 10 – Evaluating defence offsets: experiences in Finland and Sweden
+
+* **Summary:** Finnish audits of F/A‑18 offsets found that most of the 600 projects were fulfilled but often would have happened anyway; job creation was minimal, and administration costs were high.  Swedish audits noted vague contract requirements and recommended clear guidelines, competitive bidding and continuous monitoring.  Sweden later refocused offsets toward defence‑specific technology fields with long‑term impact.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Provides lessons on readiness and supply but not directly NATO‑focused.
+  * **RQ2:** 1 – Shows conditions for durable collaboration (clear guidelines, targeted technology, competitive bidding).
+  * **RQ3:** 1 – Highlights risks of non‑additional projects, high costs, and vague contracts; offers mitigation.
+  * **RQ4:** 0.5 – Finland and Sweden illustrate mixed positive practices.
+  * **RQ5:** 1 – Exposes negative outcomes of poorly designed offsets.
+
+#### Chapter 11 – Offsets in Belgium: between Scylla and Charybdis
+
+* **Summary:** Belgium’s offsets were short‑term, contract‑by‑contract, yielding limited cooperation, overprotection and overcapacity.  Indirect offsets delivered low‑quality work and sometimes reclassified normal trade.  The country paid a 20–30 % cost penalty and regional quotas spurred rent‑seeking.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Illustrates supply‑chain fragmentation and cost impacts.
+  * **RQ2:** 0 – Shows no durable collaboration.
+  * **RQ3:** 1 – Highlights risks of overcosts and regional politics.
+  * **RQ4:** 0 – No positive comparative case.
+  * **RQ5:** 1 – Demonstrates negative effects on industry and partnerships.
+
+#### Chapter 12 – The defence industry in Poland: an offsets‑based revival?
+
+* **Summary:** Poland’s 1999 Offset Act mandates 100 % offsets with multipliers and penalties.  The F‑16 package revealed tensions between “open” supplier preferences and Poland’s specific project lists, with penalties sometimes cheaper than fulfilment.  The AMV deal combined technology transfer, training and buyback.  Conclusions suggest direct offsets act like tariffs and success is uncertain.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Offers some mechanisms related to supply chains but not NATO‑specific.
+  * **RQ2:** 0.5 – Shows conditions (specific projects, multipliers) affecting durability.
+  * **RQ3:** 1 – Identifies risks of penalty games and limited additionality.
+  * **RQ4:** 0.5 – Limited positive outcomes.
+  * **RQ5:** 0.5 – Points to potential negative consequences but lacks concrete failures.
+
+#### Chapter 13 – Offsets and the development of the Brazilian arms industry
+
+* **Summary:** Brazil pursued licensed production and technology transfer to build indigenous capability; a formal aerospace offset policy in 1991 emphasised technology improvement.  Early F‑5E offsets involved local manufacturing and training.  Evaluation shows high costs and subsidies with modest economic benefits; only Embraer became globally competitive, while other sectors struggled.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Relates to supply‑chain growth, but little on alliance outcomes.
+  * **RQ2:** 0.5 – Offers partial success (Embraer) but limited durable collaboration.
+  * **RQ3:** 1 – Notes risks of high costs and dependence.
+  * **RQ4:** 0.5 – Embraer provides a modest positive case.
+  * **RQ5:** 0.5 – Many sectors failed to achieve lasting benefits.
+
+#### Chapter 14 – The Argentine defence industry: an evaluation
+
+* **Summary:** Post‑privatisation, Lockheed Martin Argentina upgraded A‑4 Skyhawks but invested little and produced no new aircraft.  A later contract expanded maintenance but offered only a 180‑day spare‑parts guarantee.  The workforce shrank and skilled personnel migrated to Brazil.  The authors argue that offset success requires competitive wages, stable funding and knowledgeable negotiators.
+* **Scores:**
+
+  * **RQ1:** 0 – Does not address alliance mechanisms.
+  * **RQ2:** 0 – Describes failed collaboration.
+  * **RQ3:** 0.5 – Identifies risks (under‑investment, inadequate negotiation).
+  * **RQ4:** 0 – No positive case.
+  * **RQ5:** 0.5 – Shows negative outcomes and failed offsets.
+
+#### Chapter 15 – The role of offsets in Indian defence procurement policy
+
+* **Summary:** India’s offset practice includes licensed production, technology transfer, countertrade and long‑term credit.  Licensed production often suffered delays, cost overruns and reliance on imported components, but the MiG‑21 project improved Hindustan Aeronautics’ capabilities.  Soviet offsets came with export restrictions and withheld technical data, though rupee‑denominated credit arrangements created favourable trade.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Contains some insight into supply‑chain integration.
+  * **RQ2:** 0.5 – Licensed production built enduring capability, but dependence persisted.
+  * **RQ3:** 1 – Highlights risks (cost, restrictions, corruption) and some mitigation via credit terms.
+  * **RQ4:** 0.5 – Few positive examples.
+  * **RQ5:** 0.5 – Shows mixed outcomes, including scandals.
+
+#### Chapter 16 – Offset policies and trends in Japan, South Korea and Taiwan
+
+* **Summary:** Japan prioritises indigenous production (kokusanka); declining budgets and reduced US technology transfers have left its industry under‑utilised.  South Korea mandates 30–70 % offsets; technology transfers have increased local market share but reliance on US suppliers remains high.  The T‑50 trainer programme is a co‑production where Korea is prime and Lockheed a subcontractor.  Taiwan uses targeted offsets to create maintenance centres but its small industrial base limits multiplier effects.
+* **Scores:**
+
+  * **RQ1:** 1 – Provides detailed mechanisms linking offsets to supply‑chain integration and industrial capacity.
+  * **RQ2:** 0.5 – Notes durable cases like T‑50 but overall dependence remains.
+  * **RQ3:** 1 – Highlights risks (over‑capacity, bid tampering, political constraints).
+  * **RQ4:** 0.5 – Offers partial success (T‑50) but limited integration.
+  * **RQ5:** 0.5 – Describes negative outcomes such as F‑15K controversy.
+
+#### Chapter 17 – Offsets and defence industrialisation in Indonesia and Singapore
+
+* **Summary:** Indonesia’s IPTN sought technology transfer through offsets using a “Begin at the End” philosophy, but the Asian financial crisis forced cuts, debt and project cancellations.  The chapter concludes that offsets alone cannot build sustainable industries.  Singapore adopts a different strategy, focusing on joint ventures and global partnerships; ST Engineering participates in the JSF and earns half its revenue from civilian work.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Illustrates mechanism differences between offset‑dependent and partnership‑based models.
+  * **RQ2:** 1 – Demonstrates that sustainable collaboration arises from long‑term partnerships (Singapore).
+  * **RQ3:** 0.5 – Notes risks of financial collapse and dependence.
+  * **RQ4:** 1 – Singapore presents a positive comparative case.
+  * **RQ5:** 0.5 – Indonesia shows a negative outcome.
+
+#### Chapter 18 – Defence offsets in Australia and New Zealand
+
+* **Summary:** Australia’s Australian Industry Involvement (AII) program mandated 30 % offsets, new work and technology transfer.  Audits found a 29 % cost premium for the local F/A‑18 assembly and no agreed outputs or performance measures.  The chapter recommends replacing broad mandatory schemes with contract‑specific strategies.  New Zealand encourages voluntary local involvement up to 30 % and seeks commercially sustainable offsets.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Discusses local content and technology transfer but not NATO.
+  * **RQ2:** 0.5 – Highlights that tailored contracts could enhance durability.
+  * **RQ3:** 1 – Points to risks of cost premiums and lack of metrics, implying mitigation.
+  * **RQ4:** 0.5 – New Zealand’s voluntary model offers a modest positive example.
+  * **RQ5:** 0.5 – Australia’s inefficiencies represent a negative outcome.
+
+#### Chapter 19 – Defence industrial participation: the South African experience
+
+* **Summary:** South Africa’s Strategic Defence Package (1999) included Defence Industrial Participation (DIP) and National Industrial Participation (NIP) schemes, requiring offsets to be new, sustainable and like‑for‑like.  The R104 billion offset package promised 65 000 jobs but became embroiled in bribery and conflicts of interest.  Critics argued the offsets produced few sustainable jobs and that funds would have been better spent elsewhere.
+* **Scores:**
+
+  * **RQ1:** 0.5 – Touches on industrial participation but not directly NATO‑focused.
+  * **RQ2:** 0 – Provides no durable collaboration example.
+  * **RQ3:** 1 – Highlights corruption and governance risks.
+  * **RQ4:** 0 – No positive comparative case.
+  * **RQ5:** 1 – Demonstrates negative outcomes and politicisation.
+
+#### Chapter 20 – Defence offsets and regional development in South Africa
+
+* **Summary:** This chapter examines the Coega Industrial Development Zone (IDZ) tied to German submarine offsets.  Promised job estimates ballooned from 40 000 to 240 000, but anchor tenants withdrew and development stalled.  Political factors influenced project allocation, fuelling perceptions of bias.  Critics note that the project produced few jobs and recommended alternative investments.
+* **Scores:**
+
+  * **RQ1:** 0 – Does not address alliance‑relevant mechanisms.
+  * **RQ2:** 0 – No durable collaboration.
+  * **RQ3:** 0.5 – Indicates political and allocation risks.
+  * **RQ4:** 0 – No positive cases.
+  * **RQ5:** 1 – Strongly negative example showing politicisation and failed promises.
+
+This synthesis draws on the uploaded chapters to summarise their content and assess their relevance to the five research questions.

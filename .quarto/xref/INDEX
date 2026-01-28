@@ -79,5 +79,59 @@
   },
   "prisma/scorpus/search_log_annex.qmd": {
     "search_log_annex.html": "a215d85c"
+  },
+  "notes/articles.qmd": {
+    "articles.html": "d94eccd0"
+  },
+  "cmo/artlcles.qmd": {
+    "artlcles.html": "73f4dfba"
+  },
+  "cmo/countertrade.qmd": {
+    "countertrade.html": "935be4ac"
+  },
+  "cmo/arms_trade.qmd": {
+    "arms_trade.html": "cb900b27"
+  },
+  "screening/articles.qmd": {
+    "articles.html": "53bdbd25"
+  },
+  "screening/book_countertrade.qmd": {
+    "book_countertrade.html": "c24f3cc5"
+  },
+  "screening/book_economics-of-offsets.qmd": {
+    "book_economics-of-offsets.html": "9fdebc81"
+  },
+  "chapters/01-research-question.qmd": {
+    "01-research-question.html": "bd1a3a56"
+  },
+  "chapters/02-research-strategy.qmd": {
+    "02-research-strategy.html": "183f7110"
+  },
+  "research/realist-evidence-synthesis.qmd": {
+    "realist-evidence-synthesis.html": "98b74d37"
+  },
+  "research/global-defence-offset-regimes.qmd": {
+    "global-defence-offset-regimes.html": "568bc6a1"
+  },
+  "research/articles-deep-research-report.qmd": {
+    "articles-deep-research-report.html": "d8f127a5"
+  },
+  "research/armstrade-deep-research-report.qmd": {
+    "armstrade-deep-research-report.html": "e590d320"
+  },
+  "research/countertrade-deep-research-report.qmd": {
+    "countertrade-deep-research-report.html": "d9c29155"
+  },
+  "offset-regimes/countertrade.qmd": {
+    "countertrade.html": "44c8d46f"
+  },
+  "offset-regimes/articles.qmd": {
+    "articles.html": "f93c07b0"
+  },
+  "offset-regimes/armstrade.qmd": {
+    "armstrade.html": "e869bf11"
+  },
+  "cmo/cmo-statements.qmd": {
+    "cmo-statements.html": "9bd1f6c5"
   }
 }

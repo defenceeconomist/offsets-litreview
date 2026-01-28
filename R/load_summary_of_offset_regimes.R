@@ -8,7 +8,7 @@
 #' @examples 
 #' load_summary_of_offset_regimes()
 load_summary_of_offset_regimes <- function(
-  path_to_yaml = "reports/comparative_summary_of_defence_offset_regimes.yml"
+  path_to_yaml = "chapters/comparative_summary_of_defence_offset_regimes.yml"
 ) {
   
 

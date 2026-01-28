@@ -1,0 +1,11 @@
+# Extracted CMO Statements
+
+```{r}
+#| include: false
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+```{r}
+readr::read_csv("data/cmo_statement.csv") |>
+    DT::datatable()
+```

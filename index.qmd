@@ -1,1 +1,95 @@
-Welcome!
+# OFFSETS Literature Review
+
+A realist evidence synthesis and comparative case mapping of defence offsets/industrial participation policies, with a focus on alliance-relevant outcomes (e.g., interoperability, readiness, security of supply) and the conditions under which offsets help or hinder strategic partnerships.
+
+## Aims
+
+- Explain how offset and industrial participation policies interact with NATO-aligned defence priorities.
+- Identify mechanisms and conditions that lead to durable industrial collaboration with allies and partners.
+- Surface recurring risks (e.g., cost inflation, governance/opacity, corruption, export-control friction) and mitigation approaches.
+- Map comparative country cases that demonstrate positive, negative, or mixed outcomes under different offset regimes.
+
+These aims are operationalized in the research questions in `reports/01-research-question.qmd`.
+
+## Methods
+
+- **Realist evidence synthesis (CMO):** Extracts Context-Mechanism-Outcome configurations from sources to explain what works, for whom, and under what conditions.
+- **Comparative case mapping:** Uses a consistent rubric to compare countries and programmes on policy design, depth of collaboration, alliance integration markers, and documented risks.
+- **Two-lane search strategy:** Parallel searches for (1) offsets/industrial participation literature and (2) alliance-relevant industrial cooperation/interoperability literature to avoid terminology gaps.
+- **Evidence mix:** Academic literature plus targeted grey literature (government policy, audits, NATO/EU material, and governance analyses).
+
+Full methodology and search strategy are detailed in `reports/02-research-strategy.qmd`.
+
+## Data & Artifacts
+
+- **CMO extraction (YAML):**
+  - `cmo/arms_trade.yml`
+  - `cmo/economic_offsets_book.yml`
+- **CMO narrative summaries:**
+  - `cmo/arms_trade.qmd` (chapters 1-20)
+  - `cmo/countertrade.qmd`
+- **PRISMA/logs and search exports:**
+  - `prisma/prisma.qmd`
+  - `prisma/search_logs.yml`
+  - `prisma/scorpus/*.bib`
+  - `prisma/EBSCO-Metadata-01_24_2026.bibtex`
+  - `prisma/tandf defence AND offsets (24 Jan 26).csv`
+- **Synthesis draft:**
+  - `reports/realist-evidence-synthesis.qmd`
+
+## Initial Findings (Preliminary)
+
+- Offsets often raise acquisition costs and are vulnerable to **opacity and rent-seeking** when obligations are long-dated and weakly enforced; buyers may pay a premium without commensurate industrial benefit.
+- **Policy design matters:** flexible or partnership-oriented schemes (e.g., variable offsets, strategic alliances) can encourage genuine collaboration, while rigid mandates are linked to gaming, delay, and weak additionality.
+- **Absorptive capacity is pivotal:** technology transfer succeeds more often where local industry, skills, and governance are strong; otherwise, benefits are short-lived or spill into non-defence sectors.
+- **Governance risks are recurrent:** complex offset packages create corruption and accountability risks, especially where monitoring is limited or intermediaries dominate.
+- **Alliance-relevant outcomes are mixed:** offsets can deepen supply-chain integration and sustainment roles, but also create friction via export-control constraints, programme fragmentation, or distorted market incentives.
+
+These themes are drawn from `reports/realist-evidence-synthesis.qmd` and the CMO records in `cmo/*.yml` and `cmo/*.qmd`.
+
+## Synthesis Plan (Answering the Research Questions)
+
+1. **Consolidate the evidence base**
+   - Merge CMO records from `cmo/*.yml` and narrative notes in `cmo/*.qmd` into a single working table (context, mechanism, outcome, evidence type, confidence, country/programme).
+   - Tag each record to one or more research questions (RQ1-RQ5) using the existing `rq_tags` plus manual review where tags are missing.
+
+2. **Build a mechanism map**
+   - Cluster mechanisms into a small set of core pathways (e.g., technology transfer/learning-by-doing; supply-chain integration; governance opacity/rent-seeking; export-control friction).
+   - For each pathway, summarize the contextual conditions under which it produces alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability).
+
+3. **Answer RQ1 (Alliance relevance and mechanisms)**
+   - Synthesize mechanism clusters into short, evidence-backed statements describing how offsets affect alliance outcomes and under what conditions.
+   - Highlight high-confidence mechanisms and flag contested or low-confidence areas.
+
+4. **Answer RQ2 (Conditions for durable collaboration)**
+   - Identify cases where offsets coincide with deep collaboration (co-development, co-production, shared sustainment).
+   - Extract enabling conditions (policy design, absorptive capacity, governance, export-control environment).
+
+5. **Answer RQ3 (Risks and mitigation)**
+   - Aggregate negative outcomes (cost inflation, delays, corruption, market distortion, programme fragmentation).
+   - Map mitigation measures reported in the literature (transparency requirements, enforcement, targeted multipliers, capability thresholds).
+
+6. **Answer RQ4-RQ5 (Comparative cases)**
+   - Build a concise case matrix: policy design, collaboration depth, alliance markers, risks, confidence.
+   - Classify each case as positive, negative, or mixed and explain classification with 2-3 evidence points.
+
+7. **Draft synthesis outputs**
+   - Produce a 1-2 page findings section organized by mechanisms and conditions.
+   - Produce a short comparative case annex (table + narrative notes).
+   - Add a limitations section (evidence gaps, attribution limits, time period coverage).
+
+8. **Quality checks**
+   - Verify each key claim against at least two sources (or clearly mark single-source claims).
+   - Ensure each research question has a direct, traceable answer and supporting evidence list.
+
+## Progress Log
+
+- **2026-01-24:** Captured Scopus exports and EBSCO metadata; compiled Taylor & Francis export and relevance list. (`prisma/scorpus/*.bib`, `prisma/EBSCO-Metadata-01_24_2026.bibtex`, `prisma/tandf defence AND offsets (24 Jan 26).csv`, `prisma/tandf_relevant_keys.txt`)
+- **2026-01-24:** Logged PRISMA-style search counts and preliminary screening outcomes. (`prisma/prisma.qmd`)
+- **2026-01-XX:** Drafted research questions and critique/refinement. (`reports/01-research-question.qmd`)
+- **2026-01-XX:** Drafted methodology and two-lane search strategy. (`reports/02-research-strategy.qmd`)
+- **2026-01-XX:** Built CMO narratives for the first 20 chapters on defence offsets. (`cmo/arms_trade.qmd`)
+- **2026-01-XX:** Structured CMO extractions in YAML for arms-trade and economic offsets sources. (`cmo/arms_trade.yml`, `cmo/economic_offsets_book.yml`)
+- **2026-01-XX:** Compiled a realist synthesis draft with regional case evidence and thematic mechanisms. (`reports/realist-evidence-synthesis.qmd`)
+
+Note: Dates marked 2026-01-XX reflect items currently in the repo without explicit timestamps embedded in the files.

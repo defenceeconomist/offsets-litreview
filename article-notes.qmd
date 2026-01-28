@@ -1,7 +1,0 @@
----
-title: "Article Notes"
-listing:
-  contents: article-notes
----
-
-These files list the notes from the reviewed articles.

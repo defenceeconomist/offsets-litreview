@@ -41,5 +41,3 @@ main <- function() {
     compress_pdf(input, output)
   }
 }
-
-main()
