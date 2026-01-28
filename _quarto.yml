@@ -12,28 +12,10 @@ website:
     contents: 
       - text: "Home"
         href: index.qmd
-      - section: Chapters
-        contents:
-        - auto: "chapters/**.qmd"
-      - section: Research
-        contents:
-        - auto: "research/**.qmd"
-      - section: "Screening"
-        contents:
-        - auto: "screening/**.qmd"
-      - section: CMO
-        contents:
-        - auto: "cmo/**.qmd"
-      - section: Offset Regimes by Country
-        contents:
-        - auto: "offset-regimes/**.qmd"
-      - section: "PRISMA"
-        contents:
-        - auto: "prisma/**.qmd"
 format:
   html:
     html-math-method: katex
 
 toc: true
 number-sections: true
-bibliography: references.bib  
+bibliography: references/references.bib  
