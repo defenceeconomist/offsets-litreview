@@ -1,5 +1,6 @@
 project:
   output-dir: _output
+  execute-dir: project
   type: website
   title: "Offsets"
   resources:
@@ -18,6 +19,9 @@ website:
         href: report.qmd
       - text: "CMO Explorer"
         href: explorer.qmd
+      - section: "Synthesis"
+        contents:
+        - auto: "synthesis/**.qmd"
 format:
   html:
     html-math-method: katex

@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>RQ1 Synthesis – Offsets</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a053849730e33603d127d953164e18b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../synthesis/rq1.html">Synthesis</a></li><li class="breadcrumb-item"><a href="../synthesis/rq1.html">RQ1 Synthesis</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Offsets</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Report</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explorer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CMO Explorer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Synthesis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../synthesis/rq1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">RQ1 Synthesis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" id="toc-rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" class="nav-link active" data-scroll-target="#rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes"><span class="header-section-number">1</span> RQ1. Mechanisms Linking Offsets/IP to Alliance-Relevant Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#outcome-domains-identified-from-the-rq1-cmos" id="toc-outcome-domains-identified-from-the-rq1-cmos" class="nav-link" data-scroll-target="#outcome-domains-identified-from-the-rq1-cmos"><span class="header-section-number">1.1</span> Outcome Domains Identified From the RQ1 CMOs</a></li>
+  <li><a href="#interoperability-and-standardisation-n9" id="toc-interoperability-and-standardisation-n9" class="nav-link" data-scroll-target="#interoperability-and-standardisation-n9"><span class="header-section-number">1.2</span> Interoperability and Standardisation (n≈9)</a></li>
+  <li><a href="#readiness-and-sustainment-support-n2025" id="toc-readiness-and-sustainment-support-n2025" class="nav-link" data-scroll-target="#readiness-and-sustainment-support-n2025"><span class="header-section-number">1.3</span> Readiness and Sustainment Support (n≈20–25)</a></li>
+  <li><a href="#security-of-supply-and-autonomy-n1015" id="toc-security-of-supply-and-autonomy-n1015" class="nav-link" data-scroll-target="#security-of-supply-and-autonomy-n1015"><span class="header-section-number">1.4</span> Security of Supply and Autonomy (n≈10–15)</a></li>
+  <li><a href="#defence-industrial-capability-and-technology-transfer-n2030" id="toc-defence-industrial-capability-and-technology-transfer-n2030" class="nav-link" data-scroll-target="#defence-industrial-capability-and-technology-transfer-n2030"><span class="header-section-number">1.5</span> Defence-Industrial Capability and Technology Transfer (n≈20–30)</a></li>
+  <li><a href="#programme-performance-cost-and-governance-n1015" id="toc-programme-performance-cost-and-governance-n1015" class="nav-link" data-scroll-target="#programme-performance-cost-and-governance-n1015"><span class="header-section-number">1.6</span> Programme Performance, Cost, and Governance (n≈10–15)</a></li>
+  <li><a href="#alliance-political-leverage-trust-and-network-position-n510" id="toc-alliance-political-leverage-trust-and-network-position-n510" class="nav-link" data-scroll-target="#alliance-political-leverage-trust-and-network-position-n510"><span class="header-section-number">1.7</span> Alliance Political Leverage, Trust, and Network Position (n≈5–10)</a></li>
+  <li><a href="#synthesis-enabling-conditions-and-boundary-conditions" id="toc-synthesis-enabling-conditions-and-boundary-conditions" class="nav-link" data-scroll-target="#synthesis-enabling-conditions-and-boundary-conditions"><span class="header-section-number">1.8</span> Synthesis: Enabling Conditions and Boundary Conditions</a></li>
+  <li><a href="#what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" id="toc-what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" class="nav-link" data-scroll-target="#what-this-suggests-for-nato-aligned-strategy-conditional-takeaways"><span class="header-section-number">1.9</span> What This Suggests for NATO-Aligned Strategy (Conditional Takeaways)</a></li>
+  <li><a href="#evidence-rq1-coded-cmo-statements" id="toc-evidence-rq1-coded-cmo-statements" class="nav-link" data-scroll-target="#evidence-rq1-coded-cmo-statements"><span class="header-section-number">1.10</span> Evidence (RQ1-coded CMO statements)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../synthesis/rq1.html">Synthesis</a></li><li class="breadcrumb-item"><a href="../synthesis/rq1.html">RQ1 Synthesis</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">RQ1 Synthesis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes"><span class="header-section-number">1</span> RQ1. Mechanisms Linking Offsets/IP to Alliance-Relevant Outcomes</h2>
+<p>Alliance relevance and mechanisms — Through what mechanisms do offset or industrial participation policies affect alliance-relevant outcomes such as interoperability, standardisation, security of supply, readiness, and the ability to contribute rapidly to NATO operations?</p>
+<p>This synthesis uses <strong>only</strong> the RQ1-coded CMO statements. The evidence base mixes high-confidence case studies/comparative case studies with a small number of more conceptual/theory-model claims; where outcomes are framed as “expected” or “aimed”, these are treated as conceptual rather than empirically observed. (calcara_20_pdf__cmo_002, weiss_19_pdf__cmo_003, kanniainen_17_pdf__cmo_002)</p>
+<section id="outcome-domains-identified-from-the-rq1-cmos" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="outcome-domains-identified-from-the-rq1-cmos"><span class="header-section-number">1.1</span> Outcome Domains Identified From the RQ1 CMOs</h3>
+<ul>
+<li>Interoperability and Standardisation (n≈9)</li>
+<li>Readiness and Sustainment Support (n≈20–25)</li>
+<li>Security of Supply and Autonomy (n≈10–15)</li>
+<li>Defence-Industrial Capability and Technology Transfer (n≈20–30)</li>
+<li>Programme Performance, Cost, and Governance (n≈10–15)</li>
+<li>Alliance Political Leverage, Trust, and Network Position (n≈5–10)</li>
+</ul>
+</section>
+<section id="interoperability-and-standardisation-n9" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="interoperability-and-standardisation-n9"><span class="header-section-number">1.2</span> Interoperability and Standardisation (n≈9)</h3>
+<ul>
+<li><strong>Programmatic integration for common standards</strong>: In contexts where multilateral operations and interoperability priorities drive cooperation, pooling and standardising equipment is framed as a route to interoperability. Mechanism: cooperation provides economies of scale and standardisation, aligning equipment and practices across partners. Outcome: improved interoperability/standardisation (often stated as expected rather than directly measured). (weiss_19_pdf__cmo_002, calcara_20_pdf__cmo_002)</li>
+<li><strong>Offsets embedded in alliance-linked defence sales</strong>: In contexts of established security relationships and export-driven defence sales, offsets/industrial compensation are used as inducements. Mechanism: offering technology transfer/production arrangements within sales packages reinforces alliance ties and supports interoperability aims. Outcome: defence sales proceed with industrial compensation explicitly embedding alliance-building and interoperability goals. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001)</li>
+<li><strong>Interoperability-driven technology sharing under constraint</strong>: In contexts where interoperability requirements are tied to sensitive technologies, interoperability can require technology release. Mechanism: achieving interoperability necessitates sharing sensitive technology with partners (sometimes conditional on technology-access arrangements and approvals). Outcome: sensitive technology is shared with partners; governance around technology release becomes an active constraint on the pathway. (hagelin_12_pdf__cmo_002, 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006)</li>
+<li><strong>Interoperability as a driver of costly acceleration dynamics</strong>: In contexts combining interoperability priorities with budget constraints and political pressure, technology sharing is framed as creating pressure to advance next-generation development. Mechanism: interoperability/technology sharing is used to justify accelerating “next generation” development to preserve an edge. Outcome: higher taxpayer costs and an arms-race dynamic among allies. (05_arms_trade_as_illiberal_trade_pdf__cmo_017)</li>
+</ul>
+</section>
+<section id="readiness-and-sustainment-support-n2025" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="readiness-and-sustainment-support-n2025"><span class="header-section-number">1.3</span> Readiness and Sustainment Support (n≈20–25)</h3>
+<ul>
+<li><strong>Direct offsets building maintenance/modification competence</strong>: In contexts where imported systems generate sustainment dependence, direct military offsets can be targeted at maintenance and modification capacity. Mechanism: offsets provide resources/training/work packages that build local maintenance and modification capability, shifting actors toward in-country sustainment. Outcome: strengthened domestic sustainment competence supporting readiness. (10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017, 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021)</li>
+<li><strong>Targeted MRO skill formation through selective cooperation</strong>: In contexts of small-state constraints and explicit prioritisation of sustainment skills, offsets/IP are used selectively for training and specialised repair/upgrade activities. Mechanism: collaboration and training requirements focus learning-by-doing on readiness-critical subsystems rather than broad industrialisation. Outcome: expanded MRO/upgrade capacity and improved overhaul capability for lifecycle support. (17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013, 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014, 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015)</li>
+<li><strong>Re-focusing offsets towards defence-relevant sustainment outcomes</strong>: In contexts where policy shifts away from civil/economic offsets toward defence-technology competence (and/or where military requirements must dominate procurement), offset demands are redirected. Mechanism: restricting offsets’ role in supplier selection and prioritising defence-relevant technology/sustainment objectives reduces distortion and concentrates offset effort on lifecycle-support competencies. Outcome: offsets are redirected to defence-industrial participation and maintenance/technology competence and constrained to a secondary role in procurement evaluation. (10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016, 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004, 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008)</li>
+<li><strong>Boundary conditions from scale and duration of support</strong>: In contexts of very small fleets and limited support commitments, sustainment economics become fragile. Mechanism: small scale and short windows for spares/support weaken long-term supportability and deter external buyers. Outcome: high sustainment costs and reduced export viability (with sustainment activity potentially persisting only in narrow forms). (14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010, 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007, 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_005)</li>
+</ul>
+</section>
+<section id="security-of-supply-and-autonomy-n1015" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="security-of-supply-and-autonomy-n1015"><span class="header-section-number">1.4</span> Security of Supply and Autonomy (n≈10–15)</h3>
+<ul>
+<li><strong>Security of supply via maintenance capacity (including theory-model claims)</strong>: In contexts where importers face security risks and dependence, offsets are framed as improving security by sustaining maintenance capability and equipment availability. Mechanism: offsets function as an “insurance” logic and/or build maintenance capacity that reduces vulnerability to external suppliers. Outcome: improved security of supply / strengthened national security (noting this includes theory-model framing). (kanniainen_17_pdf__cmo_002, kanniainen_17_pdf__cmo_003, 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017)</li>
+<li><strong>Autonomy through software/mission-system control (and export-control friction)</strong>: In contexts where autonomy goals hinge on software maintenance and technology evolution, buyers design offsets around technology transfer to enable in-country control. Mechanism: creating domestic entities for software development/technology absorption and requiring transfer of sensitive artefacts increases control over operation, maintenance, and upgrades; suppliers’ willingness/ability to release technology becomes a binding constraint. Outcome: strengthened operational/maintenance autonomy, with bidder disadvantage where source-code transfer is non-negotiable. (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017, 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019, 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020)</li>
+<li><strong>Interoperability path dependence reducing supplier diversity</strong>: In contexts where operational interoperability with US-made systems increases in importance, procurement choices can narrow toward US systems and US-led models. Mechanism: interoperability requirements constrain feasible sourcing and reinforce a path-dependent procurement trajectory. Outcome: reduced supplier diversity and greater reliance on JSF-style buy-multinational procurement models. (18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021)</li>
+<li><strong>Constrained autonomy and diluted defence linkage through indirect offsets</strong>: In contexts where offsets/DIP are used to keep an in-country defence industry viable but obligations are met via indirect offsets/investment, defence linkage can dilute. Mechanism: broadening compliance space beyond defence work sustains firms and regional activity but can undercut ambitions for an independent defence industrial base and leave key capabilities underdeveloped. Outcome: constrained autonomy, diluted defence linkage, and missed capability development (e.g., shipbuilding proper). (20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_009, 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_008, 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020)</li>
+<li><strong>Supplier discovery as a potential security-of-supply pathway (tentative)</strong>: In contexts of uncertain supplier efficiency, offsets are described as enabling discovery of efficient suppliers and long-term partnerships. Mechanism: offset-linked engagement reveals new suppliers and builds relationships. Outcome: improved supply-chain integration, with security-of-supply benefits described as possible rather than demonstrated. (ianakiev_14_pdf__cmo_004)</li>
+</ul>
+</section>
+<section id="defence-industrial-capability-and-technology-transfer-n2030" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="defence-industrial-capability-and-technology-transfer-n2030"><span class="header-section-number">1.5</span> Defence-Industrial Capability and Technology Transfer (n≈20–30)</h3>
+<ul>
+<li><strong>Learning-by-doing via licensed production and staged localisation</strong>: In contexts of sustained procurement-linked production arrangements, capability accumulation is framed as incremental. Mechanism: technology transfer, training, assembly/parts manufacture, and continued production create learning curves and absorptive capacity over time. Outcome: improved industrial capability/technology absorption and increased local content/production capability. (15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004, 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017, 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_001)</li>
+<li><strong>Absorptive capacity as a moderator of technology-transfer effectiveness</strong>: In contexts with stronger R&amp;D institutions and educated personnel, technology transfer is more readily internalised and extended. Mechanism: human-capital and institutional capacity increases absorptive capacity, shaping how much transferred technology becomes domestically usable. Outcome: more effective “technology ladder” ascent under structured institutional capacity. (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003, 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004)</li>
+<li><strong>Supply-chain insertion and capability-preserving participation</strong>: In contexts where industrial participation is constrained by value-for-money procurement, IP is structured to avoid displacing capability/price priorities. Mechanism: requiring defence-related, technically equivalent work within contract constraints incentivises supply-chain insertion (including via SMEs) while keeping IP secondary in award decisions. Outcome: procurement priority preserved with benefits flowing to SMEs through supply-chain insertion. (07_comparing_british_and_german_offset_strategies_pdf__cmo_003)</li>
+<li><strong>Sustaining high-technology niches in small states</strong>: In contexts of small-state constraints and high-technology sector priorities, offsets/IP provide access to specialised production and know-how. Mechanism: offset-linked work and (partly) foreign-financed investments channel resources into domestic firms that sustain and upgrade capabilities otherwise hard to finance. Outcome: sustained aerospace/engine manufacturing capabilities and improved technical know-how. (11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004, 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_001)</li>
+<li><strong>Domestic prime leadership in co-development enabling higher-end capability</strong>: In contexts where the buyer maintains financial/budgetary leadership and a domestic prime role in program structure, technology transfers are embedded within a domestic-led production/integration effort. Mechanism: domestic prime authority + embedded transfers build manufacturing and integration capability while preserving export flexibility. Outcome: higher-end aerospace capability and export positioning. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014)</li>
+<li><strong>Capability erosion under offset-dependent participation</strong>: In contexts where industrial participation is mainly offset-dependent work (rather than substantive collaboration or independent programmes), design and systems-integration learning can be reduced. Mechanism: reliance on offset-dependent tasks reduces opportunities to build/retain high-end design and integration experience. Outcome: erosion of long-run national design/systems-integration capability. (08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005)</li>
+</ul>
+</section>
+<section id="programme-performance-cost-and-governance-n1015" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="programme-performance-cost-and-governance-n1015"><span class="header-section-number">1.6</span> Programme Performance, Cost, and Governance (n≈10–15)</h3>
+<ul>
+<li><strong>Complex governance and non-competitive work splitting increasing cost/delay</strong>: In contexts of collaborative procurement with juste-retour style work allocation and multi-layer governance, programmes become administratively heavy. Mechanism: non-competitive splitting and committee structures increase transaction costs, blur accountability, and slow decisions. Outcome: inefficiency, higher costs, and programme delays. (08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001)</li>
+<li><strong>Relaxing strict work-share rules as an efficiency pathway (contingent)</strong>: In contexts where collaborative procurement tensions exist around juste-retour vs alternative work-share approaches, shifting work-share rules is treated as a lever. Mechanism: moving from strict national shares toward “global balance” reduces fragmentation and can improve collaborative efficiency, but depends on political agreement and acceptance of perceived disadvantages. Outcome: improved efficiency / reduced fragmentation (conditional). (07_comparing_british_and_german_offset_strategies_pdf__cmo_009)</li>
+<li><strong>Constraining offsets to reduce procurement distortion</strong>: In contexts where procurement must be driven by military requirements and value-for-money, offsets are explicitly constrained. Mechanism: prohibiting offsets from influencing supplier choice until requirements are met reduces distortion in capability selection. Outcome: offsets take a secondary role in procurement evaluation. (09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008, 07_comparing_british_and_german_offset_strategies_pdf__cmo_003)</li>
+<li><strong>Steering supplier behaviour with eligibility criteria and multipliers (governance instrument)</strong>: In contexts where offset programmes specify what “counts” and provide multipliers, suppliers are nudged toward higher-valued activities. Mechanism: eligibility rules and multipliers reshape incentives, increasing proposals for R&amp;D/training and other preferred activities relative to low-value or relabelled work. Outcome: contractors focus on technology-intensive activities (as credited compliance behaviour). (18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003)</li>
+<li><strong>Shift away from ill-focused offsets toward more specific provisions</strong>: In contexts where offsets are judged ill-focused, states replace broad offset approaches with narrower mechanisms. Mechanism: targeting sustainment-relevant capabilities and then substituting contract-specific provisions/local-content requirements aims to concentrate on self-reliance-relevant outcomes while reducing offset-related inefficiencies. Outcome: offsets abolished de facto and replaced by more specific contractual provisions. (18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005)</li>
+</ul>
+</section>
+<section id="alliance-political-leverage-trust-and-network-position-n510" class="level3" data-number="1.7">
+<h3 data-number="1.7" class="anchored" data-anchor-id="alliance-political-leverage-trust-and-network-position-n510"><span class="header-section-number">1.7</span> Alliance Political Leverage, Trust, and Network Position (n≈5–10)</h3>
+<ul>
+<li><strong>Offsets/IP as political assurance within alliance relationships</strong>: In contexts of tenuous security environments and high dependence on an external guarantor, offsets and arms sales can be valued for assurance effects. Mechanism: offset-inclusive purchases reinforce political/alliance-building signals, shaping decision-makers’ willingness to continue offset-inclusive procurement. Outcome: continued pursuit of offsets for political assurance alongside industrial benefits. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018, 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001)</li>
+<li><strong>Offsets creating network ties that shape power and leverage</strong>: In contexts where arms-production networks matter for political leverage, offsets are treated as tools to create interdependence. Mechanism: offset clauses create network ties; direct offsets can help technologically advanced states maintain central positions, while indirect offsets can lock less-capable states into peripheral roles. Outcome: shifts in network position/power and offsets pursued primarily for political leverage (with outcomes moderated by initial capability). (spindel_24_pdf__cmo_001, spindel_24_pdf__cmo_002, spindel_24_pdf__cmo_003, spindel_24_pdf__cmo_004)</li>
+<li><strong>Interdependence and trust pathways (limited evidence)</strong>: In contexts of coordinated procurement and cooperation, interdependence and socialisation are proposed as pathways to more cooperation/trust. Mechanism: coordinated responses create interdependence that drives greater cooperation; cooperation may strengthen trust via socialisation (framed with lower-confidence “other” evidence). Outcome: greater defence cooperation and strengthened trust. (kollias_25_pdf__cmo_002, weiss_19_pdf__cmo_003)</li>
+</ul>
+</section>
+<section id="synthesis-enabling-conditions-and-boundary-conditions" class="level3" data-number="1.8">
+<h3 data-number="1.8" class="anchored" data-anchor-id="synthesis-enabling-conditions-and-boundary-conditions"><span class="header-section-number">1.8</span> Synthesis: Enabling Conditions and Boundary Conditions</h3>
+<p>Across domains, the RQ1 CMOs imply that alliance-relevant effects hinge less on the existence of offsets/IP per se than on <em>how</em> they are structured and governed: (09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008, 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003, 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001)</p>
+<ul>
+<li><strong>Absorptive capacity and programme structure condition technology transfer</strong>: where institutional/human-capital capacity exists, transferred know-how is more plausibly internalised; where programmes embed staged localisation and learning-by-doing, technology absorption is framed as improving over time. (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003, 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017, 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004)</li>
+<li><strong>Sustainment-focused designs more directly connect to readiness and security of supply</strong>: direct offsets and targeted cooperation aimed at maintenance/modification/MRO are repeatedly linked to readiness-relevant capabilities, whereas broad industrialisation goals are treated as diverging strategies. (10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017, 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_002, 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013)</li>
+<li><strong>Governance choices can mitigate or amplify distortion</strong>: rules that keep offsets secondary to military requirements/value-for-money are explicitly framed as anti-distortion safeguards; conversely, complex collaborative governance and non-competitive work splitting are linked to higher costs/delays. (09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008, 07_comparing_british_and_german_offset_strategies_pdf__cmo_003, 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001)</li>
+<li><strong>Export-control/technology-release constraints are binding moderators</strong>: where autonomy or interoperability requires sensitive technology release (e.g., software source code), outcomes depend on supplier willingness/ability and approval processes, which can reshape competition and feasible partnering. (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020, hagelin_12_pdf__cmo_002, 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006)</li>
+<li><strong>Scale and market viability constrain sustainment and export outcomes</strong>: small fleets and short support commitments are linked to high sustainment costs and weak export prospects, limiting any alliance-relevant benefits from domestic participation. (14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010, 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007)</li>
+</ul>
+<p>The CMOs also point to mixed/contested implications: interoperability can be supported by programme integration and standardisation, but is also framed as generating costly acceleration dynamics under budget and political pressures. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004, 05_arms_trade_as_illiberal_trade_pdf__cmo_017)</p>
+</section>
+<section id="what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" class="level3" data-number="1.9">
+<h3 data-number="1.9" class="anchored" data-anchor-id="what-this-suggests-for-nato-aligned-strategy-conditional-takeaways"><span class="header-section-number">1.9</span> What This Suggests for NATO-Aligned Strategy (Conditional Takeaways)</h3>
+<ul>
+<li>In contexts where imported systems create sustainment dependence, offsets/IP may support readiness and faster operational contribution by building in-country maintenance/modification competence via direct military offsets or sustainment-centred cooperation. (10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017, 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014)</li>
+<li>In contexts where interoperability is prioritised, alliance outcomes may be supported through multinational programme structures (joint development/risk sharing) that integrate partners into common standards earlier, potentially reducing reliance on post-sale offsets. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004, weiss_19_pdf__cmo_002)</li>
+<li>In contexts where domestic absorptive capacity is strong (R&amp;D institutions, trained personnel), offsets/IP may support security-of-supply-relevant autonomy by enabling technology absorption and domestic control over sustainment and evolution (including software). (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003, 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017)</li>
+<li>In contexts where technology release is constrained (export controls, source-code restrictions), offsets/IP may fail to deliver autonomy/interoperability pathways; procurement may need to treat technology-access feasibility as a binding condition rather than an assumed benefit. (13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020, hagelin_12_pdf__cmo_002)</li>
+<li>In contexts where collaborative programmes rely on non-competitive work splitting and complex governance, alliance capability goals may be undermined by cost/delay and fragmentation; constraining offsets’ role in supplier selection is one stated guardrail. (08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001, 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008)</li>
+<li>In contexts where political assurance or leverage is a primary objective, offsets/IP may function as alliance-management tools by creating interdependence and network ties; strategy should treat this as a distinct mechanism from capability/readiness outcomes. (16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018, spindel_24_pdf__cmo_004)</li>
+<li>Boundary condition / risk of overreach: where domestic production is small-scale/non-competitive or offsets are met via indirect/investment channels that dilute defence linkage, intended readiness/autonomy gains may not materialise and opportunity costs may be high. (14_the_argentine_defense_industry_an_evaluation_pdf__cmo_002, 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_008, 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020)</li>
+</ul>
+</section>
+<section id="evidence-rq1-coded-cmo-statements" class="level3" data-number="1.10">
+<h3 data-number="1.10" class="anchored" data-anchor-id="evidence-rq1-coded-cmo-statements"><span class="header-section-number">1.10</span> Evidence (RQ1-coded CMO statements)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 0%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 13%">
+<col style="width: 7%">
+<col style="width: 0%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">CMO ID</th>
+<th style="text-align: left;">Country</th>
+<th style="text-align: left;">Programme</th>
+<th style="text-align: left;">Context</th>
+<th style="text-align: left;">Mechanism</th>
+<th style="text-align: left;">Outcome</th>
+<th style="text-align: left;">Theme</th>
+<th style="text-align: left;">Confidence</th>
+<th style="text-align: left;">Supporting evidence (paraphrase)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">05-arms-trade-as-illiberal-trade.pdf</td>
+<td style="text-align: left;">05_arms_trade_as_illiberal_trade_pdf__cmo_005</td>
+<td style="text-align: left;">united_states</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Military services pursue export reform under budget constraints and a desire to spread development costs across more buyers.</td>
+<td style="text-align: left;">When exports (and offsets) help increase the buyer pool, services shift from proliferation restraint toward making sales work for customers, adopting a more permissive stance on offsets.</td>
+<td style="text-align: left;">Security guardianship over technological edge is weakened, increasing tolerance for offset-related technology sharing.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">Citing Wilson (2001), the chapter argues that budget-driven export reform shifts services toward making sales work for customers, which increases permissiveness toward offsets and reduces emphasis on guarding the technological edge.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86</td>
+<td style="text-align: left;">05-arms-trade-as-illiberal-trade.pdf</td>
+<td style="text-align: left;">05_arms_trade_as_illiberal_trade_pdf__cmo_017</td>
+<td style="text-align: left;">united_states</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Military services value interoperability but also face budget constraints and political pressure to accelerate transfers for economic reasons.</td>
+<td style="text-align: left;">Interoperability demands and offset-driven technology sharing can be used to justify accelerating next-generation development to maintain an edge.</td>
+<td style="text-align: left;">Taxpayer costs rise and an arms race dynamic among allies is exacerbated.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter argues that exporting current-generation systems and sharing technology (including via offsets) can create pressure to develop the next generation earlier, increasing taxpayer costs and fueling arms-race dynamics even among allies.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">06-defense-offsets-policy-versus-pragmatism.pdf</td>
+<td style="text-align: left;">06_defense_offsets_policy_versus_pragmatism_pdf__cmo_003</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Some states prioritize urgency of supply or alliance/security relationships over industrialization goals.</td>
+<td style="text-align: left;">When security urgency or treaty quid-pro-quo dominates decision-making, governments de-emphasize offsets and choose off-the-shelf purchases.</td>
+<td style="text-align: left;">Offset demands are minimized or rejected in favor of faster/simpler procurement.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">Using Pakistan (and also Brunei’s stance), the chapter indicates that where urgent supply or treaty considerations dominate, states may avoid offset demands.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">111</td>
+<td style="text-align: left;">07-comparing-british-and-german-offset-strategies.pdf</td>
+<td style="text-align: left;">07_comparing_british_and_german_offset_strategies_pdf__cmo_003</td>
+<td style="text-align: left;">united_kingdom</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">UK industrial participation bids are tied to offshore capital elements above thresholds and are oriented to capability priorities.</td>
+<td style="text-align: left;">By requesting defense-related, new, technically equivalent work at no additional cost and within contract duration, the MoD attempts to secure offset benefits without sacrificing value-for-money procurement.</td>
+<td style="text-align: left;">IP is treated as secondary to equipment/price (may lose a contract) and benefits often flow to SMEs through supply-chain insertion.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion;Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter describes UK IP as constrained by value-for-money procurement: IP is considered but should not override equipment/price, and the policy aims to embed firms (often SMEs) into supply chains.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">117</td>
+<td style="text-align: left;">07-comparing-british-and-german-offset-strategies.pdf</td>
+<td style="text-align: left;">07_comparing_british_and_german_offset_strategies_pdf__cmo_009</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">occar</td>
+<td style="text-align: left;">UK and Germany participate in collaborative procurement and support European market-integration initiatives (OCCAR, Framework Agreement), with tensions around work share (juste_retour vs global_balance).</td>
+<td style="text-align: left;">Shifting from strict juste_retour to global_balance reduces fragmentation and can improve collaborative efficiency, but requires political agreement and offsets/waivers.</td>
+<td style="text-align: left;">Collaborative project efficiency may improve when work-share constraints are relaxed, though national industries may resist perceived disadvantage.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter notes UK support for moving from juste_retour to global balance in collaborative projects (via OCCAR), implying this governance shift can improve efficiency and reduce fragmentation.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">119</td>
+<td style="text-align: left;">08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf</td>
+<td style="text-align: left;">08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">European collaborative procurement typically allocates work share by national interests (juste_retour) rather than comparative advantage, with duplicated production/testing and complex governance.</td>
+<td style="text-align: left;">Non-competitive work splitting and multi-layer committee structures increase transaction costs, blur accountability, and slow decisions.</td>
+<td style="text-align: left;">Collaborative programs experience inefficiency, higher costs, and delays relative to ideal collaboration.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter argues that European collaboration often splits high-tech work by national shares and relies on cumbersome committee governance, which raises transaction costs and contributes to delays and inefficiency.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf</td>
+<td style="text-align: left;">08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">A nation seeks low-cost defense equipment via imports while also aiming to preserve a high-technology defense industrial base.</td>
+<td style="text-align: left;">Reliance on offset-dependent work reduces design and systems-integration experience compared with independent national programs or substantive collaboration.</td>
+<td style="text-align: left;">Long-run national capability in design/systems integration erodes under offset-based industrial participation.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter argues that if the defense industrial base relies on offset work rather than independent programs/collaboration, it risks losing design and systems integration capability.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">124</td>
+<td style="text-align: left;">08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf</td>
+<td style="text-align: left;">08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006</td>
+<td style="text-align: left;">united_kingdom</td>
+<td style="text-align: left;">joint_strike_fighter</td>
+<td style="text-align: left;">JSF includes competitive selection and aims for commonality and long production runs; the UK joined as a Level 1 partner with investment contributions.</td>
+<td style="text-align: left;">Early partnership and competitive “best value” work allocation provide access to development roles and potential high-technology work shares, conditional on technology access agreements and export-control approvals.</td>
+<td style="text-align: left;">The UK secures meaningful industrial participation (jobs, exports, potential tech access) tied to a large global program rather than a one-off offset package.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter argues UK benefits from JSF are linked to partnership status and competitive best-value subcontracting rather than guaranteed work share, with technology transfer contingent on agreements and approvals.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">132</td>
+<td style="text-align: left;">09-nordic-offset-policies-changes-and-challenges.pdf</td>
+<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Nordic policies increasingly prioritize defense-relevant technology, sustainment skills, and SME participation.</td>
+<td style="text-align: left;">By preferring offsets that involve domestic participation in development/manufacture and learning to maintain/support equipment, policies aim to sustain skills and lifecycle support capability.</td>
+<td style="text-align: left;">Offsets are steered toward defense-industrial participation and technology transfer rather than purely civilian trade.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter reports that Nordic preferences shifted toward offsets that embed domestic firms in development/manufacture to sustain skills and support equipment over its lifecycle, including attention to SMEs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">136</td>
+<td style="text-align: left;">09-nordic-offset-policies-changes-and-challenges.pdf</td>
+<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Procurement decisions should be driven by military requirements, not offset offers.</td>
+<td style="text-align: left;">Policies explicitly prohibit offsets from influencing supplier choice until systems meet requirements, preventing offsets from distorting capability selection.</td>
+<td style="text-align: left;">Offsets are constrained to a secondary role in procurement evaluation.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter notes Nordic guidelines explicitly restrict offsets from influencing supplier choice until requirements are met, keeping offsets secondary to capability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">156</td>
+<td style="text-align: left;">10-evaluating-defense-offsets-the-experience-in-finland-and-sweden.pdf</td>
+<td style="text-align: left;">10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016</td>
+<td style="text-align: left;">sweden</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Sweden revised its offset policy in 1999 from mixed economic/defense goals toward a defense-technology competence focus.</td>
+<td style="text-align: left;">By abandoning civil offsets and focusing on military offsets in prioritized technology fields, policy aims to secure long-term defense technological competence rather than diffuse economic objectives.</td>
+<td style="text-align: left;">Offset demands are redirected toward defense-industrial capability and maintenance/technology competence.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking;Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter reports Sweden’s 1999 policy change to prioritize defense-technology competence and to abandon civil offsets, redirecting offset demands to military and technology objectives.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">157</td>
+<td style="text-align: left;">10-evaluating-defense-offsets-the-experience-in-finland-and-sweden.pdf</td>
+<td style="text-align: left;">10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017</td>
+<td style="text-align: left;">sweden</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Imported military systems create dependence on external suppliers for sustainment and modification without local capability.</td>
+<td style="text-align: left;">Direct military offsets build local capacity to maintain and modify imported systems, supporting lifecycle readiness and security of supply.</td>
+<td style="text-align: left;">Domestic maintenance and modification competence is strengthened for the imported system.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter links direct military offsets to sustainment competence: building local maintenance/modification capacity for imported systems, which supports readiness and reduces dependence.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">158</td>
+<td style="text-align: left;">10-evaluating-defense-offsets-the-experience-in-finland-and-sweden.pdf</td>
+<td style="text-align: left;">10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018</td>
+<td style="text-align: left;">sweden</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Small states seek to preserve long-term defense technological competence in prioritized fields beyond any single procurement.</td>
+<td style="text-align: left;">Indirect military offsets are targeted to prioritized technology fields and evaluated for qualitative and long-term impact, sustaining competence across the defense technology base.</td>
+<td style="text-align: left;">Broader defense technological competence is supported beyond the specific imported system.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter describes Sweden’s use of indirect military offsets to sustain broader defense technological competence by targeting prioritized fields and focusing on qualitative, long-run effects.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">159</td>
+<td style="text-align: left;">11-offsets-in-belgium-between-scylla-and-charybdis.pdf</td>
+<td style="text-align: left;">11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_001</td>
+<td style="text-align: left;">belgium</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Belgium integrated offset requirements into defense acquisitions to pursue economic goals alongside defense needs.</td>
+<td style="text-align: left;">By tying arms purchases to compensatory work and know-how transfer, procurement decisions channel resources to domestic firms that sustain and upgrade capabilities.</td>
+<td style="text-align: left;">Belgium’s defense industrial base is maintained and technical prowess is improved.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering;Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter explicitly states that offsets were used to maintain the defense industrial base and improve technical capability, supporting a capability-sustainment mechanism.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">162</td>
+<td style="text-align: left;">11-offsets-in-belgium-between-scylla-and-charybdis.pdf</td>
+<td style="text-align: left;">11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004</td>
+<td style="text-align: left;">belgium</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Belgium seeks to sustain high-technology aerospace and related industries despite its small industrial base.</td>
+<td style="text-align: left;">Offset-linked work and partly foreign-financed investments provide access to specialized production and know-how that would otherwise be unaffordable.</td>
+<td style="text-align: left;">Belgium sustains aircraft/engine manufacturing capabilities and acquires advanced technological know-how.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion;Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The author argues that offsets helped sustain Belgium’s aerospace/engine firms and supported acquisition of advanced know-how, consistent with an industrial-base sustainment mechanism.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">178</td>
+<td style="text-align: left;">12-the-defense-industry-in-poland-an-offsets-based-revival.pdf</td>
+<td style="text-align: left;">12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_002</td>
+<td style="text-align: left;">poland</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Poland’s prospect of joining NATO coincided with a widening technological gap between domestic (Soviet-legacy) systems and Western equipment.</td>
+<td style="text-align: left;">Interoperability requirements drive import of Western systems and motivate use of offsets to link acquisitions to domestic supply-chain transformation.</td>
+<td style="text-align: left;">Poland adopts NATO procurement standards and uses offsets to assist development of domestic industry alongside modernization.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter links NATO-driven interoperability needs to reliance on imported Western equipment and situates offsets as a tool to develop domestic industry during this modernization.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">193</td>
+<td style="text-align: left;">12-the-defense-industry-in-poland-an-offsets-based-revival.pdf</td>
+<td style="text-align: left;">12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017</td>
+<td style="text-align: left;">poland</td>
+<td style="text-align: left;">amv</td>
+<td style="text-align: left;">Poland’s AMV armored vehicle acquisition involved Finnish Patria Vehicles and Italian turret production with staged localization in Poland.</td>
+<td style="text-align: left;">Technology transfer, worker training, assembly/part-manufacture, and eventual transfer of the production line enable progressive localization (“polonization”) of production.</td>
+<td style="text-align: left;">Vehicle production is established in Poland and local content increases substantially over time.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter reports progressive localization of AMV production in Poland (including training and production-line transfer) and quantifies local content growth, supporting a capability-building localization mechanism.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">197</td>
+<td style="text-align: left;">13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf</td>
+<td style="text-align: left;">13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_001</td>
+<td style="text-align: left;">brazil</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Brazil pursued a long-term strategy to establish an indigenous arms industry for national security, status, and reduced dependence on US arms.</td>
+<td style="text-align: left;">By using licensed production, coproduction, and joint ventures as direct-offset style channels, Brazil acquires military technology from industrialized countries and builds domestic production capability.</td>
+<td style="text-align: left;">Domestic arms-industry capabilities expand across multiple stages of the technology ladder.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The introduction frames Brazil’s strategy as acquiring military technology via licensed production, coproduction, and joint ventures, supporting a mechanism where procurement-linked collaboration builds domestic capability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">199</td>
+<td style="text-align: left;">13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf</td>
+<td style="text-align: left;">13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003</td>
+<td style="text-align: left;">brazil</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Brazil invested in research institutions and educated personnel to support a gradual climb in arms-production sophistication.</td>
+<td style="text-align: left;">A strong R&amp;D and human-capital base increases absorptive capacity, allowing foreign technology transfer via procurement to be internalized and extended domestically.</td>
+<td style="text-align: left;">Brazil can ascend the technology ladder more effectively when technology transfer is pursued through structured institutional capacity.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter describes a deliberate approach combining institutions and a gradual ascent via technology transfer, supporting a mechanism where absorptive capacity conditions whether offsets produce capability gains.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">213</td>
+<td style="text-align: left;">13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf</td>
+<td style="text-align: left;">13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017</td>
+<td style="text-align: left;">brazil</td>
+<td style="text-align: left;">sivam</td>
+<td style="text-align: left;">SIVAM is a major, technology-intensive surveillance and communications program implemented via collaboration between foreign and Brazilian firms.</td>
+<td style="text-align: left;">Creating domestic entities responsible for software development, technology absorption, and training increases national autonomy over operation and evolution of complex systems.</td>
+<td style="text-align: left;">Brazil strengthens autonomy in operation, maintenance, and technological evolution for SIVAM-related system intelligence.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter describes ATECH’s role in SIVAM (software development, technology absorption, training) as designed to ensure Brazilian autonomy, supporting a mechanism linking domestic capability-building to sustainment autonomy.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">215</td>
+<td style="text-align: left;">13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf</td>
+<td style="text-align: left;">13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019</td>
+<td style="text-align: left;">brazil</td>
+<td style="text-align: left;">f_x</td>
+<td style="text-align: left;">Brazil’s F-X fighter competition imposed a 100% offset requirement and emphasized software autonomy.</td>
+<td style="text-align: left;">Requiring trade-compensation reinvestment and technology transfer for software maintenance increases buyer control over sustainment and upgrades.</td>
+<td style="text-align: left;">Offset design in the fighter competition prioritizes transfer enabling in-country software maintenance.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter reports that F-X offset proposals were required to guarantee reinvestment and technology transfer enabling the air force to maintain aircraft software independently, supporting a sustainment-autonomy mechanism.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">216</td>
+<td style="text-align: left;">13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf</td>
+<td style="text-align: left;">13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020</td>
+<td style="text-align: left;">brazil</td>
+<td style="text-align: left;">f_x</td>
+<td style="text-align: left;">Export-control and technology-release constraints vary across supplier states, especially for advanced US-origin systems.</td>
+<td style="text-align: left;">If a supplier is unwilling to transfer advanced technology (e.g., software source code), it cannot meet the buyer’s autonomy-focused offset conditions.</td>
+<td style="text-align: left;">Some bidders are disadvantaged in competitions where full source-code transfer is a key requirement.</td>
+<td style="text-align: left;">Export-control friction / legal constraint</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter states that full software source-code transfer is key and that US reluctance to transfer advanced technology disadvantages the F-16 bid, illustrating export-control friction undermining offset delivery.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">221</td>
+<td style="text-align: left;">14-the-argentine-defense-industry-an-evaluation.pdf</td>
+<td style="text-align: left;">14_the_argentine_defense_industry_an_evaluation_pdf__cmo_002</td>
+<td style="text-align: left;">argentina</td>
+<td style="text-align: left;">ia_63_pampa</td>
+<td style="text-align: left;">LDCs face a security dilemma where using obsolete or second-best systems is judged operationally unacceptable.</td>
+<td style="text-align: left;">The need to match modern adversary capabilities pushes buyers toward expensive modern systems, while small-scale domestic production cannot compete on cost, forcing reliance on imports or niche/obsolete production.</td>
+<td style="text-align: left;">Attempts to sustain local production of non-competitive platforms yield poor military and economic payoff.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The author argues that accepting less-modern systems is operationally risky for LDCs, supporting a mechanism where the security dilemma drives expensive modernization and undermines viability of small-scale domestic production choices.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">224</td>
+<td style="text-align: left;">14-the-argentine-defense-industry-an-evaluation.pdf</td>
+<td style="text-align: left;">14_the_argentine_defense_industry_an_evaluation_pdf__cmo_005</td>
+<td style="text-align: left;">argentina</td>
+<td style="text-align: left;">a_4_skyhawk</td>
+<td style="text-align: left;">Argentina conceded its aircraft plant to Lockheed Martin (LMAASA) to refurbish A-4 Skyhawks and provide maintenance services.</td>
+<td style="text-align: left;">A concession contract provides revenue and work packages to sustain a domestic maintenance/upgrade facility even when new indigenous production is not viable.</td>
+<td style="text-align: left;">Aircraft maintenance and upgrade activity persists as a remaining form of defense-industrial participation.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter describes the Lockheed concession as centered on reconditioning A-4 Skyhawks and providing maintenance, supporting a mechanism where MRO work packages sustain limited industrial capability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">226</td>
+<td style="text-align: left;">14-the-argentine-defense-industry-an-evaluation.pdf</td>
+<td style="text-align: left;">14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007</td>
+<td style="text-align: left;">argentina</td>
+<td style="text-align: left;">lmaasa_concession</td>
+<td style="text-align: left;">The LMAASA contract guarantees spare-parts production only for a short window after maintenance begins.</td>
+<td style="text-align: left;">Limited spare-parts guarantees reduce confidence in long-term supportability for potential external customers.</td>
+<td style="text-align: left;">Prospects for long-term international clients and exports of Argentine-supported equipment are weakened.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter notes the short spare-parts guarantee period and argues this would affect long-term contracts with international clients, supporting a mechanism where weak sustainment commitments reduce export viability.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">229</td>
+<td style="text-align: left;">14-the-argentine-defense-industry-an-evaluation.pdf</td>
+<td style="text-align: left;">14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010</td>
+<td style="text-align: left;">argentina</td>
+<td style="text-align: left;">ia_63_pampa</td>
+<td style="text-align: left;">The IA-63 Pampa fleet is extremely small, with few units in existence globally.</td>
+<td style="text-align: left;">Very small fleet size raises unit costs and creates uncertainty about long-term spare parts supply, discouraging buyers and undermining sustainment economics.</td>
+<td style="text-align: left;">Export sales are unlikely and the platform’s sustainment costs remain high.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter emphasizes the Pampa’s tiny fleet size and links it to high unit cost and uncertain spares, supporting a mechanism where scale limits sustainment and exportability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">233</td>
+<td style="text-align: left;">15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf</td>
+<td style="text-align: left;">15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001</td>
+<td style="text-align: left;">india</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Since independence, India has pursued self-reliance in defense production and sought to reduce import dependence and the foreign exchange burden of arms imports, but without a formal offset policy framework.</td>
+<td style="text-align: left;">By routinely embedding licensed production, technology transfer, countertrade/barter, and long-term credit into procurement, India uses procurement-linked resources to build domestic capability and manage foreign exchange constraints.</td>
+<td style="text-align: left;">Offset practice becomes systematic and supports domestic industry development and foreign-exchange management (to varying degrees).</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The introduction states that India consistently used multiple offset options in practice despite lacking a formal offset policy, supporting a mechanism where offsets are routinely bundled into procurement to pursue self-reliance and FX objectives.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">234</td>
+<td style="text-align: left;">15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf</td>
+<td style="text-align: left;">15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_002</td>
+<td style="text-align: left;">india</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Most major Indian defense imports for decades came from the Soviet Union/Russia and other eastern bloc sources, while western suppliers were less willing to accept rupee-based arrangements.</td>
+<td style="text-align: left;">By offering long-term, low-interest credit and accepting rupee-based countertrade, the Soviet supplier reduces India’s immediate hard-currency constraint, making acquisitions financially feasible.</td>
+<td style="text-align: left;">India can procure large volumes of Soviet/Russian systems with reduced short-term hard-currency burden compared to purely hard-currency purchases.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter contrasts Soviet deals (licensed production/tech assistance, countertrade, and cheap long-term credit) with western deals, supporting a mechanism where concessional finance and payment terms relax India’s FX constraint.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">236</td>
+<td style="text-align: left;">15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf</td>
+<td style="text-align: left;">15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004</td>
+<td style="text-align: left;">india</td>
+<td style="text-align: left;">mig_21</td>
+<td style="text-align: left;">India’s MiG-21 licensed production initially suffered major delays and high imported-component dependence.</td>
+<td style="text-align: left;">Even when early licensed production is inefficient, sustained production and learning-by-doing can build a technical base that improves later absorption of more advanced technologies.</td>
+<td style="text-align: left;">HAL’s design/production capability improves and later Soviet aircraft technology absorption becomes easier.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter notes that despite delays and high component import costs, the MiG-21 programme improved HAL’s technical base and is linked to later absorption of MiG-23/27/29 technologies, supporting a cumulative learning mechanism.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">237</td>
+<td style="text-align: left;">15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf</td>
+<td style="text-align: left;">15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_005</td>
+<td style="text-align: left;">india</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">India used foreign technology imports and licensed production across many categories through the 1980s.</td>
+<td style="text-align: left;">Licensed production and incremental technology transfer build production competence for mid-level systems and components, but do not automatically close frontier technology gaps.</td>
+<td style="text-align: left;">India becomes self-sufficient in some arms categories but remains dependent on imports for latest-generation systems.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter reports significant self-sufficiency in certain categories while also stating that the technology gap with developed countries persisted, supporting a mechanism where licensed production yields partial capability without closing frontier gaps.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">250</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">The United States maintains security relationships with Japan, South Korea, and Taiwan and pursues defense exports to allied nations.</td>
+<td style="text-align: left;">By offering offsets (including technology transfer and production arrangements) as inducements in defense sales, the US reinforces alliance ties and supports interoperability and extended production.</td>
+<td style="text-align: left;">Defense sales proceed with industrial compensation packages that embed alliance-building and interoperability goals.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion;Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The introduction states that US offsets with allied nations are motivated by alliance building and interoperability, supporting a mechanism where offsets function as inducements that embed alliance-relevant objectives in procurement.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">253</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">US emphasis on interoperability remains high, but offsets are not the only pathway to achieve it.</td>
+<td style="text-align: left;">International partnering, joint development, and risk sharing integrate allies into programs and standards earlier, creating interoperability without relying on post-sale compensation.</td>
+<td style="text-align: left;">Interoperability objectives can be met through multinational program structures rather than traditional offsets.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter states that DoD views interoperability as achievable via partnering and joint development/risk sharing, supporting a mechanism where integration at the program level substitutes for offsets as the alliance-interoperability pathway.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">255</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006</td>
+<td style="text-align: left;">japan</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Japanese procurement policy prioritizes indigenous defense production (kokusanka) and seeks to sustain an advanced domestic defense-industrial base.</td>
+<td style="text-align: left;">By ranking domestic procurement first and licensed local production second, Japan channels demand and learning into domestic firms, maintaining production/technology capability.</td>
+<td style="text-align: left;">Japan sustains domestic defense production and technology capability and increases negotiating power when importing equipment.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion;Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter states that Japan’s procurement priorities are domestic first and licensed local production second, supporting a mechanism where procurement policy sustains domestic industrial capability and supports negotiation leverage.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">256</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007</td>
+<td style="text-align: left;">japan</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Japan links deterrence and readiness to maintaining domestic production and technology capability despite declining procurement volumes.</td>
+<td style="text-align: left;">Maintaining an advanced domestic production base supports sustainment (operating ratio and sustainability) and provides negotiating leverage when introducing equipment from abroad.</td>
+<td style="text-align: left;">Domestic industrial capability is treated as a component of deterrence and sustainment readiness.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The quoted JDA passage argues that an advanced domestic production/technology base supports operating ratio and sustainability and improves negotiating power, supporting a mechanism linking industrial capability to readiness and bargaining leverage.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">260</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_011</td>
+<td style="text-align: left;">south_korea</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">South Korea faces an overt security threat and has long pursued indigenous capability, influenced by changing US posture and regional uncertainty.</td>
+<td style="text-align: left;">US calls for greater self-reliance and loosened export restrictions increase access to technology transfers and work share agreements that build domestic capability.</td>
+<td style="text-align: left;">South Korea intensifies technology imports and offset-linked domestic production to support self-defense.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter contrasts Korea’s overt threat environment with Japan’s and links it to greater emphasis on indigenous capabilities, supporting a mechanism where security pressure increases demand for technology-transfer and production arrangements.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">263</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014</td>
+<td style="text-align: left;">south_korea</td>
+<td style="text-align: left;">t_50</td>
+<td style="text-align: left;">The T-50 program is structured with a Korean prime contractor and substantial domestic government funding alongside US subcontracting.</td>
+<td style="text-align: left;">By maintaining financial/budgetary leadership and embedding technology transfers from foreign suppliers, Korea builds domestic manufacturing and integration capability while preserving export flexibility.</td>
+<td style="text-align: left;">Korea develops higher-end aerospace capability and positions the platform for global exports.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering;Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter highlights the T-50 structure (KAI prime, Lockheed subcontractor, Korea funding 70%) and notes significant technology transfers and few export constraints, supporting a mechanism where domestic leadership plus transfers build capability and exportability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">267</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018</td>
+<td style="text-align: left;">taiwan</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Taiwan faces a tenuous international position and a major threat from mainland China and seeks continued US commitment to its security.</td>
+<td style="text-align: left;">Offsets and arms sales reinforce political and alliance-building signals, which Taiwan values as assurance of ongoing US security commitment.</td>
+<td style="text-align: left;">Taiwan pursues offset-inclusive arms purchases for political assurance as well as industrial benefits.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter states that Taiwan seeks arms sales to assure continued US commitment, supporting a mechanism where offsets and sales act as political assurance in a high-threat context.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">270</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021</td>
+<td style="text-align: left;">taiwan</td>
+<td style="text-align: left;">mirage_2000_5</td>
+<td style="text-align: left;">Taiwan has used offsets with multiple suppliers for major systems (aircraft and missiles).</td>
+<td style="text-align: left;">Offset agreements can establish domestic and regional maintenance/repair infrastructure and generate sizable industrial contracts tied to procurement.</td>
+<td style="text-align: left;">Taiwan secures maintenance centers and contracts (e.g., Mirage and Patriot-related) that build sustainment capability and industrial activity.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering;Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter cites concrete industrial outcomes from offsets, including a Mirage 2000–5 maintenance center and a Patriot-related overseas missile maintenance center, supporting a mechanism where offsets create sustainment infrastructure and contracts.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">272</td>
+<td style="text-align: left;">16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf</td>
+<td style="text-align: left;">16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_023</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Japan, South Korea, and Taiwan operate in environments where distributed production, alliance building, and economic-development goals persist.</td>
+<td style="text-align: left;">As long as these drivers remain, contracts continue to incorporate technology transfers and work share features, whether as traditional offsets or pre-production sharing.</td>
+<td style="text-align: left;">Offsets and offset-like industrial compensation features remain persistent in defense contracts with these countries.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">In conclusion, the chapter argues offsets will persist and that contracts will continue to include technology transfers and work share agreements as long as alliance and economic-development drivers remain.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">275</td>
+<td style="text-align: left;">17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf</td>
+<td style="text-align: left;">17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Indonesia prioritized offsets for economic development and long-run autonomy, while Singapore prioritized offsets for immediate military requirements.</td>
+<td style="text-align: left;">Different national objectives shape offset selection (broad industrialization vs targeted technology transfer for maintenance/upgrade capability).</td>
+<td style="text-align: left;">Indonesia pursues ambitious indigenous production programs, while Singapore uses offsets sparingly and mainly for sustainment-related technology.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter contrasts Indonesia’s traditional offset use for autonomy and development with Singapore’s sparse, needs-driven technology-transfer offsets oriented to MRO and upgrades, supporting a goals-to-offset-choice mechanism.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">286</td>
+<td style="text-align: left;">17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf</td>
+<td style="text-align: left;">17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013</td>
+<td style="text-align: left;">singapore</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Singapore is a small state with limited resources and manpower and prioritizes immediate military effectiveness and sustainment.</td>
+<td style="text-align: left;">By using offsets selectively for technology transfer and training that support maintenance, repair, and upgrades, Singapore builds readiness-relevant capabilities without pursuing comprehensive autarky.</td>
+<td style="text-align: left;">Singapore develops strong MRO and upgrade capacity aligned to operational requirements.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter contrasts Singapore’s selective use of offsets for immediate military requirements (maintenance/overhaul/upgrades) with Indonesia’s broader industrialization goals, supporting a mechanism where strategic needs drive targeted sustainment capability.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">287</td>
+<td style="text-align: left;">17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf</td>
+<td style="text-align: left;">17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014</td>
+<td style="text-align: left;">singapore</td>
+<td style="text-align: left;">industrial_cooperation_programs</td>
+<td style="text-align: left;">Singapore lacks a formal offsets policy but uses Industrial Cooperation Programs with foreign suppliers.</td>
+<td style="text-align: left;">Requiring technology transfer and training within ICPs steers procurement toward building local maintenance and upgrade competencies.</td>
+<td style="text-align: left;">Singapore expands domestic MRO and system-upgrade capabilities through structured industrial cooperation.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter notes Singapore’s ICPs embed technology transfer and training in licensed production or off-the-shelf buys and that these agreements are used to expand maintenance/repair/upgrade capabilities.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">288</td>
+<td style="text-align: left;">17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf</td>
+<td style="text-align: left;">17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015</td>
+<td style="text-align: left;">singapore</td>
+<td style="text-align: left;">f_16</td>
+<td style="text-align: left;">Singapore targets sustainment-relevant industrial skills as a priority offset outcome.</td>
+<td style="text-align: left;">Collaboration with foreign firms on specialized repair/manufacturing (e.g., turbine blade overhaul) builds domestic capabilities that support aircraft and submarine sustainment.</td>
+<td style="text-align: left;">Singapore improves its ability to overhaul key systems and subsystems for readiness and lifecycle support.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter gives a concrete example of an ICP-style arrangement where Pratt &amp; Whitney collaboration on turbine blade overhaul supports Singapore’s capacity to overhaul RSAF F-16s and submarines, supporting a mechanism linking targeted transfer to sustainment readiness.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">296</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Australia’s AII required offset activities to be new, competitive, sustainable, and not increase procurement prices, with extra credit for certain activities.</td>
+<td style="text-align: left;">Eligibility criteria plus multipliers steer suppliers toward higher-valued activities (e.g., R&amp;D and training) by making them “count” more toward obligations.</td>
+<td style="text-align: left;">Contractors have incentives to propose and book offset credit in technology-intensive activities rather than low-value or relabeled work.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter explains that multipliers elevated the credited value of R&amp;D and training, consistent with a mechanism of steering behaviour toward preferred capability-building activities.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">298</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Australia introduced ADOP to target specific defence sustainment-relevant capabilities, then later reduced reliance on offsets judged ill-focused.</td>
+<td style="text-align: left;">Targeting offsets to maintenance, adaptation, munitions, spares, and long-term technologies concentrates effort on capabilities tied to self-reliance; abandoning ill-focused offsets shifts capability-building to more specific contract provisions.</td>
+<td style="text-align: left;">ADOP is abolished de facto and replaced by more specific contractual provisions, with local-content requirements evolving separately.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter notes ADOP’s capability-targeting intent and then reports that Australia moved away from offsets due to ill-focused mechanisms, substituting narrower contract provisions and local-content requirements.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">302</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">By 2003 Australia’s AII combined premium-free local content with Strategic Industry Development Activities (SIDAs) used when local content opportunities are limited.</td>
+<td style="text-align: left;">When local content is not feasible, substituting SIDA activities (R&amp;D, exports, technology transfer, training, infrastructure) attempts to deliver capability gains through alternative investments that may carry cost premiums.</td>
+<td style="text-align: left;">Industry involvement shifts toward a mix dominated by local content with a smaller share of SIDA activities, with likely premiums for some SIDA-linked sourcing.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter defines the two AII components and notes SIDAs are used when local content opportunities do not exist and are likely to involve cost premiums, supporting a mechanism where capability is pursued via alternative activities.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">303</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_010</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Australia considered shifting from project-by-project industry involvement to sectoral plans to sustain key capabilities and reduce procurement “wastefulness.”</td>
+<td style="text-align: left;">Concentrating demand into long-term sectoral plans and working with fewer, larger primes enables outsourcing of lower-tier oversight and may stabilize workloads.</td>
+<td style="text-align: left;">Procurement governance trends toward consolidation of prime contracting and multi-project planning to sustain key defence-related industry capabilities.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking;Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter describes a proposed strategic procurement approach using sectoral plans and fewer primes, linking this to sustaining key capabilities and reducing monitoring burdens through outsourced oversight.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">306</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_013</td>
+<td style="text-align: left;">new_zealand</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">New Zealand uses NZIP to encourage suppliers to propose industrial participation that benefits the Ministry of Defence and local capability.</td>
+<td style="text-align: left;">Encouraging suppliers to build commercial relationships with local firms creates pathways for sustained support and potential cost reductions over the equipment life cycle.</td>
+<td style="text-align: left;">NZIP is intended to lower ownership costs and build sustainment-relevant local industrial capability that can support defence equipment competitively.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter lists NZIP objectives including reduced ownership costs, long-term commercial relationships, and sustaining competitive local support, supporting a mechanism where relationship-building improves through-life support.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">312</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_019</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Australia faces uncertainty about making long-term commitments to industry in a turbulent strategic environment.</td>
+<td style="text-align: left;">Shifting industry involvement from in-country production toward through-life support focuses limited domestic capacity on sustainment functions most relevant to readiness for imported systems.</td>
+<td style="text-align: left;">AII is argued to require an emphasis shift toward through-life support for largely imported weapon systems.</td>
+<td style="text-align: left;">Technology transfer / learning-by-doing</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter argues that strategic uncertainty complicates long-term workload commitments and suggests refocusing AII toward through-life support, supporting a mechanism linking policy emphasis to readiness and sustainment needs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">314</td>
+<td style="text-align: left;">18-defense-offsets-in-australia-and-new-zealand.pdf</td>
+<td style="text-align: left;">18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021</td>
+<td style="text-align: left;">australia</td>
+<td style="text-align: left;">joint_strike_fighter</td>
+<td style="text-align: left;">Australia’s operational need for interoperability with US-made systems increases in importance as it draws closer to the United States.</td>
+<td style="text-align: left;">Interoperability requirements narrow acceptable sourcing options toward US systems and programs, reinforcing a procurement path dependence toward US-led industrial participation models.</td>
+<td style="text-align: left;">The scope for sourcing equipment from non-US suppliers decreases and JSF-style buy-multinational procurement may dominate future large acquisitions.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter links increasing US alignment and interoperability needs to reduced scope for non-US sourcing and argues JSF-style procurement may come to dominate, supporting a mechanism where alliance-operational requirements reshape industrial participation pathways.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">321</td>
+<td style="text-align: left;">19-defense-industrial-participation-the-south-african-experience.pdf</td>
+<td style="text-align: left;">19_defense_industrial_participation_the_south_african_experience_pdf__cmo_003</td>
+<td style="text-align: left;">south_africa</td>
+<td style="text-align: left;">arms_acquisition_programme</td>
+<td style="text-align: left;">South Africa approved major arms imports while recognizing it could not sustain an all-purpose defence industry.</td>
+<td style="text-align: left;">Defence industrial participation policy is used to steer limited resources toward niche firms and strategic logistic support capabilities rather than comprehensive autarky.</td>
+<td style="text-align: left;">Offsets/DIP are positioned as the mechanism to sustain a narrower, niche-oriented defence industrial base with strategic support functions.</td>
+<td style="text-align: left;">Governance opacity / rent-seeking</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The chapter frames DIP as a tool to facilitate a transition from comprehensive defence industry ambitions to niche sustainment and strategic logistic support, linking policy design to intended outcomes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">326</td>
+<td style="text-align: left;">19-defense-industrial-participation-the-south-african-experience.pdf</td>
+<td style="text-align: left;">19_defense_industrial_participation_the_south_african_experience_pdf__cmo_008</td>
+<td style="text-align: left;">south_africa</td>
+<td style="text-align: left;">arms_acquisition_programme</td>
+<td style="text-align: left;">The arms acquisition program bundled multiple forms of industrial participation, including direct defence work, indirect counterpurchases, and investment.</td>
+<td style="text-align: left;">Using indirect offsets and investment commitments broadens the space for meeting obligations through non-defence projects, potentially diluting linkage to defence capability needs.</td>
+<td style="text-align: left;">A substantial share of promised benefits is routed through indirect offsets and inward investment rather than direct defence-related participation.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter decomposes benefits into direct defence-related offsets, indirect counterpurchases, and investment. The mechanism that this can weaken defence-relevant linkage is an inference from the portfolio design.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">351</td>
+<td style="text-align: left;">20-defense-offsets-and-regional-development-in-south-africa.pdf</td>
+<td style="text-align: left;">20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_009</td>
+<td style="text-align: left;">south_africa</td>
+<td style="text-align: left;">strategic_defense_program</td>
+<td style="text-align: left;">DIP offsets are motivated by strategic considerations to maintain in-country defence capability and the long-term existence of the defence industry.</td>
+<td style="text-align: left;">DIP-linked orders can act as a lifeline for defence firms, while broader procurement and supply-chain dynamics can still constrain independent defence-industrial ambitions.</td>
+<td style="text-align: left;">DIP provides a substantial lifeline to the defence industry but is described as undercutting aspirations to maintain an independent defence industrial base.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter links DIP to sustaining domestic defence capability and notes it simultaneously undercuts remaining aspirations for an autonomous defence industrial base, consistent with an outcome of constrained independence.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">354</td>
+<td style="text-align: left;">20-defense-offsets-and-regional-development-in-south-africa.pdf</td>
+<td style="text-align: left;">20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_012</td>
+<td style="text-align: left;">south_africa</td>
+<td style="text-align: left;">corvettes</td>
+<td style="text-align: left;">South Africa may have locally available capabilities relevant to major platform subsystems (e.g., combat suites) alongside procurement of imported systems.</td>
+<td style="text-align: left;">When procurement choices overlook local capabilities, opportunities for domestic capability utilization and spin-off conversion are reduced.</td>
+<td style="text-align: left;">Claims arise that imported corvette combat suites were less advanced than a cheaper local alternative, raising questions about missed domestic capability use.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The chapter highlights a claim that corvettes purchased from Thales used more costly and less advanced combat suites than a cheaper local option, supporting a mechanism where procurement decisions can underutilize domestic capability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">362</td>
+<td style="text-align: left;">20-defense-offsets-and-regional-development-in-south-africa.pdf</td>
+<td style="text-align: left;">20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020</td>
+<td style="text-align: left;">south_africa</td>
+<td style="text-align: left;">shipbuilding_cluster</td>
+<td style="text-align: left;">A Durban-based shipbuilding cluster sought to use procurement offsets to revitalize shipbuilding, but offset investments favored ship repair and boat building.</td>
+<td style="text-align: left;">When offsets are not directed into shipbuilding proper, local shipbuilding capability and accumulated expertise can erode, despite related activity in repair.</td>
+<td style="text-align: left;">There are no defence offset investments in shipbuilding proper, and stakeholders argue this dilutes technological expertise.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The shipbuilding case study notes some offset investment in ship repair and related activities but none in shipbuilding itself, and reports concerns this contributes to dilution of expertise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">401</td>
+<td style="text-align: left;">calcara_20.pdf</td>
+<td style="text-align: left;">calcara_20_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">European governments pursue defence-industrial cooperation initiatives.</td>
+<td style="text-align: left;">Cooperation enables economies of scale and standardisation of equipment.</td>
+<td style="text-align: left;">Lower costs and improved interoperability are expected benefits.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">low</td>
+<td style="text-align: left;">The passage states that cooperation offers economies of scale and standardisation, leading to lower costs and interoperability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">405</td>
+<td style="text-align: left;">hagelin_12.pdf</td>
+<td style="text-align: left;">hagelin_12_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">The JSF program requires interoperability with allied forces.</td>
+<td style="text-align: left;">Achieving interoperability requires sharing sensitive US technology.</td>
+<td style="text-align: left;">Sensitive US technology is shared with partners.</td>
+<td style="text-align: left;">Export-control friction / legal constraint</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The passage links interoperability requirements to the need for sharing sensitive US technology.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">429</td>
+<td style="text-align: left;">ianakiev_14.pdf</td>
+<td style="text-align: left;">ianakiev_14_pdf__cmo_004</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Offsets are applied in defence procurement with uncertain supplier efficiency.</td>
+<td style="text-align: left;">Offsets can lead to discovery of previously unknown efficient suppliers and long-term partnerships.</td>
+<td style="text-align: left;">Supply-chain integration improves and security of supply may benefit.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The passage notes that offsets can reveal more efficient suppliers, enabling long-term partnerships.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">435</td>
+<td style="text-align: left;">kanniainen_17.pdf</td>
+<td style="text-align: left;">kanniainen_17_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Offsets are used in defence contracts to address security risks.</td>
+<td style="text-align: left;">Offsets function as an insurance mechanism enhancing national security.</td>
+<td style="text-align: left;">National security is strengthened through offsets.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">low</td>
+<td style="text-align: left;">The text directly claims that offsets enhance national security via an insurance mechanism.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">436</td>
+<td style="text-align: left;">kanniainen_17.pdf</td>
+<td style="text-align: left;">kanniainen_17_pdf__cmo_003</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Major importers seek to sustain defence industrial capabilities.</td>
+<td style="text-align: left;">Direct offsets maintain maintenance capability and equipment availability.</td>
+<td style="text-align: left;">Security of supply improves.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The passage links direct offsets to sustaining maintenance capability and equipment availability.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">438</td>
+<td style="text-align: left;">kollias_25.pdf</td>
+<td style="text-align: left;">kollias_25_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">European states respond to security challenges with coordinated procurement.</td>
+<td style="text-align: left;">Coordinated responses create military interdependence.</td>
+<td style="text-align: left;">Interdependence drives greater defence cooperation.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The text explicitly links coordinated responses to interdependence and greater cooperation.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">465</td>
+<td style="text-align: left;">matthews_20.pdf</td>
+<td style="text-align: left;">matthews_20_pdf__cmo_005</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">EU Procurement Directive 2009/81/EC sought to curb Article 346 derogations.</td>
+<td style="text-align: left;">Limiting derogations promotes evolution toward a European Defence Technological Industrial Base.</td>
+<td style="text-align: left;">Policy aims to advance EDTIB integration.</td>
+<td style="text-align: left;">Export-control friction / legal constraint</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The passage states that limiting derogations was intended to promote EDTIB evolution.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">501</td>
+<td style="text-align: left;">spindel_24.pdf</td>
+<td style="text-align: left;">spindel_24_pdf__cmo_001</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">States include offset clauses in weapons purchases.</td>
+<td style="text-align: left;">Offset clauses create network ties that shape position in the global arms production network.</td>
+<td style="text-align: left;">State position and power in the network are affected.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The text explicitly links offset clauses to network ties that affect power.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">502</td>
+<td style="text-align: left;">spindel_24.pdf</td>
+<td style="text-align: left;">spindel_24_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">States possess advanced technological manufacturing capabilities.</td>
+<td style="text-align: left;">Direct offsets leverage advanced capabilities into central network positions.</td>
+<td style="text-align: left;">A central and powerful position is maintained.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The text states that advanced states can maintain central positions through direct offsets.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">503</td>
+<td style="text-align: left;">spindel_24.pdf</td>
+<td style="text-align: left;">spindel_24_pdf__cmo_003</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">States without advanced manufacturing capabilities.</td>
+<td style="text-align: left;">Indirect offsets create network ties that lock states into peripheral roles.</td>
+<td style="text-align: left;">Peripheral positions with limited power persist.</td>
+<td style="text-align: left;">Resource diversion / industrial erosion</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The text states that indirect offsets lock states into peripheral positions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">504</td>
+<td style="text-align: left;">spindel_24.pdf</td>
+<td style="text-align: left;">spindel_24_pdf__cmo_004</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Political leaders seek leverage through arms-production networks.</td>
+<td style="text-align: left;">Offsets are pursued to build interdependence and political power.</td>
+<td style="text-align: left;">Political leverage is the primary goal of offsets.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">high</td>
+<td style="text-align: left;">The passage states that offsets aim at political power through interdependence.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">522</td>
+<td style="text-align: left;">weiss_19.pdf</td>
+<td style="text-align: left;">weiss_19_pdf__cmo_001</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">States pursue defence industrial cooperation rather than national production.</td>
+<td style="text-align: left;">Shared R&amp;D, economies of scale, and division of labour reduce costs.</td>
+<td style="text-align: left;">Better products at lower price per unit.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The text states that cooperation yields better products at lower unit prices.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">523</td>
+<td style="text-align: left;">weiss_19.pdf</td>
+<td style="text-align: left;">weiss_19_pdf__cmo_002</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Multilateral operations are common among armed forces.</td>
+<td style="text-align: left;">Defence industrial cooperation improves interoperability and standardization.</td>
+<td style="text-align: left;">Military systems become more interoperable and standardized.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">medium</td>
+<td style="text-align: left;">The text states that cooperation significantly improves interoperability and standardization.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">524</td>
+<td style="text-align: left;">weiss_19.pdf</td>
+<td style="text-align: left;">weiss_19_pdf__cmo_003</td>
+<td style="text-align: left;">multi_country</td>
+<td style="text-align: left;">unknown_programme</td>
+<td style="text-align: left;">Governments collaborate in defence industrial cooperation.</td>
+<td style="text-align: left;">Cooperation enhances mutual identification and socialization.</td>
+<td style="text-align: left;">Trust among governments is strengthened.</td>
+<td style="text-align: left;">Supply-chain integration / trusted partnering</td>
+<td style="text-align: left;">low</td>
+<td style="text-align: left;">The text suggests cooperation may strengthen trust through socialization.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is a Prisma Diagram – Offsets</title>
+<title>RQ1 Synthesis – Offsets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,15 +148,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" id="toc-rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" class="nav-link active" data-scroll-target="#rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes"><span class="header-section-number">1</span> RQ1. Mechanisms Linking Offsets/IP to Alliance-Relevant Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#outcome-domains-identified-from-the-rq1-cmos" id="toc-outcome-domains-identified-from-the-rq1-cmos" class="nav-link" data-scroll-target="#outcome-domains-identified-from-the-rq1-cmos"><span class="header-section-number">1.1</span> Outcome Domains Identified From the RQ1 CMOs</a></li>
+  <li><a href="#outcome-domain-1-title-n" id="toc-outcome-domain-1-title-n" class="nav-link" data-scroll-target="#outcome-domain-1-title-n"><span class="header-section-number">1.2</span> &lt;Outcome Domain 1 Title&gt; (n≈#)</a></li>
+  <li><a href="#outcome-domain-2-title-n" id="toc-outcome-domain-2-title-n" class="nav-link" data-scroll-target="#outcome-domain-2-title-n"><span class="header-section-number">1.3</span> &lt;Outcome Domain 2 Title&gt; (n≈#)</a></li>
+  <li><a href="#synthesis-enabling-conditions-and-boundary-conditions" id="toc-synthesis-enabling-conditions-and-boundary-conditions" class="nav-link" data-scroll-target="#synthesis-enabling-conditions-and-boundary-conditions"><span class="header-section-number">1.4</span> Synthesis: Enabling Conditions and Boundary Conditions</a></li>
+  <li><a href="#what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" id="toc-what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" class="nav-link" data-scroll-target="#what-this-suggests-for-nato-aligned-strategy-conditional-takeaways"><span class="header-section-number">1.5</span> What This Suggests for NATO-Aligned Strategy (Conditional Takeaways)</a></li>
+  <li><a href="#evidence-rq1-coded-cmo-statements" id="toc-evidence-rq1-coded-cmo-statements" class="nav-link" data-scroll-target="#evidence-rq1-coded-cmo-statements"><span class="header-section-number">1.6</span> Evidence (RQ1-coded CMO statements)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What is a Prisma Diagram</h1>
+<h1 class="title">RQ1 Synthesis</h1>
 </div>
 
 
@@ -173,48 +187,104 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A PRISMA diagram is a flow diagram used in systematic reviews and meta-analyses to show how studies were identified, screened, and selected for inclusion.</p>
-<p>It comes from the <a href="https://www.prisma-statement.org/">PRISMA Statement</a> (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) and is mainly about transparency — letting readers see exactly what happened to all the studies you found.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://images.prismic.io/aje-cms-production/6acfeb14-dcda-4586-ae7d-dae01bab7086_prisma-flow-diagram-example.jpg?auto=compress%2Cformat&amp;h=1748&amp;rect=2%2C0%2C4497%2C3494&amp;w=2250" class="img-fluid figure-img"></p>
-<figcaption>Image</figcaption>
-</figure>
-</div>
-<p><strong>What the diagram shows (step by step)</strong></p>
-<p>Typically, a PRISMA diagram tracks studies through four stages:</p>
-<ol type="1">
-<li><p><strong>Identification</strong></p>
+<p>You are writing a realist-style evidence synthesis for <strong>Research Question 1 (RQ1)</strong> using ONLY the provided Context–Mechanism–Outcome (CMO) statements.</p>
+<p>RQ1 (MUST USE THIS WORDING) Alliance relevance and mechanisms — Through what mechanisms do offset or industrial participation policies affect alliance-relevant outcomes such as interoperability, standardisation, security of supply, readiness, and the ability to contribute rapidly to NATO operations?</p>
+<p>DEFINITIONS (MUST APPLY) - Context (C): the conditions that shape whether/how the mechanism fires (institutions, procurement regime, alliance setting, industrial base maturity, governance capacity, export-control environment, programme setting). - Mechanism (M): a generative causal process, typically framed as: (policy resource/constraint) + (actors’ reasoning/response) -&gt; causal force - Outcome (O): an observed (or credibly reported) effect. Do not overclaim beyond what the CMO states.</p>
+<p>INPUTS YOU WILL RECEIVE - rq_id: “rq1” - cmo_statements: a list/table of CMO records ALREADY mapped to rq1, with (at minimum) these fields: - cmo_id - source_file - context - mechanism - outcome - context_tags (optional) - mechanism_tags (optional) - outcome_tags (optional) - mechanism_theme_labels (optional; preferred if available) - evidence_type - confidence (low|medium|high) - supporting_evidence_paraphrase</p>
+<p>TASK 1) Triage and scope check - Use ONLY the provided rq1 CMO statements. If none are provided, say so and stop. - Treat <code>confidence</code> and <code>evidence_type</code> as strength-of-evidence signals (do not “vote count”). - Separate what is (a) empirically observed vs (b) conceptual/theoretical vs (c) normative/prescriptive (if evident in wording).</p>
+<ol start="2" type="1">
+<li>Build a mechanism-focused synthesis (RQ1)
 <ul>
-<li>Records found through database searches</li>
-<li>Records found through other sources (e.g.&nbsp;references, grey literature)</li>
+<li>Identify the main alliance-relevant outcome domains present in the CMOs. Start with: interoperability/standardisation; readiness/sustainment; security of supply; partnership durability/trust; (add others only if evidenced).</li>
+<li>For each outcome domain:
+<ul>
+<li>Summarise 2–5 distinct mechanism pathways supported by the CMOs.</li>
+<li>For each pathway, state:
+<ol type="i">
+<li>enabling contexts (what must be true in the setting),</li>
+<li>the mechanism (what changes in actors’ behaviour/incentives/constraints),</li>
+<li>the alliance-relevant outcome(s).</li>
+</ol></li>
+<li>Cite the supporting CMO IDs inline (at the end of each bullet/paragraph), e.g.&nbsp;(<code>some_source_pdf__cmo_003</code>, <code>other_source_pdf__cmo_001</code>).</li>
 </ul></li>
-<li><p><strong>Screening</strong></p>
-<ul>
-<li>Records after duplicates removed</li>
-<li>Records screened by title and abstract</li>
-<li>Records excluded at this stage</li>
+<li>If <code>mechanism_theme_labels</code> is provided, use it to cluster pathways and name the pathway themes; otherwise cluster using the mechanism text/tags.</li>
 </ul></li>
-<li><p><strong>Eligibility</strong></p>
+<li>Handle mixed/contested evidence
 <ul>
-<li>Full-text articles assessed</li>
-<li>Full-text articles excluded (with reasons)</li>
+<li>If CMOs point in different directions for a similar context/mechanism, report the divergence and explain the most plausible contextual moderators (based ONLY on the provided CMO contexts/tags).</li>
+<li>Do NOT resolve conflicts by inventing missing details.</li>
 </ul></li>
-<li><p><strong>Included</strong></p>
+<li>Produce a short “what this suggests for NATO-aligned strategy” section
 <ul>
-<li>Studies included in the qualitative synthesis</li>
-<li>Studies included in the quantitative synthesis (meta-analysis), if applicable</li>
+<li>Translate the mechanism synthesis into 4–7 practical, conditional takeaways phrased as: “In contexts where X, offsets/IP may support Y via mechanism Z …”</li>
+<li>Each takeaway must cite at least one CMO ID.</li>
+<li>Include at least one “boundary condition / risk of overreach” takeaway if the evidence base is mainly conceptual or low-confidence.</li>
 </ul></li>
 </ol>
-<p><strong>Why it matters</strong></p>
+<p>OUTPUT FORMAT (MUST FOLLOW) - Output ONLY the full contents of a single Quarto <code>.qmd</code> file (including YAML front matter). - The output is intended to be saved as <code>synthesis/rq1.qmd</code> (do not output the filename separately; just output the file contents). - Use UK spelling (defence, standardisation). - Headings MUST be derived from the provided <code>cmo_statements</code> (do not force a fixed set of domains). - Use this structure:</p>
+<section id="rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="rq1.-mechanisms-linking-offsetsip-to-alliance-relevant-outcomes"><span class="header-section-number">1</span> RQ1. Mechanisms Linking Offsets/IP to Alliance-Relevant Outcomes</h2>
+<section id="outcome-domains-identified-from-the-rq1-cmos" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="outcome-domains-identified-from-the-rq1-cmos"><span class="header-section-number">1.1</span> Outcome Domains Identified From the RQ1 CMOs</h3>
 <ul>
-<li>Makes the review <strong>reproducible</strong></li>
-<li>Shows <strong>potential bias</strong> or subjectivity in study selection</li>
-<li>Required or strongly encouraged by most <strong>academic journals</strong></li>
-<li>Helps readers quickly judge the <strong>rigour</strong> of the review</li>
+<li>Create 3–7 outcome domains by clustering the CMOs using outcome text and/or <code>outcome_tags</code>.</li>
+<li>Name each domain as a short Title Case heading (UK spelling), and include an approximate count in parentheses, e.g.&nbsp;“Interoperability and Standardisation (n≈8)”.</li>
 </ul>
+</section>
+<section id="outcome-domain-1-title-n" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="outcome-domain-1-title-n"><span class="header-section-number">1.2</span> &lt;Outcome Domain 1 Title&gt; (n≈#)</h3>
+<p><mechanism-focused synthesis="" for="" this="" domain=""></mechanism-focused></p>
+</section>
+<section id="outcome-domain-2-title-n" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="outcome-domain-2-title-n"><span class="header-section-number">1.3</span> &lt;Outcome Domain 2 Title&gt; (n≈#)</h3>
+<p><mechanism-focused synthesis="" for="" this="" domain=""></mechanism-focused></p>
+<p>… (repeat for each derived domain)</p>
+</section>
+<section id="synthesis-enabling-conditions-and-boundary-conditions" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="synthesis-enabling-conditions-and-boundary-conditions"><span class="header-section-number">1.4</span> Synthesis: Enabling Conditions and Boundary Conditions</h3>
+<p>&lt;cross-domain synthesis; include contested/mixed evidence and moderators&gt;</p>
+</section>
+<section id="what-this-suggests-for-nato-aligned-strategy-conditional-takeaways" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="what-this-suggests-for-nato-aligned-strategy-conditional-takeaways"><span class="header-section-number">1.5</span> What This Suggests for NATO-Aligned Strategy (Conditional Takeaways)</h3>
+<p>&lt;4–7 takeaways; each cites CMO IDs&gt;</p>
+</section>
+<section id="evidence-rq1-coded-cmo-statements" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="evidence-rq1-coded-cmo-statements"><span class="header-section-number">1.6</span> Evidence (RQ1-coded CMO statements)</h3>
+<ul>
+<li>Include an R code chunk that reads <code>data/cmo_statements.csv</code>, filters to RQ1 (<code>research_questions_mapped</code> contains <code>rq1</code>), and prints a table of: <code>source_file</code>, <code>cmo_id</code>, <code>country</code>, <code>context_tags</code>, <code>mechanism_tags</code>, <code>outcome_tags</code>, <code>mechanism_theme_labels</code>, <code>supporting_evidence_paraphrase</code>.</li>
+<li>Use exactly this chunk (you may adjust column labels, but do not change the filter logic):</li>
+</ul>
+<pre><code>df &lt;- read.csv("data/cmo_statements.csv", stringsAsFactors = FALSE, na.strings = "")
+rq1 &lt;- df[grepl("(^|;)rq1(;|$)", df[["research_questions_mapped"]]), ]
+
+keep &lt;- rq1[, c(
+  "source_file",
+  "cmo_id",
+  "country",
+  "context_tags",
+  "mechanism_tags",
+  "outcome_tags",
+  "mechanism_theme_labels",
+  "supporting_evidence_paraphrase"
+)]
+
+names(keep) &lt;- c(
+  "Source",
+  "CMO ID",
+  "Country",
+  "Context tags",
+  "Mechanism tags",
+  "Outcome tags",
+  "Theme",
+  "Supporting evidence (paraphrase)"
+)
+
+knitr::kable(keep)</code></pre>
+<p>QUALITY RULES (MUST FOLLOW) - No new facts: do not introduce countries/programmes/outcomes not present in the provided CMOs. - No uncited claims: every substantive claim must cite one or more <code>cmo_id</code>s. - Keep it mechanism-first: contexts and mechanisms drive the structure; do not turn this into a generic literature summary. - Be explicit about evidence limits (e.g., “conceptual/theoretical source”, “low confidence”, “single-case”).</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
