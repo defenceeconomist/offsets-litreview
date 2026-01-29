@@ -23,6 +23,7 @@ themes:
 tag_to_theme:
   absence_of_binding_offsets: resource_diversion_industrial_erosion
   absorptive_capacity: technology_transfer_learning
+  absorption_limits: technology_transfer_learning
   activity_relocation: resource_diversion_industrial_erosion
   added_costs: resource_diversion_industrial_erosion
   agreement_failure: resource_diversion_industrial_erosion
@@ -31,11 +32,16 @@ tag_to_theme:
   bargaining_constraints: resource_diversion_industrial_erosion
   benefit_justification: resource_diversion_industrial_erosion
   broad_participation: supply_chain_integration_trusted_partnering
+  bundling_logic: resource_diversion_industrial_erosion
   bureaucratic_empowerment: resource_diversion_industrial_erosion
   buyer_leverage: resource_diversion_industrial_erosion
+  best_endeavors_alliances: supply_chain_integration_trusted_partnering
   capability_complexity: resource_diversion_industrial_erosion
+  capability_erosion: resource_diversion_industrial_erosion
   capability_leverage: resource_diversion_industrial_erosion
   capability_prerequisites: resource_diversion_industrial_erosion
+  capability_sustainment: technology_transfer_learning
+  capability_targeting: governance_opacity_rent_seeking
   case_by_case_flexibility: resource_diversion_industrial_erosion
   clean_sheet_negotiation: resource_diversion_industrial_erosion
   collaborative_programs: supply_chain_integration_trusted_partnering
@@ -54,14 +60,18 @@ tag_to_theme:
   cost_premiums: resource_diversion_industrial_erosion
   cost_workforce_advantage: resource_diversion_industrial_erosion
   costly_obligations: resource_diversion_industrial_erosion
+  conditional_offset_use: governance_opacity_rent_seeking
   countertrade: resource_diversion_industrial_erosion
   credibility_loss: resource_diversion_industrial_erosion
+  credit_inflation: governance_opacity_rent_seeking
+  crowding_out: resource_diversion_industrial_erosion
   deferred_investment_obligations: resource_diversion_industrial_erosion
   derogation_constraint: export_control_friction
   derogation_limitation: export_control_friction
   derogation_use: export_control_friction
   development_support: resource_diversion_industrial_erosion
   disqualification: resource_diversion_industrial_erosion
+  diseconomies_of_scope: resource_diversion_industrial_erosion
   distortion_relaxation: resource_diversion_industrial_erosion
   division_of_labour: supply_chain_integration_trusted_partnering
   domestic_capability_support: resource_diversion_industrial_erosion
@@ -79,6 +89,7 @@ tag_to_theme:
   evaluation_weight: governance_opacity_rent_seeking
   evaluation_weighting: governance_opacity_rent_seeking
   exceptionality_requirement: export_control_friction
+  external_capital_inflow: resource_diversion_industrial_erosion
   export_law_conflict: export_control_friction
   flexible_banking: governance_opacity_rent_seeking
   formalisation: resource_diversion_industrial_erosion
@@ -90,7 +101,10 @@ tag_to_theme:
   government_security_commitments: export_control_friction
   hidden_quality_degradation: resource_diversion_industrial_erosion
   implementation_failure: governance_opacity_rent_seeking
+  implementation_quality: technology_transfer_learning
+  incentive_alignment: governance_opacity_rent_seeking
   incentive_offers: resource_diversion_industrial_erosion
+  incremental_exports: resource_diversion_industrial_erosion
   industrial_capacity: supply_chain_integration_trusted_partnering
   industrial_collaboration: supply_chain_integration_trusted_partnering
   industrial_compensation: resource_diversion_industrial_erosion
@@ -98,6 +112,8 @@ tag_to_theme:
   industrial_participation: supply_chain_integration_trusted_partnering
   inefficient_supply_chains: resource_diversion_industrial_erosion
   informal_offsets: resource_diversion_industrial_erosion
+  information_asymmetry: governance_opacity_rent_seeking
+  industry_lobbying: governance_opacity_rent_seeking
   institutional_trust: supply_chain_integration_trusted_partnering
   insurance_mechanism: resource_diversion_industrial_erosion
   interoperability_improvement: supply_chain_integration_trusted_partnering
@@ -111,8 +127,10 @@ tag_to_theme:
   knowledge_transfer: technology_transfer_learning
   lack_of_audits: governance_opacity_rent_seeking
   lack_of_banking: governance_opacity_rent_seeking
+  lack_of_continuity: supply_chain_integration_trusted_partnering
   lack_of_empirical_evidence: resource_diversion_industrial_erosion
   lack_of_guidance: resource_diversion_industrial_erosion
+  labor_preemption: resource_diversion_industrial_erosion
   learning_by_doing: technology_transfer_learning
   less_efficient_suppliers: resource_diversion_industrial_erosion
   liability_of_foreignness_reduction: resource_diversion_industrial_erosion
@@ -141,6 +159,7 @@ tag_to_theme:
   network_ties: supply_chain_integration_trusted_partnering
   new_efficient_suppliers: resource_diversion_industrial_erosion
   non_effect: resource_diversion_industrial_erosion
+  offset_as_marketing: resource_diversion_industrial_erosion
   offset_capacity_building: resource_diversion_industrial_erosion
   offset_credits: governance_opacity_rent_seeking
   offset_dependence: resource_diversion_industrial_erosion
@@ -157,6 +176,7 @@ tag_to_theme:
   offsets_policy: resource_diversion_industrial_erosion
   offsets_protection: resource_diversion_industrial_erosion
   oligopolistic_market: resource_diversion_industrial_erosion
+  opportunity_cost: resource_diversion_industrial_erosion
   opportunistic_enforcement: governance_opacity_rent_seeking
   order_channeling: resource_diversion_industrial_erosion
   over_ambitious_policy: resource_diversion_industrial_erosion
@@ -169,9 +189,11 @@ tag_to_theme:
   phased_procurement: resource_diversion_industrial_erosion
   policy_behavior: governance_opacity_rent_seeking
   policy_constraints: governance_opacity_rent_seeking
+  political_cover: governance_opacity_rent_seeking
   political_network_logic: supply_chain_integration_trusted_partnering
   pooled_resources: supply_chain_integration_trusted_partnering
   price_capitalisation: resource_diversion_industrial_erosion
+  price_padding_risk: governance_opacity_rent_seeking
   procurement_allocation: resource_diversion_industrial_erosion
   procurement_driven_demand: resource_diversion_industrial_erosion
   procurement_requirement: resource_diversion_industrial_erosion
@@ -180,20 +202,27 @@ tag_to_theme:
   quality_competition: resource_diversion_industrial_erosion
   reciprocal_trade: resource_diversion_industrial_erosion
   reinvestment: resource_diversion_industrial_erosion
+  rent_seeking: governance_opacity_rent_seeking
+  rent_extraction: governance_opacity_rent_seeking
+  resource_diversion: resource_diversion_industrial_erosion
   relationship_building: supply_chain_integration_trusted_partnering
   relationship_enabling: supply_chain_integration_trusted_partnering
   risk_exposure: resource_diversion_industrial_erosion
   sale_loss: resource_diversion_industrial_erosion
   scheme_failure: resource_diversion_industrial_erosion
   scoring_manipulation: governance_opacity_rent_seeking
+  salience_bias: governance_opacity_rent_seeking
   security_risk: export_control_friction
   seller_advantage: resource_diversion_industrial_erosion
   sensitive_tech_sharing: export_control_friction
+  soft_budget_constraint: resource_diversion_industrial_erosion
   sociotropic_support: resource_diversion_industrial_erosion
+  spatial_targeting_failure: resource_diversion_industrial_erosion
   standard_requirement: resource_diversion_industrial_erosion
   standardisation: supply_chain_integration_trusted_partnering
   subcontracting_dependence: supply_chain_integration_trusted_partnering
   subsidies: resource_diversion_industrial_erosion
+  supply_chain_integration: supply_chain_integration_trusted_partnering
   sustained_investment: resource_diversion_industrial_erosion
   targeted_investment: resource_diversion_industrial_erosion
   tech_transfer_obligations: technology_transfer_learning
@@ -201,11 +230,18 @@ tag_to_theme:
   technology_transfer: technology_transfer_learning
   trade_distortion: resource_diversion_industrial_erosion
   trade_diversion: resource_diversion_industrial_erosion
+  trade_restriction: export_control_friction
   transaction_costs: resource_diversion_industrial_erosion
+  transparency_design: governance_opacity_rent_seeking
+  reputational_capital_transfer: supply_chain_integration_trusted_partnering
+  rules_constrain_rent_seeking: governance_opacity_rent_seeking
   unintended_consequences: resource_diversion_industrial_erosion
   variable_standards: resource_diversion_industrial_erosion
   vendor_enticement: resource_diversion_industrial_erosion
   weak_incentives: resource_diversion_industrial_erosion
+  weak_enforcement: governance_opacity_rent_seeking
   weak_institutional_support: resource_diversion_industrial_erosion
   weak_monitoring: governance_opacity_rent_seeking
+  weak_spin_offs: technology_transfer_learning
+  workforce_training: technology_transfer_learning
   workshare_guarantees: resource_diversion_industrial_erosion

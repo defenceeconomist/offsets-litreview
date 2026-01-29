@@ -14,8 +14,8 @@ website:
     contents: 
       - text: "Home"
         href: index.qmd
-      - text: "Findings"
-        href: findings.qmd
+      - text: "Report"
+        href: report.qmd
       - text: "CMO Explorer"
         href: explorer.qmd
 format:
@@ -24,4 +24,4 @@ format:
 
 toc: true
 number-sections: true
-bibliography: references/references.bib  
+bibliography: references/offsets.bib  

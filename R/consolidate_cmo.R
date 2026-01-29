@@ -107,7 +107,7 @@ consolidate_cmo <- function(
     split_tags_str <- function(x) {
       if (is.null(x) || is.na(x) || x == "") return(character())
       # Accept semicolons, commas, or whitespace as separators.
-      strsplit(x, "[,;\\s]+")[[1]]
+      strsplit(x, "[,;[:space:]]+")[[1]]
     }
 
     map_themes_keys <- function(tags_str) {
@@ -136,7 +136,7 @@ consolidate_cmo <- function(
     }
 
     # Warn on unmapped mechanism tags to keep the map coverage visible.
-    all_mech_tags <- unique(unlist(vapply(out$mechanism_tags, split_tags_str, character(0))))
+    all_mech_tags <- unique(unlist(lapply(out$mechanism_tags, split_tags_str)))
     all_mech_tags <- all_mech_tags[all_mech_tags != ""]
     if (length(all_mech_tags) > 0) {
       unmapped <- setdiff(all_mech_tags, names(tag_to_theme))
