@@ -1,0 +1,2167 @@
+01-do-offsets-mitigate-or-magnify-the-military-burden.pdf:
+  cmos:
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_001:
+      context: Weapons contractors face political or bureaucratic resistance to arms purchases and are primarily motivated by profit.
+      mechanism: By offering cost offsets framed as economic benefits, sellers provide an inducement that shifts decision-makers’ reasoning from reluctance to acceptance.
+      outcome: Resistance to purchasing is reduced and procurement becomes more likely.
+      context_tags:
+      - contractor_profit_motive
+      - procurement_resistance
+      - arms_sales_context
+      mechanism_tags:
+      - offset_as_marketing
+      - economic_benefit_signaling
+      - persuasion_inducement
+      outcome_tags:
+      - reduced_resistance
+      - increased_procurement_likelihood
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "cost offsets are a marketing tool, a way of building enthusiasm for or overcoming resistance"
+      supporting_evidence_paraphrase: "The author explicitly describes offsets as a sales/marketing device intended to build enthusiasm or overcome resistance, which supports the mechanism of inducement shaping procurement choices."
+      confidence: high
+      confidence_justification: The claim is explicit and directly states the role offsets play in overcoming purchase resistance.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_002:
+      context: Governments may want to sustain or promote indigenous military-industrial firms but face political sensitivity around overt subsidies.
+      mechanism: By embedding compensatory work in an offset package, officials can present support to domestic producers as a condition of purchase rather than a visible subsidy, reducing political costs.
+      outcome: Domestic producers receive indirect support and the procurement becomes easier to justify politically.
+      context_tags:
+      - domestic_industry_politics
+      - subsidy_sensitivity
+      - indigenous_military_industry
+      mechanism_tags:
+      - political_cover
+      - subsidy_masking
+      outcome_tags:
+      - domestic_industry_support
+      - reduced_political_cost
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "offsets will give them political cover for what amounts to providing hidden subsidies to indigenous military industrial firms"
+      supporting_evidence_paraphrase: "The text links offsets to providing political cover for hidden subsidies, supporting a mechanism where offsets change how subsidy-like transfers are perceived."
+      confidence: high
+      confidence_justification: The passage directly states the political-cover logic and its subsidy-like function.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003:
+      context: Weapons purchases can be unpopular with a skeptical public or with internal government opponents.
+      mechanism: By making offsets appear to deliver large economic benefits (even if illusory), officials reduce perceived net costs and increase public acceptance.
+      outcome: Political opposition to the weapons purchase is weakened and approval is more likely.
+      context_tags:
+      - public_opposition
+      - political_contestation
+      mechanism_tags:
+      - perceived_economic_benefits
+      - opposition_management
+      outcome_tags:
+      - procurement_legitimation
+      - opposition_reduction
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "any political opposition to the weapons purchase can be more easily overcome"
+      supporting_evidence_paraphrase: "The author argues that portraying offsets as delivering major economic benefits makes it easier to overcome opposition, indicating a persuasion mechanism affecting procurement politics."
+      confidence: high
+      confidence_justification: The statement is explicit about offsets being used to reduce opposition.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004:
+      context: Offset obligations often extend over time and are exposed to changing political/economic conditions and asymmetric power between suppliers and (especially) LDC buyers.
+      mechanism: Shifts in conditions, contractor fortunes, or bad faith reduce the ability and incentives to complete promised offset activities, especially when enforcement is weak.
+      outcome: Offset commitments may be partially fulfilled or not realized as agreed.
+      context_tags:
+      - long_duration_obligations
+      - power_asymmetry
+      - political_economic_change
+      mechanism_tags:
+      - weak_enforcement
+      - compliance_risk
+      outcome_tags:
+      - non_fulfillment_risk
+      - incomplete_delivery
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "changing political or economic conditions in the weapons supplying country, or in political and economic relations between the weapons supplying and purchasing countries, might interfere with the completion of the deal"
+      supporting_evidence_paraphrase: "The text explicitly notes that offsets stretched over time can be disrupted by changing conditions or relationships, supporting a mechanism of compliance risk leading to incomplete fulfillment."
+      confidence: high
+      confidence_justification: The passage directly describes how changes can interfere with completing offset commitments.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005:
+      context: International arms deals often lack openness, making monitoring and enforcing offset delivery difficult (especially for weaker buyers).
+      mechanism: Structuring offset agreements to maximize transparency and create credible incentives/penalties increases supplier compliance with offset obligations.
+      outcome: The likelihood that the full offset package is realized increases.
+      context_tags:
+      - low_transparency
+      - arms_deal_secrecy
+      - enforcement_constraints
+      mechanism_tags:
+      - transparency_design
+      - incentive_alignment
+      outcome_tags:
+      - improved_compliance
+      - increased_realization
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "there is thus a premium on finding ways to structure offset agreements that maximize both transparency and incentives for fulfilling offset obligations"
+      supporting_evidence_paraphrase: "The author emphasizes that offset agreements should be structured for transparency and incentives, implying these design features causally increase fulfillment."
+      confidence: medium
+      confidence_justification: The logic is explicit, but it is presented as analytical guidance rather than measured evidence of effect sizes.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006:
+      context: Suppliers may already buy from, invest in, or trade with the purchasing country, and outsiders often lack access to proprietary information to verify incremental activity.
+      mechanism: By counting pre-existing transactions as meeting offset obligations, suppliers inflate apparent offset delivery without creating genuinely additional business.
+      outcome: Reported offset fulfillment overstates incremental economic benefit to the purchaser.
+      context_tags:
+      - verification_difficulty
+      - existing_commercial_ties
+      mechanism_tags:
+      - reclassification_gaming
+      - non_additionality
+      outcome_tags:
+      - overstated_benefits
+      - limited_incremental_value
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "just a “creative reclassification” of business transactions"
+      supporting_evidence_paraphrase: "Using the UK AWACS example, the text describes controversy over whether counted offset activity was actually new business or merely reclassified existing purchases."
+      confidence: medium
+      confidence_justification: The example is specific, but the chapter notes verification is difficult without supplier information.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007:
+      context: Offset requirements can impose real costs on vendors, and procurement markets allow suppliers to price in those costs.
+      mechanism: Vendors incorporate offset premiums into the weapons selling price to recoup offset costs.
+      outcome: Purchasing countries face higher procurement costs, reducing or negating net offset benefits.
+      context_tags:
+      - offset_requirements
+      - vendor_pricing_power
+      mechanism_tags:
+      - price_premium_pass_through
+      outcome_tags:
+      - higher_procurement_costs
+      - reduced_net_benefits
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "vendors seek to include most of this premium in the selling price"
+      supporting_evidence_paraphrase: "Citing survey evidence, the chapter reports that offsets increase costs versus off-the-shelf purchase and that vendors try to build that premium into prices."
+      confidence: medium
+      confidence_justification: The chapter cites secondary survey-based evidence but does not quantify the effect across cases beyond illustrative estimates.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_008:
+      context: Direct offsets concentrate activity in the military sector, especially when resources (capital, skilled labor) are scarce.
+      mechanism: Military-sector offset work diverts productive resources away from civilian production that contributes more directly to development.
+      outcome: Real economic development is hindered even if military-sector employment is created or preserved.
+      context_tags:
+      - direct_offsets
+      - resource_scarcity
+      mechanism_tags:
+      - resource_diversion
+      - military_sector_bias
+      outcome_tags:
+      - reduced_development
+      - opportunity_cost
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the military sector itself does not produce economic value and diverts real productive resources"
+      supporting_evidence_paraphrase: "The text argues that because military production does not add economic value, direct offsets that sustain military jobs divert resources from civilian activity that supports development."
+      confidence: medium
+      confidence_justification: The mechanism is clearly argued, but the claim is theoretical and not supported with systematic empirical measurement in the chapter.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_009:
+      context: Purchasing countries may lack hard currency or face unfavorable exchange rates and seek ways to conclude arms deals quickly with less scrutiny.
+      mechanism: Barter bypasses financial constraints and reduces transaction transparency, which can advantage both supplier and purchasing government.
+      outcome: Arms procurement is facilitated without providing development benefits or mitigating the economic burden of procurement.
+      context_tags:
+      - hard_currency_constraint
+      - low_transparency
+      mechanism_tags:
+      - barter_circumvention
+      - value_obfuscation
+      outcome_tags:
+      - accelerated_procurement
+      - no_development_benefit
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "It therefore does nothing to mitigate the economic burden of military procurement."
+      supporting_evidence_paraphrase: "The author states that barter is a way around financial constraints but does not encourage development, and therefore does not mitigate the procurement burden."
+      confidence: high
+      confidence_justification: The passage explicitly makes the claim about barter’s lack of development value.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_010:
+      context: Counterpurchase offsets are intended to compensate for procurement costs by expanding civilian exports and revenue inflows, particularly hard currency.
+      mechanism: When counterpurchase creates genuinely additional export sales (not otherwise achievable or less profitable without the deal), it increases revenue and supports productive civilian employment.
+      outcome: The negative economic impacts of military procurement are partially mitigated via additional revenues/jobs.
+      context_tags:
+      - counterpurchase_offsets
+      - export_objectives
+      mechanism_tags:
+      - market_access_via_supplier
+      - incremental_exports
+      outcome_tags:
+      - increased_hard_currency
+      - productive_civilian_jobs
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "counterpurchase offsets only mitigate the negative economic impacts of military procurement to the extent that they add to the inflow of revenue (especially hard currencies)"
+      supporting_evidence_paraphrase: "The chapter conditions any mitigation effect on whether counterpurchase produces additional revenue and productive jobs beyond what would occur absent the offset."
+      confidence: high
+      confidence_justification: The author states the conditional logic explicitly, even if it is not backed by quantitative evidence here.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_011:
+      context: In some cases, buyers may secure offset commitments as outright grants for development-oriented infrastructure that would not otherwise be provided.
+      mechanism: External grant funding adds resources for development projects, partially counterbalancing the resource drain of the arms purchase.
+      outcome: The economic burden of the arms deal is softened (to a limited extent).
+      context_tags:
+      - grant_financing
+      - development_infrastructure
+      mechanism_tags:
+      - external_resource_transfer
+      outcome_tags:
+      - softened_burden
+      - limited_counterweight
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "such offsets could provide a limited counterweight to the economic burden of the arms deal"
+      supporting_evidence_paraphrase: "The text identifies grant-type counter-investment as a form of offset that can, in principle, counterweight procurement’s economic burden."
+      confidence: medium
+      confidence_justification: The mechanism is plausible and explicitly stated, but it is presented as a possibility rather than documented outcomes from a specific case.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012:
+      context: LDCs are chronically capital short and military procurement drains financial capital and hard currency.
+      mechanism: When offset investment is financed from outside the purchasing country, it increases net capital availability rather than reshuffling scarce domestic finance.
+      outcome: Net inflows of capital can partially mitigate the development cost of the arms purchase.
+      context_tags:
+      - ldc_capital_shortage
+      - military_procurement_drain
+      mechanism_tags:
+      - external_capital_inflow
+      outcome_tags:
+      - increased_capital_availability
+      - partial_mitigation
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "If it is fully financed by capital raised outside the weapons purchasing nation, then it is actually bringing in fresh capital."
+      supporting_evidence_paraphrase: "The chapter states that offsets only increase capital availability if they are externally financed, supporting a mechanism of genuine capital inflow."
+      confidence: high
+      confidence_justification: The passage explicitly distinguishes external financing as the condition for net new capital.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_013:
+      context: Large foreign firms may be able to raise funds inside LDCs, competing with domestic entrepreneurs for scarce financial capital.
+      mechanism: When offset activity is financed domestically, it crowds out local investment opportunities by absorbing limited capital from within the purchasing country.
+      outcome: The domestic shortage of financial capital is exacerbated and development can be impeded.
+      context_tags:
+      - ldc_finance_constraints
+      - domestic_capital_markets
+      mechanism_tags:
+      - crowding_out
+      - domestic_finance_capture
+      outcome_tags:
+      - worsened_capital_shortage
+      - impeded_development
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "it actually exacerbates the shortage of financial capital facing domestic producers"
+      supporting_evidence_paraphrase: "The author warns that if foreign contractors fund offset projects with local capital, they worsen domestic producers’ capital constraints rather than add net resources."
+      confidence: high
+      confidence_justification: The statement is explicit about the crowding-out dynamic and its effect on domestic producers.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_014:
+      context: Direct offsets can expose workers to military-oriented production environments that differ from civilian cost-sensitive production contexts.
+      mechanism: Skills developed for performance-driven, cost-insensitive military production are not easily transferable (or require costly reshaping) to civilian production needs.
+      outcome: Skill acquisition via direct offsets yields limited development benefit and may be inefficient for resource-constrained countries.
+      context_tags:
+      - direct_offsets
+      - skill_development
+      - ldc_resource_constraints
+      mechanism_tags:
+      - low_skill_transferability
+      - costly_reshaping
+      outcome_tags:
+      - limited_human_capital_gain
+      - inefficiency
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Not all skills relevant to performance-driven, relatively cost-insensitive, military-oriented production are easily transferable to civilian-oriented, more cost-sensitive production."
+      supporting_evidence_paraphrase: "The chapter argues that military-production skills may not transfer well to civilian production and may require costly adaptation, limiting development value."
+      confidence: high
+      confidence_justification: The text explicitly states the transferability limitation and frames it as a key constraint.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015:
+      context: Skilled labor is scarce in many weapons-purchasing countries, especially LDCs.
+      mechanism: If offset projects simply hire already skilled workers from the limited local pool, they preempt labor needed by domestic civilian producers.
+      outcome: Development is hindered unless the offset activity has substantially greater development value than displaced civilian activity.
+      context_tags:
+      - skilled_labor_scarcity
+      - ldc_context
+      mechanism_tags:
+      - labor_preemption
+      - crowding_out
+      outcome_tags:
+      - impeded_development
+      - reduced_civilian_capacity
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the offset activity may in fact be preempting labor resources that are already critically short in supply to domestic civilian producers"
+      supporting_evidence_paraphrase: "The text explains that hiring scarce skilled workers for offset activity can divert labor away from domestic civilian producers, undermining development."
+      confidence: high
+      confidence_justification: The claim is explicitly stated and the causal logic is clearly described.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_016:
+      context: Monitoring whether offset activities expand the skill base (versus reallocating existing skilled labor) is a key design challenge.
+      mechanism: Requiring employer-financed training that raises lower-skilled workers to the needed level expands the local skill pool rather than draining it.
+      outcome: Human-capital accumulation is more likely to contribute positively to development than offsets that rely on hiring existing skilled workers.
+      context_tags:
+      - offset_design
+      - training_programs
+      mechanism_tags:
+      - employer_financed_training
+      - skill_pool_expansion
+      outcome_tags:
+      - increased_transferable_skills
+      - improved_development_prospects
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the only way to avoid draining the local pool of skilled labor is to require that the labor employed in the offset activity"
+      supporting_evidence_paraphrase: "The author argues that offsets should be structured so firms train workers up to required skill levels, implying this design can prevent labor crowding-out and improve development contribution."
+      confidence: medium
+      confidence_justification: The mechanism is presented as a design prescription rather than documented outcomes, so evidentiary support is indirect.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_017:
+      context: Direct offsets may involve transferring military-oriented technologies with the expectation of civilian “spin-offs” or “spillovers.”
+      mechanism: Because military technologies often require costly reshaping for civilian uses, pursuing civilian technology directly is generally more cost-effective.
+      outcome: Technology-transfer via direct military offsets is unlikely to deliver efficient development gains.
+      context_tags:
+      - direct_offsets
+      - technology_transfer
+      mechanism_tags:
+      - costly_technology_reshaping
+      - weak_spin_offs
+      outcome_tags:
+      - limited_development_gains
+      - low_cost_effectiveness
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "It is almost always much more cost effective to go after civilian technology directly"
+      supporting_evidence_paraphrase: "The text argues that relying on military-to-civilian spillovers is problematic and that direct acquisition of civilian technology is typically more cost-effective."
+      confidence: high
+      confidence_justification: The claim is directly stated, though it is a generalized assessment rather than a case-specific measurement.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_018:
+      context: LDC environments may lack compatible utilities, supporting technologies, and maintenance capacity assumed by MDC-designed technologies.
+      mechanism: When transferred technologies are incompatible with the receiving environment, they fail to function effectively or to integrate into productive systems.
+      outcome: Technology transfer via offsets may yield little or no positive impact on development.
+      context_tags:
+      - ldc_infrastructure_constraints
+      - technology_compatibility
+      mechanism_tags:
+      - mismatch_failure
+      - absorption_limits
+      outcome_tags:
+      - no_positive_impact
+      - failed_technology_transfer
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "no guarantee that the technology will have any positive impact on the receiving country’s economy"
+      supporting_evidence_paraphrase: "The chapter explains that technologies designed for MDC contexts may not work well in LDC environments (utilities, maintenance, complementary systems), so transfer may not yield benefits."
+      confidence: high
+      confidence_justification: The passage directly states that transfer alone does not ensure positive impact and provides reasons for incompatibility.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_019:
+      context: Technology transfer via offsets is more likely to be beneficial when it is indirect and designed with attention to compatibility and implementation.
+      mechanism: Selecting appropriate technologies and implementing transfer carefully increases the likelihood that transferred technologies are usable and development-relevant.
+      outcome: Indirect offsets have a higher probability of yielding positive technology-related development benefits than direct offsets.
+      context_tags:
+      - indirect_offsets
+      - technology_transfer
+      mechanism_tags:
+      - careful_selection
+      - implementation_quality
+      outcome_tags:
+      - improved_tech_transfer_outcomes
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Properly designed indirect offsets have a higher likelihood of transferring technologies in a way that will have positive benefits than do direct offsets."
+      supporting_evidence_paraphrase: "The author explicitly asserts that well-designed indirect offsets are more likely than direct offsets to transfer technologies with positive benefits, contingent on careful selection and implementation."
+      confidence: high
+      confidence_justification: The statement is explicit about the comparative likelihood and the conditional design requirements.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_020:
+      context: States procure military equipment based on perceived security needs, and similar equipment may be available from multiple suppliers under similar risk conditions.
+      mechanism: Offsets function as a differentiator between suppliers when core capability requirements are fixed.
+      outcome: Offsets influence supplier selection (and at most marginal quantities) rather than fundamentally driving procurement need or type.
+      context_tags:
+      - procurement_choice_set
+      - multiple_suppliers
+      mechanism_tags:
+      - supplier_differentiation
+      outcome_tags:
+      - supplier_selection_shift
+      - marginal_quantity_effect
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "offsets should only influence which particular supplier to choose."
+      supporting_evidence_paraphrase: "The author argues offsets should not change what or how much equipment a nation buys, but can be used to pick among comparable suppliers."
+      confidence: high
+      confidence_justification: The claim is directly stated as the author’s analytic conclusion.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021:
+      context: Some procurement proposals face public opposition and may be only weakly related to legitimate security concerns.
+      mechanism: Promised offset benefits provide an argument that reframes the purchase as economically beneficial, reducing resistance.
+      outcome: Arms purchases that would otherwise face opposition can proceed more readily.
+      context_tags:
+      - contested_procurement
+      - weak_security_rationale
+      mechanism_tags:
+      - economic_justification_frame
+      - persuasion_inducement
+      outcome_tags:
+      - procurement_approval
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "The promised benefit of offsets has sometimes been used to overcome public opposition to purchases of military equipment"
+      supporting_evidence_paraphrase: "The chapter states that offsets are sometimes used to overcome public opposition to arms purchases, indicating a mechanism where offset promises change political feasibility."
+      confidence: high
+      confidence_justification: The passage explicitly describes offsets being used to overcome opposition (though it does not quantify frequency).
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022:
+      context: Where a significant domestic arms industry exists, it has incentives to protect jobs and rents associated with defense production.
+      mechanism: Domestic arms-industry influence pushes governments to demand direct offsets that subsidize local military industry as part of foreign procurement.
+      outcome: Direct offsets are adopted, sustaining local military industry and shaping procurement arrangements.
+      context_tags:
+      - domestic_arms_industry
+      - political_influence
+      mechanism_tags:
+      - industry_lobbying
+      - direct_offset_pressure
+      outcome_tags:
+      - subsidized_local_industry
+      - direct_offsets_adoption
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "direct offsets (which in effect subsidize local military industry)"
+      supporting_evidence_paraphrase: "The author notes that domestic arms industries can influence governments to seek direct offsets, which function as subsidies for local military industry."
+      confidence: high
+      confidence_justification: The text explicitly describes domestic-industry influence and characterizes direct offsets as subsidy-like.
+    01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023:
+      context: When a weapons purchase will occur regardless of offsets, policymakers may try to reduce collateral economic harm through offset design choices.
+      mechanism: Requiring development-oriented indirect offsets (capital inflows, appropriate technology transfer, transferable skills, and/or new markets) and emphasizing transparency increases the chance of realization and development relevance.
+      outcome: Offsets are more likely to modestly soften procurement’s economic burden and support broader development objectives (subject to practical enforceability).
+      context_tags:
+      - procurement_inevitability
+      - offset_design
+      mechanism_tags:
+      - development_oriented_indirect_offsets
+      - transparency_design
+      outcome_tags:
+      - softened_burden
+      - improved_development_alignment
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter analyzing the political economy of offsets and their likely development impacts, with illustrative examples rather than systematic data."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "if the military equipment in question is to be purchased anyway, it is worth attaching the requirement for development-oriented offsets as a condition of purchase"
+      supporting_evidence_paraphrase: "The chapter recommends that if procurement proceeds anyway, offsets should be designed as development-oriented indirect offsets with transparency to maximize the chance they add development value."
+      confidence: low
+      confidence_justification: This is a prescriptive recommendation about what offsets should do, not an observed outcome; the mechanism is plausible but evidentiary support is indirect.
+  v_and_v_log:
+  - check: completeness_all_relevant_cmos
+    status: pass
+    note: Extracted distinct CMO claims covering offset motivations, fulfillment risks, additionality/price effects, and development-oriented pathways (capital, skills, technology, procurement politics).
+  - check: evidence_traceability
+    status: pass
+    note: Each CMO includes a short direct quote from the chapter and a paraphrase linking the quote to the CMO.
+  - check: mechanism_is_causal
+    status: pass
+    note: Mechanisms are framed as inducements, incentive/monitoring structures, crowding-out dynamics, or compatibility/absorption processes rather than activities.
+  - check: outcome_is_effect
+    status: pass
+    note: Outcomes are stated as effects (e.g., higher prices, non-fulfillment, reduced opposition, worsened capital scarcity) and not as policies.
+  - check: snake_case_fields
+    status: pass
+    note: All tags and programme/country values are in snake_case.
+  - check: quote_length
+    status: pass
+    note: Supporting evidence quotes are kept short (approximately <=25 words).
+  - check: inference_flagged
+    status: warn
+    note: CMO 023 and CMO 016 reflect prescriptive design guidance; confidence is reduced and the paraphrase notes the normative nature.
+02-using-procurement-offsets-as-an-economic-development-strategy.pdf:
+  cmos:
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_001:
+      context: Governments use procurement in settings where sellers can compete on price and quality, but an offset requirement shifts attention to side benefits.
+      mechanism: By requiring benefits packages alongside the base good, offsets redirect competition away from price/quality toward bundled content that may be unrelated to the procured item.
+      outcome: Procurement becomes less price-disciplined and can be less efficient than market exchange.
+      context_tags:
+      - procurement_policy
+      - price_competition
+      mechanism_tags:
+      - content_over_price
+      - bundling_logic
+      outcome_tags:
+      - reduced_efficiency
+      - weakened_price_signal
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "offsets encourage sellers to focus on benefits packages that may have no relevance to the procured good"
+      supporting_evidence_paraphrase: The text argues offsets redirect competition from price/quality to side packages, which can reduce procurement efficiency relative to markets.
+      confidence: high
+      confidence_justification: The mechanism and directional effect are stated explicitly in the introduction.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002:
+      context: Governments have bargaining power (oligopsony) in procurement and may face market imperfections that make pure price discounts less attractive or less feasible.
+      mechanism: Offset policy extracts rent off the price margin by requiring sellers to transfer economic activity into the domestic economy, allowing governments to pursue multiple objectives through procurement.
+      outcome: Governments receive industrial/technology/market-access benefits tied to the purchase rather than only a lower base price.
+      context_tags:
+      - oligopsony_power
+      - market_imperfections
+      mechanism_tags:
+      - rent_extraction_off_price_margin
+      - activity_transfer_requirement
+      outcome_tags:
+      - technology_acquisition
+      - industry_support
+      - market_access
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "Governments use offset policy because it is a convenient way to extract rent and to achieve multiple objectives."
+      supporting_evidence_paraphrase: The chapter links offsets to rent extraction and multi-objective policy (technology, capabilities, markets, exports, alliances), supporting a mechanism of off-price rent capture.
+      confidence: high
+      confidence_justification: The claim is explicit and directly describes the policy logic behind offsets.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003:
+      context: Offset policies are evaluated in political environments where benefits and costs have different visibility to stakeholders.
+      mechanism: Because expected benefits are more salient than expected costs, officials adopt offsets even when net welfare effects are ambiguous.
+      outcome: Offsets are politically attractive and more likely to be chosen than equivalent price-discount approaches.
+      context_tags:
+      - political_incentives
+      - cost_visibility
+      mechanism_tags:
+      - salience_bias
+      - political_attractiveness
+      outcome_tags:
+      - increased_offset_adoption
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Offsets are politically attractive largely because the expected benefits are more visible than the expected costs."
+      supporting_evidence_paraphrase: The text explicitly attributes offset adoption to political salience of visible benefits versus less visible costs.
+      confidence: high
+      confidence_justification: The causal claim about political attractiveness is directly stated.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004:
+      context: Mandatory offset policies are applied broadly across all (or most) government procurement categories.
+      mechanism: A one-size-fits-all mandate constrains negotiation dimensions and creates diseconomies of scale and scope by forcing offsets where market exchange would be superior.
+      outcome: Welfare losses arise and a more selective or flexible policy is preferable in most settings.
+      context_tags:
+      - mandatory_offsets
+      - across_the_board_policy
+      mechanism_tags:
+      - constrained_negotiation
+      - diseconomies_of_scope
+      outcome_tags:
+      - welfare_loss
+      - suboptimal_policy
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "any attempt to use a mandatory offset policy for all government procurement"
+      supporting_evidence_paraphrase: The chapter’s main finding is that broad mandatory offsets restrict negotiation and create diseconomies, implying lower welfare than more flexible designs.
+      confidence: high
+      confidence_justification: The claim is explicitly identified as the chapter’s main finding.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005:
+      context: Procurement transactions vary by exchange hazard and by the expected benefits domestic firms gain from interaction with reputable sellers (e.g., reputation and future cooperation).
+      mechanism: Offsets are advisable only when exchange hazard is high and expected recipient benefits are high, because offsets can substitute for poorly functioning markets and unlock reputational/capability gains.
+      outcome: Mandatory offsets become justified in a narrow set of settings; otherwise, other instruments (markets, alliances, turnkey, product_in_hand) dominate.
+      context_tags:
+      - exchange_hazard
+      - reputational_capital
+      mechanism_tags:
+      - comparative_institutional_selection
+      - conditional_offset_use
+      outcome_tags:
+      - selective_offset_application
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "a mandatory offset program is appropriate if, and only if, exchange hazard is high"
+      supporting_evidence_paraphrase: The policy matrix conditions offset use on high exchange hazard and high expected recipient benefits, implying offsets are not generally efficient.
+      confidence: high
+      confidence_justification: The conditional rule is explicitly stated in the policy-matrix discussion.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006:
+      context: Markets function efficiently with low exchange hazard and complete information for low-technology procurement.
+      mechanism: In this setting, offsets add administrative burden and rent-seeking costs without improving technology transfer or exchange integrity.
+      outcome: Welfare falls relative to using market exchange (and price discounts when government has bargaining power).
+      context_tags:
+      - low_exchange_hazard
+      - low_technology_goods
+      mechanism_tags:
+      - administrative_burden
+      - rent_seeking_costs
+      outcome_tags:
+      - welfare_reduction
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Employing offsets in a perfectly functioning market tends to reduce welfare"
+      supporting_evidence_paraphrase: The chapter argues offsets reduce welfare in low-hazard markets because they add administration and rent-seeking while markets already transfer technology efficiently.
+      confidence: high
+      confidence_justification: The negative welfare claim and its reasons are explicitly stated.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007:
+      context: A domestic firm receives offset work from a reputable multinational enterprise, and cooperation may continue after the contract if local capabilities are sufficient.
+      mechanism: To minimize its own costs and ensure quality, the seller has incentives to teach efficient routines; successful completion also provides a reputational “stamp of approval” that lowers the domestic firm’s market-entry transaction costs.
+      outcome: Domestic firms build capabilities and improve access to third markets via reputational economies.
+      context_tags:
+      - reputable_mne
+      - domestic_firm_capabilities
+      - future_interaction
+      mechanism_tags:
+      - learning_curve_leapfrogging
+      - reputational_spillovers
+      - reduced_transaction_costs
+      outcome_tags:
+      - capability_building
+      - improved_market_access
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq2
+      supporting_evidence: "the domestic firm receives the crucial “stamp of approval” in third markets"
+      supporting_evidence_paraphrase: The text links offset subcontracting with reputable firms to capability building and reputation gains that reduce market-entry transaction costs for domestic firms.
+      confidence: high
+      confidence_justification: The mechanism (capability learning plus reputation effects) is described directly in the chapter.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008:
+      context: Markets function efficiently (low exchange hazard) but domestic firms could benefit from collaboration with incumbents when reputational economies are available.
+      mechanism: Government uses bargaining power to encourage alliances without mandating offsets (e.g., best-endeavors), preserving market competition while enabling collaboration.
+      outcome: Collaboration and reputational gains occur with lower administrative burden than formal offset requirements.
+      context_tags:
+      - low_exchange_hazard
+      - collaboration_opportunities
+      mechanism_tags:
+      - best_endeavors_alliances
+      - market_preserving_design
+      outcome_tags:
+      - reputational_gains
+      - limited_admin_costs
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "encourage collaborative agreements without formally requiring them (e.g., an offset)"
+      supporting_evidence_paraphrase: "The chapter recommends an augmented-markets approach: encourage alliances while keeping market bidding, which can yield reputational economies without full offset burdens."
+      confidence: medium
+      confidence_justification: The recommendation is explicit, but it is prescriptive rather than reporting measured outcomes.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009:
+      context: Australia’s Partnerships for Development program targets information and telecommunications industries where exchange hazard is low and reputational capital is valuable.
+      mechanism: By waiving offset requirements for foreign firms that enter strategic alliances, the program increases long-term investment and channels reputational capital to domestic firms while maintaining competitive selection.
+      outcome: Domestic firms (e.g., software manufacturers) gain marketing/reputation support and benefit from participation without rigid offset mandates.
+      context_tags:
+      - augmented_markets
+      - strategic_alliances
+      mechanism_tags:
+      - offset_waiver_incentive
+      - reputational_capital_transfer
+      outcome_tags:
+      - improved_marketing_capacity
+      - enhanced_industrial_base
+      programme: partnerships_for_development
+      country: australia
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq2
+      supporting_evidence: "waives “offsets requirements for foreign companies which agree to enter into strategic alliances”"
+      supporting_evidence_paraphrase: The chapter uses Australia’s PfD as an example of encouraging alliances by waiving offsets, aiming to build reputational capital and support domestic firms’ market access.
+      confidence: medium
+      confidence_justification: The PfD description is specific, but the chapter treats it as an illustrative example within a broader model.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010:
+      context: Procurement faces moderate exchange hazard with potentially high gains from interacting with reputable sellers, and the government can choose between price discounts and offsets.
+      mechanism: A variable offset policy increases negotiation flexibility and the opportunity set, allowing comparison of price-margin exchange versus offsets and reducing diseconomies of scope.
+      outcome: Better-tailored procurement deals reduce the likelihood of accepting inefficient offset proposals, but the approach demands high bureaucratic capability.
+      context_tags:
+      - moderate_exchange_hazard
+      - procurement_discretion
+      mechanism_tags:
+      - negotiation_flexibility
+      - comparative_cost_benefit
+      outcome_tags:
+      - reduced_diseconomies
+      - higher_administrative_demands
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "The flexibility enlarges the opportunity set available to government negotiators and reduces the potential for diseconomies of scope."
+      supporting_evidence_paraphrase: The chapter argues variable offsets reduce scope diseconomies by allowing officials to choose between price discounts and offsets, but require skilled professionals.
+      confidence: high
+      confidence_justification: The mechanism and tradeoff are directly stated in the variable-policy section.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011:
+      context: Offset policy designs differ in the degree of discretion procurement officials have, and rent-seeking behavior is a persistent risk when politics enters allocation.
+      mechanism: Variable offset policies increase discretion between price and content, attracting internal and external rent-seeking; strict mandatory triggers constrain discretion and can reduce rent-seeking.
+      outcome: Variable schemes can be more corruption/rent-seeking-prone, while well-designed mandatory schemes reduce some rent-seeking pressures.
+      context_tags:
+      - rent_seeking_risk
+      - policy_discretion
+      mechanism_tags:
+      - discretion_invites_rent_seeking
+      - rules_constrain_rent_seeking
+      outcome_tags:
+      - increased_rent_seeking
+      - reduced_rent_seeking
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "A policy of variable offsets is susceptible to higher levels of rent-seeking than a policy of mandatory offsets"
+      supporting_evidence_paraphrase: The text explicitly links discretion in variable schemes to greater rent-seeking, and argues mandatory trigger rules reduce this channel.
+      confidence: high
+      confidence_justification: The rent-seeking comparison is directly stated with a clear mechanism (discretion vs. rules).
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012:
+      context: Mandatory offsets are extended to procurement categories with low technology and low exchange hazard (including many items within defense procurement baskets).
+      mechanism: Imposing offsets in low-hazard categories forces content-based contracting where price-margin savings would be superior, creating opportunity costs.
+      outcome: Welfare is reduced because foregone price discounts exceed the benefits of offsets in these settings.
+      context_tags:
+      - mandatory_offsets
+      - low_technology_goods
+      mechanism_tags:
+      - opportunity_cost_of_offsets
+      outcome_tags:
+      - welfare_reduction
+      - foregone_price_savings
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "The rigid mandatory policy is detrimental to European welfare"
+      supporting_evidence_paraphrase: The chapter argues that applying mandatory offsets across defense baskets that include low-tech items harms welfare because the opportunity cost is lost price-margin savings.
+      confidence: medium
+      confidence_justification: The claim is explicit, but the chapter does not quantify the welfare loss and treats Europe as an illustrative application.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013:
+      context: Governments pursue across-the-board mandatory offsets to increase technology transfer and capabilities in strategic industries.
+      mechanism: Broad mandates generate proposal overload and encourage superficial evaluation criteria (e.g., workload and jobs) rather than technology-transfer quality, while atomistic sellers add offset burdens that raise prices with little reputational effect.
+      outcome: Mandatory schemes can fail to deliver intended technology transfer and instead increase costs and administrative burden.
+      context_tags:
+      - across_the_board_mandate
+      - administrative_capacity_limits
+      mechanism_tags:
+      - proposal_overload
+      - weak_evaluation_criteria
+      - price_increase
+      outcome_tags:
+      - policy_failure
+      - limited_tech_transfer
+      - higher_costs
+      programme: unknown_programme
+      country: australia
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Sellers inundated procurement officials with thousands of offset proposals."
+      supporting_evidence_paraphrase: The chapter describes Australia’s mandatory policy experience as a failure driven by proposal overload, price increases, and weak assessment of technology-transfer quality.
+      confidence: medium
+      confidence_justification: The chapter provides a concrete narrative of failure dynamics, but it relies on cited assessments rather than primary evaluation data in this text.
+    02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014:
+      context: Governments use offsets either to safeguard hazardous exchanges or as a broader economic development strategy (capabilities, market penetration, information barriers).
+      mechanism: Direct offsets better safeguard hazardous exchanges by tying performance to the procured system, while indirect offsets are more applicable for wider development objectives but can raise costs if outside seller capabilities.
+      outcome: Choosing direct vs indirect offsets changes whether the policy primarily improves exchange integrity or supports broader capability/market outcomes, with differing cost risks.
+      context_tags:
+      - offset_objectives
+      - exchange_hazard
+      mechanism_tags:
+      - direct_vs_indirect_selection
+      - capability_scope_mismatch
+      outcome_tags:
+      - improved_exchange_integrity
+      - broader_development_support
+      - cost_escalation_risk
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "The chapter develops a prescriptive procurement-policy model (policy matrix) using transaction cost theory and the capabilities view, illustrated with cited country examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "if government uses the instrument largely to safeguard an exchange in a hazardous setting, the direct offset is preferable"
+      supporting_evidence_paraphrase: The chapter explicitly ties offset type choice to objectives (safeguard vs development) and notes indirect offsets can escalate costs when misaligned with seller capabilities.
+      confidence: high
+      confidence_justification: The decision rule and associated tradeoffs are directly stated in the concluding section.
+  v_and_v_log:
+  - check: completeness_all_relevant_cmos
+    status: pass
+    note: Extracted CMOs covering the policy-matrix logic (hazard vs benefits), political adoption incentives, variable vs mandatory offset governance, reputational/capability pathways, and cited country illustrations (Australia).
+  - check: evidence_traceability
+    status: pass
+    note: Each CMO includes a short direct quote and a paraphrase linking it to the CMO.
+  - check: mechanism_is_causal
+    status: pass
+    note: Mechanisms are framed as incentive shifts, discretion/rent-seeking channels, conditional institutional choice, and capability/reputation processes.
+  - check: outcome_is_effect
+    status: pass
+    note: Outcomes are expressed as effects on welfare, costs, adoption likelihood, and capability/market access rather than as activities.
+  - check: snake_case_fields
+    status: pass
+    note: All tags and programme/country values are snake_case.
+  - check: quote_length
+    status: pass
+    note: Supporting evidence quotes are kept short (approximately <=25 words).
+  - check: inference_flagged
+    status: warn
+    note: Several CMOs reflect prescriptive recommendations from the model (e.g., augmented markets, variable offsets); confidence is reduced where claims are normative rather than observed.
+03-mandatory-defense-offsets-conceptual-foundations.pdf:
+  cmos:
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001:
+      context: Mandatory defense offsets are imposed by importing governments as part of procurement policy rather than voluntarily adopted commercial bundling deals.
+      mechanism: By mandating reciprocal activity (countertrade, local content, or bundled enhancements) as a condition of market access, the importing state imposes trade-restricting requirements on exporters.
+      outcome: Procurement becomes a protectionist/trade-restricting arrangement that shapes trade flows beyond the base arms purchase.
+      context_tags:
+      - mandatory_offsets
+      - trade_policy
+      mechanism_tags:
+      - imposed_reciprocity
+      - trade_restrictions
+      outcome_tags:
+      - distorted_trade_flows
+      - protectionist_effects
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "bundling requirements are trade restrictions imposed on the exporter by the importing country"
+      supporting_evidence_paraphrase: "The chapter distinguishes offsets from private bundling by emphasizing that government offset requirements are imposed trade restrictions, shaping exporter behavior via mandated reciprocity."
+      confidence: high
+      confidence_justification: The distinguishing feature is stated explicitly as a definitional point.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_002:
+      context: Defense offsets are justified with multiple, heterogeneous objectives and implemented through public procurement agencies.
+      mechanism: Mixed objectives and unclear incidence of benefits make it difficult to specify evaluation criteria and to identify who gains net benefits from mandated offsets.
+      outcome: Evaluation exercises face ambiguity and may fail to establish clear net benefits.
+      context_tags:
+      - multiple_objectives
+      - public_procurement
+      mechanism_tags:
+      - unclear_benefit_incidence
+      - evaluation_ambiguity
+      outcome_tags:
+      - evaluation_difficulty
+      - unclear_net_benefits
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Lack of clarity as to what is to be achieved by their use is a key problem in evaluation exercises."
+      supporting_evidence_paraphrase: "The authors argue that offsets pursue a mixture of objectives and it is unclear who benefits, which creates a core evaluation problem."
+      confidence: high
+      confidence_justification: The chapter explicitly identifies lack of clarity as a key evaluation problem.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003:
+      context: Under countertrade offsets, an arms importer conditions purchase on reciprocal purchases of the importer’s goods by the exporter.
+      mechanism: By requiring reciprocal purchases to be additional (“new activity”), the offset policy aims to create exports that would not otherwise occur.
+      outcome: The importing state treats additional exports as partially “paying for” arms imports (export-creation logic).
+      context_tags:
+      - countertrade
+      - additionality_requirement
+      mechanism_tags:
+      - reciprocal_purchase_condition
+      outcome_tags:
+      - export_creation
+      - perceived_cost_offset
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the obligated exports of b must be a “new activity,” i.e., additional"
+      supporting_evidence_paraphrase: "In the countertrade model, the chapter specifies that offset-related exports must be additional to baseline exports, and are viewed as offsetting part of the arms import cost."
+      confidence: high
+      confidence_justification: The additionality condition and intended logic are stated directly in the model setup.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004:
+      context: Complex, customer-tailored weapon systems lack transparent market prices, and offset guidelines may formally prohibit explicit price increases.
+      mechanism: Because there is no unique benchmark price, suppliers can embed offset-related costs into the offered weapons price without the buyer being able to verify price padding.
+      outcome: The buyer cannot reliably know how much offset cost is passed back through the weapons price, weakening net offset benefits.
+      context_tags:
+      - complex_weapon_pricing
+      - low_price_transparency
+      mechanism_tags:
+      - cost_pass_through
+      - price_padding_risk
+      outcome_tags:
+      - hidden_costs
+      - reduced_net_benefit
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "there is no unique market price pa with which p*a can be unambiguously compared"
+      supporting_evidence_paraphrase: "The chapter argues that opaque pricing in complex weapon deals makes it hard to detect whether suppliers have padded prices to cover offset obligations."
+      confidence: high
+      confidence_justification: The mechanism is explained explicitly and tied to the lack of observable benchmark prices.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005:
+      context: Exporters face countertrade obligations that may yield break-even or losses on resale of required reciprocal purchases.
+      mechanism: Suppliers accept offset obligations only when the overall package yields satisfactory returns, adjusting the weapons price upward if needed or walking away otherwise.
+      outcome: Suppliers are unlikely to be worse off; offset costs are shifted into the deal terms rather than borne by the supplier.
+      context_tags:
+      - supplier_incentives
+      - countertrade
+      mechanism_tags:
+      - price_adjustment
+      - deal_exit_option
+      outcome_tags:
+      - supplier_protected
+      - costs_shifted_to_buyer
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Y would proceed with the arms-offset deal only if p*a were high enough to compensate it for losses"
+      supporting_evidence_paraphrase: "The chapter’s countertrade model implies suppliers will price to cover expected losses (or refuse the deal), so offsets do not necessarily extract value from the seller."
+      confidence: high
+      confidence_justification: The claim and underlying logic are stated explicitly in the countertrade discussion.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006:
+      context: Offset obligations can be accepted by suppliers even when enforcement capacity is limited.
+      mechanism: Suppliers may accept obligations but later default, and although buyers can attempt incentive contracts, enforcement is difficult in practice.
+      outcome: Mandatory offsets create non-fulfillment risk and potential gap between promised and realized offset value.
+      context_tags:
+      - enforcement_constraints
+      - offset_obligations
+      mechanism_tags:
+      - default_risk
+      - weak_enforcement
+      outcome_tags:
+      - non_fulfillment_risk
+      - implementation_gap
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "such contracts are difficult to enforce"
+      supporting_evidence_paraphrase: "The chapter notes that suppliers can accept offset obligations and later fail to honor them; enforcement via incentive/penalty contracts is described as difficult."
+      confidence: high
+      confidence_justification: The enforcement difficulty and default possibility are stated directly.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_007:
+      context: Buyers may have some market power and can negotiate price discounts and/or package enhancements in procurement.
+      mechanism: Bureaucratically mandated, fixed-percentage offset schemes reduce negotiation flexibility by forcing in-kind enhancements instead of allowing negotiators to choose the most advantageous mix of price and content.
+      outcome: Buyer interests are undermined through restricted options and foregone value relative to flexible negotiation.
+      context_tags:
+      - procurement_governance
+      - negotiation_constraints
+      mechanism_tags:
+      - mandated_in_kind_enhancement
+      - reduced_flexibility
+      outcome_tags:
+      - restricted_options
+      - foregone_discounts
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "their behaviour undermines their own best interests by restricting their options"
+      supporting_evidence_paraphrase: "The conclusion argues that insisting on mandatory in-kind enhancements (rather than price discounts) restricts buyers’ options and can work against their interests."
+      confidence: high
+      confidence_justification: The statement is explicit and directly characterizes the effect of mandatory offset rigidity.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_008:
+      context: Under mandatory local content, prime contractors must source inputs domestically even when local suppliers are fewer and higher-cost than world-competitive alternatives.
+      mechanism: High local content targets force inclusion of uncompetitive domestic subcontractors, generating price premiums that are factored into bid prices or motivate reneging when premiums are constrained.
+      outcome: Procurement costs rise and/or local content obligations are not fully delivered.
+      context_tags:
+      - local_content
+      - limited_supplier_base
+      - small_country_context
+      mechanism_tags:
+      - forced_high_cost_sourcing
+      - bid_price_increase
+      - reneging_risk
+      outcome_tags:
+      - higher_procurement_costs
+      - incomplete_local_content
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "substantial premiums will need to be paid to attract high-cost (less efficient) domestic subcontractors"
+      supporting_evidence_paraphrase: "The local-content model describes how mandatory domestic sourcing can require paying premiums for less efficient suppliers, which contractors either price into bids or avoid via non-compliance."
+      confidence: high
+      confidence_justification: The chapter explicitly links high local content targets to premiums and to bid-price increases/reneging incentives.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_009:
+      context: Policymakers in small countries may believe local suppliers are potentially world-competitive, but foreign primes are unaware or reluctant to restructure supply chains.
+      mechanism: Local content requirements force primes to search and engage domestic suppliers, addressing an information imperfection about local capability.
+      outcome: Import substitution may occur at little extra cost if local capability is truly competitive (otherwise, premiums persist).
+      context_tags:
+      - local_supplier_discovery
+      - information_imperfection
+      mechanism_tags:
+      - forced_search
+      - supplier_integration
+      outcome_tags:
+      - potential_import_substitution
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "Local content requirements are argued to be addressing an information imperfection"
+      supporting_evidence_paraphrase: "The chapter notes an argument for local content: it can reveal overlooked local suppliers, potentially enabling import substitution without premiums if local supply is competitive."
+      confidence: medium
+      confidence_justification: The claim is presented as a policy argument that depends on contested beliefs about true local competitiveness.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_010:
+      context: Local sourcing created by local content requirements may be marginally competitive or driven primarily by the one-off procurement transaction.
+      mechanism: Once the mandated transaction ends, primes discontinue domestic sourcing unless continued work in the host economy makes local supply chain relocation worthwhile.
+      outcome: Industrial participation can be temporary, limiting partnership durability and long-run industrial benefits.
+      context_tags:
+      - local_content
+      - post_contract_dynamics
+      mechanism_tags:
+      - discontinuation_after_contract
+      - lack_of_follow_on_work
+      outcome_tags:
+      - temporary_participation
+      - limited_durability
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq2
+      supporting_evidence: "local sourcing is likely to cease unless there is a reasonable prospect of the international prime winning further work"
+      supporting_evidence_paraphrase: "The chapter cautions that if local suppliers are only just competitive, sourcing may stop after the initial deal unless follow-on opportunities exist."
+      confidence: high
+      confidence_justification: The conditional discontinuation logic is explicitly stated in the local content discussion.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_011:
+      context: Mandatory bundling requires suppliers to deliver additional goods/services at “no extra cost,” but additional deliverables typically have positive marginal cost.
+      mechanism: When the buyer lacks market power to force cross-subsidization, the vendor prices expected offset demands into the primary product’s offer price.
+      outcome: The buyer effectively pays for the bundled offset through a higher primary price.
+      context_tags:
+      - bundling
+      - limited_buyer_power
+      mechanism_tags:
+      - price_in_of_offsets
+      - cross_subsidy_failure
+      outcome_tags:
+      - higher_primary_price
+      - offsets_not_free
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the vendor is almost certain to factor expected offset demands into its offer price for product a"
+      supporting_evidence_paraphrase: "In the bundling model, if the buyer cannot force suppliers to absorb the cost of the add-on, suppliers raise the primary offer price to cover it."
+      confidence: high
+      confidence_justification: The mechanism is explicitly stated as the likely outcome under positive marginal cost and limited buyer power.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_012:
+      context: Mandatory bundling is often specified as nominal percentage targets with broadly defined enhancements (e.g., technology transfer, training) rather than tailored complements.
+      mechanism: Untargeted bundle targets ignore complementarities and may force inefficient bundling choices compared to separately sourcing requirements from specialized vendors.
+      outcome: Mandatory bundling can prevent optimal outcomes and increase total costs relative to precise, negotiated bundling (or separate sourcing).
+      context_tags:
+      - untargeted_bundling
+      - vague_requirements
+      mechanism_tags:
+      - missing_complementarities
+      - inefficient_package_design
+      outcome_tags:
+      - suboptimal_outcomes
+      - higher_total_costs
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "it is the untargeted nature of bundlingbased offset demands which may prevent the achievement of optimal outcomes"
+      supporting_evidence_paraphrase: "The chapter argues the core problem is not bundling itself but broad, untargeted percentage demands that treat any enhancement as equally valuable and can block optimal procurement choices."
+      confidence: high
+      confidence_justification: The chapter explicitly identifies untargeted bundling demands as a barrier to optimal outcomes.
+    03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013:
+      context: Offset obligations are typically discharged after contract signature and often after deliveries begin, with enforcement requiring costly pursuit of large overseas contractors.
+      mechanism: Suppliers can promise offsets to win contracts and later renege or deliver less value, because timing and enforcement frictions weaken purchaser leverage.
+      outcome: Purchasers face increased performance risk compared to unencumbered monetary procurement and may realize less offset value than expected.
+      context_tags:
+      - post_award_performance
+      - enforcement_costs
+      mechanism_tags:
+      - promise_then_renege
+      - weakened_leverage
+      outcome_tags:
+      - realized_value_shortfall
+      - increased_performance_risk
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual chapter that develops models of countertrade, local content, and bundling under mandatory offset schemes using a hypothetical defense procurement agency."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "there is scope for suppliers to promise offsets before the contract is signed but then to renege on their obligations later"
+      supporting_evidence_paraphrase: "The notes emphasize that offsets are often delivered after signature/delivery begins, creating scope for post-award reneging and exposing purchasers to enforcement and performance risk."
+      confidence: high
+      confidence_justification: The timing and reneging risk are explicitly stated, with the mechanism tied to enforcement difficulty and contract timing.
+  v_and_v_log:
+  - check: completeness_all_relevant_cmos
+    status: pass
+    note: Extracted CMOs covering conceptual distinctions (offsets as trade restrictions), countertrade additionality/pricing and enforcement, local content cost/durability dynamics, and bundling targeting/price-in mechanisms.
+  - check: evidence_traceability
+    status: pass
+    note: Each CMO includes a short direct quote from the chapter and a paraphrase linking it to the CMO.
+  - check: mechanism_is_causal
+    status: pass
+    note: Mechanisms describe incentive-compatible pricing, pass-through, default risk, supplier integration under information imperfections, and complementarity-driven bundling.
+  - check: outcome_is_effect
+    status: pass
+    note: Outcomes are framed as effects on prices, fulfillment risk, procurement optimality, and durability rather than as activities.
+  - check: snake_case_fields
+    status: pass
+    note: All tags and programme/country values are snake_case.
+  - check: quote_length
+    status: pass
+    note: Supporting evidence quotes are kept short (approximately <=25 words).
+  - check: inference_flagged
+    status: warn
+    note: CMO 009 includes conditional claims about local competitiveness/information imperfections; confidence is set to medium and the conditionality is noted.
+04-economic-aspects-of-arms-trade-offsets.pdf:
+  cmos:
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_001:
+      context: An importing country has an overvalued currency that inhibits exports in world markets.
+      mechanism: By requiring the exporter to purchase goods from the importing country as an indirect offset, the deal functions like a sector-specific price adjustment that stimulates exports in the chosen sector.
+      outcome: Exports in the chosen sector are supported despite macroeconomic overvaluation.
+      context_tags:
+      - overvalued_currency
+      - export_constraint
+      mechanism_tags:
+      - selective_devaluation_logic
+      - induced_export_purchases
+      outcome_tags:
+      - stimulated_exports
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "an arms trade-related indirect offset purchase agreement essentially amounts to a selective devaluation"
+      supporting_evidence_paraphrase: "The chapter presents indirect offsets as operating like a targeted devaluation in a chosen sector, offering an export-stimulus rationale under overvalued exchange-rate conditions."
+      confidence: medium
+      confidence_justification: The mechanism is stated as a theoretical example rather than measured causal evidence.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_002:
+      context: Importing countries face difficulties borrowing on international financial markets to finance arms imports.
+      mechanism: Non-monetary offset trade substitutes in-kind exchanges for cash payment, bypassing credit-market constraints.
+      outcome: Arms imports proceed despite limited external borrowing capacity.
+      context_tags:
+      - financing_constraints
+      - limited_credit_access
+      mechanism_tags:
+      - non_monetary_trade_circumvention
+      outcome_tags:
+      - enabled_imports
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "can circumvent this difficulty by engaging in non-monetary offset trade"
+      supporting_evidence_paraphrase: "The text argues that when credit constraints prevent monetary financing, offsets/countertrade can function as a workaround by enabling in-kind exchange."
+      confidence: medium
+      confidence_justification: The claim is framed as a theoretical rationale and not validated here with systematic data.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003:
+      context: Barter and in-kind offset trades are less statistically visible than monetary transactions.
+      mechanism: Lower visibility enables difficult-to-detect price discrimination and dumping of product in world markets.
+      outcome: Exporters can dispose of product that would otherwise be harder to sell openly.
+      context_tags:
+      - barter_transactions
+      - low_visibility_trade
+      mechanism_tags:
+      - hidden_price_discrimination
+      - dumping_channel
+      outcome_tags:
+      - product_disposal
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "barter by its nature is statistically less visible than monetary transactions"
+      supporting_evidence_paraphrase: "The chapter links barter’s low visibility to the possibility of concealed price discrimination/dumping, implying offsets can create a channel for opaque market disposal."
+      confidence: medium
+      confidence_justification: The mechanism is presented as a possible rationale rather than an empirically established pattern.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_004:
+      context: The buyer faces uncertainty about the quality of transferred plant technology under investment/technology-transfer offsets.
+      mechanism: Buyback requirements hold the seller “hostage” by making it responsible for buying back output, aligning incentives so the seller avoids transferring outdated technology that would undermine buyback viability.
+      outcome: Technology-quality risk is mitigated by shifting part of the risk back onto the seller.
+      context_tags:
+      - technology_quality_uncertainty
+      - buyback_requirements
+      mechanism_tags:
+      - hostageship_incentives
+      - risk_sharing
+      outcome_tags:
+      - reduced_quality_risk
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "serve to hold the arms seller hostage to its own exported plant technology"
+      supporting_evidence_paraphrase: "The chapter argues buyback clauses create a hostageship mechanism that discourages sellers from transferring poor or obsolete technology because the seller must repurchase output produced with it."
+      confidence: high
+      confidence_justification: The causal logic is directly described and tied to the buyback design in the text.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_005:
+      context: Licensed technology generates a revenue stream only while it remains current and competitive, and technology depreciates over time.
+      mechanism: Depreciation creates an incentive for arms sellers to license technology via offsets to monetize it while it is still valuable.
+      outcome: Technology licensing/transfer becomes more likely as part of offset deals.
+      context_tags:
+      - technology_depreciation
+      - licensing_revenues
+      mechanism_tags:
+      - monetize_before_obsolescence
+      outcome_tags:
+      - increased_licensing
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "Since technology depreciates arms sellers possess an economic incentive to license technology"
+      supporting_evidence_paraphrase: "The chapter asserts that because technology depreciates, sellers have incentives to license it through offset arrangements to capture value before it becomes obsolete."
+      confidence: medium
+      confidence_justification: The incentive mechanism is stated explicitly, but the chapter does not quantify how often it drives licensing choices.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_006:
+      context: Small-country arms buyers face high search and transaction costs to penetrate foreign markets for non-defense products.
+      mechanism: Large exporting firms with established networks can market buyer-country products more cheaply than the buyer can, reducing market penetration costs.
+      outcome: Export market access for the buyer’s products can improve through marketing-assistance offsets.
+      context_tags:
+      - small_country_constraints
+      - market_penetration_costs
+      mechanism_tags:
+      - exporter_marketing_intermediation
+      - transaction_cost_reduction
+      outcome_tags:
+      - improved_market_access
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq2
+      supporting_evidence: "may be a potent tool to penetrate foreign markets"
+      supporting_evidence_paraphrase: "The chapter argues that because large firms have lower search/penetration costs, an offset where the exporter markets goods on the buyer’s behalf can improve access to foreign markets."
+      confidence: medium
+      confidence_justification: The mechanism is plausible and explicitly described, but evidence is presented as illustrative rather than systematic.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_007:
+      context: International trade involves imperfect markets, oligopoly rents, complex transactions, and asymmetrical information.
+      mechanism: Offsets can function as part of complex bundled contracting that reduces transaction costs and reallocates rents under these imperfections.
+      outcome: Purchaser welfare may increase relative to simple cash-for-goods contracting (in some cases).
+      context_tags:
+      - imperfect_markets
+      - asymmetric_information
+      - complex_contracting
+      mechanism_tags:
+      - transaction_cost_minimization
+      - rent_reallocation
+      outcome_tags:
+      - potential_welfare_gain
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "offsets might enhance the welfare of the purchaser"
+      supporting_evidence_paraphrase: "Citing the logic of imperfect markets and complex transactions, the chapter notes offsets could (in principle) enhance purchaser welfare by reducing transaction costs and reallocating rents."
+      confidence: medium
+      confidence_justification: The welfare effect is presented as a conditional theoretical possibility rather than a demonstrated empirical regularity.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_008:
+      context: Policymakers may use offsets as workarounds for broader macroeconomic or trade-policy problems (e.g., exchange-rate misalignment or protected markets).
+      mechanism: Using offsets as a second-best substitute for appropriate macro/trade reforms distorts resource allocation and embeds inefficient sector-specific fixes in procurement.
+      outcome: Offsets can become an inappropriate policy instrument relative to direct reforms, with likely inefficiency.
+      context_tags:
+      - second_best_politics
+      - policy_substitution
+      mechanism_tags:
+      - distorted_resource_allocation
+      outcome_tags:
+      - policy_inefficiency
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "it is surely inappropriate to deal with an overvalued exchange rate by means of arms trade offsets"
+      supporting_evidence_paraphrase: "The author argues offsets are an inappropriate instrument for addressing macro/trade distortions such as exchange-rate overvaluation, implying inefficient policy substitution."
+      confidence: medium
+      confidence_justification: The claim is explicitly argued, but it is normative rather than based on a reported causal evaluation.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_009:
+      context: Arms exporters compete for sales in a buyers’ market where purchasers can demand offsets.
+      mechanism: Competitive pressure among sellers makes offsets a feature of bidding; firms include offsets when doing so increases expected profits by preventing loss of sales to rivals.
+      outcome: Offsets become a condition of staying in the market.
+      context_tags:
+      - buyers_market
+      - seller_competition
+      mechanism_tags:
+      - competitive_matching
+      - profit_maximization
+      outcome_tags:
+      - offsets_as_condition
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "offsets are a condition of staying in the market"
+      supporting_evidence_paraphrase: "The chapter explains that firms accept offsets when required to win deals in competitive export markets, making offsets a de facto market-entry condition."
+      confidence: medium
+      confidence_justification: The logic is explicit, but the chapter presents it as a general incentive claim rather than quantified evidence.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_010:
+      context: Exporting-firm employees (especially unionized labor) face potential job losses from direct offsets such as coproduction and licensed production abroad.
+      mechanism: Anticipated loss of labor-market rents and employment prompts unions to oppose offsets and to seek regulation that limits competitive arms exports involving production shifting.
+      outcome: Organized labor resists direct offsets and pressures governments for tighter controls.
+      context_tags:
+      - unionized_labor
+      - job_shift_risk
+      mechanism_tags:
+      - rent_protection
+      - political_lobbying
+      outcome_tags:
+      - opposition_to_offsets
+      - regulatory_pressure
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "labor unions and their spokespersons always oppose arms trade offsets"
+      supporting_evidence_paraphrase: "The chapter argues unions oppose direct offsets (coproduction/licensing) because they shift jobs abroad, motivating political pressure for greater regulation."
+      confidence: medium
+      confidence_justification: The direction of union incentives is explicit, but the word “always” is a broad generalization not substantiated with systematic evidence here.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_011:
+      context: Indirect offsets can introduce foreign competitors into the exporting country’s civilian markets (e.g., machinery sales).
+      mechanism: Offset-induced competition reallocates profits between domestic firms and buyers, creating distributive conflict even when aggregate national net effects are small.
+      outcome: Some firms lose profits while others (or buyers) gain; net national effect can be near zero in such cases.
+      context_tags:
+      - indirect_offsets
+      - domestic_market_competition
+      mechanism_tags:
+      - profit_redistribution
+      outcome_tags:
+      - distributive_conflict
+      - zero_net_effect
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "The net effect to the US economy was zero."
+      supporting_evidence_paraphrase: "Using the Finland F-18 offset example, the chapter argues offset-driven competition can shift profits between firms without changing the national aggregate (a redistribution rather than net gain)."
+      confidence: medium
+      confidence_justification: The chapter offers a specific illustrative case and a clear accounting logic, but does not generalize with systematic evidence.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_012:
+      context: Governments claim arms exports lower unit costs via longer production runs, but export promotion can involve substantial taxpayer subsidies.
+      mechanism: When exports are subsidized, taxpayers finance part of the export production, offsetting (or reversing) any unit-cost savings from scale.
+      outcome: Arms exports can increase taxpayer burdens rather than reduce them.
+      context_tags:
+      - export_subsidies
+      - scale_economies_claims
+      mechanism_tags:
+      - subsidy_cost_shift
+      outcome_tags:
+      - increased_taxpayer_burden
+      programme: unknown_programme
+      country: united_states
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "US taxpayer subsidies of US arms exports amounted to nearly $8 billion"
+      supporting_evidence_paraphrase: "The chapter argues that because exports are heavily subsidized, any scale-economy benefit to domestic procurement can be outweighed by taxpayers funding subsidized export production."
+      confidence: medium
+      confidence_justification: The mechanism is clear and the chapter provides a quantitative example, but it is tied to a specific time period and country case.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013:
+      context: Large offset-linked spending steers public funds toward arms component production in the importing country.
+      mechanism: Allocating taxpayer resources to offset-related military industry imposes opportunity costs by diverting funds from civilian social sectors with potentially higher social returns.
+      outcome: Social welfare can be reduced unless military-industry returns exceed those of foregone civilian uses.
+      context_tags:
+      - opportunity_costs
+      - public_spending_tradeoffs
+      mechanism_tags:
+      - resource_diversion
+      outcome_tags:
+      - reduced_social_welfare
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "has not been directed into health, housing, and education"
+      supporting_evidence_paraphrase: "The chapter highlights that offset-directed spending reallocates public funds away from civilian priorities, implying an opportunity-cost mechanism that can reduce welfare."
+      confidence: high
+      confidence_justification: The opportunity-cost logic is explicit and directly tied to the example in the text.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_014:
+      context: Offset obligations require investment or purchases in one receiving country rather than in alternative locations, affecting third parties and trade patterns.
+      mechanism: By encouraging bilateralism and reallocating investment/purchases across countries, mandatory offsets impose externalities on third parties and conflict with free-trade norms.
+      outcome: Third parties lose potential investment and offsets are treated as trade-restricting (including formal prohibitions in some procurement regimes).
+      context_tags:
+      - bilateralism
+      - third_party_externalities
+      mechanism_tags:
+      - investment_displacement
+      - trade_restriction
+      outcome_tags:
+      - third_party_losses
+      - free_trade_undermined
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the WTO Agreement on Government Procurement expressly forbids offsets"
+      supporting_evidence_paraphrase: "The chapter argues offsets displace investment from other countries and undermine free trade; it notes a formal prohibition on offsets in the WTO Government Procurement Agreement (with exceptions)."
+      confidence: medium
+      confidence_justification: The linkage to third-party displacement is explicit; the WTO point is factual but the overall welfare effect is argued rather than measured.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015:
+      context: Developing countries often lack the human and physical capital needed for arms production and coproduction.
+      mechanism: Technology transfer and training offsets do not create this capital in a self-sustaining way, and exporters continue to advance technologically, leaving recipients behind.
+      outcome: Developing countries struggle to build durable indigenous arms-production capability via offsets.
+      context_tags:
+      - ldc_capability_gap
+      - limited_capital_stock
+      mechanism_tags:
+      - non_self_sustaining_transfer
+      - technology_race
+      outcome_tags:
+      - limited_indigenous_capacity
+      - weak_durability
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "technology transfer and training do not transfer this capital in a self-sustaining manner"
+      supporting_evidence_paraphrase: "The chapter argues capability deficits (human/physical capital) constrain offset-driven arms industrialization, and that transferred technology/training tends not to be self-sustaining as exporters keep advancing."
+      confidence: medium
+      confidence_justification: The mechanism is explicitly asserted and linked to prior empirical work, but the chapter frames it as a general conclusion from limited evidence.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_016:
+      context: Offsets are sometimes justified as conserving scarce foreign exchange for the importing country.
+      mechanism: When exports are shipped for the exporter to sell as part of an offset, the importing country foregoes the foreign exchange it would have earned from selling those exports itself, leaving the net foreign-exchange position unchanged.
+      outcome: Foreign exchange is not genuinely conserved; offset trade can reflect underlying inefficiency.
+      context_tags:
+      - foreign_exchange_claims
+      - indirect_offsets
+      mechanism_tags:
+      - foregone_export_revenue
+      outcome_tags:
+      - no_forex_gain
+      - revealed_inefficiency
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "not allow it to obtain any from the world market either"
+      supporting_evidence_paraphrase: "Using a foreign-exchange accounting example and a cited statement, the chapter argues offsets can allow importing without spending foreign exchange but also prevent earning it, so net positions do not improve."
+      confidence: high
+      confidence_justification: The mechanism is demonstrated through a concrete accounting example and supported by a direct citation.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_017:
+      context: Offset arrangements are justified as generating new, additional trade through guaranteed purchases.
+      mechanism: Because world demand is not increased by offset obligations, purchases are diverted from other suppliers/countries, and military spending can reduce overall demand.
+      outcome: Offsets displace trade (and may destroy some) rather than create additional trade.
+      context_tags:
+      - trade_additionality_claims
+      - fixed_world_demand
+      mechanism_tags:
+      - trade_displacement
+      - demand_crowding_out
+      outcome_tags:
+      - displaced_trade
+      - reduced_trade
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Offsets do not offer additional trade: they merely displace it"
+      supporting_evidence_paraphrase: "The chapter provides a multi-country example (South Africa/Chile/EU) to argue that offsets shift purchases between suppliers unless world demand rises, which offsets do not ensure."
+      confidence: high
+      confidence_justification: The claim is explicit and supported by a clear illustrative logic about displacement under fixed demand.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018:
+      context: Technology-transfer offsets may involve technology close to being outdated, and buyback clauses are used to partially protect recipients.
+      mechanism: Even with buyback, exporters can profit from outdated technology combined with low-cost labor; after the offset agreement ends, recipients without sustained capability momentum fall behind again.
+      outcome: Technology-transfer benefits are often temporary and may widen long-run capability gaps.
+      context_tags:
+      - technology_transfer
+      - obsolescence_risk
+      mechanism_tags:
+      - outdated_technology_disposal
+      - post_agreement_fall_behind
+      outcome_tags:
+      - temporary_gains
+      - widening_gap
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "technology that is on the verge of being outdated"
+      supporting_evidence_paraphrase: "The chapter warns technology-transfer offsets can offload near-obsolete technology; even with buyback protection, recipients may fall behind again once agreements end without self-sustaining capabilities."
+      confidence: medium
+      confidence_justification: The mechanism is explicitly argued, but its magnitude and prevalence are not established with comprehensive audits in this chapter.
+    04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019:
+      context: Exporting firms may discover competent subcontractors in the receiving country, sometimes via offset-related engagement.
+      mechanism: If the exporter would have pursued the same partnerships through normal due diligence regardless of offset credit, then the offset does not cause the business relationship; it only changes accounting labels.
+      outcome: Attributing such business to offsets overstates offset benefits.
+      context_tags:
+      - subcontractor_discovery
+      - attribution_problem
+      mechanism_tags:
+      - due_diligence_anyway
+      - misattribution
+      outcome_tags:
+      - overstated_benefits
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: theory_model
+      evidence_type_narrative: "A conceptual economics chapter that surveys theories of offsets, maps stakeholder incentives, and assesses limited empirical evidence with illustrative examples."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "regardless of any offset credit they might receive"
+      supporting_evidence_paraphrase: "The chapter cites an offset-linked seminar where the contractor sought opportunities it would have pursued anyway, implying that benefits should not be credited to offsets if they are non-additional."
+      confidence: high
+      confidence_justification: The text explicitly discusses the attribution problem and states the non-additionality logic.
+  v_and_v_log:
+  - check: completeness_all_relevant_cmos
+    status: pass
+    note: Extracted CMOs covering major theoretical rationales (exchange-rate, finance, barter, buyback, marketing), stakeholder incentives, and core efficiency critiques (opportunity cost, forex, trade displacement, attribution).
+  - check: evidence_traceability
+    status: pass
+    note: Each CMO includes a short direct quote and a paraphrase linking it to the claim.
+  - check: mechanism_is_causal
+    status: pass
+    note: Mechanisms are framed as incentive/risk-sharing processes, transaction-cost effects, and displacement/opportunity-cost dynamics rather than activities.
+  - check: outcome_is_effect
+    status: pass
+    note: Outcomes are expressed as effects on exports, costs, welfare, adoption incentives, and trade patterns.
+  - check: snake_case_fields
+    status: pass
+    note: All tags and programme/country values are snake_case.
+  - check: quote_length
+    status: pass
+    note: Supporting evidence quotes are kept short (approximately <=25 words).
+  - check: inference_flagged
+    status: warn
+    note: Several CMOs present theoretical rationales or normative critiques (e.g., selective devaluation, policy inappropriateness); confidence is set to medium where claims are not empirically demonstrated here.
+05-arms-trade-as-illiberal-trade.pdf:
+  cmos:
+    05_arms_trade_as_illiberal_trade_pdf__cmo_001:
+      context: The arms trade occupies an exceptional security status outside liberalized trade regimes.
+      mechanism: Exemption from liberal trade rules allows states to restrict transfers and to condition sales on reciprocal arrangements, producing illiberal contracting practices.
+      outcome: The arms market remains illiberal, requiring tougher and more transparent regulation rather than full liberalization.
+      context_tags:
+      - exceptional_security_status
+      - trade_regime_exemption
+      mechanism_tags:
+      - illiberal_exception_logic
+      outcome_tags:
+      - illiberal_market
+      - need_stronger_regulation
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "The arms trade must remain illiberal for security reasons, but its regulation must be tougher, multilateral, and more transparent."
+      supporting_evidence_paraphrase: "The author argues that security exceptionalism makes the arms trade inherently illiberal, and therefore policy should focus on tougher, multilateral, transparent regulation."
+      confidence: high
+      confidence_justification: The claim is stated explicitly as the chapter’s framing argument.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_002:
+      context: Arms sellers and buyers operate in a market sheltered from liberalized trade rules, where sellers can refuse transfers and buyers can require large offsets or domestic purchasing.
+      mechanism: Illiberal contracting latitude (refusals, buy_domestic, and offsets) creates state-to-state and firm-to-state ties that extend beyond normal price/quality competition.
+      outcome: A complex web of cross-actor relationships emerges in the arms market.
+      context_tags:
+      - illiberal_contracting
+      - offsets
+      mechanism_tags:
+      - relationship_web_formation
+      outcome_tags:
+      - complex_relationships
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "Illiberal trade practices in this unique market have created a complex web of state-to-state, firm-to-state, and firm-to-firm relationships."
+      supporting_evidence_paraphrase: "The chapter links illiberal practices (including offsets and buy_domestic policies) to the creation of dense cross-actor relationships across states and firms."
+      confidence: high
+      confidence_justification: The causal linkage is asserted explicitly in the introduction.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_003:
+      context: Post–Cold War excess capacity creates a buyer’s market in major weapons systems.
+      mechanism: Greater buyer leverage increases demands for offsets (components, technology transfer, marketing/investment), intensifying cross-national linkages in procurement.
+      outcome: Offset requirements expand and become more complex.
+      context_tags:
+      - buyers_market
+      - excess_capacity
+      mechanism_tags:
+      - buyer_leverage
+      - expanded_offset_demands
+      outcome_tags:
+      - increasing_offset_requirements
+      - contract_complexity
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Their ability to do so was enhanced by the “buyer’s market” created by post-cold war excess capacity"
+      supporting_evidence_paraphrase: "The chapter argues that post–Cold War excess capacity strengthened buyers’ bargaining power, enabling more demanding and more complex offset requirements."
+      confidence: high
+      confidence_justification: The mechanism (buyer leverage under excess capacity) is directly stated.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_004:
+      context: Arms procurement increasingly involves cross-national firm and government relationships, beyond traditional domestic cradle-to-grave defense industries.
+      mechanism: Offsets create “diagonalized” exchanges by requiring primes to subcontract, market unrelated goods, and transfer technology across borders and sectors.
+      outcome: The arms market becomes more international and more diagonally interconnected.
+      context_tags:
+      - market_internationalization
+      - diagonalization
+      mechanism_tags:
+      - offset_driven_cross_border_exchanges
+      outcome_tags:
+      - diagonalized_market
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq2
+      supporting_evidence: "New and more numerous diagonalized (cross-national) exchanges are taking place"
+      supporting_evidence_paraphrase: "The chapter describes offsets as a driver of diagonalized ties, including cross-border subcontracting, marketing of unrelated goods, and technology transfers, increasing market internationalization."
+      confidence: medium
+      confidence_justification: The direction is explicit, but the chapter presents the mechanism as a broad characterization rather than a quantified causal estimate here.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_005:
+      context: Military services pursue export reform under budget constraints and a desire to spread development costs across more buyers.
+      mechanism: When exports (and offsets) help increase the buyer pool, services shift from proliferation restraint toward making sales work for customers, adopting a more permissive stance on offsets.
+      outcome: Security guardianship over technological edge is weakened, increasing tolerance for offset-related technology sharing.
+      context_tags:
+      - budget_constraints
+      - export_reform
+      mechanism_tags:
+      - cost_spreading_logic
+      - permissive_offset_stance
+      outcome_tags:
+      - weakened_tech_guardianship
+      - increased_tolerance
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq1
+      - rq3
+      supporting_evidence: "their tendency is toward a permissive stand on these as well"
+      supporting_evidence_paraphrase: "Citing Wilson (2001), the chapter argues that budget-driven export reform shifts services toward making sales work for customers, which increases permissiveness toward offsets and reduces emphasis on guarding the technological edge."
+      confidence: medium
+      confidence_justification: The mechanism is described via a cited assessment; it is plausible but not independently verified with primary data in this chapter.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_006:
+      context: Major defense firms face growing offset demands and long-term obligations, while the US government does not broker offset deals for them.
+      mechanism: Firms build in-house offset organizations that operate like trading companies (marketing offset products, arranging subcontracting, technology search/transfer, credit sourcing, and offset-credit trading).
+      outcome: Defense contractors transform toward trading-company functions and expand non-core capabilities.
+      context_tags:
+      - long_term_offset_obligations
+      - government_non_brokering
+      mechanism_tags:
+      - trading_company_transformation
+      outcome_tags:
+      - non_core_capability_growth
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "whose work is essentially that of a trading company"
+      supporting_evidence_paraphrase: "The chapter describes major defense firms building extensive offset operations that resemble trading companies, indicating organizational transformation driven by offset fulfillment requirements."
+      confidence: high
+      confidence_justification: The transformation claim is described in detail and supported with specific examples of offset-organization functions.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_007:
+      context: Offsets require substantial management, monitoring, and transaction work inside firms.
+      mechanism: Managing offset obligations imposes transaction costs that consume resources (personnel, legal/monitoring, travel/communications), estimated as a share of sale value.
+      outcome: Offsets add significant overhead costs to arms export sales.
+      context_tags:
+      - offset_management
+      - transaction_costs
+      mechanism_tags:
+      - management_overhead
+      outcome_tags:
+      - higher_sale_costs
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "currently running between 7 and 10 percent of the value of the arms sale"
+      supporting_evidence_paraphrase: "The chapter reports that transaction costs of fulfilling offsets are on the order of 7–10% of sale value, implying substantial overhead devoted to offset management."
+      confidence: medium
+      confidence_justification: The figure is explicitly stated and cited, but it is presented as an estimate rather than a comprehensive audited measurement.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_008:
+      context: US primes undertake offset agreements with many countries over multi-year fulfillment periods.
+      mechanism: Long fulfillment horizons and crediting practices allow firms to receive offset credit exceeding transactional fulfillment value.
+      outcome: Offset agreements become sizeable, long-term commitments with complex accounting.
+      context_tags:
+      - offset_accounting
+      - long_fulfillment_periods
+      mechanism_tags:
+      - offset_crediting
+      outcome_tags:
+      - long_term_commitments
+      - complex_accounting
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "with an average fulfillment period of 84 months"
+      supporting_evidence_paraphrase: "The chapter cites US data (1993–1997) showing large offset totals and long fulfillment periods, highlighting the long-term, accounting-heavy nature of offset obligations."
+      confidence: high
+      confidence_justification: The statement is specific and tied to cited quantitative reporting.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_009:
+      context: Offset requirements spread geographically and move toward higher percentages and greater complexity.
+      mechanism: As more countries adopt offsets and escalate requirements (toward 100%+), firms adapt by expanding offset operations and negotiating longer, more complex contracts.
+      outcome: Offset practices become more pervasive and increasingly trade-distorting over time.
+      context_tags:
+      - diffusion_of_offsets
+      - escalating_requirements
+      mechanism_tags:
+      - requirement_escalation
+      outcome_tags:
+      - increasing_trade_distortion
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the number of countries resorting to them has increased"
+      supporting_evidence_paraphrase: "Drawing on a US Bureau of Export Administration study, the chapter reports that more countries use offsets, many moving toward 100% requirements, with more complex and lengthy contracts."
+      confidence: high
+      confidence_justification: The trend claim is explicitly attributed to a cited empirical study.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_010:
+      context: Offsets operate alongside buy_domestic preferences and unequal national investments in military R&D.
+      mechanism: Buyer ability to extract economic activity and know-how via offsets increases willingness to import superior foreign systems, reinforcing exporter dominance while forcing work-sharing back to buyer countries.
+      outcome: National hyper-specialization in systems integration and cross-border division of labor intensify.
+      context_tags:
+      - r_and_d_asymmetry
+      - buy_domestic_preferences
+      mechanism_tags:
+      - import_with_extracted_activity
+      - work_sharing
+      outcome_tags:
+      - hyper_specialization
+      - cross_border_division_of_labor
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "Countries would be less likely to opt to import weaponry from abroad…if they could not extract economic activity and know-how"
+      supporting_evidence_paraphrase: "The chapter argues offsets make imports politically/economically feasible by extracting activity and know-how, which supports exporter hyper-specialization while pushing subcontracting/work-sharing into buyer countries."
+      confidence: medium
+      confidence_justification: The mechanism is clearly argued, but it is a counterfactual claim about behavior absent offsets.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_011:
+      context: Direct offsets frequently take the form of subcontracts that allocate work on the sold system to buyer-country firms.
+      mechanism: By shifting component production overseas, primes export parts of their own capability and create enduring supplier relationships for buyer firms.
+      outcome: Domestic suppliers face displacement pressures and import shares rise in the seller country.
+      context_tags:
+      - direct_offsets
+      - subcontracting
+      mechanism_tags:
+      - capability_export
+      - supplier_lock_in
+      outcome_tags:
+      - supplier_displacement
+      - rising_imports
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "67 percent of which were in the form of subcontracts"
+      supporting_evidence_paraphrase: "The chapter reports that most direct-offset transactions on a sample of US weapon systems were subcontracts, implying capability/work is shifted to buyer firms and can become a lasting supply relationship."
+      confidence: high
+      confidence_justification: The subcontract share is specific and tied to cited quantitative reporting.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_012:
+      context: Foreign components introduced through offsets can persist beyond the initial deal.
+      mechanism: Once buyer-country firms secure component roles via coproduction/subcontracting, they can supply not only the original prime but also other manufacturers, competing with domestic suppliers.
+      outcome: Offset-induced sourcing can become permanent, increasing competitive pressure on domestic subcontractors.
+      context_tags:
+      - component_sourcing
+      - post_contract_persistence
+      mechanism_tags:
+      - permanent_supply_relationships
+      outcome_tags:
+      - increased_competition
+      - domestic_supplier_losses
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq2
+      - rq3
+      supporting_evidence: "often leads to a permanent supply relationship"
+      supporting_evidence_paraphrase: "The chapter argues that giving foreign suppliers a components role through offsets can create enduring supply links that extend beyond the initial procurement contract and intensify competition."
+      confidence: medium
+      confidence_justification: The persistence claim is explicitly stated and illustrated, but persistence magnitudes vary by case.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_013:
+      context: US defense supplier networks face restructuring pressures in the 1990s, with offsets contributing alongside other drivers.
+      mechanism: Direct offsets shift work away from domestic suppliers toward foreign subcontractors, with suppliers bearing a large share of displacement.
+      outcome: Supplier base contraction and job displacement occur, with losses concentrated among suppliers.
+      context_tags:
+      - supplier_base
+      - industrial_restructuring
+      mechanism_tags:
+      - work_displacement_to_foreign
+      outcome_tags:
+      - supplier_base_contraction
+      - job_losses
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "supplanted $2.3 billion of US work, or 25,300 work-years"
+      supporting_evidence_paraphrase: "The chapter cites a US Presidential Commission staff study reporting billions of dollars and tens of thousands of work-years displaced by direct offsets, much of it borne by suppliers."
+      confidence: high
+      confidence_justification: The outcome is quantified and attributed to a specific survey/staff study.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_014:
+      context: Indirect offsets create obligations in sectors not directly related to the weapon system, affecting firms outside the defense supply chain.
+      mechanism: By introducing offset-linked competition and support for foreign firms’ cost/quality improvements, indirect offsets impose “hidden injuries” on non-defense sectors that may not know why competition intensified.
+      outcome: Non-defense firms face competitive disadvantage and resource misallocation effects.
+      context_tags:
+      - indirect_offsets
+      - non_defense_sector
+      mechanism_tags:
+      - hidden_competition_channel
+      - foreign_firm_support
+      outcome_tags:
+      - competitive_disadvantage
+      - hidden_injuries
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "hidden injuries of privileged trade are inflicted"
+      supporting_evidence_paraphrase: "The chapter argues indirect offsets can harm unrelated civilian sectors through offset-driven competition and support for foreign firms, often without affected firms understanding the source of the competitive pressure."
+      confidence: medium
+      confidence_justification: The mechanism is argued and illustrated (e.g., Beloit/Valmet), but the chapter notes such harms are difficult to measure comprehensively.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_015:
+      context: Indirect offsets constitute a large share of offset transactions and can enable foreign firms to compete in world and US markets.
+      mechanism: Offset transactions reduce foreign firms’ costs and/or raise quality and market-competitiveness, while technology transfer back to the US is rare.
+      outcome: Competitive advantages shift toward foreign firms and technology transfer is asymmetric.
+      context_tags:
+      - indirect_offsets
+      - technology_transfer_asymmetry
+      mechanism_tags:
+      - cost_quality_improvement
+      outcome_tags:
+      - increased_foreign_competitiveness
+      - limited_reverse_transfer
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "Only 4 percent of offset transactions resulted in the transfer of technology from foreign firms back to the US"
+      supporting_evidence_paraphrase: "The chapter cites Commission data indicating reverse technology transfer is rare, while many offset transactions help foreign firms reduce costs or improve quality and competitiveness."
+      confidence: high
+      confidence_justification: The claim is quantified and explicitly attributed to a cited Commission report.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_016:
+      context: Offsets expand the number of pathways through which advanced weapons and technology can leak to unauthorized users and third parties.
+      mechanism: Licensed production/technology sharing associated with offsets increases opportunities for diversion, while enforcement is inadequate and undetected transfers likely exceed detected cases.
+      outcome: Conventional-weapons proliferation increases and undermines security.
+      context_tags:
+      - export_controls
+      - enforcement_gaps
+      - proliferation_risk
+      mechanism_tags:
+      - technology_leakage
+      - diversion_risk
+      outcome_tags:
+      - increased_proliferation
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "To the extent that offsets multiply the possibilities for leakage"
+      supporting_evidence_paraphrase: "The chapter argues offsets expand routes for sensitive technology leakage and cites multiple diversion cases, with inadequate enforcement and likely undetected transfers."
+      confidence: medium
+      confidence_justification: The mechanism is clearly stated and supported with illustrative cases, but the chapter notes the absence of systematic study.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_017:
+      context: Military services value interoperability but also face budget constraints and political pressure to accelerate transfers for economic reasons.
+      mechanism: Interoperability demands and offset-driven technology sharing can be used to justify accelerating next-generation development to maintain an edge.
+      outcome: Taxpayer costs rise and an arms race dynamic among allies is exacerbated.
+      context_tags:
+      - interoperability
+      - budget_constraints
+      mechanism_tags:
+      - next_generation_pressure
+      outcome_tags:
+      - higher_taxpayer_costs
+      - allied_arms_race
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq1
+      - rq3
+      supporting_evidence: "push for the next generation sooner than they otherwise would"
+      supporting_evidence_paraphrase: "The chapter argues that exporting current-generation systems and sharing technology (including via offsets) can create pressure to develop the next generation earlier, increasing taxpayer costs and fueling arms-race dynamics even among allies."
+      confidence: medium
+      confidence_justification: The mechanism is explicitly described, but the chapter does not provide a quantitative estimate of acceleration effects.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_018:
+      context: Arms-trade policymaking involves interagency conflict and economic bargaining, with multilateral control forums weakened.
+      mechanism: Economic imperatives gain ascendancy over foreign-policy/security concerns, shifting lead roles toward defense/economic agencies and weakening arms-control functions.
+      outcome: Security evaluations are less integrated into trade decisions, raising long-run proliferation risks.
+      context_tags:
+      - interagency_conflict
+      - multilateral_weakness
+      mechanism_tags:
+      - economic_ascendancy
+      - weakened_arms_control
+      outcome_tags:
+      - reduced_security_scrutiny
+      programme: unknown_programme
+      country: united_states
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "without integration of security evaluations and economic imperatives"
+      supporting_evidence_paraphrase: "The chapter argues post–Cold War arms trade policy evolves without integrating security evaluations and economic imperatives, with defense/economic concerns increasingly overriding arms-control functions."
+      confidence: medium
+      confidence_justification: The claim is explicit and supported by described institutional dynamics, but not measured with systematic process-tracing in this chapter.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_019:
+      context: Governments use offsets as a backdoor industrial policy tool under broader free-trade regimes, especially in dual-use sectors.
+      mechanism: By linking military imports to offsets that build non-defense capabilities, governments make military spending more attractive in budget competition and may increase total weapons purchases.
+      outcome: Worldwide military spending can be higher than it would be without offsets.
+      context_tags:
+      - industrial_policy
+      - dual_use_strategy
+      mechanism_tags:
+      - backdoor_comparative_advantage
+      - spending_attractiveness
+      outcome_tags:
+      - higher_military_spending
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "thus encouraging higher levels of military spending than in the absence of such arrangements"
+      supporting_evidence_paraphrase: "The chapter argues that offsets can make military procurement politically/economically attractive by promising broader capability gains, which can increase overall military spending."
+      confidence: medium
+      confidence_justification: The causal claim is stated and illustrated (e.g., Korea), but separating the effect from other drivers is acknowledged as difficult.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_020:
+      context: Buyers use offsets as economic-development policy but face difficulty evaluating weapon prices and offset value, particularly in large procurement packages.
+      mechanism: Offset-driven procurement reduces incentives to minimize purchase costs (e.g., off-the-shelf), while price opacity makes it hard to judge whether paid prices are reasonable.
+      outcome: Recipient countries may overpay and realize smaller-than-expected economic impacts.
+      context_tags:
+      - price_opacity
+      - development_promises
+      mechanism_tags:
+      - reduced_cost_minimization
+      - weak_price_benchmarking
+      outcome_tags:
+      - overpayment_risk
+      - smaller_than_expected_impact
+      programme: unknown_programme
+      country: south_africa
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "it is very difficult for South Africa to judge whether the prices they are paying for weaponry are reasonable"
+      supporting_evidence_paraphrase: "Citing Batchelor and Dunne (2000), the chapter argues offset-centered procurement can be costly and price-opaque, making overpayment and under-delivery of promised economic benefits more likely."
+      confidence: medium
+      confidence_justification: The claim is explicitly reported from a cited study but is specific to the South Africa case and requires broader corroboration for generalization.
+    05_arms_trade_as_illiberal_trade_pdf__cmo_021:
+      context: Leading-edge weapon markets have few major prime contractors, and illiberal offset regimes persist alongside oligopolistic competition.
+      mechanism: Prime contractors have shared incentives to maintain offset practices and exclusion from free-trade regimes because offsets expand markets and preserve pricing power, even while firms compete on deals.
+      outcome: An international military-industrial cartel-like dynamic can emerge.
+      context_tags:
+      - oligopolistic_market
+      - offset_regime_persistence
+      mechanism_tags:
+      - shared_incentive_alignment
+      outcome_tags:
+      - cartel_dynamics
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: mixed_methods
+      evidence_type_narrative: "The chapter combines conceptual argument with secondary data, published/trade accounts, and interviews to assess economic and security consequences of illiberal arms trade practices (including offsets)."
+      research_questions_mapped:
+      - rq3
+      supporting_evidence: "the apparent emergence of an international cartel in leading-edge weapon systems"
+      supporting_evidence_paraphrase: "The chapter argues that major primes benefit from maintaining offsets and defense-sector exclusion from free-trade rules, creating cartel-like incentives alongside continued deal-by-deal competition."
+      confidence: medium
+      confidence_justification: The cartel claim is framed as an implication/hypothesis grounded in observed industry structure and incentive logic rather than direct proof of collusion.
+  v_and_v_log:
+  - check: completeness_all_relevant_cmos
+    status: pass
+    note: Captured key CMO claims on diagonalization, offset-driven industrial distortions (hyper-specialization, supplier displacement, hidden injuries), trading-company transformation, and security/proliferation consequences.
+  - check: evidence_traceability
+    status: pass
+    note: Each CMO includes a short quote and a paraphrase tied to the cited passage or described evidence in the chapter.
+  - check: mechanism_is_causal
+    status: pass
+    note: Mechanisms are framed as incentive shifts (buyer leverage, cost spreading), transaction-cost burdens, capability leakage, and institutional priority shifts (economic over security).
+  - check: outcome_is_effect
+    status: pass
+    note: Outcomes are stated as effects (internationalization, costs, displacement, proliferation, higher spending) rather than activities.
+  - check: snake_case_fields
+    status: pass
+    note: All tags and programme/country values are snake_case.
+  - check: quote_length
+    status: pass
+    note: Supporting evidence quotes are kept short (approximately <=25 words).
+  - check: inference_flagged
+    status: warn
+    note: Some CMOs involve counterfactuals or hypothesized macro effects (e.g., absent offsets, cartel-like dynamics); confidence is reduced where claims are framed as implications rather than directly measured.
