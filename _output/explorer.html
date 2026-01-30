@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a053849730e33603d127d953164e18b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-42ed7287b56c5c583e2c2463c9cf4916.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -222,10 +222,6 @@ ul.task-list li input[type="checkbox"] {
     <select id="tagOutcome" multiple="" size="6"></select>
   </div>
   <div>
-    <label for="tagTheme">Mechanism themes</label>
-    <select id="tagTheme" multiple="" size="6"></select>
-  </div>
-  <div>
     <label for="rqFilter">Research questions</label>
     <select id="rqFilter" multiple="" size="6"></select>
   </div>
@@ -265,11 +261,13 @@ ul.task-list li input[type="checkbox"] {
 
   const getSelected = (id) => {
     const el = document.getElementById(id);
+    if (!el) return [];
     return Array.from(el.selectedOptions).map(o => o.value);
   };
 
   const fillSelect = (id, values) => {
     const el = document.getElementById(id);
+    if (!el) return;
     el.innerHTML = "";
     values.forEach(v => {
       const opt = document.createElement("option");
@@ -297,8 +295,13 @@ ul.task-list li input[type="checkbox"] {
     complete: function(results) {
       dataRows = results.data || [];
       const cols = results.meta.fields || [];
+      const preferred = ["context", "mechanism", "outcome"];
+      const orderedCols = [
+        ...preferred.filter(c => cols.includes(c)),
+        ...cols.filter(c => !preferred.includes(c))
+      ];
 
-      const tableCols = cols.map(c => ({ title: c, data: c }));
+      const tableCols = orderedCols.map(c => ({ title: c, data: c }));
       table = $("#cmoTable").DataTable({
         data: dataRows,
         columns: tableCols,

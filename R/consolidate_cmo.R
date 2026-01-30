@@ -4,42 +4,57 @@
 consolidate_cmo <- function(
   cmo_dir = "cmo",
   output_csv = "data/cmo_statements.csv",
-  normalized_tags_file = "cmo/normalized_tags.yml",
-  mechanism_map_file = "cmo/mechanism_map.yml"
+  normalized_tags_file = "cmo/normalised_tags.yml"
 ) {
   if (!requireNamespace("yaml", quietly = TRUE)) {
     stop("Package 'yaml' is required.")
   }
 
   cmo_files <- list.files(cmo_dir, pattern = "\\.yml$", full.names = TRUE)
-  cmo_files <- cmo_files[!basename(cmo_files) %in% c("normalized_tags.yml", "mechanism_map.yml")]
+  cmo_files <- cmo_files[
+    !basename(cmo_files) %in% c("normalised_tags.yml", "normalized_tags.yml", "mechanism_map.yml")
+  ]
   if (length(cmo_files) == 0) {
     stop("No CMO YAML files found.")
   }
 
-  alias_map <- list()
+  alias_map <- list(
+    context_tags = list(),
+    mechanism_tags = list(),
+    outcome_tags = list()
+  )
   if (file.exists(normalized_tags_file)) {
     spec <- yaml::read_yaml(normalized_tags_file)
     if (!is.null(spec$aliases)) {
-      alias_map <- spec$aliases
+      aliases <- spec$aliases
+      if (all(c("context_tags", "mechanism_tags", "outcome_tags") %in% names(aliases))) {
+        alias_map$context_tags <- aliases$context_tags %||% list()
+        alias_map$mechanism_tags <- aliases$mechanism_tags %||% list()
+        alias_map$outcome_tags <- aliases$outcome_tags %||% list()
+      } else {
+        # Legacy single-section alias map: apply to every tag type.
+        alias_map$context_tags <- aliases
+        alias_map$mechanism_tags <- aliases
+        alias_map$outcome_tags <- aliases
+      }
     }
   }
 
-  normalize_tag <- function(tag) {
+  normalize_tag <- function(tag, field) {
     if (is.null(tag) || is.na(tag) || tag == "") return(NA_character_)
     tag <- tolower(tag)
     tag <- gsub("[^a-z0-9]+", "_", tag)
     tag <- gsub("_+", "_", tag)
     tag <- gsub("^_|_$", "", tag)
-    if (!is.null(alias_map[[tag]])) {
-      tag <- alias_map[[tag]]
+    if (!is.null(alias_map[[field]][[tag]])) {
+      tag <- alias_map[[field]][[tag]]
     }
     tag
   }
 
-  normalize_tags <- function(tags) {
+  normalize_tags <- function(tags, field) {
     if (is.null(tags)) return(character())
-    out <- vapply(tags, normalize_tag, character(1))
+    out <- vapply(tags, normalize_tag, character(1), field = field)
     out <- out[!is.na(out) & out != ""]
     unique(out)
   }
@@ -74,9 +89,9 @@ consolidate_cmo <- function(
           context_tags_raw = paste_tags(cmo$context_tags),
           mechanism_tags_raw = paste_tags(cmo$mechanism_tags),
           outcome_tags_raw = paste_tags(cmo$outcome_tags),
-          context_tags = paste_tags(sort(normalize_tags(cmo$context_tags))),
-          mechanism_tags = paste_tags(sort(normalize_tags(cmo$mechanism_tags))),
-          outcome_tags = paste_tags(sort(normalize_tags(cmo$outcome_tags))),
+          context_tags = paste_tags(sort(normalize_tags(cmo$context_tags, "context_tags"))),
+          mechanism_tags = paste_tags(sort(normalize_tags(cmo$mechanism_tags, "mechanism_tags"))),
+          outcome_tags = paste_tags(sort(normalize_tags(cmo$outcome_tags, "outcome_tags"))),
           programme = cmo$programme %||% "",
           country = cmo$country %||% "",
           evidence_type = cmo$evidence_type %||% "",
@@ -97,64 +112,6 @@ consolidate_cmo <- function(
   }
 
   out <- do.call(rbind, records)
-
-  # Optional mechanism tag -> theme mapping (for pathway summaries / mechanism map).
-  if (!is.null(mechanism_map_file) && file.exists(mechanism_map_file)) {
-    mm <- yaml::read_yaml(mechanism_map_file)
-    tag_to_theme <- mm$tag_to_theme %||% list()
-    themes <- mm$themes %||% list()
-
-    split_tags_str <- function(x) {
-      if (is.null(x) || is.na(x) || x == "") return(character())
-      # Accept semicolons, commas, or whitespace as separators.
-      strsplit(x, "[,;[:space:]]+")[[1]]
-    }
-
-    map_themes_keys <- function(tags_str) {
-      tags <- split_tags_str(tags_str)
-      if (length(tags) == 0) return("")
-      keys <- vapply(
-        tags,
-        function(t) tag_to_theme[[t]] %||% NA_character_,
-        character(1)
-      )
-      keys <- keys[!is.na(keys) & keys != ""]
-      if (length(keys) == 0) return("")
-      paste(sort(unique(keys)), collapse = ";")
-    }
-
-    map_themes_labels <- function(tags_str) {
-      keys_str <- map_themes_keys(tags_str)
-      if (keys_str == "") return("")
-      keys <- split_tags_str(keys_str)
-      labels <- vapply(
-        keys,
-        function(k) themes[[k]]$label %||% k,
-        character(1)
-      )
-      paste(labels, collapse = ";")
-    }
-
-    # Warn on unmapped mechanism tags to keep the map coverage visible.
-    all_mech_tags <- unique(unlist(lapply(out$mechanism_tags, split_tags_str)))
-    all_mech_tags <- all_mech_tags[all_mech_tags != ""]
-    if (length(all_mech_tags) > 0) {
-      unmapped <- setdiff(all_mech_tags, names(tag_to_theme))
-      if (length(unmapped) > 0) {
-        warning(
-          sprintf(
-            "Unmapped mechanism tags (%d): %s",
-            length(unmapped),
-            paste(sort(unmapped), collapse = ", ")
-          ),
-          call. = FALSE
-        )
-      }
-    }
-
-    out$mechanism_theme_keys <- vapply(out$mechanism_tags, map_themes_keys, character(1))
-    out$mechanism_theme_labels <- vapply(out$mechanism_tags, map_themes_labels, character(1))
-  }
 
   dir.create(dirname(output_csv), recursive = TRUE, showWarnings = FALSE)
   utils::write.csv(out, output_csv, row.names = FALSE, na = "")

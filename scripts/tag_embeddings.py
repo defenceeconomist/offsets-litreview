@@ -1,120 +1,90 @@
-"""Utilities for embedding tag/context strings with optional caching.
-
-Designed to be model-agnostic: pass a custom `embed_fn` if you prefer a
-remote API or another local model.
-"""
+"""Embedding helpers for tag normalization and clustering."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-import hashlib
-import json
-import os
+from pathlib import Path
 import sqlite3
-from typing import Callable, Iterable, List, Sequence, Tuple, Union
+from typing import Callable, Iterable, Mapping, Sequence
 
 import numpy as np
 
-TextLike = Union[str, dict]
-EmbedFn = Callable[[Sequence[str]], np.ndarray]
-
 
 @dataclass(frozen=True)
-class NormalizedItem:
-    """Normalized input wrapper.
-
-    - id: stable identifier for the item if provided
-    - text: the text to embed
-    - raw: original item for traceability
-    """
-
+class NormalizedText:
     id: str
     text: str
-    raw: TextLike
 
 
-def normalize_inputs(
-    items: Union[Sequence[TextLike], dict],
-    text_key: str = "text",
-    id_key: str = "id",
-) -> List[NormalizedItem]:
-    """Normalize inputs into a list of NormalizedItem.
+def normalize_inputs(items: Sequence[str] | Sequence[Mapping[str, str]] | Mapping[str, str]) -> list[NormalizedText]:
+    if isinstance(items, Mapping):
+        return [NormalizedText(str(key), str(value)) for key, value in items.items()]
 
-    Supports:
-    - list of strings
-    - list of dicts with text_key
-    - dict mapping id -> text
-    """
-
-    normalized: List[NormalizedItem] = []
-
-    if isinstance(items, dict):
-        for k, v in items.items():
-            if not isinstance(v, str):
-                raise ValueError("Dict values must be strings when items is a dict")
-            normalized.append(NormalizedItem(id=str(k), text=v, raw={id_key: k, text_key: v}))
-        return normalized
-
-    for i, item in enumerate(items):
+    normalized: list[NormalizedText] = []
+    for idx, item in enumerate(items):
         if isinstance(item, str):
-            normalized.append(NormalizedItem(id=str(i), text=item, raw=item))
+            normalized.append(NormalizedText(str(idx), item))
             continue
-        if isinstance(item, dict):
-            if text_key not in item:
-                raise ValueError(f"Missing '{text_key}' in item {i}")
-            text = str(item[text_key])
-            item_id = str(item.get(id_key, i))
-            normalized.append(NormalizedItem(id=item_id, text=text, raw=item))
+        if isinstance(item, Mapping):
+            if "text" not in item:
+                raise ValueError("Each mapping must include a 'text' field.")
+            item_id = str(item.get("id", idx))
+            normalized.append(NormalizedText(item_id, str(item["text"])))
             continue
-        raise ValueError(f"Unsupported item type at index {i}: {type(item)}")
-
+        raise TypeError("Items must be strings or mappings with 'text'.")
     return normalized
 
 
-class EmbeddingCache:
-    """SQLite-backed embedding cache keyed by (model_name, text hash)."""
+def _normalize_vectors(vectors: np.ndarray) -> np.ndarray:
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    norms[norms == 0.0] = 1.0
+    return vectors / norms
 
-    def __init__(self, path: str):
-        self.path = path
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        self._conn = sqlite3.connect(path)
+
+def embed_texts(texts: Sequence[str], embed_fn: Callable[[Sequence[str]], np.ndarray], *, normalize: bool) -> np.ndarray:
+    vectors = np.asarray(embed_fn(texts), dtype=np.float32)
+    if vectors.ndim != 2:
+        raise ValueError("Embedding function must return a 2D array.")
+    if normalize:
+        vectors = _normalize_vectors(vectors)
+    return vectors
+
+
+class EmbeddingCache:
+    def __init__(self, path: str) -> None:
+        db_path = Path(path)
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        self._conn = sqlite3.connect(str(db_path))
         self._conn.execute(
             """
             CREATE TABLE IF NOT EXISTS embeddings (
-                key TEXT PRIMARY KEY,
+                model TEXT NOT NULL,
+                text TEXT NOT NULL,
                 dim INTEGER NOT NULL,
                 dtype TEXT NOT NULL,
-                shape TEXT NOT NULL,
-                vec BLOB NOT NULL
+                blob BLOB NOT NULL,
+                PRIMARY KEY (model, text)
             )
             """
         )
         self._conn.commit()
 
-    def _make_key(self, model_name: str, text: str) -> str:
-        h = hashlib.sha256(text.encode("utf-8")).hexdigest()
-        return f"{model_name}:{h}"
-
-    def get(self, model_name: str, text: str) -> np.ndarray | None:
-        key = self._make_key(model_name, text)
-        cur = self._conn.execute(
-            "SELECT dim, dtype, shape, vec FROM embeddings WHERE key = ?", (key,)
-        )
-        row = cur.fetchone()
-        if not row:
+    def get(self, model: str, text: str) -> np.ndarray | None:
+        row = self._conn.execute(
+            "SELECT dim, dtype, blob FROM embeddings WHERE model = ? AND text = ?",
+            (model, text),
+        ).fetchone()
+        if row is None:
             return None
-        _, dtype, shape_json, blob = row
-        shape = tuple(json.loads(shape_json))
-        vec = np.frombuffer(blob, dtype=dtype).reshape(shape)
-        return vec
+        dim, dtype, blob = row
+        vector = np.frombuffer(blob, dtype=np.dtype(dtype))
+        return vector.reshape((dim,))
 
-    def set(self, model_name: str, text: str, vec: np.ndarray) -> None:
-        key = self._make_key(model_name, text)
-        vec = np.asarray(vec, dtype=np.float32)
-        shape = vec.shape
+    def set(self, model: str, text: str, vector: np.ndarray) -> None:
+        arr = np.asarray(vector, dtype=np.float32)
         self._conn.execute(
-            "INSERT OR REPLACE INTO embeddings (key, dim, dtype, shape, vec) VALUES (?, ?, ?, ?, ?)",
-            (key, vec.size, str(vec.dtype), json.dumps(shape), vec.tobytes()),
+            "INSERT OR REPLACE INTO embeddings (model, text, dim, dtype, blob) VALUES (?, ?, ?, ?, ?)",
+            (model, text, arr.shape[0], str(arr.dtype), arr.tobytes()),
         )
         self._conn.commit()
 
@@ -122,82 +92,55 @@ class EmbeddingCache:
         self._conn.close()
 
 
-def default_embedder(model_name: str = "all-MiniLM-L6-v2", device: str | None = None) -> EmbedFn:
-    """Return a sentence-transformers embedder function.
-
-    Requires `sentence-transformers` installed.
-    """
-
-    try:
-        from sentence_transformers import SentenceTransformer
-    except Exception as exc:  # pragma: no cover - import guard
-        raise RuntimeError(
-            "sentence-transformers is required for default_embedder; "
-            "install it or pass a custom embed_fn"
-        ) from exc
-
-    model = SentenceTransformer(model_name, device=device)
-
-    def _embed(texts: Sequence[str]) -> np.ndarray:
-        return np.asarray(model.encode(list(texts), normalize_embeddings=False, show_progress_bar=False))
-
-    return _embed
-
-
-def embed_texts(
-    texts: Sequence[str],
-    embed_fn: EmbedFn,
-    *,
-    normalize: bool = True,
-) -> np.ndarray:
-    """Embed a batch of texts with optional L2 normalization."""
-
-    vecs = np.asarray(embed_fn(texts))
-    if vecs.ndim != 2:
-        raise ValueError("embed_fn must return a 2D array [n, dim]")
-    if normalize:
-        norms = np.linalg.norm(vecs, axis=1, keepdims=True)
-        norms[norms == 0] = 1.0
-        vecs = vecs / norms
-    return vecs
-
-
 def embed_with_cache(
     texts: Sequence[str],
-    embed_fn: EmbedFn,
+    embed_fn: Callable[[Sequence[str]], np.ndarray],
     *,
     model_name: str,
-    cache: EmbeddingCache | None = None,
-    normalize: bool = True,
+    cache: EmbeddingCache | None,
+    normalize: bool,
 ) -> np.ndarray:
-    """Embed texts using cache where possible.
+    cached: list[np.ndarray | None] = []
+    missing: list[str] = []
+    missing_indices: list[int] = []
 
-    If cache is provided, missing vectors are computed via embed_fn and stored.
-    """
-
-    if cache is None:
-        return embed_texts(texts, embed_fn, normalize=normalize)
-
-    vecs: List[np.ndarray] = []
-    missing: List[Tuple[int, str]] = []
-    for i, text in enumerate(texts):
-        cached = cache.get(model_name, text)
-        if cached is None:
-            missing.append((i, text))
-            vecs.append(None)  # type: ignore[arg-type]
-        else:
-            vecs.append(cached)
+    for idx, text in enumerate(texts):
+        if cache is None:
+            cached.append(None)
+            missing.append(text)
+            missing_indices.append(idx)
+            continue
+        hit = cache.get(model_name, text)
+        cached.append(hit)
+        if hit is None:
+            missing.append(text)
+            missing_indices.append(idx)
 
     if missing:
-        miss_texts = [t for _, t in missing]
-        miss_vecs = embed_texts(miss_texts, embed_fn, normalize=False)
-        for (i, text), vec in zip(missing, miss_vecs, strict=False):
-            cache.set(model_name, text, vec)
-            vecs[i] = vec
+        computed = embed_texts(missing, embed_fn, normalize=normalize)
+        for offset, text in enumerate(missing):
+            if cache is not None:
+                cache.set(model_name, text, computed[offset])
+            cached[missing_indices[offset]] = computed[offset]
 
-    vecs_arr = np.vstack(vecs)
-    if normalize:
-        norms = np.linalg.norm(vecs_arr, axis=1, keepdims=True)
-        norms[norms == 0] = 1.0
-        vecs_arr = vecs_arr / norms
-    return vecs_arr
+    result = np.vstack([vec for vec in cached if vec is not None]).astype(np.float32)
+    if result.shape[0] != len(texts):
+        raise RuntimeError("Embedding cache produced an unexpected number of vectors.")
+    return result
+
+
+def default_embedder(model_name: str):
+    try:
+        from sentence_transformers import SentenceTransformer
+    except Exception as exc:
+        raise ImportError(
+            "sentence-transformers is required to embed tags. Install it and retry."
+        ) from exc
+
+    model = SentenceTransformer(model_name)
+
+    def _embed(texts: Sequence[str]) -> np.ndarray:
+        vectors = model.encode(list(texts), normalize_embeddings=False)
+        return np.asarray(vectors, dtype=np.float32)
+
+    return _embed

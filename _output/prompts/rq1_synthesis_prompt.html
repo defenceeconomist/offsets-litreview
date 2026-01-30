@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a053849730e33603d127d953164e18b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-42ed7287b56c5c583e2c2463c9cf4916.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -190,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 <p>You are writing a realist-style evidence synthesis for <strong>Research Question 1 (RQ1)</strong> using ONLY the provided Context–Mechanism–Outcome (CMO) statements.</p>
 <p>RQ1 (MUST USE THIS WORDING) Alliance relevance and mechanisms — Through what mechanisms do offset or industrial participation policies affect alliance-relevant outcomes such as interoperability, standardisation, security of supply, readiness, and the ability to contribute rapidly to NATO operations?</p>
 <p>DEFINITIONS (MUST APPLY) - Context (C): the conditions that shape whether/how the mechanism fires (institutions, procurement regime, alliance setting, industrial base maturity, governance capacity, export-control environment, programme setting). - Mechanism (M): a generative causal process, typically framed as: (policy resource/constraint) + (actors’ reasoning/response) -&gt; causal force - Outcome (O): an observed (or credibly reported) effect. Do not overclaim beyond what the CMO states.</p>
-<p>INPUTS YOU WILL RECEIVE - rq_id: “rq1” - cmo_statements: a list/table of CMO records ALREADY mapped to rq1, with (at minimum) these fields: - cmo_id - source_file - context - mechanism - outcome - context_tags (optional) - mechanism_tags (optional) - outcome_tags (optional) - mechanism_theme_labels (optional; preferred if available) - evidence_type - confidence (low|medium|high) - supporting_evidence_paraphrase</p>
+<p>INPUTS YOU WILL RECEIVE - rq_id: “rq1” - cmo_statements: a list/table of CMO records ALREADY mapped to rq1, with (at minimum) these fields: - cmo_id - source_file - context - mechanism - outcome - context_tags (optional) - mechanism_tags (optional) - outcome_tags (optional) - evidence_type - confidence (low|medium|high) - supporting_evidence_paraphrase</p>
 <p>TASK 1) Triage and scope check - Use ONLY the provided rq1 CMO statements. If none are provided, say so and stop. - Treat <code>confidence</code> and <code>evidence_type</code> as strength-of-evidence signals (do not “vote count”). - Separate what is (a) empirically observed vs (b) conceptual/theoretical vs (c) normative/prescriptive (if evident in wording).</p>
 <ol start="2" type="1">
 <li>Build a mechanism-focused synthesis (RQ1)
@@ -254,33 +254,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Include an R code chunk that reads <code>data/cmo_statements.csv</code>, filters to RQ1 (<code>research_questions_mapped</code> contains <code>rq1</code>), and prints a table of: <code>source_file</code>, <code>cmo_id</code>, <code>country</code>, <code>context_tags</code>, <code>mechanism_tags</code>, <code>outcome_tags</code>, <code>mechanism_theme_labels</code>, <code>supporting_evidence_paraphrase</code>.</li>
 <li>Use exactly this chunk (you may adjust column labels, but do not change the filter logic):</li>
 </ul>
-<pre><code>df &lt;- read.csv("data/cmo_statements.csv", stringsAsFactors = FALSE, na.strings = "")
-rq1 &lt;- df[grepl("(^|;)rq1(;|$)", df[["research_questions_mapped"]]), ]
-
-keep &lt;- rq1[, c(
-  "source_file",
-  "cmo_id",
-  "country",
-  "context_tags",
-  "mechanism_tags",
-  "outcome_tags",
-  "mechanism_theme_labels",
-  "supporting_evidence_paraphrase"
-)]
-
-names(keep) &lt;- c(
-  "Source",
-  "CMO ID",
-  "Country",
-  "Context tags",
-  "Mechanism tags",
-  "Outcome tags",
-  "Theme",
-  "Supporting evidence (paraphrase)"
-)
-
-knitr::kable(keep)</code></pre>
-<p>QUALITY RULES (MUST FOLLOW) - No new facts: do not introduce countries/programmes/outcomes not present in the provided CMOs. - No uncited claims: every substantive claim must cite one or more <code>cmo_id</code>s. - Keep it mechanism-first: contexts and mechanisms drive the structure; do not turn this into a generic literature summary. - Be explicit about evidence limits (e.g., “conceptual/theoretical source”, “low confidence”, “single-case”).</p>
 
 
 </section>

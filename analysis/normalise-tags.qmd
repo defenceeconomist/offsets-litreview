@@ -1,0 +1,34 @@
+---
+title: Normalise tags
+format: html
+---
+
+This notebook runs the `scripts/normalize_tags.py` helper so the Quarto workflow can regenerate
+`cmo/normalised_tags.yml` whenever the source CMO metadata changes.
+
+## Running the normalisation
+
+The default invocation embeds every tag listed under `context_tags`, `mechanism_tags` and
+`outcome_tags` in the `cmo/` directory, groups near-duplicates by cosine similarity, and
+persists the alias map at `cmo/normalised_tags.yml`.
+
+```{python}
+%load_ext autoreload
+%autoreload 2
+
+from scripts.normalize_tags import run_normalise_tags
+run_normalise_tags(cmo_dir="cmo", output="cmo/normalised_tags.yml")
+```
+
+Adjust the `--threshold` argument if you need tighter or looser clustering, and pass
+`--cache-path` when you want to reuse an existing embedding cache.
+
+## Inspecting the generated aliases
+
+After running the script, inspect the file to confirm the tag pairs that were aliased.
+
+```{python}
+from pathlib import Path
+
+print(Path("cmo/normalised_tags.yml").read_text(encoding="utf-8"))
+```

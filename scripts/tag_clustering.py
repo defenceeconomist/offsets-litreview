@@ -1,190 +1,131 @@
-"""Clustering utilities for mechanism tags or other short texts."""
+"""Utilities for clustering and de-duplicating tag labels."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Iterable, List, Sequence, Tuple
+from typing import Callable, Iterable, Sequence
 
 import numpy as np
 
-from tag_embeddings import (
-    EmbeddingCache,
-    NormalizedItem,
-    embed_with_cache,
-    normalize_inputs,
-)
+try:
+    from .tag_embeddings import EmbeddingCache, embed_with_cache
+except ImportError:
+    from tag_embeddings import EmbeddingCache, embed_with_cache
 
 
-@dataclass
+@dataclass(frozen=True)
 class DuplicateGroup:
-    """Group of near-duplicate items."""
-
-    indices: List[int]
-    ids: List[str]
-    texts: List[str]
-
-    @property
-    def representative(self) -> str:
-        return self.texts[0]
+    texts: list[str]
 
 
-def _union_find(n: int):
-    parent = list(range(n))
+@dataclass(frozen=True)
+class TagHierarchy:
+    labels: list[str]
+    order: list[int]
+    linkage: np.ndarray | None = None
 
-    def find(x: int) -> int:
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]
-            x = parent[x]
-        return x
 
-    def union(a: int, b: int) -> None:
-        ra, rb = find(a), find(b)
-        if ra != rb:
-            parent[rb] = ra
+def _cosine_similarity(vectors: np.ndarray) -> np.ndarray:
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    norms[norms == 0.0] = 1.0
+    normalized = vectors / norms
+    return normalized @ normalized.T
 
-    return find, union
+
+def _open_cache(cache_path: str | None) -> EmbeddingCache | None:
+    if cache_path is None:
+        return None
+    return EmbeddingCache(cache_path)
 
 
 def group_near_duplicates(
-    items: Sequence[str] | Sequence[dict] | Dict[str, str],
+    texts: Sequence[str],
     *,
-    embed_fn,
+    embed_fn: Callable[[Sequence[str]], np.ndarray],
     model_name: str,
-    threshold: float = 0.9,
-    cache_path: str | None = ".cache/tag_embeddings.sqlite",
-) -> List[DuplicateGroup]:
-    """Identify and group near-duplicate tags using cosine similarity.
-
-    Returns only groups with size > 1, ordered by size desc.
-    """
-
-    normalized = normalize_inputs(items)
-    texts = [it.text for it in normalized]
-    cache = EmbeddingCache(cache_path) if cache_path else None
-    vecs = embed_with_cache(texts, embed_fn, model_name=model_name, cache=cache, normalize=True)
-    if cache:
-        cache.close()
-
-    n = vecs.shape[0]
-    if n == 0:
+    threshold: float,
+    cache_path: str | None,
+) -> list[DuplicateGroup]:
+    if len(texts) < 2:
         return []
+    cache = _open_cache(cache_path)
+    try:
+        vectors = embed_with_cache(
+            texts,
+            embed_fn,
+            model_name=model_name,
+            cache=cache,
+            normalize=True,
+        )
+    finally:
+        if cache is not None:
+            cache.close()
 
-    # Cosine similarity via dot-product on normalized vectors.
-    sim = vecs @ vecs.T
-    find, union = _union_find(n)
+    sims = _cosine_similarity(vectors)
+    parent = list(range(len(texts)))
 
-    for i in range(n):
-        for j in range(i + 1, n):
-            if sim[i, j] >= threshold:
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i: int, j: int) -> None:
+        ri, rj = find(i), find(j)
+        if ri != rj:
+            parent[rj] = ri
+
+    for i in range(len(texts)):
+        for j in range(i + 1, len(texts)):
+            if sims[i, j] >= threshold:
                 union(i, j)
 
-    groups: Dict[int, List[int]] = {}
-    for i in range(n):
-        root = find(i)
-        groups.setdefault(root, []).append(i)
+    groups: dict[int, list[int]] = {}
+    for idx in range(len(texts)):
+        root = find(idx)
+        groups.setdefault(root, []).append(idx)
 
-    dup_groups: List[DuplicateGroup] = []
-    for idxs in groups.values():
-        if len(idxs) < 2:
+    results: list[DuplicateGroup] = []
+    for indices in groups.values():
+        if len(indices) < 2:
             continue
-        ids = [normalized[i].id for i in idxs]
-        texts = [normalized[i].text for i in idxs]
-        dup_groups.append(DuplicateGroup(indices=idxs, ids=ids, texts=texts))
+        ordered = [texts[i] for i in indices]
+        results.append(DuplicateGroup(texts=ordered))
 
-    dup_groups.sort(key=lambda g: len(g.indices), reverse=True)
-    return dup_groups
-
-
-@dataclass
-class HierarchyResult:
-    linkage_matrix: np.ndarray
-    dendrogram: dict
-    order: List[int]
-    labels: List[str]
+    results.sort(key=lambda group: texts.index(group.texts[0]))
+    return results
 
 
 def build_tag_hierarchy(
-    items: Sequence[str] | Sequence[dict] | Dict[str, str],
+    texts: Sequence[str],
     *,
-    embed_fn,
+    embed_fn: Callable[[Sequence[str]], np.ndarray],
     model_name: str,
-    method: str = "average",
-    metric: str = "cosine",
-    cache_path: str | None = ".cache/tag_embeddings.sqlite",
-) -> HierarchyResult:
-    """Create a hierarchical clustering dendrogram for tags."""
+    cache_path: str | None,
+) -> TagHierarchy:
+    if not texts:
+        return TagHierarchy(labels=[], order=[], linkage=None)
+
+    cache = _open_cache(cache_path)
+    try:
+        vectors = embed_with_cache(
+            texts,
+            embed_fn,
+            model_name=model_name,
+            cache=cache,
+            normalize=True,
+        )
+    finally:
+        if cache is not None:
+            cache.close()
 
     try:
-        from scipy.cluster.hierarchy import dendrogram, linkage
+        from scipy.cluster.hierarchy import linkage, leaves_list
         from scipy.spatial.distance import pdist
-    except Exception as exc:  # pragma: no cover - import guard
-        raise RuntimeError("scipy is required for hierarchical clustering") from exc
+    except Exception as exc:
+        raise RuntimeError("scipy is required to build tag hierarchies.") from exc
 
-    normalized = normalize_inputs(items)
-    texts = [it.text for it in normalized]
-    labels = [it.id for it in normalized]
-
-    cache = EmbeddingCache(cache_path) if cache_path else None
-    vecs = embed_with_cache(texts, embed_fn, model_name=model_name, cache=cache, normalize=True)
-    if cache:
-        cache.close()
-
-    dist = pdist(vecs, metric=metric)
-    linkage_matrix = linkage(dist, method=method)
-    dendro = dendrogram(linkage_matrix, labels=labels, no_plot=True)
-
-    return HierarchyResult(
-        linkage_matrix=linkage_matrix,
-        dendrogram=dendro,
-        order=list(dendro["leaves"]),
-        labels=labels,
-    )
-
-
-if __name__ == "__main__":
-    import argparse
-    import csv
-    import json
-    from pathlib import Path
-
-    from tag_embeddings import default_embedder
-
-    def load_items(path: str) -> List[str]:
-        p = Path(path)
-        if p.suffix == ".json":
-            with p.open("r", encoding="utf-8") as f:
-                data = json.load(f)
-            if isinstance(data, list):
-                return [str(x) for x in data]
-            if isinstance(data, dict):
-                return [str(v) for v in data.values()]
-            raise ValueError("Unsupported JSON structure")
-        if p.suffix in {".csv", ".tsv"}:
-            delim = "," if p.suffix == ".csv" else "\t"
-            with p.open("r", encoding="utf-8") as f:
-                reader = csv.reader(f, delimiter=delim)
-                rows = list(reader)
-            return [r[0] for r in rows if r]
-        return [line.strip() for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
-
-    parser = argparse.ArgumentParser(description="Embed and cluster mechanism tags.")
-    parser.add_argument("--input", required=True, help="Path to txt/csv/json of tags (one per line or list)")
-    parser.add_argument("--model", default="all-MiniLM-L6-v2")
-    parser.add_argument("--threshold", type=float, default=0.9)
-    parser.add_argument("--hierarchy", action="store_true")
-    args = parser.parse_args()
-
-    tags = load_items(args.input)
-    embed_fn = default_embedder(args.model)
-
-    dupes = group_near_duplicates(
-        tags, embed_fn=embed_fn, model_name=args.model, threshold=args.threshold
-    )
-
-    print("Near-duplicate groups:")
-    for group in dupes:
-        print("-", " | ".join(group.texts))
-
-    if args.hierarchy:
-        result = build_tag_hierarchy(tags, embed_fn=embed_fn, model_name=args.model)
-        print("\nDendrogram order (indices):", result.order)
+    distances = pdist(vectors, metric="cosine")
+    linkage_matrix = linkage(distances, method="average")
+    order = leaves_list(linkage_matrix).tolist()
+    return TagHierarchy(labels=list(texts), order=order, linkage=linkage_matrix)

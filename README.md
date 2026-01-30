@@ -26,7 +26,7 @@ This project follows a realist evidence synthesis workflow to extract, de-duplic
 
 ### 5) Synthesize against research questions
 - Map clustered mechanisms and CMO statements to the research questions.
-- Produce narrative and tabular synthesis outputs (e.g., `report.qmd`, `synthesis/rq1.qmd`).
+- Produce narrative and tabular synthesis outputs (e.g., `pages/report.qmd`, `synthesis/rq1.qmd`).
 
 ## Suggested Command Flow
 

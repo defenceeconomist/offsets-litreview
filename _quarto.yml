@@ -16,9 +16,13 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Report"
-        href: report.qmd
+        href: pages/report.qmd
       - text: "CMO Explorer"
-        href: explorer.qmd
+        href: pages/explorer.qmd
+      - section: "Methods"
+        contents:
+        - analysis/normalise-tags.qmd
+        - analysis/tag-dendrograms.qmd
       - section: "Synthesis"
         contents:
         - auto: "synthesis/**.qmd"

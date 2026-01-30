@@ -1,0 +1,101 @@
+---
+title: Tag dendrograms
+format: html
+---
+
+This notebook visualises dendrograms for context, mechanism, and outcome tags
+from the `cmo/` directory.
+
+## Setup
+
+```{python}
+%load_ext autoreload
+%autoreload 2
+
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import yaml
+
+from scripts.normalize_tags import _load_tags_from_cmo
+from scripts.tag_clustering import build_tag_hierarchy
+from scripts.tag_embeddings import default_embedder
+
+try:
+    import scipy  # noqa: F401
+except Exception as exc:
+    raise RuntimeError("scipy is required to render dendrograms.") from exc
+```
+
+## Build tag lists
+
+```{python}
+counts_by_field = _load_tags_from_cmo(Path("cmo"))
+
+alias_path = Path("cmo/normalised_tags.yml")
+alias_payload = yaml.safe_load(alias_path.read_text(encoding="utf-8")) if alias_path.exists() else {}
+aliases_by_field = alias_payload.get("aliases", {}) if isinstance(alias_payload, dict) else {}
+
+def apply_aliases(field: str, tags: list[str]) -> list[str]:
+    aliases = aliases_by_field.get(field, {}) if isinstance(aliases_by_field, dict) else {}
+    normalized = [aliases.get(tag, tag) for tag in tags]
+    return sorted({tag for tag in normalized if tag})
+
+tags_by_field = {
+    field: apply_aliases(field, sorted(counter.keys()))
+    for field, counter in counts_by_field.items()
+}
+
+MODEL = "all-MiniLM-L6-v2"
+CACHE_PATH = ".cache/tag_embeddings.sqlite"
+embed_fn = default_embedder(MODEL)
+```
+
+## Plotting helper
+
+```{python}
+def plot_dendrogram(title: str, tags: list[str]) -> None:
+    if len(tags) < 2:
+        print(f"Skipping {title}: need at least 2 tags.")
+        return
+
+    hierarchy = build_tag_hierarchy(
+        tags,
+        embed_fn=embed_fn,
+        model_name=MODEL,
+        cache_path=CACHE_PATH,
+    )
+
+    from scipy.cluster.hierarchy import dendrogram
+
+    fig_height = max(4, 0.25 * len(tags))
+    fig, ax = plt.subplots(figsize=(10, fig_height))
+    dendrogram(
+        hierarchy.linkage,
+        labels=tags,
+        orientation="right",
+        ax=ax,
+    )
+    ax.set_title(title)
+    ax.set_xlabel("Cosine distance")
+    ax.grid(axis="x", linestyle="--", alpha=0.3)
+    plt.tight_layout()
+```
+
+## Context tags
+
+```{python}
+plot_dendrogram("Context tags", tags_by_field.get("context_tags", []))
+```
+
+## Mechanism tags
+
+```{python}
+plot_dendrogram("Mechanism tags", tags_by_field.get("mechanism_tags", []))
+```
+
+## Outcome tags
+
+```{python}
+plot_dendrogram("Outcome tags", tags_by_field.get("outcome_tags", []))
+```
