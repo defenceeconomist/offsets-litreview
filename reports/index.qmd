@@ -1,0 +1,39 @@
+# OFFSETS Literature Review
+
+A realist evidence synthesis and comparative case mapping of defence offsets/industrial participation policies, with a focus on alliance-relevant outcomes (e.g., interoperability, readiness, security of supply) and the conditions under which offsets help or hinder strategic partnerships.
+
+## Aims
+
+- Explain how offset and industrial participation policies interact with NATO-aligned defence priorities.
+- Identify mechanisms and conditions that lead to durable industrial collaboration with allies and partners.
+- Surface recurring risks (e.g., cost inflation, governance/opacity, corruption, export-control friction) and mitigation approaches.
+- Map comparative country cases that demonstrate positive, negative, or mixed outcomes under different offset regimes.
+
+## Research Questions
+
+1. Under what contexts do offsets/industrial participation mechanisms enable alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability)?
+2. Which mechanisms systematically hinder those outcomes, and through what governance or market conditions?
+3. How do policy design choices (mandatory vs. voluntary, direct vs. indirect, transparency/enforcement) shape collaboration depth and risk profiles across cases?
+4. How can each pathway be summarized with enabling/limiting conditions and alliance-relevant outcomes?
+5. What recurrent pathways can be mapped across countries to explain positive, negative, or mixed outcomes?
+
+## Method
+
+- **Realist evidence synthesis (CMO):** Extracts Context-Mechanism-Outcome configurations from sources, then clusters mechanism tags into a small set of pathways (themes) to explain what works, for whom, and under what conditions; thematic summaries link pathways to alliance-relevant outcomes and enabling or constraining contexts.
+- **Comparative case mapping:** Uses a consistent rubric to compare countries and programmes on policy design, depth of collaboration, alliance integration markers, and documented risks.
+- **Two-lane search strategy:** Parallel searches for (1) offsets/industrial participation literature and (2) alliance-relevant industrial cooperation/interoperability literature to avoid terminology gaps.
+- **Evidence mix:** Academic literature plus targeted grey literature (government policy, audits, NATO/EU material, and governance analyses).
+
+In practice, the realist synthesis proceeds by extracting discrete CMO statements from each source, tagging contexts, mechanisms, and outcomes, and then grouping mechanisms into a small number of thematic pathways. Those pathways are summarized against alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability) and the contextual conditions that enable or constrain them. The mechanism map provides a traceable bridge from individual CMO records to thematic findings.
+
+**CMO workflow (short):**
+1. Extract CMO statements from sources and record context, mechanism, and outcome tags.
+2. Normalize tags and consolidate CMO records across sources.
+3. Cluster mechanism tags into pathway themes (mechanism map).
+4. Summarize each pathway with enabling/limiting conditions and alliance-relevant outcomes.
+5. Trace claims back to source CMO records for verification.
+
+**How the research questions are answered (outputs):**
+- **RQ1 (enabling contexts):** pathway briefs that link *typical contexts* to alliance-relevant outcomes; cross-case notes on when those contexts recur.
+- **RQ2 (hindering mechanisms):** pathway failure modes plus governance/market conditions (e.g., opacity, politicised workshare, export-control constraints) and any mitigating conditions.
+- **RQ3 (policy design choices):** case mapping against a common rubric (mandatory/voluntary; direct/indirect; transparency/enforcement) and comparison of collaboration depth, alliance markers, and risk profiles.

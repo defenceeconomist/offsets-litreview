@@ -1,0 +1,43 @@
+---
+title: What is a Prisma Diagram
+---
+
+A PRISMA diagram is a flow diagram used in systematic reviews and meta-analyses to show how studies were identified, screened, and selected for inclusion.
+
+It comes from the [PRISMA Statement](https://www.prisma-statement.org/) (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) and is mainly about transparency — letting readers see exactly what happened to all the studies you found.
+
+
+![Image](https://images.prismic.io/aje-cms-production/6acfeb14-dcda-4586-ae7d-dae01bab7086_prisma-flow-diagram-example.jpg?auto=compress%2Cformat\&h=1748\&rect=2%2C0%2C4497%2C3494\&w=2250)
+
+**What the diagram shows (step by step)**
+
+Typically, a PRISMA diagram tracks studies through four stages:
+
+1. **Identification**
+
+   * Records found through database searches
+   * Records found through other sources (e.g. references, grey literature)
+
+2. **Screening**
+
+   * Records after duplicates removed
+   * Records screened by title and abstract
+   * Records excluded at this stage
+
+3. **Eligibility**
+
+   * Full-text articles assessed
+   * Full-text articles excluded (with reasons)
+
+4. **Included**
+
+   * Studies included in the qualitative synthesis
+   * Studies included in the quantitative synthesis (meta-analysis), if applicable
+
+**Why it matters**
+
+* Makes the review **reproducible**
+* Shows **potential bias** or subjectivity in study selection
+* Required or strongly encouraged by most **academic journals**
+* Helps readers quickly judge the **rigour** of the review
+

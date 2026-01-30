@@ -1,0 +1,290 @@
+01-introduction-and-overview.pdf:
+  cmos:
+    01_introduction_and_overview_pdf__cmo_001:
+      context: "Defence budgets are constrained and unemployment pressures rise, making indigenous development costly and politically difficult."
+      mechanism: "To reconcile cheaper imports with domestic economic expectations, purchasers impose offset obligations that compel foreign vendors (and subcontractors) to place additional purchases/investment in the buyer’s economy."
+      outcome: "Imports proceed while some domestic employment/industrial activity is generated via vendor-directed purchases beyond the core contract."
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: other
+      evidence_type_narrative: "Introductory academic book chapter defining offsets and summarising cross-country themes and chapter findings, rather than presenting a new single-country dataset."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "As defence budgets have been cut and unemployment has risen, purchasers have sought a less costly form of procurement."
+      supporting_evidence_paraphrase: "The chapter links budget pressure and unemployment concerns to a turn toward offset-style arrangements as a lower-cost alternative to indigenous production while still generating domestic work."
+      confidence: high
+      confidence_justification: "The text explicitly states the contextual drivers (budget cuts/unemployment) and the resulting procurement shift toward offsets."
+    01_introduction_and_overview_pdf__cmo_002:
+      context: "The purchasing country’s industrial base is relatively small and underdeveloped, limiting the feasible volume of domestic sourcing."
+      mechanism: "Because vendors cannot readily meet offset obligations through local purchasing, offset packages pivot toward inward investment and joint-venture style commitments to satisfy obligations and inject capability."
+      outcome: "Offset compliance relies more on inward investment than on direct local procurement of goods and services."
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: other
+      evidence_type_narrative: "Introductory academic synthesis that describes common offset modalities across countries and procurement types."
+      research_questions_mapped:
+        - rq2
+      supporting_evidence: "If the industrial base in the country purchasing the equipment is relatively small and underdeveloped, there may be few goods that can be purchased and thus inward investment might constitute the major component."
+      supporting_evidence_paraphrase: "The author argues that weak domestic supplier capacity changes how offsets are implemented: investment substitutes for local purchasing when the latter is not feasible."
+      confidence: high
+      confidence_justification: "The passage directly links a specific context (underdeveloped industrial base) to a specific shift in offset implementation (inward investment)."
+    01_introduction_and_overview_pdf__cmo_003:
+      context: "Offsets are commercially sensitive and politically contentious, and key actors in government and industry hold vested interests."
+      mechanism: "Limited disclosure and strategic presentation of claims by interested parties reduces data availability and impedes independent assessment."
+      outcome: "Economic evaluation of offset programmes is rare and analysts struggle to separate reliable effects from advocacy."
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: other
+      evidence_type_narrative: "Conceptual/overview chapter describing why systematic evidence on offsets is limited, based on observed constraints in accessing information."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "offsets are big business and are thus commercially sensitive."
+      supporting_evidence_paraphrase: "The author highlights confidentiality and political sensitivity as barriers to routine publication and credible evaluation, implying limited transparency as the causal pathway."
+      confidence: medium
+      confidence_justification: "The text explicitly states sensitivity and data scarcity, but the mechanism of nondisclosure is inferred from those stated constraints."
+    01_introduction_and_overview_pdf__cmo_004:
+      context: "Indirect offsets are treated as a discretionary policy instrument, with alternative domestic-content arrangements available."
+      mechanism: "Once policymakers recognise indirect offsets impose real costs and weak performance, they demote indirect offsets to a fallback while shifting emphasis to direct local-content requirements."
+      outcome: "Indirect offsets are downplayed while local content (direct offset) expands as the main industrial participation lever."
+      programme: unknown_programme
+      country: australia
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter summarising an Australian chapter’s argument about policy change from indirect offsets toward local content."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "(indirect) offsets are not costless;"
+      supporting_evidence_paraphrase: "In summarising Chapter 3, the author reports the argument that indirect offsets carry costs and limited success, motivating policy changes that relegate indirect offsets to \"last resort\" status while local content grows."
+      confidence: medium
+      confidence_justification: "This is a second-hand summary of another chapter’s findings rather than primary evidence in this chapter."
+    01_introduction_and_overview_pdf__cmo_005:
+      context: "Security considerations are relatively muted in defence-industrial deliberations due to an implicit expectation of external protection."
+      mechanism: "Procurement choices prioritise industrial/economic benefits (including offsets/IRBs) over strictly military performance when security pressures are perceived as lower."
+      outcome: "Economic/technological gains and employment benefits are reported alongside reduced military capability."
+      programme: unknown_programme
+      country: canada
+      evidence_type: other
+      evidence_type_narrative: "Introductory synthesis relaying a Canada case argument about how perceived security shelter shifts decision priorities toward economic benefits."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "offsets have served to improve Canada's technological capability and unemployment record but at the cost of its military capability."
+      supporting_evidence_paraphrase: "The chapter claims that where security is not central in decision-making, offsets/industrial benefits can be pursued in ways that help jobs and technology outcomes while harming military capability."
+      confidence: medium
+      confidence_justification: "The outcome trade-off is stated explicitly, but the underlying causal pathway is summarised at a high level without detailed supporting data here."
+    01_introduction_and_overview_pdf__cmo_006:
+      context: "Regional political imperatives intersect with an already over-capacity defence industry."
+      mechanism: "Offset obligations steer work to politically prioritised regions and firms, sustaining inefficient producers and discouraging rationalisation by masking underlying industrial weaknesses."
+      outcome: "Short-term maintenance of the industrial base occurs, but budget purchasing power falls and future procurement choices become constrained by dependence on offset work."
+      programme: unknown_programme
+      country: belgium
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter summarising a Belgian case argument about regional politics, overcapacity, and the economic distortions created by offsets."
+      research_questions_mapped:
+        - rq3
+        - rq5
+      supporting_evidence: "offsets, far from encouraging rationalisation, have served to keep inefficient producers in business"
+      supporting_evidence_paraphrase: "The author reports that Belgian offsets can preserve inefficient capacity for political reasons, with downstream effects including higher costs and constrained procurement due to industrial dependence."
+      confidence: medium
+      confidence_justification: "The mechanism and outcomes are clearly articulated as an argument attributed to a specific chapter, but not evidenced with detailed data in this overview."
+    01_introduction_and_overview_pdf__cmo_007:
+      context: "Offsets are used at large financial scale, but their practical employment/industrial impact may be modest in some cases."
+      mechanism: "Vendors incorporate the expected cost premium of offset obligations into bid prices, raising acquisition costs relative to an equivalent off-the-shelf purchase."
+      outcome: "Purchases with offsets cost more than comparable non-offset buys, strengthening the case for documenting benefits and evaluating cost-effectiveness."
+      programme: unknown_programme
+      country: united_kingdom
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter referencing survey-based findings (from another chapter) about the cost and scale of offset impacts for the UK."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "the survey evidence suggests that offsets do cost more than an equivalent off-the-shelf purchase"
+      supporting_evidence_paraphrase: "In summarising survey results, the author notes that offsets carry a price premium that vendors try to embed in the selling price, implying higher acquisition costs."
+      confidence: medium
+      confidence_justification: "The price-premium claim is explicit but presented as a summary of survey evidence without the underlying tables/methods in this chapter."
+    01_introduction_and_overview_pdf__cmo_008:
+      context: "The domestic industrial base is too small to absorb offset work through local purchasing, and prior defence-focused offset facilities lacked sufficient demand."
+      mechanism: "Offset policy is oriented toward international joint ventures (with equity/capital and facilitation by offset-obligated firms) in non-defence sectors where market demand and growth prospects are stronger."
+      outcome: "Offset implementation shifts away from defence MRO facilities toward diversified joint ventures aimed at long-term commercial viability and technology introduction."
+      programme: peace_shield_offset
+      country: saudi_arabia
+      evidence_type: other
+      evidence_type_narrative: "Introductory synthesis describing a Saudi case argument about using offsets as industrial policy via joint ventures rather than direct defence-sector work."
+      research_questions_mapped:
+        - rq2
+        - rq3
+      supporting_evidence: "the Saudi industrial base is simply too small to absorb the required amount of work."
+      supporting_evidence_paraphrase: "The author states that limited domestic absorptive capacity pushes Saudi offset policy toward joint ventures and away from defence-specific facilities when those facilities cannot secure enough follow-on work."
+      confidence: high
+      confidence_justification: "The chapter explicitly states the constraint (small industrial base) and describes the policy shift and its rationale in concrete terms."
+    01_introduction_and_overview_pdf__cmo_009:
+      context: "A state prioritises control over its technological destiny and values security of supply enough to accept higher costs."
+      mechanism: "Offsets are implemented as licensed production, transferring know-how and embedding domestic capabilities despite a recognised price premium."
+      outcome: "A strong, technologically advanced, and more self-reliant defence industrial base develops alongside improved security of supply."
+      programme: unknown_programme
+      country: japan
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter summarising the Japan case theme that licensed production offsets are used to build durable domestic capability and security of supply."
+      research_questions_mapped:
+        - rq1
+        - rq2
+        - rq3
+      supporting_evidence: "Japan required a local ability to research, innovate, design and manufacture. Hence offsets have taken the form of licensed production."
+      supporting_evidence_paraphrase: "The author links Japan’s strategic preference for indigenous technological capacity to the choice of licensed production as the offset modality, with outcomes framed as self-reliance and security of supply."
+      confidence: high
+      confidence_justification: "The causal linkage between Japan’s objective and the chosen offset form is stated directly, along with the claimed outcome trajectory."
+    01_introduction_and_overview_pdf__cmo_010:
+      context: "A major exporter weighs alliance/security considerations and commercial incentives when deciding whether to approve technology-transfer offsets."
+      mechanism: "Technology transfer is tolerated because exporters gain royalties, strengthen allies against threats, and avoid losing sales to competitor suppliers if licences are denied."
+      outcome: "Licensing/technology transfer proceeds despite the risk of creating future competitors."
+      programme: unknown_programme
+      country: united_states
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter relaying a US-focused argument about why technology transfer via offsets can be strategically and commercially rational."
+      research_questions_mapped:
+        - rq1
+        - rq3
+      supporting_evidence: "US firms receive substantial royalty payments. Second, such transfers improve the strength of an ally against any potential Soviet threat."
+      supporting_evidence_paraphrase: "The author lists commercial and alliance-security motives as the reasons the US accepted technology-transfer offsets even though they can create competitors."
+      confidence: medium
+      confidence_justification: "Motivations are explicitly enumerated, but the overview does not provide supporting empirical detail beyond attribution to another chapter."
+    01_introduction_and_overview_pdf__cmo_011:
+      context: "Reduced US forward presence after the Nixon doctrine and territorial-security concerns drive demand for indigenous defence-industrial capacity in allies."
+      mechanism: "Arms sales paired with technology-transfer offsets build local capacity and simultaneously serve as a tool to reinforce diplomatic and military ties."
+      outcome: "Offset-driven capacity-building occurs, but the extent to which recipients can exploit transferred technologies depends on their starting technology level and human-resource constraints."
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter summarising South Korea/Taiwan arguments about technology-transfer offsets under shifting US security posture."
+      research_questions_mapped:
+        - rq1
+        - rq2
+        - rq3
+      supporting_evidence: "both countries sought to develop an indigenous defence industrial capacity which was seen as essential to guarantee their territorial integrity."
+      supporting_evidence_paraphrase: "The chapter ties a changed US security posture to indigenous-capacity goals pursued via technology-transfer offsets, while noting recipient-side constraints may limit outcomes relative to Japan."
+      confidence: medium
+      confidence_justification: "The security driver and mechanism are stated, but the capability-limitation claim is qualitative and summarised without detailed evidence here."
+    01_introduction_and_overview_pdf__cmo_012:
+      context: "High domestic unemployment and limited access to international co-operation fora make large foreign defence purchases politically and industrially challenging."
+      mechanism: "Offsets are used to redirect some procurement-related value toward domestic industrial/technological upgrading and to improve political acceptability; purchasers may pay a premium to place work locally."
+      outcome: "Offset policy supports domestic industrial/technology priorities and reduces political resistance to major foreign buys."
+      programme: f_18_offset
+      country: spain
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter summarising the Spanish case narrative around offsets used for industrial upgrading and political acceptability."
+      research_questions_mapped:
+        - rq2
+        - rq3
+      supporting_evidence: "The objective for the offset was to improve the industrial and technological base... and to increase the political acceptability"
+      supporting_evidence_paraphrase: "The author reports that Spain used offsets to make a large foreign purchase more politically acceptable during high unemployment while pursuing defence-industrial upgrading goals."
+      confidence: medium
+      confidence_justification: "The stated objectives and context are explicit, but the chapter provides limited direct evidence about realised outcomes."
+    01_introduction_and_overview_pdf__cmo_013:
+      context: "Offsets are negotiated after procurement decisions, creating administrative burdens (screening projects and valuing offset credit) and exposure to macroeconomic conditions that hinder offset fulfilment."
+      mechanism: "Moving to joint development/production defines industrial tasks earlier and reduces the need to administer offset applications, making participation more predictable for domestic industry."
+      outcome: "Policy shifts away from offsets toward joint development/production to reduce implementation frictions while preserving industrial participation volume."
+      programme: av_8b_harrier_modernisation
+      country: spain
+      evidence_type: other
+      evidence_type_narrative: "Introductory synthesis recounting a Spain case claim about administrative frictions in offset execution prompting a shift to joint development."
+      research_questions_mapped:
+        - rq2
+        - rq3
+      supporting_evidence: "joint development and production allows the tasks that Spanish industry will undertake to be defined in advance"
+      supporting_evidence_paraphrase: "The chapter contrasts offsets (agreed after a buy decision and requiring intensive administration) with joint development, where workshare is set earlier and oversight burdens fall, motivating a policy change."
+      confidence: medium
+      confidence_justification: "The rationale for the shift is stated directly, but detailed comparative evidence about outcomes is not presented in this overview."
+    01_introduction_and_overview_pdf__cmo_014:
+      context: "Vendors’ incentives to place work may drop once an offset obligation is fulfilled, limiting long-term knowledge transfer."
+      mechanism: "Equity participation aligns incentives by tying foreign partners to the domestic firm’s profitability, increasing willingness to share technological and marketing skills beyond a one-off obligation."
+      outcome: "Industrial collaboration is expected to become more durable and capability-relevant than under purely obligation-driven offset placements."
+      programme: unknown_programme
+      country: spain
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter relaying a mechanism claim that equity ties can strengthen incentives for sustained collaboration compared with traditional offsets."
+      research_questions_mapped:
+        - rq2
+      supporting_evidence: "with an equity interest in the profitability of the Spanish partner, the foreign company will be more willing to share its technological and marketing skills."
+      supporting_evidence_paraphrase: "The author suggests that shifting from offset obligations to equity-linked partnerships changes partner incentives, promoting longer-term cooperation and skill transfer."
+      confidence: medium
+      confidence_justification: "The incentive mechanism is explicitly described, but the outcome is framed as a hoped-for effect rather than demonstrated here."
+    01_introduction_and_overview_pdf__cmo_015:
+      context: "Defence budgets are cut and suppliers compete for fewer and smaller orders in an international armaments market."
+      mechanism: "Suppliers use offset packages as a competitive differentiator that can tip purchasing decisions when core product offerings are otherwise comparable."
+      outcome: "Offsets become more prominent and can be decisive in determining which product is purchased."
+      programme: unknown_programme
+      country: multi_country
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter summarising a market-level argument (attributed to another chapter) about offsets as a competitive tool under budget pressure."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "offsets have become an important competitive tool in the armaments market"
+      supporting_evidence_paraphrase: "The chapter reports that as orders shrink, offset packages increasingly function as part of competition and can determine procurement outcomes."
+      confidence: medium
+      confidence_justification: "The claim is explicit but presented as a high-level conclusion without deal-by-deal evidence in this chapter."
+    01_introduction_and_overview_pdf__cmo_016:
+      context: "Licensed production of foreign designs becomes prohibitively expensive for the purchaser."
+      mechanism: "Direct/indirect offsets are adopted as a cheaper alternative that still channels compensatory work to the domestic defence industrial base."
+      outcome: "The purchaser acquires the needed platform while providing some compensation/support to domestic industry without full domestic production."
+      programme: swiss_f_5_purchase
+      country: switzerland
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter summarising a Swiss case narrative about substituting offsets for costly licensed production."
+      research_questions_mapped:
+        - rq2
+        - rq3
+      supporting_evidence: "Direct and indirect offsets offered the opportunity to buy the aircraft required and at the same time to compensate the defence industrial base"
+      supporting_evidence_paraphrase: "The author explains that when licensed production was too costly, Switzerland used offsets as a compromise to secure imports while still supporting domestic firms."
+      confidence: high
+      confidence_justification: "The passage directly states the cost context and the intended compensatory role of offsets in the Swiss F-5 case."
+    01_introduction_and_overview_pdf__cmo_017:
+      context: "Offset obligations can be met over time and firms can sometimes bank offset credit, creating incentives beyond the immediate contract window."
+      mechanism: "When post-obligation purchases can be credited as banked offset, vendors continue placing work to build credit for future obligations."
+      outcome: "Purchases/work placements may continue after formal fulfilment, extending relationships but also potentially decoupling activity from current procurement needs."
+      programme: swiss_f_5_purchase
+      country: switzerland
+      evidence_type: other
+      evidence_type_narrative: "Introductory chapter highlighting an implementation feature (banking offset credit) that can shape vendor behaviour across procurements."
+      research_questions_mapped:
+        - rq2
+        - rq3
+      supporting_evidence: "such purchases could be banked as offset credit."
+      supporting_evidence_paraphrase: "The chapter notes that vendors kept placing work after obligations were met partly because those purchases could be counted as offset credit, implying intertemporal incentive effects."
+      confidence: medium
+      confidence_justification: "The banking-credit claim is explicit, but downstream effects on relationship durability are an inference from the described incentive."
+    01_introduction_and_overview_pdf__cmo_018:
+      context: "Exporters face strong competitive pressure in foreign markets, while unilateral domestic restrictions do not bind competing suppliers in other countries."
+      mechanism: "If one exporter limits offset offerings, purchasers shift to alternative suppliers; thus firms offer offsets while simultaneously downplaying domestic harms to policymakers."
+      outcome: "Offsets persist over time despite political efforts to curtail them, and attempts at unilateral limitation are ineffective."
+      programme: unknown_programme
+      country: united_states
+      evidence_type: other
+      evidence_type_narrative: "Overview chapter summarising a US policy argument about why offsets persist under international competition."
+      research_questions_mapped:
+        - rq3
+      supporting_evidence: "purchasers would simply take their custom to other manufacturers whose governments impose no such limits on outgoing offsets."
+      supporting_evidence_paraphrase: "The author argues that international competition makes unilateral limits futile because buyers can switch suppliers, sustaining offsets as a continuing feature of arms trade."
+      confidence: high
+      confidence_justification: "The passage explicitly states the competitive mechanism (customer switching) and the persistence implication."
+  v_and_v_log:
+    - check: completeness_all_relevant_cmos
+      status: warn
+      note: "Extracted the main distinct causal claims about why offsets are used and their economic/industrial effects; this chapter is an overview and may contain additional minor implied CMOs in chapter summaries."
+    - check: evidence_traceability
+      status: pass
+      note: "Each CMO includes a short direct quote traceable to the chapter text; where effects are inferred beyond the quote, confidence is reduced and paraphrase notes the inference."
+    - check: context_is_condition
+      status: pass
+      note: "Contexts are stated as conditions (budget pressure, industrial-base maturity, political constraints, market competition) rather than activities."
+    - check: mechanism_is_causal
+      status: warn
+      note: "Mechanisms are expressed as incentives/constraints shaping actor behaviour; several are high-level because the chapter summarises other chapters rather than presenting full causal process detail."
+    - check: outcome_is_effect
+      status: pass
+      note: "Outcomes are framed as effects (cost premiums, industrial capability changes, shifts in policy instruments) and avoid restating activities as outcomes."
+    - check: snake_case_fields
+      status: pass
+      note: "programme and country fields use snake_case values, including unknown_programme and multi_country where appropriate."
+    - check: quote_length
+      status: pass
+      note: "Supporting quotes are kept short (targeting <= ~25 words)."
+    - check: inference_flagged
+      status: pass
+      note: "Where the quote supports only part of the CMO, the paraphrase explicitly notes implied pathways and confidence is set to medium."
