@@ -1,0 +1,162 @@
+---
+title: Outcome topic model
+format: html
+---
+
+This notebook runs the BERTopic workflow over CMO outcome fields and then summarizes the
+topics with simple tables and charts.
+
+## Run the topic model
+
+This cell trains BERTopic in-notebook so the model, outcomes, and embeddings are available
+for downstream visualizations. It also writes outputs into `analysis/outcome_topics/`.
+
+```{python}
+import json
+from pathlib import Path
+
+from scripts.outcome_topic_model import load_outcomes, _build_topic_model
+
+input_paths = [
+    Path("cmo/arms_trade_offsets_chapters.yml"),
+    Path("cmo/articles.yml"),
+]
+records = load_outcomes(input_paths)
+outcomes = [record["outcome"] for record in records]
+
+topic_model = _build_topic_model(
+    min_topic_size=3,
+    embedding_model=None,
+    verbose=False,
+)
+topics, probs = topic_model.fit_transform(outcomes)
+
+output_dir = Path("analysis/outcome_topics")
+output_dir.mkdir(parents=True, exist_ok=True)
+topic_info = topic_model.get_topic_info()
+doc_info = topic_model.get_document_info(outcomes)
+doc_info["source_file"] = [record["source_file"] for record in records]
+doc_info["doc_id"] = [record["doc_id"] for record in records]
+doc_info["cmo_id"] = [record["cmo_id"] for record in records]
+doc_info["outcome"] = outcomes
+
+topic_info_path = output_dir / "topic_info.csv"
+doc_info_path = output_dir / "document_info.csv"
+topic_info.to_csv(topic_info_path, index=False)
+doc_info.to_csv(doc_info_path, index=False)
+
+topic_terms = {
+    str(topic_id): topic_model.get_topic(topic_id) for topic_id in topic_info["Topic"]
+}
+topics_path = output_dir / "topic_terms.json"
+topics_path.write_text(
+    json.dumps(topic_terms, indent=2, ensure_ascii=True),
+    encoding="utf-8",
+)
+
+print(f"Loaded {len(outcomes)} outcome statements.")
+print(f"Wrote {topic_info_path} and {doc_info_path}.")
+print(f"Wrote {topics_path}.")
+```
+
+## Inspect topic summaries
+
+```{python}
+import csv
+from pathlib import Path
+
+topic_info_path = Path("analysis/outcome_topics/topic_info.csv")
+
+with topic_info_path.open("r", encoding="utf-8") as handle:
+    reader = csv.DictReader(handle)
+    topics = list(reader)
+
+print(f"Loaded {len(topics)} topics.")
+for row in topics:
+    print(f"Topic {row['Topic']}: {row['Name']} (count={row['Count']})")
+```
+
+## Top terms per topic
+
+```{python}
+import json
+
+terms_path = Path("analysis/outcome_topics/topic_terms.json")
+terms = json.loads(terms_path.read_text(encoding="utf-8"))
+
+for topic_id, words in terms.items():
+    top_words = ", ".join(word for word, _ in (words or [])[:8])
+    print(f"Topic {topic_id}: {top_words}")
+```
+
+## Visualize topic sizes
+
+```{python}
+import matplotlib.pyplot as plt
+
+def _as_int(value):
+    try:
+        return int(value)
+    except Exception:
+        return 0
+
+sorted_topics = sorted(
+    topics,
+    key=lambda row: _as_int(row.get("Count")),
+    reverse=True,
+)
+top_n = 15
+top_topics = sorted_topics[:top_n]
+
+labels = [f"T{row['Topic']}" for row in top_topics]
+counts = [_as_int(row.get("Count")) for row in top_topics]
+
+fig, ax = plt.subplots(figsize=(10, 4))
+ax.bar(labels, counts, color="#3B6EA8")
+ax.set_title("Top topic sizes (outcome fields)")
+ax.set_xlabel("Topic")
+ax.set_ylabel("Document count")
+ax.set_ylim(0, max(counts) + 1 if counts else 1)
+plt.tight_layout()
+plt.show()
+```
+
+## Visualize document topics (UMAP)
+
+```{python}
+from umap import UMAP
+
+try:
+    embeddings = topic_model._extract_embeddings(outcomes, method="document")
+except Exception:
+    embeddings = topic_model.embedding_model.embed_documents(outcomes)
+
+reduced_embeddings = UMAP(
+    n_neighbors=10,
+    n_components=2,
+    min_dist=0.0,
+    metric="cosine",
+).fit_transform(embeddings)
+
+topic_model.visualize_document_datamap(outcomes, reduced_embeddings=reduced_embeddings, interactive=True) 
+```
+
+
+## Hierarchy
+
+```{python}
+hierarchical_topics = topic_model.hierarchical_topics(outcomes)
+topic_model.visualize_hierarchy(hierarchical_topics=hierarchical_topics)
+```
+## Inspect outcome assignments
+
+```{python}
+doc_info_path = Path("analysis/outcome_topics/document_info.csv")
+with doc_info_path.open("r", encoding="utf-8") as handle:
+    reader = csv.DictReader(handle)
+    documents = list(reader)
+
+print(f"Loaded {len(documents)} outcome statements.")
+for row in documents[:10]:
+    print(f"{row['Topic']} | {row['outcome'][:120]}")
+```

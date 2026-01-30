@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>cmo_prompt – Offsets</title>
+<title>Normalise tags – Offsets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -81,9 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Offsets
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/normalise-tags.html">Methods</a></li><li class="breadcrumb-item"><a href="../analysis/normalise-tags.html">Normalise tags</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,16 +165,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Methods</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/normalise-tags.html" class="sidebar-item-text sidebar-link">
+  <a href="../analysis/normalise-tags.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Normalise tags</span></a>
   </div>
 </li>
@@ -171,27 +208,136 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#running-the-normalisation" id="toc-running-the-normalisation" class="nav-link active" data-scroll-target="#running-the-normalisation"><span class="header-section-number">1</span> Running the normalisation</a></li>
+  <li><a href="#inspecting-the-generated-aliases" id="toc-inspecting-the-generated-aliases" class="nav-link" data-scroll-target="#inspecting-the-generated-aliases"><span class="header-section-number">2</span> Inspecting the generated aliases</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/normalise-tags.html">Methods</a></li><li class="breadcrumb-item"><a href="../analysis/normalise-tags.html">Normalise tags</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Normalise tags</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>You are extracting realist-style Context–Mechanism–Outcome (CMO) configurations from ONE document at a time.</p>
-<p>DEFINITIONS (MUST APPLY) - Context (C): The salient conditions that shape whether/how the mechanism fires (e.g., institutional rules, alliance relationships, procurement regime, industrial base maturity, governance capacity, threat environment). Context should be a condition or setting, not a program action; it can include pre-existing structures, constraints, incentives, or capacities. - Mechanism (M): The underlying generative causal process that produces change, typically framed as: (programme resources/constraints) + (actors’ reasoning/response) -&gt; causal force Mechanisms are NOT the same as activities, outputs, or policies (avoid “setting up an office”, “signing an MoU” as mechanisms). The mechanism should explain why actors respond the way they do given the resources/constraints. - Outcome (O): The observed (or credibly reported) effect(s), intended or unintended (e.g., interoperability, security of supply, cost/schedule impacts, corruption risk, industrial capability, alliance integration). Outcomes are effects or changes, not activities or plans.</p>
-<p>TASK 1) Read document_text carefully. 2) Identify and extract ALL defensible CMO configurations evidenced in the document. - Prefer “small” CMOs anchored to a specific claim/passage. - Do not stop at the first CMO; include additional distinct CMOs if the text supports them. - If the document only implies a CMO, you may still extract it but set confidence to low and make the inference explicit in the paraphrase. 3) Write each C, M, and O concisely (ideally 1–3 sentences each). 4) Populate metadata fields: - programme: name of the programme linked to the offset deal (snake_case). If not stated, use unknown_programme (do NOT guess). - country: snake_case country name; use multi_country if needed; if not stated, use unknown_country. - research_questions_mapped: list of RQ IDs from the list below (e.g., [rq1, rq3]) - evidence_type: one of case_study | comparative_case_study | theory_model | legal_analysis | policy_report | survey_experiment | systematic_review | qualitative_interviews | mixed_methods | other - evidence_type_narrative: 1–2 sentences describing what kind of material this is and why you chose evidence_type. - supporting_evidence: a SHORT direct quote (max ~25 words) that supports the CMO. Use double quotes inside YAML; escape internal quotes. If no suitable short quote exists, use “” and rely on paraphrase. - supporting_evidence_paraphrase: 1–2 sentences paraphrasing the supporting passage and how it supports the CMO (may note if inference is being made). - confidence: low | medium | high based on how directly the text supports the CMO. - confidence_justification: 1–2 sentences explaining the confidence rating (e.g., direct explicit CMO vs partial/implicit, specificity of evidence).</p>
-<p>VALIDATION AND VERIFICATION (V&amp;V) REQUIREMENTS - Validate each CMO against the source text: - supporting_evidence must directly support the CMO; if not, lower confidence and say so in the paraphrase. - If the CMO is inferred, explicitly state that in the paraphrase and set confidence to low. - Ensure context is a condition/setting (not an activity or policy). - Ensure mechanism is a causal process linking resources/constraints to actors’ reasoning/response (not just an activity or policy). - Ensure outcome is an effect or change (observed or credibly reported) and do not overclaim beyond the text. - Ensure programme and country values are snake_case. - Produce a V&amp;V log summarizing checks, issues, and any adjustments.</p>
-<p>OUTPUT RULES (MUST FOLLOW) - Output ONLY valid YAML (no markdown, no commentary). - The YAML top level MUST be a mapping keyed by the FILE NAME exactly as given in file_name. - Under the file key, include ONLY: - cmos: a mapping from unique CMO IDs to CMO objects - v_and_v_log: a list of V&amp;V entries (may be empty) - If you find no defensible CMO, output: <file_name>: cmos: {} v_and_v_log: - check: no_defensible_cmo status: pass note: “No defensible CMO found in this document.” - Each CMO ID MUST be derived from the file name: a) Create file_slug by: - lowercasing - replacing all non-alphanumeric characters with underscores - collapsing multiple underscores to one - trimming leading/trailing underscores b) Append __cmo_### where ### is a zero-padded 3-digit index starting at 001. - Each CMO object MUST have exactly these keys (and in this order): context mechanism outcome programme country evidence_type evidence_type_narrative research_questions_mapped supporting_evidence supporting_evidence_paraphrase confidence confidence_justification - Programme/country values MUST be snake_case. - Lists MUST be valid YAML lists (use hyphens). - Avoid long quotations; do not invent facts not supported by the text.</file_name></p>
-<p>V&amp;V LOG FORMAT - Each v_and_v_log entry MUST have exactly these keys: check status note - status must be one of: pass | warn | fail - Include at least these checks per file: - completeness_all_relevant_cmos - evidence_traceability - context_is_condition - mechanism_is_causal - outcome_is_effect - snake_case_fields - quote_length - inference_flagged</p>
-<p>RESEARCH QUESTIONS (choose any that fit; can assign multiple per CMO) - rq1: Alliance relevance and mechanisms — Through what mechanisms do offset or industrial participation policies affect alliance-relevant outcomes such as interoperability, standardisation, security of supply, readiness, and the ability to contribute rapidly to NATO operations? - rq2: Conditions for durable collaboration — Under what conditions do offsets lead to durable industrial collaboration with allies and close partners (co-development, co-production, licensed production, shared sustainment/MRO, trusted supply chains)? - rq3: Risks and mitigation — What partnership risks are most commonly associated with offsets (corruption vulnerability, export-control friction, programme fragmentation, market distortion, cost/schedule impacts), and what mitigations/governance designs reduce these risks? - rq4: Positive comparative cases — Which countries combine continuing offset/industrial participation policy with high allied programme integration, and what design features enable coexistence? - rq5: Negative or mixed comparative cases — Which countries exhibit offset-related frictions that undermine partnership/alliance integration outcomes, and what policy design features appear implicated?</p>
-<p>NOW DO THE EXTRACTION FOR THE PROVIDED INPUTS AND OUTPUT ONLY YAML.</p>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>This notebook runs the <code>scripts/normalize_tags.py</code> helper so the Quarto workflow can regenerate <code>cmo/normalised_tags.yml</code> whenever the source CMO metadata changes.</p>
+<section id="running-the-normalisation" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="running-the-normalisation"><span class="header-section-number">1</span> Running the normalisation</h2>
+<p>The default invocation embeds every tag listed under <code>context_tags</code>, <code>mechanism_tags</code> and <code>outcome_tags</code> in the <code>cmo/</code> directory, groups near-duplicates by cosine similarity, and persists the alias map at <code>cmo/normalised_tags.yml</code>.</p>
+<div id="9c13a7a5" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scripts.normalize_tags <span class="im">import</span> run_normalise_tags</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>run_normalise_tags(cmo_dir<span class="op">=</span><span class="st">"cmo"</span>, output<span class="op">=</span><span class="st">"cmo/normalised_tags.yml"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"a51c898c57fb4389b4ec4b345d8f314b","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED    :can be ignored when loading from different task/architecture; not ok if you expect identical arch.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>wrote 45 aliases to cmo/normalised_tags.yml</code></pre>
+</div>
+</div>
+<p>Adjust the <code>--threshold</code> argument if you need tighter or looser clustering, and pass <code>--cache-path</code> when you want to reuse an existing embedding cache.</p>
+</section>
+<section id="inspecting-the-generated-aliases" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="inspecting-the-generated-aliases"><span class="header-section-number">2</span> Inspecting the generated aliases</h2>
+<p>After running the script, inspect the file to confirm the tag pairs that were aliased.</p>
+<div id="3708658b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Path(<span class="st">"cmo/normalised_tags.yml"</span>).read_text(encoding<span class="op">=</span><span class="st">"utf-8"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>aliases:
+  context_tags:
+    policy_absence: absent_policy
+    limited_absorptive_capacity: absorptive_capacity
+    procurement_competition: competitive_procurement
+    data_gaps: data_gap
+    defense_offsets: defence_offsets
+    defense_procurement: defence_procurement
+    international_markets: foreign_markets
+    no_formal_offset_policy: formal_offset_policy
+    offset_policy: formal_offset_policy
+    offset_policy_design: formal_offset_policy
+    market_imperfections: imperfect_markets
+    joint_venture: joint_ventures
+    naval_programmes: naval_programme
+    niche_strategy: niche_market_strategy
+    offset_programmes: offset_programme
+    offset_programs: offset_programme
+    offset_regime: offset_regimes
+    offset_requirement: offset_requirements
+    opportunity_costs: opportunity_cost
+    procurement_deals: procurement_contracts
+    technology_gap: technological_gap
+  mechanism_tags:
+    limited_absorptive_capacity: absorptive_capacity
+    allocation_constraints: allocation_constraint
+    cost_premiums: cost_premium
+    evaluation_weighting: evaluation_weight
+    shared_incentive_alignment: incentive_alignment
+    licensed_production_learning: learning_from_licensed_production
+    mandatory_direct_offsets: mandatory_offsets
+    mandatory_full_offsets: mandatory_offsets
+    multipliers_incentives: multiplier_incentives
+    offsets_as_inducement: offset_as_inducement
+    transaction_cost_reduction: reduced_transaction_costs
+    trade_restrictions: trade_restriction
+  outcome_tags:
+    continued_technology_dependence: continued_technological_dependence
+    higher_price: higher_prices
+    higher_procurement_prices: higher_procurement_costs
+    increased_efficiency: improved_efficiency
+    increased_technology_access: improved_technology_access
+    increased_offsets: increased_offset_use
+    increased_sustainment_capability: sustainment_capability
+    smaller_offset_packages: larger_offset_packages
+    uncertain_net_benefit: net_benefit_uncertain
+    offsets_persist: offset_persistence
+    reduced_net_benefits: reduced_net_benefit
+    reduced_social_welfare: welfare_reduction
+</code></pre>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
+<script type="application/vnd.jupyter.widget-state+json">
+{"state":{"01a6cefe02344a4daa21abeeec3cf5ec":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"15ca1d8a73b844698b22d3b49c55874f":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"34826683668e42a0b9a818ecec1b7338":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"FloatProgressModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"FloatProgressModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"ProgressView","bar_style":"success","description":"","description_allow_html":false,"layout":"IPY_MODEL_5f9e2eaaa65f495ead22a458a8f4f6a7","max":103,"min":0,"orientation":"horizontal","style":"IPY_MODEL_9d559254c330462c8961bb7718890335","tabbable":null,"tooltip":null,"value":103}},"5f9e2eaaa65f495ead22a458a8f4f6a7":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"7d8e7a1b7c364fadad801a56a3c2d0ea":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"87c824beb29248ff9334dd84d1e5e1d5":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"9d559254c330462c8961bb7718890335":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"ProgressStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"ProgressStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","bar_color":null,"description_width":""}},"a51c898c57fb4389b4ec4b345d8f314b":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HBoxModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HBoxModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HBoxView","box_style":"","children":["IPY_MODEL_b4d124c6b9bb41a89e2ce5110c86b4bf","IPY_MODEL_34826683668e42a0b9a818ecec1b7338","IPY_MODEL_cfa917db903f434aa8d42e8e8b94f4ea"],"layout":"IPY_MODEL_7d8e7a1b7c364fadad801a56a3c2d0ea","tabbable":null,"tooltip":null}},"b4d124c6b9bb41a89e2ce5110c86b4bf":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_01a6cefe02344a4daa21abeeec3cf5ec","placeholder":"​","style":"IPY_MODEL_87c824beb29248ff9334dd84d1e5e1d5","tabbable":null,"tooltip":null,"value":"Loading weights: 100%"}},"cfa917db903f434aa8d42e8e8b94f4ea":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_d1015952a0494e8ba4efc300c6a94df5","placeholder":"​","style":"IPY_MODEL_15ca1d8a73b844698b22d3b49c55874f","tabbable":null,"tooltip":null,"value":" 103/103 [00:00&lt;00:00, 2754.59it/s, Materializing param=pooler.dense.weight]"}},"d1015952a0494e8ba4efc300c6a94df5":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}}},"version_major":2,"version_minor":0}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

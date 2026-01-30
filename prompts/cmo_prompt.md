@@ -1,11 +1,11 @@
 You are extracting realist-style Context–Mechanism–Outcome (CMO) configurations from ONE document at a time.
 
 DEFINITIONS (MUST APPLY)
-- Context (C): The salient conditions that shape whether/how the mechanism fires (e.g., institutional rules, alliance relationships, procurement regime, industrial base maturity, governance capacity, threat environment).
+- Context (C): The salient conditions that shape whether/how the mechanism fires (e.g., institutional rules, alliance relationships, procurement regime, industrial base maturity, governance capacity, threat environment). Context should be a condition or setting, not a program action; it can include pre-existing structures, constraints, incentives, or capacities.
 - Mechanism (M): The underlying generative causal process that produces change, typically framed as:
   (programme resources/constraints) + (actors’ reasoning/response) -> causal force
-  Mechanisms are NOT the same as activities, outputs, or policies (avoid “setting up an office”, “signing an MoU” as mechanisms).
-- Outcome (O): The observed (or credibly reported) effect(s), intended or unintended (e.g., interoperability, security of supply, cost/schedule impacts, corruption risk, industrial capability, alliance integration).
+  Mechanisms are NOT the same as activities, outputs, or policies (avoid “setting up an office”, “signing an MoU” as mechanisms). The mechanism should explain why actors respond the way they do given the resources/constraints.
+- Outcome (O): The observed (or credibly reported) effect(s), intended or unintended (e.g., interoperability, security of supply, cost/schedule impacts, corruption risk, industrial capability, alliance integration). Outcomes are effects or changes, not activities or plans.
 
 TASK
 1) Read document_text carefully.
@@ -14,11 +14,7 @@ TASK
    - Do not stop at the first CMO; include additional distinct CMOs if the text supports them.
    - If the document only implies a CMO, you may still extract it but set confidence to low and make the inference explicit in the paraphrase.
 3) Write each C, M, and O concisely (ideally 1–3 sentences each).
-4) Create candidate tags in snake_case:
-   - context_tags: 1–4
-   - mechanism_tags: 1–4
-   - outcome_tags: 1–4
-5) Populate metadata fields:
+4) Populate metadata fields:
    - programme: name of the programme linked to the offset deal (snake_case). If not stated, use unknown_programme (do NOT guess).
    - country: snake_case country name; use multi_country if needed; if not stated, use unknown_country.
    - research_questions_mapped: list of RQ IDs from the list below (e.g., [rq1, rq3])
@@ -36,9 +32,10 @@ VALIDATION AND VERIFICATION (V&V) REQUIREMENTS
 - Validate each CMO against the source text:
   - supporting_evidence must directly support the CMO; if not, lower confidence and say so in the paraphrase.
   - If the CMO is inferred, explicitly state that in the paraphrase and set confidence to low.
-  - Ensure mechanism is a causal process (not just an activity or policy).
-  - Ensure outcomes are effects (observed or credibly reported) and do not overclaim beyond the text.
-  - Ensure all tags, programme, and country values are snake_case.
+  - Ensure context is a condition/setting (not an activity or policy).
+  - Ensure mechanism is a causal process linking resources/constraints to actors’ reasoning/response (not just an activity or policy).
+  - Ensure outcome is an effect or change (observed or credibly reported) and do not overclaim beyond the text.
+  - Ensure programme and country values are snake_case.
 - Produce a V&V log summarizing checks, issues, and any adjustments.
 
 OUTPUT RULES (MUST FOLLOW)
@@ -65,9 +62,6 @@ OUTPUT RULES (MUST FOLLOW)
   context
   mechanism
   outcome
-  context_tags
-  mechanism_tags
-  outcome_tags
   programme
   country
   evidence_type
@@ -77,7 +71,7 @@ OUTPUT RULES (MUST FOLLOW)
   supporting_evidence_paraphrase
   confidence
   confidence_justification
-- All tags and programme/country values MUST be snake_case.
+- Programme/country values MUST be snake_case.
 - Lists MUST be valid YAML lists (use hyphens).
 - Avoid long quotations; do not invent facts not supported by the text.
 
@@ -90,6 +84,7 @@ V&V LOG FORMAT
 - Include at least these checks per file:
   - completeness_all_relevant_cmos
   - evidence_traceability
+  - context_is_condition
   - mechanism_is_causal
   - outcome_is_effect
   - snake_case_fields

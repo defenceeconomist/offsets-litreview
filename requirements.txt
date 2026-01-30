@@ -3,3 +3,4 @@ pyyaml
 sentence-transformers
 scipy
 matplotlib
+bertopic
