@@ -15,7 +15,7 @@ website:
         href: reporting/index.qmd
       - section: "Analysis"
         contents:
-          - auto: "analysis/*.qmd"
+          - auto: "reporting/analysis/*.qmd"
 
 format:
   html:

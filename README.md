@@ -96,55 +96,84 @@ Notes:
 
 ### 4) Contextual patterning (CMO demi-regularities)
 
-For each mechanism theme, look for context patterns that change how/when it fires:
+**Purpose:** for each mechanism theme, infer “demi-regularities” that describe when/how it tends to produce particular outcomes.
 
-- “In contexts where X, mechanism Z tends to yield Y…”
+**Inputs**
+- Theme definitions + CMO-to-theme mapping: `data/mechanism_themes/proto_themes.yml` (`theme_id`, `theme_label`, `mechanisms[].id`).
+- CMO records + tags: `data/cmo/*.yml` (fields like `context`, `context_tags`, `mechanism`, `mechanism_tags`, `outcome`, `outcome_tags`, `research_questions_mapped`, evidence).
+- Optional (for quick filtering/counts): `data/cmo_statements.csv` (note: this is currently a *flat* table and does not include the tag lists).
 
-Practical approach:
-- Filter to one mechanism theme/tag at a time.
-- Compare contexts (`context` + `context_tags`) and outcomes (`outcome` + `outcome_tags`) to identify moderators and boundary conditions.
+**Outputs**
+- Per-theme C→M→O statements of the form “In contexts where X, mechanism Z tends to yield Y…”, each with:
+  - supporting CMO IDs (`chunk_id`)
+  - moderators/boundary conditions (counterexamples + what differs)
+- Where to store: embed directly in an RQ synthesis doc (e.g. `reporting/synthesis/rq1.qmd`) or create a per-theme Quarto note (e.g. `reporting/patterns/PM1.qmd`) if you want a reusable theme library.
 
 ### 5) Re-describe outcomes at a higher level (outcome families)
 
-Outcomes are often messy and specific. Group them into a small set of outcome families that match the research questions (e.g. interoperability/standardisation; readiness/sustainment; security of supply; partnership durability; programme performance; risk/governance).
+**Purpose:** normalize messy, specific outcomes into a small set of “outcome families” aligned to the research questions.
 
-In this repo, that grouping is expressed through `outcome_tags` (and then used during RQ synthesis).
+**Inputs**
+- Outcome statements + existing tags: `data/cmo/*.yml` (`outcome`, `outcome_tags`) and/or `data/cmo_statements.csv` (`outcome_statement`).
+- Your current RQ framing (implicitly via `research_questions_mapped` and the synthesis doc outline).
+
+**Outputs**
+- Updated/cleaned `outcome_tags` in `data/cmo/*.yml` (consistent families + sub-tags as needed).
+- Refreshed `data/cmo_statements.csv` after re-running consolidation (so any rewritten outcome text is reflected in the working table).
 
 ### 6) Build CMO chains (mechanisms rarely travel alone)
 
-Where the evidence supports it, link CMOs into causal chains (downstream effects):
+**Purpose:** connect CMOs into plausible downstream pathways (mechanisms rarely travel alone).
 
-- Offset design → vendor behaviour → depth of transfer → capability trajectory → alliance-relevant effects
+**Inputs**
+- A set of related CMOs (by theme, outcome family, and/or RQ): `data/cmo/*.yml` and/or `data/cmo_statements.csv`.
+- Demi-regularities from step 4 (to provide “linking logic” and moderators).
 
-Chains often become the backbone of the synthesis narrative and diagrams.
+**Outputs**
+- One or more chain candidates (ordered links), e.g. “Offset design → vendor behaviour → depth of transfer → capability trajectory → alliance-relevant effects”, each citing the supporting CMO IDs.
+- Where to store: usually embedded in the relevant RQ synthesis doc (e.g. `reporting/synthesis/rq1.qmd`), optionally with a diagram (Mermaid) for reuse.
 
 ### 7) Turn patterns into propositions (middle-range explanations)
 
-Write mechanism-informed, conditional propositions:
+**Purpose:** convert patterns into defensible, mechanism-informed conditional propositions (middle-range explanations).
 
-- “When X context holds, offsets/IP may support Y via mechanism Z…”
+**Inputs**
+- Demi-regularities (step 4), outcome families (step 5), and any chain candidates (step 6).
+- CMO IDs + evidence (for traceability): `data/cmo/*.yml` (and the corresponding rows in `data/cmo_statements.csv`).
 
-These propositions should:
-- cite the supporting CMO IDs, and
-- state boundary conditions when evidence is mixed or mainly conceptual.
+**Outputs**
+- A small set of propositions of the form “When X context holds, offsets/IP may support Y via mechanism Z…”, each:
+  - citing the supporting CMO IDs
+  - stating boundary conditions when evidence is mixed or mainly conceptual
+- Where to store: typically as a section in the relevant RQ synthesis doc (e.g. “Conditional takeaways” in `reporting/synthesis/rq1.qmd`).
 
 ### 8) Write RQ-focused synthesis outputs
 
-- RQ1 synthesis prompt: `prompts/rq1_synthesis_prompt.md`
-- Output target: `synthesis/rq1.qmd`
+**Purpose:** produce the “deliverable” narrative per research question (mechanism-first, CMO-cited).
 
-The intended flow is:
-1. Filter `data/cmo_statements.csv` to the target RQ.
-2. Draft the synthesis using CMOs (mechanism-first), citing CMO IDs.
-3. Save/update the Quarto document in `synthesis/`.
+**Inputs**
+- Working table: `data/cmo_statements.csv` filtered to the target RQ (`research_question_mapped`).
+- Theme structure (optional but recommended): `data/mechanism_themes/proto_themes.yml` (to organise the narrative mechanism-first).
+- Your outcome families, propositions, and chains from steps 5–7.
 
-### 9) Optional: outcome-topic exploration (for sensemaking, not “truth”)
+**Outputs**
+- Quarto synthesis doc per RQ, e.g. `reporting/synthesis/rq1.qmd`.
+- Rendered HTML under `_output/` when you run `quarto render`.
 
-- Notebook: `analysis/outcome-topic-model.qmd`
-- Script: `scripts/outcome_topic_model.py`
-- Dependencies: `requirements.txt`
+### 9) Optional: exploration notebooks (for sensemaking, not “truth”)
 
-This can help surface recurring outcome language for tagging/outcome-family work, but it does not replace realist inference or V&V.
+**Purpose:** exploratory analysis to help you see patterns (not a replacement for realist inference or V&V).
+
+**Inputs**
+- Usually: `data/cmo_statements.csv`.
+- Sometimes: `data/mechanism_themes/proto_themes.yml` and cached artifacts (e.g. `data/embeddings_cache.sqlite`).
+
+**Outputs**
+- Analysis notebooks in `reporting/analysis/` rendered to `_output/reporting/analysis/` (plus any cached artifacts written under `data/`).
+
+**Current notebooks**
+- `reporting/analysis/mechanism-cosine-similarity.qmd` (mechanism embeddings/similarity; writes embedding artifacts under `data/`)
+- `reporting/analysis/theme-by-rq-crosstab.qmd` (counts CMOs by mechanism theme × research question)
 
 ## Realist Quality Checks (V&V)
 
