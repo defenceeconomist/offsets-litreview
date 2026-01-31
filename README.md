@@ -72,6 +72,27 @@ Suggested workflow:
 1. Pull all mechanisms into view (via the explorer), and create **proto-themes** by grouping similar mechanism statements.
 2. Encode those proto-themes consistently via `mechanism_tags` (and, if you add a column, `mechanism_theme_labels`).
 
+Practical, file-based flow for themes:
+
+**3a) Create initial proto-themes (batch 1)**
+- Input data: `data/cmo_statements.csv` (columns: `chunk_id`, `mechanism_statement`).
+- Intermediate input (recommended): save the batch you send to the model, e.g. `data/mechanism_themes/batches/batch_001_input.txt`.
+- Prompt: `prompts/initial_mechanism_themes.md`.
+- Output (strict YAML): `data/mechanism_themes/proto_themes.yml`.
+- Optional log (recommended): save the full model response for traceability, e.g. `data/mechanism_themes/logs/batch_001_output.yml`.
+
+**3b) Iterate themes with new mechanisms (subsequent batches)**
+- Inputs:
+  - Existing themes: `data/mechanism_themes/proto_themes.yml`.
+  - New mechanism batch (same shape as above), e.g. `data/mechanism_themes/batches/batch_002_input.txt`.
+- Prompt: `prompts/iterate_mechanism_theme.md`.
+- Output (strict YAML): updated themes file, either overwrite `data/mechanism_themes/proto_themes.yml` or version it (e.g. `data/mechanism_themes/proto_themes_v02.yml`).
+- Optional log (recommended): save the model response for each batch, e.g. `data/mechanism_themes/logs/batch_002_output.yml`.
+
+Notes:
+- Keep all outputs **YAML-only** (no prose), matching the prompt’s schema.
+- Ensure the `chunk_id` values in batches are preserved exactly in outputs.
+
 
 ### 4) Contextual patterning (CMO demi-regularities)
 

@@ -1,0 +1,121 @@
+change_log:
+- change_id: CHG_021
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+  summary: Assigned to PM1 (economic framing legitimation).
+  rationale: Mechanism reframes the purchase as economically beneficial to reduce resistance.
+- change_id: CHG_022
+  change_type: new_theme
+  theme_id: PM11
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022
+  summary: Created PM11 for domestic industry influence on offset demands.
+  rationale: Domestic arms-industry influence drives demands for direct offsets that subsidize local industry.
+- change_id: CHG_023
+  change_type: new_theme
+  theme_id: PM12
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023
+  summary: Created PM12 for development-oriented indirect offset design.
+  rationale: Targeted indirect offsets and transparency increase realization and development relevance.
+- change_id: CHG_024
+  change_type: new_theme
+  theme_id: PM13
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_001
+  summary: Created PM13 for competition shifts toward bundled content.
+  rationale: Benefits packages shift competition from price/quality to bundled content.
+- change_id: CHG_025
+  change_type: new_theme
+  theme_id: PM14
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002
+  summary: Created PM14 for rent extraction via offset requirements.
+  rationale: Offsets extract rents by compelling domestic economic activity.
+- change_id: CHG_026
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+  summary: Assigned to PM1 (benefit salience legitimation).
+  rationale: Benefit salience drives adoption despite ambiguous net welfare.
+- change_id: CHG_027
+  change_type: new_theme
+  theme_id: PM15
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004
+  summary: Created PM15 for flexibility vs rigid mandates.
+  rationale: One-size mandates force offsets where market exchange is superior, creating diseconomies.
+- change_id: CHG_028
+  change_type: new_theme
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005
+  summary: Created PM16 for offsets justified in high-hazard exchanges.
+  rationale: Offsets substitute for poorly functioning markets when hazards and benefits are high.
+- change_id: CHG_029
+  change_type: new_theme
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006
+  summary: Created PM17 for administrative burden and rent-seeking.
+  rationale: Offsets add administrative burden and rent-seeking without improving transfer outcomes.
+- change_id: CHG_030
+  change_type: new_theme
+  theme_id: PM19
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007
+  summary: Created PM19 for supplier coaching and reputational certification.
+  rationale: Supplier teaching and reputational stamps reduce domestic firms' transaction costs.
+- change_id: CHG_031
+  change_type: new_theme
+  theme_id: PM20
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008
+  summary: Created PM20 for alliance incentives via offset waivers.
+  rationale: Bargaining power encourages alliances without mandatory offsets.
+- change_id: CHG_032
+  change_type: new_theme
+  theme_id: PM20
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009
+  summary: Added second mechanism to PM20.
+  rationale: Offset waivers incentivize investment and reputational capital while maintaining competition.
+- change_id: CHG_033
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010
+  summary: Assigned to PM15 (flexibility reduces diseconomies).
+  rationale: Variable policies expand negotiation options and reduce diseconomies of scope.
+- change_id: CHG_034
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011
+  summary: Assigned to PM17 (rent-seeking from discretion).
+  rationale: Discretion attracts rent-seeking while strict triggers constrain it.
+- change_id: CHG_035
+  change_type: assignment
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012
+  summary: Assigned to PM16 (offsets misapplied in low-hazard settings).
+  rationale: Offsets in low-hazard categories create opportunity costs.
+- change_id: CHG_036
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013
+  summary: Assigned to PM17 (overload and superficial evaluation).
+  rationale: Broad mandates overload evaluation and raise costs with little reputational effect.
+- change_id: CHG_037
+  change_type: assignment
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014
+  summary: Assigned to PM16 (direct vs indirect offsets matched to hazard).
+  rationale: Offset type should match exchange hazard and seller capabilities to avoid cost inflation.
+- change_id: CHG_038
+  change_type: new_theme
+  theme_id: PM21
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001
+  summary: Created PM21 for market access conditioned on reciprocity.
+  rationale: Offsets impose trade-restricting reciprocal requirements as a condition of market access.
+- change_id: CHG_039
+  change_type: new_theme
+  theme_id: PM18
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_002
+  summary: Created PM18 for objective ambiguity undermining evaluation.
+  rationale: Mixed objectives make evaluation criteria and net benefits hard to specify.
+- change_id: CHG_040
+  change_type: assignment
+  theme_id: PM6
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003
+  summary: Assigned to PM6 (additional trade gains).
+  rationale: Additionality requirement aims to create new exports.

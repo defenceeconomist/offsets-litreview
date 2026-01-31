@@ -1,0 +1,268 @@
+proto_mechanism_themes:
+- theme_id: PM1
+  theme_label: Legitimation through economic framing
+  mechanism_explanation: Presenting offsets as economic benefits or conditional support shifts decision-makers’ and publics’
+    cost-benefit reasoning, making purchases more politically acceptable.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_001
+    text: By offering cost offsets framed as economic benefits, sellers provide an inducement that shifts decision-makers’
+      reasoning from reluctance to acceptance.
+    rationale: Frames offsets as economic benefits that shift decision-makers toward acceptance.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_002
+    text: By embedding compensatory work in an offset package, officials can present support to domestic producers as a condition
+      of purchase rather than a visible subsidy, reducing political costs.
+    rationale: Uses offset packaging to present support as a purchase condition, lowering political exposure.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003
+    text: By making offsets appear to deliver large economic benefits (even if illusory), officials reduce perceived net costs
+      and increase public acceptance.
+    rationale: Emphasises perceived benefits to reduce net-cost perceptions and build public acceptance.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+    text: Promised offset benefits provide an argument that reframes the purchase as economically beneficial, reducing resistance.
+    rationale: Reframes the purchase as economically beneficial to reduce resistance.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+    text: Because expected benefits are more salient than expected costs, officials adopt offsets even when net welfare effects
+      are ambiguous.
+    rationale: Benefit salience drives adoption despite ambiguous net welfare.
+- theme_id: PM2
+  theme_label: Compliance shaped by incentives and monitoring
+  mechanism_explanation: 'Delivery depends on the enforcement regime: transparency and credible incentives/penalties encourage
+    compliance, while weak oversight and accounting games reduce real fulfilment.'
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004
+    text: Shifts in conditions, contractor fortunes, or bad faith reduce the ability and incentives to complete promised offset
+      activities, especially when enforcement is weak.
+    rationale: Weak enforcement and changing conditions reduce incentives and capacity to fulfil obligations.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005
+    text: Structuring offset agreements to maximize transparency and create credible incentives/penalties increases supplier
+      compliance with offset obligations.
+    rationale: Transparency plus credible incentives/penalties raise compliance with obligations.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006
+    text: By counting pre-existing transactions as meeting offset obligations, suppliers inflate apparent offset delivery
+      without creating genuinely additional business.
+    rationale: Counts pre-existing transactions to appear compliant without additional delivery.
+- theme_id: PM3
+  theme_label: Cost pass-through via pricing
+  mechanism_explanation: Suppliers internalise offset costs and recover them by raising the weapon sale price, shifting the
+    burden to buyers.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007
+    text: Vendors incorporate offset premiums into the weapons selling price to recoup offset costs.
+    rationale: Passes offset costs into the sale price to recover premiums.
+- theme_id: PM4
+  theme_label: Offsets crowd out civilian resources
+  mechanism_explanation: Offset activity can absorb scarce capital, labour, or productive capacity, diverting resources away
+    from civilian sectors that would otherwise drive development.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_008
+    text: Military-sector offset work diverts productive resources away from civilian production that contributes more directly
+      to development.
+    rationale: Military offset work redirects productive resources away from civilian development uses.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_013
+    text: When offset activity is financed domestically, it crowds out local investment opportunities by absorbing limited
+      capital from within the purchasing country.
+    rationale: Domestic financing absorbs scarce capital, displacing other investments.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015
+    text: If offset projects simply hire already skilled workers from the limited local pool, they preempt labor needed by
+      domestic civilian producers.
+    rationale: Hiring scarce skilled workers for offsets deprives civilian producers of needed labour.
+- theme_id: PM5
+  theme_label: External finance expands resource pool
+  mechanism_explanation: When funding comes from external sources, offsets inject new resources rather than reallocating domestic
+    capital, easing the net drain of purchases.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_011
+    text: External grant funding adds resources for development projects, partially counterbalancing the resource drain of
+      the arms purchase.
+    rationale: External grants inject new resources that offset the arms purchase drain.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012
+    text: When offset investment is financed from outside the purchasing country, it increases net capital availability rather
+      than reshuffling scarce domestic finance.
+    rationale: Foreign-financed investment adds net capital rather than reallocating domestic funds.
+- theme_id: PM6
+  theme_label: Additional trade yields net gains
+  mechanism_explanation: Counterpurchase that generates genuinely additional exports creates new revenue streams and supports
+    employment.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_010
+    text: When counterpurchase creates genuinely additional export sales (not otherwise achievable or less profitable without
+      the deal), it increases revenue and supports productive civilian employment.
+    rationale: Genuinely additional counterpurchase exports create new revenue and jobs.
+  - id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003
+    text: By requiring reciprocal purchases to be additional (“new activity”), the offset policy aims to create exports that
+      would not otherwise occur.
+    rationale: Additionality requirements aim to create exports that would not otherwise occur.
+- theme_id: PM7
+  theme_label: Training expands local skill supply
+  mechanism_explanation: Mandated employer-funded training expands the local skill base, increasing labour supply instead
+    of depleting it.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_016
+    text: Requiring employer-financed training that raises lower-skilled workers to the needed level expands the local skill
+      pool rather than draining it.
+    rationale: Employer-funded training increases the skill pool rather than drawing it down.
+- theme_id: PM8
+  theme_label: Transferability and contextual fit
+  mechanism_explanation: 'Spillovers hinge on transferability and fit: military-origin skills/technologies often mismatch
+    civilian contexts, and careful selection and implementation reduce adaptation failures and costs.'
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_014
+    text: Skills developed for performance-driven, cost-insensitive military production are not easily transferable (or require
+      costly reshaping) to civilian production needs.
+    rationale: Military-production skills do not transfer easily to civilian needs without costly reshaping.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_017
+    text: Because military technologies often require costly reshaping for civilian uses, pursuing civilian technology directly
+      is generally more cost-effective.
+    rationale: Military technologies need costly adaptation, making civilian tech more efficient.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_018
+    text: When transferred technologies are incompatible with the receiving environment, they fail to function effectively
+      or to integrate into productive systems.
+    rationale: Incompatible transferred technologies fail to function or integrate productively.
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_019
+    text: Selecting appropriate technologies and implementing transfer carefully increases the likelihood that transferred
+      technologies are usable and development-relevant.
+    rationale: Careful selection and implementation improve usability of transferred technologies.
+- theme_id: PM9
+  theme_label: Barter eases constraints, reduces transparency
+  mechanism_explanation: Barter arrangements relax financial constraints but reduce transparency, creating mutual advantage
+    for supplier and buyer.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_009
+    text: Barter bypasses financial constraints and reduces transaction transparency, which can advantage both supplier and
+      purchasing government.
+    rationale: Barter circumvents finance constraints while lowering transparency for both parties.
+- theme_id: PM10
+  theme_label: Offsets as supplier differentiator
+  mechanism_explanation: When core capability requirements are fixed, offset offers differentiate suppliers and influence
+    selection.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_020
+    text: Offsets function as a differentiator between suppliers when core capability requirements are fixed.
+    rationale: Offsets become a competitive lever when core requirements are fixed.
+- theme_id: PM11
+  theme_label: Domestic industry influence on offsets
+  mechanism_explanation: Domestic arms-industry influence shapes procurement demands, pushing governments to require direct
+    offsets that effectively subsidize local military industry.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022
+    text: Domestic arms-industry influence pushes governments to demand direct offsets that subsidize local military industry
+      as part of foreign procurement.
+    rationale: Domestic arms-industry influence drives demands for direct offsets that subsidize local industry.
+- theme_id: PM12
+  theme_label: Development-oriented indirect offset design
+  mechanism_explanation: Specifying development-oriented indirect offsets and emphasizing transparency increases the likelihood
+    that promised activities are realized and development-relevant.
+  mechanisms:
+  - id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023
+    text: Requiring development-oriented indirect offsets (capital inflows, appropriate technology transfer, transferable
+      skills, and/or new markets) and emphasizing transparency increases the chance of realization and development relevance.
+    rationale: Targets indirect offsets and transparency to improve realization and development relevance.
+- theme_id: PM13
+  theme_label: Offsets shift competition to bundled content
+  mechanism_explanation: Requiring offset packages redirects competition away from price/quality and toward bundled content,
+    even when that content is unrelated to the procured item.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_001
+    text: By requiring benefits packages alongside the base good, offsets redirect competition away from price/quality toward
+      bundled content that may be unrelated to the procured item.
+    rationale: Benefits packages shift competition from price/quality to bundled content.
+- theme_id: PM14
+  theme_label: Rent extraction via offset requirements
+  mechanism_explanation: Offset policy compels suppliers to transfer economic activity domestically, extracting rents from
+    the price margin and enabling governments to pursue multiple objectives through procurement.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002
+    text: Offset policy extracts rent off the price margin by requiring sellers to transfer economic activity into the domestic
+      economy, allowing governments to pursue multiple objectives through procurement.
+    rationale: Uses offset requirements to extract rents and channel activity into the domestic economy.
+- theme_id: PM15
+  theme_label: Flexibility reduces mandate diseconomies
+  mechanism_explanation: Rigid, one-size mandates constrain negotiation and force offsets where market exchange would be superior,
+    creating diseconomies of scale and scope; variable policies increase flexibility and reduce these losses.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004
+    text: A one-size-fits-all mandate constrains negotiation dimensions and creates diseconomies of scale and scope by forcing
+      offsets where market exchange would be superior.
+    rationale: One-size mandates force offsets where market exchange is superior, creating diseconomies.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010
+    text: A variable offset policy increases negotiation flexibility and the opportunity set, allowing comparison of price-margin
+      exchange versus offsets and reducing diseconomies of scope.
+    rationale: Variable policies expand negotiation options and reduce diseconomies of scope.
+- theme_id: PM16
+  theme_label: Offsets justified in high-hazard exchanges
+  mechanism_explanation: Offsets can substitute for poorly functioning markets in high-hazard exchanges and yield reputational
+    or capability gains; imposing offsets in low-hazard contexts or misaligned with seller capabilities creates opportunity
+    costs and raises costs.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005
+    text: Offsets are advisable only when exchange hazard is high and expected recipient benefits are high, because offsets
+      can substitute for poorly functioning markets and unlock reputational/capability gains.
+    rationale: Offsets substitute for poorly functioning markets when hazards and expected benefits are high.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012
+    text: Imposing offsets in low-hazard categories forces content-based contracting where price-margin savings would be superior,
+      creating opportunity costs.
+    rationale: Imposing offsets in low-hazard categories creates opportunity costs versus price-margin savings.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014
+    text: Direct offsets better safeguard hazardous exchanges by tying performance to the procured system, while indirect
+      offsets are more applicable for wider development objectives but can raise costs if outside seller capabilities.
+    rationale: Direct vs indirect offsets should match exchange hazards and seller capabilities to avoid cost inflation.
+- theme_id: PM17
+  theme_label: Administrative burden and rent-seeking
+  mechanism_explanation: Offset regimes can generate administrative burdens and rent-seeking, including proposal overload,
+    superficial evaluation criteria, and discretionary behaviour that raises costs without improving transfer outcomes.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006
+    text: In this setting, offsets add administrative burden and rent-seeking costs without improving technology transfer
+      or exchange integrity.
+    rationale: Offsets add administrative burden and rent-seeking without improving transfer or exchange integrity.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011
+    text: Variable offset policies increase discretion between price and content, attracting internal and external rent-seeking;
+      strict mandatory triggers constrain discretion and can reduce rent-seeking.
+    rationale: Discretion in variable policies attracts rent-seeking, while strict triggers constrain it.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013
+    text: Broad mandates generate proposal overload and encourage superficial evaluation criteria (e.g., workload and jobs)
+      rather than technology-transfer quality, while atomistic sellers add offset burdens that raise prices with little reputational
+      effect.
+    rationale: Broad mandates overload evaluation and encourage superficial criteria, raising costs with little reputational
+      effect.
+- theme_id: PM18
+  theme_label: Objective ambiguity undermines evaluation
+  mechanism_explanation: Mixed objectives and unclear incidence of benefits make it difficult to specify evaluation criteria
+    and determine net beneficiaries of mandated offsets.
+  mechanisms:
+  - id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_002
+    text: Mixed objectives and unclear incidence of benefits make it difficult to specify evaluation criteria and to identify
+      who gains net benefits from mandated offsets.
+    rationale: Mixed objectives obscure evaluation criteria and who gains net benefits.
+- theme_id: PM19
+  theme_label: Supplier coaching and reputational certification
+  mechanism_explanation: Suppliers teach efficient routines to control costs and quality, and successful completion provides
+    reputational certification that lowers domestic firms’ market-entry transaction costs.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007
+    text: To minimize its own costs and ensure quality, the seller has incentives to teach efficient routines; successful
+      completion also provides a reputational “stamp of approval” that lowers the domestic firm’s market-entry transaction
+      costs.
+    rationale: Supplier coaching and reputational stamps reduce transaction costs for domestic firms.
+- theme_id: PM20
+  theme_label: Alliance incentives via offset waivers
+  mechanism_explanation: Governments use bargaining power or offset waivers to encourage alliances, boosting investment and
+    reputational capital while preserving competitive selection.
+  mechanisms:
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008
+    text: Government uses bargaining power to encourage alliances without mandating offsets (e.g., best-endeavors), preserving
+      market competition while enabling collaboration.
+    rationale: Uses bargaining power to encourage alliances without mandatory offsets.
+  - id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009
+    text: By waiving offset requirements for foreign firms that enter strategic alliances, the program increases long-term
+      investment and channels reputational capital to domestic firms while maintaining competitive selection.
+    rationale: Offset waivers for alliances incentivize investment and reputational capital while maintaining competition.
+- theme_id: PM21
+  theme_label: Market access conditioned on reciprocity
+  mechanism_explanation: Requiring reciprocal activity as a condition of market access imposes trade-restricting requirements
+    on exporters.
+  mechanisms:
+  - id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001
+    text: By mandating reciprocal activity (countertrade, local content, or bundled enhancements) as a condition of market
+      access, the importing state imposes trade-restricting requirements on exporters.
+    rationale: Conditions market access on reciprocal activity, restricting trade.
+ambiguous_mechanisms: []
