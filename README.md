@@ -8,9 +8,9 @@ This repo supports a realist evidence synthesis workflow for offsets / industria
 - CMO extractions (per source YAML): `data/cmo/`
 - Consolidated analysis table: `data/cmo_statements.csv`
 - Prompt templates (LLM instructions): `prompts/`
-- Synthesis outputs (Quarto docs): `synthesis/`
+- Synthesis outputs (Quarto docs): `reporting/synthesis/`
 - Exploration UI:
-  - Shiny app: `apps/app.R`
+  - CMO-Explorer: `apps/cmo-explorer`
 
 ## Workflow (Operational)
 
@@ -39,7 +39,7 @@ some_document.pdf:
 
 Notes:
 - Store **one or many documents per YAML file** (e.g. one YAML per “batch”/corpus), but keep the per-document keying as above.
-- For now, prefer the `.yml` extension for files under `cmo/` because `consolidate_cmo()` currently scans `cmo/` for `*.yml`.
+- For now, prefer the `.yml` extension for files under `cmo/` because `build_cmo_tables()` currently scans `cmo/` for `*.yml`.
 - The `supporting_evidence` quote is capped (≈25 words): it is there to keep traceability tight.
 - Use `unknown_programme` / `unknown_country` when the document does not state them (don’t guess).
 
@@ -47,7 +47,7 @@ Notes:
 
 This turns all extracted CMOs into a flat table used by the explorer and synthesis docs.
 
-- Function: `R/consolidate_cmo.R`
+- Function: `R/build_cmo_tables.R`
 - Output: `data/cmo_statements.csv`
 
 Run:
@@ -55,10 +55,7 @@ Run:
 ```sh
 Rscript -e "source('R/consolidate_cmo.R'); consolidate_cmo()"
 ```
-
-Tag normalisation:
-- `consolidate_cmo()` reads `cmo/normalised_tags.yml` to map aliases into stable tag IDs.
-- Keep tags short and reusable (they become the handles for cross-case patterning).
+ross-case patterning).
 
 ### 3) Mechanism-first clustering (the start of the synthesis)
 
@@ -75,9 +72,6 @@ Suggested workflow:
 1. Pull all mechanisms into view (via the explorer), and create **proto-themes** by grouping similar mechanism statements.
 2. Encode those proto-themes consistently via `mechanism_tags` (and, if you add a column, `mechanism_theme_labels`).
 
-Explorer options:
-- Shiny: run `Rscript apps/app.R` (or open in RStudio and run)
-- Quarto: render `pages/explorer.qmd` and use the web UI
 
 ### 4) Contextual patterning (CMO demi-regularities)
 

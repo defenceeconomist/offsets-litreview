@@ -1,6 +1,14 @@
 numpy
+pandas
 pyyaml
 sentence-transformers
 scipy
 matplotlib
 bertopic
+datamapplot
+openai
+python-dotenv
+plotly
+shiny
+shinywidgets
+notebook

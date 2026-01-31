@@ -28,12 +28,38 @@ In practice, the realist synthesis proceeds by extracting discrete CMO statement
 
 **CMO workflow (short):**
 1. Extract CMO statements from sources and record context, mechanism, and outcome tags.
-2. Normalize tags and consolidate CMO records across sources.
-3. Cluster mechanism tags into pathway themes (mechanism map).
-4. Summarize each pathway with enabling/limiting conditions and alliance-relevant outcomes.
-5. Trace claims back to source CMO records for verification.
+2. Cluster mechanism tags into pathway themes (mechanism map).
+3. Summarize each pathway with enabling/limiting conditions and alliance-relevant outcomes.
+4. Trace claims back to source CMO records for verification.
 
 **How the research questions are answered (outputs):**
 - **RQ1 (enabling contexts):** pathway briefs that link *typical contexts* to alliance-relevant outcomes; cross-case notes on when those contexts recur.
 - **RQ2 (hindering mechanisms):** pathway failure modes plus governance/market conditions (e.g., opacity, politicised workshare, export-control constraints) and any mitigating conditions.
 - **RQ3 (policy design choices):** case mapping against a common rubric (mandatory/voluntary; direct/indirect; transparency/enforcement) and comparison of collaboration depth, alliance markers, and risk profiles.
+
+## Mechanism similarity heatmap
+
+```{r}
+library(readr)
+library(plotly)
+
+sim_path <- "data/mechanism_cosine_similarity.csv"
+
+sim_df <- read_csv(sim_path, show_col_types = FALSE)
+rownames(sim_df) <- sim_df$id
+sim_mat <- as.matrix(sim_df[ , -1, drop = FALSE])
+
+plot_ly(
+  x = colnames(sim_mat),
+  y = rownames(sim_mat),
+  z = sim_mat,
+  type = "heatmap",
+  colorscale = "Viridis",
+  zmin = 0,
+  zmax = 1
+) %>%
+  layout(
+    xaxis = list(title = "Mechanism ID", showticklabels = FALSE),
+    yaxis = list(title = "Mechanism ID", showticklabels = FALSE)
+  )
+```

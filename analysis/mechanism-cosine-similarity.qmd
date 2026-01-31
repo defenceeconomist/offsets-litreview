@@ -1,0 +1,235 @@
+---
+title: "Mechanism Embeddings and Similarity"
+format: html
+---
+
+This note generates cached sentence-transformer embeddings for mechanism statements
+(`all-MiniLM-L6-v2`), optionally reduces dimensions with UMAP, and computes cosine
+similarity.
+
+```{python}
+import os
+import sys
+
+sys.path.append(os.path.abspath("src/py"))
+```
+
+```{python}
+import pandas as pd
+from embed_mechanisms import embed_mechanisms, cosine_similarity_matrix
+
+input_path = "data/cmo_statements.csv"
+cache_path = "data/embeddings_cache.sqlite"
+embeddings_csv = "data/mechanism_embeddings.csv"
+similarity_csv = "data/mechanism_cosine_similarity_embeddings.csv"
+umap_csv = "data/mechanism_umap.csv"
+
+model_name = "all-MiniLM-L6-v2"
+batch_size = 32
+normalize = True
+device = "cpu"
+use_umap = False
+umap_n_components = 2
+umap_n_neighbors = 10
+umap_min_dist = 0.0
+```
+
+```{python}
+df = pd.read_csv(input_path)
+df = df[df["mechanism_statement"].notna()].copy()
+df["mechanism_statement"] = df["mechanism_statement"].str.strip()
+df = df[df["mechanism_statement"] != ""]
+
+embeddings = embed_mechanisms(
+    df,
+    model_name=model_name,
+    batch_size=batch_size,
+    normalize=normalize,
+    device=device,
+    cache_path=cache_path,
+)
+
+emb_cols = [f"emb_{i}" for i in range(embeddings.shape[1])]
+emb_df = pd.DataFrame(embeddings, columns=emb_cols)
+out = pd.concat(
+    [df[["chunk_id", "file_id", "mechanism_statement"]].reset_index(drop=True), emb_df],
+    axis=1,
+)
+out.to_csv(embeddings_csv, index=False)
+print(f"Wrote {embeddings_csv} with {len(out)} rows and {len(emb_cols)} dims")
+```
+
+```{python}
+sim_source = embeddings
+
+if use_umap:
+    import umap
+
+    reducer = umap.UMAP(
+        n_neighbors=umap_n_neighbors,
+        n_components=umap_n_components,
+        min_dist=umap_min_dist,
+        metric="cosine",
+        random_state=42,
+    )
+    reduced = reducer.fit_transform(embeddings)
+    sim_source = reduced
+    umap_df = pd.DataFrame(reduced, columns=[f"umap_{i}" for i in range(reduced.shape[1])])
+    umap_out = pd.concat(
+        [df[["chunk_id", "file_id", "mechanism_statement"]].reset_index(drop=True), umap_df],
+        axis=1,
+    )
+    umap_out.to_csv(umap_csv, index=False)
+    print(f"Wrote {umap_csv} with {len(umap_out)} rows")
+```
+
+```{python}
+sim = cosine_similarity_matrix(sim_source)
+sim_df = pd.DataFrame(sim, columns=df["chunk_id"].tolist())
+sim_df.insert(0, "id", df["chunk_id"].tolist())
+sim_df.to_csv(similarity_csv, index=False)
+print(f"Wrote {similarity_csv} with {sim.shape[0]} x {sim.shape[1]} matrix")
+```
+
+```{python}
+import numpy as np
+
+triu_idx = np.triu_indices_from(sim, k=1)
+pairwise = sim[triu_idx]
+
+five_num = {
+    "min": float(np.min(pairwise)),
+    "q1": float(np.quantile(pairwise, 0.25)),
+    "median": float(np.quantile(pairwise, 0.50)),
+    "q3": float(np.quantile(pairwise, 0.75)),
+    "max": float(np.max(pairwise)),
+}
+pd.DataFrame([five_num])
+```
+
+```{python}
+import plotly.express as px
+
+pairwise_df = pd.DataFrame({"cosine_similarity": pairwise})
+fig = px.ecdf(pairwise_df, x="cosine_similarity", title="ECDF of Pairwise Cosine Similarity")
+fig.update_layout(xaxis_title="Cosine similarity", yaxis_title="ECDF")
+fig
+```
+
+
+## BERTopic clustering
+
+```{python}
+import os
+import openai
+from dotenv import load_dotenv
+from bertopic import BERTopic
+from bertopic.representation import KeyBERTInspired, MaximalMarginalRelevance
+from bertopic.representation import OpenAI as OpenAIRepresentation
+from sklearn.feature_extraction.text import CountVectorizer
+from sentence_transformers import SentenceTransformer
+from hdbscan import HDBSCAN
+from umap import UMAP
+
+load_dotenv()
+
+docs = df["mechanism_statement"].tolist()
+
+vectorizer_model = CountVectorizer(
+    stop_words="english",
+    ngram_range=(1, 3),
+    min_df=2,
+)
+
+representation_model = {
+    "KeyBERT": KeyBERTInspired(top_n_words=12),
+    "MMR": MaximalMarginalRelevance(diversity=0.5),
+}
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if openai_api_key:
+    openai_client = openai.OpenAI(api_key=openai_api_key)
+    representation_model["OpenAI"] = OpenAIRepresentation(
+        openai_client,
+        model="gpt-4o-mini",
+        delay_in_seconds=1,
+    )
+
+umap_model = UMAP(
+    n_neighbors=10,
+    n_components=5,
+    min_dist=0.0,
+    metric="cosine",
+    random_state=42,
+)
+
+hdbscan_model = HDBSCAN(
+    min_cluster_size=8,
+    min_samples=4,
+    metric="euclidean",
+    cluster_selection_method="eom",
+    prediction_data=True,
+)
+
+embedding_backend = SentenceTransformer(model_name, device="cpu")
+
+topic_model = BERTopic(
+    embedding_model=embedding_backend,
+    vectorizer_model=vectorizer_model,
+    top_n_words=12,
+    representation_model=representation_model,
+    umap_model=umap_model,
+    hdbscan_model=hdbscan_model,
+    calculate_probabilities=False,
+    verbose=True,
+)
+
+topics, _ = topic_model.fit_transform(docs, embeddings)
+
+reducer = UMAP(
+    n_neighbors=10,
+    n_components=2,
+    min_dist=0.0,
+    metric="cosine",
+    random_state=42,
+)
+reduced_embeddings = reducer.fit_transform(embeddings)
+
+fig = topic_model.visualize_document_datamap(
+    docs,
+    reduced_embeddings=reduced_embeddings,
+    interactive=True,
+)
+fig
+```
+
+```{python}
+topic_info = topic_model.get_topic_info()
+topic_info.to_csv("data/topic_info.csv", index=False)
+topic_info
+```
+
+```{python}
+doc_info = pd.DataFrame(
+    {
+        "cmo_id": df["chunk_id"].tolist(),
+        "document": docs,
+        "topic": topics,
+    }
+)
+doc_info.to_csv("data/doc_info.csv", index=False)
+```
+
+```{python}
+topic_model.visualize_topics()
+```
+
+```{python}
+topic_model.visualize_heatmap()
+```
+
+
+```{python}
+hierarchical_topics = topic_model.hierarchical_topics(docs)
+topic_model.visualize_hierarchy(hierarchical_topics=hierarchical_topics)
+```

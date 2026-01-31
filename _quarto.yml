@@ -3,8 +3,6 @@ project:
   execute-dir: project
   type: website
   title: "Offsets"
-  resources:
-    - data/cmo_statements.csv
 
 website:
   title: "Offsets"
@@ -14,18 +12,12 @@ website:
     collapse-level: 1
     contents: 
       - text: "Home"
-        href: index.qmd
-      - text: "Report"
-        href: pages/report.qmd
-      - text: "CMO Explorer"
-        href: pages/explorer.qmd
-      - section: "Methods"
+        href: reporting/index.qmd
+    section:
+      - text: "Analysis"
         contents:
-        - analysis/normalise-tags.qmd
-        - analysis/tag-dendrograms.qmd
-      - section: "Synthesis"
-        contents:
-        - auto: "synthesis/**.qmd"
+        - auto: "analysis/**.qmd"
+
 format:
   html:
     html-math-method: katex
