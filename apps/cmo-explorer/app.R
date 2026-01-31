@@ -3,6 +3,7 @@ library(reactable)
 library(dplyr)
 library(htmltools)
 library(plotly)
+library(yaml)
 
 ui <- fluidPage(
   tags$head(
@@ -159,10 +160,60 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+  build_theme_map <- function(theme_path) {
+    empty <- data.frame(
+      chunk_id = character(),
+      mechanism_theme_id = character(),
+      mechanism_theme = character(),
+      mechanism_theme_explanation = character(),
+      mechanism_theme_rationale = character(),
+      stringsAsFactors = FALSE
+    )
+
+    if (!file.exists(theme_path)) {
+      return(empty)
+    }
+
+    themes <- yaml::read_yaml(theme_path)
+    theme_list <- themes$proto_mechanism_themes
+    if (is.null(theme_list) || length(theme_list) == 0) {
+      return(empty)
+    }
+
+    rows <- lapply(theme_list, function(theme) {
+      mechs <- theme$mechanisms
+      if (is.null(mechs) || length(mechs) == 0) {
+        return(NULL)
+      }
+
+      ids <- vapply(mechs, function(m) as.character(m$id), character(1))
+      rationales <- vapply(mechs, function(m) as.character(m$rationale), character(1))
+      data.frame(
+        chunk_id = ids,
+        mechanism_theme_id = as.character(theme$theme_id),
+        mechanism_theme = as.character(theme$theme_label),
+        mechanism_theme_explanation = as.character(theme$mechanism_explanation),
+        mechanism_theme_rationale = rationales,
+        stringsAsFactors = FALSE
+      )
+    })
+
+    out <- do.call(rbind, rows)
+    if (is.null(out)) {
+      empty
+    } else {
+      out
+    }
+  }
+
   cmo_data <- utils::read.csv(
     file.path("..", "..", "data", "cmo_statements.csv"),
     stringsAsFactors = FALSE
   )
+  theme_map <- build_theme_map(
+    file.path("..", "..", "data", "mechanism_themes", "proto_themes.yml")
+  )
+  cmo_data <- dplyr::left_join(cmo_data, theme_map, by = "chunk_id")
 
   updateSelectInput(
     session,
@@ -296,7 +347,13 @@ server <- function(input, output, session) {
         tags$div(class = "detail-label", "Evidence Type"),
         tags$div(class = "detail-value", get_field(row, "evidence_type")),
         tags$div(class = "detail-label", "Evidence Type Narrative"),
-        tags$div(class = "detail-value", get_field(row, "evidence_type_narrative"))
+        tags$div(class = "detail-value", get_field(row, "evidence_type_narrative")),
+        tags$div(class = "detail-label", "Mechanism Theme"),
+        tags$div(class = "detail-value", get_field(row, "mechanism_theme")),
+        tags$div(class = "detail-label", "Mechanism Explanation"),
+        tags$div(class = "detail-value", get_field(row, "mechanism_theme_explanation")),
+        tags$div(class = "detail-label", "Theme Rationale"),
+        tags$div(class = "detail-value", get_field(row, "mechanism_theme_rationale"))
       )
     }
 
@@ -305,6 +362,7 @@ server <- function(input, output, session) {
         select(
           context_statement,
           mechanism_statement,
+          mechanism_theme,
           outcome_statement,
           confidence,
           confidience_justification
@@ -312,6 +370,7 @@ server <- function(input, output, session) {
       columns = list(
         context_statement = colDef(name = "Context Statement", minWidth = 220),
         mechanism_statement = colDef(name = "Mechanism Statement", minWidth = 220),
+        mechanism_theme = colDef(name = "Mechanism Theme", minWidth = 200),
         outcome_statement = colDef(name = "Outcome Statement", minWidth = 220),
         confidence = colDef(name = "Confidence", width = 120),
         confidience_justification = colDef(name = "Confidence Justification", minWidth = 240)
