@@ -32,6 +32,14 @@ In practice, the realist synthesis proceeds by extracting discrete CMO statement
 3. Summarize each pathway with enabling/limiting conditions and alliance-relevant outcomes.
 4. Trace claims back to source CMO records for verification.
 
+**Mechanism theme workflow (detailed):**
+1. Extract CMO statements into a structured dataset.
+2. Generate a topic model over mechanism statements to surface recurring mechanism signals.
+3. Use the topic model summary to propose candidate proto-mechanism themes.
+4. Create `snake_case` labels for mechanisms and themes.
+5. Assign mechanism labels to themes (using the “same underlying process?” test).
+6. Review assignments; split or merge themes and add new themes for unmapped mechanisms.
+
 **How the research questions are answered (outputs):**
 - **RQ1 (enabling contexts):** pathway briefs that link *typical contexts* to alliance-relevant outcomes; cross-case notes on when those contexts recur.
 - **RQ2 (hindering mechanisms):** pathway failure modes plus governance/market conditions (e.g., opacity, politicised workshare, export-control constraints) and any mitigating conditions.

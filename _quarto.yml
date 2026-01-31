@@ -13,10 +13,9 @@ website:
     contents: 
       - text: "Home"
         href: reporting/index.qmd
-    section:
-      - text: "Analysis"
+      - section: "Analysis"
         contents:
-        - auto: "analysis/**.qmd"
+          - auto: "analysis/*.qmd"
 
 format:
   html:

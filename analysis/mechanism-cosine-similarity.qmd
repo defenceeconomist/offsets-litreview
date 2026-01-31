@@ -1,6 +1,7 @@
 ---
 title: "Mechanism Embeddings and Similarity"
 format: html
+freeze: true
 ---
 
 This note generates cached sentence-transformer embeddings for mechanism statements
