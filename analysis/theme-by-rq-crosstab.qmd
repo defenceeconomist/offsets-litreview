@@ -1,0 +1,96 @@
+---
+title: "CMO Counts: Mechanism Theme × Research Question"
+format: html
+freeze: true
+---
+
+This note cross-tabulates **mechanism themes** (from `data/mechanism_themes/proto_themes.yml`) by **research question** (from `data/cmo_statements.csv`), counting CMO statements per cell.
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(yaml)
+library(purrr)
+library(stringr)
+library(knitr)
+
+cmo_path <- "data/cmo_statements.csv"
+themes_path <- "data/mechanism_themes/proto_themes.yml"
+
+cmo <- readr::read_csv(cmo_path, show_col_types = FALSE)
+
+themes_raw <- yaml::read_yaml(themes_path)
+themes <- themes_raw$proto_mechanism_themes %||% list()
+
+theme_map <- purrr::map_dfr(themes, function(t) {
+  mechs <- t$mechanisms %||% list()
+  if (length(mechs) == 0) {
+    return(tibble::tibble())
+  }
+  tibble::tibble(
+    chunk_id = vapply(mechs, function(m) as.character(m$id), character(1)),
+    theme_id = as.character(t$theme_id),
+    theme_label = as.character(t$theme_label)
+  )
+})
+
+dup_assignments <- theme_map |>
+  count(chunk_id, name = "n_themes") |>
+  filter(n_themes > 1)
+
+df_joined <- cmo |>
+  left_join(theme_map, by = "chunk_id")
+
+df <- df_joined |>
+  mutate(
+    theme_id = if_else(is.na(theme_id), "UNMAPPED_THEME", theme_id),
+    theme_label = if_else(is.na(theme_label), "Unmapped theme", theme_label),
+    rq = str_split(coalesce(research_question_mapped, ""), ";\\s*")
+  ) |>
+  unnest(rq) |>
+  mutate(rq = str_trim(rq)) |>
+  mutate(rq = if_else(rq == "", "UNMAPPED_RQ", rq))
+
+counts <- df |>
+  count(theme_id, theme_label, rq, name = "n_cmo")
+
+rq_order <- counts |>
+  distinct(rq) |>
+  mutate(
+    rq_num = suppressWarnings(as.integer(str_match(rq, "^rq(\\d+)$")[, 2])),
+    rq_is_num = !is.na(rq_num)
+  ) |>
+  arrange(desc(rq_is_num), rq_num, rq) |>
+  pull(rq)
+
+crosstab <- counts |>
+  mutate(rq = factor(rq, levels = rq_order)) |>
+  tidyr::pivot_wider(names_from = rq, values_from = n_cmo, values_fill = 0) |>
+  mutate(total = rowSums(across(where(is.numeric)))) |>
+  arrange(desc(total), theme_id)
+
+list(
+  n_cmo_rows = nrow(cmo),
+  n_themes = dplyr::n_distinct(theme_map$theme_id),
+  n_unmapped_theme_chunk_ids = sum(is.na(df_joined$theme_id)),
+  n_unmapped_rq_chunk_ids = sum(is.na(df_joined$research_question_mapped) | str_trim(df_joined$research_question_mapped) == ""),
+  n_multi_theme_chunk_ids = nrow(dup_assignments)
+)
+```
+
+## Cross-tab
+
+```{r}
+knitr::kable(crosstab)
+```
+
+## Notes
+
+```{r}
+if (nrow(dup_assignments) > 0) {
+  dup_assignments |> arrange(desc(n_themes), chunk_id) |> head(20) |> knitr::kable()
+} else {
+  "No CMO chunk_ids appear in multiple themes."
+}
+```
