@@ -1,0 +1,182 @@
+demi_regularities_by_theme:
+  - theme_id: PM1
+    theme_label: "Legitimation through economic framing"
+    mechanism_explanation: "Presenting offsets as economic benefits or conditional support shifts decision-makers’ and publics’ cost-benefit reasoning, making purchases more politically acceptable."
+    cmo_ids_in_theme:
+      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_001
+      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_002
+      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003
+      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+      - 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+      - 05_arms_trade_as_illiberal_trade_pdf__cmo_010
+      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+      - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_005
+      - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001
+      - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018
+      - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_001
+      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_003
+      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_017
+      - 01_introduction_and_overview_pdf__cmo_011
+      - 01_introduction_and_overview_pdf__cmo_012
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM1_DR_01"
+        statement: "In contexts where major arms purchases face political/public/bureaucratic resistance, framing offsets as salient economic or development benefits tends to yield increased political acceptability and procurement approval."
+        context_conditions:
+          - "Public or bureaucratic skepticism/resistance to weapons procurement."
+          - "Purchase is politically contested and requires justification (including weakly security-related proposals)."
+          - "Domestic economic pressure for jobs/investment/growth raises the political value of economic narratives."
+        outcome_tendencies:
+          - "Political opposition is reduced and purchases proceed more readily."
+          - "Public acceptance of costly procurement increases (including via persuasive rhetoric)."
+        supporting_cmo_ids:
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_001
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+          - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_001
+          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_003
+        anchor_quotes:
+          - cmo_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+            quote: "The promised benefit of offsets has sometimes been used to overcome public opposition to purchases of military equipment"
+          - cmo_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_001
+            quote: "To justify its decision to purchase arms from foreign suppliers and to win public support"
+        moderators:
+          - condition: "Messaging emphasizes jobs/investment/growth as central promised benefits."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_001
+              - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_003
+          - condition: "Benefits are presented through persuasive rhetoric, including overstatement/hyperbole."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003
+              - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+        boundary_conditions:
+          - condition: "Over time, job-creation emphasis may be downscaled rather than sustained as the primary justification."
+            supporting_cmo_ids:
+              - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_003
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Consistent cross-source claim that economic framing reduces resistance (several theory-model CMOs plus South Africa case material), but the evidence base here is mixed and includes rhetorical/illustrative accounts rather than systematic evaluation."
+      - demi_regularity_id: "PM1_DR_02"
+        statement: "In contexts where governments want to support domestic defence-industrial firms but visible subsidies are politically sensitive, packaging compensatory work as an offset condition tends to yield politically lower-cost industrial support and easier justification of procurement."
+        context_conditions:
+          - "Desire to sustain/promote indigenous firms alongside sensitivity to overt subsidies."
+          - "Political need to improve acceptability of large foreign buys by redirecting value toward domestic upgrading."
+        outcome_tendencies:
+          - "Domestic producers receive indirect support framed as a purchase condition."
+          - "Procurement becomes easier to justify politically while aligning to industrial/technology priorities."
+        supporting_cmo_ids:
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_002
+          - 01_introduction_and_overview_pdf__cmo_012
+        anchor_quotes:
+          - cmo_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_002
+            quote: "offsets will give them political cover for what amounts to providing hidden subsidies to indigenous military industrial firms"
+        moderators:
+          - condition: "High unemployment and/or strong domestic industrial/technology upgrading priorities increase the perceived value of redirecting procurement-related work locally."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - 01_introduction_and_overview_pdf__cmo_012
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Two sources support the political-cover logic (one explicitly about hidden subsidies), but empirical variation on when this framing fails or backfires is not represented in this theme’s CMO set."
+      - demi_regularity_id: "PM1_DR_03"
+        statement: "In contexts where offset benefits are more visible/salient than their costs and net welfare effects are ambiguous, framing offsets as economic benefits tends to yield political attractiveness of offset policy and preference for offsets over equivalent price-discount approaches."
+        context_conditions:
+          - "Benefits and costs have asymmetric visibility to stakeholders."
+          - "Net welfare effects are ambiguous or difficult to evaluate credibly."
+        outcome_tendencies:
+          - "Offsets are politically attractive and more likely to be adopted than price discounts."
+          - "Officials can sustain support even when benefits are overstated or illusory."
+        supporting_cmo_ids:
+          - 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_003
+          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+        anchor_quotes:
+          - cmo_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+            quote: "Offsets are politically attractive largely because the expected benefits are more visible than the expected costs."
+        moderators:
+          - condition: "Where political skepticism is high, rhetorical emphasis on visible benefits may substitute for demonstrated net welfare gains."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "The benefit-salience logic is explicit, but the supporting evidence is largely conceptual or rhetorical, with limited within-theme evidence on realized economic impacts or comparative policy performance."
+      - demi_regularity_id: "PM1_DR_04"
+        statement: "In contexts where offset packages generate concentrated, geographically targeted employment/contract benefits, economic framing of offsets tends to yield supportive coalitions and procurement choices that favor bids promising regional industrial participation (even at higher prices)."
+        context_conditions:
+          - "Offset policy distributes visible employment/contracts to domestic constituencies and regions."
+          - "Regional development projects are positioned as flagship industrial participation sites."
+        outcome_tendencies:
+          - "Supportive coalitions form (politicians, firms, and other constituencies) that reduce political resistance."
+          - "Industrial participation benefits influence procurement selection, including higher-priced bids."
+        supporting_cmo_ids:
+          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_005
+          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_017
+        anchor_quotes:
+          - cmo_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_005
+            quote: "the politicians, because they can create employment in their political hinterland"
+          - cmo_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_017
+            quote: "despite high tender prices in both cases"
+        moderators:
+          - condition: "Benefits accrue to politically relevant constituencies (e.g., local employment and contracts)."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_005
+          - condition: "Offsets are tied to a salient regional-industrial project (e.g., an industrial development zone) that becomes part of procurement justification."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_017
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Supported by two case-study CMOs showing coalition/value concentration and bid-selection influence, but geographic and program diversity is limited and countervailing cases are not present in the PM1 set."
+      - demi_regularity_id: "PM1_DR_05"
+        statement: "In contexts where buyers are allied with the exporter and seek political assurance, interoperability, and/or indigenous capacity, framing arms sales plus offsets as alliance- and capability-enhancing benefits tends to yield acceptance of offset-inclusive purchases and willingness to import foreign systems."
+        context_conditions:
+          - "Security relationships with exporting states and interest in alliance-building signals."
+          - "Perceived external threat and need for assurance of continued exporter commitment."
+          - "Interest in extracting know-how/economic activity via offsets to make imports politically acceptable."
+        outcome_tendencies:
+          - "Defense sales proceed with industrial compensation packages that embed alliance-building and interoperability goals."
+          - "Buyers pursue offset-inclusive arms purchases for political assurance as well as industrial benefits."
+        supporting_cmo_ids:
+          - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001
+          - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018
+          - 01_introduction_and_overview_pdf__cmo_011
+          - 05_arms_trade_as_illiberal_trade_pdf__cmo_010
+        anchor_quotes:
+          - cmo_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001
+            quote: "The reasons include alliance building, promotion of equipment interoperability"
+          - cmo_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018
+            quote: "Taiwan seeks those sales to assure a continued commitment by the United States"
+        moderators:
+          - condition: "High threat / tenuous international position increases the value of arms sales as political assurance."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018
+          - condition: "Ability to extract economic activity and know-how via offsets increases willingness to import foreign systems."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 05_arms_trade_as_illiberal_trade_pdf__cmo_010
+        boundary_conditions:
+          - condition: "Even where offsets are used for capacity-building, recipients’ starting technology level and human-resource constraints can limit exploitation of transferred technologies."
+            supporting_cmo_ids:
+              - 01_introduction_and_overview_pdf__cmo_011
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Multiple comparative/theory and overview sources align on offsets as inducements tied to alliance/interoperability/assurance, but evidence on downstream capability effects is explicitly conditional and not uniformly demonstrated within this theme’s CMO set."
+    theme_notes:
+      - "PM1 primarily captures political legitimation dynamics (economic-development rhetoric, coalition building, and political assurance) rather than measured economic impacts."
+      - "Evidence includes multiple theory-model/rhetorical claims plus a small number of case-study examples (Belgium, South Africa)."
+      - "Within-theme evidence is thin on negative cases showing when economic framing fails to sustain support or triggers backlash."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM1.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,172 @@
+demi_regularities_by_theme:
+  - theme_id: PM3
+    theme_label: "Cost pass-through via pricing"
+    mechanism_explanation: "Suppliers internalise offset costs and recover them by raising the weapon sale price, shifting the burden to buyers."
+    cmo_ids_in_theme:
+      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007
+      - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004
+      - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005
+      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011
+      - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_006
+      - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+      - 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006
+      - 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010
+      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024
+      - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004
+      - 01_introduction_and_overview_pdf__cmo_007
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM3_DR_01"
+        statement: "In contexts where complex, customer-tailored weapon systems lack transparent benchmark prices, recovering offset costs via higher offered prices tends to yield hidden price padding and weak enforceability of 'no price increase' safeguards."
+        context_conditions:
+          - "Procurements involve complex, bespoke systems with no unique market benchmark price."
+          - "Offset guidelines/policies may formally prohibit explicit price increases due to offsets."
+          - "Arms markets lack fixed or comparable prices that would make padding verifiable."
+        outcome_tendencies:
+          - "Buyers cannot reliably verify how much offset cost is passed through into the weapons price."
+          - "Monitoring/enforcing 'no price increase' requirements is difficult in practice."
+        supporting_cmo_ids:
+          - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004
+          - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004
+        anchor_quotes:
+          - cmo_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004
+            quote: "there is no unique market price pa with which p*a can be unambiguously compared"
+          - cmo_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004
+            quote: "there is no fixed price for imported arms."
+        moderators:
+          - condition: "Where pricing is not fixed or comparable, compliance monitoring of 'no price increase' rules becomes more difficult."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004
+              - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004
+        boundary_conditions: []
+        counterexamples: []
+        confidence: high
+        confidence_justification: "Two high-confidence CMOs independently emphasize price-opacity and lack of benchmarks as a structural enabler of hidden pass-through and weak enforcement of no-price-increase safeguards."
+      - demi_regularity_id: "PM3_DR_02"
+        statement: "In contexts where offset obligations impose administrative, production, transfer, or local-participation costs, recovering those costs via higher bid/contract prices tends to yield measurable procurement price premiums relative to off-the-shelf or more competitive purchasing."
+        context_conditions:
+          - "Offset obligations impose real overhead and delivery costs (e.g., administration, transfers, mandated local participation)."
+          - "Buyers can compare (at least conceptually) to off-the-shelf or 'free-market' alternatives."
+          - "Offsets introduce non-price conditions that weaken market-discipline pressures on pricing."
+        outcome_tendencies:
+          - "Negotiated prices are higher than would be expected under competition or off-the-shelf purchase."
+          - "Price premiums can be large in specific cases (e.g., estimated 20–30% procurement penalties; calculated ~29% assembly participation premium)."
+          - "Higher acquisition costs reduce or negate net offset benefits and can imply welfare losses."
+        supporting_cmo_ids:
+          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007
+          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_006
+          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024
+          - 01_introduction_and_overview_pdf__cmo_007
+        anchor_quotes:
+          - cmo_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007
+            quote: "vendors seek to include most of this premium in the selling price"
+          - cmo_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024
+            quote: "the cost premium paid for local industry participation in assembly of F/A-18 aircraft ... amounted to 29 percent"
+        moderators:
+          - condition: "Mandating local participation in assembly creates a 'local-content premium' relative to alternative sourcing."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024
+          - condition: "When offsets reduce market discipline (e.g., negotiated non-price conditions), suppliers can more readily pass through administrative and production costs."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_006
+        boundary_conditions: []
+        counterexamples: []
+        confidence: high
+        confidence_justification: "Multiple CMOs (including case-estimated and agency-calculated premiums) converge on the same pattern: offset-related costs are incorporated into prices, producing procurement premiums versus off-the-shelf/competitive alternatives."
+      - demi_regularity_id: "PM3_DR_03"
+        statement: "In contexts where buyers demand offsets and accept higher prices as an investment in domestic participation, recovering offset costs via higher contract prices tends to yield a procurement penalty financed from the defense budget and crowd-out of other spending categories."
+        context_conditions:
+          - "Offsets are demanded rather than purely price-minimizing off-the-shelf purchasing."
+          - "Buyers are willing to treat the price premium as an investment to obtain industrial participation/transfer."
+          - "Defense budgets are finite, so higher acquisition costs compete with other lines."
+        outcome_tendencies:
+          - "A sizable procurement price penalty is paid and financed out of the defense budget."
+          - "Higher acquisition costs crowd out other defense budget categories."
+        supporting_cmo_ids:
+          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+        anchor_quotes:
+          - cmo_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+            quote: "it is estimated that Belgium pays a 20 to 30 percent penalty for imported weapon systems"
+        moderators:
+          - condition: "When buyers explicitly accept higher prices as an investment, premiums are more likely to be tolerated and absorbed in budgets."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Supported by a high-confidence Belgium case estimate linking offsets to a sizable procurement penalty and budget crowd-out, but the evidence base is narrow (single setting) and not cross-validated across multiple countries in this theme set."
+      - demi_regularity_id: "PM3_DR_04"
+        statement: "In contexts where offset/countertrade obligations or macroeconomic conditions threaten suppliers' expected returns, maintaining profitability by raising prices, seeking renegotiation, or walking away tends to yield upward price adjustment, renegotiation pressure, or contract instability."
+        context_conditions:
+          - "Offset/countertrade obligations can entail expected break-even or losses absent compensation."
+          - "Suppliers can adjust the primary contract terms (price) or threaten to exit rather than absorb losses."
+          - "Macroeconomic volatility (e.g., currency devaluation) changes the real value of payments and increases contract risk."
+        outcome_tendencies:
+          - "Suppliers price upward to compensate expected losses, or refuse the deal if compensation is insufficient."
+          - "Renegotiation pressure and threats of exit can destabilize industrial participation arrangements."
+        supporting_cmo_ids:
+          - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005
+          - 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006
+        anchor_quotes:
+          - cmo_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005
+            quote: "Y would proceed with the arms-offset deal only if p*a were high enough to compensate it for losses"
+        moderators:
+          - condition: "Sharp currency devaluation increases contract risk by reducing the real (USD-equivalent) value of payments."
+            effect: "enables"
+            supporting_cmo_ids:
+              - 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "The pattern is supported by a formal countertrade model (high confidence) and one high-confidence macro-shock case indicating renegotiation/exit risk, but there are few additional empirical cases in the PM3 set directly tracing exit/instability outcomes."
+      - demi_regularity_id: "PM3_DR_05"
+        statement: "In contexts where buyers believe suppliers are loading offset costs into contract prices, buyers attempting to reduce pass-through by escalating offset targets tends to yield rising target levels over time and persistent tension over who pays for offsets."
+        context_conditions:
+          - "Vendors treat offset requirements primarily as a cost of making the sale."
+          - "Buyers and vendors bargain over how costs are distributed between price and offset deliverables."
+        outcome_tendencies:
+          - "Offset targets rise over time as buyers respond to perceived cost-loading."
+          - "Disputes persist over valuation, burden-sharing, and who ultimately pays."
+        supporting_cmo_ids:
+          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011
+        anchor_quotes:
+          - cmo_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011
+            quote: "the majority of arms vendors view offset cost as a pricing issue"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: low
+        confidence_justification: "This bargaining-feedback dynamic is plausible but rests on a single medium-confidence CMO in this theme set, with limited within-theme triangulation on how widespread or consequential target escalation is."
+      - demi_regularity_id: "PM3_DR_06"
+        statement: "In contexts where exporters offer supplier-provided credit/aid alongside offset-linked procurement, suppliers recouping those financing and delivery costs through higher effective selling prices (or shifting value back as an export subsidy) tends to yield reduced value-for-money and higher risk of unexpectedly expensive or poorly performing deals."
+        context_conditions:
+          - "Procurement packages include supplier-provided credit/aid alongside offsets and technology-transfer promises."
+          - "Pricing and performance risks exist, and apparent buyer-side financing benefits can obscure who ultimately pays."
+        outcome_tendencies:
+          - "Deals become more expensive than expected once embedded financing/subsidy effects are accounted for."
+          - "Value-for-money declines and some deals are at higher risk of failure or poor performance."
+        supporting_cmo_ids:
+          - 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010
+        anchor_quotes:
+          - cmo_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010
+            quote: "it was a subsidy for the British company that was selling the helicopter"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: medium
+        confidence_justification: "Backed by one high-confidence India-focused CMO linking credit/aid packages to hidden subsidies and higher effective costs, but the PM3 evidence set is thin on additional cases across other countries or deal types."
+    theme_notes:
+      - "PM3 evidence consistently points to cost pass-through into prices, but also highlights that opacity of arms pricing makes the magnitude hard to verify (especially under 'no price increase' safeguards)."
+      - "The PM3 set mixes model-based arguments with a small number of cited or estimated premiums (e.g., Belgium 20–30% estimate; Australia F/A-18 assembly premium)."
+      - "Further patterning would benefit from additional empirical CMOs tracing how buyers detect (or fail to detect) price padding and how this interacts with enforcement regimes (PM2) and industrial-benefit claims (PM1)."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM3.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"
