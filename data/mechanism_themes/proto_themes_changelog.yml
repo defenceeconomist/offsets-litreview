@@ -2336,3 +2336,214 @@ change_log:
   mechanism_id: 01_introduction_and_overview_pdf__cmo_018
   summary: Assigned to PM10 (competitive pressure).
   rationale: Firms offer offsets to avoid losing sales.
+- change_id: CHG_391
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004
+  summary: Moved 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004 from PM7 to PM54.
+  rationale: Mechanism describes capability acquisition through domestic participation and learning (development/manufacture and
+    through-life support), which aligns with PM54’s technology acquisition via collaboration. PM7 is narrowly about employer-funded
+    training expanding the labour pool.
+- change_id: CHG_392
+  change_type: assignment
+  theme_id: PM66
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011 from PM7 to PM66.
+  rationale: Mechanism links import contracts to compensatory industrial work, matching PM66’s import-compensation logic (offsets
+    used to rebalance domestic industrial participation as imports rise). PM7 focuses on employer-funded training expanding skill
+    supply.
+- change_id: CHG_393
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016 from PM7 to PM54.
+  rationale: Mechanism describes focusing offsets on prioritized military technology fields to secure long-term technological
+    competence, which fits PM54’s technology acquisition and capability-building orientation. PM7 is about expanding the labour
+    pool via employer-funded training.
+- change_id: CHG_394
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism is about building domestic maintenance/modification capability for imported systems (through direct military
+    offsets), aligning with PM54’s technology/capability acquisition via collaboration. PM7 is limited to employer-funded training
+    expanding the skill pool.
+- change_id: CHG_395
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018 from PM7 to PM54.
+  rationale: Mechanism describes targeted, qualitatively evaluated military offsets sustaining long-term competence in key
+    technology fields, which fits PM54’s focus on technology acquisition and capability build-up. PM7 is specifically about
+    employer-funded training expanding labour supply.
+- change_id: CHG_396
+  change_type: assignment
+  theme_id: PM66
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016
+  summary: Moved 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016 from PM7 to PM66.
+  rationale: Mechanism requires buyback/local sourcing to redirect procurement spending toward domestic suppliers, which is
+    compensatory import-offset logic consistent with PM66. PM7 is about employer-funded training expanding local skill supply.
+- change_id: CHG_397
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017
+  summary: Moved 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism bundles technology transfer, training, assembly, and production-line transfer to localize production,
+    directly matching PM54’s technology acquisition via licensed production/collaboration. PM7 is about expanding the labour pool
+    via employer-funded training.
+- change_id: CHG_398
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism describes selective localization of high-value technologies to build autonomy while avoiding inefficient
+    production, aligning with PM54’s technology acquisition/capability-building process. PM7 focuses on employer-funded training
+    expanding skill supply.
+- change_id: CHG_399
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism creates domestic entities for software development, absorption, and training to increase autonomy over
+    complex systems, which is a technology/capability acquisition pathway captured by PM54. PM7 is narrowly about employer-funded
+    training expanding the labour pool.
+- change_id: CHG_400
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019 from PM7 to PM54.
+  rationale: Mechanism requires technology transfer and reinvestment for software maintenance to increase sustainment/upgrade
+    control, fitting PM54’s technology acquisition via collaboration. PM7 concerns employer-funded training increasing labour
+    supply.
+- change_id: CHG_401
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013
+  summary: Moved 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013 from PM7 to PM54.
+  rationale: Mechanism is about negotiating targeted transfer while accepting partial dependence to avoid misallocation, which is
+    still fundamentally about technology acquisition choices and capability-building (PM54). PM7 is specifically about employer-funded
+    training expanding the local skill pool.
+- change_id: CHG_402
+  change_type: ambiguous
+  theme_id: AMBIGUOUS
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
+  summary: Moved 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001 from PM7 to AMBIGUOUS (possible PM54, PM5).
+  rationale: Mechanism combines technology acquisition (licensed production/technology transfer) with external-finance/countertrade
+    elements aimed at easing foreign-exchange constraints. This spans distinct causal processes covered separately by PM54 and PM5.
+- change_id: CHG_403
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016
+  summary: Moved 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016 from PM7 to PM54.
+  rationale: Mechanism describes technology-assistance offsets transferring know-how to support domestic development, aligning with
+    PM54’s technology acquisition via collaboration. PM7 is about employer-funded training expanding labour supply.
+- change_id: CHG_404
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002 from PM7 to PM54.
+  rationale: Mechanism links technology transfer and production work share to domestic substitutes and spillovers, fitting PM54’s
+    technology acquisition/capability build-up process. PM7 is narrowly about employer-funded training expanding the local skill base.
+- change_id: CHG_405
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005 from PM7 to PM54.
+  rationale: Mechanism describes licensed local production and extensive transfer functioning like offsets to deliver industrial
+    capability gains, aligning with PM54. PM7 focuses on employer-funded training expanding labour supply.
+- change_id: CHG_406
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006 from PM7 to PM54.
+  rationale: Mechanism channels learning through domestic procurement and licensed production to sustain capability, which fits
+    PM54’s technology acquisition/collaboration logic. PM7 is about employer-funded training expanding the skill pool.
+- change_id: CHG_407
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007 from PM7 to PM54.
+  rationale: Mechanism emphasizes sustaining an advanced domestic production base to support sustainment and leverage, aligning
+    with PM54’s capability-building focus. PM7 is specifically about employer-funded training expanding labour supply.
+- change_id: CHG_408
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014 from PM7 to PM54.
+  rationale: Mechanism embeds technology transfers to build domestic manufacturing and integration capability, which fits PM54’s
+    technology acquisition pathway. PM7 concerns employer-funded training expanding the labour pool.
+- change_id: CHG_409
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021 from PM7 to PM54.
+  rationale: Mechanism establishes domestic maintenance/repair infrastructure via procurement-linked industrial contracts, aligning
+    with PM54’s technology/capability acquisition via collaboration. PM7 is about employer-funded training expanding skill supply.
+- change_id: CHG_410
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001 from PM7 to PM54.
+  rationale: Mechanism conditions purchases on licensed production/coproduction/transfer to shorten learning timelines, directly
+    matching PM54. PM7 is limited to employer-funded training expanding the labour pool.
+- change_id: CHG_411
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003 from PM7 to PM54.
+  rationale: Mechanism combines offsets with state backing to build domestic technology/skills/infrastructure, which is a
+    capability-building pathway consistent with PM54’s collaboration/transfer logic. PM7 focuses on employer-funded training expanding
+    labour supply.
+- change_id: CHG_412
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004 from PM7 to PM54.
+  rationale: Mechanism uses offsets to acquire R&D/design/manufacturing expertise and compress mastery timelines, aligning with
+    PM54’s technology acquisition process. PM7 is about employer-funded training expanding the local skill pool.
+- change_id: CHG_413
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013 from PM7 to PM54.
+  rationale: Mechanism uses targeted transfer and training to build maintenance/upgrade capability without autarky, fitting PM54’s
+    technology acquisition/capability-building orientation. PM7 is narrowly about employer-funded training expanding skill supply.
+- change_id: CHG_414
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014 from PM7 to PM54.
+  rationale: Mechanism requires transfer and training to build local maintenance/upgrade competencies, consistent with PM54’s
+    technology acquisition via collaboration. PM7 is about employer-funded training expanding the labour pool.
+- change_id: CHG_415
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism relies on collaboration with foreign firms for specialized repair/manufacturing to build sustainment
+    capability, aligning with PM54’s collaboration-driven capability acquisition. PM7 focuses on employer-funded training expanding
+    skill supply.
+- change_id: CHG_416
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005 from PM7 to PM54.
+  rationale: Mechanism targets offset activity to sustainment/adaptation and long-term technologies to build self-reliance-relevant
+    capability, which aligns better with PM54’s capability-building via directed collaboration than with PM7’s labour-supply training
+    focus.
+- change_id: CHG_417
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009 from PM7 to PM54.
+  rationale: Mechanism substitutes R&D, exports support, technology transfer, training, and infrastructure for local content to
+    generate capability gains, fitting PM54’s technology/capability acquisition framing. PM7 is about employer-funded training expanding
+    the labour pool.
+- change_id: CHG_418
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism uses contractual undertakings (transfer, joint ventures, directed business) to build local industrial and
+    maintenance capability, aligning with PM54’s collaboration-driven capability acquisition. PM7 focuses on expanding labour supply via
+    employer-funded training.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is a Prisma Diagram – Offsets</title>
+<title>proto_theme_allocation_audit – Offsets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-42ed7287b56c5c583e2c2463c9cf4916.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-42ed7287b56c5c583e2c2463c9cf4916.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Offsets</a> 
+      <a href="../">Offsets</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -110,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reporting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reporting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -125,13 +160,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reporting/analysis/mechanism-cosine-similarity.html" class="sidebar-item-text sidebar-link">
+  <a href="../reporting/analysis/mechanism-cosine-similarity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mechanism Embeddings and Similarity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reporting/analysis/theme-by-rq-crosstab.html" class="sidebar-item-text sidebar-link">
+  <a href="../reporting/analysis/theme-by-rq-crosstab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CMO Counts: Mechanism Theme × Research Question</span></a>
   </div>
 </li>
@@ -146,67 +181,105 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">What is a Prisma Diagram</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>A PRISMA diagram is a flow diagram used in systematic reviews and meta-analyses to show how studies were identified, screened, and selected for inclusion.</p>
-<p>It comes from the <a href="https://www.prisma-statement.org/">PRISMA Statement</a> (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) and is mainly about transparency — letting readers see exactly what happened to all the studies you found.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://images.prismic.io/aje-cms-production/6acfeb14-dcda-4586-ae7d-dae01bab7086_prisma-flow-diagram-example.jpg?auto=compress%2Cformat&amp;h=1748&amp;rect=2%2C0%2C4497%2C3494&amp;w=2250" class="img-fluid figure-img"></p>
-<figcaption>Image</figcaption>
-</figure>
-</div>
-<p><strong>What the diagram shows (step by step)</strong></p>
-<p>Typically, a PRISMA diagram tracks studies through four stages:</p>
+<p>Prompt: Proto-Mechanism Theme Allocation Audit (One Theme at a Time)</p>
+<p>ROLE You are supporting a realist evidence synthesis. Your task is to audit whether mechanisms currently assigned to ONE target proto-mechanism theme are allocated to the best-fitting theme.</p>
+<p>You must classify by underlying generative causal process, not topic similarity.</p>
+<p>INPUTS YOU WILL RECEIVE</p>
 <ol type="1">
-<li><p><strong>Identification</strong></p>
-<ul>
-<li>Records found through database searches</li>
-<li>Records found through other sources (e.g.&nbsp;references, grey literature)</li>
-</ul></li>
-<li><p><strong>Screening</strong></p>
-<ul>
-<li>Records after duplicates removed</li>
-<li>Records screened by title and abstract</li>
-<li>Records excluded at this stage</li>
-</ul></li>
-<li><p><strong>Eligibility</strong></p>
-<ul>
-<li>Full-text articles assessed</li>
-<li>Full-text articles excluded (with reasons)</li>
-</ul></li>
-<li><p><strong>Included</strong></p>
-<ul>
-<li>Studies included in the qualitative synthesis</li>
-<li>Studies included in the quantitative synthesis (meta-analysis), if applicable</li>
-</ul></li>
+<li><p>target_theme_id The theme ID to audit (e.g., PM17).</p></li>
+<li><p>proto_themes_yml The full current contents of: data/mechanism_themes/proto_themes.yml</p></li>
+<li><p>proto_themes_changelog_yml The full current contents of: data/mechanism_themes/proto_themes_changelog.yml</p></li>
 </ol>
-<p><strong>Why it matters</strong></p>
+<p>REFERENCE EXTRACTION (PYTHON) — USE THIS WORKFLOW EVERY TIME</p>
+<p>Use this code structure to ensure you consistently compare mechanisms to ALL themes’ labels and explanations. (This is a workflow reference; do not execute it.)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yaml</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>proto <span class="op">=</span> yaml.safe_load(proto_themes_yml)  <span class="co"># dict</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>themes <span class="op">=</span> proto[<span class="st">"proto_mechanism_themes"</span>]  <span class="co"># list[dict]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>theme_index <span class="op">=</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  t[<span class="st">"theme_id"</span>]: {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"theme_label"</span>: t[<span class="st">"theme_label"</span>],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mechanism_explanation"</span>: t[<span class="st">"mechanism_explanation"</span>],</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> t <span class="kw">in</span> themes</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>target_theme <span class="op">=</span> <span class="bu">next</span>(t <span class="cf">for</span> t <span class="kw">in</span> themes <span class="cf">if</span> t[<span class="st">"theme_id"</span>] <span class="op">==</span> target_theme_id)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>candidate_mechanisms <span class="op">=</span> <span class="bu">list</span>(target_theme.get(<span class="st">"mechanisms"</span>, []))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>changelog <span class="op">=</span> yaml.safe_load(proto_themes_changelog_yml)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>existing_ids <span class="op">=</span> [</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">int</span>(re.search(<span class="vs">r"CHG_</span><span class="kw">(</span><span class="ch">\\</span><span class="vs">d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, c[<span class="st">"change_id"</span>]).group(<span class="dv">1</span>))</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> c <span class="kw">in</span> changelog.get(<span class="st">"change_log"</span>, [])</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> re.search(<span class="vs">r"CHG_</span><span class="kw">(</span><span class="ch">\\</span><span class="vs">d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, c.get(<span class="st">"change_id"</span>, <span class="st">""</span>))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>next_change_num <span class="op">=</span> (<span class="bu">max</span>(existing_ids) <span class="op">+</span> <span class="dv">1</span>) <span class="cf">if</span> existing_ids <span class="cf">else</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>AUDIT TASK (FOR THE TARGET THEME ONLY)</p>
+<p>For each mechanism currently inside the target theme:</p>
+<ol type="1">
+<li>Compare the mechanism (its <code>text</code>) against EVERY theme’s:</li>
+</ol>
 <ul>
-<li>Makes the review <strong>reproducible</strong></li>
-<li>Shows <strong>potential bias</strong> or subjectivity in study selection</li>
-<li>Required or strongly encouraged by most <strong>academic journals</strong></li>
-<li>Helps readers quickly judge the <strong>rigour</strong> of the review</li>
+<li><code>theme_label</code></li>
+<li><code>mechanism_explanation</code></li>
 </ul>
+<ol start="2" type="1">
+<li>Decide one outcome:</li>
+</ol>
+<ol type="A">
+<li><p>KEEP IN TARGET THEME Only if the target theme’s explanation is the best match to the mechanism’s causal logic.</p></li>
+<li><p>REALLOCATE TO A DIFFERENT EXISTING THEME If another theme’s label/explanation clearly fits the mechanism better than the target theme.</p></li>
+<li><p>MARK AMBIGUOUS If the mechanism plausibly fits 2+ themes and you cannot decide confidently. Move it to <code>ambiguous_mechanisms</code> and list the likely theme IDs in <code>possible_themes</code>.</p></li>
+</ol>
+<p>DECISION RULES (STRICT)</p>
+<ul>
+<li><p>Use generative process similarity, not:</p>
+<ul>
+<li>shared outcomes</li>
+<li>shared country/programme</li>
+<li>shared sector / platform</li>
+<li>surface keywords</li>
+</ul></li>
+<li><p>“Better fit” means: another theme’s explanation more directly states the causal process described in the mechanism.</p></li>
+<li><p>Do not create new themes in this task.</p></li>
+</ul>
+<p>EDITING RULES (STRICT)</p>
+<ul>
+<li>Do not change any mechanism <code>id</code> or <code>text</code>.</li>
+<li>You MAY update <code>rationale</code> when a mechanism is kept or moved, but keep it short and specific to why it fits that theme.</li>
+<li>Ensure each mechanism appears exactly once across:
+<ul>
+<li>all themes’ <code>mechanisms</code> lists, OR</li>
+<li><code>ambiguous_mechanisms</code></li>
+</ul></li>
+<li>Only move mechanisms that were originally in the target theme for this run.
+<ul>
+<li>Do not “clean up” other themes unless needed to avoid duplicates created by your move.</li>
+</ul></li>
+</ul>
+<p>CHANGE LOGGING (UPDATE EXISTING YAML CHANGE LOG)</p>
+<p>Append a new entry to <code>data/mechanism_themes/proto_themes_changelog.yml</code> for every change you make:</p>
+<ul>
+<li>If moved theme-to-theme: <code>change_type: assignment</code></li>
+<li>If moved to ambiguous: <code>change_type: ambiguous</code></li>
+</ul>
+<p>Each entry must include: - <code>change_id</code>: next sequential ID (CHG_###), continuing from the current max - <code>theme_id</code>: the destination theme ID (or <code>AMBIGUOUS</code>) - <code>mechanism_id</code> - <code>summary</code>: 1 sentence describing what changed (include from/to theme IDs) - <code>rationale</code>: 1–2 sentences justifying the change in terms of causal process fit</p>
+<p>OUTPUT FORMAT (TWO STRICT YAML DOCUMENTS)</p>
+<p>Return TWO YAML documents separated by a line containing only <code>---</code>.</p>
+<p>Document 1 will be saved to: data/mechanism_themes/proto_themes.yml Document 2 will be saved to: data/mechanism_themes/proto_themes_changelog.yml</p>
+<p>Document 1 MUST match this schema:</p>
+<p>proto_mechanism_themes: - theme_id: PM1 theme_label: “Label” mechanism_explanation: “Explanation” mechanisms: - id: MECH_001 text: “Full mechanism statement” rationale: “Why it fits this theme’s causal process.”</p>
+<p>ambiguous_mechanisms: - id: MECH_031 text: “Full mechanism statement” possible_themes: [PM2, PM4] explanation: “Why assignment is ambiguous; what evidence would resolve it.”</p>
+<p>Document 2 MUST match this schema:</p>
+<p>change_log: - change_id: CHG_123 change_type: assignment | ambiguous theme_id: PM7 | AMBIGUOUS mechanism_id: MECH_022 summary: “Moved MECH_022 from PM3 to PM7.” rationale: “Mechanism describes X causal process; PM7 explicitly captures X, whereas PM3 captures Y.”</p>
+<p>Do not include any commentary outside the TWO YAML documents.</p>
 
 
 

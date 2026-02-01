@@ -385,119 +385,6 @@ proto_mechanism_themes:
     text: Requiring employer-financed training that raises lower-skilled workers to the needed level expands the local skill
       pool rather than draining it.
     rationale: Employer-funded training increases the skill pool rather than drawing it down.
-  - id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004
-    text: By preferring offsets that involve domestic participation in development/manufacture and learning to maintain/support
-      equipment, policies aim to sustain skills and lifecycle support capability.
-    rationale: Offsets linked to development/manufacture and support aim to sustain skills and lifecycle capability.
-  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011
-    text: Linking offset requirements to import contracts creates compensatory commercial/industrial work intended to expand
-      production and sustain employment.
-    rationale: Compensatory industrial work aims to expand production and sustain employment.
-  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016
-    text: By abandoning civil offsets and focusing on military offsets in prioritized technology fields, policy aims to secure
-      long-term defense technological competence rather than diffuse economic objectives.
-    rationale: Focusing on military offsets in priority tech fields aims to secure long-term competence.
-  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017
-    text: Direct military offsets build local capacity to maintain and modify imported systems, supporting lifecycle readiness
-      and security of supply.
-    rationale: Direct military offsets build local maintenance and modification capacity.
-  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018
-    text: Indirect military offsets are targeted to prioritized technology fields and evaluated for qualitative and long-term
-      impact, sustaining competence across the defense technology base.
-    rationale: Targeted indirect offsets sustain competence in prioritized tech fields.
-  - id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016
-    text: By requiring buyback and local sourcing, offsets redirect procurement-related spending toward domestic suppliers
-      (including subsidiaries) and expand a local industrial footprint.
-    rationale: Buyback and local sourcing expand domestic footprint and capability.
-  - id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017
-    text: Technology transfer, worker training, assembly/part-manufacture, and eventual transfer of the production line enable
-      progressive localization (“polonization”) of production.
-    rationale: Technology transfer and training enable progressive localization of production.
-  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015
-    text: By concentrating on key technologies (e.g., fuselage and systems integration) and importing other components, firms
-      can build autonomy in high-value areas while avoiding inefficient local production.
-    rationale: Focus on key technologies builds autonomy while avoiding inefficient local production.
-  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017
-    text: Creating domestic entities responsible for software development, technology absorption, and training increases national
-      autonomy over operation and evolution of complex systems.
-    rationale: Domestic entities for software/training increase autonomy over system evolution.
-  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019
-    text: Requiring trade-compensation reinvestment and technology transfer for software maintenance increases buyer control
-      over sustainment and upgrades.
-    rationale: Trade-compensation reinvestment and transfer requirements increase sustainment control.
-  - id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013
-    text: Overambitious autonomy goals can misallocate resources; accepting partial technological dependence while negotiating
-      for targeted transfer reduces unrealistic expectations.
-    rationale: Targeted transfer within partial dependence avoids misallocation from unrealistic autonomy goals.
-  - id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
-    text: By routinely embedding licensed production, technology transfer, countertrade/barter, and long-term credit into
-      procurement, India uses procurement-linked resources to build domestic capability and manage foreign exchange constraints.
-    rationale: Procurement-linked transfer and production build domestic capability and manage FX constraints.
-  - id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016
-    text: Technology-assistance offsets can be designed to support domestic development (e.g., LCA, indigenous carrier) by
-      transferring relevant know-how, but value can be undermined by overpricing or limited implementation.
-    rationale: Technology-assistance offsets can support domestic development if well-implemented.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002
-    text: Technology transfers and production offsets provide recipients with know-how and work share that can enable domestic
-      substitutes and spillovers into commercial industry.
-    rationale: Transfers and work share enable domestic substitutes and commercial spillovers.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005
-    text: Japan instead pursues extensive technology transfers and licensed local production from the US, which function similarly
-      to offsets by delivering industrial and political benefits.
-    rationale: Licensed production and transfer deliver industrial and political benefits akin to offsets.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006
-    text: By ranking domestic procurement first and licensed local production second, Japan channels demand and learning into
-      domestic firms, maintaining production/technology capability.
-    rationale: Domestic-first procurement channels learning into domestic firms, sustaining capability.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007
-    text: Maintaining an advanced domestic production base supports sustainment (operating ratio and sustainability) and provides
-      negotiating leverage when introducing equipment from abroad.
-    rationale: Advanced domestic base supports sustainment and bargaining leverage.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014
-    text: By maintaining financial/budgetary leadership and embedding technology transfers from foreign suppliers, Korea builds
-      domestic manufacturing and integration capability while preserving export flexibility.
-    rationale: Embedded transfers build manufacturing and integration capability with export flexibility.
-  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021
-    text: Offset agreements can establish domestic and regional maintenance/repair infrastructure and generate sizable industrial
-      contracts tied to procurement.
-    rationale: Offsets create maintenance infrastructure and industrial contracts tied to procurement.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001
-    text: By conditioning arms purchases on licensed production, coproduction, and technology transfer, offsets provide foreign
-      technical inputs that shorten the learning timeline.
-    rationale: Licensed production and transfer shorten learning timelines.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003
-    text: State-owned “strategic enterprises” created in key sectors use offsets and state backing to build domestic technology,
-      skills, and infrastructure.
-    rationale: Offsets plus state backing build domestic technology, skills, and infrastructure.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004
-    text: By explicitly using offsets to acquire research, design, and manufacturing expertise, IPTN attempts to compress
-      the timeline for “mastery” of aviation technology.
-    rationale: Offsets used to acquire R&D and manufacturing expertise compress learning timelines.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013
-    text: By using offsets selectively for technology transfer and training that support maintenance, repair, and upgrades,
-      Singapore builds readiness-relevant capabilities without pursuing comprehensive autarky.
-    rationale: Targeted transfer/training builds maintenance and upgrade capability without autarky.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014
-    text: Requiring technology transfer and training within ICPs steers procurement toward building local maintenance and
-      upgrade competencies.
-    rationale: Transfer/training steers procurement toward local MRO competencies.
-  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015
-    text: Collaboration with foreign firms on specialized repair/manufacturing (e.g., turbine blade overhaul) builds domestic
-      capabilities that support aircraft and submarine sustainment.
-    rationale: Specialized repair collaborations build domestic sustainment capability.
-  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005
-    text: Targeting offsets to maintenance, adaptation, munitions, spares, and long-term technologies concentrates effort
-      on capabilities tied to self-reliance; abandoning ill-focused offsets shifts capability-building to more specific contract
-      provisions.
-    rationale: Targeted offsets concentrate effort on self-reliance capabilities.
-  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009
-    text: When local content is not feasible, substituting SIDA activities (R&D, exports, technology transfer, training, infrastructure)
-      attempts to deliver capability gains through alternative investments that may carry cost premiums.
-    rationale: Alternative SIDA investments aim to deliver capability gains when local content is infeasible.
-  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015
-    text: Contractual undertakings to direct business (including maintenance capability, technology transfers, joint ventures,
-      and exports support) create pathways to build local industrial capability.
-    rationale: Contract undertakings to direct business build local industrial capability.
 - theme_id: PM8
   theme_label: Transferability and contextual fit
   mechanism_explanation: 'Spillovers hinge on transferability and fit: military-origin skills/technologies often mismatch
@@ -1746,6 +1633,107 @@ proto_mechanism_themes:
     text: Offsets are implemented as licensed production, transferring know-how and embedding domestic capabilities despite
       a recognised price premium.
     rationale: Licensed production transfers know-how and embeds capability despite price premium.
+  - id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004
+    text: By preferring offsets that involve domestic participation in development/manufacture and learning to maintain/support
+      equipment, policies aim to sustain skills and lifecycle support capability.
+    rationale: Participation in development/manufacture and support builds skills and lifecycle support capability.
+  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016
+    text: By abandoning civil offsets and focusing on military offsets in prioritized technology fields, policy aims to secure
+      long-term defense technological competence rather than diffuse economic objectives.
+    rationale: Military offsets targeted to priority technology fields build long-term defense technological competence.
+  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017
+    text: Direct military offsets build local capacity to maintain and modify imported systems, supporting lifecycle readiness
+      and security of supply.
+    rationale: Direct offsets build maintenance and modification capability for imported systems.
+  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018
+    text: Indirect military offsets are targeted to prioritized technology fields and evaluated for qualitative and long-term
+      impact, sustaining competence across the defense technology base.
+    rationale: Targeted indirect offsets sustain competence in prioritized technology fields over the long term.
+  - id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017
+    text: Technology transfer, worker training, assembly/part-manufacture, and eventual transfer of the production line enable
+      progressive localization (“polonization”) of production.
+    rationale: Technology transfer, training, and production-line transfer enable progressive localization of production.
+  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015
+    text: By concentrating on key technologies (e.g., fuselage and systems integration) and importing other components, firms
+      can build autonomy in high-value areas while avoiding inefficient local production.
+    rationale: Selective localization builds autonomy in high-value technologies while avoiding inefficient local production.
+  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017
+    text: Creating domestic entities responsible for software development, technology absorption, and training increases national
+      autonomy over operation and evolution of complex systems.
+    rationale: Domestic software/absorption/training entities increase autonomy over operating and evolving complex systems.
+  - id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019
+    text: Requiring trade-compensation reinvestment and technology transfer for software maintenance increases buyer control
+      over sustainment and upgrades.
+    rationale: Transfer and reinvestment requirements build software sustainment and upgrade control.
+  - id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013
+    text: Overambitious autonomy goals can misallocate resources; accepting partial technological dependence while negotiating
+      for targeted transfer reduces unrealistic expectations.
+    rationale: Targeted transfer within partial dependence focuses capability-building on feasible, high-value areas.
+  - id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016
+    text: Technology-assistance offsets can be designed to support domestic development (e.g., LCA, indigenous carrier) by
+      transferring relevant know-how, but value can be undermined by overpricing or limited implementation.
+    rationale: Technology-assistance offsets transfer relevant know-how when well-implemented.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002
+    text: Technology transfers and production offsets provide recipients with know-how and work share that can enable domestic
+      substitutes and spillovers into commercial industry.
+    rationale: Transfers and work share build domestic substitute capability and spillovers.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005
+    text: Japan instead pursues extensive technology transfers and licensed local production from the US, which function similarly
+      to offsets by delivering industrial and political benefits.
+    rationale: Licensed production and transfer function as offsets by embedding domestic production/technology capability.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006
+    text: By ranking domestic procurement first and licensed local production second, Japan channels demand and learning into
+      domestic firms, maintaining production/technology capability.
+    rationale: Domestic demand and licensed production channel learning into domestic firms, sustaining capability.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007
+    text: Maintaining an advanced domestic production base supports sustainment (operating ratio and sustainability) and provides
+      negotiating leverage when introducing equipment from abroad.
+    rationale: Domestic production base supports sustainment and increases bargaining leverage.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014
+    text: By maintaining financial/budgetary leadership and embedding technology transfers from foreign suppliers, Korea builds
+      domestic manufacturing and integration capability while preserving export flexibility.
+    rationale: Embedded transfers build manufacturing/integration capability while preserving export flexibility.
+  - id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021
+    text: Offset agreements can establish domestic and regional maintenance/repair infrastructure and generate sizable industrial
+      contracts tied to procurement.
+    rationale: Offset-linked transfer and contracts can build domestic maintenance and repair infrastructure.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001
+    text: By conditioning arms purchases on licensed production, coproduction, and technology transfer, offsets provide foreign
+      technical inputs that shorten the learning timeline.
+    rationale: Licensed production and transfer shorten learning timelines for domestic capability.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003
+    text: State-owned “strategic enterprises” created in key sectors use offsets and state backing to build domestic technology,
+      skills, and infrastructure.
+    rationale: Offsets plus state backing build domestic technology, skills, and supporting infrastructure.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004
+    text: By explicitly using offsets to acquire research, design, and manufacturing expertise, IPTN attempts to compress
+      the timeline for “mastery” of aviation technology.
+    rationale: Offsets acquire R&D and manufacturing expertise, compressing the learning curve.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013
+    text: By using offsets selectively for technology transfer and training that support maintenance, repair, and upgrades,
+      Singapore builds readiness-relevant capabilities without pursuing comprehensive autarky.
+    rationale: Selective transfer and training build maintenance/upgrade capability without comprehensive autarky.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014
+    text: Requiring technology transfer and training within ICPs steers procurement toward building local maintenance and
+      upgrade competencies.
+    rationale: Transfer and training requirements steer procurement toward local maintenance/upgrade competence.
+  - id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015
+    text: Collaboration with foreign firms on specialized repair/manufacturing (e.g., turbine blade overhaul) builds domestic
+      capabilities that support aircraft and submarine sustainment.
+    rationale: Repair/manufacturing collaboration builds specialized domestic sustainment capability.
+  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005
+    text: Targeting offsets to maintenance, adaptation, munitions, spares, and long-term technologies concentrates effort
+      on capabilities tied to self-reliance; abandoning ill-focused offsets shifts capability-building to more specific contract
+      provisions.
+    rationale: Targeting offset activity to sustainment and adaptation concentrates effort on self-reliance capabilities.
+  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009
+    text: When local content is not feasible, substituting SIDA activities (R&D, exports, technology transfer, training, infrastructure)
+      attempts to deliver capability gains through alternative investments that may carry cost premiums.
+    rationale: Alternative SIDA activities substitute for local content to deliver capability gains.
+  - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015
+    text: Contractual undertakings to direct business (including maintenance capability, technology transfers, joint ventures,
+      and exports support) create pathways to build local industrial capability.
+    rationale: Contractual undertakings and transfers create pathways to build local industrial capability.
 - theme_id: PM55
   theme_label: Subsidiary entry then consolidation
   mechanism_explanation: Allowing foreign subsidiaries enables participation and capability build-up, but later consolidation
@@ -1854,6 +1842,14 @@ proto_mechanism_themes:
     text: As imports of components/subsystems rise (e.g., to save costs or avoid domestic development), governments require
       foreign suppliers to compensate through offsets (work share, countertrade, technology transfer).
     rationale: Imports prompt compensatory offsets to rebalance domestic participation.
+  - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011
+    text: Linking offset requirements to import contracts creates compensatory commercial/industrial work intended to expand
+      production and sustain employment.
+    rationale: Linking offsets to imports compels compensatory industrial work to sustain domestic activity.
+  - id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016
+    text: By requiring buyback and local sourcing, offsets redirect procurement-related spending toward domestic suppliers
+      (including subsidiaries) and expand a local industrial footprint.
+    rationale: Buyback and local sourcing compensate for imports by redirecting spending to domestic suppliers.
 - theme_id: PM67
   theme_label: Transparency reforms target inflated credits
   mechanism_explanation: Policies limit artificial inflation of offset values by reducing multipliers or evaluating them case-by-case,
@@ -1992,4 +1988,10 @@ proto_mechanism_themes:
     text: Emphasis on indirect offsets was initially used to extend industrial activity beyond the life of a specific procurement
       program.
     rationale: Indirect offsets are used to extend industrial activity beyond a single program.
-ambiguous_mechanisms: []
+ambiguous_mechanisms:
+- id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
+  text: By routinely embedding licensed production, technology transfer, countertrade/barter, and long-term credit into
+    procurement, India uses procurement-linked resources to build domestic capability and manage foreign exchange constraints.
+  possible_themes: [PM54, PM5]
+  explanation: Mechanism combines technology acquisition via licensed production/transfer with external finance and countertrade
+    to ease foreign-exchange constraints.
