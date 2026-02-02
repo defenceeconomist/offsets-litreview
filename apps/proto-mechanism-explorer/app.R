@@ -22,6 +22,13 @@ ui <- fluidPage(
         "  font-weight: 600;\n",
         "  margin-bottom: 12px;\n",
         "}\n",
+        ".proto-controls {\n",
+        "  display: flex;\n",
+        "  gap: 12px;\n",
+        "  align-items: flex-end;\n",
+        "  flex-wrap: wrap;\n",
+        "  margin-bottom: 10px;\n",
+        "}\n",
         ".proto-meta {\n",
         "  font-size: 0.9rem;\n",
         "  color: rgba(0, 0, 0, 0.6);\n",
@@ -80,19 +87,73 @@ ui <- fluidPage(
   div(
     class = "proto-explorer",
     div(class = "proto-title", "Proto Mechanism Themes"),
+    div(
+      class = "proto-controls",
+      selectizeInput(
+        "research_question",
+        "Filter by research question",
+        choices = NULL,
+        multiple = TRUE,
+        width = "320px",
+        options = list(placeholder = "Select one or more")
+      )
+    ),
     div(class = "proto-meta", textOutput("row_count", inline = TRUE, container = span)),
     reactableOutput("theme_table")
   )
 )
 
 server <- function(input, output, session) {
-  build_theme_table <- function(theme_path) {
+  split_values <- function(x) {
+    values <- strsplit(as.character(x), ";")
+    lapply(values, function(items) {
+      cleaned <- trimws(items)
+      cleaned[!is.na(cleaned) & cleaned != "" & cleaned != "NA"]
+    })
+  }
+
+  build_research_map <- function(cmo_path) {
+    empty <- tibble(
+      chunk_id = character(),
+      research_questions = list()
+    )
+
+    if (!file.exists(cmo_path)) {
+      return(empty)
+    }
+
+    cmo_data <- utils::read.csv(cmo_path, stringsAsFactors = FALSE)
+    field_name <- if ("research_question_mapped" %in% names(cmo_data)) {
+      "research_question_mapped"
+    } else if ("research_questions_mapped" %in% names(cmo_data)) {
+      "research_questions_mapped"
+    } else {
+      NULL
+    }
+
+    if (is.null(field_name)) {
+      return(empty)
+    }
+
+    cmo_data <- cmo_data %>%
+      mutate(research_questions = split_values(.data[[field_name]])) %>%
+      group_by(chunk_id) %>%
+      summarise(
+        research_questions = list(sort(unique(unlist(research_questions)))),
+        .groups = "drop"
+      )
+
+    cmo_data
+  }
+
+  build_theme_table <- function(theme_path, research_map) {
     empty <- tibble(
       theme_id = character(),
       theme_label = character(),
       mechanism_explanation = character(),
       mechanism_count = integer(),
-      mechanisms = list()
+      mechanisms = list(),
+      research_questions = list()
     )
 
     if (!file.exists(theme_path)) {
@@ -126,30 +187,95 @@ server <- function(input, output, session) {
         rationale = vapply(mechs, safe_field, field = "rationale", FUN.VALUE = character(1))
       )
 
+      map_idx <- match(mech_df$id, research_map$chunk_id)
+      mech_questions <- lapply(map_idx, function(idx) {
+        if (is.na(idx)) {
+          character()
+        } else {
+          research_map$research_questions[[idx]]
+        }
+      })
+
+      mech_df <- mech_df %>%
+        mutate(research_questions = mech_questions)
+
+      theme_questions <- sort(unique(unlist(mech_questions)))
+
       tibble(
         theme_id = as.character(theme$theme_id),
         theme_label = as.character(theme$theme_label),
         mechanism_explanation = as.character(theme$mechanism_explanation),
         mechanism_count = nrow(mech_df),
-        mechanisms = list(mech_df)
+        mechanisms = list(mech_df),
+        research_questions = list(theme_questions)
       )
     })
 
     dplyr::bind_rows(rows)
   }
 
+  research_map <- build_research_map(
+    file.path("..", "..", "data", "cmo_statements.csv")
+  )
+
   theme_data <- build_theme_table(
-    file.path("..", "..", "data", "mechanism_themes", "proto_themes.yml")
+    file.path("..", "..", "data", "mechanism_themes", "proto_themes.yml"),
+    research_map
   ) %>%
     arrange(desc(mechanism_count), theme_label)
 
+  all_questions <- sort(unique(unlist(research_map$research_questions)))
+
+  updateSelectizeInput(
+    session,
+    "research_question",
+    choices = all_questions,
+    server = TRUE
+  )
+
+  filtered_theme_data <- reactive({
+    data <- theme_data
+
+    if (!is.null(input$research_question) && length(input$research_question) > 0) {
+      selected <- as.character(input$research_question)
+      filtered_mechs <- lapply(data$mechanisms, function(mech_df) {
+        if (is.null(mech_df) || nrow(mech_df) == 0) {
+          return(mech_df)
+        }
+        keep <- vapply(
+          mech_df$research_questions,
+          function(rqs) length(intersect(rqs, selected)) > 0,
+          logical(1)
+        )
+        mech_df[keep, , drop = FALSE]
+      })
+
+      filtered_counts <- vapply(filtered_mechs, nrow, integer(1))
+
+      data$mechanisms <- filtered_mechs
+      data$mechanism_count <- filtered_counts
+      data$research_questions <- lapply(filtered_mechs, function(mech_df) {
+        if (is.null(mech_df) || nrow(mech_df) == 0) {
+          character()
+        } else {
+          sort(unique(unlist(mech_df$research_questions)))
+        }
+      })
+
+      data <- data[filtered_counts > 0, ]
+    }
+
+    data %>% arrange(desc(mechanism_count), theme_label)
+  })
+
   output$row_count <- renderText({
-    paste0(nrow(theme_data), " themes")
+    paste0(nrow(filtered_theme_data()), " themes")
   })
 
   output$theme_table <- renderReactable({
+    data <- filtered_theme_data()
     details_row <- function(index) {
-      mechs <- theme_data$mechanisms[[index]]
+      mechs <- data$mechanisms[[index]]
 
       if (nrow(mechs) == 0) {
         return(tags$div(class = "proto-detail", "No mechanisms allocated."))
@@ -163,12 +289,20 @@ server <- function(input, output, session) {
         ),
         tagList(
           lapply(seq_len(nrow(mechs)), function(i) {
+            rq_values <- mechs$research_questions[[i]]
+            rq_label <- if (length(rq_values) == 0) {
+              "Not mapped"
+            } else {
+              paste(rq_values, collapse = ", ")
+            }
             tags$div(
               class = "detail-card",
               tags$div(class = "detail-id", mechs$id[i]),
               tags$div(class = "detail-text", mechs$text[i]),
               tags$div(class = "detail-rationale-label", "Rationale"),
-              tags$div(class = "detail-rationale", mechs$rationale[i])
+              tags$div(class = "detail-rationale", mechs$rationale[i]),
+              tags$div(class = "detail-rationale-label", "Research questions"),
+              tags$div(class = "detail-rationale", rq_label)
             )
           })
         )
@@ -176,7 +310,7 @@ server <- function(input, output, session) {
     }
 
     reactable(
-      theme_data %>%
+      data %>%
         select(theme_id, theme_label, mechanism_explanation, mechanism_count),
       columns = list(
         theme_id = colDef(name = "Proto mechanism ID", width = 160),
