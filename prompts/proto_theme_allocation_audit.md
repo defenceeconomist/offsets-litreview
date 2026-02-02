@@ -92,7 +92,9 @@ EDITING RULES (STRICT)
 
 CHANGE LOGGING (UPDATE EXISTING YAML CHANGE LOG)
 
-Append a new entry to `data/mechanism_themes/proto_themes_changelog.yml` for every change you make:
+The change log file contains a history of many kinds of theme edits (e.g., `new_theme`, `merge`, `no_change`, `assignment`).
+
+You MUST preserve all existing entries exactly as they are, and append new entry/entries for every change you make in this run:
 
 - If moved theme-to-theme: `change_type: assignment`
 - If moved to ambiguous: `change_type: ambiguous`
@@ -132,9 +134,9 @@ Document 2 MUST match this schema:
 
 change_log:
   - change_id: CHG_123
-    change_type: assignment | ambiguous
+    change_type: assignment | ambiguous | new_theme | merge | no_change
     theme_id: PM7 | AMBIGUOUS
-    mechanism_id: MECH_022
+    mechanism_id: MECH_022  # present for mechanism-level changes; may be absent for theme-level entries (e.g., merges)
     summary: "Moved MECH_022 from PM3 to PM7."
     rationale: "Mechanism describes X causal process; PM7 explicitly captures X, whereas PM3 captures Y."
 

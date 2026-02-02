@@ -1,0 +1,11 @@
+theme_id	mechanism_count	theme_label	output_path
+PM2	44	Compliance shaped by incentives and monitoring	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM2.md
+PM34	44	Capability gains not self-sustaining	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM34.md
+PM15	38	Flexibility reduces mandate diseconomies	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM15.md
+PM36	35	Illiberal contracting builds cross-border ties	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM36.md
+PM17	32	Administrative burden and rent-seeking	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM17.md
+PM54	30	Technology acquisition via licensed production	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM54.md
+PM1	15	Legitimation through economic framing	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM1.md
+PM19	15	Supplier coaching and reputational certification	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM19.md
+PM3	12	Cost pass-through via pricing	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM3.md
+PM4	11	Offsets crowd out civilian resources	data/mechanism_themes/audit_inputs/proto_theme_allocation_audit_PM4.md

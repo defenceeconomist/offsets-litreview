@@ -1,3 +1,154 @@
+Prompt: Proto-Mechanism Theme Allocation Audit (One Theme at a Time)
+
+ROLE
+You are supporting a realist evidence synthesis. Your task is to audit whether mechanisms currently assigned to ONE target proto-mechanism theme are allocated to the best-fitting theme.
+
+You must classify by underlying generative causal process, not topic similarity.
+
+INPUTS YOU WILL RECEIVE
+
+1) target_theme_id
+The theme ID to audit (e.g., PM17).
+
+2) proto_themes_yml
+The full current contents of: data/mechanism_themes/proto_themes.yml
+
+3) proto_themes_changelog_yml
+The full current contents of: data/mechanism_themes/proto_themes_changelog.yml
+
+REFERENCE EXTRACTION (PYTHON) — USE THIS WORKFLOW EVERY TIME
+
+Use this code structure to ensure you consistently compare mechanisms to ALL themes’ labels and explanations.
+(This is a workflow reference; do not execute it.)
+
+```python
+import re
+import yaml
+
+proto = yaml.safe_load(proto_themes_yml)  # dict
+themes = proto["proto_mechanism_themes"]  # list[dict]
+
+theme_index = {
+  t["theme_id"]: {
+    "theme_label": t["theme_label"],
+    "mechanism_explanation": t["mechanism_explanation"],
+  }
+  for t in themes
+}
+
+target_theme = next(t for t in themes if t["theme_id"] == target_theme_id)
+candidate_mechanisms = list(target_theme.get("mechanisms", []))
+
+changelog = yaml.safe_load(proto_themes_changelog_yml)
+existing_ids = [
+  int(re.search(r"CHG_(\\d+)$", c["change_id"]).group(1))
+  for c in changelog.get("change_log", [])
+  if re.search(r"CHG_(\\d+)$", c.get("change_id", ""))
+]
+next_change_num = (max(existing_ids) + 1) if existing_ids else 1
+```
+
+AUDIT TASK (FOR THE TARGET THEME ONLY)
+
+For each mechanism currently inside the target theme:
+
+1) Compare the mechanism (its `text`) against EVERY theme’s:
+- `theme_label`
+- `mechanism_explanation`
+
+2) Decide one outcome:
+
+A) KEEP IN TARGET THEME
+Only if the target theme’s explanation is the best match to the mechanism’s causal logic.
+
+B) REALLOCATE TO A DIFFERENT EXISTING THEME
+If another theme’s label/explanation clearly fits the mechanism better than the target theme.
+
+C) MARK AMBIGUOUS
+If the mechanism plausibly fits 2+ themes and you cannot decide confidently.
+Move it to `ambiguous_mechanisms` and list the likely theme IDs in `possible_themes`.
+
+DECISION RULES (STRICT)
+
+- Use generative process similarity, not:
+  - shared outcomes
+  - shared country/programme
+  - shared sector / platform
+  - surface keywords
+
+- “Better fit” means: another theme’s explanation more directly states the causal process described in the mechanism.
+
+- Do not create new themes in this task.
+
+EDITING RULES (STRICT)
+
+- Do not change any mechanism `id` or `text`.
+- You MAY update `rationale` when a mechanism is kept or moved, but keep it short and specific to why it fits that theme.
+- Ensure each mechanism appears exactly once across:
+  - all themes’ `mechanisms` lists, OR
+  - `ambiguous_mechanisms`
+- Only move mechanisms that were originally in the target theme for this run.
+  - Do not “clean up” other themes unless needed to avoid duplicates created by your move.
+
+CHANGE LOGGING (UPDATE EXISTING YAML CHANGE LOG)
+
+The change log file contains a history of many kinds of theme edits (e.g., `new_theme`, `merge`, `no_change`, `assignment`).
+
+You MUST preserve all existing entries exactly as they are, and append new entry/entries for every change you make in this run:
+
+- If moved theme-to-theme: `change_type: assignment`
+- If moved to ambiguous: `change_type: ambiguous`
+
+Each entry must include:
+- `change_id`: next sequential ID (CHG_###), continuing from the current max
+- `theme_id`: the destination theme ID (or `AMBIGUOUS`)
+- `mechanism_id`
+- `summary`: 1 sentence describing what changed (include from/to theme IDs)
+- `rationale`: 1–2 sentences justifying the change in terms of causal process fit
+
+OUTPUT FORMAT (TWO STRICT YAML DOCUMENTS)
+
+Return TWO YAML documents separated by a line containing only `---`.
+
+Document 1 will be saved to: data/mechanism_themes/proto_themes.yml
+Document 2 will be saved to: data/mechanism_themes/proto_themes_changelog.yml
+
+Document 1 MUST match this schema:
+
+proto_mechanism_themes:
+  - theme_id: PM1
+    theme_label: "Label"
+    mechanism_explanation: "Explanation"
+    mechanisms:
+      - id: MECH_001
+        text: "Full mechanism statement"
+        rationale: "Why it fits this theme’s causal process."
+
+ambiguous_mechanisms:
+  - id: MECH_031
+    text: "Full mechanism statement"
+    possible_themes: [PM2, PM4]
+    explanation: "Why assignment is ambiguous; what evidence would resolve it."
+
+Document 2 MUST match this schema:
+
+change_log:
+  - change_id: CHG_123
+    change_type: assignment | ambiguous | new_theme | merge | no_change
+    theme_id: PM7 | AMBIGUOUS
+    mechanism_id: MECH_022  # present for mechanism-level changes; may be absent for theme-level entries (e.g., merges)
+    summary: "Moved MECH_022 from PM3 to PM7."
+    rationale: "Mechanism describes X causal process; PM7 explicitly captures X, whereas PM3 captures Y."
+
+Do not include any commentary outside the TWO YAML documents.
+
+INPUTS
+
+1) target_theme_id
+PM19
+
+2) proto_themes_yml
+```yaml
 proto_mechanism_themes:
 - theme_id: PM1
   theme_label: Legitimation through economic framing
@@ -63,31 +214,6 @@ proto_mechanism_themes:
     text: Offsets are used to redirect some procurement-related value toward domestic industrial/technological upgrading and
       to improve political acceptability; purchasers may pay a premium to place work locally.
     rationale: Offsets redirect value to domestic upgrading and improve political acceptability.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_003
-    text: By bundling offsets and related support such as training and maintenance into arms sales, providers signal commitment
-      and deepen diplomatic and military ties with recipients, accepting industrial-competitiveness risks as part of alliance
-      management.
-    rationale: Offset and support bundles act as alliance signals and relationship-deepening tools beyond immediate economic effects.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_003
-    text: By presenting offsets as fully compensating the import through jobs, trade-balance effects, market access, and technology
-      transfer, policymakers use offsets as a legitimation device to reduce political resistance to procurement.
-    rationale: Compensation framing legitimizes procurement by reducing perceived net costs and political resistance.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_004
-    text: When the supplier meets or exceeds annual offset targets, authorities publicize progress to sustain legitimacy; when
-      the supplier falls behind, disclosure and publicity decline to avoid political costs.
-    rationale: Selective disclosure sustains political legitimacy by highlighting success and downplaying underperformance.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_013
-    text: By demonstrating domestic industrial benefits, offsets help maintain political support for defense appropriations and
-      enable approval of major procurement projects.
-    rationale: Demonstrating domestic benefits legitimizes spending and sustains political support for major procurement.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_004
-    text: Import decisions are made more acceptable when suppliers provide compensatory offset work that is framed as delivering
-      domestic industrial benefits alongside the foreign purchase.
-    rationale: Offsets framed as domestic industrial benefits legitimize foreign procurement decisions.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_005
-    text: A large offset offer is used to compensate politically and industrially for cancelling a domestic programme, with claims
-      about job equivalence used to support the procurement decision.
-    rationale: Job-compensation framing uses offset promises to justify politically costly procurement choices.
 - theme_id: PM2
   theme_label: Compliance shaped by incentives and monitoring
   mechanism_explanation: 'Delivery depends on the enforcement regime: transparency and credible incentives/penalties encourage
@@ -168,30 +294,6 @@ proto_mechanism_themes:
     text: Making policy more specific, setting approval criteria in advance, and requiring competitive bidding and continuous
       monitoring improves transparency and limits distortions.
     rationale: Clear criteria, competitive bidding, and monitoring improve transparency and reduce distortions.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_009
-    text: As offsets execution is extended beyond main contractors, it becomes hard to determine whether purchases are caused
-      by the offset agreement (additionality), enabling crediting of activity that might have occurred anyway.
-    rationale: Extended execution chains weaken additionality attribution, enabling crediting of business-as-usual activity.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_010
-    text: Contractors attempt to count prior or unrelated purchases as indirect offsets, and political/diplomatic bargaining
-      can lead to partial acceptance.
-    rationale: Retroactive crediting attempts plus bargaining can allow non-additional activity to count toward obligations.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_011
-    text: Firms can dilute impacts by trading offset credits or overvaluing transferred technology, inflating credited fulfillment
-      relative to real value delivered.
-    rationale: Credit trading and overvaluation inflate reported fulfillment and dilute substantive value delivered.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_014
-    text: Careful management, institutional frameworks, and enforcement provisions are used to control offset activities
-      (including technology/IP and performance) to mitigate disadvantages.
-    rationale: Governance and enforcement frameworks are used to control activities and reduce disadvantages from weak additionality or low-value compliance.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_015
-    text: Applying criteria such as effectiveness, novelty (additionality), value-added, technology, employment, and regional
-      distribution disciplines crediting and helps screen claimed offsets benefits.
-    rationale: Evaluation criteria discipline crediting and screen claims toward additional and higher-value activities.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_021
-    text: Cumulative penalties for non-respected economic commitments and regional deviations create enforcement pressure
-      to meet quantitative targets.
-    rationale: Penalty-backed enforcement increases pressure to meet quantitative targets and comply with regional rules.
   - id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003
     text: Because additionality is difficult to measure and work may be re-labeled or low quality, credited projects do not
       reliably represent new economic activity.
@@ -291,240 +393,6 @@ proto_mechanism_themes:
     text: When post-obligation purchases can be credited as banked offset, vendors continue placing work to build credit for
       future obligations.
     rationale: Banked credits motivate continued placements to build future credit.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_004
-    text: When compliance depends on contractors doing their 'best' rather than facing enforceable obligations, delivered
-      offsets can be limited and harder to ensure against programme objectives.
-    rationale: Best-endeavours compliance weakens enforcement, limiting delivered offsets and prompting a shift to mandatory
-      schemes.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_005
-    text: Setting mandatory thresholds and a fixed obligation rate operationalises offsets as a rule-based requirement rather
-      than a discretionary bargaining tool.
-    rationale: Thresholds and fixed rates standardize when offsets apply, shaping incentives via predictable rule-based triggers.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_006
-    text: Applying multipliers that credit targeted activities above their nominal value increases supplier incentives to
-      propose those activities to meet obligations.
-    rationale: Multipliers increase credited value for targeted activities, steering supplier proposals toward those deliverables.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_007
-    text: When offsets commitments outlast the procurement contract, contract law provides weak enforcement leverage, prompting
-      creation of separate, legally enforceable deeds.
-    rationale: Separate deeds restore enforcement leverage for obligations extending beyond the main contract period.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_008
-    text: Bankable credits (via Credit Deeds) reward early, long-horizon industry programs by allowing suppliers to apply
-      earned credits to current or future offsets obligations.
-    rationale: Credit banking rewards earlier long-horizon programs by allowing credits to discharge current or future obligations.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_009
-    text: Eligibility criteria (commercial viability, price neutrality, technology sophistication, and 'new work') screen
-      proposals toward additional, internationally competitive activities and away from business-as-usual supplier operations.
-    rationale: Eligibility criteria screen out routine activity, improving additionality and focusing credits on capability-relevant
-      work.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_011
-    text: Using multipliers based on Defence priority rankings changes supplier incentives by increasing the credited value
-      of activities associated with higher-priority projects.
-    rationale: Priority-based multipliers shift supplier effort toward higher-priority projects by making them count more toward
-      obligations.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_012
-    text: Liquidated damages provisions create enforceable financial consequences for non-performance, increasing supplier
-      incentives to fulfil offset commitments.
-    rationale: Pre-agreed damages raise expected costs of non-performance, strengthening compliance incentives.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_013
-    text: Replacing offsets with MOUs that offer 'equal opportunity to bid' but lack sanctions weakens enforcement leverage,
-      relying more on voluntary supplier behaviour and reputational pressure.
-    rationale: Removing sanctions shifts enforcement from formal penalties to voluntary follow-through and reputational pressure.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_013
-    text: When contractors receive credit for activity that would occur anyway, reported benefits inflate while real technology
-      transfer and long-term industrial gains remain limited.
-    rationale: Crediting business-as-usual activity inflates reported benefits and can mask limited real transfer and industrial
-      upgrading.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_013
-    text: When the offset is framed as a non-binding statement rather than a firm contract, incentives and enforceability are
-      weaker.
-    rationale: Non-binding offset statements weaken enforcement leverage and reduce incentives to deliver.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_015
-    text: When promised production shares are not realised, buyers can use payment withholding as leverage to enforce or
-      renegotiate the offset bargain.
-    rationale: Payment withholding creates credible leverage to enforce or renegotiate offset commitments when delivery fails.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_022
-    text: When parties treat earlier or parallel deals as offsets for new contracts, attribution becomes contested and
-      politically negotiated.
-    rationale: Contested attribution creates bargaining over what counts as an offset, weakening clarity and accountability.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_006
-    text: Recognition that co-production offsets could reduce wartime vulnerability drives government directives that formalise
-      administrative structures, acceptance conditions, and guarantees for OIB transactions.
-    rationale: Formalized administrative structures and guarantees aim to ensure co-production offsets deliver security-of-supply
-      benefits and reduce non-fulfillment risk.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_007
-    text: Weighting Categories I/II with low base factors (2–3) and Category III with a high base factor (18) increases credited
-      value of domestic production/defence-industry related spending relative to tourism/exports, steering offers toward Categories I/II.
-    rationale: Differentiated base factors act like multipliers that steer supplier proposals toward defense-relevant categories.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_008
-    text: Good-performance guarantees and mandatory replacement of non-materialised transactions reduce non-fulfillment risk and
-      push suppliers to deliver equivalent value within the same category.
-    rationale: Performance guarantees and replacement rules increase incentives to deliver and reduce the risk of non-fulfillment.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_009
-    text: Legislating dedicated OIB offices assigns evaluation and implementation roles (MoD for Categories I/II; National Economy
-      for Category III), improving coordination and oversight.
-    rationale: Dedicated offices clarify roles and improve monitoring and coordination across offset categories.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_010
-    text: Quantified offset targets (firm obligations plus government add-ons) bundle co-production, investment, technology
-      transfer, exports, and tourism development into a credit-and-penalty governed programme.
-    rationale: Quantified targets and penalty governance structure delivery incentives across a bundled offset programme.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_011
-    text: Credit systems and penal clauses create performance incentives and consequences for non-delivery, aiming to protect
-      buyer value.
-    rationale: Penalty-backed credit systems increase incentives to deliver and impose consequences for non-performance.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_015
-    text: Negotiation increases Category I/II share and allows transfers from Category III to I/II when Category III transactions
-      face materialisation problems, reducing the risk of failed obligations.
-    rationale: Re-scoping and category transfers allow obligations to be met when specific transactions fail to materialize.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_016
-    text: Letters of guarantee (different rates by category) provide financial security and incentives for suppliers to deliver
-      agreed transactions.
-    rationale: Financial guarantees increase security and strengthen incentives for suppliers to fulfil obligations.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_019
-    text: Technology and know-how transfers under Category I (with a base factor) allow high credited offset value compared to
-      the underlying programme cost.
-    rationale: Crediting rules and base factors can inflate credited value of technology transfers relative to actual costs.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_022
-    text: Contractors fulfil obligations via tourism and export promotion rather than technology transfer when penal clauses for
-      non-fulfillment are missing or not applied.
-    rationale: Weak or unenforced penalties shift compliance toward easier indirect activities instead of technology transfer.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_007
-    text: High-level government backing elevates offset projects, resolves issues, and reduces delay and uncertainty for investors.
-    rationale: Government commitment and escalation capacity changes approval timelines and reduces implementation frictions.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_012
-    text: Requiring 50–50 joint investment and limiting eligible sectors to advanced, commercially viable domains steers offsets
-      toward diversification projects.
-    rationale: Eligibility and investment rules screen and steer projects toward prioritized, commercially viable capability-building activity.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_015
-    text: A centralized inter-ministerial authority concentrates requirements, approvals, monitoring, and crediting, reducing
-      fragmentation.
-    rationale: Centralized authority clarifies roles and strengthens oversight across approval and crediting functions.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_016
-    text: Granting offset credits only as they are earned incentivizes documentation and compliance.
-    rationale: Earned-only credits strengthen incentives to deliver and to provide verifiable evidence of fulfillment.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_018
-    text: A formal offset percentage obligation that is triggered at contract signature creates enforceable commitments.
-    rationale: Quantified obligations anchored in contract signature increase enforceability and reduce discretion to evade delivery.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_019
-    text: Monitoring and compliance checks on transfer, training, and financial plans strengthen delivery and discipline low-quality
-      projects.
-    rationale: Monitoring and verification increase compliance and steer delivery toward credible, implementable projects.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_020
-    text: Screening and pre-qualifying domestic partners reduces risk for investors and improves project feasibility.
-    rationale: Screening reduces information and execution risk, improving the likelihood that credited projects are feasible and compliant.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_022
-    text: An explicit percentage obligation managed by the prime contractor structures a pipeline of offset projects.
-    rationale: Quantified targets plus prime management compel suppliers to build a portfolio of creditable projects to discharge obligations.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_024
-    text: Multipliers steer supplier effort toward targeted technology activities, while low credits for licensing discourage
-      that route.
-    rationale: Differentiated crediting acts as an incentive regime that reallocates supplier effort toward prioritized activities.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_029
-    text: Delays in agreement and internal reorganization reduce early execution capability for offset projects.
-    rationale: Shocks to organizational capacity and delayed commitments weaken implementation follow-through under an offset regime.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_036
-    text: Offset obligations encourage risk tolerance and unlock projects that would not otherwise be pursued.
-    rationale: Mandated obligations create incentives to attempt higher-risk investments that suppliers might avoid absent compliance pressure.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_001
-    text: Large and complex offset obligations create coordination, verification, and tracking demands; to reduce implementation
-      risk and manage compliance, the state establishes a specialised administrative unit.
-    rationale: Administrative specialization improves oversight and coordination needed to manage complex obligations and reduce compliance risk.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_005
-    text: By setting minimum shares for advanced-country technologies and requiring technology transfer to Spanish-owned or
-      Spanish-controlled companies, contract design constrains suppliers’ ability to satisfy obligations with low-value activities.
-    rationale: Eligibility rules and thresholds steer compliance toward higher-value transfer and limit low-quality fulfillment strategies.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_005
-    text: By restricting offset-credit eligibility to defence-related firms and excluding service sectors, the state steers
-      offset activity toward industrial capabilities relevant to defence objectives.
-    rationale: Restricting eligible recipients and sectors steers compliance toward defence-relevant industrial capability.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_006
-    text: By allowing offset credit for sales by Swiss firms that have (or could have) defence work even when the sale is commercial,
-      policy treats indirect business as strengthening defence-relevant firms.
-    rationale: Broad eligibility definitions expand creditable pathways while prioritizing firms deemed defence-relevant.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_007
-    text: By requiring mutual agreement that a sale occurred because of offset-related efforts, policy enforces an additionality
-      test that discourages relabelling established business as offset credit.
-    rationale: Additionality rules constrain crediting of business-as-usual transactions and improve credibility of fulfillment.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_011
-    text: By specifying offset obligations and enforcement (liquidated damages) in separate contractor agreements, Switzerland
-      strengthens compliance incentives while keeping bilateral governmental provisions focused on procurement-access measures.
-    rationale: Penalty-backed contractor agreements strengthen compliance incentives while separating enforcement from access facilitation.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_019
-    text: Shifting verification toward firm-level attestation reduces government follow-up and streamlines offset accounting.
-    rationale: Using firm attestations reduces monitoring burdens while maintaining a verification mechanism.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_008
-    text: To operationalise 'new work' in a setting with substantial baseline purchasing, the MoD grants partial credit for follow-on
-      work (via discounts), which can be perceived as overly generous and can inflate credited offset value.
-    rationale: Partial-credit discounts can inflate credited delivery and shape perceived compliance.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_011
-    text: When offsets are framed as job compensation, credible evaluation requires monitoring employment outcomes; lack of early
-      monitoring weakens accountability and allows optimistic claims to persist.
-    rationale: Weak monitoring enables optimistic benefit claims and reduces accountability for delivery.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_012
-    text: If officials credit too high a share of offset sales as 'new' (or count follow-on/civil-market transactions), employment
-      benefits can be overstated relative to firms’ own views of additional work.
-    rationale: Over-crediting 'new' work inflates reported delivery and overstates benefits.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_013
-    text: By granting only partial credit (0–100%) based on firm verification and criteria, DESO constrains what counts as offset;
-      but the resulting information asymmetry makes it difficult for firms/analysts to know what is ultimately credited.
-    rationale: Verification and partial-credit rules constrain claims but create information asymmetry about what counts.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_023
-    text: If thresholds are high and penalties absent, vendors can structure deals to evade obligations; lowering thresholds and adding
-      penalties increases compliance incentives and reduces avoidance.
-    rationale: Threshold and penalty design shifts incentives between compliance and evasion.
-  - id: 14_us_offset_policy_pdf__cmo_004
-    text: When a government authority agrees to act as guarantor, it reduces perceived fulfilment risk for the buyer and can make
-      acceptance of offset-linked purchases more credible and politically defensible.
-    rationale: Government guarantees reduce non-fulfillment risk and increase credibility of offset commitments.
-  - id: 14_us_offset_policy_pdf__cmo_008
-    text: When Congress mandates annual reporting, agencies must coordinate to collect and publish information, increasing formal
-      visibility of offset practices and associated case material.
-    rationale: Reporting mandates increase monitoring and visibility of offset practices.
-  - id: 14_us_offset_policy_pdf__cmo_011
-    text: When offsets serve domestic political objectives, consultations tend to become information-gathering rather than leverage
-      for change, limiting the effectiveness of dialogue-based control efforts.
-    rationale: Consultations without enforceable leverage are limited when offsets serve domestic political objectives.
-  - id: 14_us_offset_policy_pdf__cmo_014
-    text: When agreement language subordinates offset reduction to hard-to-achieve conditions and smaller members resist giving up
-      perceived benefits, multilateral codes tend to have limited practical effect.
-    rationale: Soft-law commitments with weak conditions and resistance provide little effective constraint on offsets.
-  - id: 14_us_offset_policy_pdf__cmo_017
-    text: By requiring disclosure of offset agreements and prohibiting incentive payments used to satisfy offsets, Congress increases
-      oversight and constrains practices perceived as bribery, backed by civil penalties.
-    rationale: Disclosure and penalty-backed prohibitions strengthen oversight and constrain problematic offset practices.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_010
-    text: As political scrutiny rises, governments can increase oversight via reporting requirements, which may be viewed by industry
-      as a precursor to constraints on offset offers.
-    rationale: Reporting requirements increase formal oversight and can signal future restriction intent.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_014
-    text: If a central authority primarily monitors progress rather than approving projects, it focuses on tracking compliance and
-      coordination while leaving project selection to tender-specific agencies and firms.
-    rationale: Monitoring-focused governance emphasizes tracking and coordination over centralized project approval.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_016
-    text: By assigning higher credit multipliers to preferred activities (e.g., R&D, investment, software) and capping others
-      (e.g., transport, third-party), the programme steers contractor behaviour toward valued contributions while limiting low-value
-      crediting.
-    rationale: Multipliers and caps steer compliance effort toward prioritized deliverables and limit low-value crediting.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_017
-    text: When voluntary compliance is uneven (especially among civil-sector sellers), legislating an offset requirement broadens
-      coverage and compels participation from firms that previously refused.
-    rationale: Mandating offsets expands coverage and compels compliance from reluctant sellers.
-  - id: 16_concluding_remarks_pdf__cmo_002
-    text: If credited work reflects pre-existing business relations rather than activity induced by the offset, nominal fulfilment
-      overstates impact and can render large packages substantively trivial.
-    rationale: Crediting pre-existing business relationships inflates nominal fulfillment and overstates substantive impact.
-  - id: 16_concluding_remarks_pdf__cmo_004
-    text: As parties learn that 'best endeavours' commitments are weak, introducing financial penalties increases compliance
-      incentives and improves the credibility of fulfilment expectations.
-    rationale: Penalty-backed obligations strengthen incentives and increase credible follow-through.
-  - id: 16_concluding_remarks_pdf__cmo_005
-    text: When firms treat offsets as entitlements rather than as conditional on cost and quality, unmet expectations generate
-      political and industrial disenchantment and pressure to clarify eligibility and performance requirements.
-    rationale: Entitlement expectations and unmet promises drive backlash and pressure for clearer, performance-based requirements.
-  - id: 16_concluding_remarks_pdf__cmo_009
-    text: Allowing firms to bank offset credit for future obligations rewards continued placement of work with domestic manufacturers
-      and reduces incentives to switch business purely to chase outstanding commitments elsewhere.
-    rationale: Credit banking reduces short-term switching by rewarding continued placements that build future credit.
 - theme_id: PM3
   theme_label: Cost pass-through via pricing
   mechanism_explanation: Suppliers internalise offset costs and recover them by raising the weapon sale price, shifting the
@@ -577,42 +445,6 @@ proto_mechanism_themes:
     text: Suppliers insure against penalty and compliance risks by raising contract values, and administrative burdens also
       increase costs, obscuring the true price premium of offsets.
     rationale: Compliance risk and administrative burdens are priced into contract values, increasing acquisition costs.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_012
-    text: Offsets that require domestic production or participation shift work into higher-cost settings, creating a procurement
-      cost premium borne by the Ministry of Defence.
-    rationale: Domestic-production participation requirements raise procurement costs via higher-cost production settings.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_019
-    text: Offset requirements increase the final cost of the platform through costlier European production and associated
-      arrangements.
-    rationale: Offset-driven production shifting increases total platform costs via higher-cost production arrangements.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_023
-    text: Offset requirements and associated industrial arrangements raise total programme cost, even when offsets delivery
-      is considered a success.
-    rationale: Even successful delivery can carry cost premiums from the industrial arrangements required to meet offsets.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_005
-    text: Local production reduces scale and learning economies and adds technology-transfer and licence-fee costs, increasing
-      unit cost versus off-the-shelf purchase.
-    rationale: Domestic production at small scale plus transfer/licence costs raises unit costs relative to off-the-shelf imports.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_004
-    text: Sellers incorporate technology-transfer costs into the defence sale price to recoup R&D and protect commercial advantage.
-    rationale: Transfer costs are priced into the primary contract, shifting the burden of offsets onto the buyer via higher prices.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_024
-    text: If suppliers incur real costs to provide offsets, those costs are often passed into contract prices, so buyers effectively
-      fund offset premia; soliciting bids with different offset levels reveals the trade-off.
-    rationale: Suppliers pass offset costs into bid prices, and bid variants expose the price-benefit trade-off.
-  - id: 14_us_offset_policy_pdf__cmo_020
-    text: Allowing recovery of offset administrative costs via explicit LOA notes shifts costs to the buyer while formally disclaiming
-      US government responsibility for fulfilling offsets; subsequent revisions can remove language that heightens buyer sensitivity or
-      highlights offsets in official documents.
-    rationale: Offset administration costs can be passed to buyers while document design limits salience and liability exposure.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_002
-    text: When demanded offset levels rise beyond feasible delivery, contractors price the added burden into system costs and
-      governments provoke political backlash that can trigger attempts at regulation.
-    rationale: Excessive offset demands are priced into contracts, raising costs and increasing backlash risk.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011
-    text: If regulatory language signals that offset administrative costs may be charged to the buyer, buyers may refuse to sign and
-      jeopardize a sale; policymakers may then roll back the rule to avoid harming exports.
-    rationale: Cost-recovery provisions can jeopardize sales by increasing buyer-facing costs and salience, prompting rollback.
 - theme_id: PM4
   theme_label: Offsets crowd out civilian resources
   mechanism_explanation: Offset activity can absorb scarce capital, labour, or productive capacity, diverting resources away
@@ -661,18 +493,6 @@ proto_mechanism_themes:
   - id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022
     text: More diverse input requirements in shipbuilding create larger local employment multipliers than ship repair.
     rationale: Diverse input requirements create larger local employment multipliers.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_001
-    text: When an import-with-offset option typically delivers less domestic work than buying the domestic product, domestic industry
-      reasons that offsets displace local production rather than add to it.
-    rationale: Offsets are seen as displacing domestic production when they deliver less local work than a domestic alternative.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_017
-    text: When offsets are fulfilled by transferring production/workshare overseas, domestic employment impacts appear as lost
-      employee-years, though these may be small relative to the financial value of the offset package.
-    rationale: Workshare transfer overseas converts offset delivery into domestic job displacement.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_018
-    text: When primes take work from UK sub-contractors and place it with firms in the offset-recipient country, offset compliance
-      can externalise employment losses onto sub-contractors while enabling the prime to preserve its own production.
-    rationale: Compliance via re-sourcing can shift losses onto domestic subcontractors while preserving prime production.
 - theme_id: PM5
   theme_label: External finance expands resource pool
   mechanism_explanation: When funding comes from external sources, offsets inject new resources rather than reallocating domestic
@@ -698,31 +518,6 @@ proto_mechanism_themes:
     text: Targeted soft loans and equity investments provide liquidity and capital enabling firm survival, facility expansion,
       and market growth.
     rationale: Soft loans/equity provide liquidity and capital for survival and expansion.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_002
-    text: Government-backed price guarantees and acceptance of payments partly in local currency reduce purchaser risk and
-      foreign-exchange burden, functioning as an offset-equivalent inducement.
-    rationale: Price guarantees and local-currency acceptance reduce buyer risk and foreign-exchange constraints, improving deal
-      feasibility.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_021
-    text: Long repayment periods, low interest rates, credits, gifts, and price cuts reduce effective buyer cost and can
-      decide contract outcomes.
-    rationale: Concessional finance and price reductions lower effective costs, shifting competitive outcomes.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_018
-    text: Supplementary grants, royalties, and associated systems/services add further economic value and implementation tasks,
-      increasing total compensation beyond the base offset percentages.
-    rationale: Supplementary finance and bundled value components add resources and incentives beyond headline offset percentages.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_036
-    text: Higher money costs make delayed payment schemes more expensive and reduce the attractiveness of local production and
-      offsets compared with the earlier low-interest environment.
-    rationale: Higher interest rates increase the cost of delayed payments, reducing the attractiveness of local production and
-      offset arrangements.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_026
-    text: Preferential interest-free development-fund financing lowers capital costs and equity needs for offset ventures.
-    rationale: Concessional finance relaxes investment constraints and makes offset projects more feasible by reducing capital costs.
-  - id: 14_us_offset_policy_pdf__cmo_002
-    text: To reduce the balance-of-payments burden of overseas basing while sustaining alliance force levels, the US encouraged
-      financially capable allies to procure US weapons and related items, effectively recycling outlays back to the US economy.
-    rationale: External procurement inflows recycle payments and ease balance-of-payments burdens associated with overseas commitments.
 - theme_id: PM6
   theme_label: Additional trade yields net gains
   mechanism_explanation: Counterpurchase that generates genuinely additional exports creates new revenue streams and supports
@@ -736,11 +531,6 @@ proto_mechanism_themes:
     text: By requiring reciprocal purchases to be additional (“new activity”), the offset policy aims to create exports that
       would not otherwise occur.
     rationale: Additionality requirements aim to create exports that would not otherwise occur.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_005
-    text: Contractual counterpurchase obligations compel vendors to procure raw materials from the buyer’s economy as part of
-      the deal, providing reciprocal demand and reducing net payment.
-    rationale: Counterpurchase obligations create reciprocal demand for buyer exports, reducing net payment and supporting local
-      sales.
 - theme_id: PM7
   theme_label: Training expands local skill supply
   mechanism_explanation: Mandated employer-funded training expands the local skill base, increasing labour supply instead
@@ -791,59 +581,6 @@ proto_mechanism_themes:
     text: When primes allocate relatively low-tech tasks, local participation may yield limited technology upgrading and weaker
       capability deepening.
     rationale: Low-tech task allocation limits technology upgrading and capability deepening.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_007
-    text: US ‘black-boxing’ and limited transfer of advanced technology encourages Japan to invest in independent R&D and to
-      view reliance on US tech as a structural barrier.
-    rationale: Export controls and black-boxing limit transfer depth, motivating independent R&D and reducing reliance.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_012
-    text: As Japan’s technology level rises, offsets become more complex and politically contested due to fears of creating
-      future competitors and technology leakage.
-    rationale: Rising recipient capability increases fears of competition and leakage, constraining willingness to transfer.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_013
-    text: Concerns about future competition and erosion of the US defence industrial base motivate restrictions or reluctance
-      to transfer frontier technologies.
-    rationale: Exporter concerns about future competition and industrial-base erosion motivate restrictions on frontier technology transfer.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_014
-    text: Perceived US refusal to transfer key technologies is framed as ‘technological imperialism’, motivating Japan to invest
-      in independent R&D and to demand better transfer terms.
-    rationale: Perceived transfer refusal motivates independent R&D investment and stronger demands in negotiation.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_019
-    text: Cautious export of advanced technology pushes Japan to build a better domestic R&D system to manufacture new equipment
-      independently.
-    rationale: Exporter reluctance to transfer advanced technologies motivates domestic R&D capacity building for independent manufacture.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_026
-    text: Security-driven withholding of software and sensitive data limits technology transfer depth within offsets despite
-      production licensing.
-    rationale: Withholding software and sensitive data limits the depth of transfer even when production is licensed.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_032
-    text: Transferring technology to highly capable firms supports indigenous successor development; if transfers are denied,
-      buyers may pursue domestic development or alternative suppliers.
-    rationale: Transfer decisions shape indigenous successor development trajectories and can redirect buyers toward domestic
-      development or alternative suppliers.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_033
-    text: When advanced Sidewinder guidance was not released, Japan developed AAM-1; later US willingness to license-produce a
-      more advanced Sidewinder shifted Japan’s R&D focus and supported long-run domestic counterpart development.
-    rationale: Technology denial and later licensing shift domestic R&D choices while enabling long-run indigenous counterpart development.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_008
-    text: Fearing future competition and loss of advantage, firms resist transferring technology or offer technology nearing
-      replacement, while governments may restrict transfer of sensitive military technologies.
-    rationale: Competitive and security incentives constrain the depth and timeliness of technology transfers within offset programs.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_010
-    text: By limiting access to key advanced technologies and constraining offset package size, the provider preserves control
-      and reduces the pace and depth of recipient capability development.
-    rationale: Export controls and package limits constrain transfer depth, slowing recipient capability development.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_016
-    text: As the need to preserve political ties through technology transfer declines, the US becomes less willing to approve
-      transfer on diplomatic grounds, tightening the channel that previously enabled generous terms.
-    rationale: Reduced diplomatic incentives shift export-control decisions toward tighter limits on technology transfer.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_018
-    text: By structuring offsets to progress from assembly to component design while keeping conceptual R&D protected, providers
-      can cooperate while slowing competitor catch-up and retaining visibility into technology trajectories.
-    rationale: Staged transfer with protected core knowledge allows cooperation while limiting competitor catch-up and leakage risks.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_020
-    text: Technology transfer associated with offset fulfilment can improve rivals’ capabilities; suppliers may mitigate by transferring
-      older technology or retaining control through majority-owned joint ventures.
-    rationale: Concerns about enabling competitors lead suppliers to limit transfer depth or retain control over outcomes.
 - theme_id: PM9
   theme_label: Barter eases constraints, reduces transparency
   mechanism_explanation: Barter arrangements relax financial constraints but reduce transparency, creating mutual advantage
@@ -868,14 +605,6 @@ proto_mechanism_themes:
     text: If exchange rates are unfavorable or exports are diverted from hard-currency markets, countertrade imposes hidden
       costs that accumulate as debt and repayment burdens.
     rationale: Countertrade can impose hidden costs and debt burdens when FX terms are unfavorable.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_004
-    text: Barter and counterpurchase arrangements reduce immediate cash payment by linking the arms sale to reciprocal purchases
-      financed via commodity flows and special accounts.
-    rationale: Linking arms sales to reciprocal commodity-based flows reduces immediate cash payments and relaxes financing
-      constraints.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_006
-    text: In-kind oil deliveries substitute for cash payment and allow sellers’ affiliated firms to lift crude as part repayment.
-    rationale: In-kind commodity repayment substitutes for cash, easing foreign-exchange constraints while reducing transparency.
 - theme_id: PM10
   theme_label: Offsets as supplier differentiator
   mechanism_explanation: When core capability requirements are fixed, offset offers differentiate suppliers and influence
@@ -904,68 +633,6 @@ proto_mechanism_themes:
     text: If one exporter limits offset offerings, purchasers shift to alternative suppliers; thus firms offer offsets while
       simultaneously downplaying domestic harms to policymakers.
     rationale: Competitive pressure leads firms to offer offsets to avoid losing sales.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_007
-    text: By making socio-economic benefits the decisive criterion among technically acceptable bids, procurement selection
-      incentivises bidders to maximise Canadian content and IRB commitments.
-    rationale: When bids are otherwise technically acceptable, socio-economic benefits and IRB packages become the differentiator
-      shaping selection.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_011
-    text: With limited real competition on military/technical grounds, bidders compete by enhancing IRB/offset packages, and
-      governments use this to pressure suppliers.
-    rationale: Limited technical differentiation shifts competition into IRB packages that buyers can leverage to extract better
-      commitments.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_001
-    text: To win in high-stakes competitions, exporters (backed by governments) bundle large industrial participation and
-      financial terms tailored to the purchaser’s needs.
-    rationale: Under intense competition, offset and finance bundles are used to differentiate offers and win contracts.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_018
-    text: Explicit technology-transfer offers (plants, licences, know-how, co-production) are used to meet buyer demands and
-      to secure contracts under competition.
-    rationale: Technology-transfer offers function as competitive inducements to secure contracts.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_002
-    text: To outbid rivals when offsets are a prerequisite, suppliers escalate offset offers, using increasingly generous packages
-      as competitive inducements.
-    rationale: Competitive bidding dynamics push firms to increase offset offers to secure contracts.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_004
-    text: Even as governments and firms grow wary about licensing and co-production, competitive sales pressures push suppliers
-      to pursue markets and offer technology and offset concessions to secure deals.
-    rationale: Sales competition sustains offset and technology concessions even when actors fear long-run diffusion risks.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_007
-    text: Procurement decision-makers choose the vendor perceived to offer greater access to technology, treating technology-transfer
-      terms as decisive selection criteria.
-    rationale: When bids are comparable, anticipated technology access becomes the differentiator shaping selection decisions.
-  - id: 14_us_offset_policy_pdf__cmo_006
-    text: As offset expectations become normalized and rivals match each other’s offers, buyers can ratchet offset targets upward
-      without losing bidders, driving escalation in requested percentages.
-    rationale: Normalization and rival matching enable buyers to escalate offset targets without losing competition.
-  - id: 14_us_offset_policy_pdf__cmo_007
-    text: Because US law cannot govern foreign government behavior, prohibiting US firms from offering offsets would impose unilateral
-      constraints and create competitive disadvantage, reducing firms’ willingness to accept restrictive domestic rules.
-    rationale: Unilateral prohibitions create competitive disadvantage, prompting resistance to restrictive domestic rules.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_004
-    text: When buyers treat offsets as a decisive evaluation input, contractors invest heavily in offset proposals to differentiate
-      themselves, potentially affecting campaign profitability.
-    rationale: Offsets become a competitive differentiator that drives costly proposal investments and affects profitability.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_005
-    text: Competitive bidding dynamics and rising buyer expectations create an upward ratchet where firms offer well above baseline
-      requirements, pushing commitments higher over time.
-    rationale: Competitive pressure drives escalating offers and ratchets commitments upward over time.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_006
-    text: When product performance is similar across bidders, offsets provide an additional competitive dimension that can sway
-      buyer choice between otherwise comparable systems.
-    rationale: Offsets influence supplier choice when core product performance is comparable.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_009
-    text: Even without explicit offset mandates, if buyers expect offsets as a normal condition of doing business, suppliers provide
-      them voluntarily to remain competitive, limiting the practical impact of formal prohibitions.
-    rationale: Competitive expectations sustain offsets even under formal prohibitions.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_023
-    text: Offsets influence selection only when competing systems are assessed as equal in value; when operational requirements
-      strongly favor one platform, offsets have limited ability to change the decision.
-    rationale: Offsets act as tie-breakers and have limited influence when operational performance dominates selection.
-  - id: 16_concluding_remarks_pdf__cmo_012
-    text: As long as offset demands remain part of competitions, vendors match them to avoid losing sales; limited progress on
-      multilateral elimination keeps the practice persistent.
-    rationale: Competitive pressure sustains offsets and weak multilateral progress limits elimination.
 - theme_id: PM11
   theme_label: Domestic industry influence on offsets
   mechanism_explanation: Domestic arms-industry influence shapes procurement demands, pushing governments to require direct
@@ -975,28 +642,6 @@ proto_mechanism_themes:
     text: Domestic arms-industry influence pushes governments to demand direct offsets that subsidize local military industry
       as part of foreign procurement.
     rationale: Domestic arms-industry influence drives demands for direct offsets that subsidize local industry.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_015
-    text: Political incentives and lobbying can outweigh economic-efficiency considerations, encouraging offsets that channel
-      benefits to favoured firms/regions and help overcome protectionist sentiment.
-    rationale: Political incentives and lobbying can sustain offset requirements despite contested efficiency.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_020
-    text: Political incentives and pressure from vested groups sustain mandatory offsets requirements beyond what a purely
-      efficiency-oriented buyer would choose.
-    rationale: Political incentives and vested interests sustain mandatory offset requirements beyond efficiency considerations.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_001
-    text: Because standardisation conflicts with domestic political markets and producer/defence-bureaucracy interests,
-      governments adopt compensatory procurement forms (co-production, work-sharing, licensed production) and offset packages
-      to reconcile cost pressures with domestic aims.
-    rationale: Domestic producer and bureaucracy interests resist standardization, driving adoption of compensatory procurement
-      and offsets as a political compromise.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_014
-    text: Political actors condition procurement support on industrial-development criteria, pressuring negotiators to seek
-      technology transfer agreements and co-production and participation terms alongside the purchase.
-    rationale: Domestic political demands for industrial development push negotiators to prioritize technology transfer and participation terms.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_021
-    text: When defense industry employment and survival are politically charged, offset strategies are designed to deliver work to
-      defense enterprises (including conversion opportunities) to align with government priorities and strengthen proposal evaluation.
-    rationale: Domestic defence-industry political pressures steer offset strategies toward supporting defence enterprises.
 - theme_id: PM12
   theme_label: Development-oriented indirect offset design
   mechanism_explanation: Specifying development-oriented indirect offsets and emphasizing transparency increases the likelihood
@@ -1006,15 +651,6 @@ proto_mechanism_themes:
     text: Requiring development-oriented indirect offsets (capital inflows, appropriate technology transfer, transferable
       skills, and/or new markets) and emphasizing transparency increases the chance of realization and development relevance.
     rationale: Targets indirect offsets and transparency to improve realization and development relevance.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_007
-    text: Shifting offsets from crude-lifting to petrochemical or related projects reorients compliance toward industrial
-      development objectives.
-    rationale: Redirecting compliance from commodity liftings toward industrial projects aligns deliverables with development
-      objectives.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_020
-    text: When immediate employment is a priority, offset baskets emphasize people-intensive and near-term work (e.g., software
-      development and contract R&D) rather than only long-term industrial initiatives.
-    rationale: Employment priorities steer offset design toward near-term, labour-intensive deliverables.
 - theme_id: PM13
   theme_label: Offsets shift competition to bundled content
   mechanism_explanation: Requiring offset packages redirects competition away from price/quality and toward bundled content,
@@ -1033,38 +669,6 @@ proto_mechanism_themes:
     text: Offset policy extracts rent off the price margin by requiring sellers to transfer economic activity into the domestic
       economy, allowing governments to pursue multiple objectives through procurement.
     rationale: Uses offset requirements to extract rents and channel activity into the domestic economy.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_010
-    text: Governments use offsets to bargain over contract terms and capture economic rents (or justify second-best interventions)
-      by trading procurement access for local industrial participation and spillover benefits.
-    rationale: Uses procurement access to extract rents and industrial participation through offsets.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_002
-    text: Offsets embed requirements for domestic activity (employment, investment, technology transfer, marketing access)
-      into defence contracts to pursue cyclical and structural economic objectives.
-    rationale: Uses offset requirements to steer domestic activity toward macroeconomic and industrial objectives.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_003
-    text: Requiring offsets as part of the procurement package increases bargaining leverage by conditioning contract award
-      on wider economic commitments.
-    rationale: Conditioning contract award on offset commitments increases bargaining leverage to extract broader economic activity.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_008
-    text: Requiring the seller to spend a large share of contract value on domestic industrial products and services channels
-      value into the purchaser’s economy.
-    rationale: Large mandated domestic spending obligations channel contract value into the purchaser’s economy.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_018
-    text: Articulating domestic-development priorities strengthens negotiating leverage over offset and licensing terms with
-      foreign suppliers.
-    rationale: Clear domestic-development priorities strengthen bargaining leverage over transfer and licensing terms.
-  - id: 14_us_offset_policy_pdf__cmo_003
-    text: When procurement is also used to pursue industrial and political objectives (e.g., tech transfer, investment, and domestic
-      legitimation), buyers demand offsets as a multi-purpose lever rather than as a narrow procurement add-on.
-    rationale: Offsets are used to extract rents and pursue multiple policy objectives through procurement.
-  - id: 14_us_offset_policy_pdf__cmo_013
-    text: Even when sellers agree to a nominal offset percentage, the buyer’s control over offset-credit allocation and terms enables
-      it to extract additional commitments beyond the headline percentage, limiting seller-government attempts to cap offsets.
-    rationale: Buyer control over credit rules enables extraction of additional commitments beyond headline percentages.
-  - id: 14_us_offset_policy_pdf__cmo_024
-    text: By insisting on offset credit and assigning credits to in-state firms, states attempt to capture industrial benefits from
-      foreign purchases and support local firms through negotiated credit arrangements.
-    rationale: Subnational offset-crediting practices channel benefits to favored firms and regions via negotiated credit allocation.
 - theme_id: PM15
   theme_label: Flexibility reduces mandate diseconomies
   mechanism_explanation: Rigid, one-size mandates constrain negotiation and force offsets where market exchange would be superior,
@@ -1203,10 +807,6 @@ proto_mechanism_themes:
     text: Using indirect offsets and investment commitments broadens the space for meeting obligations through non-defence
       projects, potentially diluting linkage to defence capability needs.
     rationale: Indirect offsets broaden compliance options and can dilute defence capability linkages.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_004
-    text: Classifying offsets as direct, semi-direct, or indirect structures what kinds of domestic work count toward fulfillment,
-      expanding eligible activity into non-defence sectors via indirect offsets.
-    rationale: Classification expands eligible activity (especially indirect offsets), broadening compliance space into non-defence sectors.
   - id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_021
     text: Seeing peers achieve licensed assembly can raise expectations and highlight domestic opportunity costs when local
       participation is limited.
@@ -1227,75 +827,6 @@ proto_mechanism_themes:
     text: Direct/indirect offsets are adopted as a cheaper alternative that still channels compensatory work to the domestic
       defence industrial base.
     rationale: Offsets used as cheaper alternative while still channeling compensatory work.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_002
-    text: Mandatory schemes reduce purchaser bargaining leverage by shifting initiative to suppliers, who can design offset
-      packages that serve their interests and create scope for opportunism.
-    rationale: Mandatory schemes shift initiative to suppliers and constrain purchaser bargaining leverage, enabling opportunism
-      and misaligned packages.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_014
-    text: Supplier predominance in proposal design and reporting encourages offset activities that maximise supplier advantages
-      and credit claims rather than meeting purchaser-prioritised capability needs.
-    rationale: Supplier-led proposal design and reporting steers activity toward supplier advantages rather than buyer-prioritized
-      capability needs.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_015
-    text: "Assuming offsets are free ignores opportunity costs: mandatory in-kind package requirements can forgo price discounts that might exceed the apparent value of offsets additions."
-    rationale: In-kind offset requirements can crowd out price discounts, creating opportunity costs and overstating net value.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_019
-    text: Inflexible mandatory requirements restrict bargaining, preventing buyers from negotiating the most advantageous
-      price-content-quality combination.
-    rationale: Inflexible in-kind mandates restrict bargaining over price/content/quality, reducing efficiency relative to
-      flexible negotiation.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_008
-    text: A Canadian-content premium raises the evaluated cost of foreign content, shifting award outcomes toward Canadian
-      firms or foreign firms willing to establish Canadian production/partnerships.
-    rationale: Preference scoring for Canadian content shifts award incentives toward local production and partnership arrangements.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_015
-    text: Reform shifts policy away from rigid 100% offsets toward focusing IRBs on long-term direct benefits tied to platforms,
-      with indirect benefits downgraded and procurement flexibility emphasised.
-    rationale: Relaxing rigid percentage rules and emphasizing flexibility is intended to reduce mandate-driven inefficiency while
-      targeting direct, platform-linked benefits.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_016
-    text: To secure direct benefits via domestic production/assembly, decision-makers emphasise existing Canadian production
-      capacity or suppliers willing to set it up, regardless of military priorities.
-    rationale: Direct-benefit requirements bias choices toward suppliers that can deliver domestic production even when this
-      reduces freedom to prioritize purely military criteria.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_017
-    text: Bidders are constrained in finding capable firms outside the 'Golden Triangle', so regional distribution demands can
-      push work to lower-capability suppliers and toward lower-technology build-to-print tasks.
-    rationale: Regional distribution requirements force work placement beyond competitive clusters, pushing activity toward
-      lower-capability suppliers and lower-tech tasks.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_023
-    text: Flexible obligations and openness to non-defence projects lower participation barriers and allow faster implementation
-      with proven technology.
-    rationale: Flexibility in eligible activities and project selection reduces mandate-driven frictions and allows quicker, lower-risk delivery.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_034
-    text: Allowing exceptions to manufacturing requirements enables service and knowledge-intensive projects better suited to
-      local absorption.
-    rationale: Allowing alternative forms of fulfillment reduces inefficiency when manufacturing content is infeasible and enables better-fit capability building.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_007
-    text: When full local assembly is judged excessively expensive, policymakers substitute toward other aerospace offsets such
-      as equipment, materials, avionics, simulators, and export-market workshare to achieve capability goals at lower cost.
-    rationale: Substituting away from high-cost assembly uses more flexible offset forms to reduce mandate-driven inefficiency while pursuing capability objectives.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_017
-    text: When a transaction is too small to justify a joint programme or foreign direct investment, offsets remain a practical
-      alternative and avoid some drawbacks of large, complex offset agreements.
-    rationale: Matching governance form to deal scale avoids overbuilding complex cooperation structures for small transactions.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_007
-    text: When direct industrial participation is hard to provide, countries and contractors shift attention to indirect offsets
-      (profitability, investment, technology transfer) as alternative pathways to deliver value and meet obligations.
-    rationale: Constraints on direct participation shift fulfillment toward more flexible indirect pathways.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_015
-    text: Flexible rules and negotiable timelines give authorities discretion to demand timely, high-quality proposals and allow
-      adaptation across deals, while still imposing completion schedules to maintain delivery pressure.
-    rationale: Flexible rules and timelines expand negotiation space while preserving delivery pressure through schedules.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_018
-    text: When publicised direct offers (e.g., assembly) intensify competitive pressure and political scrutiny, contractors may
-      prefer indirect initiatives to reduce contentious direct commitments while still delivering credible benefits.
-    rationale: Substituting toward indirect initiatives reduces political and delivery risk from contentious direct offers.
-  - id: 16_concluding_remarks_pdf__cmo_003
-    text: When offsets are assumed to be 'free goods', governments underweight cost-effectiveness considerations and delay comparing
-      offsets against alternative policy instruments that could achieve similar benefits at lower cost.
-    rationale: Assuming offsets are free delays cost-effectiveness comparison with alternative instruments and obscures opportunity costs.
 - theme_id: PM16
   theme_label: Offsets justified in high-hazard exchanges
   mechanism_explanation: Offsets can substitute for poorly functioning markets in high-hazard exchanges and yield reputational
@@ -1341,10 +872,6 @@ proto_mechanism_themes:
     text: Divergent valuation methods generate negotiation friction and can derail procurement bids or complicate offset strategy
       agreements.
     rationale: Valuation disagreements create negotiation friction and derail or complicate deals.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_024
-    text: Difficulty estimating technology value reduces the ability to manage, negotiate, and evaluate whether transfers match
-      obligations and needs.
-    rationale: Uncertain technology valuation impedes negotiation, management, and evaluation of whether transfers meet obligations.
   - id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_008
     text: High management burdens and pressure to fulfill large obligations lead to labor-intensive monitoring and reliance
       on seemingly artificial projects.
@@ -1353,10 +880,6 @@ proto_mechanism_themes:
     text: Firms lobby for continued protections and contract steering, which entrenches overcapacity and delays managerial
       reforms.
     rationale: Lobbying sustains protections, entrenching inefficiencies and delaying reforms.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_007
-    text: Offset-linked work generates heavy lobbying and overprotection of domestic enterprises, sustaining surplus/competing
-      capacities.
-    rationale: Offset-linked rents fuel lobbying and overprotection, sustaining surplus capacity and delaying adjustment.
   - id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_014
     text: Regional quota politics require explicit partitioning of offset work, steering allocations to satisfy rent-seeking
       groups rather than industrial coherence.
@@ -1373,30 +896,6 @@ proto_mechanism_themes:
     text: Raising offset requirements and leveraging diversified supplier competition pressures bidders to increase offset
       offerings, but incomplete information and corruption allegations can distort decisions.
     rationale: Incomplete information and corruption can distort offset decisions under competitive pressure.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_003
-    text: Inexperience and mismatched expectations (e.g., expecting directed subcontracts rather than competitive bidding) slow
-      partner identification and compliance, while burdensome procurement paperwork further inhibits transactions.
-    rationale: Inexperience and bureaucratic burdens raise transaction costs and slow feasible matching and deal execution.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_004
-    text: When waiver awareness is low, Swiss bids need explicit signaling to be treated as eligible; otherwise they face de facto
-      protectionism or administrative rejection.
-    rationale: Information frictions about waiver eligibility and discretionary gatekeeping can block otherwise compliant transactions.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_009
-    text: End-use certification and definitional disputes over what is military constrain allowable offset pathways, limiting
-      high-leverage strategies such as certain third-country sales.
-    rationale: Certification requirements and definitional ambiguity increase friction and restrict feasible compliance pathways.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_010
-    text: When government back-up purchasing encounters additional trade barriers and becomes awkward, the institution withdraws
-      from guaranteeing offsets and shifts responsibility to the firms that agree to offset conditions.
-    rationale: Administrative and trade frictions can make state backstops infeasible, shifting compliance burden to contractors.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_012
-    text: When DoD no longer serves as guarantor and reduces its offset-related purchasing, a larger share of offset fulfilment
-      shifts onto contractor sourcing and commercial pathways.
-    rationale: Withdrawal of government purchasing support shifts fulfillment toward firms’ own sourcing and market-based channels.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_018
-    text: By raising the minimum contract value below which offsets are required, policymakers reduce the number of low-value
-      offset cases and associated administrative costs.
-    rationale: Higher thresholds reduce administrative overhead from numerous small obligations and concentrate effort on larger cases.
   - id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_011
     text: When a local prime controls compliance and subcontracting access, it can use market power to extract rents and reinforce
       dominance rather than optimize national strategic outcomes.
@@ -1481,75 +980,6 @@ proto_mechanism_themes:
     text: Limited disclosure and strategic presentation of claims by interested parties reduces data availability and impedes
       independent assessment.
     rationale: Limited disclosure impedes independent assessment.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_010
-    text: Raising the offsets threshold reduces administratively costly, low-value obligations, concentrating effort on larger
-      procurements where compliance oversight is more worthwhile.
-    rationale: Higher thresholds reduce administrative overhead from many small obligations and focus compliance effort on larger
-      contracts.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_016
-    text: Monitoring and verification effort consumes administrative resources, creating recurring costs that must be weighed
-      against any benefits from offsets.
-    rationale: Monitoring and verification impose recurring administrative costs that can reduce net benefits.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_003
-    text: Elites use defence procurement to funnel spending into key regions/ridings and to advance industrial and regional
-      development goals, even when this conflicts with defence efficiency.
-    rationale: Political incentives steer procurement and IRB design toward distributive goals, even at the expense of defence
-      efficiency.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_012
-    text: To secure political support, procurement choices and offset packages are tailored to demonstrate benefits to
-      politically important regions/caucuses.
-    rationale: Tailoring packages toward politically salient regions builds support and sustains programmes despite efficiency
-      tradeoffs.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_009
-    text: Because each proposed commercial offset must be assessed for net trade additionality (net export increase or import
-      decrease), administrative screening becomes burdensome and contentious.
-    rationale: Additionality screening creates intensive administrative workload and disputes about what qualifies as genuine offset value.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_010
-    text: Case-by-case submission and review overwhelms administrative capacity and increases interpretive disputes about what
-      counts as a genuine offset, leading to rejection of many proposals.
-    rationale: Proposal overload and contested interpretation raise administrative costs and reduce the ability to process offsets efficiently.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_012
-    text: Extended time horizons and interpretive ambiguity amplify governance and accountability problems, making large flexible
-      offsets harder to administer effectively than smaller deals.
-    rationale: Longer horizons and ambiguity increase disputes and coordination burdens, weakening governance and accountability in large programs.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_005
-    text: Offset programme administration and coordination costs raise the total cost of the deal.
-    rationale: Managing offset obligations introduces administrative and coordination burdens that increase overall transaction costs.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_038
-    text: Additional review and compliance steps slow decisions and can push buyers to drop offsets to expedite procurement.
-    rationale: Added administrative procedures increase delays and opportunity costs, reducing willingness to maintain offset requirements.
-  - id: 14_us_offset_policy_pdf__cmo_005
-    text: If government backstopping creates costly administrative and political burdens (e.g., interventions to meet commitments and
-      friction with trade restrictions), decision-makers shift responsibility to private firms to avoid future liabilities.
-    rationale: Administrative and political burdens make state backstops unattractive, shifting responsibility to private firms.
-  - id: 14_us_offset_policy_pdf__cmo_010
-    text: When a responsible agency treats new requirements as redundant or burdensome, it may resist implementation and avoid writing
-      the required regulations, effectively nullifying the policy.
-    rationale: Bureaucratic resistance and implementation avoidance can nullify offset-related requirements.
-  - id: 14_us_offset_policy_pdf__cmo_012
-    text: By reaffirming a non-guarantor stance, the Executive Branch reduces government liability and keeps offset fulfilment as a
-      private contractual responsibility.
-    rationale: Withdrawing government guarantees shifts liability and fulfillment responsibility to private contracts.
-  - id: 14_us_offset_policy_pdf__cmo_018
-    text: When offset fulfilment involves payments that resemble inducements to domestic buyers, legal ambiguity ('between the cracks')
-      and distributional politics can trigger political backlash and regulatory tightening.
-    rationale: Perceived inducements and legal ambiguity trigger scrutiny and tightening, raising governance costs.
-  - id: 14_us_offset_policy_pdf__cmo_019
-    text: When offsets are demanded on aid-funded purchases, it is perceived as 'double dipping' (receiving aid and extracting
-      industrial compensation), mobilizing investigative scrutiny and political opposition.
-    rationale: Aid-funded offset demands are framed as rent extraction, triggering scrutiny and political opposition.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_003
-    text: When governments ask one-sidedly for benefits without co-developing feasible opportunities, contractors—under pressure to
-      satisfy requirements—submit proposals outside their core business simply to meet formal demands.
-    rationale: One-sided demands and compliance pressure generate low-quality, misaligned proposals that raise administrative burden.
-  - id: 16_concluding_remarks_pdf__cmo_006
-    text: Because vendors seek credit broadly, programmes generate disputes over additionality, standards, and valuation (especially
-      where no market price exists), increasing administrative burdens—particularly for large programmes.
-    rationale: Disputes over additionality and valuation increase administrative burdens, especially in large programs without clear market pricing.
-  - id: 16_concluding_remarks_pdf__cmo_007
-    text: Agreeing an offset work package in advance could reduce disputes over eligibility and additionality, but transaction
-      complexity makes this impractical for very large indirect offsets.
-    rationale: Ex-ante specification can reduce disputes, but transaction complexity limits feasibility for very large indirect offsets.
 - theme_id: PM18
   theme_label: Objective ambiguity undermines evaluation
   mechanism_explanation: Mixed objectives and unclear incidence of benefits make it difficult to specify evaluation criteria
@@ -1625,57 +1055,6 @@ proto_mechanism_themes:
     text: Equity participation aligns incentives by tying foreign partners to the domestic firm’s profitability, increasing
       willingness to share technological and marketing skills beyond a one-off obligation.
     rationale: Equity participation aligns incentives and encourages deeper skill sharing.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_011
-    text: When technology transfer is embedded in an offset package, reputational incentives shift risk toward the vendor,
-      increasing effort to ensure the transfer succeeds.
-    rationale: Vendor reputation risk increases effort to deliver successful technology transfer.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_012
-    text: Offsets increase domestic workshare and output for local firms, moving them down learning curves and improving
-      productivity over time.
-    rationale: Increased workshare drives learning-by-doing, improving productivity and competitiveness over time.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_014
-    text: Building most units domestically under transferred design/technology provides learning, training, and equipment renewal
-      that can reposition shipyards into higher-technology niches.
-    rationale: Domestic production under transferred designs enables learning-by-doing and upgrading that can support higher-technology specialization.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_017
-    text: Co-production programmes send technicians abroad for training and trigger investments in equipment renewal, enabling
-      technology adoption for specialised structures.
-    rationale: Training and equipment renewal investments support adoption of specialized production technologies.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_010
-    text: Repeated subcontracting participation enables learning and credibility, increasing the number and depth of roles in
-      later programmes.
-    rationale: Repeated subcontracting builds learning-by-doing and credibility, enabling deeper roles in later programs.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_034
-    text: Exceptional-case treatment and long-horizon transfer consistency allow cumulative absorption and progressive movement
-      into more advanced production.
-    rationale: Long-horizon, consistent transfer allows cumulative absorption and progressive movement into more advanced production.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_031
-    text: Embedding Saudi personnel on partner engineering teams enables on-the-job learning and faster skill acquisition.
-    rationale: Sustained personnel exchange transfers tacit knowledge and accelerates learning-by-doing within joint ventures.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_008
-    text: Transfer of manufacturing data and offset provisions, combined with kit assembly and local production, expand the
-      workforce experience base and enable learning-by-doing beyond simple assembly.
-    rationale: Manufacturing data transfer plus progressive local work expands workforce experience and accelerates learning-by-doing.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_009
-    text: When foreign procurements are not paired with offset-linked technology transfer and co-production packages, domestic
-      programmes lack the know-how and support needed to overcome development inexperience.
-    rationale: Co-production and transfer support are needed to overcome inexperience and enable learning-by-doing in new programs.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_012
-    text: Through offset-linked licensing and technology transfer, the foreign supplier enables Taiwan to test and build integration
-      skills by incorporating indigenous components with the Patriot system.
-    rationale: Licensed participation and integration work provide learning opportunities that build systems-integration capability.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_011
-    text: Offsets generate workload, export activity, training, and standards and homologation support that helps domestic firms
-      integrate into international markets.
-    rationale: Supplier support and standards alignment reduce market-entry barriers and help firms gain credibility in external markets.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_014
-    text: Offsets can seed niche expertise that later enables domestic firms to win defined work packages in cooperative development
-      and production programmes.
-    rationale: Early offset-enabled learning and specialization can build niche capability and credibility that supports later workshare wins.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_015
-    text: Foreign ownership stakes create incentives for longer-term commitment and capability upgrading, as investors seek to
-      recoup sunk modernisation costs through continued presence and sales.
-    rationale: Equity incentives align interests toward sustained upgrading and continued engagement beyond one-off offset fulfillment.
 - theme_id: PM20
   theme_label: Alliance incentives via offset waivers
   mechanism_explanation: Governments use bargaining power or offset waivers to encourage alliances, boosting investment and
@@ -1718,21 +1097,6 @@ proto_mechanism_themes:
     text: To reconcile cheaper imports with domestic economic expectations, purchasers impose offset obligations that compel
       foreign vendors (and subcontractors) to place additional purchases/investment in the buyer’s economy.
     rationale: Offset obligations compel vendors to place additional purchases/investment domestically.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_021
-    text: Offsets can function as trade barriers that attract external objections and may be constrained by GATT rules.
-    rationale: Conditioning market access on reciprocal obligations creates trade-restricting requirements that provoke external challenges.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_039
-    text: If offsets are treated as trade-rule violations, states face a trade-off between maintaining trade access and using
-      offset tools.
-    rationale: Trade-rule constraints force governments to choose between reciprocity-based procurement leverage and broader trade access.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_001
-    text: By conditioning arms procurement on offset obligations, local producers and governments leverage purchases to induce
-      foreign suppliers to provide technology transfer and market access opportunities for domestic products.
-    rationale: Conditioning procurement access on reciprocity enables buyers to extract transfer and market access concessions.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_015
-    text: By instructing procurement executives to insist on compensation via direct (licensed/co-production) or indirect
-      participation, Switzerland embeds offsets as a default requirement for major acquisitions.
-    rationale: Executive directives institutionalize offsets as a standard condition of market access for major procurements.
 - theme_id: PM22
   theme_label: Offsets reveal local supplier capability
   mechanism_explanation: Local content requirements compel primes to search for and engage domestic suppliers, reducing information
@@ -1742,14 +1106,6 @@ proto_mechanism_themes:
     text: Local content requirements force primes to search and engage domestic suppliers, addressing an information imperfection
       about local capability.
     rationale: Forces supplier search, addressing information gaps about local capability.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_001
-    text: Offset requirements create an investor search-and-match process in which the Saudi government convenes foreign and
-      Saudi investors, then private actors select and run ventures that meet offset rules.
-    rationale: Offset requirements and facilitation reduce search frictions by forcing and organizing partner discovery and matching.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_006
-    text: Offsets function primarily to place UK firms on bidders’ lists; actual orders are won only if UK firms are competitive on
-      price, quality, and delivery.
-    rationale: Offsets force consideration and supplier search, but competitiveness determines whether orders materialize.
 - theme_id: PM23
   theme_label: Sourcing persists only when viable
   mechanism_explanation: Offset-induced sourcing ends when obligations expire unless continued local production is economically
@@ -1763,19 +1119,6 @@ proto_mechanism_themes:
     text: Once the foreign supplier fulfills its obligations, subcontracting benefits end, preventing accumulation of sustained
       industrial collaboration.
     rationale: Subcontracting benefits end after obligations, preventing sustained collaboration.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_005
-    text: Because compensation contracts do not obligate continued industrial relationships after fulfillment, subcontracting
-      benefits end when the supplier meets its offset requirement.
-    rationale: Subcontracting benefits end once quantified obligations are fulfilled, limiting durability of industrial relationships.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_016
-    text: If follow-on orders are weak, foreign investors pressure the defence ministry for purchases or threaten withdrawal,
-      while domestic partners seek promised technology and marketing transfers, shifting conflict from formal offset governance
-      into market bargaining.
-    rationale: When follow-on demand is insufficient, continued sourcing and investment depend on economic viability and bargaining over future orders and transfers.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_021
-    text: Offset-placement requirements can force exploration of new suppliers; if the new source is genuinely competitive, the
-      buyer continues sourcing after obligations end, but if uncompetitive, work is short-term and relocates when the obligation is met.
-    rationale: Sourcing persists only when new suppliers remain competitive after the obligation ends.
 - theme_id: PM24
   theme_label: Indirect offsets stimulate targeted exports
   mechanism_explanation: Indirect offsets that require exporter purchases act like sector-specific price adjustments, stimulating
@@ -1801,10 +1144,6 @@ proto_mechanism_themes:
   - id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003
     text: Lower visibility enables difficult-to-detect price discrimination and dumping of product in world markets.
     rationale: Low visibility enables difficult-to-detect price discrimination and dumping.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_004
-    text: Barter and counterpurchase can obscure the effective price of a transaction, enabling price discrimination or dumping
-      while avoiding visible nominal price changes.
-    rationale: Price opacity in barter/counterpurchase enables price discrimination and dumping.
 - theme_id: PM26
   theme_label: Buyback hostage aligns incentives
   mechanism_explanation: Buyback obligations make sellers responsible for absorbing output, aligning incentives to avoid transferring
@@ -1814,18 +1153,6 @@ proto_mechanism_themes:
     text: Buyback requirements hold the seller “hostage” by making it responsible for buying back output, aligning incentives
       so the seller avoids transferring outdated technology that would undermine buyback viability.
     rationale: Buyback requirements align incentives to avoid obsolete tech transfer.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_006
-    text: Buy-back arrangements signal product quality because the exporter commits to purchase output from the facility, implying
-      confidence that output meets market standards.
-    rationale: Buy-back provides a credible quality signal via exporter commitment to purchase output.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_007
-    text: Buy-back ties compensation to future output and creates ongoing obligations, reducing incentives for exporters to
-      supply outdated/low-quality technology and mitigating adverse selection.
-    rationale: Output-linked obligations reduce adverse-selection incentives and discourage low-quality technology transfer.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_008
-    text: When direct ownership and enforceable quality-contingent contracts are unavailable, countertrade/buy-back provides
-      a second-best governance device by linking obligations to observable output and ongoing relationships.
-    rationale: Buy-back links obligations to observable output, providing second-best governance under contracting constraints.
 - theme_id: PM27
   theme_label: Depreciation drives tech licensing
   mechanism_explanation: As technologies depreciate, sellers are incentivized to license them via offsets to monetise value
@@ -1848,17 +1175,6 @@ proto_mechanism_themes:
     text: Offset transactions reduce foreign firms’ costs and/or raise quality and market-competitiveness, while technology
       transfer back to the US is rare.
     rationale: Offsets reduce foreign firms’ costs/improve quality, affecting competitiveness via networks/know-how.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_005
-    text: In counterpurchase arrangements, exporters leverage their marketing networks and product knowledge to place countertrade
-      goods more efficiently than specialist traders or the importer could.
-    rationale: Exporter marketing networks lower search/marketing costs for disposing of countertrade goods.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_011
-    text: The seller provides trading/marketing know-how and helps locate third-party buyers for the purchaser’s goods,
-      leveraging its networks to realise reciprocal value.
-    rationale: Seller marketing networks and know-how reduce search and market-entry costs for placing buyer-country exports.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_025
-    text: One-for-one export credits incentivize contractors to broker matches for domestic exports using their networks.
-    rationale: Contractor networks reduce search and matching costs for export deals, making reciprocal export fulfillment more feasible.
 - theme_id: PM29
   theme_label: Bundled contracting reduces transaction costs
   mechanism_explanation: Offsets can be embedded in complex bundles that lower transaction costs and reallocate rents under
@@ -1877,10 +1193,6 @@ proto_mechanism_themes:
     text: Using offsets as a second-best substitute for appropriate macro/trade reforms distorts resource allocation and embeds
       inefficient sector-specific fixes in procurement.
     rationale: Offsets act as second-best fixes that embed distortions.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_003
-    text: Countertrade functions as an implicit, transaction-specific adjustment mechanism (a form of selective devaluation/multiple
-      rates) that reallocates scarce foreign exchange toward priority imports.
-    rationale: Countertrade acts as a second-best macro adjustment (selective devaluation/multiple rates) under FX constraints.
   - id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_014
     text: By encouraging bilateralism and reallocating investment/purchases across countries, mandatory offsets impose externalities
       on third parties and conflict with free-trade norms.
@@ -1897,26 +1209,6 @@ proto_mechanism_themes:
     text: Offset obligations steer work to politically prioritised regions and firms, sustaining inefficient producers and
       discouraging rationalisation by masking underlying industrial weaknesses.
     rationale: Politically steered offsets sustain inefficient producers and mask weaknesses.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_014
-    text: Offsets shift work toward targeted sectors/regions by subsidising or mandating domestic sourcing, but the financing
-      and reallocation create distortions across industries.
-    rationale: Employment and sourcing reallocation via offsets distorts allocation and weakens comparative advantage.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_006
-    text: Using offsets to preserve existing defence-industrial activity encourages short-term protectionism rather than
-      diversification and restructuring.
-    rationale: Offsets used for preservation act as short-term protectionism and can delay restructuring and diversification.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_008
-    text: Regular offset orders reduce pressure to diversify and improve competitiveness, perpetuating underdevelopment and
-      dependence.
-    rationale: Guaranteed offset orders reduce diversification and competitiveness pressures, sustaining dependence and weak renewal.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_020
-    text: Government sets aside quantities and funds domestic prototype development to create a national product and spin-offs,
-      despite negative military advice.
-    rationale: Industrial-policy aims can override military advice, redirecting resources into risky domestic development efforts.
-  - id: 14_us_offset_policy_pdf__cmo_015
-    text: When offsets operate as market distortions, they tend to reallocate employment and trade across sectors rather than changing
-      aggregate totals, leading to distributional impacts and localized political controversy.
-    rationale: Offsets reallocate activity across sectors, creating distributional effects and political conflict without large aggregate changes.
 - theme_id: PM31
   theme_label: Labour rents drive opposition to offsets
   mechanism_explanation: Anticipated losses of employment and labour-market rents motivate unions to oppose offsets and seek
@@ -2128,34 +1420,6 @@ proto_mechanism_themes:
     text: When offsets are not directed into shipbuilding proper, local shipbuilding capability and accumulated expertise
       can erode, despite related activity in repair.
     rationale: Lack of shipbuilding-directed offsets erodes local capability despite repair work.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_023
-    text: When the platform sells poorly internationally, primes order fewer domestically produced sections and press lower
-      prices, reducing domestic production volume and benefits.
-    rationale: Weak export demand reduces work volumes and compresses prices, limiting sustained production and learning benefits.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_008
-    text: Export bans reduce economies of scale and raise unit costs for domestic production, making off-the-shelf imports appear
-      cheaper but politically less desirable.
-    rationale: Export restrictions limit scale economies, raising unit costs and shifting cost comparisons toward imports.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_016
-    text: A structured prioritisation rule uses licensing for very advanced tech or high development costs, and uses importation
-      when volumes are too low for cost-effective local production.
-    rationale: Conditional localization rules use licensing where feasible and shift to imports when volumes are too low for cost-effective local production.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_017
-    text: When domestic development is infeasible and licensed production would be too costly at low volume, procurement shifts
-      to importation.
-    rationale: Low volumes and infeasible development make licensed production uneconomic, shifting procurement to imports.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_024
-    text: Spending caps and manpower consumption constrain procurement budgets, limiting the rate at which local production can
-      expand despite offsets.
-    rationale: Budget constraints limit the pace of localization and domestic production expansion.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_010
-    text: Given limited scale and labour constraints, policymakers steer offset content toward dual-use or civil products with
-      broader markets rather than dedicated defence production.
-    rationale: Scale and labour constraints limit feasible defense manufacturing, shifting offset emphasis toward commercially viable dual-use projects.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_014
-    text: When offset work represents a substantial share of a small firm’s turnover, the firm is more sensitive to continuation/termination
-      of offset-driven contracts, while large firms may treat offsets as marginal work.
-    rationale: Dependence on offset-driven demand makes small firms more vulnerable to volatility in contract continuation.
 - theme_id: PM35
   theme_label: Offsets displace rather than add trade
   mechanism_explanation: Offset-related export arrangements can reallocate sales and foreign exchange rather than create new
@@ -2194,10 +1458,6 @@ proto_mechanism_themes:
     text: Once buyer-country firms secure component roles via coproduction/subcontracting, they can supply not only the original
       prime but also other manufacturers, competing with domestic suppliers.
     rationale: Offset-enabled component roles create cross-border supplier ties and market entry beyond the initial prime.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_013
-    text: Offsets operate as an entry-assistance tool by requiring prime contractors to consider and subcontract to domestic
-      firms, shifting supplier selection toward local entrants.
-    rationale: Prime-contractor subcontracting requirements create market-entry opportunities for domestic firms.
   - id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_002
     text: Buyer leverage in a buyer’s market enables purchasing states to extract concessions (offsets/industrial participation)
       from offshore vendors.
@@ -2318,75 +1578,6 @@ proto_mechanism_themes:
     text: Moving to joint development/production defines industrial tasks earlier and reduces the need to administer offset
       applications, making participation more predictable for domestic industry.
     rationale: Joint development defines tasks earlier and reduces offset administration burden.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_004
-    text: Participation in Defence Production Sharing Arrangements shifts Canada toward subsystem/component niches and reliance
-      on offshore integrated platforms.
-    rationale: Production-sharing arrangements embed firms into cross-border component roles and deepen reliance on offshore
-      prime platforms.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_021
-    text: Workshare guarantees tied to future sales create incentives for suppliers to integrate domestic firms into global
-      production networks, potentially sustaining benefits beyond the initial purchase.
-    rationale: Future-sales-linked guarantees incentivize suppliers to embed domestic firms in ongoing production networks beyond
-      the initial deal.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_023
-    text: To deliver required Canadian content, foreign suppliers establish subsidiaries or partnerships in Canada, changing
-      ownership structures and embedding foreign parent–subsidiary technology relationships.
-    rationale: Subsidiaries and partnerships create enduring cross-border organizational ties that structure technology access
-      and work allocation.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_014
-    text: Vendors commit to buy parts/components from the purchaser’s industry for inclusion in the delivered system, creating
-      closer industrial cooperation and sometimes enabling licensing/co-production.
-    rationale: Parts and component subcontracts embed buyer firms into cross-border production ties and can open pathways to
-      licensing and co-production.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_019
-    text: Investment and joint-venture requirements redirect part of the defence contract value into local industry and
-      high-technology projects.
-    rationale: Investment and joint ventures channel contract value into cross-border industrial ties and local capability-building
-      projects.
-  - id: 16_concluding_remarks_pdf__cmo_010
-    text: By drawing foreign firms into the domestic economy via equity investments or joint ventures, policy-makers align foreign
-      firms’ incentives with domestic capability building because sharing skills can raise investment profitability.
-    rationale: Equity investment and joint ventures align incentives by linking capability building to investment profitability.
-  - id: 16_concluding_remarks_pdf__cmo_011
-    text: As firms become familiar through work placement and efficiency improvements, foreign manufacturers become more willing to
-      invest, so the transition to joint ventures can represent maturation of an offset strategy rather than failure.
-    rationale: Familiarity and efficiency learning can shift offsets toward joint ventures as a maturation pathway.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_035
-    text: Licensing fees, co-production profits, and follow-on upgrades generate revenue streams that can rival or exceed
-      off-the-shelf sales.
-    rationale: Licensing and upgrade revenues provide supplier incentives to support transfer and ongoing collaboration.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_002
-    text: By partnering with a local firm, foreign companies rely on local knowledge and relationships to reduce learning and
-      compliance burdens, making market entry more feasible.
-    rationale: Joint ventures create cross-border ties that help foreign firms navigate local institutions and sustain operations.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_006
-    text: Joint ventures create local benefits that increase political and commercial acceptance, supporting ongoing market access
-      for foreign partners.
-    rationale: JV-based offsets embed foreign firms in local economic benefits and relationships, improving acceptability and market access.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_028
-    text: Prime-contractor appraisal, introductions, support, and fast-track access reduce entry and coordination costs for domestic
-      partners.
-    rationale: Prime contractors act as intermediaries that lower search and coordination costs, enabling cross-border collaboration under offsets.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_011
-    text: Offset-linked cooperative marketing and third-country export opportunities increase production volume, enabling scale
-      economies and reinforcing incentives to deepen local production capability.
-    rationale: Export opportunities raise volumes and improve viability, supporting deeper local production roles and capability.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_002
-    text: As policy preference shifts toward international cooperation and investment-based compensation, institutional mandates
-      and framing change to support firm-to-firm negotiation and workshare governance rather than project-by-project offset policing.
-    rationale: Shifting from offset policing toward cooperation frameworks reduces application-by-application governance burdens and supports negotiated workshare.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_008
-    text: By securing export-market workshare (components in aircraft sold to third countries), domestic firms gain repeated
-      production experience and reputational entry into wider markets.
-    rationale: Export-linked workshare embeds firms in cross-border production networks and provides durable market-entry pathways beyond the initial purchase.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_013
-    text: Because joint programmes define tasks and workshares earlier and link them directly to the system, oversight shifts
-      from policing thousands of offset applications to supporting firm-to-firm negotiation over meaningful work packages.
-    rationale: Joint-program workshare replaces dispersed offset applications with defined tasks, reducing administrative load and focusing governance on substantive work packages.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_016
-    text: By negotiating waivers and using purchases, marketing assistance, licensing, R&D collaboration, and training, Swiss
-      offsets seek to penetrate protected markets and establish entry into new foreign markets.
-    rationale: Waivers and supplier assistance reduce market-entry barriers, using offsets as an entry-assistance tool into protected markets.
 - theme_id: PM37
   theme_label: Buyer pool expansion loosens controls
   mechanism_explanation: When exports and offsets expand the buyer pool, services shift from restraint to facilitation, adopting
@@ -2396,18 +1587,6 @@ proto_mechanism_themes:
     text: When exports (and offsets) help increase the buyer pool, services shift from proliferation restraint toward making
       sales work for customers, adopting a more permissive stance on offsets.
     rationale: Expanding buyers shifts services toward permissive, sales-enabling practices.
-  - id: 14_us_offset_policy_pdf__cmo_001
-    text: Because offset impacts are uncertain even in theory, policymakers have weak incentives to intervene heavily; instead, the US
-      tends to focus on regulating conditions for providing offsets while avoiding interference with firms’ export competition.
-    rationale: Uncertain impacts and export-competition priorities sustain a permissive, limited-intervention stance.
-  - id: 14_us_offset_policy_pdf__cmo_009
-    text: If an administration is reluctant to take actions that could threaten high-technology export sales, it may delay implementing
-      reporting and regulatory steps that could facilitate restrictions on offsets.
-    rationale: Export-sales priorities can delay implementation of reporting and regulatory measures that could enable restrictions.
-  - id: 14_us_offset_policy_pdf__cmo_021
-    text: To support free-trade norms while preserving firms’ commercial flexibility, the US can prohibit agencies from promoting
-      countertrade yet refrain from opposing company participation except where national security risks arise.
-    rationale: Non-promotion policies preserve normative commitments while avoiding constraints on firm participation absent security risks.
 - theme_id: PM38
   theme_label: Firms build offset-management capacity
   mechanism_explanation: As offset requirements expand, firms develop specialized offset organizations and negotiate longer,
@@ -2421,26 +1600,6 @@ proto_mechanism_themes:
     text: As more countries adopt offsets and escalate requirements (toward 100%+), firms adapt by expanding offset operations
       and negotiating longer, more complex contracts.
     rationale: Escalating requirements drive expansion of offset operations and longer contracts.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_020
-    text: Suppliers establish dedicated local offices to identify and structure joint ventures and technology-transfer projects
-      needed to meet offset obligations.
-    rationale: Dedicated local offices expand organizational capacity to identify and implement offset-compliance projects.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_024
-    text: As competition intensifies and buyer requirements diversify, offsets shift from optional add-ons to expected baseline
-      reciprocity, pushing exporters to coordinate across industrial sectors to deliver offset programmes.
-    rationale: As offsets become baseline expectations, exporters expand and coordinate offset-management capacity across sectors.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_017
-    text: As offsets become baseline expectations, suppliers shift from skepticism to proactively proposing offset packages to
-      remain viable bidders.
-    rationale: Competitive pressure drives firms to develop and offer offset solutions as a standard element of bidding.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_008
-    text: A diversified conglomerate can meet offset obligations through purchases within its broader corporate network, while
-      a more specialised firm must recruit supply-chain tiers and provide active marketing assistance to generate qualifying transactions.
-    rationale: Greater organizational scope and internal networks reduce search and sourcing burdens for fulfillment compared with specialized firms.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_022
-    text: By structuring engagement around what the contractor wants to buy (needs-led search) and using offset requirements as a
-      catalyst to mobilize internal experts, the firm uncovers and accelerates business ventures that might otherwise be missed.
-    rationale: Offsets mobilize internal search and coordination effort, helping firms identify and accelerate qualifying ventures.
 - theme_id: PM39
   theme_label: Hidden injuries from offset competition
   mechanism_explanation: Offset-linked competition and support for foreign firms’ cost/quality improvements can impose unseen
@@ -2454,10 +1613,6 @@ proto_mechanism_themes:
     text: Offset promises provide a tool to justify imports by claiming protection of jobs and technology, even when costs/efficiency
       losses exist.
     rationale: Offset promises justify imports by claiming job/technology protection despite inefficiencies.
-  - id: 14_us_offset_policy_pdf__cmo_016
-    text: If offset-related technology transfer and investment primarily reinforce existing foreign competitors (rather than creating
-      new industries), it can expand rivals’ markets and intensify competition for US firms.
-    rationale: Offsets can strengthen existing competitors, intensifying competitive pressure on incumbent exporters.
 - theme_id: PM40
   theme_label: Offsets accelerate next-generation development
   mechanism_explanation: Interoperability demands and technology sharing can be used to justify accelerating next-generation
@@ -2476,21 +1631,6 @@ proto_mechanism_themes:
     text: Economic imperatives gain ascendancy over foreign-policy/security concerns, shifting lead roles toward defense/economic
       agencies and weakening arms-control functions.
     rationale: Economic imperatives shift authority away from arms-control toward economic agencies.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_001
-    text: With limited strategic pressure to prioritise military effectiveness, political and economic goals dominate procurement
-      decision-making and the design of industrial participation requirements.
-    rationale: When security salience is low, political-economic objectives can dominate defence procurement and industrial
-      participation design.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_002
-    text: Interdepartmental mandates (IRBs, trade, contracting, spending approval) and Cabinet demand purchases inject non-defence
-      priorities into procurement choices.
-    rationale: Multi-department mandates and cabinet intervention elevate economic and political priorities over military-only
-      criteria in procurement choices.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_010
-    text: Political objectives shape platform selection and contracting by pursuing European linkages even when military
-      requirements and alliance politics create friction.
-    rationale: Political-economic objectives can steer platform selection toward preferred external linkages despite military
-      and alliance frictions.
 - theme_id: PM42
   theme_label: Offsets increase defence budget appeal
   mechanism_explanation: Linking military imports to offsets that build non-defence capabilities makes military spending more
@@ -2527,10 +1667,6 @@ proto_mechanism_themes:
     text: When security urgency or treaty quid-pro-quo dominates decision-making, governments de-emphasize offsets and choose
       off-the-shelf purchases.
     rationale: Security urgency reduces emphasis on offsets and favors off-the-shelf buying.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_015
-    text: When suppliers resist co-production on political or economic grounds and acquisition urgency is high, Taiwan accepts
-      reduced production participation to secure delivery of needed aircraft.
-    rationale: Security urgency can override offset and participation goals, shifting decisions toward timely delivery over industrial participation.
 - theme_id: PM46
   theme_label: Absorptive capacity conditions outcomes
   mechanism_explanation: Effective technology absorption depends on skilled workforce, innovative subcontractors, IP constraints,
@@ -2560,78 +1696,6 @@ proto_mechanism_themes:
     text: When procurement choices overlook local capabilities, opportunities for domestic capability utilization and spin-off
       conversion are reduced.
     rationale: Overlooking local capability reduces utilization and spin-off potential.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_025
-    text: Concentrating IRBs on existing industrial strengths supports firms better able to absorb technology and pursue export
-      niches, but intensifies political conflict with weaker regions seeking redistributed benefits.
-    rationale: Targeting IRBs to stronger firms leverages greater absorptive capacity and export potential, while creating
-      distributive conflict with weaker regions.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_003
-    text: Offset benefits (especially co-production and subcontracting) align with existing capability, enabling domestic firms
-      to undertake feasible work packages and potentially improve competitiveness.
-    rationale: Aligning work packages to existing capability increases feasibility and learning potential, supporting competitiveness.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_004
-    text: Selecting co-production projects that fit existing capacity keeps a larger share of procurement expenditure in-country
-      and reduces implementation barriers.
-    rationale: Capacity-congruent co-production reduces implementation barriers and increases retained domestic expenditure.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_020
-    text: Bureaucratically inflexible public firms compete for programmes suited to smaller firms, preventing SMEs from
-      developing technology and limiting their ability to absorb OIB work packages.
-    rationale: Rigid incumbent public firms crowd out smaller firms and constrain the development of absorptive capacity for OIB work.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_025
-    text: High funding costs and capability shortfalls constrain investment and production readiness, limiting timely absorption
-      of offset programmes and technology.
-    rationale: Financing constraints and capability gaps limit investment and readiness needed to absorb transferred technology.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_027
-    text: Industrial-policy measures (balanced public/private roles, specified technology-transfer needs, investment and quality
-      systems, and penalty-backed obligations for specific proposals) increase absorptive capacity and enforceability.
-    rationale: Industrial policy that builds capability and applies penalty-backed obligations strengthens absorptive capacity and delivery.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_020
-    text: JDA leverages private-sector expertise and concentrates TRDI research on specialised technologies lacking immediate
-      commercial demand, supporting advanced equipment development.
-    rationale: Targeted public R&D institutions and private-sector leverage strengthen absorptive capacity for advanced development.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_027
-    text: Channeling offset know-how to selected firms concentrates learning and accelerates domestic development of successor
-      systems.
-    rationale: Concentrating learning in capable firms accelerates absorption and successor-system development.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_009
-    text: If a buyer lacks R&D capacity, imported high technology can only be implemented, not improved, producing branch-plant
-      dependency.
-    rationale: Without local R&D and innovation capability, technology transfer yields dependent implementation rather than autonomous capability.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_011
-    text: Prioritizing domestic R&D institutions and university linkages builds absorptive capacity for technology transfer.
-    rationale: Strengthening R&D institutions and linkages increases the ability to absorb, adapt, and extend transferred technology.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_013
-    text: Shortages of skilled nationals slow implementation and limit benefits of transfer.
-    rationale: Skilled labor constraints reduce the pace and depth of absorption from offset projects.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_014
-    text: Reframing targets from aspirational high tech to feasible medium-tech projects better matches absorptive capacity and
-      improves implementation.
-    rationale: Aligning project ambition to local capability improves feasibility and increases the chance of meaningful absorption.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_033
-    text: High startup costs and difficulty securing loans delay venture launch and can produce sustained losses.
-    rationale: Financing constraints limit investment readiness and can undermine absorption and viability of offset ventures.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_035
-    text: Delays in required government infrastructure postpone project timelines and capability delivery.
-    rationale: Weak enabling infrastructure slows project execution and delays realization of capability from offset investments.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_037
-    text: A market-based offset system requires profit opportunities and market institutions for absorption and sustainability.
-    rationale: Market institutions and profit incentives are prerequisites for sustained learning and commercial viability of transferred capability.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_017
-    text: Overly ambitious plans and underestimation of infrastructure and human-capital requirements reduce the ability to
-      exploit transferred technologies, limiting how far offsets translate into self-sufficiency.
-    rationale: Underestimating capability and infrastructure needs limits absorption and constrains self-sufficiency outcomes from transfers.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_016
-    text: If offset work does not materially add new technology/process capability or scale learning, then competitiveness effects
-      remain limited even when financial offset values appear large.
-    rationale: Without real capability and learning, offsets deliver limited competitiveness gains despite large nominal values.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_019
-    text: Where an economy lacks a well-developed industrial base (e.g., predominantly agricultural or oil-based), production work
-      is harder to place, so firms rely more on overseas investment and counterpurchase to fulfil obligations.
-    rationale: Weak industrial bases constrain feasible production offsets, shifting fulfillment toward investment and counterpurchase.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019
-    text: Tailoring offset proposals to local industrial capabilities and priorities increases feasibility and credibility, enabling
-      contractors to identify offset projects that also meet internal strategic technology needs.
-    rationale: Matching proposals to local capability and priorities increases feasibility and supports meaningful absorption and learning.
 - theme_id: PM47
   theme_label: Opacity and bargaining drive uncertainty
   mechanism_explanation: Information opacity and strategic bargaining over technology flows create uncertainty and complicate
@@ -2650,15 +1714,6 @@ proto_mechanism_themes:
     text: Different state-industry relationships and policy histories shape how offsets are perceived and operationalized
       in procurement and exports.
     rationale: State–industry histories condition how offsets are perceived and implemented.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_022
-    text: Once a firm is created and embedded via an earlier IRB package, later procurements can rely on it as a default prime,
-      constraining option sets and creating dependence on defence contracts.
-    rationale: Earlier IRB-created firms become default options, creating path dependence and dependence on defence procurement.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_025
-    text: Because offsets are rarely demanded on imports and France prefers collaborative European development programmes over
-      off-the-shelf imports, no stable offsets policy framework develops.
-    rationale: Procurement strategy and institutional preferences shape whether an offsets policy framework develops and
-      stabilizes.
 - theme_id: PM49
   theme_label: Second-best import offset rules
   mechanism_explanation: When open domestic procurement coexists with foreign protectionism, governments adopt systematic
@@ -2668,10 +1723,6 @@ proto_mechanism_themes:
     text: Because open procurement at home coexists with protectionism abroad, the UK treats import offsets (industrial participation)
       as a second-best necessity and sets systematic rules to request IP on significant offshore content.
     rationale: Protectionism abroad and openness at home motivate systematic import offset rules.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_022
-    text: Asymmetric offset requirements create perceived competitive disadvantage; firms seek a reciprocal 'level playing field' where
-      UK import policy requires offsets from countries that impose offset obligations on UK exporters.
-    rationale: Asymmetric offset regimes motivate reciprocal import offset rules to restore a level playing field.
 - theme_id: PM50
   theme_label: Offset design to protect value-for-money
   mechanism_explanation: By specifying defence-related, new, technically equivalent work within contract scope and at no additional
@@ -2681,18 +1732,6 @@ proto_mechanism_themes:
     text: By requesting defense-related, new, technically equivalent work at no additional cost and within contract duration,
       the MoD attempts to secure offset benefits without sacrificing value-for-money procurement.
     rationale: Constraints on offset work aim to preserve value-for-money while gaining benefits.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_017
-    text: By applying a rule-of-thumb threshold for acceptable cost premium on direct offsets, policymakers justify offsets as
-      worth the price when premiums remain below a stated limit.
-    rationale: Premium thresholds act as a value-for-money guardrail, limiting how much extra cost is accepted for direct offset participation.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_007
-    text: By defining eligibility criteria (defence/high-tech content, 'new' work, capability-building intent, and time-bounded ordering),
-      the MoD screens claims and steers offsets toward desired industrial effects.
-    rationale: Eligibility criteria steer offset content toward defence-relevant, additional, capability-building work.
-  - id: 16_concluding_remarks_pdf__cmo_008
-    text: When purchasers recognise offsets cost more than off-the-shelf buys, they tighten eligibility and focus offsets on
-      priority areas to allocate scarce resources more strategically.
-    rationale: Recognizing cost premiums motivates tighter eligibility and prioritization to protect value-for-money.
 - theme_id: PM51
   theme_label: Offset reciprocity and supply-chain risk
   mechanism_explanation: High offset demands in one market raise reciprocal expectations elsewhere; shifting toward more indirect
@@ -2702,18 +1741,6 @@ proto_mechanism_themes:
     text: High offset demands in one market raise reciprocal expectations in others; using more indirect offsets can reduce
       financial risk and preserve established supply chains.
     rationale: Reciprocity pressures prompt indirect offsets to reduce risk and protect supply chains.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_020
-    text: Perceived competitive and benchmark pressures encourage Switzerland to increase required offset percentages so as not
-      to be left behind in bargaining with suppliers.
-    rationale: Benchmarking against other buyers escalates offset demands and shapes bargaining positions toward higher percentages.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_010
-    text: Established production and supplier networks limit scope for direct work on the purchased system, pushing offsets toward indirect
-      work that can still be credited if it meets criteria.
-    rationale: Preserving established supply chains shifts fulfillment toward indirect offsets when direct work is constrained.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_015
-    text: When only a small share of offset sales involves items included directly in the procured equipment, most credited offset activity
-      takes the form of indirect orders not tied to the system itself.
-    rationale: Direct-work constraints push credited activity toward indirect orders not tied to the procured system.
 - theme_id: PM52
   theme_label: Additionality enforced through credit rules
   mechanism_explanation: Conditioning offset credit on demonstrable market use aims to deter paper transfers and improve additionality
@@ -2731,14 +1758,6 @@ proto_mechanism_themes:
     text: Allowing firms to count business that would have occurred anyway (e.g., civil aero-engine purchases) as offset credit
       undermines additionality and overstates benefits.
     rationale: Counting baseline business as credit undermines additionality and inflates claimed benefits.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_009
-    text: Counting civil purchases that the contractor does not control (e.g., airlines choosing engines) weakens additionality and enables
-      offset obligations to be met without generating genuinely offset-driven defence-related work.
-    rationale: Crediting baseline civil purchases undermines additionality and weakens linkage to defence-related work.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_008
-    text: As third-party fulfilment expands, offset authorities tighten governance by limiting credits and requiring evidence that
-      credited investments are causally linked to the contractor’s offset effort.
-    rationale: Tightening credit rules improves additionality by requiring causal linkage and constraining third-party crediting.
 - theme_id: PM53
   theme_label: Embedded offsets via procurement structure
   mechanism_explanation: Procurement structures (e.g., supplier cartels and consortia requirements) embed workshare and direct
@@ -2874,94 +1893,6 @@ proto_mechanism_themes:
     text: Contractual undertakings to direct business (including maintenance capability, technology transfers, joint ventures,
       and exports support) create pathways to build local industrial capability.
     rationale: Contractual undertakings and transfers create pathways to build local industrial capability.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_001
-    text: Government accepts (and must justify) higher cost or delivery-time penalties from Australian industry involvement
-      when those penalties buy independent supply and support capability.
-    rationale: Self-reliance objectives justify cost/time premiums for domestic sustainment and support capability.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_016
-    text: Maintenance sub-contracts create multi-year local work requiring high technical standards while imposing fewer
-      commitments than co-production.
-    rationale: Maintenance sub-contracts offer a lower-commitment route to sustained local industrial participation with stringent
-      technical requirements.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_002
-    text: Security concerns motivate building a domestic defence industrial base to reduce dependence on foreign suppliers
-      during wartime.
-    rationale: Security-of-supply concerns motivate technology transfer and domestic production capacity to reduce wartime
-      dependence on foreign suppliers.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_013
-    text: Offsets that assign structural parts and engine work to domestic firms necessitate capital investment
-      (buildings/equipment) and hiring to execute the work packages.
-    rationale: Direct workshare commitments require domestic firms to invest in facilities, equipment, and staffing to execute
-      assigned production tasks.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_001
-    text: Technology transfer via offsets (especially licensed production) supplies the know-how and production processes needed
-      to build domestic defence manufacturing capability.
-    rationale: Licensed production and associated transfers provide know-how and processes that build domestic manufacturing capability.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_002
-    text: Treating technology as power motivates technonationalist policies that prioritise building domestic technological
-      autonomy via controlled technology acquisition.
-    rationale: Technonationalist framing motivates controlled technology acquisition to build domestic autonomy.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_003
-    text: Preferring licensing over FDI channels foreign know-how into domestic production under Japanese control, supporting
-      learning-by-doing and capability building.
-    rationale: Licensing channels foreign know-how into domestically controlled production, supporting learning-by-doing.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_004
-    text: A domestic-first rule with licensing as the fallback institutionalises progressive indigenisation by sequencing
-      domestic supply → domestic manufacture under license → broader-use equipment.
-    rationale: Domestic-first procurement with licensing fallback institutionalizes progressive indigenisation via controlled transfer.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_005
-    text: Formal policy statements restrict development/production to Japanese industry as a matter of principle to build
-      self-reliant capability.
-    rationale: Domestic-only production principles institutionalize self-reliant capability building through domestic industry.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_006
-    text: Perceived security uncertainty increases political support for domestic defence-industrial self-reliance and reduces
-      willingness to depend solely on US supply.
-    rationale: Security uncertainty motivates self-reliance and reduces willingness to depend solely on foreign supply.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_009
-    text: Civil strategic industries ‘spin on’ innovations to the defence sector while defence offsets create ‘spin off’ skills,
-      process precision, and systems integration know-how.
-    rationale: Civil-military linkages and offset-driven learning generate dual-use skills and systems-integration know-how.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_011
-    text: Legal and normative constraints limit overt militarisation and exports, pushing Japan toward domestic production for
-      self-defence within narrow political bounds.
-    rationale: Political-legal constraints channel defence industrialization into domestic production for self-defence rather than export-led scale.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_015
-    text: Offsets and licensing expand domestic production content and enable domestic suppliers to provide an increasing share
-      of components and materials.
-    rationale: Licensed production and offsets expand domestic content and deepen supplier roles in components and materials.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_022
-    text: Linking external threats and expanded roles/missions to the need for domestic capability provides political
-      justification for offsets and local production.
-    rationale: Threat framing links missions to domestic capability needs, legitimizing offsets and local production.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_023
-    text: Expanded missions increase demand for modern systems and justify domestic production capacity to sustain readiness and
-      autonomy.
-    rationale: Expanded missions justify domestic production capacity for readiness and autonomy in modern systems.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_025
-    text: Extensive licensing supplies production knowledge across platforms and missiles, accelerating domestic capability
-      development.
-    rationale: Broad licensing across platforms accelerates domestic capability development through accumulated production knowledge.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_028
-    text: Combining licensed production learning with domestic resources enables development of indigenous replacements.
-    rationale: Licensed production learning plus domestic resources enables indigenous replacement development.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_029
-    text: Willingness to pay local-production premiums is justified by hedging alliance decline risk and building an autonomous
-      military technology base.
-    rationale: Autonomy and alliance-risk hedging justify willingness to pay local-production premiums.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_030
-    text: Local production under offsets adds inefficiencies and fixed costs that are borne for autonomy and industrial goals.
-    rationale: Autonomy goals justify bearing fixed-cost and inefficiency premiums from local production under offsets.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_003
-    text: Technology transfer occurs when sellers grant permission to use their processes and support skill acquisition, enabling
-      buyers to apply those processes within offset-created businesses.
-    rationale: Technology transfer through licensed use and learning support is a core pathway for capability acquisition in offset-created ventures.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_030
-    text: A joint venture can start with local assembly and then deepen to component manufacture for defence electronics.
-    rationale: Progressive localization via assembly-to-components builds production capability through licensed production pathways.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_032
-    text: Offset-created maintenance, repair, and overhaul ventures shift sustainment work locally and build lifecycle-support
-      capability.
-    rationale: Direct offsets that localize maintenance and overhaul build security-of-supply and technical competence for lifecycle support.
 - theme_id: PM55
   theme_label: Subsidiary entry then consolidation
   mechanism_explanation: Allowing foreign subsidiaries enables participation and capability build-up, but later consolidation
@@ -2989,10 +1920,6 @@ proto_mechanism_themes:
     text: Government export support organizations (e.g., UK DESO) help firms navigate offset rules, build projects, and identify
       credit opportunities, especially for smaller exporters lacking offset staff.
     rationale: Export support bodies reduce coordination burdens for firms without offset staff.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_002
-    text: Government-to-government provisions such as duty waivers, export-licence support, data access, and buy-national waivers
-      reduce barriers to Swiss bids, increasing feasibility of meeting offset targets through procurement channels.
-    rationale: Government facilitation and waivers reduce market-access barriers, expanding the feasible set of offset-fulfillment opportunities.
 - theme_id: PM58
   theme_label: Complex governance raises transaction costs
   mechanism_explanation: Multi-layer governance structures and non-competitive work splitting increase transaction costs,
@@ -3002,34 +1929,6 @@ proto_mechanism_themes:
     text: Non-competitive work splitting and multi-layer committee structures increase transaction costs, blur accountability,
       and slow decisions.
     rationale: Non-competitive work splitting and committees raise transaction costs and slow decisions.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_016
-    text: Regional distribution requirements for offsets create fragmentation and regional bargaining, slowing decision-making
-      and incentivising firms to locate capacity to capture offset orders.
-    rationale: Regional distribution rules fragment allocation and slow decisions via bargaining while incentivizing capacity siting to capture orders.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_022
-    text: Regional distribution rules and offset-crediting logic incentivise geographically fragmented production flows,
-      increasing transport and coordination costs.
-    rationale: Regional fragmentation and crediting logic increase coordination and logistics costs through geographically dispersed production flows.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_012
-    text: Creating a jointly owned investment development company with unanimous decision rules coordinates investment projects,
-      technology transfer, and export promotion, while co-production tasks anchor direct industrial participation.
-    rationale: Joint governance vehicles coordinate offset projects but can raise transaction costs and slow decisions due to
-      unanimity requirements.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_021
-    text: Lack of coordination and the need for foreign due diligence and domestic goal assimilation slows approvals and
-      execution.
-    rationale: Coordination and due-diligence demands slow approvals and increase transaction costs in offset execution.
-  - id: 09_saudi_arabia_and_offsets_pdf__cmo_027
-    text: Cross-program credit attribution rules increase transaction costs and delay crediting.
-    rationale: Complex crediting across multiple programs increases coordination burdens and slows decision-making.
-  - id: 14_us_offset_policy_pdf__cmo_022
-    text: Interagency disputes can block reporting outputs and leave specialized offices focused on information provision rather than
-      policy formulation, producing fragmented governance capacity.
-    rationale: Interagency fragmentation and disputes block outputs and weaken coherent policy capacity.
-  - id: 14_us_offset_policy_pdf__cmo_025
-    text: Competition for influence creates overlapping and contradictory laws and policies that reduce coherence and impede the
-      development of a stable, comprehensive offset policy framework.
-    rationale: Overlapping mandates and rivalry create fragmented policy that impedes coherent framework development.
 - theme_id: PM62
   theme_label: Early partnership enables high-tech roles
   mechanism_explanation: Early partnership and competitive best-value allocation can provide access to development roles and
@@ -3039,20 +1938,6 @@ proto_mechanism_themes:
     text: Early partnership and competitive “best value” work allocation provide access to development roles and potential
       high-technology work shares, conditional on technology access agreements and export-control approvals.
     rationale: Early competitive partnerships enable access to high-tech roles when approvals permit.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_009
-    text: Choosing existing proven platforms minimises technical risk but reduces opportunities to buy into development phases
-      that could yield deeper technology transfer and export-linked work.
-    rationale: Later-stage, proven-platform procurement limits access to development-phase roles that can deliver deeper transfer
-      and longer-run work.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_020
-    text: Buying into development increases potential for technology transfer and deeper participation by embedding domestic
-      firms in production and systems integration work.
-    rationale: Early development participation embeds domestic firms in higher-value production and integration roles, increasing
-      technology-transfer potential.
-  - id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_021
-    text: Joint R&D and co-development serve as an interim measure to incorporate advanced technologies and promote defence
-      cooperation while building domestic capacity.
-    rationale: Joint R&D and co-development provide interim access to advanced technologies while building domestic capacity.
 - theme_id: PM63
   theme_label: Partnership structures shape risk exposure
   mechanism_explanation: Exclusive partnerships create win–lose exposure tied to prime selection, while suppliers in multiple
@@ -3080,22 +1965,6 @@ proto_mechanism_themes:
     text: Broader packages promising long-term partnerships and non-defense opportunities attempt to create durable collaboration
       beyond meeting an offset percentage.
     rationale: Partnership packages seek durable collaboration beyond offset percentage compliance.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_013
-    text: By offering participation in a multi-billion dollar national development plan as an inducement, Taiwan increases supplier
-      incentives to provide trouble-free weapons sales and associated technology access.
-    rationale: Broad non-defence participation packages deepen incentives for cooperation and smoother delivery beyond the immediate contract.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_001
-    text: If both parties treat offsets as a partnership problem (rather than a zero-sum contest), they can identify mutually
-      beneficial projects that satisfy national objectives while creating business value for the contractor.
-    rationale: Partnership-oriented problem solving enables mutually beneficial projects beyond adversarial offset bargaining.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_012
-    text: By using offsets to link local firms with foreign industry leaders, policymakers aim to create strategic partnerships that
-      provide subcontracting, R&D, technology transfer, investment, and access to global markets.
-    rationale: Offsets are used to create strategic partnerships that persist beyond single transactions and expand market access and learning.
-  - id: 15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_013
-    text: When an authority prioritizes genuine, profitable collaborations over short-term projects, it pushes contractors toward
-      strategic partnerships that can persist after contractual obligations end.
-    rationale: Prioritizing viable collaboration steers offsets toward durable partnerships beyond obligation completion.
 - theme_id: PM66
   theme_label: Offsets as import compensation
   mechanism_explanation: Rising imports trigger requirements for compensatory offsets (work share, countertrade, transfer)
@@ -3113,32 +1982,6 @@ proto_mechanism_themes:
     text: By requiring buyback and local sourcing, offsets redirect procurement-related spending toward domestic suppliers
       (including subsidiaries) and expand a local industrial footprint.
     rationale: Buyback and local sourcing compensate for imports by redirecting spending to domestic suppliers.
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_001
-    text: Offsets are used as an economic-compensation tool to channel procurement-linked work and investment into domestic
-      firms to sustain employment and activity.
-    rationale: Offsets function as import compensation by redirecting procurement-linked work and investment into domestic firms to sustain employment.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_018
-    text: Higher local content reduces imported-content exposure, mechanically reducing offsets obligations tied to imported
-      content.
-    rationale: When obligations are calculated from imported content, rising local content reduces the base and lowers required
-      offsets.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_005
-    text: Perceived imbalance in defence trade motivates seeking industrial and regional benefits in offshore purchases to
-      recapture domestic economic value.
-    rationale: Import imbalance concerns motivate compensatory industrial benefits requirements to recapture domestic economic
-      value from offshore spending.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_005
-    text: South Korea uses an offset system to import expensive technologies while obligating partners to develop local industry
-      and create export opportunities for parts and components.
-    rationale: Import-linked offset obligations are used as compensation to build local capability and create export-linked production roles.
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_006
-    text: By using military offset programs to request technology transfer, licensed part production, and buy-backs, the Ministry
-      of National Defense ties foreign procurement to domestic capability-building incentives.
-    rationale: Offset requirements tied to imports induce suppliers to provide compensatory transfer, production roles, and buyback arrangements.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_001
-    text: To reconcile foreign acquisition with domestic political and industrial objectives, procurement shifts to importing
-      systems while demanding offset commitments as additional quid pro quo.
-    rationale: Offsets function as compensation for imports, aligning foreign acquisition with domestic political and industrial objectives.
 - theme_id: PM74
   theme_label: Disclosure constraints obscure evaluation
   mechanism_explanation: Limited data access and vested interests constrain disclosure, making it difficult to separate fact
@@ -3148,32 +1991,6 @@ proto_mechanism_themes:
     text: Limited data access and vested interests in industry and government constrain disclosure and complicate separating
       fact from fiction.
     rationale: Data access limits and vested interests obscure evaluation.
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_016
-    text: Limited reporting and weak availability of basic programme information constrain empirical research and impede cost-benefit
-      evaluation.
-    rationale: Scarce basic reporting data constrains empirical evaluation and cost-benefit analysis.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_006
-    text: Officials and industry avoid open discussion and terminology (“offset”) to reduce political and diplomatic fallout,
-      limiting transparency.
-    rationale: Avoiding explicit offset terminology and discussion reduces disclosure, limiting transparency and evaluation.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_003
-    text: Confidentiality reduces transparency and prevents independent evaluation of costs, benefits, and additionality.
-    rationale: Confidentiality reduces disclosure and data access, constraining independent evaluation.
-  - id: 07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_026
-    text: Limited data availability and confidentiality impede empirical evaluation and attribution of OIB impacts.
-    rationale: Data scarcity and confidentiality constraints impede evaluation and causal attribution.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_002
-    text: Confidentiality and political sensitivity reduce disclosure and encourage selective claims by interested parties, undermining
-      independent scrutiny and making it hard to separate fact from advocacy.
-    rationale: Confidentiality and vested interests constrain disclosure and obstruct independent evaluation.
-  - id: 13_the_uk_experience_with_offsets_pdf__cmo_003
-    text: Because the same firms experience both incoming and outgoing offsets, comparing their reported impacts provides a cross-check
-      that can reduce bias and clarify likely employment/technology effects.
-    rationale: Cross-checking claims across inbound and outbound offsets helps reduce bias when disclosure is constrained.
-  - id: 16_concluding_remarks_pdf__cmo_001
-    text: When reliable data are absent, analysts cannot assess additionality, costs, or distributional effects, making evaluation and
-      learning difficult despite large financial stakes.
-    rationale: Limited reliable data obstructs evaluation of additionality, costs, and distributional effects.
 - theme_id: PM75
   theme_label: Counterfactual uncertainty undermines additionality
   mechanism_explanation: When counterfactual outcomes are unknown, analysts must assume them, creating fundamental uncertainty
@@ -3223,159 +2040,6 @@ proto_mechanism_themes:
     text: Emphasis on indirect offsets was initially used to extend industrial activity beyond the life of a specific procurement
       program.
     rationale: Indirect offsets are used to extend industrial activity beyond a single program.
-- theme_id: PM82
-  theme_label: Inconsistent definitions impede measurement
-  mechanism_explanation: When countertrade and offsets lack a consistent lexicon, similar reciprocal transactions are classified
-    differently, undermining comparability and making prevalence estimates unreliable.
-  mechanisms:
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_001
-    text: A lack of a consistent lexicon leads analysts and officials to classify similar reciprocal transactions differently,
-      degrading measurement and cross-case comparability.
-    rationale: Inconsistent terminology leads to inconsistent classification and weak comparability.
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_003
-    text: Ambiguity about definitions (countertrade versus local content) causes administrative confusion and inconsistent
-      compliance expectations.
-    rationale: Definitional ambiguity produces inconsistent classification and compliance expectations, undermining administrative
-      coherence.
-- theme_id: PM83
-  theme_label: Countertrade conserves foreign exchange
-  mechanism_explanation: When hard-currency reserves are scarce, governments mandate countertrade to conserve foreign exchange
-    by requiring reciprocal purchasing and/or export generation alongside imports.
-  mechanisms:
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_002
-    text: Governments mandate countertrade to conserve scarce foreign exchange by requiring reciprocal purchasing and/or export
-      generation alongside imports.
-    rationale: Reciprocal obligations conserve scarce hard currency by linking imports to export generation.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_012
-    text: Deferred counter-sales and local manufacturing obligations generate later counter-payments and domestic employment,
-      reducing net foreign-currency burden over time.
-    rationale: Deferred reciprocal sales and local production reduce net foreign-currency burdens and support domestic employment.
-- theme_id: PM84
-  theme_label: Countertrade substitutes for forward markets
-  mechanism_explanation: When forward markets are missing and export demand is uncertain, countertrade links imports to future
-    exports, reducing trade-balance uncertainty and supporting production planning.
-  mechanisms:
-  - id: 02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_009
-    text: Countertrade substitutes for missing forward-market contracting by linking imports to future exports and reducing
-      uncertainty about net foreign-exchange outlays.
-    rationale: Linking imports to future exports reduces trade-balance uncertainty when forward markets are missing.
-- theme_id: PM85
-  theme_label: Lag uncertainty hinders evaluation
-  mechanism_explanation: When offset effects play out with uncertain lags and time-series behaviour is inconsistent, statistical
-    evaluations of performance can be difficult to specify and unreliable.
-  mechanisms:
-  - id: 03_the_defence_offsets_policy_in_australia_pdf__cmo_017
-    text: Imperfect knowledge of the lag structure and inconsistent time-series behaviour makes statistical evaluation of
-      acquittal rates difficult.
-    rationale: Unknown lags and unstable time-series dynamics undermine statistical evaluation of offsets performance.
-- theme_id: PM86
-  theme_label: Buyer coalitions increase bargaining leverage
-  mechanism_explanation: When multiple buyers pool purchases and coordinate negotiation, they increase bargaining leverage,
-    improving terms (including offsets) and supporting longer, more efficient production runs.
-  mechanisms:
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_017
-    text: Pooling purchases and presenting as a buyers’ cartel increases bargaining power and supports better offset terms
-      and longer production runs.
-    rationale: Coordinated purchasing increases bargaining leverage, improving offset terms and production-run efficiency.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_017
-    text: Buyers use procurement structure (including split orders) to pressure for component/parts sub-contracts, but supplier
-      selection is constrained by quality and workforce capability.
-    rationale: Order structuring increases bargaining leverage for industrial participation, while quality and capability
-      constraints limit feasible supplier choices.
-- theme_id: PM87
-  theme_label: Capability concentrates offset allocation
-  mechanism_explanation: In multi-buyer procurements, offsets and workshare concentrate where local industrial capability is
-    strongest and where supplier governments actively enforce implementation, producing unequal distribution across partners.
-  mechanisms:
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_018
-    text: Where aerospace capacity is stronger and implementation is actively ensured by a powerful supplier government,
-      production-sharing and offsets concentrate in the more capable partner.
-    rationale: Stronger industrial capability plus active supplier enforcement concentrates workshare and offsets in the more capable partner.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_018
-    text: When direct offsets concentrate in sectors whose major firms’ headquarters and facilities are clustered in one region,
-      offset value and technologically significant work also cluster geographically and among a small number of large recipients.
-    rationale: Workshare allocation concentrates where industrial capacity and recipients are already clustered, producing geographic and firm-level concentration of benefits.
-  - id: 12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_014
-    text: When foreign sourcing and offset-linked sales expand, affected domestic interests may push for non-tariff barriers that
-      curtail continued access for successful foreign suppliers.
-    rationale: Domestic interests threatened by offset-enabled entry can seek protective barriers that restrict continued foreign access.
-- theme_id: PM88
-  theme_label: Defence bears economic-policy cost burden
-  mechanism_explanation: When offsets pursue economy-wide objectives but the defence ministry bears the procurement cost premium,
-    defence resources are diverted from capability, especially in the absence of cross-departmental cost-sharing.
-  mechanisms:
-  - id: 04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_013
-    text: When the Ministry of Defence alone bears the offset cost premium, defence resources are diverted to achieve non-defence
-      economic objectives without cross-departmental cost-sharing.
-    rationale: Cost incidence on defence diverts capability resources to pursue economy-wide objectives absent cross-departmental cost-sharing.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_014
-    text: Negotiating and implementing offset packages introduces additional costs (including opportunity costs and procurement
-      rigidities) that DND absorbs.
-    rationale: Offsets impose additional negotiation, rigidity, and opportunity costs that are borne by defence budgets and can
-      crowd out capability.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_024
-    text: When defence spending is used to meet non-defence objectives, DND bears opportunity costs that reduce its ability to
-      acquire required military capabilities.
-    rationale: Using defence budgets to fund non-defence objectives creates opportunity costs that reduce available resources for
-      military capability acquisition.
-  - id: 11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_006
-    text: When the supplier is not willing to pay above its normal subcontracting costs, the buyer government subsidises the
-      cost premium to make direct-offset work viable for domestic firms.
-    rationale: When domestic participation is higher cost, the buyer can absorb the premium through subsidies, shifting the burden onto public resources.
-- theme_id: PM89
-  theme_label: Political reversals raise lifecycle costs
-  mechanism_explanation: When procurement decisions are shaped by short-term political incentives, programmes can be cancelled
-    or re-scoped, fragmenting fleet planning and duplicating infrastructures that increase lifecycle costs and create capability
-    gaps.
-  mechanisms:
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_018
-    text: Political incentives drive cancellation decisions with limited regard for operational and economic realities, creating
-      downstream capability and cost tradeoffs.
-    rationale: Politically driven cancellations and reversals create discontinuities that drive cost and capability tradeoffs.
-  - id: 05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_019
-    text: If separate platforms are procured or life-extension paths are pursued, duplication of infrastructures and procurement
-      cycles increases total lifecycle costs.
-    rationale: Fragmented platform choices duplicate support infrastructures and procurement cycles, increasing lifecycle costs.
-- theme_id: PM90
-  theme_label: Political side-payments sway procurement
-  mechanism_explanation: Non-industrial political concessions are bundled with arms deals to influence procurement choices or
-    to reward political decisions, operating as a parallel form of compensation beyond economic offsets.
-  mechanisms:
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_023
-    text: Political ‘offsets’ (e.g., landing rights, EU accession support, geopolitical bargaining) are offered to influence
-      procurement choices or to reward political decisions.
-    rationale: Political concessions bundled with contracts influence procurement choices beyond industrial and financial terms.
-- theme_id: PM91
-  theme_label: Quality constraints shift offset form
-  mechanism_explanation: When quality standards constrain what can be credibly purchased under counterpurchase obligations,
-    compliance shifts toward service-based offsets or experiences delays and friction in industrial purchasing.
-  mechanisms:
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_009
-    text: Quality standards constrain what can be credibly purchased, creating friction and delays in meeting industrial-offset
-      obligations.
-    rationale: Quality constraints limit feasible industrial purchases, creating friction and delays in counterpurchase delivery.
-  - id: 06_offsets_and_french_arms_exports_pdf__cmo_010
-    text: Service-based offsets (e.g., tourism purchases/resales) reduce the difficulty of meeting industrial counterpurchase
-      obligations compared with manufacturing goods under strict quality constraints.
-    rationale: Service-based offsets avoid strict industrial quality constraints, easing compliance.
-- theme_id: PM92
-  theme_label: Security externalities from diffusion
-  mechanism_explanation: When offsets expand local production and diffuse technology, they can generate longer-term security and
-    policy externalities that undermine short-term deal benefits unless actively managed.
-  mechanisms:
-  - id: 10_the_teeth_of_little_tigers_pdf__cmo_019
-    text: If offset policies are not managed, short-term deal benefits can be undermined as expanding local production and
-      technology diffusion create longer-term security and policy externalities.
-    rationale: Unmanaged diffusion from offsets can create security and policy costs that offset short-term benefits.
-- theme_id: PM93
-  theme_label: Credibility loss from inconsistency
-  mechanism_explanation: When states condemn offsets while maintaining functionally similar sourcing or local-content requirements,
-    perceived inconsistency undermines credibility and reduces normative leverage against offsets.
-  mechanisms:
-  - id: 14_us_offset_policy_pdf__cmo_023
-    text: When foreign observers interpret domestic sourcing requirements as functionally equivalent to offsets, it undermines US
-      credibility and invites accusations of inconsistency, limiting normative leverage against offsets.
-    rationale: Perceived equivalence between local-content rules and offsets undermines credibility and limits anti-offset leverage.
 ambiguous_mechanisms:
 - id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
   text: By routinely embedding licensed production, technology transfer, countertrade/barter, and long-term credit into
@@ -3383,10 +2047,3105 @@ ambiguous_mechanisms:
   possible_themes: [PM54, PM5]
   explanation: Mechanism combines technology acquisition via licensed production/transfer with external finance and countertrade
     to ease foreign-exchange constraints.
-- id: 08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_031
-  text: Accounting for economies of scale, finance conditions, and learning absorption can change cost comparisons between
-    domestic license production and off-the-shelf import.
-  possible_themes: [PM34, PM5, PM54, PM3]
-  explanation: Mechanism is about sensitivity of cost comparisons to scale, finance, and learning assumptions; it could be read
-    as a scale/viability constraint (PM34), a finance-condition effect (PM5), an evaluation of technology-acquisition strategy
-    (PM54), or a pricing/cost-premium issue (PM3).
+```
+
+3) proto_themes_changelog_yml
+```yaml
+change_log:
+- change_id: CHG_021
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_021
+  summary: Assigned to PM1 (economic framing legitimation).
+  rationale: Mechanism reframes the purchase as economically beneficial to reduce resistance.
+- change_id: CHG_022
+  change_type: new_theme
+  theme_id: PM11
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022
+  summary: Created PM11 for domestic industry influence on offset demands.
+  rationale: Domestic arms-industry influence drives demands for direct offsets that subsidize local industry.
+- change_id: CHG_023
+  change_type: new_theme
+  theme_id: PM12
+  mechanism_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023
+  summary: Created PM12 for development-oriented indirect offset design.
+  rationale: Targeted indirect offsets and transparency increase realization and development relevance.
+- change_id: CHG_024
+  change_type: new_theme
+  theme_id: PM13
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_001
+  summary: Created PM13 for competition shifts toward bundled content.
+  rationale: Benefits packages shift competition from price/quality to bundled content.
+- change_id: CHG_025
+  change_type: new_theme
+  theme_id: PM14
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002
+  summary: Created PM14 for rent extraction via offset requirements.
+  rationale: Offsets extract rents by compelling domestic economic activity.
+- change_id: CHG_026
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_003
+  summary: Assigned to PM1 (benefit salience legitimation).
+  rationale: Benefit salience drives adoption despite ambiguous net welfare.
+- change_id: CHG_027
+  change_type: new_theme
+  theme_id: PM15
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004
+  summary: Created PM15 for flexibility vs rigid mandates.
+  rationale: One-size mandates force offsets where market exchange is superior, creating diseconomies.
+- change_id: CHG_028
+  change_type: new_theme
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005
+  summary: Created PM16 for offsets justified in high-hazard exchanges.
+  rationale: Offsets substitute for poorly functioning markets when hazards and benefits are high.
+- change_id: CHG_029
+  change_type: new_theme
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006
+  summary: Created PM17 for administrative burden and rent-seeking.
+  rationale: Offsets add administrative burden and rent-seeking without improving transfer outcomes.
+- change_id: CHG_030
+  change_type: new_theme
+  theme_id: PM19
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007
+  summary: Created PM19 for supplier coaching and reputational certification.
+  rationale: Supplier teaching and reputational stamps reduce domestic firms' transaction costs.
+- change_id: CHG_031
+  change_type: new_theme
+  theme_id: PM20
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008
+  summary: Created PM20 for alliance incentives via offset waivers.
+  rationale: Bargaining power encourages alliances without mandatory offsets.
+- change_id: CHG_032
+  change_type: new_theme
+  theme_id: PM20
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009
+  summary: Added second mechanism to PM20.
+  rationale: Offset waivers incentivize investment and reputational capital while maintaining competition.
+- change_id: CHG_033
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010
+  summary: Assigned to PM15 (flexibility reduces diseconomies).
+  rationale: Variable policies expand negotiation options and reduce diseconomies of scope.
+- change_id: CHG_034
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011
+  summary: Assigned to PM17 (rent-seeking from discretion).
+  rationale: Discretion attracts rent-seeking while strict triggers constrain it.
+- change_id: CHG_035
+  change_type: assignment
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012
+  summary: Assigned to PM16 (offsets misapplied in low-hazard settings).
+  rationale: Offsets in low-hazard categories create opportunity costs.
+- change_id: CHG_036
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013
+  summary: Assigned to PM17 (overload and superficial evaluation).
+  rationale: Broad mandates overload evaluation and raise costs with little reputational effect.
+- change_id: CHG_037
+  change_type: assignment
+  theme_id: PM16
+  mechanism_id: 02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014
+  summary: Assigned to PM16 (direct vs indirect offsets matched to hazard).
+  rationale: Offset type should match exchange hazard and seller capabilities to avoid cost inflation.
+- change_id: CHG_038
+  change_type: new_theme
+  theme_id: PM21
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001
+  summary: Created PM21 for market access conditioned on reciprocity.
+  rationale: Offsets impose trade-restricting reciprocal requirements as a condition of market access.
+- change_id: CHG_039
+  change_type: new_theme
+  theme_id: PM18
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_002
+  summary: Created PM18 for objective ambiguity undermining evaluation.
+  rationale: Mixed objectives make evaluation criteria and net benefits hard to specify.
+- change_id: CHG_040
+  change_type: assignment
+  theme_id: PM6
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003
+  summary: Assigned to PM6 (additional trade gains).
+  rationale: Additionality requirement aims to create new exports.
+- change_id: CHG_041
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004
+  summary: Assigned to PM3 (cost pass-through via pricing).
+  rationale: Offset costs can be embedded in prices when benchmarks are absent.
+- change_id: CHG_042
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005
+  summary: Assigned to PM3 (profitability/price adjustment).
+  rationale: Suppliers adjust prices or exit to preserve returns under offset obligations.
+- change_id: CHG_043
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006
+  summary: Assigned to PM2 (enforcement challenges).
+  rationale: Default risk persists because enforcement is difficult in practice.
+- change_id: CHG_044
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_007
+  summary: Assigned to PM15 (rigid mandate reduces flexibility).
+  rationale: Fixed-percentage schemes constrain negotiation and force in-kind enhancements.
+- change_id: CHG_045
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_008
+  summary: Assigned to PM15 (mandated local content raises costs).
+  rationale: High local content forces uncompetitive subcontracting, raising prices or inducing reneging.
+- change_id: CHG_046
+  change_type: new_theme
+  theme_id: PM22
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_009
+  summary: Created PM22 for local capability discovery.
+  rationale: Local content requirements force search and engagement with domestic suppliers.
+- change_id: CHG_047
+  change_type: new_theme
+  theme_id: PM23
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_010
+  summary: Created PM23 for sourcing persistence only if viable.
+  rationale: Sourcing ends when obligations expire unless ongoing production is worthwhile.
+- change_id: CHG_048
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_011
+  summary: Assigned to PM3 (cost pass-through when market power is weak).
+  rationale: Vendors price expected offsets into the offer when cross-subsidization cannot be forced.
+- change_id: CHG_049
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_012
+  summary: Assigned to PM15 (inefficient bundling).
+  rationale: Untargeted bundle targets ignore complementarities and force inefficient choices.
+- change_id: CHG_050
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013
+  summary: Assigned to PM2 (post-award reneging).
+  rationale: Timing and enforcement frictions weaken leverage after contract award.
+- change_id: CHG_051
+  change_type: new_theme
+  theme_id: PM24
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_001
+  summary: Created PM24 for sector-specific export stimulus.
+  rationale: Indirect offset purchases operate like sector-specific price adjustments.
+- change_id: CHG_052
+  change_type: assignment
+  theme_id: PM9
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_002
+  summary: Assigned to PM9 (barter/in-kind bypasses credit constraints).
+  rationale: In-kind offsets substitute for cash payment under credit constraints.
+- change_id: CHG_053
+  change_type: new_theme
+  theme_id: PM25
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003
+  summary: Created PM25 for opacity enabling price discrimination.
+  rationale: Lower visibility enables price discrimination and dumping.
+- change_id: CHG_054
+  change_type: new_theme
+  theme_id: PM26
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_004
+  summary: Created PM26 for buyback hostage effect.
+  rationale: Buyback requirements align incentives against obsolete tech transfer.
+- change_id: CHG_055
+  change_type: new_theme
+  theme_id: PM27
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_005
+  summary: Created PM27 for depreciation-driven licensing.
+  rationale: Depreciation encourages licensing to monetize value before it declines.
+- change_id: CHG_056
+  change_type: new_theme
+  theme_id: PM28
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_006
+  summary: Created PM28 for exporter networks reducing entry costs.
+  rationale: Exporter networks reduce market penetration costs for buyer-country products.
+- change_id: CHG_057
+  change_type: new_theme
+  theme_id: PM29
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_007
+  summary: Created PM29 for bundled contracting reducing transaction costs.
+  rationale: Bundled contracting reduces transaction costs and reallocates rents.
+- change_id: CHG_058
+  change_type: new_theme
+  theme_id: PM30
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_008
+  summary: Created PM30 for second-best policy distortions.
+  rationale: Offsets used as substitutes for reforms distort resource allocation.
+- change_id: CHG_059
+  change_type: assignment
+  theme_id: PM10
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_009
+  summary: Assigned to PM10 (offsets as competitive differentiator).
+  rationale: Firms include offsets to avoid losing sales to rivals when profitable.
+- change_id: CHG_060
+  change_type: new_theme
+  theme_id: PM31
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_010
+  summary: Created PM31 for labour-rent protection opposition.
+  rationale: Unions oppose offsets to protect employment and labour-market rents.
+- change_id: CHG_061
+  change_type: no_change
+  theme_id: ALL
+  summary: Split/merge audit found no clear changes; themes retained as-is.
+  rationale: Reviewed labels and mechanism explanations for overlap or internal incoherence; none met merge/split criteria.
+  details:
+    merged_from: []
+    split_into: []
+    retained_as_is:
+    - PM1
+    - PM2
+    - PM3
+    - PM4
+    - PM5
+    - PM6
+    - PM7
+    - PM8
+    - PM9
+    - PM10
+    - PM11
+    - PM12
+    - PM13
+    - PM14
+    - PM15
+    - PM16
+    - PM17
+    - PM18
+    - PM19
+    - PM20
+    - PM21
+    - PM22
+    - PM23
+    - PM24
+    - PM25
+    - PM26
+    - PM27
+    - PM28
+    - PM29
+    - PM30
+    - PM31
+- change_id: CHG_062
+  change_type: new_theme
+  theme_id: PM32
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_011
+  summary: Created PM32 for rent redistribution from offset competition.
+  rationale: Offset-induced competition shifts surplus between firms and buyers, creating distributive conflict.
+- change_id: CHG_063
+  change_type: new_theme
+  theme_id: PM33
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_012
+  summary: Created PM33 for subsidy financing offsetting scale gains.
+  rationale: Taxpayer-financed subsidies offset or reverse unit-cost savings from scale.
+- change_id: CHG_064
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013
+  summary: Assigned to PM4 (crowding out civilian resources).
+  rationale: Public resources diverted to military offsets impose opportunity costs on civilian sectors.
+- change_id: CHG_065
+  change_type: assignment
+  theme_id: PM30
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_014
+  summary: Assigned to PM30 (trade distortion externalities).
+  rationale: Mandatory offsets reallocate investment and purchases, imposing third-party externalities.
+- change_id: CHG_066
+  change_type: new_theme
+  theme_id: PM34
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015
+  summary: Created PM34 for non-sustaining capability gains.
+  rationale: Technology transfer and training do not keep pace with exporter advances.
+- change_id: CHG_067
+  change_type: new_theme
+  theme_id: PM35
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_016
+  summary: Created PM35 for trade displacement/no net forex gains.
+  rationale: Exporter-sold offsets leave net foreign exchange unchanged.
+- change_id: CHG_068
+  change_type: assignment
+  theme_id: PM35
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_017
+  summary: Assigned to PM35 (trade diversion without demand growth).
+  rationale: Offset purchases divert demand across suppliers without increasing total demand.
+- change_id: CHG_069
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018
+  summary: Assigned to PM34 (temporary gains, outdated tech).
+  rationale: Outdated technology and limited momentum leave recipients behind after agreements end.
+- change_id: CHG_070
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019
+  summary: Assigned to PM2 (accounting relabeling).
+  rationale: Offset credits can relabel relationships that would occur anyway.
+- change_id: CHG_071
+  change_type: assignment
+  theme_id: PM21
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_001
+  summary: Assigned to PM21 (reciprocity conditions).
+  rationale: Exemptions allow sales to be conditioned on reciprocal arrangements.
+- change_id: CHG_072
+  change_type: new_theme
+  theme_id: PM36
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_002
+  summary: Created PM36 for cross-border ties from illiberal contracting.
+  rationale: Illiberal contracting latitude creates state–firm ties beyond price competition.
+- change_id: CHG_073
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_003
+  summary: Assigned to PM36 (buyer leverage intensifies linkages).
+  rationale: Greater buyer leverage increases offset demands and cross-national linkages.
+- change_id: CHG_074
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_004
+  summary: Assigned to PM36 (diagonalized exchanges).
+  rationale: Offsets require cross-border subcontracting and technology transfer across sectors.
+- change_id: CHG_075
+  change_type: new_theme
+  theme_id: PM37
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_005
+  summary: Created PM37 for buyer pool expansion loosening controls.
+  rationale: Sales incentives shift services from restraint to permissive offset stances.
+- change_id: CHG_076
+  change_type: new_theme
+  theme_id: PM38
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_006
+  summary: Created PM38 for firm offset-management capacity.
+  rationale: Firms build in-house offset organizations to manage obligations.
+- change_id: CHG_077
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_007
+  summary: Assigned to PM17 (transaction cost burden).
+  rationale: Managing offsets imposes material transaction costs on firms.
+- change_id: CHG_078
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_008
+  summary: Assigned to PM2 (credit inflation).
+  rationale: Crediting practices allow reported fulfillment to exceed delivered value.
+- change_id: CHG_079
+  change_type: assignment
+  theme_id: PM38
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_009
+  summary: Assigned to PM38 (expanded offset operations).
+  rationale: Rising requirements drive expanded offset operations and longer contracts.
+- change_id: CHG_080
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_010
+  summary: Assigned to PM1 (offset extraction increases acceptance).
+  rationale: Offset-driven extraction of activity increases willingness to import foreign systems.
+- change_id: CHG_081
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_011
+  summary: Assigned to PM36 (enduring supplier ties).
+  rationale: Offshoring components creates lasting supplier relationships for buyer firms.
+- change_id: CHG_082
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_012
+  summary: Assigned to PM36 (cross-border supplier ties).
+  rationale: Offset-enabled component roles create durable cross-border supplier relationships.
+- change_id: CHG_083
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_013
+  summary: Assigned to PM4 (displacement of domestic suppliers).
+  rationale: Direct offsets shift work away from domestic suppliers toward foreign subcontractors.
+- change_id: CHG_084
+  change_type: new_theme
+  theme_id: PM39
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_014
+  summary: Created PM39 for hidden injuries from offset competition.
+  rationale: Indirect offsets intensify competition and impose unseen harms on non-defence sectors.
+- change_id: CHG_085
+  change_type: assignment
+  theme_id: PM28
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_015
+  summary: Assigned to PM28 (competitiveness via exporter networks).
+  rationale: Offsets reduce foreign firms’ costs and improve quality, affecting competitiveness.
+- change_id: CHG_086
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_016
+  summary: Assigned to PM2 (weak enforcement enables diversion).
+  rationale: Licensed production creates diversion risk under inadequate enforcement.
+- change_id: CHG_087
+  change_type: new_theme
+  theme_id: PM40
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_017
+  summary: Created PM40 for acceleration of next-generation development.
+  rationale: Interoperability demands and tech sharing justify accelerating next-gen development.
+- change_id: CHG_088
+  change_type: new_theme
+  theme_id: PM41
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_018
+  summary: Created PM41 for economic priorities overriding security restraint.
+  rationale: Economic imperatives shift authority away from arms-control toward economic agencies.
+- change_id: CHG_089
+  change_type: new_theme
+  theme_id: PM42
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_019
+  summary: Created PM42 for offsets increasing defence budget appeal.
+  rationale: Offsets tied to non-defence capabilities make military spending more attractive.
+- change_id: CHG_090
+  change_type: new_theme
+  theme_id: PM43
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_020
+  summary: Created PM43 for opacity weakening cost discipline.
+  rationale: Offsets and price opacity reduce cost-minimizing incentives and visibility.
+- change_id: CHG_091
+  change_type: new_theme
+  theme_id: PM44
+  mechanism_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_021
+  summary: Created PM44 for offsets preserving market power.
+  rationale: Offsets expand markets and preserve pricing power, sustaining regime incentives.
+- change_id: CHG_092
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_001
+  summary: Assigned to PM1 (offset rhetoric legitimates purchases).
+  rationale: Offset promises frame purchases as economic development benefits.
+- change_id: CHG_093
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_002
+  summary: Assigned to PM36 (buyer leverage extracts linkages).
+  rationale: Buyer leverage in a buyer’s market extracts concessions and linkages.
+- change_id: CHG_094
+  change_type: new_theme
+  theme_id: PM45
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_003
+  summary: Created PM45 for security urgency overriding offsets.
+  rationale: Security urgency de-emphasizes offsets and favors off-the-shelf purchases.
+- change_id: CHG_095
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_004
+  summary: Assigned to PM15 (flexibility improves outcomes).
+  rationale: Case-by-case negotiation maximizes mutual benefit versus rigid prescriptions.
+- change_id: CHG_096
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005
+  summary: Assigned to PM2 (informal enforcement incentives).
+  rationale: Threat of reduced future consideration incentivizes meeting offset targets.
+- change_id: CHG_097
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_006
+  summary: Assigned to PM2 (penalty-backed incentives).
+  rationale: Multipliers and penalties strengthen incentives for investment and transfer.
+- change_id: CHG_098
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_007
+  summary: Assigned to PM36 (strategic collaboration pathways).
+  rationale: Offsets link procurement to collaboration and transfer aligned with national objectives.
+- change_id: CHG_099
+  change_type: new_theme
+  theme_id: PM46
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_008
+  summary: Created PM46 for absorptive capacity conditions.
+  rationale: Workforce, subcontractor base, IP constraints, and R&D policy condition absorption.
+- change_id: CHG_100
+  change_type: new_theme
+  theme_id: PM47
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_009
+  summary: Created PM47 for opacity and bargaining uncertainty.
+  rationale: Opacity and bargaining over tech flows complicate verification of benefits.
+- change_id: CHG_101
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_010
+  summary: Assigned to PM34 (benefits decay without capability embedding).
+  rationale: Short-term assembly without capability embedding leads to benefit decay.
+- change_id: CHG_102
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011
+  summary: Assigned to PM3 (cost pass-through pricing).
+  rationale: Vendors treat offset costs as a pricing issue and load them into contract prices.
+- change_id: CHG_103
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_012
+  summary: Assigned to PM17 (negotiation friction).
+  rationale: Divergent valuation methods create friction and complicate agreements.
+- change_id: CHG_104
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_013
+  summary: Assigned to PM2 (credit inflation via baseline work).
+  rationale: Counting pre-existing work as credit inflates delivery and weakens accountability.
+- change_id: CHG_105
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014
+  summary: Assigned to PM2 (credit banking opacity).
+  rationale: Credit banking relaxes delivery constraints but reduces transparency.
+- change_id: CHG_106
+  change_type: assignment
+  theme_id: PM8
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_015
+  summary: Assigned to PM8 (restricted transfer limits learning).
+  rationale: Aged tech, IP barriers, and black-boxing limit learning.
+- change_id: CHG_107
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_016
+  summary: Assigned to PM19 (learning-by-doing in licensed production).
+  rationale: Licensed production enables cumulative learning and adaptation.
+- change_id: CHG_108
+  change_type: assignment
+  theme_id: PM33
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_017
+  summary: Assigned to PM33 (subsidy-funded job creation).
+  rationale: Domestic production requires subsidies to match incumbents, creating high public costs.
+- change_id: CHG_109
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_018
+  summary: Assigned to PM4 (net job losses from outbound obligations).
+  rationale: Outbound obligations outweigh inbound work, reducing net jobs.
+- change_id: CHG_110
+  change_type: new_theme
+  theme_id: PM48
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_001
+  summary: Created PM48 for institutional path dependence in offset policy.
+  rationale: State–industry histories shape how offsets are perceived and operationalized.
+- change_id: CHG_111
+  change_type: new_theme
+  theme_id: PM49
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_002
+  summary: Created PM49 for second-best import offset rules.
+  rationale: Protectionism abroad and openness at home motivate systematic import offset rules.
+- change_id: CHG_112
+  change_type: new_theme
+  theme_id: PM50
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_003
+  summary: Created PM50 for value-for-money-protecting offset design.
+  rationale: Specifying new, equivalent work within contract scope preserves value-for-money.
+- change_id: CHG_113
+  change_type: new_theme
+  theme_id: PM51
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_004
+  summary: Created PM51 for reciprocity pressure and supply-chain risk.
+  rationale: Reciprocal expectations prompt indirect offsets to reduce risk and protect supply chains.
+- change_id: CHG_114
+  change_type: new_theme
+  theme_id: PM52
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_005
+  summary: Created PM52 for additionality enforced through credit rules.
+  rationale: Credit conditioned on market use deters paper transfers and improves additionality.
+- change_id: CHG_115
+  change_type: new_theme
+  theme_id: PM53
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_006
+  summary: Created PM53 for embedded offsets via procurement structure.
+  rationale: Consortia requirements embed offsets without explicit IP policy.
+- change_id: CHG_116
+  change_type: new_theme
+  theme_id: PM54
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_007
+  summary: Created PM54 for technology acquisition via licensed production.
+  rationale: Licensed production is accepted to obtain technology and dual-use capacity.
+- change_id: CHG_117
+  change_type: new_theme
+  theme_id: PM55
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_008
+  summary: Created PM55 for subsidiary entry then consolidation.
+  rationale: Subsidiaries enable capability build-up before consolidation absorbs affiliates.
+- change_id: CHG_118
+  change_type: new_theme
+  theme_id: PM56
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_009
+  summary: Created PM56 for fair-return reform improving collaboration.
+  rationale: Global-balance approaches reduce fragmentation but require political agreement.
+- change_id: CHG_119
+  change_type: new_theme
+  theme_id: PM57
+  mechanism_id: 07_comparing_british_and_german_offset_strategies_pdf__cmo_010
+  summary: Created PM57 for export support building offset capacity.
+  rationale: Export-support organisations help firms navigate offset rules and identify creditable projects.
+- change_id: CHG_120
+  change_type: new_theme
+  theme_id: PM58
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001
+  summary: Created PM58 for complex governance raising transaction costs.
+  rationale: Non-competitive work splitting and committee structures slow decisions.
+- change_id: CHG_121
+  change_type: new_theme
+  theme_id: PM59
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_002
+  summary: Created PM59 for additionality undermined by baseline credit.
+  rationale: Allowing baseline business as credit overstates benefits.
+- change_id: CHG_122
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003
+  summary: Assigned to PM34 (limited tech transfer post-development).
+  rationale: Offsets offer few tech opportunities once development is complete.
+- change_id: CHG_123
+  change_type: new_theme
+  theme_id: PM60
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_004
+  summary: Created PM60 for offset-based import justification.
+  rationale: Offset promises justify imports despite efficiency losses.
+- change_id: CHG_124
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005
+  summary: Assigned to PM34 (erosion of design capability).
+  rationale: Offset-dependent work reduces design and integration capability over time.
+- change_id: CHG_125
+  change_type: new_theme
+  theme_id: PM62
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006
+  summary: Created PM62 for early partnership enabling high-tech roles.
+  rationale: Early partnership with competitive allocation grants access to high-tech roles with approvals.
+- change_id: CHG_126
+  change_type: new_theme
+  theme_id: PM63
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_007
+  summary: Created PM63 for partnership structures shaping risk exposure.
+  rationale: Exclusive partnerships create win–lose exposure; multi-team hedges risk.
+- change_id: CHG_127
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008
+  summary: Assigned to PM15 (set-asides reduce flexibility).
+  rationale: Strategic best-value set-asides adjust allocation under political pressure.
+- change_id: CHG_128
+  change_type: new_theme
+  theme_id: PM64
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_009
+  summary: Created PM64 for IP studies as biased marketing signals.
+  rationale: Contractor-provided IP studies function as marketing and are subject to bias.
+- change_id: CHG_129
+  change_type: new_theme
+  theme_id: PM65
+  mechanism_id: 08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_010
+  summary: Created PM65 for partnership packages building durable collaboration.
+  rationale: Broader packages aim for durable collaboration beyond offset compliance.
+- change_id: CHG_130
+  change_type: new_theme
+  theme_id: PM66
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_001
+  summary: Created PM66 for offsets as import compensation.
+  rationale: Rising imports trigger compensatory offset requirements.
+- change_id: CHG_131
+  change_type: assignment
+  theme_id: PM46
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_002
+  summary: Assigned to PM46 (absorptive capacity constraints).
+  rationale: Limited domestic capacity constrains absorption, prompting lower targets.
+- change_id: CHG_132
+  change_type: assignment
+  theme_id: PM10
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_003
+  summary: Assigned to PM10 (offsets as competitive tool).
+  rationale: Offsets and credits are used competitively, making policies more specific.
+- change_id: CHG_133
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004
+  summary: Assigned to PM7 (sustaining skills and support capability).
+  rationale: Offsets in development/manufacture maintain skills and lifecycle support.
+- change_id: CHG_134
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005
+  summary: Assigned to PM2 (limiting multiplier inflation).
+  rationale: Case-by-case multiplier evaluation limits inflated credit values.
+- change_id: CHG_135
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006
+  summary: Assigned to PM2 (banking limits).
+  rationale: Restrictions on banking preserve procurement-delivery coupling.
+- change_id: CHG_136
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007
+  summary: Assigned to PM2 (sanctions as enforcement).
+  rationale: Blacklisting/withheld payments/sanctions incentivize compliance.
+- change_id: CHG_137
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008
+  summary: Assigned to PM15 (exclude offsets from supplier selection).
+  rationale: Offsets barred from selection prevent distortion of capability choice.
+- change_id: CHG_138
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_009
+  summary: Assigned to PM36 (supply-chain integration).
+  rationale: Offsets tied to exports integrate firms into international supply chains.
+- change_id: CHG_139
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_010
+  summary: Assigned to PM15 (paid subcontracting reduces influence).
+  rationale: Commercial subcontracting reduces influence and participation.
+- change_id: CHG_140
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011
+  summary: Assigned to PM2 (audit difficulty from complexity).
+  rationale: Heterogeneous arrangements decouple headline percentages from delivery.
+- change_id: CHG_141
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012
+  summary: Assigned to PM15 (policy relaxation after poor returns).
+  rationale: High costs and low gains drive relaxation of offset requirements.
+- change_id: CHG_142
+  change_type: assignment
+  theme_id: PM10
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_001
+  summary: Assigned to PM10 (offset package competition).
+  rationale: Firms compete on offsets and buyers leverage that competition.
+- change_id: CHG_143
+  change_type: new_theme
+  theme_id: PM74
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_002
+  summary: Created PM74 for disclosure constraints obscuring evaluation.
+  rationale: Limited data access and vested interests constrain disclosure.
+- change_id: CHG_144
+  change_type: new_theme
+  theme_id: PM75
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_003
+  summary: Created PM75 for counterfactual uncertainty undermining additionality.
+  rationale: Unknown counterfactuals create fundamental uncertainty about additionality.
+- change_id: CHG_145
+  change_type: new_theme
+  theme_id: PM76
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_004
+  summary: Created PM76 for compliance risk increasing prices.
+  rationale: Suppliers raise prices to insure against penalties and compliance risks.
+- change_id: CHG_146
+  change_type: new_theme
+  theme_id: PM77
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_005
+  summary: Created PM77 for heterogeneity limiting generalization.
+  rationale: Different offset types require different evaluation methods.
+- change_id: CHG_147
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006
+  summary: Assigned to PM2 (fulfillment inflation).
+  rationale: Multiplier pricing and advance crediting inflate fulfillment.
+- change_id: CHG_148
+  change_type: new_theme
+  theme_id: PM78
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_007
+  summary: Created PM78 for exports concentrating in incumbents.
+  rationale: Offset exports concentrate in existing relations and large exporters.
+- change_id: CHG_149
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_008
+  summary: Assigned to PM17 (monitoring burden).
+  rationale: High management burdens drive labor-intensive monitoring and artificial projects.
+- change_id: CHG_150
+  change_type: assignment
+  theme_id: PM52
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_009
+  summary: Assigned to PM52 (questionable value of 100% offsets).
+  rationale: Uncertain additionality and costs make full offsets low-value.
+- change_id: CHG_151
+  change_type: new_theme
+  theme_id: PM80
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_010
+  summary: Created PM80 for firm gains with weak national benefit.
+  rationale: Firm-level gains can coexist with weak national net benefit.
+- change_id: CHG_152
+  change_type: no_change
+  theme_id: ALL
+  summary: Split/merge audit found no clear changes; themes retained as-is.
+  rationale: Reviewed labels and mechanism explanations for overlap or internal incoherence; none met merge/split criteria.
+  details:
+    merged_from: []
+    split_into: []
+    retained_as_is:
+    - PM1
+    - PM2
+    - PM3
+    - PM4
+    - PM5
+    - PM6
+    - PM7
+    - PM8
+    - PM9
+    - PM10
+    - PM11
+    - PM12
+    - PM13
+    - PM14
+    - PM15
+    - PM16
+    - PM17
+    - PM18
+    - PM19
+    - PM20
+    - PM21
+    - PM22
+    - PM23
+    - PM24
+    - PM25
+    - PM26
+    - PM27
+    - PM28
+    - PM29
+    - PM30
+    - PM31
+    - PM32
+    - PM33
+    - PM34
+    - PM35
+    - PM36
+    - PM37
+    - PM38
+    - PM39
+    - PM40
+    - PM41
+    - PM42
+    - PM43
+    - PM44
+    - PM45
+    - PM46
+    - PM47
+    - PM48
+    - PM49
+    - PM50
+    - PM51
+    - PM52
+    - PM53
+    - PM54
+    - PM55
+    - PM56
+    - PM57
+    - PM58
+    - PM59
+    - PM60
+    - PM61
+    - PM62
+    - PM63
+    - PM64
+    - PM65
+    - PM66
+    - PM67
+    - PM68
+    - PM69
+    - PM70
+    - PM71
+    - PM72
+    - PM73
+    - PM74
+    - PM75
+    - PM76
+    - PM77
+    - PM78
+    - PM79
+    - PM80
+- change_id: CHG_153
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011
+  summary: Assigned to PM7 (compensatory work sustains production).
+  rationale: Offsets link imports to compensatory work that sustains employment.
+- change_id: CHG_154
+  change_type: assignment
+  theme_id: PM77
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_012
+  summary: Assigned to PM77 (indirect offsets complicate evaluation).
+  rationale: Indirect offsets obscure causal attribution compared to direct offsets.
+- change_id: CHG_155
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013
+  summary: Assigned to PM2 (retroactive crediting and preferential treatment).
+  rationale: Vague criteria enable retroactive crediting and reduce competition.
+- change_id: CHG_156
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014
+  summary: Assigned to PM2 (criteria improve transparency).
+  rationale: Specific criteria, competitive bidding, and monitoring improve transparency.
+- change_id: CHG_157
+  change_type: new_theme
+  theme_id: PM81
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_015
+  summary: Created PM81 for extending activity beyond program life.
+  rationale: Indirect offsets are used to extend industrial activity beyond a program.
+- change_id: CHG_158
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016
+  summary: Assigned to PM7 (focus on defence tech competence).
+  rationale: Military offsets in prioritized tech fields aim to secure long-term competence.
+- change_id: CHG_159
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017
+  summary: Assigned to PM7 (direct offsets build maintenance capacity).
+  rationale: Direct military offsets build local maintenance and modification capacity.
+- change_id: CHG_160
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018
+  summary: Assigned to PM7 (targeted indirect offsets sustain competence).
+  rationale: Indirect offsets targeted to tech fields sustain defence competence.
+- change_id: CHG_161
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_001
+  summary: Assigned to PM54 (capability sustainment via compensatory work).
+  rationale: Compensatory work and know-how transfer channel resources to domestic capability.
+- change_id: CHG_162
+  change_type: assignment
+  theme_id: PM24
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_002
+  summary: Assigned to PM24 (indirect offsets stimulate non-military activity).
+  rationale: Indirect compensations redirect activity into non-military sectors.
+- change_id: CHG_163
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003
+  summary: Assigned to PM2 (additionality unreliable).
+  rationale: Relabeled or low-quality projects undermine additionality.
+- change_id: CHG_164
+  change_type: assignment
+  theme_id: PM5
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004
+  summary: Assigned to PM5 (access to specialized know-how).
+  rationale: Offset-linked investments provide access to specialized production and know-how.
+- change_id: CHG_165
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_005
+  summary: Assigned to PM1 (coalition-building legitimation).
+  rationale: Offsets generate supportive coalitions that reduce resistance.
+- change_id: CHG_166
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_006
+  summary: Assigned to PM3 (cost pass-through).
+  rationale: Offset-related administrative and production costs are passed through in prices.
+- change_id: CHG_167
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_007
+  summary: Assigned to PM4 (sunk costs and excess capacity).
+  rationale: Short-run infrastructure creates sunk costs and excess capacity.
+- change_id: CHG_168
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_008
+  summary: Assigned to PM34 (disrupted learning from timing volatility).
+  rationale: Unpredictable timing disrupts planning and forces repeated learning restarts.
+- change_id: CHG_169
+  change_type: assignment
+  theme_id: PM23
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_009
+  summary: Assigned to PM23 (benefits end post-fulfillment).
+  rationale: Subcontracting benefits end when obligations finish.
+- change_id: CHG_170
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_010
+  summary: Assigned to PM17 (lobbying entrenches inefficiency).
+  rationale: Firm lobbying sustains protections and delays reform.
+- change_id: CHG_171
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_011
+  summary: Assigned to PM15 (late procurement limits collaboration).
+  rationale: Late procurement shifts offsets toward subcontracting rather than R&D collaboration.
+- change_id: CHG_172
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012
+  summary: Assigned to PM2 (banked pre-compensations).
+  rationale: Pre-compensation credits count normal trade flows against obligations.
+- change_id: CHG_173
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013
+  summary: Assigned to PM3 (overhead priced into contracts).
+  rationale: Offset overhead and transfer costs are priced into contracts.
+- change_id: CHG_174
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_014
+  summary: Assigned to PM17 (regional rent-seeking).
+  rationale: Regional quota politics steer work to satisfy rent-seeking groups.
+- change_id: CHG_175
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_015
+  summary: Assigned to PM36 (structural cooperation shifts incentives).
+  rationale: Structural cooperation shifts incentives to long-term specialization.
+- change_id: CHG_176
+  change_type: assignment
+  theme_id: PM30
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_016
+  summary: Assigned to PM30 (distorted restructuring).
+  rationale: Offsets subsidize uncompetitive firms and distort restructuring.
+- change_id: CHG_177
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_017
+  summary: Assigned to PM15 (tie-break caps reduce reliance).
+  rationale: Limiting offsets to tie-breaks reduces reliance while preserving compromise.
+- change_id: CHG_178
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018
+  summary: Assigned to PM36 (short-run work weakens cooperation).
+  rationale: Offsets provide short-run work but reduce incentives for sustained cooperation.
+- change_id: CHG_179
+  change_type: assignment
+  theme_id: PM9
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_001
+  summary: Assigned to PM9 (countertrade familiarity).
+  rationale: Familiarity with countertrade supports compensatory arrangements.
+- change_id: CHG_180
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_002
+  summary: Assigned to PM36 (linking imports to supply-chain transformation).
+  rationale: Offsets tie interoperability-driven imports to domestic industrial transformation.
+- change_id: CHG_181
+  change_type: assignment
+  theme_id: PM21
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_003
+  summary: Assigned to PM21 (procurement access conditioned on compensations).
+  rationale: Access is conditioned on delivering industrial work and tech benefits.
+- change_id: CHG_182
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_004
+  summary: Assigned to PM15 (mandatory direct-offset shares).
+  rationale: Direct-offset requirements force local content structures.
+- change_id: CHG_183
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_005
+  summary: Assigned to PM2 (multiplier inflation).
+  rationale: High multipliers inflate credited values beyond actual costs.
+- change_id: CHG_184
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006
+  summary: Assigned to PM2 (penalty-backed enforcement).
+  rationale: Non-terminable agreements and damages raise compliance costs.
+- change_id: CHG_185
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_007
+  summary: Assigned to PM17 (reduced oversight).
+  rationale: Disclosure/appeal exemptions reduce oversight.
+- change_id: CHG_186
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_008
+  summary: Assigned to PM36 (local partner requirements).
+  rationale: Local partner requirements create domestic industrial ties.
+- change_id: CHG_187
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009
+  summary: Assigned to PM2 (project specificity reduces discretion).
+  rationale: Parallel bargaining and specified projects lock suppliers into deliverables.
+- change_id: CHG_188
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010
+  summary: Assigned to PM2 (credit decoupled from effort).
+  rationale: Administrative crediting decouples credited value from real effort.
+- change_id: CHG_189
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_011
+  summary: Assigned to PM36 (competency building and integration).
+  rationale: Offsets build competencies and integrate firms into allied division of labor.
+- change_id: CHG_190
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012
+  summary: Assigned to PM2 (nominal/net/gross gaps).
+  rationale: Valuation conventions create large reporting gaps.
+- change_id: CHG_191
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013
+  summary: Assigned to PM2 (hard commitments).
+  rationale: Specific obligations reduce supplier discretion.
+- change_id: CHG_192
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_014
+  summary: Assigned to PM15 (composition target divergence).
+  rationale: Negotiation constraints can diverge from statutory composition targets.
+- change_id: CHG_193
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015
+  summary: Assigned to PM2 (low penalties enable non-compliance).
+  rationale: Low liquidated damages make non-performance rational.
+- change_id: CHG_194
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016
+  summary: Assigned to PM7 (local sourcing expands footprint).
+  rationale: Buyback and local sourcing expand domestic industrial footprint.
+- change_id: CHG_195
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017
+  summary: Assigned to PM7 (progressive localization).
+  rationale: Transfer/training enable progressive localization of production.
+- change_id: CHG_196
+  change_type: assignment
+  theme_id: PM24
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_018
+  summary: Assigned to PM24 (unrelated compensations).
+  rationale: Offsets can compel unrelated technology projects and commodity purchases.
+- change_id: CHG_197
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_019
+  summary: Assigned to PM15 (protective direct offsets with scrutiny).
+  rationale: Direct offsets act as protection; scrutiny narrows promise-delivery gaps.
+- change_id: CHG_198
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_020
+  summary: Assigned to PM34 (insufficient demand to sustain skills).
+  rationale: Small orders and limited exports undermine sustained production.
+- change_id: CHG_199
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_001
+  summary: Assigned to PM54 (licensed production and JV acquisition).
+  rationale: Licensed production and joint ventures build domestic capability.
+- change_id: CHG_200
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_002
+  summary: Assigned to PM54 (transfer requirements).
+  rationale: Technology-transfer requirements steer suppliers to deliver know-how.
+- change_id: CHG_201
+  change_type: assignment
+  theme_id: PM46
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003
+  summary: Assigned to PM46 (absorptive capacity).
+  rationale: Strong R&D and human capital increase absorption.
+- change_id: CHG_202
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_004
+  summary: Assigned to PM19 (JV knowledge transmission).
+  rationale: Joint ventures transmit technology through sustained interaction.
+- change_id: CHG_203
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_005
+  summary: Assigned to PM34 (insufficient demand for scale).
+  rationale: Domestic demand shortfalls force reliance on exports to sustain production.
+- change_id: CHG_204
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_006
+  summary: Assigned to PM34 (demand collapse erodes capability).
+  rationale: Loss of key customers reduces demand and erodes the learning base.
+- change_id: CHG_205
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_007
+  summary: Assigned to PM34 (alignment shifts cancel purchases).
+  rationale: Shifts in alignments lead to sunk costs and canceled orders.
+- change_id: CHG_206
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_008
+  summary: Assigned to PM34 (civil pivot preserves capability).
+  rationale: Firms pivot to civil products to preserve capabilities when demand falls.
+- change_id: CHG_207
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_009
+  summary: Assigned to PM19 (learning-by-doing).
+  rationale: Repeated interactions and training accelerate learning-by-doing.
+- change_id: CHG_208
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_010
+  summary: Assigned to PM19 (technology objectives align negotiations).
+  rationale: Explicit objectives align negotiations around modernization.
+- change_id: CHG_209
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_011
+  summary: Assigned to PM15 (flexible negotiation).
+  rationale: Flexible norms tailor packages to capacity rather than rigid ratios.
+- change_id: CHG_210
+  change_type: assignment
+  theme_id: PM21
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_012
+  summary: Assigned to PM21 (100% offset rule leverage).
+  rationale: Full-compensation rule increases bargaining leverage.
+- change_id: CHG_211
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_013
+  summary: Assigned to PM19 (tacit skills transfer).
+  rationale: Specialists and training transfer tacit production knowledge.
+- change_id: CHG_212
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_014
+  summary: Assigned to PM19 (embedded standards).
+  rationale: Component production and training embed supplier standards.
+- change_id: CHG_213
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015
+  summary: Assigned to PM7 (focus on high-value autonomy).
+  rationale: Focus on key technologies builds autonomy while avoiding inefficient local production.
+- change_id: CHG_214
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_016
+  summary: Assigned to PM34 (viability without exports).
+  rationale: Advanced competencies transfer but lack of export demand raises unit costs.
+- change_id: CHG_215
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017
+  summary: Assigned to PM7 (software autonomy).
+  rationale: Domestic software/training entities increase autonomy over system evolution.
+- change_id: CHG_216
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_018
+  summary: Assigned to PM2 (multipliers steer effort).
+  rationale: Multipliers steer supplier effort toward capability-building deliverables.
+- change_id: CHG_217
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019
+  summary: Assigned to PM7 (sustainment control).
+  rationale: Reinvestment and transfer requirements increase buyer control over sustainment.
+- change_id: CHG_218
+  change_type: assignment
+  theme_id: PM21
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020
+  summary: Assigned to PM21 (advanced-tech transfer condition).
+  rationale: Market access conditioned on advanced tech transfer.
+- change_id: CHG_219
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_021
+  summary: Assigned to PM34 (small orders undermine viability).
+  rationale: Fixed costs of assembly cannot be spread without exports.
+- change_id: CHG_220
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_022
+  summary: Assigned to PM34 (assembly-only licensing stalls absorption).
+  rationale: Assembly-focused licensing without engineering stalls absorption.
+- change_id: CHG_221
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_023
+  summary: Assigned to PM34 (complex collaboration cost inflation).
+  rationale: Complex collaboration without exports drives costs and delays.
+- change_id: CHG_222
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_001
+  summary: Assigned to PM34 (scale economies erode).
+  rationale: Shrinking quantities undermine scale economies.
+- change_id: CHG_223
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_002
+  summary: Assigned to PM34 (imports replace non-competitive domestic output).
+  rationale: Small-scale domestic production cannot compete on cost.
+- change_id: CHG_224
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_003
+  summary: Assigned to PM34 (fiscal tightening stalls maturation).
+  rationale: Subsidies and demand fall prevent infant industry maturation.
+- change_id: CHG_225
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_004
+  summary: Assigned to PM36 (asset concessions shift responsibility).
+  rationale: Asset concessions shift operational responsibilities to private actors.
+- change_id: CHG_226
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_005
+  summary: Assigned to PM36 (concessions sustain maintenance).
+  rationale: Concession contracts sustain maintenance/upgrade facilities.
+- change_id: CHG_227
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006
+  summary: Assigned to PM3 (currency risk raises costs).
+  rationale: Currency devaluation increases contract risk and renegotiation.
+- change_id: CHG_228
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007
+  summary: Assigned to PM34 (supportability undermines exports).
+  rationale: Limited spares guarantees reduce confidence and export credibility.
+- change_id: CHG_229
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_008
+  summary: Assigned to PM34 (human capital loss).
+  rationale: Loss of specialized human capital degrades quality and credibility.
+- change_id: CHG_230
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_009
+  summary: Assigned to PM34 (scale requires exports).
+  rationale: High unit costs persist without large orders and export markets.
+- change_id: CHG_231
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010
+  summary: Assigned to PM34 (small fleet sizes raise costs).
+  rationale: Small fleets raise unit costs and undermine sustainment economics.
+- change_id: CHG_232
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_011
+  summary: Assigned to PM34 (no regional pooling).
+  rationale: Lack of coordination prevents pooled demand and scale economies.
+- change_id: CHG_233
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_012
+  summary: Assigned to PM2 (skilled negotiation reduces asymmetry).
+  rationale: Knowledgeable negotiators reduce information asymmetry.
+- change_id: CHG_234
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013
+  summary: Assigned to PM7 (targeted transfer within partial dependence).
+  rationale: Accepting partial dependence and targeted transfer avoids misallocation.
+- change_id: CHG_235
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
+  summary: Assigned to PM7 (procurement-linked capability building).
+  rationale: Licensed production and transfer build capability and manage FX constraints.
+- change_id: CHG_236
+  change_type: assignment
+  theme_id: PM5
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_002
+  summary: Assigned to PM5 (credit eases FX constraint).
+  rationale: Long-term credit/countertrade eases hard-currency constraints.
+- change_id: CHG_237
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_003
+  summary: Assigned to PM34 (absorption delays/costs).
+  rationale: Absorption difficulties raise costs and delays beyond imports.
+- change_id: CHG_238
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004
+  summary: Assigned to PM19 (learning-by-doing).
+  rationale: Sustained production builds technical base.
+- change_id: CHG_239
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_005
+  summary: Assigned to PM19 (mid-level competence only).
+  rationale: Incremental transfer builds competence but not frontier gaps.
+- change_id: CHG_240
+  change_type: assignment
+  theme_id: PM8
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_006
+  summary: Assigned to PM8 (withheld core tech).
+  rationale: Supplier withholding constrains independent capability.
+- change_id: CHG_241
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_007
+  summary: Assigned to PM34 (buyback unattractive).
+  rationale: Domestic producers cannot meet expectations, limiting exports.
+- change_id: CHG_242
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_008
+  summary: Assigned to PM36 (capacity boosts leverage).
+  rationale: Indigenous capacity increases bargaining leverage.
+- change_id: CHG_243
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_009
+  summary: Assigned to PM34 (imports reduce R&D incentives).
+  rationale: Easy imports reduce incentives for indigenous R&D.
+- change_id: CHG_244
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010
+  summary: Assigned to PM3 (credit priced into higher prices).
+  rationale: Supplier credit is priced into higher selling prices.
+- change_id: CHG_245
+  change_type: assignment
+  theme_id: PM9
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_011
+  summary: Assigned to PM9 (countertrade expands exports).
+  rationale: Commodity trade expands exports without hard currency.
+- change_id: CHG_246
+  change_type: assignment
+  theme_id: PM9
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_012
+  summary: Assigned to PM9 (countertrade hidden costs).
+  rationale: Unfavorable FX terms create hidden costs and debt burdens.
+- change_id: CHG_247
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_013
+  summary: Assigned to PM34 (imported input demand).
+  rationale: Domestic industry expansion raises imported input demand and FX needs.
+- change_id: CHG_248
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_014
+  summary: Assigned to PM34 (credit encourages overbuying).
+  rationale: Easy credit encourages larger procurement and debt burdens.
+- change_id: CHG_249
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_015
+  summary: Assigned to PM17 (corruption undermines legitimacy).
+  rationale: Corruption scandals derail offset and transfer components.
+- change_id: CHG_250
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016
+  summary: Assigned to PM7 (technology assistance supports development).
+  rationale: Technology-assistance offsets can support domestic development.
+- change_id: CHG_251
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_017
+  summary: Assigned to PM15 (align offsets with diversification).
+  rationale: Offsets integrated with diversification/R&D reduce burdens.
+- change_id: CHG_252
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001
+  summary: Assigned to PM1 (offset inducements reinforce alliances).
+  rationale: Offsets as inducements reinforce alliances and interoperability.
+- change_id: CHG_253
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002
+  summary: Assigned to PM7 (spillovers and substitutes).
+  rationale: Transfers/work share enable domestic substitutes and commercial spillovers.
+- change_id: CHG_254
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003
+  summary: Assigned to PM36 (pre-production buy-in).
+  rationale: Allied buy-in shifts to pre-production workshare and transfer.
+- change_id: CHG_255
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004
+  summary: Assigned to PM36 (early integration).
+  rationale: Joint development integrates allies early and builds interoperability.
+- change_id: CHG_256
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005
+  summary: Assigned to PM7 (licensed production benefits).
+  rationale: Licensed production delivers industrial and political benefits.
+- change_id: CHG_257
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006
+  summary: Assigned to PM7 (domestic-first channels learning).
+  rationale: Domestic-first procurement channels demand and learning into domestic firms.
+- change_id: CHG_258
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007
+  summary: Assigned to PM7 (domestic base supports sustainment/leverage).
+  rationale: Advanced domestic base supports sustainment and bargaining leverage.
+- change_id: CHG_259
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_008
+  summary: Assigned to PM34 (self-sufficiency becomes cost burden).
+  rationale: Reduced demand and inflows lower utilization and make self-sufficiency costly.
+- change_id: CHG_260
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_009
+  summary: Assigned to PM15 (policy constraints limit alliances).
+  rationale: Policy constraints limit cross-national alliances and workshare models.
+- change_id: CHG_261
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_010
+  summary: Assigned to PM15 (domestic-first reduces workshare access).
+  rationale: Domestic-first strategies reduce ability to buy into multinational workshare.
+- change_id: CHG_262
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_011
+  summary: Assigned to PM36 (policy shifts increase access).
+  rationale: Loosened export restrictions increase access to transfers and workshare.
+- change_id: CHG_263
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_012
+  summary: Assigned to PM15 (high offsets force participation).
+  rationale: High offsets require participation and tech inputs to compete.
+- change_id: CHG_264
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_013
+  summary: Assigned to PM2 (ban threats enforce delivery).
+  rationale: Threat of banning contractors raises compliance incentives.
+- change_id: CHG_265
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014
+  summary: Assigned to PM7 (embedded transfers build capability).
+  rationale: Embedded transfers build manufacturing/integration capability.
+- change_id: CHG_266
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_015
+  summary: Assigned to PM17 (decision distortion risk).
+  rationale: Incomplete information and corruption can distort decisions.
+- change_id: CHG_267
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_016
+  summary: Assigned to PM34 (diffusion fails under underutilization).
+  rationale: Underutilization limits diffusion and maintains dependence on foreign spares.
+- change_id: CHG_268
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_017
+  summary: Assigned to PM36 (consolidation/JVs boost efficiency).
+  rationale: Consolidation and JVs increase efficiency and access to capital/tech/markets.
+- change_id: CHG_269
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_018
+  summary: Assigned to PM1 (alliance signalling).
+  rationale: Offsets and arms sales reinforce alliance signals.
+- change_id: CHG_270
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_019
+  summary: Assigned to PM15 (targeted cooperation).
+  rationale: Coordinated procedures steer cooperation toward selected sectors.
+- change_id: CHG_271
+  change_type: assignment
+  theme_id: PM8
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_020
+  summary: Assigned to PM8 (political constraints limit transfer).
+  rationale: Political constraints limit depth of transfer and capability.
+- change_id: CHG_272
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021
+  summary: Assigned to PM7 (maintenance infrastructure).
+  rationale: Offsets establish maintenance/repair infrastructure and contracts.
+- change_id: CHG_273
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_022
+  summary: Assigned to PM34 (weak diffusion limits gains).
+  rationale: Weak diffusion pathways limit multiplier effects.
+- change_id: CHG_274
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_023
+  summary: Assigned to PM36 (drivers sustain offsets/workshare).
+  rationale: Drivers keep transfer/workshare features in contracts.
+- change_id: CHG_275
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_024
+  summary: Assigned to PM15 (rigid domestic-first impedes alliances).
+  rationale: Domestic-first strategies impede alliances and technology inflows.
+- change_id: CHG_276
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001
+  summary: Assigned to PM7 (licensed production shortens learning).
+  rationale: Licensed production and transfer shorten learning timelines.
+- change_id: CHG_277
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_002
+  summary: Assigned to PM15 (objectives shape offset selection).
+  rationale: National objectives shape selection between broad vs targeted transfer.
+- change_id: CHG_278
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003
+  summary: Assigned to PM7 (state-backed capability building).
+  rationale: State-backed offsets build domestic tech, skills, and infrastructure.
+- change_id: CHG_279
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004
+  summary: Assigned to PM7 (compressed mastery via transfer).
+  rationale: Offsets acquire expertise to compress mastery timelines.
+- change_id: CHG_280
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_005
+  summary: Assigned to PM19 (learning-by-doing sequencing).
+  rationale: Final-assembly-first enables learning-by-doing and deepening.
+- change_id: CHG_281
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_006
+  summary: Assigned to PM19 (skill accumulation).
+  rationale: Licensed production accumulates workforce skills and responsibilities.
+- change_id: CHG_282
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_007
+  summary: Assigned to PM19 (JV co-development transfer).
+  rationale: JV co-development transfers know-how and creates exportable products.
+- change_id: CHG_283
+  change_type: assignment
+  theme_id: PM8
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_008
+  summary: Assigned to PM8 (foreign component dependence).
+  rationale: Reliance on foreign components constrains autonomy.
+- change_id: CHG_284
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_009
+  summary: Assigned to PM34 (subsidized demand misalignment).
+  rationale: Guaranteed demand expands scale despite weak user fit.
+- change_id: CHG_285
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_010
+  summary: Assigned to PM34 (subsidies reduce discipline).
+  rationale: Subsidies create excess capacity and debt.
+- change_id: CHG_286
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_011
+  summary: Assigned to PM34 (certification blocks exports).
+  rationale: No FAA certification blocks export revenue.
+- change_id: CHG_287
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_012
+  summary: Assigned to PM34 (external conditionality).
+  rationale: External conditionality cuts subsidies and forces restructuring.
+- change_id: CHG_288
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013
+  summary: Assigned to PM7 (targeted MRO capability).
+  rationale: Targeted transfer builds MRO readiness without autarky.
+- change_id: CHG_289
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014
+  summary: Assigned to PM7 (local MRO competencies).
+  rationale: Transfer/training builds local maintenance competencies.
+- change_id: CHG_290
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015
+  summary: Assigned to PM7 (specialized repair capability).
+  rationale: Specialized repair collaborations build sustainment capability.
+- change_id: CHG_291
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_016
+  summary: Assigned to PM19 (licensed production leverage).
+  rationale: Licensed production experience supports later indigenous design.
+- change_id: CHG_292
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_017
+  summary: Assigned to PM34 (scale constraints).
+  rationale: Scale constraints keep reliance on licensed production.
+- change_id: CHG_293
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_018
+  summary: Assigned to PM15 (strategic sector focus).
+  rationale: Strategic focus avoids autarky while maintaining competitiveness.
+- change_id: CHG_294
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_019
+  summary: Assigned to PM36 (diversified revenue).
+  rationale: Commercial subcontracting and MRO diversify revenues.
+- change_id: CHG_295
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_020
+  summary: Assigned to PM36 (global tech/capital openness).
+  rationale: JVs and acquisitions keep industry open to foreign tech.
+- change_id: CHG_296
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_001
+  summary: Assigned to PM2 (compliance incentives).
+  rationale: Mandated obligations and tracking strengthen compliance.
+- change_id: CHG_297
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_002
+  summary: Assigned to PM15 (predictable targets).
+  rationale: Fixed percentage targets guide contractor planning.
+- change_id: CHG_298
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003
+  summary: Assigned to PM2 (criteria/multipliers steer effort).
+  rationale: Criteria and multipliers steer suppliers toward high-valued activities.
+- change_id: CHG_299
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004
+  summary: Assigned to PM2 (enforceable commitments).
+  rationale: Deeds and damages increase follow-through.
+- change_id: CHG_300
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005
+  summary: Assigned to PM7 (self-reliance targeting).
+  rationale: Targeted offsets focus on maintenance/spares and self-reliance.
+- change_id: CHG_301
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_006
+  summary: Assigned to PM36 (export independence pressure).
+  rationale: Export requirements pressure subsidiaries to demonstrate local commitment.
+- change_id: CHG_302
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_007
+  summary: Assigned to PM36 (partnerships via AII plans).
+  rationale: AII plans foster structured prime–subcontractor partnerships.
+- change_id: CHG_303
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_008
+  summary: Assigned to PM34 (thin demand creates excess capacity).
+  rationale: Thin demand and competition create excess capacity and high transaction costs.
+- change_id: CHG_304
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009
+  summary: Assigned to PM7 (alternative capability investments).
+  rationale: SIDA investments deliver capability gains when local content is infeasible.
+- change_id: CHG_305
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_010
+  summary: Assigned to PM15 (demand concentration stabilizes).
+  rationale: Long-term sector plans and fewer primes stabilize workloads.
+- change_id: CHG_306
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_011
+  summary: Assigned to PM17 (prime market power rents).
+  rationale: Local prime controls compliance and can extract rents.
+- change_id: CHG_307
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_012
+  summary: Assigned to PM15 (voluntary local participation).
+  rationale: Voluntary offers align procurement with competitive niches.
+- change_id: CHG_308
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_013
+  summary: Assigned to PM36 (sustained support relationships).
+  rationale: Commercial relationships create pathways for sustained support.
+- change_id: CHG_309
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014
+  summary: Assigned to PM2 (multipliers + damages).
+  rationale: Multipliers and damages increase compliance leverage.
+- change_id: CHG_310
+  change_type: assignment
+  theme_id: PM7
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015
+  summary: Assigned to PM7 (directed business builds capability).
+  rationale: Undertakings to direct business build local capability.
+- change_id: CHG_311
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_016
+  summary: Assigned to PM15 (local value-added thresholds).
+  rationale: Value-added thresholds steer toward genuine local production.
+- change_id: CHG_312
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017
+  summary: Assigned to PM2 (bank-and-trade flexibility).
+  rationale: Credits/waivers create flexible banking to exceed targets.
+- change_id: CHG_313
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_018
+  summary: Assigned to PM36 (combined industrial base).
+  rationale: AU/NZ combined base enables cross-border allocation.
+- change_id: CHG_314
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_019
+  summary: Assigned to PM15 (through-life support focus).
+  rationale: Through-life support targets limited capacity to readiness functions.
+- change_id: CHG_315
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_020
+  summary: Assigned to PM15 (partner access model).
+  rationale: Access fees and competitiveness sourcing limit participation.
+- change_id: CHG_316
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021
+  summary: Assigned to PM36 (interoperability path dependence).
+  rationale: Interoperability requirements reinforce US-led program paths.
+- change_id: CHG_317
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_022
+  summary: Assigned to PM17 (metrics absence).
+  rationale: No agreed outcomes/metrics undermines monitoring.
+- change_id: CHG_318
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_023
+  summary: Assigned to PM17 (acquittal not equal gains).
+  rationale: Acquittal categories do not ensure gains without assessment.
+- change_id: CHG_319
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024
+  summary: Assigned to PM3 (local-content premium).
+  rationale: Local participation in assembly adds cost premium.
+- change_id: CHG_320
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_025
+  summary: Assigned to PM15 (broad offsets undermine negotiations).
+  rationale: Vague offsets can be counterproductive in negotiations.
+- change_id: CHG_321
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_001
+  summary: Assigned to PM1 (public legitimation).
+  rationale: Offsets framed as benefits shift public/political acceptance.
+- change_id: CHG_322
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_002
+  summary: Assigned to PM34 (policy vacuum triggers diversification).
+  rationale: Firms shift to non-defence work/exports in policy vacuum.
+- change_id: CHG_323
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_003
+  summary: Assigned to PM15 (resource steering to niches).
+  rationale: Policy steers resources toward niche firms and support capabilities.
+- change_id: CHG_324
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004
+  summary: Assigned to PM3 (hidden padding risk).
+  rationale: No-price-increase rules are hard to verify, risking padding.
+- change_id: CHG_325
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_005
+  summary: Assigned to PM2 (quantified obligations).
+  rationale: Percent obligations and windows compel credit-generating projects.
+- change_id: CHG_326
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_006
+  summary: Assigned to PM17 (split management burdens).
+  rationale: Split management increases coordination burdens.
+- change_id: CHG_327
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007
+  summary: Assigned to PM2 (penalties vs performance).
+  rationale: Suppliers may pay penalties rather than deliver projects.
+- change_id: CHG_328
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_008
+  summary: Assigned to PM15 (indirect offsets broaden compliance).
+  rationale: Indirect offsets broaden compliance space and dilute defence linkage.
+- change_id: CHG_329
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_009
+  summary: Assigned to PM19 (learning-by-doing orders).
+  rationale: Subcontracting/licensed production build niche capabilities.
+- change_id: CHG_330
+  change_type: assignment
+  theme_id: PM8
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_010
+  summary: Assigned to PM8 (low-tech allocation limits upgrading).
+  rationale: Low-tech task allocation limits capability deepening.
+- change_id: CHG_331
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011
+  summary: Assigned to PM36 (equity/JV integration).
+  rationale: Equity/JVs integrate firms into multinational networks.
+- change_id: CHG_332
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_012
+  summary: Assigned to PM36 (subsidiary influence).
+  rationale: Local subsidiaries leverage relationships in government dealings.
+- change_id: CHG_333
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_013
+  summary: Assigned to PM34 (capability erosion).
+  rationale: Capability erosion reduces quality/schedule performance.
+- change_id: CHG_334
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_014
+  summary: Assigned to PM34 (quality/delay risks).
+  rationale: Insufficient capability causes quality problems and delays.
+- change_id: CHG_335
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_015
+  summary: Assigned to PM36 (capacity attracts JV/transfer).
+  rationale: Existing capacity attracts JVs and supply-chain integration.
+- change_id: CHG_336
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_016
+  summary: Assigned to PM4 (high cost per job).
+  rationale: Capital-intensive offsets create few jobs per spend.
+- change_id: CHG_337
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_017
+  summary: Assigned to PM4 (opportunity costs).
+  rationale: Offsets reduce job creation compared to civilian spending.
+- change_id: CHG_338
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_018
+  summary: Assigned to PM17 (political project selection).
+  rationale: Political direction can override commercial viability.
+- change_id: CHG_339
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_019
+  summary: Assigned to PM17 (lack of transparency).
+  rationale: No reliable data prevents verification of net benefits.
+- change_id: CHG_340
+  change_type: assignment
+  theme_id: PM46
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_020
+  summary: Assigned to PM46 (absorptive capacity limits).
+  rationale: Weak absorptive capacity limits embedding of transfers.
+- change_id: CHG_341
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_021
+  summary: Assigned to PM17 (corruption vulnerability).
+  rationale: Secrecy and commission-driven bargaining create corruption risks.
+- change_id: CHG_342
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_022
+  summary: Assigned to PM17 (irregular practices).
+  rationale: Investigations identify irregular practices and conflicts.
+- change_id: CHG_343
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_023
+  summary: Assigned to PM17 (reduced scrutiny).
+  rationale: Strategic-policy approval reduces procurement scrutiny.
+- change_id: CHG_344
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_024
+  summary: Assigned to PM17 (unverifiable promises).
+  rationale: Unverifiable offset promises leave high costs and limited benefits.
+- change_id: CHG_345
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_001
+  summary: Assigned to PM17 (incoherent criteria).
+  rationale: Incoherent selection criteria weaken regional development coherence.
+- change_id: CHG_346
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_002
+  summary: Assigned to PM17 (default to narrower frameworks).
+  rationale: Lack of comprehensive planning defaults to corridor approaches.
+- change_id: CHG_347
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_003
+  summary: Assigned to PM1 (legitimation via job narratives).
+  rationale: Job/investment narratives legitimate offsets as development tools.
+- change_id: CHG_348
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_004
+  summary: Assigned to PM17 (coordination burden).
+  rationale: Joint administration requires sustained coordination.
+- change_id: CHG_349
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_005
+  summary: Assigned to PM2 (high percentage increases effort).
+  rationale: High required percentages increase supplier effort to maximize credits.
+- change_id: CHG_350
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_006
+  summary: Assigned to PM2 (ongoing renegotiation).
+  rationale: Re-scoping adjusts project lists to meet credits/feasibility.
+- change_id: CHG_351
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_007
+  summary: Assigned to PM17 (overstated estimates).
+  rationale: Headline estimates overstate value-added without evaluation.
+- change_id: CHG_352
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_008
+  summary: Assigned to PM34 (weak diffusion).
+  rationale: Weak linkages limit regional development impacts.
+- change_id: CHG_353
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_009
+  summary: Assigned to PM34 (lifeline but constrained autonomy).
+  rationale: DIP-linked orders sustain firms but autonomy is constrained.
+- change_id: CHG_354
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_010
+  summary: Assigned to PM34 (benefits concentrated).
+  rationale: Business is channelled to existing locations, leaving periphery out.
+- change_id: CHG_355
+  change_type: assignment
+  theme_id: PM46
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_011
+  summary: Assigned to PM46 (limited social capital).
+  rationale: Limited social/intellectual capital reduces transfer embedding.
+- change_id: CHG_356
+  change_type: assignment
+  theme_id: PM46
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_012
+  summary: Assigned to PM46 (overlooked local capability).
+  rationale: Overlooking local capability reduces utilization and spin-offs.
+- change_id: CHG_357
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_013
+  summary: Assigned to PM17 (vendor defaults to convenience).
+  rationale: Insufficient pressure leads vendors to default to convenient regions/sectors.
+- change_id: CHG_358
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_014
+  summary: Assigned to PM2 (credit inflation).
+  rationale: Credit-maximizing investments inflate reported impacts.
+- change_id: CHG_359
+  change_type: assignment
+  theme_id: PM5
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_015
+  summary: Assigned to PM5 (liquidity via soft loans/equity).
+  rationale: Soft loans/equity provide liquidity for survival and expansion.
+- change_id: CHG_360
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_016
+  summary: Assigned to PM17 (reinforcing incumbents).
+  rationale: Projects fit existing strengths and reinforce incumbent patterns.
+- change_id: CHG_361
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_017
+  summary: Assigned to PM1 (inducements for bid choice).
+  rationale: Promised regional benefits act as bid inducements.
+- change_id: CHG_362
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_018
+  summary: Assigned to PM17 (political sustainment).
+  rationale: Political/bureaucratic reasons sustain weak projects.
+- change_id: CHG_363
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_019
+  summary: Assigned to PM4 (hidden costs).
+  rationale: Capital-intensive IDZ projects require extra state incentives.
+- change_id: CHG_364
+  change_type: assignment
+  theme_id: PM34
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020
+  summary: Assigned to PM34 (shipbuilding capability erosion).
+  rationale: Shipbuilding capability erodes without directed offsets.
+- change_id: CHG_365
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_021
+  summary: Assigned to PM15 (expectations and opportunity costs).
+  rationale: Peer comparisons raise expectations and highlight opportunity costs.
+- change_id: CHG_366
+  change_type: assignment
+  theme_id: PM4
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022
+  summary: Assigned to PM4 (input diversity boosts multipliers).
+  rationale: More diverse inputs create larger local employment multipliers.
+- change_id: CHG_367
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_023
+  summary: Assigned to PM17 (strategy misalignment).
+  rationale: No integration with downstream strategies misses synergies.
+- change_id: CHG_368
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_024
+  summary: Assigned to PM15 (internal capability tradeoffs).
+  rationale: Specialty conversions create capability tradeoffs.
+- change_id: CHG_369
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_025
+  summary: Assigned to PM2 (export credit inflation).
+  rationale: Claiming full product value inflates export credit.
+- change_id: CHG_370
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_026
+  summary: Assigned to PM2 (unclear additionality).
+  rationale: Unclear additionality encourages narrative-driven reporting.
+- change_id: CHG_371
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_027
+  summary: Assigned to PM17 (weak monitoring).
+  rationale: Weak monitoring and hidden costs overstate benefits.
+- change_id: CHG_372
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_028
+  summary: Assigned to PM17 (core project focus).
+  rationale: Vendor discretion and core-project focus reinforce existing patterns.
+- change_id: CHG_373
+  change_type: assignment
+  theme_id: PM21
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_001
+  summary: Assigned to PM21 (offset obligations compel purchases).
+  rationale: Offsets compel vendors to place additional purchases/investment locally.
+- change_id: CHG_374
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_002
+  summary: Assigned to PM36 (pivot to inward investment).
+  rationale: Packages pivot to inward investment and JVs to satisfy obligations.
+- change_id: CHG_375
+  change_type: assignment
+  theme_id: PM17
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_003
+  summary: Assigned to PM17 (limited disclosure).
+  rationale: Limited disclosure impedes independent assessment.
+- change_id: CHG_376
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_004
+  summary: Assigned to PM15 (shift to direct offsets).
+  rationale: Poor indirect performance shifts emphasis to direct local content.
+- change_id: CHG_377
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_005
+  summary: Assigned to PM15 (industrial benefits prioritized).
+  rationale: Industrial benefits prioritized over military performance when security pressure is low.
+- change_id: CHG_378
+  change_type: assignment
+  theme_id: PM30
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_006
+  summary: Assigned to PM30 (political steering sustains inefficiency).
+  rationale: Politically steered offsets sustain inefficient producers.
+- change_id: CHG_379
+  change_type: assignment
+  theme_id: PM3
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_007
+  summary: Assigned to PM3 (price premium pass-through).
+  rationale: Offset cost premiums are priced into bids.
+- change_id: CHG_380
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_008
+  summary: Assigned to PM36 (JV orientation to non-defence).
+  rationale: Offsets steer JV capital to non-defence sectors with demand.
+- change_id: CHG_381
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_009
+  summary: Assigned to PM54 (licensed production embeds capability).
+  rationale: Licensed production transfers know-how despite price premium.
+- change_id: CHG_382
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_010
+  summary: Assigned to PM36 (tolerated transfer for royalties/alliances).
+  rationale: Exporters tolerate transfer for royalties and alliance gains.
+- change_id: CHG_383
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_011
+  summary: Assigned to PM1 (capacity + diplomatic ties).
+  rationale: Transfers build capacity and reinforce ties.
+- change_id: CHG_384
+  change_type: assignment
+  theme_id: PM1
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_012
+  summary: Assigned to PM1 (acceptability via domestic upgrading).
+  rationale: Offsets improve acceptability by upgrading domestic capability.
+- change_id: CHG_385
+  change_type: assignment
+  theme_id: PM36
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_013
+  summary: Assigned to PM36 (early task definition).
+  rationale: Joint development reduces offset administration burden.
+- change_id: CHG_386
+  change_type: assignment
+  theme_id: PM19
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_014
+  summary: Assigned to PM19 (equity aligns incentives).
+  rationale: Equity aligns incentives and deepens skill sharing.
+- change_id: CHG_387
+  change_type: assignment
+  theme_id: PM10
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_015
+  summary: Assigned to PM10 (offsets as differentiator).
+  rationale: Offsets tip decisions when products are comparable.
+- change_id: CHG_388
+  change_type: assignment
+  theme_id: PM15
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_016
+  summary: Assigned to PM15 (cheaper alternative offsets).
+  rationale: Offsets used as cheaper alternative to other arrangements.
+- change_id: CHG_389
+  change_type: assignment
+  theme_id: PM2
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_017
+  summary: Assigned to PM2 (banked credit incentives).
+  rationale: Banked credits motivate continued placements.
+- change_id: CHG_390
+  change_type: assignment
+  theme_id: PM10
+  mechanism_id: 01_introduction_and_overview_pdf__cmo_018
+  summary: Assigned to PM10 (competitive pressure).
+  rationale: Firms offer offsets to avoid losing sales.
+- change_id: CHG_391
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004
+  summary: Moved 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004 from PM7 to PM54.
+  rationale: Mechanism describes capability acquisition through domestic participation and learning (development/manufacture and
+    through-life support), which aligns with PM54’s technology acquisition via collaboration. PM7 is narrowly about employer-funded
+    training expanding the labour pool.
+- change_id: CHG_392
+  change_type: assignment
+  theme_id: PM66
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011 from PM7 to PM66.
+  rationale: Mechanism links import contracts to compensatory industrial work, matching PM66’s import-compensation logic (offsets
+    used to rebalance domestic industrial participation as imports rise). PM7 focuses on employer-funded training expanding skill
+    supply.
+- change_id: CHG_393
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016 from PM7 to PM54.
+  rationale: Mechanism describes focusing offsets on prioritized military technology fields to secure long-term technological
+    competence, which fits PM54’s technology acquisition and capability-building orientation. PM7 is about expanding the labour
+    pool via employer-funded training.
+- change_id: CHG_394
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism is about building domestic maintenance/modification capability for imported systems (through direct military
+    offsets), aligning with PM54’s technology/capability acquisition via collaboration. PM7 is limited to employer-funded training
+    expanding the skill pool.
+- change_id: CHG_395
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018
+  summary: Moved 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018 from PM7 to PM54.
+  rationale: Mechanism describes targeted, qualitatively evaluated military offsets sustaining long-term competence in key
+    technology fields, which fits PM54’s focus on technology acquisition and capability build-up. PM7 is specifically about
+    employer-funded training expanding labour supply.
+- change_id: CHG_396
+  change_type: assignment
+  theme_id: PM66
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016
+  summary: Moved 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016 from PM7 to PM66.
+  rationale: Mechanism requires buyback/local sourcing to redirect procurement spending toward domestic suppliers, which is
+    compensatory import-offset logic consistent with PM66. PM7 is about employer-funded training expanding local skill supply.
+- change_id: CHG_397
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017
+  summary: Moved 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism bundles technology transfer, training, assembly, and production-line transfer to localize production,
+    directly matching PM54’s technology acquisition via licensed production/collaboration. PM7 is about expanding the labour pool
+    via employer-funded training.
+- change_id: CHG_398
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism describes selective localization of high-value technologies to build autonomy while avoiding inefficient
+    production, aligning with PM54’s technology acquisition/capability-building process. PM7 focuses on employer-funded training
+    expanding skill supply.
+- change_id: CHG_399
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017 from PM7 to PM54.
+  rationale: Mechanism creates domestic entities for software development, absorption, and training to increase autonomy over
+    complex systems, which is a technology/capability acquisition pathway captured by PM54. PM7 is narrowly about employer-funded
+    training expanding the labour pool.
+- change_id: CHG_400
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019
+  summary: Moved 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019 from PM7 to PM54.
+  rationale: Mechanism requires technology transfer and reinvestment for software maintenance to increase sustainment/upgrade
+    control, fitting PM54’s technology acquisition via collaboration. PM7 concerns employer-funded training increasing labour
+    supply.
+- change_id: CHG_401
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013
+  summary: Moved 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013 from PM7 to PM54.
+  rationale: Mechanism is about negotiating targeted transfer while accepting partial dependence to avoid misallocation, which is
+    still fundamentally about technology acquisition choices and capability-building (PM54). PM7 is specifically about employer-funded
+    training expanding the local skill pool.
+- change_id: CHG_402
+  change_type: ambiguous
+  theme_id: AMBIGUOUS
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001
+  summary: Moved 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_001 from PM7 to AMBIGUOUS (possible PM54, PM5).
+  rationale: Mechanism combines technology acquisition (licensed production/technology transfer) with external-finance/countertrade
+    elements aimed at easing foreign-exchange constraints. This spans distinct causal processes covered separately by PM54 and PM5.
+- change_id: CHG_403
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016
+  summary: Moved 15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016 from PM7 to PM54.
+  rationale: Mechanism describes technology-assistance offsets transferring know-how to support domestic development, aligning with
+    PM54’s technology acquisition via collaboration. PM7 is about employer-funded training expanding labour supply.
+- change_id: CHG_404
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002 from PM7 to PM54.
+  rationale: Mechanism links technology transfer and production work share to domestic substitutes and spillovers, fitting PM54’s
+    technology acquisition/capability build-up process. PM7 is narrowly about employer-funded training expanding the local skill base.
+- change_id: CHG_405
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005 from PM7 to PM54.
+  rationale: Mechanism describes licensed local production and extensive transfer functioning like offsets to deliver industrial
+    capability gains, aligning with PM54. PM7 focuses on employer-funded training expanding labour supply.
+- change_id: CHG_406
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006 from PM7 to PM54.
+  rationale: Mechanism channels learning through domestic procurement and licensed production to sustain capability, which fits
+    PM54’s technology acquisition/collaboration logic. PM7 is about employer-funded training expanding the skill pool.
+- change_id: CHG_407
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007 from PM7 to PM54.
+  rationale: Mechanism emphasizes sustaining an advanced domestic production base to support sustainment and leverage, aligning
+    with PM54’s capability-building focus. PM7 is specifically about employer-funded training expanding labour supply.
+- change_id: CHG_408
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014 from PM7 to PM54.
+  rationale: Mechanism embeds technology transfers to build domestic manufacturing and integration capability, which fits PM54’s
+    technology acquisition pathway. PM7 concerns employer-funded training expanding the labour pool.
+- change_id: CHG_409
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021
+  summary: Moved 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021 from PM7 to PM54.
+  rationale: Mechanism establishes domestic maintenance/repair infrastructure via procurement-linked industrial contracts, aligning
+    with PM54’s technology/capability acquisition via collaboration. PM7 is about employer-funded training expanding skill supply.
+- change_id: CHG_410
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001 from PM7 to PM54.
+  rationale: Mechanism conditions purchases on licensed production/coproduction/transfer to shorten learning timelines, directly
+    matching PM54. PM7 is limited to employer-funded training expanding the labour pool.
+- change_id: CHG_411
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003 from PM7 to PM54.
+  rationale: Mechanism combines offsets with state backing to build domestic technology/skills/infrastructure, which is a
+    capability-building pathway consistent with PM54’s collaboration/transfer logic. PM7 focuses on employer-funded training expanding
+    labour supply.
+- change_id: CHG_412
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004 from PM7 to PM54.
+  rationale: Mechanism uses offsets to acquire R&D/design/manufacturing expertise and compress mastery timelines, aligning with
+    PM54’s technology acquisition process. PM7 is about employer-funded training expanding the local skill pool.
+- change_id: CHG_413
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013 from PM7 to PM54.
+  rationale: Mechanism uses targeted transfer and training to build maintenance/upgrade capability without autarky, fitting PM54’s
+    technology acquisition/capability-building orientation. PM7 is narrowly about employer-funded training expanding skill supply.
+- change_id: CHG_414
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014 from PM7 to PM54.
+  rationale: Mechanism requires transfer and training to build local maintenance/upgrade competencies, consistent with PM54’s
+    technology acquisition via collaboration. PM7 is about employer-funded training expanding the labour pool.
+- change_id: CHG_415
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015
+  summary: Moved 17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism relies on collaboration with foreign firms for specialized repair/manufacturing to build sustainment
+    capability, aligning with PM54’s collaboration-driven capability acquisition. PM7 focuses on employer-funded training expanding
+    skill supply.
+- change_id: CHG_416
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005 from PM7 to PM54.
+  rationale: Mechanism targets offset activity to sustainment/adaptation and long-term technologies to build self-reliance-relevant
+    capability, which aligns better with PM54’s capability-building via directed collaboration than with PM7’s labour-supply training
+    focus.
+- change_id: CHG_417
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009 from PM7 to PM54.
+  rationale: Mechanism substitutes R&D, exports support, technology transfer, training, and infrastructure for local content to
+    generate capability gains, fitting PM54’s technology/capability acquisition framing. PM7 is about employer-funded training expanding
+    the labour pool.
+- change_id: CHG_418
+  change_type: assignment
+  theme_id: PM54
+  mechanism_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015
+  summary: Moved 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015 from PM7 to PM54.
+  rationale: Mechanism uses contractual undertakings (transfer, joint ventures, directed business) to build local industrial and
+    maintenance capability, aligning with PM54’s collaboration-driven capability acquisition. PM7 focuses on expanding labour supply via
+    employer-funded training.
+
+- change_id: CHG_419
+  change_type: no_change
+  theme_id: PM7
+  summary: Reviewed PM7; no merge.
+  rationale: No other theme more canonically captures the same causal process of employer-financed training expanding the
+    available skill pool; related themes focus on technology acquisition or absorptive capacity rather than
+    labour-supply expansion.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM7
+- change_id: CHG_420
+  change_type: no_change
+  theme_id: PM11
+  summary: Reviewed PM11; no merge.
+  rationale: No other theme captures the same causal process of domestic arms-industry influence pushing governments to
+    demand direct offsets; related themes address institutional histories or legitimation rather than industry
+    pressure shaping requirements.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM11
+- change_id: CHG_421
+  change_type: no_change
+  theme_id: PM12
+  summary: Reviewed PM12; no merge.
+  rationale: No other theme captures the same causal process of designing indirect offsets to be development-oriented
+    through targeting and transparency; adjacent themes focus on additionality rules or evaluation constraints
+    rather than design-for-development.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM12
+- change_id: CHG_422
+  change_type: no_change
+  theme_id: PM13
+  summary: Reviewed PM13; no merge.
+  rationale: No other theme captures the same causal process of shifting competition from price/quality toward bundled
+    offset content; related themes cover selection differentiation or distributive impacts but not the
+    competition-basis shift itself.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM13
+- change_id: CHG_423
+  change_type: no_change
+  theme_id: PM14
+  summary: Reviewed PM14; no merge.
+  rationale: No other theme captures the same causal process of rent extraction through mandatory offset requirements;
+    related themes address pricing pass-through or administrative rent-seeking rather than extracting rents
+    via compulsory local activity.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM14
+- change_id: CHG_424
+  change_type: no_change
+  theme_id: PM18
+  summary: Reviewed PM18; no merge.
+  rationale: No other theme captures the same causal process of ambiguous objectives undermining evaluation; related
+    evaluation themes focus on disclosure limits or heterogeneity rather than goal ambiguity.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM18
+- change_id: CHG_425
+  change_type: no_change
+  theme_id: PM22
+  summary: Reviewed PM22; no merge.
+  rationale: No other theme captures the same causal process of capability discovery via forced supplier search under local
+    content requirements; related themes address supplier selection dynamics or absorptive capacity rather
+    than information discovery.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM22
+- change_id: CHG_426
+  change_type: no_change
+  theme_id: PM25
+  summary: Reviewed PM25; no merge.
+  rationale: No other theme captures the same causal process of opacity enabling price discrimination or dumping in
+    markets; related opacity themes concern procurement cost discipline and bargaining uncertainty rather than
+    market-price discrimination.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM25
+- change_id: CHG_427
+  change_type: no_change
+  theme_id: PM26
+  summary: Reviewed PM26; no merge.
+  rationale: No other theme captures the same causal process of buyback/hostage requirements aligning incentives around
+    technology transfer; related compliance themes focus on enforcement generally rather than hostage-style
+    incentive alignment.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM26
+- change_id: CHG_428
+  change_type: no_change
+  theme_id: PM27
+  summary: Reviewed PM27; no merge.
+  rationale: No other theme captures the same causal process of depreciation driving licensing to monetise declining value;
+    other technology-transfer themes focus on learning, absorption, or incentives rather than depreciation
+    timing.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM27
+- change_id: CHG_429
+  change_type: no_change
+  theme_id: PM29
+  summary: Reviewed PM29; no merge.
+  rationale: No other theme captures the same causal process of bundled contracting reducing transaction costs under market
+    imperfections; superficially related governance themes describe cost increases from complexity rather than
+    cost reductions from bundling.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM29
+- change_id: CHG_430
+  change_type: no_change
+  theme_id: PM31
+  summary: Reviewed PM31; no merge.
+  rationale: No other theme captures the same causal process of labour-rent protection motivating union opposition to
+    offsets; related political-economy themes address other distributive conflicts rather than organised
+    labour’s rent-defense mechanism.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM31
+- change_id: CHG_431
+  change_type: no_change
+  theme_id: PM32
+  summary: Reviewed PM32; no merge.
+  rationale: No other theme captures the same causal process of offset-induced competition redistributing rents between
+    firms and buyers; related themes discuss broader sectoral harms or allocation distortions rather than this
+    buyer–firm surplus shift.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM32
+- change_id: CHG_432
+  change_type: no_change
+  theme_id: PM37
+  summary: Reviewed PM37; no merge.
+  rationale: No other theme captures the same causal process of expanded export/buyer pools shifting agencies from
+    restraint toward facilitation; related themes address economic framing or security urgency but not this
+    organisational shift toward permissiveness.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM37
+- change_id: CHG_433
+  change_type: no_change
+  theme_id: PM40
+  summary: Reviewed PM40; no merge.
+  rationale: No other theme captures the same causal process of offsets accelerating next-generation development through
+    early development participation; related themes cover collaboration generally but not acceleration of
+    frontier development timelines.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM40
+- change_id: CHG_434
+  change_type: no_change
+  theme_id: PM41
+  summary: Reviewed PM41; no merge.
+  rationale: No other theme captures the same causal process of economic priorities overriding security restraint and
+    weakening arms-control functions; related themes address security urgency or procurement legitimation
+    rather than institutional arms-control weakening.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM41
+- change_id: CHG_435
+  change_type: no_change
+  theme_id: PM42
+  summary: Reviewed PM42; no merge.
+  rationale: No other theme captures the same causal process of offsets increasing defence budget appeal in budget
+    competition and potentially increasing purchases; related legitimation themes focus on acceptability, not
+    budget-competition dynamics.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM42
+- change_id: CHG_436
+  change_type: no_change
+  theme_id: PM43
+  summary: Reviewed PM43; no merge.
+  rationale: No other theme captures the same causal process of opacity weakening cost-minimisation incentives and cost
+    discipline in procurement; related opacity themes address price discrimination or bargaining uncertainty,
+    not procurement cost discipline.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM43
+- change_id: CHG_437
+  change_type: no_change
+  theme_id: PM44
+  summary: Reviewed PM44; no merge.
+  rationale: No other theme captures the same causal process of offsets helping primes preserve market power via expanded
+    markets and trade-rule exemptions; related competition or pricing themes do not capture this industry-
+    level collective incentive.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM44
+- change_id: CHG_438
+  change_type: no_change
+  theme_id: PM45
+  summary: Reviewed PM45; no merge.
+  rationale: No other theme captures the same causal process of security urgency/treaty quid-pro-quo crowding out offset
+    aims and leading to off-the-shelf procurement; related themes focus on economic priorities or offset
+    bargaining rather than urgency-driven de-emphasis.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM45
+- change_id: CHG_439
+  change_type: no_change
+  theme_id: PM47
+  summary: Reviewed PM47; no merge.
+  rationale: No other theme captures the same causal process of opacity and bargaining producing uncertainty in offset
+    delivery and valuation; related opacity themes focus on cost discipline or market pricing rather than
+    bargaining-driven uncertainty.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM47
+- change_id: CHG_440
+  change_type: no_change
+  theme_id: PM48
+  summary: Reviewed PM48; no merge.
+  rationale: No other theme captures the same causal process of institutional path dependence shaping how offsets are
+    perceived and operationalised; related themes address specific interest-group pressures but not cross-
+    historical policy trajectories.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM48
+- change_id: CHG_441
+  change_type: no_change
+  theme_id: PM49
+  summary: Reviewed PM49; no merge.
+  rationale: No other theme captures the same causal process of second-best import offset rules emerging from asymmetric
+    openness/protectionism; related themes cover value-for-money design rather than structural trade
+    asymmetry.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM49
+- change_id: CHG_442
+  change_type: no_change
+  theme_id: PM50
+  summary: Reviewed PM50; no merge.
+  rationale: No other theme captures the same causal process of designing offset requirements to protect value-for-money
+    (scope, novelty, technical equivalence, no additional cost); related themes focus on evaluation
+    uncertainty rather than design constraints.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM50
+- change_id: CHG_443
+  change_type: no_change
+  theme_id: PM51
+  summary: Reviewed PM51; no merge.
+  rationale: No other theme captures the same causal process of reciprocity pressures and supply-chain risk shaping offset
+    types; related themes address trade restriction or procurement structures rather than reciprocity-driven
+    risk management.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM51
+- change_id: CHG_444
+  change_type: no_change
+  theme_id: PM53
+  summary: Reviewed PM53; no merge.
+  rationale: No other theme captures the same causal process of embedding offsets via procurement structures
+    (cartels/consortia) without explicit policy; related themes concern compliance regimes or export support
+    rather than structural embedding.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM53
+- change_id: CHG_445
+  change_type: no_change
+  theme_id: PM55
+  summary: Reviewed PM55; no merge.
+  rationale: No other theme captures the same causal process of subsidiary entry enabling capability build-up followed by
+    consolidation; related themes address collaboration or networks rather than this entry–consolidation
+    trajectory.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM55
+- change_id: CHG_446
+  change_type: no_change
+  theme_id: PM56
+  summary: Reviewed PM56; no merge.
+  rationale: No other theme captures the same causal process of fair-return (juste retour) reform improving collaborative
+    efficiency via global-balance arrangements; related themes cover partnership packages but not return-rule
+    reform.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM56
+- change_id: CHG_447
+  change_type: no_change
+  theme_id: PM57
+  summary: Reviewed PM57; no merge.
+  rationale: No other theme captures the same causal process of export-support organisations building firms’ capacity to
+    navigate offsets and identify creditable projects; related themes describe export outcomes rather than
+    capability-building support.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM57
+- change_id: CHG_448
+  change_type: no_change
+  theme_id: PM58
+  summary: Reviewed PM58; no merge.
+  rationale: No other theme captures the same causal process of multi-layer governance and non-competitive work splitting
+    raising transaction costs and blurring accountability; related transaction-cost themes describe cost
+    reductions from bundling, not governance frictions.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM58
+- change_id: CHG_449
+  change_type: merge
+  theme_id: PM52
+  summary: Merged PM59 into PM52.
+  rationale: PM59’s mechanism concerns additionality being undermined by what counts as credit; PM52 already captures
+    additionality shaped by credit rules and is the clearer canonical theme.
+  details:
+    merged_from: [PM59]
+    merged_into: PM52
+    reviewed_theme_id: PM59
+- change_id: CHG_450
+  change_type: merge
+  theme_id: PM39
+  summary: Merged PM60 into PM39.
+  rationale: PM60’s mechanism is already captured within PM39, so PM60 adds no distinct causal logic beyond the existing
+    theme content.
+  details:
+    merged_from: [PM60]
+    merged_into: PM39
+    reviewed_theme_id: PM60
+- change_id: CHG_451
+  change_type: merge
+  theme_id: PM34
+  summary: Merged PM61 into PM34.
+  rationale: PM61’s mechanism is already captured within PM34, so PM61 adds no distinct causal logic beyond the existing
+    theme content.
+  details:
+    merged_from: [PM61]
+    merged_into: PM34
+    reviewed_theme_id: PM61
+- change_id: CHG_452
+  change_type: no_change
+  theme_id: PM62
+  summary: Reviewed PM62; no merge.
+  rationale: No other theme captures the same causal process of early partnership enabling access to high-technology roles
+    under best-value allocation and export-control constraints; related themes focus on dependence harms or
+    generic collaboration.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM62
+- change_id: CHG_453
+  change_type: no_change
+  theme_id: PM63
+  summary: Reviewed PM63; no merge.
+  rationale: No other theme captures the same causal process of partnership structure shaping risk exposure (win–lose vs
+    hedged participation); related themes address collaboration durability rather than risk allocation.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM63
+- change_id: CHG_454
+  change_type: no_change
+  theme_id: PM64
+  summary: Reviewed PM64; no merge.
+  rationale: No other theme captures the same causal process of contractor-provided IP studies acting as biased marketing
+    signals; related evaluation themes focus on disclosure constraints or counterfactual uncertainty, not
+    marketing bias.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM64
+- change_id: CHG_455
+  change_type: no_change
+  theme_id: PM65
+  summary: Reviewed PM65; no merge.
+  rationale: No other theme captures the same causal process of partnership packages linking defence and non-defence
+    opportunities to build durable collaboration beyond offset percentages; related themes cover access to
+    high-tech roles rather than durability-building packages.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM65
+- change_id: CHG_456
+  change_type: merge
+  theme_id: PM2
+  summary: Merged PM67 into PM2.
+  rationale: PM67 duplicates a mechanism already represented under PM2’s compliance/monitoring framing, making PM67
+    redundant.
+  details:
+    merged_from: [PM67]
+    merged_into: PM2
+    reviewed_theme_id: PM67
+- change_id: CHG_457
+  change_type: merge
+  theme_id: PM2
+  summary: Merged PM68 into PM2.
+  rationale: PM68 duplicates a mechanism already represented under PM2’s compliance/monitoring framing, making PM68
+    redundant.
+  details:
+    merged_from: [PM68]
+    merged_into: PM2
+    reviewed_theme_id: PM68
+- change_id: CHG_458
+  change_type: merge
+  theme_id: PM2
+  summary: Merged PM69 into PM2.
+  rationale: PM69 duplicates a mechanism already represented under PM2’s compliance/monitoring framing, making PM69
+    redundant.
+  details:
+    merged_from: [PM69]
+    merged_into: PM2
+    reviewed_theme_id: PM69
+- change_id: CHG_459
+  change_type: merge
+  theme_id: PM15
+  summary: Merged PM70 into PM15.
+  rationale: PM70 duplicates a mechanism already represented under PM15’s flexibility/mandate framing, making PM70
+    redundant.
+  details:
+    merged_from: [PM70]
+    merged_into: PM15
+    reviewed_theme_id: PM70
+- change_id: CHG_460
+  change_type: merge
+  theme_id: PM15
+  summary: Merged PM71 into PM15.
+  rationale: PM71 duplicates a mechanism already represented under PM15’s flexibility/mandate framing, making PM71
+    redundant.
+  details:
+    merged_from: [PM71]
+    merged_into: PM15
+    reviewed_theme_id: PM71
+- change_id: CHG_461
+  change_type: merge
+  theme_id: PM2
+  summary: Merged PM72 into PM2.
+  rationale: PM72 duplicates a mechanism already represented under PM2’s compliance/monitoring framing, making PM72
+    redundant.
+  details:
+    merged_from: [PM72]
+    merged_into: PM2
+    reviewed_theme_id: PM72
+- change_id: CHG_462
+  change_type: merge
+  theme_id: PM15
+  summary: Merged PM73 into PM15.
+  rationale: PM73 duplicates a mechanism already represented under PM15’s flexibility/mandate framing, making PM73
+    redundant.
+  details:
+    merged_from: [PM73]
+    merged_into: PM15
+    reviewed_theme_id: PM73
+- change_id: CHG_463
+  change_type: no_change
+  theme_id: PM74
+  summary: Reviewed PM74; no merge.
+  rationale: No other theme captures the same causal process of disclosure constraints (data access and vested interests)
+    obscuring evaluation; related evaluation themes focus on objective ambiguity or heterogeneity rather than
+    disclosure barriers.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM74
+- change_id: CHG_464
+  change_type: no_change
+  theme_id: PM75
+  summary: Reviewed PM75; no merge.
+  rationale: No other theme captures the same causal process of counterfactual uncertainty undermining additionality
+    assessment; related additionality themes focus on credit rules rather than the inherent counterfactual
+    problem.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM75
+- change_id: CHG_465
+  change_type: merge
+  theme_id: PM3
+  summary: Merged PM76 into PM3.
+  rationale: PM76’s mechanism describes price increases driven by compliance/penalty risk and administrative burden, which
+    is a specific instance of cost pass-through captured by PM3.
+  details:
+    merged_from: [PM76]
+    merged_into: PM3
+    reviewed_theme_id: PM76
+- change_id: CHG_466
+  change_type: no_change
+  theme_id: PM78
+  summary: Reviewed PM78; no merge.
+  rationale: No other theme captures the same causal process of offset-generated exports concentrating in incumbents and
+    limiting SME/job gains; related themes describe export-support capacity-building rather than concentration
+    outcomes.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM78
+- change_id: CHG_467
+  change_type: merge
+  theme_id: PM52
+  summary: Merged PM79 into PM52.
+  rationale: PM79 duplicates a mechanism already represented under PM52’s additionality-focused framing, making PM79
+    redundant.
+  details:
+    merged_from: [PM79]
+    merged_into: PM52
+    reviewed_theme_id: PM79
+- change_id: CHG_468
+  change_type: no_change
+  theme_id: PM80
+  summary: Reviewed PM80; no merge.
+  rationale: No other theme captures the same causal process of firm-level gains coexisting with weak national net benefit
+    and misalignment with policy goals; related distributive themes discuss rent shifts but not firm-vs-
+    national divergence.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM80
+- change_id: CHG_469
+  change_type: no_change
+  theme_id: PM81
+  summary: Reviewed PM81; no merge.
+  rationale: No other theme captures the same causal process of using indirect offsets to extend industrial activity beyond
+    a program’s life; related themes address sourcing persistence under obligations rather than deliberate
+    extension via indirect offsets.
+  details:
+    merged_from: []
+    merged_into: null
+    reviewed_theme_id: PM81
+```
