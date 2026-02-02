@@ -1,0 +1,245 @@
+demi_regularities_by_theme:
+  - theme_id: "PM17"
+    theme_label: "Administrative burden and rent-seeking"
+    mechanism_explanation: "Offset regimes can generate administrative burdens and rent-seeking, including proposal overload, superficial evaluation criteria, and discretionary behaviour that raises costs without improving transfer outcomes."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_007"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_012"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_024"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_008"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_010"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_007"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_014"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_007"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_015"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_015"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_003"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_004"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_009"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_010"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_012"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_018"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_011"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_022"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_023"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_006"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_018"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_019"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_021"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_022"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_023"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_024"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_001"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_002"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_004"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_007"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_013"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_016"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_018"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_023"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_027"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_028"
+      - "01_introduction_and_overview_pdf__cmo_003"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_010"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_016"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_003"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_012"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_009"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_010"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_012"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_005"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_038"
+      - "14_us_offset_policy_pdf__cmo_005"
+      - "14_us_offset_policy_pdf__cmo_010"
+      - "14_us_offset_policy_pdf__cmo_012"
+      - "14_us_offset_policy_pdf__cmo_018"
+      - "14_us_offset_policy_pdf__cmo_019"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_003"
+      - "16_concluding_remarks_pdf__cmo_006"
+      - "16_concluding_remarks_pdf__cmo_007"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM17_DR_01"
+        statement: "In contexts where procurement markets already function with low exchange hazard and offsets require substantial monitoring and transaction work, the administrative-burden-and-rent-seeking mechanism tends to yield higher deal overhead and lower welfare/net benefit."
+        context_conditions:
+          - "Markets for low-technology procurement operate with complete information and low exchange hazard."
+          - "Offsets impose management, monitoring, legal, travel, and communications work inside firms and agencies."
+          - "Large, diversified offset packages increase monitoring intensity and management burden."
+        outcome_tendencies:
+          - "Offsets add significant overhead costs to procurement/arms sales."
+          - "Net benefits and welfare fall relative to simpler market exchange or procurement arrangements."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_007"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_008"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_016"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_006"
+            quote: "Employing offsets in a perfectly functioning market tends to reduce welfare"
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_007"
+            quote: "currently running between 7 and 10 percent of the value of the arms sale"
+        moderators:
+          - condition: "Raising minimum thresholds so offsets are not required on small contracts reduces the number of low-value cases to administer."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "03_the_defence_offsets_policy_in_australia_pdf__cmo_010"
+              - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_018"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs across jurisdictions and synthesis chapters converge that offsets impose non-trivial administrative/transaction costs (often quantified) and that these costs can reduce net welfare when markets already function efficiently."
+      - demi_regularity_id: "PM17_DR_02"
+        statement: "In contexts where offset regimes are broad, flexible, and dominated by many heterogeneous proposals requiring case-by-case screening, the administrative-burden-and-rent-seeking mechanism tends to yield proposal overload, superficial evaluation, and eventual avoidance or scaling back of such offset forms."
+        context_conditions:
+          - "Mandatory or flexible regimes generate large volumes of offset proposals and incremental submissions."
+          - "Eligibility and additionality criteria are ambiguous and require administrative judgement on each proposal."
+          - "Large packages and long horizons amplify disputes over what counts and how to value it."
+        outcome_tendencies:
+          - "Administrative capacity is overwhelmed; a substantial share of proposals are rejected after review."
+          - "Evaluation criteria drift toward easy-to-score proxies (e.g., workload/jobs) and 'artificial' projects that meet targets."
+          - "Policy shifts away from onerous indirect-commercial offsets, or drops/reduces offset requirements to speed procurement."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_009"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_010"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_012"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_008"
+          - "16_concluding_remarks_pdf__cmo_006"
+          - "16_concluding_remarks_pdf__cmo_007"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_038"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_013"
+            quote: "Sellers inundated procurement officials with thousands of offset proposals."
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_009"
+            quote: "Indirect commercial offsets thus appeared as the main cause of an onerous management overhead"
+        moderators:
+          - condition: "Avoiding indirect commercial offsets (or narrowing the eligible scope) reduces screening burdens."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_009"
+          - condition: "Raising the offsets trigger threshold reduces administratively costly, low-value obligations."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "03_the_defence_offsets_policy_in_australia_pdf__cmo_010"
+              - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_018"
+        boundary_conditions:
+          - condition: "For very large indirect offset packages, agreeing a full offset work package in advance is not practical even if it could reduce disputes."
+            supporting_cmo_ids:
+              - "16_concluding_remarks_pdf__cmo_007"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs provide consistent evidence that broad, proposal-heavy and indirect-commercial offset forms create administrative overload, interpretive disputes, and reversion to superficial criteria, with documented policy moves to narrow, avoid, or drop such requirements."
+      - demi_regularity_id: "PM17_DR_03"
+        statement: "In contexts where offset allocation rules create discretion and distributable rents (across firms, regions, or tiers of suppliers), the administrative-burden-and-rent-seeking mechanism tends to yield lobbying, politicised allocation, and governance risks rather than improved transfer outcomes."
+        context_conditions:
+          - "Variable offset policies create discretion between price and offset content."
+          - "Offsets create protected rents for domestic firms/regions and require explicit partitioning across competing groups."
+          - "Compliance governance is concentrated in a dominant actor (e.g., a local prime), or procurement operates with secrecy and commission-driven bargaining."
+        outcome_tendencies:
+          - "Heavy lobbying and overprotection of national enterprises; inefficient capacities persist and restructuring is inhibited."
+          - "Offset work and benefits are steered to satisfy regional/political constraints rather than industrial coherence."
+          - "Corruption vulnerabilities and political fallout (investigations, legitimacy challenges) disrupt or delegitimate offset/technology-transfer components."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_010"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_014"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_007"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_011"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_007"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_003"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_012"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_021"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_022"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_023"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_015"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_015"
+          - "14_us_offset_policy_pdf__cmo_018"
+          - "14_us_offset_policy_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011"
+            quote: "A policy of variable offsets is susceptible to higher levels of rent-seeking than a policy of mandatory offsets"
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_014"
+            quote: "each contract for defense includes an explicit regional partition of offsets"
+        moderators:
+          - condition: "Strict mandatory trigger rules constrain discretion between price and content, reducing some rent-seeking pressures."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_011"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Supported by multiple CMOs linking discretion and distributable rents to lobbying, politicised partitioning, corruption vulnerabilities, and governance fallout, including both conceptual mechanisms and country cases."
+      - demi_regularity_id: "PM17_DR_04"
+        statement: "In contexts where offset programmes have ambiguous valuation standards, weak performance metrics, and limited disclosure, the administrative-burden-and-rent-seeking mechanism tends to yield contested claims and an inability to credibly evaluate whether offsets deliver net benefits or progress toward objectives."
+        context_conditions:
+          - "Offsets are commercially sensitive and politically contentious, limiting disclosure and data availability."
+          - "Recipients and administrators struggle to value transferred technology, especially where no clear market price exists."
+          - "Monitoring systems lack agreed outcomes/outputs or consistent criteria, and reporting is incomplete."
+        outcome_tendencies:
+          - "Net benefits cannot be assessed; delivery narratives remain contested."
+          - "Procurement and negotiation are complicated by valuation disputes and uncertainty."
+          - "Audiences (auditors/parliament/analysts) cannot confirm whether policy is making progress toward stated objectives."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_003"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_012"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_024"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_022"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_023"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_019"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_007"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_027"
+          - "16_concluding_remarks_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_022"
+            quote: "Defence had no agreed outcomes or outputs to be achieved"
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_019"
+            quote: "net benefits cannot be assessed."
+        moderators:
+          - condition: "Independent auditing and more sophisticated monitoring (including accounting for hidden environmental/infrastructure costs) strengthens evaluability and constrains over-optimistic claims."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_027"
+              - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_007"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs show convergent barriers to evaluability (confidentiality, valuation ambiguity, weak metrics, incomplete reporting) and directly report the consequence that net benefits and progress cannot be credibly assessed."
+      - demi_regularity_id: "PM17_DR_05"
+        statement: "In contexts where offset-related responsibilities create awkward administrative and political liabilities for the state, the administrative-burden-and-rent-seeking mechanism tends to yield institutional avoidance (withdrawal, stonewalling, or shifting responsibility) rather than expanded public backstopping of offset commitments."
+        context_conditions:
+          - "Government is expected to backstop or intervene to help fulfil private offset commitments."
+          - "Offset-related actions interact with trade restrictions, producing administrative/political friction."
+          - "New reporting/notification requirements are perceived as redundant or burdensome by responsible agencies."
+        outcome_tendencies:
+          - "Government withdraws from guarantor/back-up roles and shifts responsibility to the contracting firm."
+          - "Agencies resist implementing reporting requirements (e.g., by not issuing required regulations)."
+        supporting_cmo_ids:
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_010"
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_012"
+          - "14_us_offset_policy_pdf__cmo_005"
+          - "14_us_offset_policy_pdf__cmo_010"
+          - "14_us_offset_policy_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_005"
+            quote: "removing the US government from any back-up role."
+          - cmo_id: "14_us_offset_policy_pdf__cmo_010"
+            quote: "DoD has simply \"stonewalled\" on this issue"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "The tendency is directly documented via multiple CMOs describing US policy moves to avoid governmental offset liabilities (Duncan Memorandum stance) and to resist implementing new offset-reporting requirements."
+    theme_notes:
+      - "Coverage: all 57 PM17 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The evidence base spans conceptual arguments, audit findings, and country cases; several outcomes emphasize governance/evaluability rather than downstream industrial performance."
+      - "Next step: when writing PM17 up, separate 'administrative burden/cost' from 'rent-seeking/corruption' sub-patterns to keep the causal logic tight."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM17.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"
