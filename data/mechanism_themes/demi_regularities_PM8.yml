@@ -1,0 +1,199 @@
+demi_regularities_by_theme:
+  - theme_id: "PM8"
+    theme_label: "Transferability and contextual fit"
+    mechanism_explanation: "Spillovers hinge on transferability and fit: military-origin skills/technologies often mismatch civilian contexts, and careful selection and implementation reduce adaptation failures and costs."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_014"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_017"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_018"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_019"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_015"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_006"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_020"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_008"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_010"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_007"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_012"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_013"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_014"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_019"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_026"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_032"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_033"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_008"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_010"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_016"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_018"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_020"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM8_DR_01"
+        statement: "In contexts where programme aims rely on military-to-civilian spillovers and the receiving economy is cost-sensitive, transferability and contextual fit tends to yield limited development gains because military-oriented skills and technologies require costly reshaping to fit civilian production needs."
+        context_conditions:
+          - "Direct offsets place workers in performance-driven, relatively cost-insensitive military production settings."
+          - "Civilian sectors face stronger cost constraints and require different routines and supporting capabilities."
+          - "Spillover expectations assume military technologies and skills will translate into civilian competitiveness."
+        outcome_tendencies:
+          - "Skills acquired through military production transfer poorly to civilian production without costly adaptation."
+          - "Pursuing civilian technology directly is framed as more cost-effective than relying on military spillovers."
+          - "Development benefits from direct-offset technology transfer are unlikely to be efficient."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_014"
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_014"
+            quote: "Not all skills relevant to performance-driven... military-oriented production are easily transferable"
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_017"
+            quote: "It is almost always much more cost effective to go after civilian technology directly"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence CMOs explicitly argue that military-origin skills/technologies often mismatch civilian cost-sensitive contexts and require costly reshaping, making spillover-based development gains inefficient."
+      - demi_regularity_id: "PM8_DR_02"
+        statement: "In contexts where imported technologies presume complementary utilities, maintenance capacity, and supporting systems that are absent locally, transferability and contextual fit tends to yield low or null spillover impacts because the transferred technology is incompatible with the receiving environment."
+        context_conditions:
+          - "Technologies are designed for mature industrial contexts with reliable utilities, supporting technologies, and maintenance ecosystems."
+          - "Receiving environments lack compatible infrastructure, supporting inputs, or maintenance/repair capacity."
+        outcome_tendencies:
+          - "Transferred technologies fail to function effectively or integrate into productive systems."
+          - "Technology transfer via offsets yields little or no positive development impact."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_018"
+            quote: "no guarantee that the technology will have any positive impact on the receiving country’s economy"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO directly attributes weak impacts to incompatibility with local complementary infrastructure and maintenance ecosystems."
+      - demi_regularity_id: "PM8_DR_03"
+        statement: "In contexts where technology transfer is pursued through indirect offsets with careful selection and implementation for local compatibility, transferability and contextual fit tends to yield more usable and development-relevant technology transfer than direct offsets."
+        context_conditions:
+          - "Technology transfer is structured as indirect offsets rather than embedded in direct military production."
+          - "Transferred technologies are selected for compatibility with local context and implemented with attention to usability."
+        outcome_tendencies:
+          - "Technology transfer is more likely to be usable in the receiving economy and produce positive benefits."
+          - "Indirect offsets are asserted to have higher likelihood of positive impacts than direct offsets when properly designed."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_019"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_019"
+            quote: "Properly designed indirect offsets have a higher likelihood of transferring technologies"
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+            quote: "No offset proposal should ever be considered \"generic,\""
+        moderators:
+          - condition: "Tailoring proposals to local industrial capabilities and priorities increases feasibility and credibility of the transfer package."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence evidence explicitly favors carefully designed indirect offsets, and practitioner guidance reinforces that non-generic, locally tailored designs improve contextual fit."
+      - demi_regularity_id: "PM8_DR_04"
+        statement: "In contexts where suppliers fear creating competitors and states apply security/political restrictions, transferability and contextual fit tends to yield limited, dated, or black-boxed technology transfer that constrains learning and sustains recipient dependence."
+        context_conditions:
+          - "Suppliers anticipate that technology transfer can stimulate competitor development."
+          - "Export controls, security concerns, or geopolitical pressures constrain what can be released."
+          - "Vendors use IP/legal barriers, black-boxing, or joint-venture control to manage risk."
+        outcome_tendencies:
+          - "Transferred technologies are older, incomplete, or restricted in ways that limit deeper learning."
+          - "Recipients remain dependent on foreign technology, with added costs or constrained autonomy."
+          - "Negotiations become contested and more complex as capability gaps and competitive fears intensify."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_015"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_008"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_020"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_006"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_010"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_007"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_026"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_020"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_032"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_015"
+            quote: "American offset-related technology in 85 percent of the cases was over 10 years old"
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_010"
+            quote: "key, advanced technologies — the “good stuff’ — are withheld, thwarting further development."
+        moderators:
+          - condition: "When providers use majority-owned joint ventures or transfer 'yesterday's technology' they reduce competitive risk while still meeting obligations."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "13_the_uk_experience_with_offsets_pdf__cmo_020"
+          - condition: "Political constraints (e.g., related to third-party opposition) can further limit capability release even where sales proceed."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_020"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high- and medium-confidence CMOs across supplier, policy, and country-case contexts converge that fears of competitor creation and security/geopolitical controls drive restricted transfer (older tech, black boxes, withheld core technologies), sustaining dependence."
+      - demi_regularity_id: "PM8_DR_05"
+        statement: "In contexts where recipients are capable enough to respond to technology denial and where transfer restrictions are salient, transferability and contextual fit tends to yield indigenous substitution and negotiation cycles as buyers invest in domestic R&D or shift plans to match what can feasibly be obtained."
+        context_conditions:
+          - "Recipients seek frontier technologies but face denial or black-boxing in key subsystems (including software)."
+          - "Domestic institutions and firms have sufficient capability to pursue indigenous alternatives or reorient R&D when access changes."
+        outcome_tendencies:
+          - "Recipients develop domestic substitutes when denied access to key technologies."
+          - "Improved access or licensing can redirect R&D focus and reshape the trajectory of indigenisation."
+          - "Offset arrangements become more complex and politically contested as parity and competitive fears rise."
+        supporting_cmo_ids:
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_007"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_014"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_019"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_033"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_012"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_007"
+            quote: "The US 'black-boxing' of F-15"
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_033"
+            quote: "resulted in the AAM-1"
+        moderators:
+          - condition: "Security-driven withholding of software and sensitive data constrains co-production learning and increases substitution incentives."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_026"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A coherent set of high-confidence Japan CMOs traces denial/black-boxing, contested transfer, and subsequent indigenous substitution or shifting licensing pathways, consistent with contextual fit and transferability constraints shaping trajectories."
+      - demi_regularity_id: "PM8_DR_06"
+        statement: "In contexts where offset work packages are limited to low-technology manufacturing or where indigenous design still relies on foreign subsystems, transferability and contextual fit tends to yield partial capability gains that stop short of full autonomy and higher-level technology upgrading."
+        context_conditions:
+          - "Prime contractors allocate local work that is not highly technologically demanding."
+          - "Indigenous design initiatives proceed but depend heavily on foreign components/subsystems."
+        outcome_tendencies:
+          - "Local manufacturing participation occurs but yields limited high-tech upgrading."
+          - "Indigenous design capability can advance, but dependence persists due to imported subsystems."
+        supporting_cmo_ids:
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_010"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_008"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_010"
+            quote: "these are not overly high-tech manufacturing operations."
+          - cmo_id: "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_008"
+            quote: "designed and manufactured entirely in Indonesia, but still using a large number of foreign components"
+        moderators:
+          - condition: "Providers can intentionally sequence offsets from assembly to design while keeping conceptual R&D protected, shaping which capabilities are transferable at each stage."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "10_the_teeth_of_little_tigers_pdf__cmo_018"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports partial gains (low-tech task allocation; indigenous design with foreign subsystems), but one key sequencing claim is low-confidence and some outcomes are descriptive rather than directly traced to measurable upgrading."
+    theme_notes:
+      - "Coverage: all 22 PM8 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence clusters into (a) poor transferability of military-origin skills/tech to civilian sectors, (b) compatibility with local complementary infrastructure, and (c) supplier/political/security constraints shaping what is transferable."
+      - "Several CMOs are prescriptive (e.g., recommended sequencing) or conceptual; keep confidence conservative where outcomes are not directly observed."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM8.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,237 @@
+demi_regularities_by_theme:
+  - theme_id: "PM54"
+    theme_label: "Technology acquisition via licensed production"
+    mechanism_explanation: "Licensed production and collaboration are used to acquire technology and build dual-use capacity, accepting higher costs when transfer benefits are prioritised."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_007"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_001"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_001"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_002"
+      - "01_introduction_and_overview_pdf__cmo_009"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_005"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_006"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_007"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_001"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_003"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_004"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_001"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_016"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_002"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_013"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_001"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_002"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_003"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_004"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_005"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_006"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_009"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_011"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_015"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_022"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_023"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_025"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_028"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_029"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_030"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_003"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_030"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_032"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM54_DR_01"
+        statement: "In contexts where states prioritize technological autonomy and security of supply, technology acquisition via licensed production tends to yield domestic production capability and know-how accumulation even when local production is more expensive than direct import."
+        context_conditions:
+          - "National goals emphasize autonomy, self-reliance, and security of supply for defense equipment."
+          - "Licensing/collaboration is selected as the primary pathway for technology transfer rather than relying on off-the-shelf imports."
+          - "Policymakers are willing to accept price and delivery-time premia for domestic involvement."
+        outcome_tendencies:
+          - "Domestic manufacturing capability expands through learning-by-doing under license."
+          - "A more self-reliant defense industrial base develops alongside increased security-of-supply confidence."
+          - "Significant cost premia can be incurred relative to direct purchase."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_009"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_001"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_003"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_029"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_030"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_009"
+            quote: "Japan required a local ability to research, innovate, design and manufacture. Hence offsets have taken the form of licensed production."
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_030"
+            quote: "55 to 80 per cent more by producing the Patriot"
+        moderators:
+          - condition: "Alliance uncertainty and perceived risk of dependence increases political support for paying premiums for domestic capability."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_006"
+        boundary_conditions:
+          - condition: "Where full independence is unattainable, sustainable strategies require accepting some technological dependence and negotiating for targeted transfer."
+            supporting_cmo_ids:
+              - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013"
+        counterexamples:
+          - cmo_id: "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_013"
+            note: "Argues full independence is unrealistic and that accepting some dependence may be necessary for a feasible strategy."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs explicitly link autonomy/security goals to choosing licensed production and accepting significant cost premia, while also documenting a clear boundary that full independence may be unattainable."
+      - demi_regularity_id: "PM54_DR_02"
+        statement: "In contexts where governments frame offsets around technology transfer rather than jobs or balance-of-trade, technology acquisition via licensed production tends to yield deeper know-how transfer, process upgrading, and (sometimes) frontier approach in selected sectors, with uneven commercial performance."
+        context_conditions:
+          - "Policy and procurement requirements explicitly prioritize technology transfer as the key offset deliverable."
+          - "Licensed production, coproduction, and joint ventures are used as direct channels for acquiring military technology."
+          - "Domestic firms focus on core/high-value competencies rather than attempting full component nationalization."
+        outcome_tendencies:
+          - "Expanded capability across stages of the technology ladder and autonomy in selected core capabilities."
+          - "Mixed commercial/market outcomes despite technological upgrading."
+        supporting_cmo_ids:
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_001"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_002"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015"
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_007"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_002"
+            quote: "in Brazil the promise of technology transfer was central"
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015"
+            quote: "concentrated on “key technologies” such as fuselage and systems integration"
+        moderators:
+          - condition: "Selective focus on key technologies avoids inefficient full localization while preserving autonomy in high-value areas."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_015"
+        boundary_conditions:
+          - condition: "Technology-transfer offsets can be undermined by overpricing or limited implementation, diluting the net value of the transfer."
+            supporting_cmo_ids:
+              - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016"
+        counterexamples:
+          - cmo_id: "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016"
+            note: "Technology assistance is intended but criticized as potentially offset by higher effective acquisition costs."
+        confidence: "high"
+        confidence_justification: "Evidence across Brazil and comparative accounts supports the technology-transfer framing and selective capability-building logic, while also documenting a concrete boundary where pricing/implementation can erode value."
+      - demi_regularity_id: "PM54_DR_03"
+        statement: "In contexts where licensed production agreements are paired with staged localization and workforce training, technology acquisition via licensed production tends to yield progressive increases in local content and domestic industrial-capacity expansion over time."
+        context_conditions:
+          - "Offsets include training, assembly, parts manufacture, and transfer of production lines/know-how."
+          - "Localization is staged (initial assembly/kit work moving toward deeper manufacture)."
+          - "Domestic firms invest in facilities, equipment, and hiring to execute work packages."
+        outcome_tendencies:
+          - "Local content rises materially across years as production is localized."
+          - "Domestic facilities and employment expand as prerequisites for co-production delivery."
+        supporting_cmo_ids:
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_013"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014"
+        anchor_quotes:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_017"
+            quote: "local content to grow from about 1 percent in the first year to nearly 53 percent in 2010"
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_013"
+            quote: "procurement of advanced mechanical equipment and the hiring of 675 people"
+        moderators:
+          - condition: "Domestic budgetary leadership and governance of the program can preserve export flexibility while embedding transfers."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_014"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs provide concrete, process-traceable accounts of staged localization via training/production-line transfer leading to rising local content and capacity expansion."
+      - demi_regularity_id: "PM54_DR_04"
+        statement: "In contexts where imported systems create dependence and offsets are targeted to lifecycle support, technology acquisition via licensed production tends to yield domestic maintenance/modification capability and sustainment infrastructure that improves readiness and security of supply."
+        context_conditions:
+          - "Dependence on external suppliers for sustainment/modification is a salient risk."
+          - "Offsets are defined as defense-relevant directed business (maintenance capability, technology transfers, training, joint ventures, exports support)."
+          - "Policy steers offsets toward defense-technology competence and sustainment skills (often away from civil offsets)."
+        outcome_tendencies:
+          - "Domestic maintenance and modification competence is strengthened for imported systems."
+          - "Maintenance centers and MRO ventures are established and undertake previously external overhaul work domestically."
+          - "Broader defense technological competence is sustained in prioritized fields."
+        supporting_cmo_ids:
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_016"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_018"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_004"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_032"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_009"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_015"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_014"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_015"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_016"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_017"
+            quote: "The main objective of direct military offsets is to support domestic maintenance and modification"
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_021"
+            quote: "the establishment of a maintenance center for the 60 Mirage 2000–5 fighters"
+        moderators:
+          - condition: "Selective use of offsets aligned to strategic sustainment needs (rather than comprehensive autarky) concentrates resources on readiness-relevant capabilities."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_013"
+          - condition: "When programs are judged ill-focused, shifting from generic offsets to more specific contractual provisions can preserve capability targeting while reducing blunt offset mechanisms."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_005"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A broad set of CMOs across Sweden/Finland, Nordic policy, Taiwan, Saudi ventures, Australia/New Zealand, Singapore, and Brazil converge that licensing/transfer targeted to sustainment yields concrete MRO infrastructure and maintenance/modification competence."
+      - demi_regularity_id: "PM54_DR_05"
+        statement: "In contexts where suppliers fear creating future competitors and technology transfers are politically contested, technology acquisition via licensed production tends to yield both capability gains for recipients and criticism about higher acquisition costs and competitive spillovers."
+        context_conditions:
+          - "Recipients seek greater independence and are potential economic competitors."
+          - "Offsets and technology transfers enable domestic substitutes and spillover into commercial industry."
+          - "Technology assistance packages are embedded in major purchases and may be perceived as overpriced."
+        outcome_tendencies:
+          - "Recipients acquire know-how and can develop domestic substitutes."
+          - "Offsets/technology transfers draw criticism for shifting employment abroad and increasing acquisition costs."
+        supporting_cmo_ids:
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_030"
+        anchor_quotes:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_002"
+            quote: "offset agreements... have assisted local industry in developing domestic weapons substitutes"
+          - cmo_id: "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_016"
+            quote: "were meant as technological assistance to India to develop its Light Combat Aircraft (LCA)"
+        moderators:
+          - condition: "When the recipient’s rearmament or security role is strategically important, allies are more willing to accept licensing/collaboration terms to support capability development."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "07_comparing_british_and_german_offset_strategies_pdf__cmo_007"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "CMOs explicitly document both sides of the mechanism: technology-transfer offsets enable domestic substitutes and can be seen as raising costs, while strategic importance (e.g., rearmament priorities) can increase allied willingness to license/collaborate."
+    theme_notes:
+      - "Coverage: all 52 PM54 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The evidence strongly clusters into (a) autonomy/security-of-supply via licensed production, (b) staged localization and capacity build-up, and (c) sustainment-focused technology transfer (MRO/infrastructure)."
+      - "When drafting narrative synthesis, separate 'licensed production for autonomy' from 'licensed production for exports/industrial ladder climbing' to avoid conflating readiness outcomes with commercial competitiveness."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM54.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

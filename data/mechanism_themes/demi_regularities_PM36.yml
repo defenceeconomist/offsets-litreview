@@ -1,0 +1,252 @@
+demi_regularities_by_theme:
+  - theme_id: "PM36"
+    theme_label: "Illiberal contracting builds cross-border ties"
+    mechanism_explanation: "Illiberal procurement practices create cross-national production and state–firm ties that extend beyond price/quality competition, including enduring supplier relationships."
+    cmo_ids_in_theme:
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_002"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_003"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_004"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_011"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_012"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_013"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_002"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_007"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_009"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_015"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_002"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_008"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_011"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_004"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_005"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_008"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_011"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_017"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_023"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_019"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_020"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_006"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_007"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_013"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_018"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_012"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_015"
+      - "01_introduction_and_overview_pdf__cmo_002"
+      - "01_introduction_and_overview_pdf__cmo_008"
+      - "01_introduction_and_overview_pdf__cmo_010"
+      - "01_introduction_and_overview_pdf__cmo_013"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_004"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_021"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_023"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_014"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_019"
+      - "16_concluding_remarks_pdf__cmo_010"
+      - "16_concluding_remarks_pdf__cmo_011"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_035"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_002"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_006"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_028"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_011"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_002"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_008"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_013"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_016"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM36_DR_01"
+        statement: "In contexts where defence procurement is sheltered from liberal trade rules and buyers have leverage to demand offsets or domestic purchasing, illiberal contracting tends to yield dense cross-border state–firm and firm–firm ties beyond normal price/quality competition."
+        context_conditions:
+          - "Arms markets operate with protectionism, IP barriers, limited transparency, and scope for offsets and buy-domestic demands."
+          - "A buyer’s market and procurement leverage allows purchasers to extract industrial concessions."
+          - "Offset and industrial participation packages include subcontracting, marketing/investment commitments, and technology transfer."
+        outcome_tendencies:
+          - "Complex cross-actor relationship webs form across states and firms."
+          - "Offset requirements expand and become more complex as buyer leverage rises."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_002"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_003"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_004"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_002"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_007"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_023"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_002"
+            quote: "Illiberal trade practices in this unique market have created a complex web of state-to-state, firm-to-state, and firm-to-firm relationships."
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_002"
+            quote: "This reversal of fortunes affords buying nations substantial leverage in extracting concessions"
+        moderators:
+          - condition: "Where buyer bargaining power is strengthened by excess supplier capacity, offset demands expand and intensify cross-national linkages."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "05_arms_trade_as_illiberal_trade_pdf__cmo_003"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs explicitly connect illiberal market latitude and buyer leverage to the formation of cross-actor relationship webs and to the expansion/complexification of offsets."
+      - demi_regularity_id: "PM36_DR_02"
+        statement: "In contexts where offsets are delivered through coproduction and subcontracts (often with export expectations and follow-on sales), illiberal contracting tends to yield enduring supplier relationships and supply-chain integration that can extend beyond the initial procurement."
+        context_conditions:
+          - "Direct offsets take the form of subcontracts allocating work on the sold system to buyer-country firms."
+          - "Offsets include expectations for follow-on exports or production for third-country customers."
+          - "Workshare guarantees are linked to future sales and conditioned on competitiveness."
+        outcome_tendencies:
+          - "Offset-induced sourcing relationships become durable and sometimes permanent."
+          - "Domestic firms gain access to international production networks and may secure follow-on export work."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_011"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_012"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_009"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_008"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_021"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_014"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_011"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_012"
+            quote: "often leads to a permanent supply relationship"
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_009"
+            quote: "industry in these countries are involved in NH-90 production also for non-Nordic customers"
+        moderators:
+          - condition: "Export-linked workshare and third-country marketing opportunities increase production volume and support economies of scale."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "10_the_teeth_of_little_tigers_pdf__cmo_011"
+              - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_008"
+          - condition: "Domestic technical capacity attracts joint ventures and technology transfer, easing integration into multinational supply chains."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_015"
+        boundary_conditions:
+          - condition: "Where offsets mainly generate short-run work without building durable cooperation pathways, longer-run international cooperation may be inhibited."
+            supporting_cmo_ids:
+              - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018"
+        counterexamples:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018"
+            note: "Offsets can strengthen firms in the short run while inhibiting international cooperation in the longer run."
+        confidence: "high"
+        confidence_justification: "Several CMOs describe subcontracting/coproduction offsets producing enduring supply links and follow-on export work, while also documenting a clear caveat case where offsets inhibit longer-run cooperation."
+      - demi_regularity_id: "PM36_DR_03"
+        statement: "In contexts where the purchaser’s industrial base is small or underdeveloped and direct local purchasing is infeasible, illiberal contracting tends to yield inward investment, joint ventures, and equity-based industrial participation that embeds foreign firms domestically and secures market access."
+        context_conditions:
+          - "Local supplier bases are too small to absorb offset obligations via purchases alone."
+          - "Foreign firms face learning, compliance, partner-search, and approval hurdles in the purchaser market."
+          - "Offsets and industrial participation policies include investment and joint-venture requirements."
+        outcome_tendencies:
+          - "Offset compliance shifts toward inward investment and joint ventures as the major component."
+          - "Joint ventures and equity stakes embed foreign firms and create longer-term market presence beyond a single deal."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_002"
+          - "01_introduction_and_overview_pdf__cmo_008"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_019"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_002"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_006"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_028"
+          - "16_concluding_remarks_pdf__cmo_010"
+          - "16_concluding_remarks_pdf__cmo_011"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_012"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_023"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_002"
+            quote: "inward investment might constitute the major component."
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_006"
+            quote: "offsets can offer a way of buying into a market"
+        moderators:
+          - condition: "Prime contractors provide appraisal, introductions, technical/marketing support, and fast-track access through approval systems."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "09_saudi_arabia_and_offsets_pdf__cmo_028"
+          - condition: "Familiarity built through earlier work placements increases willingness to invest, so joint ventures can represent maturation rather than failure of earlier offsets."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "16_concluding_remarks_pdf__cmo_011"
+        boundary_conditions:
+          - condition: "Equity purchases can integrate firms into multinational networks without expanding domestic production capacity via new plant investment."
+            supporting_cmo_ids:
+              - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011"
+        counterexamples:
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011"
+            note: "Industrial participation via equity may embed ownership ties but not expand fixed production capacity."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs (introductory synthesis, Saudi cases, concluding remarks, and South Africa/Canada cases) converge that weak industrial bases shift offsets toward JV/equity forms that embed cross-border ties, with a clear caveat about limited capacity expansion."
+      - demi_regularity_id: "PM36_DR_04"
+        statement: "In contexts where alliance/security pressures and interoperability requirements are salient, illiberal contracting tends to yield earlier-stage multinational partnering and workshare/technology-transfer arrangements that build durable cross-national production ties while meeting operational standards."
+        context_conditions:
+          - "Interoperability and allied standardization requirements shape equipment choices and procurement pathways."
+          - "Rising development costs and globalization incentivize multinational design/development buy-in."
+          - "Security threats and self-reliance goals increase demand for technology transfers and domestic production arrangements."
+        outcome_tendencies:
+          - "Offsets shift from post-production packages to pre-production sharing agreements and program-level partnering."
+          - "Technology transfers and workshare are used to build domestic capability aligned with alliance requirements."
+        supporting_cmo_ids:
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_011"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_002"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_011"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021"
+          - "01_introduction_and_overview_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003"
+            quote: "The new model replaces post-production offsets with pre-production sharing agreements."
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021"
+            quote: "interoperability with US-made systems becomes an operational necessity"
+        moderators:
+          - condition: "Where interoperability narrows sourcing options toward a dominant supplier ecosystem, procurement becomes path-dependent toward that supplier’s participation model."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_021"
+        boundary_conditions:
+          - condition: "Interoperability objectives can be achieved through international partnering and risk sharing without relying on post-sale compensation."
+            supporting_cmo_ids:
+              - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004"
+        counterexamples:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_004"
+            note: "Interoperability can be achieved via partnering/joint development rather than traditional offsets, reducing the need for offset-style compensation."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs explicitly tie alliance/interoperability and security pressures to program-level partnering and workshare/tech-transfer arrangements, including a clear statement that partnering can substitute for offsets for interoperability."
+      - demi_regularity_id: "PM36_DR_05"
+        statement: "In contexts where offset administration is burdensome and work packages are defined after purchase decisions, illiberal contracting tends to yield a shift toward structured industrial cooperation (joint development/production or industrial cooperation offices) that stabilizes cross-border ties and reduces application-by-application policing."
+        context_conditions:
+          - "Offsets are negotiated after a procurement decision, requiring intensive screening and valuation of offset applications."
+          - "Complex systems invite multi-country partnering and earlier task definition."
+          - "Policy preferences shift toward international cooperation and investment-based compensation."
+        outcome_tendencies:
+          - "Tasks and workshares are defined in advance, improving predictability for domestic industry."
+          - "Administrative burden falls because oversight focuses on meaningful work packages rather than thousands of offset proposals."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_013"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_013"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_002"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_015"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_013"
+            quote: "joint development and production allows the tasks that Spanish industry will undertake to be defined in advance"
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_013"
+            quote: "there is no need to oversee a large number of offset applications to determine whether they conform to the agreement."
+        moderators:
+          - condition: "Replacing offsets with structural international industrial cooperation supports niche specialization and centers-of-excellence positioning."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_015"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018"
+            note: "Long reliance on offsets can strengthen firms short-run while inhibiting structured international cooperation longer-run, motivating later shifts toward cooperation."
+        confidence: "high"
+        confidence_justification: "Spain and synthesis CMOs explicitly contrast offsets’ administrative burden with joint development/production and industrial cooperation approaches that define work earlier and reduce policing, while Belgium provides a complementary warning about offsets inhibiting cooperation over time."
+    theme_notes:
+      - "Coverage: all 52 PM36 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The evidence base emphasizes how offsets and offset-like workshare arrangements create durable cross-border ties via subcontracting, export-linked workshare, and JV/equity embedding."
+      - "Several CMOs highlight a boundary: cross-border ties may embed ownership/relationships without expanding domestic fixed capacity, and offsets can sometimes inhibit longer-run structured cooperation."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM36.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

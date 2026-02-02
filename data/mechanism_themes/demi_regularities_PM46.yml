@@ -1,0 +1,231 @@
+demi_regularities_by_theme:
+  - theme_id: "PM46"
+    theme_label: "Absorptive capacity conditions outcomes"
+    mechanism_explanation: "Effective technology absorption depends on skilled workforce, innovative subcontractors, IP constraints, and supportive national R&D policy; lacking these limits sustained gains."
+    cmo_ids_in_theme:
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_008"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_002"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_020"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_011"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_012"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_025"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_003"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_004"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_020"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_025"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_027"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_020"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_027"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_009"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_011"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_013"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_014"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_033"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_035"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_037"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_017"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_016"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_019"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM46_DR_01"
+        statement: "In contexts where recipients have skilled workforces, supportive R&D institutions, and innovative supplier bases, absorptive capacity conditions outcomes tends to yield sustained internalisation and extension of transferred technology into indigenous capability development."
+        context_conditions:
+          - "Recipients have educated personnel/skills and an innovation system (R&D culture, science-and-technology policy, research institutions) that supports learning."
+          - "Domestic industrial structure includes firms able to absorb and build on transferred know-how (e.g., innovative subcontractors or technologically capable private-sector contractors)."
+          - "Technology transfer is pursued in a way that allows domestic actors to adapt, evolve, or extend technologies rather than only assemble foreign designs."
+        outcome_tendencies:
+          - "Technology transfer is more likely to be absorbed and converted into sustained indigenous technological development."
+          - "Transferred know-how is more likely to be channelled into domestic programmes and successor systems."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_008"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_020"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_027"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_011"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_008"
+            quote: "it is fundamental that the technology is effectively absorbed"
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_003"
+            quote: "a gradual ascent of the technology ladder through technology transfer"
+        moderators:
+          - condition: "Concentrating imported know-how in selected capable contractors (rather than diffusing it thinly) accelerates learning and successor-system development."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_027"
+        boundary_conditions:
+          - condition: "If the systems that allow technology absorption are not developed first, transfer is unlikely to be effectively absorbed and applied."
+            supporting_cmo_ids:
+              - "09_saudi_arabia_and_offsets_pdf__cmo_037"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs (conceptual and case-based) converge that skills, supplier capability, and supportive R&D institutions condition whether transfer is absorbed and extended; Japanese and Brazilian cases align with the absorptive-capacity pathway, and practitioner guidance reinforces fit to local capability."
+      - demi_regularity_id: "PM46_DR_02"
+        statement: "In contexts where recipients lack high local absorptive capacity and the ability to innovate beyond imported designs, absorptive capacity conditions outcomes tends to yield uncertain or illusory technology-transfer impacts and greater dependence on foreign technology pathways."
+        context_conditions:
+          - "Local skills, innovation institutions, or civil-military science-and-technology strategies are weak or absent."
+          - "Transferred high technology cannot be sustained or advanced because recipients are positioned as implementers rather than innovators."
+          - "Offset ambitions exceed available resources, infrastructure, and human capital."
+        outcome_tendencies:
+          - "Offsets struggle to embed and extend technology transfers and promised economy-wide benefits are unlikely to materialise."
+          - "Technology transfer outcomes are questioned/uncertain and may reinforce branch-plant dependency."
+          - "Competitiveness and self-sufficiency goals remain only weakly achieved."
+        supporting_cmo_ids:
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_020"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_011"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_009"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_017"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_020"
+            quote: "Few countries appear to have been successful in using defense offsets to embed and extend technology transfers."
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_009"
+            quote: "It makes the buying nation, at best, a branch factory"
+        moderators:
+          - condition: "When programme administrators pivot away from aspirational high-technology requirements toward feasible transfer goals, technology-transfer outcomes become more implementable."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "09_saudi_arabia_and_offsets_pdf__cmo_014"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Across South Africa, Saudi Arabia, UK firm survey evidence, and Korea/Taiwan cases, the evidence consistently links limited absorptive capacity to weak or contested technology-transfer and competitiveness outcomes."
+      - demi_regularity_id: "PM46_DR_03"
+        statement: "In contexts where the recipient economy has a small or weak industrial base, absorptive capacity conditions outcomes tends to yield reduced implementability of large offset obligations and a shift toward thresholds, lowered offset demands, or alternative fulfilment modes."
+        context_conditions:
+          - "National defence-industrial capacity is small or structurally constrained."
+          - "Industrial structure limits placement of production work packages."
+          - "Political demands for broad distribution of benefits compete with focusing on absorptive 'winners'."
+        outcome_tendencies:
+          - "Offset policies use minimum values/thresholds and may reduce demanded percentages to align with implementability."
+          - "Overseas investment and counterpurchase become more prominent where production work is difficult to place."
+          - "Strategy oscillates between concentrating benefits in strong firms and distributing benefits for political reasons."
+        supporting_cmo_ids:
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_002"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_019"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_025"
+        anchor_quotes:
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_002"
+            quote: "The smaller the national defense industrial base, the more difficult to implement large military offset agreements."
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_025"
+            quote: "structural limits which Canada faces in terms of its defence industrial capacity"
+        moderators:
+          - condition: "When the recipient market has a strong industrial and technological infrastructure, tailoring offsets to local capabilities becomes more feasible and credible."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs from Nordic policy and UK experience directly link industrial-base limits to reduced feasibility and altered fulfilment choices, and the Canadian case adds corroborating political-economy constraints around capacity concentration."
+      - demi_regularity_id: "PM46_DR_04"
+        statement: "In contexts where offset projects are selected to match existing domestic capabilities and are tailored to the recipient’s industrial environment, absorptive capacity conditions outcomes tends to yield more feasible co-production/subcontracting and a greater likelihood of domestically retained value and capability utilisation."
+        context_conditions:
+          - "Domestic production capabilities exist for specific work packages (e.g., structural parts, construction/maintenance) even if heavy inputs are imported."
+          - "Procurers explicitly screen co-production/subcontracting options for feasibility without major new infrastructure spending."
+          - "Offset proposals are adapted to country-specific industrial capabilities and priorities rather than offered as generic packages."
+        outcome_tendencies:
+          - "Co-production/subcontracting is prioritised and more likely to be implementable within existing capacity constraints."
+          - "A larger share of procurement expenditure can be kept in-country and existing domestic capabilities are more likely to be utilised."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_003"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_004"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_025"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_004"
+            quote: "carefully examined in each large procurement"
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+            quote: "No offset proposal should ever be considered \"generic,\""
+        moderators:
+          - condition: "Clear specification of technology-transfer needs, balanced public/private roles, and penalty-backed enforcement increases absorptive capacity and makes tailored projects more likely to deliver."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_027"
+        boundary_conditions:
+          - condition: "If bureaucratically inflexible public firms crowd out SMEs from work packages suited to them, absorption and implementation are delayed."
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_020"
+        counterexamples:
+          - cmo_id: "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_012"
+            note: "Does not fit because procurement reportedly overlooked local subsystem capability, reducing domestic capability utilisation and raising questions about missed spin-off conversion."
+        confidence: "medium"
+        confidence_justification: "Greek and practitioner evidence supports feasibility gains from matching and tailoring, but the South African example highlights that procurement choices can still bypass local capability, indicating implementation is contingent on actual selection and enforcement."
+      - demi_regularity_id: "PM46_DR_05"
+        statement: "In contexts where financing, infrastructure, and skilled-labour constraints are binding, absorptive capacity conditions outcomes tends to yield delayed project start-up and constrained technology-transfer benefits even when offset ventures are formally established."
+        context_conditions:
+          - "Projects require significant upfront capital investment (facilities, equipment) and face high borrowing costs."
+          - "Venture timelines depend on host-government provision of land and enabling infrastructure."
+          - "Technical staffing depends on availability of trained nationals who are scarce and compete with other sectors."
+        outcome_tendencies:
+          - "Start-up is delayed and early operations can be loss-making while capability is built."
+          - "Implementation and capability gains are constrained by domestic financing and capacity barriers."
+          - "Skills constraints become overriding barriers that reduce realised transfer benefits."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_033"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_035"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_013"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_025"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_033"
+            quote: "construction, pre-operating and interest costs are high, and difficulty has been experienced in securing additional loans"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_013"
+            quote: "trained Saudis are not available in the required numbers and with the appropriate skills"
+        moderators:
+          - condition: "Delays in government-provided land and infrastructure inhibit operationalisation even after ventures are created and capitalised."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "09_saudi_arabia_and_offsets_pdf__cmo_035"
+          - condition: "High capital costs and weak quality-control/infrastructure systems in SMEs inhibit timely investment and production readiness."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_025"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs (Saudi and Greece) directly document binding constraints (capital costs, infrastructure delays, skills shortages) that slow implementation and limit realised transfer benefits; Korea/Taiwan evidence corroborates the role of underestimated resource requirements."
+      - demi_regularity_id: "PM46_DR_06"
+        statement: "In contexts where offset designers adapt transfer requirements to recipient capacity and invest in absorptive institutions, absorptive capacity conditions outcomes tends to yield more commercially viable and implementable transfer pathways than generic or high-aspiration technology demands."
+        context_conditions:
+          - "Early high-technology transfer ambitions have proven difficult to implement successfully."
+          - "Programme administrators and suppliers tailor proposals to local industrial capabilities and priorities."
+          - "Policy design emphasises building domestic R&D capacity and university linkages rather than one-off technology import."
+        outcome_tendencies:
+          - "Project selection shifts toward feasible and commercially viable (often medium-technology) transfers."
+          - "Offset programme recommendations and/or designs focus more on building absorptive institutions (R&D centres, linkages) to sustain learning."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_014"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_011"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_027"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_014"
+            quote: "the 'transfer' element is more important than the 'high' aspect of technology"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_011"
+            quote: "offset programmes should emphasise the establishment of research and development centres"
+        moderators:
+          - condition: "When agreements are clearly specified and include enforceable obligations (including penalties) for specific proposals, adaptive/tailored designs are more likely to translate into delivered capability."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_027"
+        boundary_conditions:
+          - condition: "If proposals are treated as generic packages rather than tailored to local industrial capability and priorities, feasibility and credibility are reduced."
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_019"
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Saudi and practitioner evidence explicitly supports adaptive reframing and anti-generic tailoring, and Greek evidence supports enforceability measures; however, several elements are prescriptive/design-oriented (including one low-confidence CMO), so outcomes are more inferential than directly measured."
+    theme_notes:
+      - "Coverage: all 25 PM46 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Across cases, absorptive capacity repeatedly hinges on skills/human capital, institutionalised R&D and innovation systems, and the fit between offset work packages and domestic industrial structure."
+      - "Where constraints are binding (skills, finance, infrastructure, institutional readiness), offsets tend to shift toward more feasible transfer modalities (medium-tech, tailored proposals, alternative fulfilment) and/or deliver contested outcomes."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM46.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

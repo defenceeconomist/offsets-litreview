@@ -1,0 +1,214 @@
+demi_regularities_by_theme:
+  - theme_id: "PM3"
+    theme_label: "Cost pass-through via pricing"
+    mechanism_explanation: "Suppliers internalise offset costs and recover them by raising the weapon sale price, shifting the burden to buyers."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_006"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004"
+      - "01_introduction_and_overview_pdf__cmo_007"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_004"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_012"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_019"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_023"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_005"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_004"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_024"
+      - "14_us_offset_policy_pdf__cmo_020"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_002"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM3_DR_01"
+        statement: "In contexts where offset obligations impose real administrative, compliance, and technology-transfer costs on suppliers, cost pass-through via pricing tends to yield higher effective weapon acquisition costs for buyers and reduced net offset benefits."
+        context_conditions:
+          - "Offsets are treated by suppliers as a cost of doing business to secure the sale."
+          - "Vendors face real costs (administration, compliance risk, technology-transfer obligations) that can be priced into the main contract."
+          - "Buyers have limited ability to fully net out offset costs from claimed offset benefits."
+        outcome_tendencies:
+          - "Suppliers include an offset-related premium in the weapons selling price."
+          - "Purchasing countries pay more than an equivalent off-the-shelf/non-offset purchase."
+          - "Net offset value is reduced or negated by higher procurement costs."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007"
+          - "01_introduction_and_overview_pdf__cmo_007"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_024"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_024"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_007"
+            quote: "vendors seek to include most of this premium in the selling price"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_024"
+            quote: "offsets are not costless"
+        moderators:
+          - condition: "Where offset obligations are expected to generate losses (e.g., countertrade resale losses), suppliers proceed only when the weapons price compensates for those losses."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_005"
+          - condition: "When suppliers provide credit/aid packages, the financial support can be priced into higher selling prices or operate as a subsidy to the exporting firm."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_010"
+        boundary_conditions:
+          - condition: "If buyers refuse to accept contract terms that highlight or permit charging offset administrative costs, the sale may be jeopardized and policy language may be rolled back."
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011"
+        counterexamples:
+          - cmo_id: "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_006"
+            note: "Does not fit cleanly because the dominant cost-shift driver is currency devaluation risk in a peso-denominated contract, prompting renegotiation/exit threats rather than offset-cost pricing."
+        confidence: "high"
+        confidence_justification: "Across multiple high- and medium-confidence CMOs (survey evidence, policy/case analysis), the consistent claim is that offset costs are incorporated into contract pricing, so buyers bear higher acquisition costs; additional CMOs show this can occur via technology-transfer and financing structures."
+      - demi_regularity_id: "PM3_DR_02"
+        statement: "In contexts where weapon prices are opaque and there is no clear benchmark for comparison, cost pass-through via pricing tends to yield hidden price padding that is difficult to detect and makes cost-benefit evaluation of offsets infeasible."
+        context_conditions:
+          - "Weapons are complex, customer-tailored systems without transparent market prices."
+          - "Contractual language may prohibit explicit offset-driven price increases, but monitoring is limited."
+          - "Offset-linked penalties and compliance risks exist, creating incentives to insure through pricing."
+        outcome_tendencies:
+          - "Buyers cannot reliably determine how much offset cost has been passed into the contract price."
+          - "Evaluators cannot net out additional costs because they are unknown or obscured."
+          - "Safeguards like 'no price increase' are difficult to police in practice."
+        supporting_cmo_ids:
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_004"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_004"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_004"
+            quote: "in practice this is often impossible since the additional cost is unknown"
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004"
+            quote: "there is no fixed price for imported arms."
+        moderators:
+          - condition: "When suppliers face penalty and compliance risks, they can raise contract values to insure against those risks, further obscuring the offset premium."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_004"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence conceptual and empirical CMOs converge that opaque pricing and lack of benchmarks make offset cost pass-through hard to observe and therefore hard to evaluate, even where formal safeguards exist."
+      - demi_regularity_id: "PM3_DR_03"
+        statement: "In contexts where offsets require local production or co-production in small or higher-cost industrial settings, cost pass-through via pricing tends to yield higher unit costs and large cost overruns due to lost scale/learning economies, duplicated tooling, and licence/transfer fees."
+        context_conditions:
+          - "Domestic markets are small, with shorter production runs than major producers achieve."
+          - "Local production shifts work into higher-cost environments and duplicates tooling and technology-transfer arrangements."
+          - "Licensed/co-produced production adds licence fees and technology-transfer costs."
+        outcome_tendencies:
+          - "Co-produced goods are expected to cost more than off-the-shelf purchases."
+          - "Procurements experience substantial cost penalties and overruns attributed to offset-linked industrial arrangements."
+          - "Purchasing power is reduced as higher unit costs crowd out other defense budget categories."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_005"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_012"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_019"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_023"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_005"
+            quote: "results in higher costs generated from shorter production runs"
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_023"
+            quote: "cost over-run of the program came close to 100%"
+        moderators:
+          - condition: "When domestic production costs are structurally higher than in major producing countries, shifting work domestically increases the procurement premium."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_012"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence country-case CMOs (Belgium and Greece) directly link offsets/co-production and small-market production conditions to cost premia and overruns."
+      - demi_regularity_id: "PM3_DR_04"
+        statement: "In contexts where buyers respond to anticipated price loading by escalating offset targets and asserting that offsets must not raise prices, cost pass-through via pricing tends to yield ongoing tension and policy escalation rather than eliminating pass-through."
+        context_conditions:
+          - "Vendors treat offsets as a pricing issue and attempt to load costs into the primary contract price."
+          - "Buyer policies or guidelines claim offsets should not increase purchase prices."
+          - "Targets and valuation become negotiable and contested as both parties seek to shift burden."
+        outcome_tendencies:
+          - "Offset targets can rise over time as buyers try to offset price loading."
+          - "Tensions persist over who pays and over how offsets are valued and monitored."
+          - "No-price-increase requirements are difficult to enforce in practice."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_024"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011"
+            quote: "the majority of arms vendors view offset cost as a pricing issue"
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_004"
+            quote: "there is no fixed price for imported arms."
+        moderators:
+          - condition: "When buyers escalate offset demands to reduce pass-through, suppliers may respond by further embedding costs in pricing or by contesting feasibility."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_011"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports the bargaining dynamic and enforcement difficulty, but the exact causal effect of escalating targets on realised price pass-through is not directly quantified in the extracted records."
+      - demi_regularity_id: "PM3_DR_05"
+        statement: "In contexts where buyers demand aggressive or high offset levels beyond what contractors can realistically deliver, cost pass-through via pricing tends to yield increased system costs and heightened political scrutiny that can trigger attempts to regulate offset practices."
+        context_conditions:
+          - "Foreign governments impose aggressive offset requirements as a condition of sale."
+          - "Contractors face practical limits on subcontracting, technology transfer, and employment benefits deliverable."
+          - "Offset demands are treated as investments but impose substantial overhead and transfer costs."
+        outcome_tendencies:
+          - "High offset demands increase the costs of sold systems."
+          - "Rising demands increase risk of political backlash and regulatory attention."
+          - "Large procurement penalties can crowd out other defense budget categories."
+        supporting_cmo_ids:
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_002"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_024"
+        anchor_quotes:
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_002"
+            quote: "High offset demands will inevitably increase the costs"
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_013"
+            quote: "it is estimated that Belgium pays a 20 to 30 percent penalty"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence practitioner and country-case CMOs explicitly link aggressive demands to higher system costs and procurement penalties, and describe increased scrutiny and regulatory risk."
+      - demi_regularity_id: "PM3_DR_06"
+        statement: "In contexts where offset administrative costs are made explicitly recoverable and visible in official contracting documents, cost pass-through via pricing tends to yield buyer resistance and subsequent policy/language changes to protect sales even as cost burdens remain with buyers."
+        context_conditions:
+          - "Offsets are administered through contracting channels (e.g., FMS) where notices/disclaimers can be included in letters of offer/acceptance."
+          - "Regulatory language signals that offset administrative costs may be charged to the buyer."
+          - "Competitive export sales are sensitive to buyer willingness to sign disclosed terms."
+        outcome_tendencies:
+          - "Administrative cost recovery shifts costs to the buyer via contract terms."
+          - "Buyers may refuse to sign agreements perceived as increasing or highlighting costs."
+          - "Rules or language can be revised or dropped to avoid jeopardising sales."
+        supporting_cmo_ids:
+          - "14_us_offset_policy_pdf__cmo_020"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_020"
+            quote: "now allowed offset administrative costs to be recovered under FMS contracts"
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011"
+            quote: "refused to sign a Letter of Agreement"
+        moderators:
+          - condition: "When disclosed cost-recovery language threatens a specific sale, policymakers may remove references to reduce buyer sensitivity and preserve export prospects."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_011"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The mechanism is supported by policy-description and a specific sale anecdote, but the evidence is contextual and not a broad multi-country outcome trace, so confidence is moderate."
+    theme_notes:
+      - "Coverage: all 21 PM3 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence consistently indicates that offsets are rarely 'free': suppliers can embed administrative, risk, and technology-transfer costs in prices, and opaque pricing makes the premium hard to observe."
+      - "Country cases (especially Belgium) provide concrete magnitudes (e.g., ~20–35% penalties and even larger overruns) linked to offset-driven industrial arrangements; keep those as illustrative rather than universal."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM3.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

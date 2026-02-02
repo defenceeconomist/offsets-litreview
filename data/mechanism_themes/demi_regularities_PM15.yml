@@ -1,0 +1,272 @@
+demi_regularities_by_theme:
+  - theme_id: "PM15"
+    theme_label: "Flexibility reduces mandate diseconomies"
+    mechanism_explanation: "Rigid, one-size mandates constrain negotiation and force offsets where market exchange would be superior, creating diseconomies of scale and scope; variable policies increase flexibility and reduce these losses."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_007"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_008"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_012"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_004"
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_010"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_011"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_017"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_004"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_014"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_019"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_011"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_017"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_009"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_010"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_012"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_019"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_024"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_002"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_018"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_002"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_010"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_012"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_016"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_019"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_020"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_025"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_003"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_008"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_004"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_021"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_024"
+      - "01_introduction_and_overview_pdf__cmo_004"
+      - "01_introduction_and_overview_pdf__cmo_005"
+      - "01_introduction_and_overview_pdf__cmo_016"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_002"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_014"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_015"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_019"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_008"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_015"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_016"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_017"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_023"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_034"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_007"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_017"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_007"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_015"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_018"
+      - "16_concluding_remarks_pdf__cmo_003"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM15_DR_01"
+        statement: "In contexts where offsets are imposed as one-size-fits-all mandates across procurements (fixed percentages and in-kind requirements), flexibility in bargaining tends to yield lower welfare and foregone value relative to more selective, negotiable approaches."
+        context_conditions:
+          - "Mandatory offset policies apply broadly across procurement categories and specify fixed percentage targets and/or in-kind enhancements."
+          - "Buyers could otherwise negotiate price discounts, quality, and support terms on a deal-by-deal basis."
+          - "Offsets are framed as costless additions, obscuring opportunity costs of restricted bargaining."
+        outcome_tendencies:
+          - "Diseconomies of scale and scope and welfare losses from forcing offsets where market exchange or price bargaining would be superior."
+          - "Reduced buyer leverage and greater supplier initiative in shaping offset packages."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004"
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_007"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_019"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_015"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_002"
+          - "16_concluding_remarks_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_004"
+            quote: "any attempt to use a mandatory offset policy for all government procurement"
+          - cmo_id: "03_the_defence_offsets_policy_in_australia_pdf__cmo_015"
+            quote: "classic case of the 'free lunch' fallacy"
+        moderators:
+          - condition: "Reforms that reject rigid 100% targets and emphasize procurement flexibility and long-term direct benefits."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_015"
+          - condition: "Explicitly limiting offsets to tie-break situations among equivalent tenders and capping their weight."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_017"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_012"
+            note: "High, rigid percentage requirements can increase leverage over suppliers, even though they may increase costs or rigidity."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs converge that broad mandatory percentage/in-kind offset regimes restrict bargaining and create inefficiencies, with explicit discussion of opportunity-cost and supplier-opportunism risks and documented policy shifts toward flexibility."
+      - demi_regularity_id: "PM15_DR_02"
+        statement: "In contexts where offset policy is variable and negotiated (rather than fixed mandatory ratios), flexibility tends to yield better-tailored deals and reduced diseconomies of scope, provided sufficient bureaucratic capability exists."
+        context_conditions:
+          - "Government can choose among multiple negotiation dimensions (price margins, discounts, and different offset forms) on a case-by-case basis."
+          - "Officials can compare offset proposals against alternative value (e.g., price concessions) and reject inefficient packages."
+        outcome_tendencies:
+          - "Lower likelihood of accepting inefficient offsets and reduced diseconomies of scope."
+          - "Offset level and composition varies with feasibility, domestic capacity, and priorities rather than meeting a rigid ratio."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_004"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_011"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010"
+            quote: "The flexibility enlarges the opportunity set available to government negotiators and reduces the potential for diseconomies of scope."
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012"
+            quote: "Finland estimates a 10–15 percent cost increase per offset agreement"
+        moderators:
+          - condition: "High bureaucratic capability and skilled professionals to evaluate and negotiate tradeoffs across price and offset content."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010"
+          - condition: "Policy revisions that allow less than 100% offsets or even zero in specific cases to manage cost-benefit tradeoffs."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012"
+        boundary_conditions:
+          - condition: "Where administrative capacity is weak, flexible regimes can increase discretion burdens and reduce the ability to screen and compare proposals."
+            supporting_cmo_ids:
+              - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_010"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Evidence consistently supports the bargaining-flexibility mechanism via conceptual and policy-case CMOs; the main uncertainty is implementation capacity, which is explicitly flagged as a requirement for the approach to work."
+      - demi_regularity_id: "PM15_DR_03"
+        statement: "In contexts where rigid local-content or untargeted bundling mandates force participation in high-cost or non-complementary activities, flexibility tends to yield costly premia and/or non-compliance, whereas selective substitution toward lower-cost forms can preserve objectives with less loss."
+        context_conditions:
+          - "High local content targets require using higher-cost domestic subcontractors with limited competition."
+          - "Bundled offset targets are broadly defined and untargeted, ignoring complementarities and specialization."
+          - "Some forms of industrial participation (e.g., full local assembly) are prohibitively expensive."
+        outcome_tendencies:
+          - "Procurement prices rise (premia are priced into bids) and/or suppliers renege or do not fully deliver mandated content."
+          - "Mandatory bundling prevents optimal outcomes compared with tailored bundles or separate sourcing."
+          - "Policy substitutes away from excessively expensive participation modes toward other offset forms."
+        supporting_cmo_ids:
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_008"
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_012"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_007"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_016"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_034"
+        anchor_quotes:
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_008"
+            quote: "substantial premiums will need to be paid to attract high-cost (less efficient) domestic subcontractors"
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_007"
+            quote: "Although local assembly was finally ruled out because of the excessive expense involved"
+        moderators:
+          - condition: "Allowing exceptions to manufacturing requirements so offsets can target software, integration, planning, and training capabilities."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "09_saudi_arabia_and_offsets_pdf__cmo_034"
+          - condition: "Minimum local value-added thresholds (rather than nominal local content) to reduce pass-through and anchor compliance to real local production."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_016"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_012"
+            note: "High percentage requirements can be used deliberately to force technology transfer/domestic production, even if they increase costs."
+        confidence: "high"
+        confidence_justification: "The pattern is supported by multiple CMOs describing the same diseconomy mechanism (forced high-cost local content/untargeted bundling) and by concrete examples of policy substitution and rule exceptions to manage costs."
+      - demi_regularity_id: "PM15_DR_04"
+        statement: "In contexts where authorities allow selective participation strategies (voluntary or best-endeavours offers, niche focus, and indirect-investment routes), flexibility tends to yield industrial participation aligned to commercial feasibility rather than maximal mandated percentages."
+        context_conditions:
+          - "Local industry is small or specialized, and opportunities are strongest in niches and through-life support rather than comprehensive in-country production."
+          - "Offset regimes permit indirect offsets and openness to non-defence sectors, or shift emphasis away from hard-to-deliver direct offsets."
+        outcome_tendencies:
+          - "Participation concentrates where competitive opportunities exist (life-cycle involvement, niche capabilities) rather than being mandated universally."
+          - "Offset packages tilt toward commercially applied technology and investment/indirect initiatives when direct participation is difficult."
+        supporting_cmo_ids:
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_012"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_018"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_019"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_023"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_007"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_017"
+          - "01_introduction_and_overview_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_012"
+            quote: "All offers to include local industry are to be made voluntarily and should be “based on sound commercial practices.”"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_023"
+            quote: "Al Yamamah does not have a contractual obligation to offsets, but there is an investment target of £1 bn"
+        moderators:
+          - condition: "When direct offsets become difficult or politically contentious, shifting toward indirect offsets (profitability, investment, technology transfer) becomes a feasible alternative."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_007"
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_018"
+        boundary_conditions:
+          - condition: "Where strategic aims require early-stage R&D participation, late-stage offsets cannot substitute for earlier cooperative program entry."
+            supporting_cmo_ids:
+              - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_011"
+        counterexamples:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_004"
+            note: "A rigid statutory approach mandates 100% offsets and a minimum direct share, pushing toward local production/content rather than voluntary niche participation."
+        confidence: "high"
+        confidence_justification: "CMOs across New Zealand, Singapore, Saudi Arabia, Spain, and synthesis chapters support the same flexibility logic: selective, commercially grounded participation avoids the diseconomies of forcing direct industrial participation everywhere."
+      - demi_regularity_id: "PM15_DR_05"
+        statement: "In contexts where procurement rules explicitly keep offsets secondary to military requirements (tie-break only, capped weighting, or post-requirements consideration), flexibility tends to yield less distortion of supplier selection while still allowing compensatory industrial participation."
+        context_conditions:
+          - "Offsets are not allowed to influence supplier choice until systems meet military requirements."
+          - "Offsets are limited to tie-break situations among equivalent tenders and/or their weight is capped."
+          - "Policymakers place large orders without offsets when offsets are judged too distortionary or politically contested."
+        outcome_tendencies:
+          - "Offsets play a constrained role in evaluation; capability selection is less distorted by industrial benefits offers."
+          - "Reduced reliance on offsets as a primary decision criterion while maintaining a compromise mechanism for industrial participation."
+        supporting_cmo_ids:
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_017"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008"
+            quote: "the … purchaser’s choice of supplier must not be influenced by any offsets on offer"
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_017"
+            quote: "during 2000 and 2001, the Belgian government placed arms orders for over €1.4 billion, without offset requirements"
+        moderators: []
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_012"
+            note: "Some regimes deliberately raise offset percentages to increase leverage and secure technology transfers, making offsets a primary bargaining instrument."
+        confidence: "high"
+        confidence_justification: "Evidence is strong that explicit rules (Nordic) and policy choices (Belgium) can constrain offsets’ role to reduce procurement distortions, even while other cases show offsets are sometimes used as a primary leverage tool."
+      - demi_regularity_id: "PM15_DR_06"
+        statement: "In contexts where industrial participation is governed by multinational 'best value' sourcing and competitiveness-based subcontracting (with offsets excluded), flexibility tends to yield limited, concentrated workshare and requires adaptive arrangements rather than traditional offset guarantees."
+        context_conditions:
+          - "Major multinational programmes use global best value/competitive subcontracting and exclude traditional offsets/workshare guarantees."
+          - "Smaller partner nations pay for participation but cannot expect assured industrial returns."
+          - "Partners express political concerns about workshare shortfalls under purely commercial rules."
+        outcome_tendencies:
+          - "Participation is limited to already internationally competitive firms and concentrates in export-oriented work and through-life support."
+          - "Programme governance adapts (e.g., strategic set-asides) to maintain partner support, partially departing from pure best-value logic."
+        supporting_cmo_ids:
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_020"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_010"
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_010"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_020"
+            quote: "traditional offset and work share arrangements are specifically excluded from the JSF program as all subcontractors are expected to be internationally competitive."
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008"
+            quote: "modified its global best value approach…to include a “strategic best value” exemption"
+        moderators:
+          - condition: "Partner-nation political pressure can produce carve-outs (strategic best value) that reserve some work for qualifying partner contractors."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008"
+        boundary_conditions:
+          - condition: "Domestic-first industrial strategies and export/collective-security constraints reduce the ability to participate in multinational workshare models and to access offset-like benefits."
+            supporting_cmo_ids:
+              - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_009"
+              - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_024"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs converge that global best value programmes constrain offsets and shift the relevant policy lever from demanding offsets to paying for access and sustaining competitiveness, with documented governance adaptations to manage partner politics."
+    theme_notes:
+      - "Coverage: all 55 PM15 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence strongly supports the 'rigidity → diseconomies' logic and provides multiple concrete flexibility mechanisms (variable bargaining, capped/tie-break offsets, voluntary/niche participation, and substitution away from expensive modes)."
+      - "When synthesizing, keep distinct the sub-cases: (a) bilateral procurement bargaining flexibility, (b) policy guardrails that prevent offsets distorting supplier choice, and (c) multinational program constraints where offsets are institutionally excluded."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM15.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

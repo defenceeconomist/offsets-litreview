@@ -1,0 +1,259 @@
+demi_regularities_by_theme:
+  - theme_id: "PM34"
+    theme_label: "Capability gains not self-sustaining"
+    mechanism_explanation: "Technology transfer and buyback can yield temporary gains, but exporters continue advancing and recipients without sustained momentum fall behind again."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_010"
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003"
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_008"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_020"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_005"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_006"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_007"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_008"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_016"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_021"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_022"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_023"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_001"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_002"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_003"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_008"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_009"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_011"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_003"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_007"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_009"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_013"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_014"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_008"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_016"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_022"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_009"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_010"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_011"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_012"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_017"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_008"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_002"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_013"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_014"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_008"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_009"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_010"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_023"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_008"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_016"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_017"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_024"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_010"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_014"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM34_DR_01"
+        statement: "In contexts where recipients lack the human/physical capital and absorptive capacity needed to internalize complex production, offset-driven technology transfer tends to yield temporary or shallow capability gains rather than self-sustaining indigenous production."
+        context_conditions:
+          - "Developing countries lack the human and physical capital required for arms production and coproduction."
+          - "Licensed production relies heavily on imported components and faces technology absorption difficulties."
+          - "Training/technology transfer does not itself transfer the underlying capital base in a durable way."
+        outcome_tendencies:
+          - "Durable indigenous production capability remains difficult to achieve."
+          - "Delays and cost overruns arise in early licensed-production phases and can worsen foreign-exchange outcomes."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_003"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015"
+            quote: "technology transfer and training do not transfer this capital in a self-sustaining manner"
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_022"
+            quote: "never got much beyond the stage of assembling imported kits from France"
+        moderators:
+          - condition: "Sustained domestic investment in R&D and human-resource development increases the likelihood that transfers translate into deeper technological progress."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_022"
+        boundary_conditions:
+          - condition: "Where the procurement decision occurs after major R&D and development is complete, the scope for acquiring new technology through offsets is limited."
+            supporting_cmo_ids:
+              - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003"
+        counterexamples:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003"
+            note: "Offsets cannot deliver new technology transfer when development work is already complete."
+        confidence: "high"
+        confidence_justification: "The tendency is supported by multiple CMOs explicitly describing capital/absorptive constraints and resulting shallow or non-durable production capability, with clear boundaries where technology acquisition opportunities are structurally limited."
+      - demi_regularity_id: "PM34_DR_02"
+        statement: "In contexts where transferred technology is near-obsolete or where capability gains are tied to a one-off assembly/work placement, the capability-gains-not-self-sustaining mechanism tends to yield short-lived benefits that decay once the project ends and exporters continue advancing."
+        context_conditions:
+          - "Transferred technology is close to being outdated at the point of transfer."
+          - "Offset activity focuses on immediate assembly/work placement without embedding long-term capability development."
+          - "Agreements end without sustained follow-on work or continuing technological upgrading."
+        outcome_tendencies:
+          - "Technology-transfer benefits are temporary and long-run capability gaps can widen."
+          - "Local job creation and skill gains are small and disappear when production lines close."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_010"
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018"
+            quote: "technology that is on the verge of being outdated"
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_010"
+            quote: "as soon as they were completed, the assembly line and the factory were closed"
+        moderators:
+          - condition: "Buyback clauses can partially protect recipients during the agreement period by providing demand, but do not guarantee sustained momentum once the agreement ends."
+            effect: "weakens"
+            supporting_cmo_ids:
+              - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_018"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs directly describe decay dynamics via near-obsolete transfer and post-project shutdown, including an explicit account of assembly-line closure and an explicit warning about outdated technology transfers."
+      - demi_regularity_id: "PM34_DR_03"
+        statement: "In contexts where production scale is small and export demand is uncertain, the capability-gains-not-self-sustaining mechanism tends to yield fragile industrial viability that is vulnerable to market shocks, cost escalation, and inability to sustain skills and production runs."
+        context_conditions:
+          - "Domestic military procurement quantities are small and volatile."
+          - "Export markets are necessary to sustain production runs but are uncertain or absent."
+          - "Complex platform coproduction involves high fixed costs and long timelines."
+        outcome_tendencies:
+          - "Industries become export-dependent and vulnerable to external market shocks and customer losses."
+          - "Unit costs rise, projects experience cost inflation/delays, and local assembly becomes unviable without exports."
+          - "Defense-industrial investments are difficult to sustain over time even when offsets fund initial capacity."
+        supporting_cmo_ids:
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_005"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_006"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_007"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_016"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_021"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_001"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_009"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_020"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_023"
+        anchor_quotes:
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_021"
+            quote: "local assembly could rapidly become unviable"
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_020"
+            quote: "investments in defense-related industry capabilities are difficult to sustain over time"
+        moderators:
+          - condition: "Civil product lines can provide an alternative revenue base that sustains capability through military demand downturns."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_008"
+          - condition: "Regional coordination and pooled demand could improve scale economics and supportability compared with isolated national production."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_011"
+        boundary_conditions:
+          - condition: "Where international sales of the underlying platform are low, co-production downstream work and learning volumes are constrained."
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_023"
+        counterexamples:
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_008"
+            note: "Demonstrates survival through a pivot to civil aviation rather than sustained military export demand."
+        confidence: "high"
+        confidence_justification: "A large set of CMOs across Brazil, Argentina, Poland, and Greece converge on the same scale/export fragility logic and provide concrete outcomes (collapse, insolvency, cost inflation, unviable assembly) and identified moderators (civil diversification, regional pooling)."
+      - demi_regularity_id: "PM34_DR_04"
+        statement: "In contexts where capability depends on continuity of work and human capital retention, the capability-gains-not-self-sustaining mechanism tends to yield erosion and repeated restarting when contracts are discontinuous, spares/support commitments are short, or skilled staff exit."
+        context_conditions:
+          - "Offset contracts occur at uncertain times and are spaced by long intervals."
+          - "Spare parts and long-term support commitments are limited, reducing supportability confidence."
+          - "Layoffs, salary differentials, and limited career pathways drive specialized human-capital loss."
+        outcome_tendencies:
+          - "Long-run investment policy becomes difficult; organizations must restart learning and marketing repeatedly."
+          - "Export prospects and competitiveness deteriorate due to weak supportability and human-capital loss."
+        supporting_cmo_ids:
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_008"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_008"
+          - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_008"
+            quote: "offsets make long-run government investment policy difficult"
+          - cmo_id: "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_008"
+            quote: "Much of the specialized human capital either went into retirement or migrated to Embraer in Brazil."
+        moderators:
+          - condition: "Longer-term spare-parts guarantees and sustained through-life support work reduce discontinuity and help retain skills."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_007"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Supported by multiple CMOs explicitly linking discontinuity (timing intervals), short support guarantees, and human-capital loss to deteriorating competitiveness and uneven capability development."
+      - demi_regularity_id: "PM34_DR_05"
+        statement: "In contexts where offset-driven work is concentrated in low-value production tasks rather than R&D and systems integration, the capability-gains-not-self-sustaining mechanism tends to yield erosion of higher-end design and integration capability despite short-run industrial activity."
+        context_conditions:
+          - "Industrial participation relies on offset-dependent work rather than independent national programs or substantive collaboration."
+          - "Procurement is off-the-shelf after major development work is complete, limiting opportunities for new technology acquisition."
+        outcome_tendencies:
+          - "National capability for design and systems integration erodes over time."
+          - "Technology-related benefits of offsets are constrained for off-the-shelf buys."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005"
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005"
+            quote: "will lose the capability for design and systems integration"
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003"
+            quote: "there are few opportunities for acquiring new technology"
+        moderators:
+          - condition: "Structured decision rules that choose imports when volume is too low (instead of forcing low-scale licensing) limit exposure to inefficient 'token' localization."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_017"
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_016"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_016"
+            note: "Shows an institutionalized rule to sequence domestic development, licensing, and importation, rather than relying on offsets as the sole industrialization route."
+        confidence: "high"
+        confidence_justification: "Evidence is explicit that offset-dependent work can erode higher-end design/integration, and identifies a mitigation approach via procurement decision rules that avoid low-scale licensing when it is uneconomic."
+      - demi_regularity_id: "PM34_DR_06"
+        statement: "In contexts where policy design pushes activity toward easily creditable categories or where diffusion pathways are weak, the capability-gains-not-self-sustaining mechanism tends to yield limited multiplier effects and weak broad-based gains, reinforcing the non-self-sustaining nature of initial capability injections."
+        context_conditions:
+          - "Offset obligations are structured into categories with differential credit weights that steer supplier behavior."
+          - "Key defense-industrial actors are isolated from broader SME-driven economies and program-management capacity is limited."
+          - "DIP business is concentrated in existing core-capacity regions rather than building new regional clusters."
+        outcome_tendencies:
+          - "Multiplier effects are minimized and economic impacts are constrained."
+          - "Regional development benefits are limited, with concentration in core provinces and limited injection to peripheral industrial development."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_007"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_022"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_016"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_008"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_010"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_020"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_022"
+            quote: "This isolation minimizes the multiplier effects of offsets."
+          - cmo_id: "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_010"
+            quote: "Some 90 percent of DIP business has been channeled to Gauteng province."
+        moderators:
+          - condition: "Where local capability has eroded due to downsizing, integrating domestic inputs becomes harder and quality/schedule problems can occur."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_013"
+              - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_014"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports weak diffusion and concentrated benefits (Taiwan, Korea, South Africa) and shows policy steering via credit weights (Greece), but outcomes are heterogeneous across contexts and some statements are more diagnostic than causal about 'non-self-sustaining' decay."
+    theme_notes:
+      - "Coverage: all 51 PM34 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The strongest convergent patterns are (a) absorptive-capacity limits, (b) scale/export fragility and market shocks, and (c) discontinuity/human-capital loss."
+      - "Several CMOs concern policy design and diffusion/multiplier effects; treat these as moderators explaining why initial capability injections do not generalize or persist."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM34.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

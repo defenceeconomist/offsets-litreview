@@ -1,0 +1,202 @@
+demi_regularities_by_theme:
+  - theme_id: "PM19"
+    theme_label: "Supplier coaching and reputational certification"
+    mechanism_explanation: "Suppliers teach efficient routines to control costs and quality, and successful completion provides reputational certification that lowers domestic firms’ market-entry transaction costs."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_016"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_004"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_009"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_010"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_013"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_014"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_005"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_005"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_006"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_007"
+      - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_016"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_009"
+      - "01_introduction_and_overview_pdf__cmo_014"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_011"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_012"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_014"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_017"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_010"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_034"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_031"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_008"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_009"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_012"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_011"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_014"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_015"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM19_DR_01"
+        statement: "In contexts where reputable suppliers subcontract to domestic firms under offsets and must protect cost, quality, and reputation, supplier coaching and reputational certification tends to yield improved routines and a credible 'stamp of approval' that lowers transaction costs for third-market entry."
+        context_conditions:
+          - "Domestic firms receive offset work from reputable multinational suppliers."
+          - "Suppliers have incentives to teach efficient routines to minimize their own costs and ensure quality."
+          - "Third-market customers face uncertainty about domestic-firm capability and reliability."
+        outcome_tendencies:
+          - "Domestic firms improve capabilities through learned routines and exposure to supplier standards."
+          - "Completion serves as reputational certification, easing access to third markets and export opportunities."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_009"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_007"
+            quote: "the domestic firm receives the crucial “stamp of approval” in third markets"
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_009"
+            quote: "opportunities for companies to develop niches in the international arms market."
+        moderators:
+          - condition: "Offsets include standards/homologation support and training that directly reduce customer acceptance frictions."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_011"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs explicitly state the reputational certification pathway and link it to export/niche opportunities; evidence includes both theoretical framing and country-case outcomes."
+      - demi_regularity_id: "PM19_DR_02"
+        statement: "In contexts where technology transfer is embedded in offset packages and vendors face reputational risk if transfers fail, supplier coaching and reputational certification tends to yield higher vendor effort and more effective implementation than stand-alone purchases."
+        context_conditions:
+          - "Technology transfer generates spillovers and can fail in ways that harm the vendor’s reputation."
+          - "Transfer obligations are bundled into offset packages rather than treated as a discretionary add-on."
+        outcome_tendencies:
+          - "Vendors expend greater effort to ensure transfer succeeds."
+          - "Technology transfer is more likely to be implemented effectively."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_011"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_011"
+            quote: "will have a greater incentive to transfer successfully"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The core logic is explicitly stated and coherent, but the evidence is partly theory-model oriented and less directly outcome-traced than the subcontracting certification cases."
+      - demi_regularity_id: "PM19_DR_03"
+        statement: "In contexts where coaching is operationalized through embedded specialists and structured training (on-site and overseas), supplier coaching and reputational certification tends to yield tacit skill transfer and accelerated learning-by-doing in domestic production and engineering."
+        context_conditions:
+          - "Foreign specialists work on-site to set up production, and domestic engineers/technicians receive overseas training."
+          - "Procurement-linked transfer creates repeated interactions and structured exposure to production routines."
+        outcome_tendencies:
+          - "Tacit production knowledge and engineering skills are transferred more effectively than via documentation alone."
+          - "Domestic component capability and engineering competence increase."
+        supporting_cmo_ids:
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_013"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_014"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_031"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_013"
+            quote: "included Italian specialists coming to Brazil to help set up production"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_031"
+            quote: "placing Saudi personnel on the engineering teams of joint venture partners for on the job training"
+        moderators:
+          - condition: "Large numbers of trained technicians and equipment renewal investments deepen the capability gains from co-production."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_017"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs provide concrete, practice-level descriptions of embedded coaching/training and associated capability gains, supporting strong traceability."
+      - demi_regularity_id: "PM19_DR_04"
+        statement: "In contexts where offset-induced workshare increases domestic output and repetition, supplier coaching and reputational certification tends to yield learning-curve effects that reduce unit costs and raise competitiveness, enabling niche capability development."
+        context_conditions:
+          - "Domestic firms operate below efficient scale and face learning and scale economies."
+          - "Offsets increase domestic workshare/output and provide repeated production experience."
+        outcome_tendencies:
+          - "Unit costs fall with cumulative production experience."
+          - "Domestic firms become more competitive and can develop export-relevant niches."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_012"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_006"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_008"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_012"
+            quote: "moves down the learning curve once more, reduces the unit cost"
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_008"
+            quote: "broadening the experience pool of domestic work-force and industry beyond simple “metal-bending;”"
+        moderators:
+          - condition: "Co-development programs that yield exportable products provide a stronger pathway from learning to sustained competitiveness."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_007"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The learning-curve mechanism is plausible and explicitly stated, but some supporting CMOs are more theory-like or inferential about cost impacts than directly measured in the extracted records."
+      - demi_regularity_id: "PM19_DR_05"
+        statement: "In contexts where offset-linked learning is sustained across multiple procurements and scaled transfers, supplier coaching and reputational certification tends to yield cumulative capability gains that enable upgrades, system integration, and later roles in cooperative programmes."
+        context_conditions:
+          - "Technology transfer is consistent and scaled across programmes (exceptional access or repeated transfer exposure)."
+          - "Domestic firms accumulate niche expertise through earlier offset work that can be redeployed into defined tasks later."
+          - "Recipients have (or develop) sufficient industrial maturity to absorb licensed production and modify/improve systems."
+        outcome_tendencies:
+          - "Cumulative learning enables upgrades and improved variants and/or deeper systems-integration capability."
+          - "Offset-built expertise supports later participation in cooperative development/production programmes."
+        supporting_cmo_ids:
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_034"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_014"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_012"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004"
+          - "17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_016"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_014"
+            quote: "CESELSA developed most of its expertise through the F-18 offset programme."
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_034"
+            quote: "only country in the world to produce the F-15 outside"
+        moderators:
+          - condition: "Industrial maturity and absorptive capacity shape whether licensed production yields meaningful upgrades and improved variants."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_016"
+              - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_004"
+        boundary_conditions:
+          - condition: "If foreign procurements are not paired with offset-linked transfer and co-production, domestic programs may lack know-how and encounter development difficulties."
+            supporting_cmo_ids:
+              - "10_the_teeth_of_little_tigers_pdf__cmo_009"
+        counterexamples:
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_009"
+            note: "Indigenous development ran into difficulties when the programme was not paired with offset-linked technology transfer."
+        confidence: "medium"
+        confidence_justification: "There is strong qualitative support for cumulative learning and later redeployment of niche expertise, but one key licensed-production claim is explicitly labeled fragmentary evidence and overall effects depend heavily on baseline industrial maturity."
+      - demi_regularity_id: "PM19_DR_06"
+        statement: "In contexts where vendors’ incentives to place work drop after obligations are fulfilled, supplier coaching and reputational certification tends to yield more durable capability sharing when ownership/equity stakes align partner profitability incentives beyond one-off compliance."
+        context_conditions:
+          - "Pure obligation-driven placements create a risk of short-lived engagement once obligations are met."
+          - "Foreign partners take minority equity stakes or other ownership positions in domestic firms."
+        outcome_tendencies:
+          - "Foreign partners become more willing to share technological and marketing skills as profitability is shared."
+          - "Collaboration is expected to be more durable and capability-relevant than obligation-only work placements."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_014"
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_014"
+            quote: "with an equity interest in the profitability of the Spanish partner, the foreign company will be more willing to share its technological and marketing skills."
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_015"
+            quote: "Hughes has bought a 49% share in the state-owned ENOSA"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "The equity-alignment pathway is explicitly stated and supported by a concrete case of minority ownership used as a procurement-linked compensation strategy."
+    theme_notes:
+      - "Coverage: all 28 PM19 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports two linked pathways: (a) embedded coaching/learning-by-doing, and (b) reputational certification lowering market-entry transaction costs."
+      - "Several mechanisms are theory-model or inferred (especially learning-curve and vendor-effort incentives); keep confidence conservative where effects are not directly outcome-traced."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM19.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"
