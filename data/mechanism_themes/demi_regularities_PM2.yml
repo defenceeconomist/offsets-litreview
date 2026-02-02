@@ -1,252 +1,397 @@
 demi_regularities_by_theme:
-  - theme_id: PM2
+  - theme_id: "PM2"
     theme_label: "Compliance shaped by incentives and monitoring"
     mechanism_explanation: "Delivery depends on the enforcement regime: transparency and credible incentives/penalties encourage compliance, while weak oversight and accounting games reduce real fulfilment."
     cmo_ids_in_theme:
-      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004
-      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005
-      - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006
-      - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006
-      - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013
-      - 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019
-      - 05_arms_trade_as_illiberal_trade_pdf__cmo_008
-      - 05_arms_trade_as_illiberal_trade_pdf__cmo_016
-      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005
-      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_006
-      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_013
-      - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014
-      - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005
-      - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006
-      - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007
-      - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011
-      - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006
-      - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013
-      - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014
-      - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003
-      - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_005
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013
-      - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015
-      - 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_018
-      - 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_012
-      - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_013
-      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_001
-      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003
-      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004
-      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014
-      - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017
-      - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_005
-      - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007
-      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_005
-      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_006
-      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_014
-      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_025
-      - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_026
-      - 01_introduction_and_overview_pdf__cmo_017
-    missing_cmo_ids: []
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_008"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_016"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_006"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_013"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007"
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_009"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_010"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_011"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_014"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_015"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_021"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_005"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_018"
+      - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_012"
+      - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_013"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_001"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014"
+      - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_005"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_005"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_006"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_014"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_025"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_026"
+      - "01_introduction_and_overview_pdf__cmo_017"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_004"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_005"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_006"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_007"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_008"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_009"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_011"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_012"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_013"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_013"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_013"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_015"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_022"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_006"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_007"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_008"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_009"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_010"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_011"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_015"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_016"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_019"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_022"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_007"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_012"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_015"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_016"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_018"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_019"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_020"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_022"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_024"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_029"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_036"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_001"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_005"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_005"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_006"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_007"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_011"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_019"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_008"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_011"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_012"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_013"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_023"
+      - "14_us_offset_policy_pdf__cmo_004"
+      - "14_us_offset_policy_pdf__cmo_008"
+      - "14_us_offset_policy_pdf__cmo_011"
+      - "14_us_offset_policy_pdf__cmo_014"
+      - "14_us_offset_policy_pdf__cmo_017"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_010"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_014"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_016"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_017"
+      - "16_concluding_remarks_pdf__cmo_002"
+      - "16_concluding_remarks_pdf__cmo_004"
+      - "16_concluding_remarks_pdf__cmo_005"
+      - "16_concluding_remarks_pdf__cmo_009"
+    missing_cmo_ids:
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_004"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_005"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_006"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_007"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_008"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_009"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_011"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_012"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_013"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_009"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_010"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_011"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_014"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_015"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_021"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_013"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_013"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_015"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_022"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_006"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_007"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_008"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_009"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_010"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_011"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_015"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_016"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_019"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_022"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_007"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_012"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_015"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_016"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_018"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_019"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_020"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_022"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_024"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_029"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_036"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_001"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_005"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_005"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_006"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_007"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_011"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_019"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_008"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_011"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_012"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_013"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_023"
+      - "14_us_offset_policy_pdf__cmo_004"
+      - "14_us_offset_policy_pdf__cmo_008"
+      - "14_us_offset_policy_pdf__cmo_011"
+      - "14_us_offset_policy_pdf__cmo_014"
+      - "14_us_offset_policy_pdf__cmo_017"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_010"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_014"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_016"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_017"
+      - "16_concluding_remarks_pdf__cmo_002"
+      - "16_concluding_remarks_pdf__cmo_004"
+      - "16_concluding_remarks_pdf__cmo_005"
+      - "16_concluding_remarks_pdf__cmo_009"
     demi_regularities:
       - demi_regularity_id: "PM2_DR_01"
-        statement: "In contexts where offset delivery is made transparent and enforceable through up-front criteria, continuous monitoring, and credible penalties or exclusion threats, the enforcement regime tends to yield higher compliance with offset obligations and clearer reporting of delivery."
+        statement: "In contexts where offset obligations are transparent and backed by credible, enforceable sanctions, the enforcement regime tends to yield higher supplier compliance and fuller realization of promised offsets."
         context_conditions:
-          - "Offset agreements include monitoring/verification capacity and clear rules for what counts as fulfillment."
-          - "Enforcement levers exist (e.g., liquidated damages, withheld payments, blacklisting/bans from future competitions)."
-          - "Approval criteria and deliverables are specified in advance rather than ad hoc or retroactive."
+          - "Arms deals have low openness; monitoring and enforcement are otherwise difficult."
+          - "Contracts include enforceable commitments (e.g., liquidated damages, enforceable deeds) and/or credible exclusion from future bids."
+          - "Approval criteria are defined in advance and monitored continuously."
         outcome_tendencies:
-          - "Higher likelihood that planned offset activity is realized (or acquitted) and that compliance is trackable."
-          - "Greater auditability and reduced scope for distortive/opaque crediting practices."
+          - "Higher likelihood that the full offset package is realized / acquitted."
+          - "More follow-through on planned deliverables, with clearer reporting."
         supporting_cmo_ids:
-          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005
-          - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014
-          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_001
-          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004
-          - 16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_013
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014"
+          - "16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_013"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006"
         anchor_quotes:
-          - cmo_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005"
             quote: "there is thus a premium on finding ways to structure offset agreements that maximize both transparency and incentives for fulfilling offset obligations"
-          - cmo_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004"
             quote: "Pre-agreed Liquidated Damages applied if contractors failed to deliver on their offset commitments."
         moderators:
-          - condition: "Where policy requirements are vague or criteria are set late, retroactive crediting becomes more likely."
-            effect: "weakens"
-            supporting_cmo_ids:
-              - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013
-        boundary_conditions:
-          - condition: "Financial-penalty regimes may be avoided or softened if buyers believe penalties will raise import prices."
-            supporting_cmo_ids:
-              - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007
-        counterexamples: []
-        confidence: high
-        confidence_justification: "Multiple case and comparative CMOs converge on the same enforcement logic (clarity, monitoring, and credible sanctions increase compliance and auditability), though the set also notes cost trade-offs that shape enforcement design."
-      - demi_regularity_id: "PM2_DR_02"
-        statement: "In contexts where offset obligations are long-horizon and enforcement leverage is weak (or eroded by changing conditions and power asymmetries), weak oversight tends to yield non-fulfillment risk, reneging, and churn in what ultimately gets delivered."
-        context_conditions:
-          - "Long fulfillment periods and delivery after contract signature reduce immediate purchaser leverage."
-          - "Changing political/economic conditions and asymmetric power (especially for weaker buyers) constrain enforcement."
-          - "Multi-project portfolios remain negotiable over time, enabling re-scoping and substitution."
-        outcome_tendencies:
-          - "Offset commitments are partially fulfilled, delayed, substituted, or not realized as agreed."
-          - "Offset packages become harder to audit contract-by-contract as obligations extend and evolve."
-        supporting_cmo_ids:
-          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004
-          - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006
-          - 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013
-          - 05_arms_trade_as_illiberal_trade_pdf__cmo_008
-          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014
-          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_006
-        anchor_quotes:
-          - cmo_id: 03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013
-            quote: "there is scope for suppliers to promise offsets before the contract is signed but then to renege on their obligations later"
-          - cmo_id: 05_arms_trade_as_illiberal_trade_pdf__cmo_008
-            quote: "with an average fulfillment period of 84 months"
-        moderators:
-          - condition: "Credible sanctions and enforceable deeds increase follow-through relative to best-endeavors arrangements."
-            effect: "strengthens"
-            supporting_cmo_ids:
-              - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004
-              - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005
-        boundary_conditions: []
-        counterexamples: []
-        confidence: high
-        confidence_justification: "Strong internal consistency across theory and case material that timing, long horizons, and weak leverage create non-fulfillment risk, with multiple CMOs explicitly linking enforcement frictions to reneging/churn."
-      - demi_regularity_id: "PM2_DR_03"
-        statement: "In contexts where multipliers, valuation conventions, and administrative crediting detach credited value from underlying cost or delivered work, accounting games tends to yield inflated or contested offset totals and reduced transparency in verification."
-        context_conditions:
-          - "Use of multipliers and heterogeneous valuation rules (e.g., nominal/net/gross conventions)."
-          - "Offset credit is set administratively to reflect perceived economic value rather than provision cost."
-          - "Crediting rules allow claiming full product value or other valuations that exceed local value-added."
-        outcome_tendencies:
-          - "Reported totals diverge from underlying transaction values and become contested or opaque."
-          - "Delivery appears more substantive on paper than on the ground, complicating audits and comparisons."
-        supporting_cmo_ids:
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_005
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012
-          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_014
-          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_025
-          - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011
-        anchor_quotes:
-          - cmo_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012
-            quote: "the use of multipliers is not transparent"
-          - cmo_id: 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_025
-            quote: "the whole value of the product can be claimed as an export credit"
-        moderators:
-          - condition: "Reducing/capping multipliers or evaluating them case-by-case limits artificial inflation."
-            effect: "weakens"
-            supporting_cmo_ids:
-              - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005
-        boundary_conditions: []
-        counterexamples: []
-        confidence: high
-        confidence_justification: "Multiple case and comparative CMOs directly describe how multipliers/valuation rules distort reported values and hinder verification, and also document policy responses to reduce multiplier inflation."
-      - demi_regularity_id: "PM2_DR_04"
-        statement: "In contexts where additionality is hard to establish and offset crediting can include pre-existing, retroactively approved, or follow-on activity, weak oversight tends to yield overstated fulfillment claims and reduced incentives for genuinely new economic activity."
-        context_conditions:
-          - "Suppliers already trade/invest in the buyer country and outsiders lack information to verify incrementality."
-          - "Crediting rules allow retroactive approval, pre-compensation/banking, or counting follow-on work."
-          - "Projects may predate the offset programme and be incorporated later as success narratives."
-        outcome_tendencies:
-          - "Reported fulfillment overstates incremental benefit and makes effectiveness claims unreliable."
-          - "Credited projects do not reliably represent genuinely additional activity."
-        supporting_cmo_ids:
-          - 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006
-          - 04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019
-          - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006
-          - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013
-          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_013
-          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003
-          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012
-          - 20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_026
-        anchor_quotes:
-          - cmo_id: 01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006
-            quote: "just a “creative reclassification” of business transactions"
-          - cmo_id: 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013
-            quote: "FMV retroactively approved existing orders as offsets"
-        moderators:
-          - condition: "Where auditing finds uncertainty about supplier contribution and project causality, high fulfillment ratios do not imply additionality."
+          - condition: "Using non-price sanctions (e.g., blacklisting or withheld-payment) when price-pass-through from monetary penalties is a concern."
             effect: "enables"
             supporting_cmo_ids:
-              - 10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006
-        boundary_conditions: []
-        counterexamples: []
-        confidence: high
-        confidence_justification: "Many CMOs independently point to the same additionality/crediting problem (retroactive approvals, pre-compensation, follow-on work, pre-existing activity), making the pattern robust within this theme."
-      - demi_regularity_id: "PM2_DR_05"
-        statement: "In contexts where buyers allow banking, credits, transfers, or waivers across contracts, a flexible credit system tends to yield longer-horizon compliance strategies and easier clearing of obligations, while reducing transparency about what is delivered for any single procurement."
-        context_conditions:
-          - "Banking/transfer of offset credits is permitted across future sales or obligations."
-          - "Systems include credits and waivers linked to participation thresholds (bank-and-trade style)."
-          - "Policies impose (or debate) caps/time limits to preserve linkage to specific procurements."
-        outcome_tendencies:
-          - "Offset obligations extend over longer horizons and become harder to audit contract-by-contract."
-          - "Suppliers may continue placing work post-obligation to build credits for future contracts."
-        supporting_cmo_ids:
-          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014
-          - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006
-          - 11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012
-          - 01_introduction_and_overview_pdf__cmo_017
-          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017
-        anchor_quotes:
-          - cmo_id: 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014
-            quote: "countries allow vendor companies to bank offset credits"
-          - cmo_id: 01_introduction_and_overview_pdf__cmo_017
-            quote: "such purchases could be banked as offset credit."
-        moderators:
-          - condition: "Imposing time limits, transfer limits, and caps on the share satisfied via banking preserves closer coupling to current procurement."
-            effect: "weakens"
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007"
+          - condition: "Buyer-side negotiation capacity to secure and police capability-relevant, verifiable terms."
+            effect: "strengthens"
             supporting_cmo_ids:
-              - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006
-        boundary_conditions: []
-        counterexamples: []
-        confidence: medium
-        confidence_justification: "Several comparative and case CMOs describe banking/waivers increasing flexibility but reducing auditability; however, the set is thinner on quantified consequences and on when flexibility improves outcomes rather than just accounting convenience."
-      - demi_regularity_id: "PM2_DR_06"
-        statement: "In contexts where incentive design (multipliers/eligibility rules), bargaining capacity, and sanction credibility shape supplier choices, the enforcement mix tends to yield steering toward higher-valued deliverables when credible, but weak or costly sanctions can yield strategic non-compliance or reliance on reputational enforcement."
+              - "14_the_argentine_defense_industry_an_evaluation_pdf__cmo_012"
+        boundary_conditions:
+          - condition: "Penalty rates are low enough to be treated as an option to buy out obligations."
+            supporting_cmo_ids:
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015"
+              - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007"
+          - condition: "Offset delivery occurs after contract award and enforcement requires costly pursuit of large overseas contractors."
+            supporting_cmo_ids:
+              - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013"
+        counterexamples:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015"
+            note: "Reduced liquidated damages create a rational incentive to pay the penalty rather than deliver offsets."
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007"
+            note: "Penalty/guarantee structures can be treated as an alternative to substantive participation delivery."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs across different jurisdictions converge that stronger transparency + credible sanctions (including exclusion from future bids) increase compliance incentives, while also showing identifiable conditions where sanctions lose bite."
+      - demi_regularity_id: "PM2_DR_02"
+        statement: "In contexts where offsets are delivered post-award and purchaser leverage or oversight capacity is weak, the enforcement regime tends to yield reneging, partial fulfilment, or strategic default rather than full delivery."
         context_conditions:
-          - "Offset regimes use multipliers/eligibility criteria to make some activities count more (e.g., R&D, training, technology transfer)."
-          - "Buyers can specify projects and negotiate hard commitments, reducing supplier discretion."
-          - "Sanction credibility varies (high damages vs low damages; bans/blacklisting; reputational penalties)."
+          - "Offset obligations are typically discharged after contract signature, often after deliveries begin."
+          - "Asymmetric bargaining power, changing political/economic conditions, and long time horizons reduce purchaser leverage."
+          - "Enforcement is difficult in practice and costly to pursue against overseas contractors."
+          - "Penalty/guarantee terms can make default financially tolerable."
         outcome_tendencies:
-          - "Supplier effort is steered toward capability-relevant activities where incentives are aligned and enforceable."
-          - "Where sanctions are weak or treated as an option, suppliers may rationally pay penalties rather than deliver substantive participation."
+          - "Gap between promised and realised offset value."
+          - "Partial or non-fulfilment; risk suppliers elect to pay penalties instead of delivering."
         supporting_cmo_ids:
-          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003
-          - 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014
-          - 13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_018
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013
-          - 14_the_argentine_defense_industry_an_evaluation_pdf__cmo_012
-          - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015
-          - 19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007
-          - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005
-          - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013"
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_006"
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_004"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_007"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_006"
         anchor_quotes:
-          - cmo_id: 18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003
-            quote: "Offset multipliers were used to enhance the value of some particularly desirable offset activities such as R&D and training."
-          - cmo_id: 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_013"
+            quote: "there is scope for suppliers to promise offsets before the contract is signed but then to renege on their obligations later"
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_015"
             quote: "could easily elect to pay the penalty rather than discharge its offset obligations"
         moderators:
-          - condition: "High liquidated damages and non-terminable agreements raise expected non-compliance costs."
-            effect: "strengthens"
+          - condition: "High liquidated damages and non-terminable agreements raise the expected cost of default."
+            effect: "inhibits"
             supporting_cmo_ids:
-              - 12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006
-          - condition: "Where penalties are avoided to prevent import-price increases, enforcement shifts toward blacklisting or reputational incentives."
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006"
+              - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004"
+          - condition: "Specifying concrete project lists (rather than open-ended obligations) reduces ambiguity and supplier discretion."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013"
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009"
+        boundary_conditions:
+          - condition: "Agreements are structured to maximise transparency and incentives for fulfilment."
+            supporting_cmo_ids:
+              - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_005"
+        counterexamples:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_006"
+            note: "Strong formal liquidated damages are intended to enforce delivery and reduce default incentives."
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_004"
+            note: "Legally enforceable deeds and liquidated damages strengthen follow-through on planned activity."
+        confidence: "high"
+        confidence_justification: "The tendency is supported by multiple CMOs that explicitly tie post-award timing and enforcement frictions to reneging/partial fulfilment, with clear moderators showing how stronger sanctions and specificity can counteract it."
+      - demi_regularity_id: "PM2_DR_03"
+        statement: "In contexts where credit rules and oversight allow pre-existing, retroactive, or 'normal trade' activities to be credited as offsets, the enforcement regime tends to yield inflated compliance reporting and reduced additionality of delivered benefits."
+        context_conditions:
+          - "Additionality is hard to verify and outsiders lack access to proprietary data."
+          - "Crediting rules allow pre-compensations, advance/retroactive approvals, or counting follow-on work as offsets."
+          - "Indirect offsets are difficult to verify and credited work may be re-labeled, redirected, or low quality."
+        outcome_tendencies:
+          - "Reported fulfilment overstates incremental economic benefit to the purchaser."
+          - "Offset effectiveness claims and cross-country evaluations become unreliable."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_013"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_012"
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_019"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_013"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_003"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_026"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_006"
+            quote: "just a “creative reclassification” of business transactions"
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006"
+            quote: "in none of the 600 offset projects was it possible to establish with certainty"
+        moderators:
+          - condition: "Advance approval criteria, competitive bidding requirements, and continuous monitoring."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_014"
+          - condition: "Restricting banking (time limits, transfer limits, caps on satisfaction via prior credits) to preserve coupling to the current procurement."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006"
+        boundary_conditions:
+          - condition: "Eligibility criteria require offset activities to be new and competitive rather than relabeled trade flows."
+            supporting_cmo_ids:
+              - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003"
+        counterexamples:
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003"
+            note: "A stricter eligibility regime explicitly aims to prevent relabeled work, shifting incentives toward higher-valued activities."
+        confidence: "high"
+        confidence_justification: "Supported by multiple audits and conceptual accounts pointing to the same failure mode (crediting non-additional activity) and by explicit mitigation recommendations (advance criteria, monitoring, restricting banking)."
+      - demi_regularity_id: "PM2_DR_04"
+        statement: "In contexts where multipliers/credit weights and waivers are transparent and tied to priority activities, the enforcement regime tends to steer suppliers’ compliance efforts toward capability-relevant deliverables."
+        context_conditions:
+          - "Authorities use multipliers/credit weights to privilege technology transfer, training, R&D, licensing/copro, and other capability-building deliverables."
+          - "Contracts embed deliverables and use credit/waiver rules (e.g., trading participation levels against offset obligations)."
+        outcome_tendencies:
+          - "Suppliers prioritise and book offset credit in higher-valued, technology-intensive activities."
+          - "High participation can reduce offset obligations; low participation can trigger additional offsets."
+        supporting_cmo_ids:
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003"
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_018"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_014"
+          - "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_003"
+            quote: "Offset multipliers were used to enhance the value of some particularly desirable offset activities such as R&D and training."
+          - cmo_id: "18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_017"
+            quote: "When the level of NZIP exceeds 30 percent of contract value, the Ministry may waive all or part of the offset obligation."
+        moderators:
+          - condition: "High or opaque multipliers and non-cost-based crediting inflate headline values and reduce transparency about real effort."
+            effect: "reverses"
+            supporting_cmo_ids:
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_005"
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010"
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012"
+              - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_006"
+          - condition: "Capping or reducing multipliers (or evaluating them case-by-case) to limit artificial inflation."
             effect: "enables"
             supporting_cmo_ids:
-              - 09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007
-              - 06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005
-        boundary_conditions: []
-        counterexamples: []
-        confidence: medium
-        confidence_justification: "The steering logic is supported across multiple cases, but it bundles several instruments (multipliers, bargaining, and sanctions) whose individual causal contribution is not always separable in the available CMOs."
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005"
+        boundary_conditions:
+          - condition: "Multiplier valuation conventions are contested or non-transparent, making verification difficult."
+            supporting_cmo_ids:
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012"
+        counterexamples:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_012"
+            note: "Multiplier use is described as non-transparent, undermining the steering logic by weakening verifiability."
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_010"
+            note: "Credited value can be set independently of provision cost, increasing scope for inflated claims."
+        confidence: "medium"
+        confidence_justification: "Evidence supports steering effects of multipliers/waivers, but multiple CMOs also show how opacity and inflated crediting can undermine or reverse the intended incentive signal."
+      - demi_regularity_id: "PM2_DR_05"
+        statement: "In contexts where offset credits can be banked/transferred and obligations run over long horizons across multiple projects, the enforcement regime tends to reduce contract-level transparency and increase audit and evaluation difficulty."
+        context_conditions:
+          - "Banking and transfer of offset credits across future sales is permitted."
+          - "Fulfilment periods are long (multi-year) and commitments span multiple projects."
+          - "Project portfolios can remain fluid, with re-scoping and churn over time."
+        outcome_tendencies:
+          - "Obligations extend over longer horizons and become harder to audit contract-by-contract."
+          - "Headline offset percentages/values become less comparable and may not correspond to actual work delivered."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_008"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_006"
+          - "01_introduction_and_overview_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_014"
+            quote: "countries allow vendor companies to bank offset credits"
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011"
+            quote: "does therefore not necessarily correspond to the actual work offered"
+        moderators:
+          - condition: "Imposing time limits, transfer limits, and caps on the proportion of obligations satisfied via banked credits."
+            effect: "inhibits"
+            supporting_cmo_ids:
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006"
+        boundary_conditions:
+          - condition: "The buyer insists on defined project lists and concrete obligations rather than open-ended agreements."
+            supporting_cmo_ids:
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_013"
+              - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_009"
+        counterexamples:
+          - cmo_id: "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006"
+            note: "Banking is accepted but increasingly constrained to preserve linkage to current procurements."
+        confidence: "high"
+        confidence_justification: "Multiple CMOs converge that banking, long fulfilment periods, and heterogeneous accounting reduce transparency and complicate evaluation, with explicit policy constraints identified as a mitigating design."
     theme_notes:
-      - "PM2 contains extensive evidence on enforcement/crediting design (sanctions, monitoring, multipliers, banking) and on the additionality/auditability problems that arise under weak or permissive credit regimes."
-      - "Several cases and comparative sources describe policy tightening (clearer criteria, capped multipliers, restricted banking) as a response to distortions and verification challenges."
-      - "A recurring gap is separating compliance with accounting rules from substantive net benefits: higher acquittal/fulfillment can coexist with unclear additionality or inflated reported value."
+      - "Coverage: 44/109 PM2 mechanisms were found in data/cmo_statements.csv; 65 are listed under missing_cmo_ids."
+      - "Evidence concentrates on governance/crediting design and auditability; fewer CMOs trace downstream outcomes beyond compliance/valuation disputes."
+      - "Next step: reconcile missing IDs by re-running CMO consolidation or checking chunk_id alignment between proto themes and the consolidated table."
     suggested_quarto_note:
       path: "reporting/patterns/PM2.qmd"
       outline:
