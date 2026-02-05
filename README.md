@@ -11,6 +11,35 @@ This repo supports a realist evidence synthesis workflow for offsets / industria
 - Synthesis outputs (Quarto docs): `reporting/synthesis/`
 - Exploration UI:
   - CMO-Explorer: `apps/cmo-explorer`
+  - Demi-regularities Explorer: `apps/demi-regularities-explorer`
+  - Proto Mechanism Explorer: `apps/proto-mechanism-explorer`
+
+## Docker (combined Shiny apps)
+
+Docker scaffolding lives in `apps/`.
+
+Build the container:
+
+```sh
+docker build -f apps/Dockerfile -t offsets-shiny .
+```
+
+Run the container:
+
+```sh
+docker run --rm -p 8081:80 offsets-shiny
+```
+
+Or with Docker Compose:
+
+```sh
+docker compose -f apps/docker-compose.yml up --build
+```
+
+Visit:
+- `http://cmo.localhost:8081`
+- `http://demi.localhost:8081`
+- `http://proto.localhost:8081`
 
 ## Workflow (Operational)
 

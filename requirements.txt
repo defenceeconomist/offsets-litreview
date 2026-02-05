@@ -5,6 +5,8 @@ sentence-transformers
 scipy
 matplotlib
 bertopic
+umap-learn
+hdbscan
 datamapplot
 openai
 python-dotenv
@@ -12,3 +14,4 @@ plotly
 shiny
 shinywidgets
 notebook
+openai

@@ -166,6 +166,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../reporting/analysis/outcome-bertopic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outcome BERTopic Model (for Outcome Families)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../reporting/analysis/theme-by-rq-crosstab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CMO Counts: Mechanism Theme × Research Question</span></a>
   </div>
@@ -265,7 +271,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <p>CHANGE LOGGING (UPDATE EXISTING YAML CHANGE LOG)</p>
-<p>Append a new entry to <code>data/mechanism_themes/proto_themes_changelog.yml</code> for every change you make:</p>
+<p>The change log file contains a history of many kinds of theme edits (e.g., <code>new_theme</code>, <code>merge</code>, <code>no_change</code>, <code>assignment</code>).</p>
+<p>You MUST preserve all existing entries exactly as they are, and append new entry/entries for every change you make in this run:</p>
 <ul>
 <li>If moved theme-to-theme: <code>change_type: assignment</code></li>
 <li>If moved to ambiguous: <code>change_type: ambiguous</code></li>
@@ -278,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>proto_mechanism_themes: - theme_id: PM1 theme_label: “Label” mechanism_explanation: “Explanation” mechanisms: - id: MECH_001 text: “Full mechanism statement” rationale: “Why it fits this theme’s causal process.”</p>
 <p>ambiguous_mechanisms: - id: MECH_031 text: “Full mechanism statement” possible_themes: [PM2, PM4] explanation: “Why assignment is ambiguous; what evidence would resolve it.”</p>
 <p>Document 2 MUST match this schema:</p>
-<p>change_log: - change_id: CHG_123 change_type: assignment | ambiguous theme_id: PM7 | AMBIGUOUS mechanism_id: MECH_022 summary: “Moved MECH_022 from PM3 to PM7.” rationale: “Mechanism describes X causal process; PM7 explicitly captures X, whereas PM3 captures Y.”</p>
+<p>change_log: - change_id: CHG_123 change_type: assignment | ambiguous | new_theme | merge | no_change theme_id: PM7 | AMBIGUOUS mechanism_id: MECH_022 # present for mechanism-level changes; may be absent for theme-level entries (e.g., merges) summary: “Moved MECH_022 from PM3 to PM7.” rationale: “Mechanism describes X causal process; PM7 explicitly captures X, whereas PM3 captures Y.”</p>
 <p>Do not include any commentary outside the TWO YAML documents.</p>
 
 

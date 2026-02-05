@@ -131,6 +131,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../reporting/analysis/outcome-bertopic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outcome BERTopic Model (for Outcome Families)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../reporting/analysis/theme-by-rq-crosstab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CMO Counts: Mechanism Theme × Research Question</span></a>
   </div>
@@ -179,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Step 5 — Evidence traceability and confidence - Every demi-regularity MUST include supporting_cmo_ids (chunk_id list). - Where possible, include 1–2 short “anchor quotes” drawn from supporting_evidence fields of the linked CMOs (do not exceed ~25 words per quote). - Provide confidence per demi-regularity (low|medium|high) based on: - number and diversity of supporting CMOs - internal consistency (few/clear counterexamples vs many/unclear) - source confidence ratings (if provided) and evidence_type (if present) - If evidence is mainly theory_model or otherwise non-empirical, reflect that in confidence_justification (do not dismiss it; just be explicit).</p>
 <p>IMPORTANT RULES - Do not invent facts beyond the provided CMO records. - Do not “average away” contradictions: surface them as moderators/counterexamples. - Prefer concise, realist-style causal phrasing over narrative prose. - Keep chunk_id values EXACT; do not edit or shorten them.</p>
 <p>OUTPUT FORMAT (STRICT YAML ONLY) Output valid YAML only (no markdown, no commentary).</p>
-<p>Schema: demi_regularities_by_theme: - theme_id: PM1 theme_label: “…” mechanism_explanation: “…” cmo_ids_in_theme: [chunk_id_1, chunk_id_2] missing_cmo_ids: [chunk_id_x] demi_regularities: - demi_regularity_id: “PM1_DR_01” statement: “In contexts where …, … tends to yield ….” context_conditions: - “…” outcome_tendencies: - “…” supporting_cmo_ids: [chunk_id_1, chunk_id_2] anchor_quotes: - cmo_id: chunk_id_1 quote: “…” moderators: - condition: “…” effect: “strengthens” | “weakens” | “reverses” | “enables” | “inhibits” supporting_cmo_ids: [chunk_id_2] boundary_conditions: - condition: “…” supporting_cmo_ids: [chunk_id_3] counterexamples: - cmo_id: chunk_id_4 note: “Does not fit because …” confidence: low | medium | high confidence_justification: “…” theme_notes: - “1–3 bullets on coverage/gaps and what to look for next.” suggested_quarto_note: path: “reporting/patterns/PM1.qmd” outline: - “## Demi-regularities” - “## Moderators and boundary conditions” - “## Linked CMO IDs”</p>
+<p>Schema: demi_regularities_by_theme: - theme_id: PM1 theme_label: “…” mechanism_explanation: “…” cmo_ids_in_theme: [chunk_id_1, chunk_id_2] missing_cmo_ids: [chunk_id_x] demi_regularities: - demi_regularity_id: “PM1_DR_01” statement: “In contexts where …, … tends to yield ….” context_conditions: - “…” outcome_tendencies: - “…” supporting_cmo_ids: [chunk_id_1, chunk_id_2] anchor_quotes: - cmo_id: chunk_id_1 quote: “…” moderators: - condition: “…” effect: “strengthens” | “weakens” | “reverses” | “enables” | “inhibits” supporting_cmo_ids: [chunk_id_2] boundary_conditions: - condition: “…” supporting_cmo_ids: [chunk_id_3] counterexamples: - cmo_id: chunk_id_4 note: “Does not fit because …” confidence: low | medium | high confidence_justification: “…” theme_notes: - “1–3 bullets on coverage/gaps and what to look for next.”</p>
 <p>YAML CHECKLIST - Output YAML only. - Use spaces for indentation (2 spaces). - Quote strings containing punctuation. - Ensure every list item starts with “-”.</p>
 <p>NOW DO THE PATTERNING FOR THE PROVIDED INPUTS AND OUTPUT ONLY YAML.</p>
 

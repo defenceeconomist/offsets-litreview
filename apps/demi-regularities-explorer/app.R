@@ -5,6 +5,31 @@ library(htmltools)
 library(tibble)
 library(yaml)
 
+nav_bar <- function(active = "demi") {
+  nav_base <- Sys.getenv("SHINY_NAV_BASE", "localhost:8081")
+  nav_url <- function(subdomain) {
+    paste0("http://", subdomain, ".", nav_base)
+  }
+  is_active <- function(name) if (identical(active, name)) "active" else ""
+
+  tags$nav(
+    class = "navbar navbar-default",
+    tags$div(
+      class = "container-fluid",
+      tags$div(
+        class = "navbar-header",
+        tags$span(class = "navbar-brand", "Offsets Explorers")
+      ),
+      tags$ul(
+        class = "nav navbar-nav",
+        tags$li(class = is_active("cmo"), tags$a(href = nav_url("cmo"), "CMO Explorer")),
+        tags$li(class = is_active("demi"), tags$a(href = nav_url("demi"), "Demi-regularities")),
+        tags$li(class = is_active("proto"), tags$a(href = nav_url("proto"), "Proto Mechanisms"))
+      )
+    )
+  )
+}
+
 ui <- fluidPage(
   tags$head(
     tags$link(
@@ -146,6 +171,7 @@ ui <- fluidPage(
       )
     )
   ),
+  nav_bar("demi"),
   div(
     class = "demi-explorer",
     div(class = "demi-title", "Demi-Regularities Explorer"),

@@ -111,12 +111,6 @@ demi_regularities_by_theme:
         confidence_justification: "..."
     theme_notes:
       - "1–3 bullets on coverage/gaps and what to look for next."
-    suggested_quarto_note:
-      path: "reporting/patterns/PM1.qmd"
-      outline:
-        - "## Demi-regularities"
-        - "## Moderators and boundary conditions"
-        - "## Linked CMO IDs"
 
 YAML CHECKLIST
 - Output YAML only.

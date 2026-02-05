@@ -164,6 +164,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../reporting/analysis/outcome-bertopic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outcome BERTopic Model (for Outcome Families)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../reporting/analysis/theme-by-rq-crosstab.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">CMO Counts: Mechanism Theme × Research Question</span></a>
   </div>
@@ -295,19 +301,19 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$n_cmo_rows
-[1] 388
+[1] 740
 
 $n_themes
 [1] 81
 
 $n_unmapped_theme_chunk_ids
-[1] 1
+[1] 3
 
 $n_unmapped_rq_chunk_ids
 [1] 0
 
 $n_multi_theme_chunk_ids
-[1] 11</code></pre>
+[1] 1</code></pre>
 </div>
 </div>
 <section id="cross-tab" class="level2" data-number="1">
@@ -340,181 +346,361 @@ $n_multi_theme_chunk_ids
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">PM34</td>
-<td style="text-align: left;">Capability gains not self-sustaining</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">34</td>
-<td style="text-align: right;">20</td>
+<td style="text-align: left;">PM2</td>
+<td style="text-align: left;">Compliance shaped by incentives and monitoring</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">75</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">133</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">PM36</td>
 <td style="text-align: left;">Illiberal contracting builds cross-border ties</td>
 <td style="text-align: right;">8</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: right;">11</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">17</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">61</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM54</td>
+<td style="text-align: left;">Technology acquisition via licensed production</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM34</td>
+<td style="text-align: left;">Capability gains not self-sustaining</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">84</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">PM15</td>
 <td style="text-align: left;">Flexibility reduces mandate diseconomies</td>
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">58</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM2</td>
-<td style="text-align: left;">Compliance shaped by incentives and monitoring</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">41</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">52</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM7</td>
-<td style="text-align: left;">Training expands local skill supply</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">20</td>
 <td style="text-align: right;">9</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">48</td>
+<td style="text-align: right;">82</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">PM17</td>
 <td style="text-align: left;">Administrative burden and rent-seeking</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
+<td style="text-align: right;">47</td>
 <td style="text-align: right;">22</td>
-<td style="text-align: right;">17</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">39</td>
+<td style="text-align: right;">69</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM1</td>
-<td style="text-align: left;">Legitimation through economic framing</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: left;">PM46</td>
+<td style="text-align: left;">Absorptive capacity conditions outcomes</td>
 <td style="text-align: right;">2</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">22</td>
+<td style="text-align: right;">42</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">PM19</td>
 <td style="text-align: left;">Supplier coaching and reputational certification</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">15</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">4</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">39</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">PM8</td>
 <td style="text-align: left;">Transferability and contextual fit</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">8</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">33</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">PM1</td>
+<td style="text-align: left;">Legitimation through economic framing</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">PM3</td>
 <td style="text-align: left;">Cost pass-through via pricing</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM10</td>
+<td style="text-align: left;">Offsets as supplier differentiator</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">22</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">PM21</td>
+<td style="text-align: left;">Market access conditioned on reciprocity</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">PM4</td>
 <td style="text-align: left;">Offsets crowd out civilian resources</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">11</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM46</td>
-<td style="text-align: left;">Absorptive capacity conditions outcomes</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">11</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM54</td>
-<td style="text-align: left;">Technology acquisition via licensed production</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
 <td style="text-align: right;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM21</td>
-<td style="text-align: left;">Market access conditioned on reciprocity</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">PM30</td>
 <td style="text-align: left;">Second-best offsets distort allocation</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">11</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">13</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">PM5</td>
 <td style="text-align: left;">External finance expands resource pool</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
 <td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM14</td>
+<td style="text-align: left;">Rent extraction via offset requirements</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM38</td>
+<td style="text-align: left;">Firms build offset-management capacity</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM66</td>
+<td style="text-align: left;">Offsets as import compensation</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM58</td>
+<td style="text-align: left;">Complex governance raises transaction costs</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM23</td>
+<td style="text-align: left;">Sourcing persists only when viable</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM65</td>
+<td style="text-align: left;">Partnership packages build durable collaboration</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM62</td>
+<td style="text-align: left;">Early partnership enables high-tech roles</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM74</td>
+<td style="text-align: left;">Disclosure constraints obscure evaluation</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM11</td>
+<td style="text-align: left;">Domestic industry influence on offsets</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM10</td>
-<td style="text-align: left;">Offsets as supplier differentiator</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">PM9</td>
 <td style="text-align: left;">Barter eases constraints, reduces transparency</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM51</td>
+<td style="text-align: left;">Offset reciprocity and supply-chain risk</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM52</td>
+<td style="text-align: left;">Additionality enforced through credit rules</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM88</td>
+<td style="text-align: left;">Defence bears economic-policy cost burden</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM22</td>
+<td style="text-align: left;">Offsets reveal local supplier capability</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM28</td>
+<td style="text-align: left;">Exporter networks reduce market entry costs</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM37</td>
+<td style="text-align: left;">Buyer pool expansion loosens controls</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM50</td>
+<td style="text-align: left;">Offset design to protect value-for-money</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM86</td>
+<td style="text-align: left;">Buyer coalitions increase bargaining leverage</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM87</td>
+<td style="text-align: left;">Capability concentrates offset allocation</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UNMAPPED_THEME</td>
+<td style="text-align: left;">Unmapped theme</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">5</td>
@@ -530,6 +716,86 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">4</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">PM26</td>
+<td style="text-align: left;">Buyback hostage aligns incentives</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM39</td>
+<td style="text-align: left;">Hidden injuries from offset competition</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM41</td>
+<td style="text-align: left;">Economic priorities override security restraint</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM45</td>
+<td style="text-align: left;">Security urgency overrides offset aims</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM49</td>
+<td style="text-align: left;">Second-best import offset rules</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM57</td>
+<td style="text-align: left;">Export support builds offset capacity</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM89</td>
+<td style="text-align: left;">Political reversals raise lifecycle costs</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM12</td>
+<td style="text-align: left;">Development-oriented indirect offset design</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">PM20</td>
 <td style="text-align: left;">Alliance incentives via offset waivers</td>
 <td style="text-align: right;">0</td>
@@ -540,16 +806,6 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">3</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM23</td>
-<td style="text-align: left;">Sourcing persists only when viable</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">PM24</td>
 <td style="text-align: left;">Indirect offsets stimulate targeted exports</td>
 <td style="text-align: right;">0</td>
@@ -559,22 +815,32 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">3</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">PM14</td>
-<td style="text-align: left;">Rent extraction via offset requirements</td>
+<tr class="even">
+<td style="text-align: left;">PM48</td>
+<td style="text-align: left;">Institutional path dependence in offset policy</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM6</td>
+<td style="text-align: left;">Additional trade yields net gains</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM25</td>
+<td style="text-align: left;">Opacity enables price discrimination</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM22</td>
-<td style="text-align: left;">Offsets reveal local supplier capability</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">2</td>
@@ -590,16 +856,6 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PM28</td>
-<td style="text-align: left;">Exporter networks reduce market entry costs</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">PM33</td>
 <td style="text-align: left;">Export subsidies offset scale gains</td>
 <td style="text-align: right;">0</td>
@@ -609,39 +865,9 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">PM35</td>
 <td style="text-align: left;">Offsets displace rather than add trade</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM37</td>
-<td style="text-align: left;">Buyer pool expansion loosens controls</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM38</td>
-<td style="text-align: left;">Firms build offset-management capacity</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM39</td>
-<td style="text-align: left;">Hidden injuries from offset competition</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">2</td>
@@ -655,46 +881,6 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM45</td>
-<td style="text-align: left;">Security urgency overrides offset aims</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM49</td>
-<td style="text-align: left;">Second-best import offset rules</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM50</td>
-<td style="text-align: left;">Offset design to protect value-for-money</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM52</td>
-<td style="text-align: left;">Additionality enforced through credit rules</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">2</td>
@@ -720,86 +906,6 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM57</td>
-<td style="text-align: left;">Export support builds offset capacity</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM58</td>
-<td style="text-align: left;">Complex governance raises transaction costs</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM6</td>
-<td style="text-align: left;">Additional trade yields net gains</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM61</td>
-<td style="text-align: left;">Offset dependence reduces design capability</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM62</td>
-<td style="text-align: left;">Early partnership enables high-tech roles</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM66</td>
-<td style="text-align: left;">Offsets as import compensation</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM70</td>
-<td style="text-align: left;">Offsets excluded from supplier selection</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM71</td>
-<td style="text-align: left;">Subcontracting buy-in reduces influence</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">PM77</td>
 <td style="text-align: left;">Heterogeneity limits generalization</td>
 <td style="text-align: right;">0</td>
@@ -810,26 +916,36 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PM11</td>
-<td style="text-align: left;">Domestic industry influence on offsets</td>
+<td style="text-align: left;">PM82</td>
+<td style="text-align: left;">Inconsistent definitions impede measurement</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM12</td>
-<td style="text-align: left;">Development-oriented indirect offset design</td>
+<td style="text-align: left;">PM83</td>
+<td style="text-align: left;">Countertrade conserves foreign exchange</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">PM91</td>
+<td style="text-align: left;">Quality constraints shift offset form</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">PM13</td>
 <td style="text-align: left;">Offsets shift competition to bundled content</td>
 <td style="text-align: right;">0</td>
@@ -839,7 +955,7 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">PM18</td>
 <td style="text-align: left;">Objective ambiguity undermines evaluation</td>
 <td style="text-align: right;">0</td>
@@ -849,27 +965,7 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">PM25</td>
-<td style="text-align: left;">Opacity enables price discrimination</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">PM26</td>
-<td style="text-align: left;">Buyback hostage aligns incentives</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">PM29</td>
 <td style="text-align: left;">Bundled contracting reduces transaction costs</td>
 <td style="text-align: right;">0</td>
@@ -879,7 +975,7 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">PM31</td>
 <td style="text-align: left;">Labour rents drive opposition to offsets</td>
 <td style="text-align: right;">0</td>
@@ -889,19 +985,9 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">PM32</td>
 <td style="text-align: left;">Offset competition redistributes rents</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM41</td>
-<td style="text-align: left;">Economic priorities override security restraint</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -950,51 +1036,11 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PM48</td>
-<td style="text-align: left;">Institutional path dependence in offset policy</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM51</td>
-<td style="text-align: left;">Offset reciprocity and supply-chain risk</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">PM55</td>
 <td style="text-align: left;">Subsidiary entry then consolidation</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM59</td>
-<td style="text-align: left;">Additionality undermined by baseline credit</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM60</td>
-<td style="text-align: left;">Offsets justify imports despite inefficiency</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -1020,68 +1066,8 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM65</td>
-<td style="text-align: left;">Partnership packages build durable collaboration</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM67</td>
-<td style="text-align: left;">Transparency reforms target inflated credits</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM68</td>
-<td style="text-align: left;">Banking limits preserve procurement linkage</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM69</td>
-<td style="text-align: left;">Enforcement choice trades off price effects</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM72</td>
-<td style="text-align: left;">Complexity hinders auditability</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PM73</td>
-<td style="text-align: left;">Policy relaxation after poor returns</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM74</td>
-<td style="text-align: left;">Disclosure constraints obscure evaluation</td>
+<td style="text-align: left;">PM7</td>
+<td style="text-align: left;">Training expands local skill supply</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -1100,28 +1086,8 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PM76</td>
-<td style="text-align: left;">Compliance risk increases prices</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">PM78</td>
 <td style="text-align: left;">Exports concentrate in incumbents</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PM79</td>
-<td style="text-align: left;">Evaluation uncertainty weakens value claims</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -1150,8 +1116,48 @@ $n_multi_theme_chunk_ids
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UNMAPPED_THEME</td>
-<td style="text-align: left;">Unmapped theme</td>
+<td style="text-align: left;">PM84</td>
+<td style="text-align: left;">Countertrade substitutes for forward markets</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM85</td>
+<td style="text-align: left;">Lag uncertainty hinders evaluation</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM90</td>
+<td style="text-align: left;">Political side-payments sway procurement</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PM92</td>
+<td style="text-align: left;">Security externalities from diffusion</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PM93</td>
+<td style="text-align: left;">Credibility loss from inconsistency</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -1174,10 +1180,6 @@ $n_multi_theme_chunk_ids
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 90%">
-<col style="width: 9%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">chunk_id</th>
@@ -1187,46 +1189,6 @@ $n_multi_theme_chunk_ids
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">05_arms_trade_as_illiberal_trade_pdf__cmo_014</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_004</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_005</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_005</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_006</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_007</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_008</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_010</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_011</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09_nordic_offset_policies_changes_and_challenges_pdf__cmo_012</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_009</td>
 <td style="text-align: right;">2</td>
 </tr>
 </tbody>
