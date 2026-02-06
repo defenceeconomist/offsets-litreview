@@ -1,0 +1,42 @@
+sources:
+  cmo_files:
+  - data/cmo/arms_trade_offsets_chapters.yml
+  - data/cmo/economic-offsets.yml
+  bibtex: references/offsets.bib
+pdf_to_bibtex_key:
+  01-do-offsets-mitigate-or-magnify-the-military-burden.pdf: dumasOffsetsMitigateMagnify
+  01-introduction-and-overview.pdf: martinIntroductionOverview1996
+  02-countertrade-and-offsets-an-overview-of-theory-and-evidence.pdf: martinCounterTradeOffsets1996
+  02-using-procurement-offsets-as-an-economic-development-strategy.pdf: taylorUsingProcurementOffsets2004
+  03-mandatory-defense-offsets-conceptual-foundations.pdf: markowskiMandatoryDefenseOffsetsconceptual2004
+  03-the-defence-offsets-policy-in-australia.pdf: markowskiDefenceOffsetsPolicy1996
+  04-economic-aspects-of-arms-trade-offsets.pdf: brauerEconomicAspectsArms2004
+  04-offsets-and-weapons-procurement-the-belgium-experience.pdf: struysOffsetsWeaponsProcurement1996
+  05-arms-trade-as-illiberal-trade.pdf: markusenArmsTradeIlliberal
+  05-in-search-of-a-strategy-the-evolution-of-canadian-defence-industrial-and-regional-benefits-policy.pdf: fergussonSearchStrategyEvolution1996
+  06-defense-offsets-policy-versus-pragmatism.pdf: matthewsDefenseOffsetsPolicy2004
+  06-offsets-and-french-arms-exports.pdf: 06offsetsandfrencharmsexports
+  07-comparing-british-and-german-offset-strategies.pdf: mawdsleyComparingBritishGerman2004
+  07-offset-benefits-in-greek-defence-procurement-policy-developments-and-some-empirical-evidence.pdf: antonakisOffsetBenefitsGreek1996
+  08-defense-industrialisation-through-offsets-the-case-of-japan.pdf: chinworthDefenseIndustrialisationOffsets1996
+  08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf: hartleyOffsetsJointStrike2004
+  09-nordic-offset-policies-changes-and-challenges.pdf: hagelinNordicOffsetPolicies2004
+  09-saudi-arabia-and-offsets.pdf: al-ghrairSaudiArabiaOffsets1996
+  10-evaluating-defense-offsets-the-experience-in-finland-and-sweden.pdf: skonsEvaluatingDefenseOffsets2004
+  10-the-teeth-of-little-tigers.pdf: chengTeethLittleTigers1996
+  11-from-offsets-to-industrial-cooperation-spain-s-changing-strategies-as-an-arms-importer.pdf: molas-gallartOffsetsIndustrialCooperation1996
+  11-offsets-in-belgium-between-scylla-and-charybdis.pdf: struysOffsetsBelgiumScylla2004
+  12-the-defense-industry-in-poland-an-offsets-based-revival.pdf: markowskiDefenseIndustryPoland2004
+  12-us-swiss-f-5-transaction-and-the-evolution-of-swiss-offset-policy.pdf: udisUSSwissF51996
+  13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf: perlo-freemanOffsetsDevelopmentBrazilian2004
+  13-the-uk-experience-with-offsets.pdf: martinUKExperienceOffsets1996
+  14-the-argentine-defense-industry-an-evaluation.pdf: scheetzArgentineDefenseIndustry2004
+  14-us-offset-policy.pdf: udisUSOffsetPolicy1996
+  15-the-business-of-offset-a-practitioner-s-perspective-case-study-israel.pdf: redlichBusinessOffsetPractitioners1996
+  15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf: baskaranRoleOffsetsIndian2004
+  16-concluding-remarks.pdf: martinConcludingRemarks1996
+  16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf: chinworthOffsetPoliciesTrends2004
+  17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf: bitzingerOffsetsDefenseIndustrialization2004
+  18-defense-offsets-in-australia-and-new-zealand.pdf: markowskiDefenseOffsetsAustralia2004
+  19-defense-industrial-participation-the-south-african-experience.pdf: dunneDefenceIndustrialParticipation2004
+  20-defense-offsets-and-regional-development-in-south-africa.pdf: hainesDefenseOffsetsRegional2004
