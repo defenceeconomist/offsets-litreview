@@ -1,0 +1,52 @@
+demi_regularities_by_theme:
+  - theme_id: "PM82"
+    theme_label: "Inconsistent definitions impede measurement"
+    mechanism_explanation: "When countertrade and offsets lack a consistent lexicon, similar reciprocal transactions are classified differently, undermining comparability and making prevalence estimates unreliable."
+    cmo_ids_in_theme:
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_001"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_003"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM82_DR_01"
+        statement: "In contexts where terminology for countertrade and offsets is inconsistent across countries and authors, inconsistent definitions and lexicons tends to yield measurement and comparability problems because similar reciprocal transactions are classified differently."
+        context_conditions:
+          - "Countertrade and offset terminology varies across jurisdictions and sources."
+          - "Analysts and officials use inconsistent classification rules."
+        outcome_tendencies:
+          - "Prevalence estimates and pattern comparisons are approximate and unreliable for evaluation."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_001"
+            quote: "often blurred by this lack of a consistent lexicon"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence synthesis CMO explicitly states that inconsistent lexicons blur definitions and degrade measurement; it is largely descriptive rather than empirically measured."
+      - demi_regularity_id: "PM82_DR_02"
+        statement: "In contexts where offset arrangements are introduced with unclear rules and parties lack shared definitions of what counts as offsets, inconsistent definitions and lexicons tends to yield administrative confusion, uneven implementation, and inconsistent compliance expectations that hinder evaluation."
+        context_conditions:
+          - "Offset rules are unclear and definitions are ambiguous (e.g., countertrade versus local content)."
+        outcome_tendencies:
+          - "Administrative confusion and uneven implementation occur, complicating management and evaluation."
+        supporting_cmo_ids:
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "03_the_defence_offsets_policy_in_australia_pdf__cmo_003"
+            quote: "confusion ensued as to what 'offsets' were"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a direct administrative consequence (confusion and inconsistent understanding) arising from ambiguous offset definitions."
+    theme_notes:
+      - "Coverage: all 2 PM82 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence links definitional inconsistency to both measurement/comparability issues and to practical implementation confusion when rules are introduced without clear shared definitions."
+      - "This theme is methodological/administrative; it implies that policy evaluation needs explicit operational definitions of offset forms."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM82.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

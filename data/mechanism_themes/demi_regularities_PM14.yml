@@ -1,0 +1,96 @@
+demi_regularities_by_theme:
+  - theme_id: "PM14"
+    theme_label: "Rent extraction via offset requirements"
+    mechanism_explanation: "Offset policy compels suppliers to transfer economic activity domestically, extracting rents from the price margin and enabling governments to pursue multiple objectives through procurement."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_010"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_002"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_003"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_008"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_018"
+      - "14_us_offset_policy_pdf__cmo_003"
+      - "14_us_offset_policy_pdf__cmo_013"
+      - "14_us_offset_policy_pdf__cmo_024"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM14_DR_01"
+        statement: "In contexts where buyers have bargaining power in oligopolistic high-technology markets and pursue industrial-policy goals beyond price, rent extraction via offset requirements tends to yield procurement-linked domestic industrial participation (jobs, orders, technology/market access) rather than only lower base prices."
+        context_conditions:
+          - "Purchasers have bargaining power in large procurements and suppliers face concentrated/oligopolistic market structures."
+          - "Governments pursue multiple objectives (employment, technology acquisition, market access) beyond allocative efficiency."
+        outcome_tendencies:
+          - "Industrial participation requirements are built into contracts to secure domestic activity and spillover benefits."
+          - "Offset objectives broaden to include technology transfer and investment/buyback rather than pure price discounting."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002"
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_010"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_002"
+          - "14_us_offset_policy_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_002"
+            quote: "Governments use offset policy because it is a convenient way to extract rent and to achieve multiple objectives."
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_002"
+            quote: "the main goal is the achievement of important cyclical macro-economic advantages"
+        moderators:
+          - condition: "When offset terms specify explicit counterpurchase/spend shares for domestic industry, the flow of domestic orders becomes more direct and salient."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "06_offsets_and_french_arms_exports_pdf__cmo_008"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs explicitly link offsets to rent extraction/bargaining in oligopolistic markets and describe broadened non-price objectives (employment, technology transfer, investment/buyback)."
+      - demi_regularity_id: "PM14_DR_02"
+        statement: "In contexts where buyers can condition award decisions on offset terms and control offset-crediting details, rent extraction via offset requirements tends to yield expanded (or above-headline) commitments as suppliers concede additional economic activities to secure market access."
+        context_conditions:
+          - "Procurement selection can be conditioned on wider economic commitments (offsets) rather than only technical/price criteria."
+          - "Buyers retain control over which transactions receive offset credit and on what terms."
+        outcome_tendencies:
+          - "Offset packages include additional compensatory activities beyond the core sale."
+          - "Realized commitments can exceed the nominal offset percentage agreed at the headline level."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_003"
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_018"
+          - "14_us_offset_policy_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_013"
+            quote: "extract a level of purchases by the seller which substantially exceeded 30 per cent."
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_003"
+            quote: "a certain degree of leverage over the contractor"
+        moderators:
+          - condition: "When governments explicitly articulate domestic-development priorities during negotiations, their perceived leverage over offset and licensing terms increases."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_018"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs across cases describe conditional award leverage and buyer control of offset crediting translating into expanded commitments, including a concrete example of realized commitments exceeding a negotiated headline percentage."
+      - demi_regularity_id: "PM14_DR_03"
+        statement: "In contexts where purchasing jurisdictions seek reciprocity from trading partners that require offsets, rent extraction via offset requirements tends to yield diffusion of offset-credit practices to sub-national procurement as authorities insist on offset credit and allocate it to local firms."
+        context_conditions:
+          - "Purchasers buy abroad from countries that require offsets on their own procurements."
+          - "Sub-national authorities can insist on offset credit and retain discretion to allocate credits to in-jurisdiction firms."
+        outcome_tendencies:
+          - "Offset-credit practices emerge at sub-national levels, extending rent-extraction logic beyond national defence procurement."
+        supporting_cmo_ids:
+          - "14_us_offset_policy_pdf__cmo_024"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_024"
+            quote: "the State of Maryland began to insist that offset credit be provided to it"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The diffusion-to-subnational mechanism is supported by a specific high-confidence case, but evidence is limited to a small number of instances rather than broad comparative coverage."
+    theme_notes:
+      - "Coverage: all 9 PM14 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The dominant pattern emphasizes offsets as a bargaining/rent-extraction instrument used to pursue multiple non-price objectives (employment, technology transfer, investment, market access)."
+      - "Evidence is stronger on buyer leverage and objective expansion than on systematic measurement of net welfare effects or distributional consequences."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM14.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM33"
+    theme_label: "Export subsidies offset scale gains"
+    mechanism_explanation: "When exports are subsidized, taxpayers finance production, offsetting or reversing unit-cost savings from scale economies."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_012"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_017"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM33_DR_01"
+        statement: "In contexts where arms exports are justified by claims of scale-economy unit-cost savings but export promotion involves substantial taxpayer subsidies, export subsidies offsetting scale gains tends to yield increased taxpayer burdens that offset or reverse any unit-cost savings from longer production runs."
+        context_conditions:
+          - "Arms exports are promoted with claims of longer production runs lowering unit costs."
+          - "Export support involves substantial public subsidies."
+        outcome_tendencies:
+          - "Taxpayer burdens increase rather than fall through scale-economy savings."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_012"
+            quote: "US taxpayer subsidies of US arms exports amounted to nearly $8 billion"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO provides a subsidy magnitude and links it to the argument that subsidies can offset scale-economy claims, but does not provide multi-case causal tracing within this theme."
+      - demi_regularity_id: "PM33_DR_02"
+        statement: "In contexts where employment generation via offsets depends on subsidising domestic production to match incumbent supplier costs, export subsidies offsetting scale gains tends to yield job creation at considerable public cost with uncertain net efficiency and long-run employment effects."
+        context_conditions:
+          - "Domestic production is higher-cost than incumbent suppliers absent subsidy."
+          - "Offsets aim to generate employment and sustain production domestically."
+        outcome_tendencies:
+          - "Jobs are created but at high fiscal burden and with uncertain net employment effects."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_017"
+            quote: "only at considerable cost to Spanish public funds"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO directly links subsidy needs to job creation at high public cost, but broader comparative evidence on net effects is limited within this theme."
+    theme_notes:
+      - "Coverage: all 2 PM33 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence emphasizes that scale-economy benefits from exports can be offset by subsidy burdens and that employment outcomes may be expensive per job when subsidisation is required."
+      - "More empirical cost-effectiveness evidence would be needed to characterize net welfare impacts beyond illustrative subsidy claims."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM33.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

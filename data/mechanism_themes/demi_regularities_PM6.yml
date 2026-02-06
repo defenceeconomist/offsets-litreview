@@ -1,0 +1,63 @@
+demi_regularities_by_theme:
+  - theme_id: "PM6"
+    theme_label: "Additional trade yields net gains"
+    mechanism_explanation: "Counterpurchase that generates genuinely additional exports creates new revenue streams and supports employment."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_010"
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_005"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM6_DR_01"
+        statement: "In contexts where counterpurchase obligations generate genuinely additional export sales (rather than displacing existing exports or offering lower profitability), additional trade via counterpurchase tends to yield increased revenue inflows (especially hard currency) and productive employment that partially mitigates the economic burden of military procurement."
+        context_conditions:
+          - "Counterpurchase is used to compensate for procurement costs via export expansion and revenue inflows."
+          - "Offset-linked exports are additional (\"new activity\") relative to baseline exports."
+        outcome_tendencies:
+          - "Increased export revenues, including hard-currency inflows."
+          - "Support for productive civilian employment and partial mitigation of procurement’s negative economic impacts."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_010"
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_010"
+            quote: "counterpurchase offsets only mitigate the negative economic impacts of military procurement to the extent that they add to the inflow of revenue"
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003"
+            quote: "the obligated exports of b must be a “new activity,” i.e., additional"
+        moderators:
+          - condition: "When additionality is explicitly specified as a requirement for compliance, the likelihood that counterpurchase yields net gains increases."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_003"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence CMOs explicitly condition benefits on additionality and describe the intended revenue and employment mechanism, including a definition of offset-linked exports as 'new activity'."
+      - demi_regularity_id: "PM6_DR_02"
+        statement: "In contexts where counterpurchase obligations are implemented through large commodity/raw-material purchasing commitments tied to contract value, additional trade via counterpurchase tends to yield increased commodity exports and reduced net payment for the importer via reciprocal demand created by the arms sale package."
+        context_conditions:
+          - "Contracts include counterpurchase obligations to buy commodities/raw materials from the purchasing economy."
+          - "Counterpurchase shares are substantial relative to contract value."
+        outcome_tendencies:
+          - "Commodity exports to the seller (or nominated buyers) increase as part of the arms deal."
+          - "The purchasing state treats reciprocal demand as partially offsetting contract value."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_005"
+            quote: "counterpurchase raw materials for 50% of the contract value"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a concrete example of commodity counterpurchase shares tied to contract value and describes reciprocal procurement as the compliance pathway."
+    theme_notes:
+      - "Coverage: all 3 PM6 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The key boundary implied by the evidence is additionality: net gains depend on whether counterpurchase creates genuinely new export revenue and employment rather than reallocation."
+      - "Evidence includes both a conceptual additionality requirement and a concrete commodity-counterpurchase implementation example."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM6.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

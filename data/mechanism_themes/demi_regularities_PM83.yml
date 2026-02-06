@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM83"
+    theme_label: "Countertrade conserves foreign exchange"
+    mechanism_explanation: "When hard-currency reserves are scarce, governments mandate countertrade to conserve foreign exchange by requiring reciprocal purchasing and/or export generation alongside imports."
+    cmo_ids_in_theme:
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_002"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_012"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM83_DR_01"
+        statement: "In contexts where importing countries face scarce hard-currency reserves or constraints on hard-currency payments, mandating countertrade to conserve foreign exchange tends to yield continued imports alongside reciprocal purchasing and export-generation requirements intended to protect foreign-exchange reserves."
+        context_conditions:
+          - "Hard-currency reserves are small and hard-currency payments are constrained."
+          - "Governments mandate countertrade as a policy instrument."
+        outcome_tendencies:
+          - "Imports proceed while reciprocal transactions are used to manage hard-currency constraints and potentially generate additional exports."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_002"
+            quote: "it protects the often small foreign exchange reserves"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence synthesis CMO explicitly links scarce foreign exchange to mandated countertrade as a conservation strategy and describes the intended import/reciprocal-transaction outcome."
+      - demi_regularity_id: "PM83_DR_02"
+        statement: "In contexts where offsets allow deferred counter-sales and local manufacturing obligations after contract signature, countertrade as foreign-exchange conservation tends to yield shifted timing and composition of payments (later counter-payments and domestic employment) that reduce net foreign-currency burden over time and ease balance-of-payments pressures."
+        context_conditions:
+          - "Offset execution can occur after contract signature via deferred counter-sales or local manufacturing obligations."
+          - "Buyers prioritize reducing foreign-currency outflows over time."
+        outcome_tendencies:
+          - "Payment burdens are shifted over time and partially compensated through later counter-payments and domestic employment."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_012"
+            quote: "reduction of foreign currency payments"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO describes deferred counter-sales and manufacturing obligations as mechanisms for reducing foreign-currency payments over time, consistent with balance-of-payments easing logic."
+    theme_notes:
+      - "Coverage: all 2 PM83 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a core foreign-exchange conservation rationale (imports proceed with reciprocal requirements) and a design feature of shifting payment timing via deferred counter-sales and local manufacturing."
+      - "This theme describes intended macro constraints management; it does not by itself establish net welfare gains relative to alternative macro adjustments."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM83.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

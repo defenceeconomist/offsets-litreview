@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM91"
+    theme_label: "Quality constraints shift offset form"
+    mechanism_explanation: "When quality standards constrain what can be credibly purchased under counterpurchase obligations, compliance shifts toward service-based offsets or experiences delays and friction in industrial purchasing."
+    cmo_ids_in_theme:
+      - "06_offsets_and_french_arms_exports_pdf__cmo_009"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_010"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM91_DR_01"
+        statement: "In contexts where purchaser-side industrial products do not meet exporter-side quality requirements for counterpurchase, quality standards constraining industrial counterpurchase tends to yield friction, contestation, and delays in meeting industrial-offset obligations."
+        context_conditions:
+          - "Industrial products available for counterpurchase do not meet required quality standards."
+          - "Offsets are expected to be met through industrial goods purchasing."
+        outcome_tendencies:
+          - "Offset fulfillment slows and becomes contested due to quality constraints."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_009"
+            quote: "difficulties finding Greek industrial products that met the quality standards"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO directly links quality-standards constraints to delays and friction in industrial purchasing for offset fulfillment."
+      - demi_regularity_id: "PM91_DR_02"
+        statement: "In contexts where industrial counterpurchase is difficult under strict quality constraints and service purchases are permissible, quality constraints shifting offset form tends to yield substitution toward service-based offsets (e.g., tourism) that are easier to fulfil than manufacturing-goods purchases."
+        context_conditions:
+          - "Service-based offsets are allowed as fulfilment pathways."
+          - "Industrial-goods purchasing faces high friction due to quality constraints."
+        outcome_tendencies:
+          - "Offset packages shift toward services to improve fulfilment feasibility."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_010"
+            quote: "tourism offsets were easier to fulfil"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly compares industrial purchases to tourism offsets and states services are easier to fulfil under quality constraints."
+    theme_notes:
+      - "Coverage: all 2 PM91 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a clear substitution mechanism: quality constraints impede industrial counterpurchase and encourage shifts toward service-based offsets."
+      - "This theme highlights an implementation boundary: what counts as fulfilment can change in response to feasibility constraints."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM91.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

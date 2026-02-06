@@ -1,0 +1,17 @@
+.git
+.gitignore
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+.vscode
+.idea
+.quarto
+_quarto
+_freeze
+_output
+renv
+renv.lock
+node_modules
+Dockerfile

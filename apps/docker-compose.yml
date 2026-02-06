@@ -1,0 +1,10 @@
+services:
+  offsets-shiny:
+    build:
+      context: ..
+      dockerfile: apps/Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - ../data:/app/data:ro
+    restart: unless-stopped

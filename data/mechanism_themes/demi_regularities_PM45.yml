@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM45"
+    theme_label: "Security urgency overrides offset aims"
+    mechanism_explanation: "When security urgency or treaty quid-pro-quo dominates decisions, governments de-emphasize offsets and select off-the-shelf purchases."
+    cmo_ids_in_theme:
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_003"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_015"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM45_DR_01"
+        statement: "In contexts where urgency of supply or treaty/security quid-pro-quo dominates procurement decisions, security urgency overriding offset aims tends to yield de-emphasis of offsets and selection of off-the-shelf purchases to secure faster and simpler delivery."
+        context_conditions:
+          - "States prioritize supply urgency or alliance/treaty considerations."
+          - "Industrialization goals via offsets are secondary under urgent security conditions."
+        outcome_tendencies:
+          - "Offset demands are minimized or rejected in favor of off-the-shelf procurement."
+        supporting_cmo_ids:
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_003"
+            quote: "urgency of supply has historically held a higher priority over offset-induced defense industrialization"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes urgency and treaty-related priorities overriding offset-driven industrialization, but additional within-theme corroboration is limited."
+      - demi_regularity_id: "PM45_DR_02"
+        statement: "In contexts where buyers have limited bargaining leverage and acquisition urgency is high, and suppliers resist co-production on political or economic grounds, security urgency overriding offset aims tends to yield acceptance of reduced production participation to secure delivery of needed systems."
+        context_conditions:
+          - "Diplomatic isolation or other constraints reduce bargaining leverage."
+          - "Acquisition urgency is high and suppliers resist co-production."
+        outcome_tendencies:
+          - "Buyers forego significant production shares or participation to secure delivery."
+        supporting_cmo_ids:
+          - "10_the_teeth_of_little_tigers_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_015"
+            quote: "Taiwan chose to forego (albeit unwillingly) significant production shares in the F-16 deal in order to secure the aircraft."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a concrete case where urgency and limited leverage led to acceptance of reduced participation to secure delivery."
+    theme_notes:
+      - "Coverage: all 2 PM45 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a consistent priority ordering: when urgent security needs dominate, offsets and co-production aims are traded away for timely procurement."
+      - "Bargaining leverage appears as a key contextual moderator: isolation and supplier resistance increase the likelihood of reduced participation outcomes."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM45.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

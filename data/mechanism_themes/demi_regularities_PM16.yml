@@ -1,0 +1,79 @@
+demi_regularities_by_theme:
+  - theme_id: "PM16"
+    theme_label: "Offsets justified in high-hazard exchanges"
+    mechanism_explanation: "Offsets can substitute for poorly functioning markets in high-hazard exchanges and yield reputational or capability gains; imposing offsets in low-hazard contexts or misaligned with seller capabilities creates opportunity costs and raises costs."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM16_DR_01"
+        statement: "In contexts where exchange hazard is high and expected recipient benefits from interacting with reputable sellers are high, offsets as substitutes for poorly functioning markets tends to yield reputational and capability gains that make mandatory offsets defensible relative to alternative governance modes."
+        context_conditions:
+          - "Exchange hazard is high (market contracting is poorly functioning or risky)."
+          - "Expected recipient benefits from reputable partners are high (reputation and future cooperation/capability gains)."
+        outcome_tendencies:
+          - "Mandatory offsets are justified in a narrower set of settings where they can substitute for market failures and unlock gains."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_005"
+            quote: "a mandatory offset program is appropriate if, and only if, exchange hazard is high"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly states the high-hazard condition and links it to offsets as substitutes for poorly functioning markets that can yield reputational and capability gains."
+      - demi_regularity_id: "PM16_DR_02"
+        statement: "In contexts where mandatory offsets are imposed in low-exchange-hazard and low-technology procurement categories, offsets as substitutes for markets tends to yield opportunity costs and reduced welfare because content-based contracting displaces more efficient price-margin savings."
+        context_conditions:
+          - "Exchange hazard is low and items are low-technology (many routine procurement categories)."
+          - "Mandatory offsets impose content-based contracting rather than relying on market price competition."
+        outcome_tendencies:
+          - "Welfare is reduced because foregone price discounts exceed offset benefits in these settings."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_012"
+            quote: "The rigid mandatory policy is detrimental to European welfare"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO provides a clear claim that extending mandatory offsets into low-hazard categories creates welfare-reducing opportunity costs, but evidence is not multi-case within this theme."
+      - demi_regularity_id: "PM16_DR_03"
+        statement: "In contexts where offsets are used primarily to safeguard hazardous exchanges, choosing direct offsets rather than indirect offsets tends to yield better exchange integrity outcomes, while using offsets for broader development objectives tends to yield greater relevance for indirect offsets but with higher cost risk when obligations are outside seller capabilities."
+        context_conditions:
+          - "Governments use offsets either to safeguard hazardous exchanges or to pursue broader development strategy goals."
+          - "Offset design choices include direct (tied to the procured system) versus indirect (wider economic activity) forms."
+        outcome_tendencies:
+          - "Direct offsets are more aligned with safeguarding hazardous exchanges."
+          - "Indirect offsets are more applicable for wider development objectives but can raise costs if misaligned with seller capabilities."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014"
+            quote: "if government uses the instrument largely to safeguard an exchange in a hazardous setting, the direct offset is preferable"
+        moderators:
+          - condition: "When seller capabilities align with broader development-oriented indirect obligations, indirect offsets are more likely to be delivered without large cost penalties."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014"
+        boundary_conditions:
+          - condition: "When indirect-offset obligations are outside seller capabilities, indirect offsets can raise costs and undermine value-for-money."
+            supporting_cmo_ids:
+              - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO directly links offset form choice (direct vs indirect) to the hazard-safeguarding objective and notes the cost risks when indirect obligations are outside seller capabilities."
+    theme_notes:
+      - "Coverage: all 3 PM16 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a strong hazard-based boundary: offsets are argued to be appropriate primarily under high exchange hazard and high expected recipient benefits."
+      - "Within-theme variation is mainly about offset form choice (direct vs indirect) and the welfare consequences of extending mandates into low-hazard procurement categories."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM16.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

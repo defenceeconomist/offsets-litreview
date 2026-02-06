@@ -1,0 +1,108 @@
+demi_regularities_by_theme:
+  - theme_id: "PM66"
+    theme_label: "Offsets as import compensation"
+    mechanism_explanation: "Rising imports trigger requirements for compensatory offsets (work share, countertrade, transfer) to rebalance domestic industrial participation."
+    cmo_ids_in_theme:
+      - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_001"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_001"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_018"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_005"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_005"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_006"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_001"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM66_DR_01"
+        statement: "In contexts where weapon-system sophistication and scale make domestic production unviable and imports rise, offsets as import compensation tends to yield continued foreign procurement alongside compensatory technology transfer, licensed production/parts work, and export opportunities intended to build domestic industrial capability."
+        context_conditions:
+          - "Domestic production in small numbers is not viable or local capability limits make imports unavoidable."
+          - "Governments seek to ensure foreign purchases contribute to domestic industrial development."
+        outcome_tendencies:
+          - "Foreign procurements are paired with offset quid pro quo (technology transfer, licensed production, buy-backs, parts/component exports)."
+          - "Offsets become channels for market-access and technology acquisition objectives linked to major imports."
+        supporting_cmo_ids:
+          - "10_the_teeth_of_little_tigers_pdf__cmo_005"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_006"
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_001"
+          - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_005"
+            quote: "the ROK government implemented the “offset” system, designed to develop the local defense industry with expensive technology imported from advanced nations"
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_001"
+            quote: "ordering foreign military equipment but requiring offset commitments as a form of additional quid pro quo."
+        moderators:
+          - condition: "When offsets are concentrated in large acquisitions and explicitly target technology and market access, compensatory effects are more directly aligned with import-driven capability gaps."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "09_nordic_offset_policies_changes_and_challenges_pdf__cmo_001"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs across countries describe offsets as a quid pro quo for unavoidable imports, explicitly linking foreign procurement to compensatory technology transfer, market access, and domestic capability-building aims."
+      - demi_regularity_id: "PM66_DR_02"
+        statement: "In contexts where rising imports coincide with defence-industry employment decline or perceived defence-trade imbalance, offsets as import compensation tends to yield procurement-linked compensation policies aimed at sustaining jobs and recapturing domestic economic value from offshore purchases."
+        context_conditions:
+          - "Domestic defence-industry employment is falling and political pressure to sustain activity increases."
+          - "Defence trade shifts toward deficit/imbalance, motivating attempts to rebalance economic gains."
+        outcome_tendencies:
+          - "Offsets/IRBs are formulated to extract industrial and regional benefits from foreign suppliers."
+          - "Offsets are used to mitigate expected employment cuts by expanding associated commercial/industrial work."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_001"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_005"
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_005"
+            quote: "followed closely by a policy to seek offsets in defence purchases"
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_001"
+            quote: "employment levels fell dramatically in the 1980s"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs link offsets adoption to both employment decline and perceived trade imbalance, with explicit policy sequencing and rationale connecting import compensation to jobs/value recapture."
+      - demi_regularity_id: "PM66_DR_03"
+        statement: "In contexts where offset policy is operationalised through buyback and local-content transactions, offsets as import compensation tends to yield a substantial share of offset value delivered as purchases of domestic goods and services, increasing local content in the overall deal."
+        context_conditions:
+          - "Offset packages include buyback/local-content mechanisms in addition to investment and technology transfer."
+        outcome_tendencies:
+          - "A large share of the offset package is delivered as purchases from domestic suppliers."
+        supporting_cmo_ids:
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_016"
+            quote: "51 percent of the offset package by value... represents the buyback of goods and services from Polish companies"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A high-confidence CMO provides a clear quantified composition of an offset package, but evidence for similar buyback-dominant structures across additional cases in this theme is limited."
+      - demi_regularity_id: "PM66_DR_04"
+        statement: "In contexts where offset obligations are calculated from imported-content exposure, offsets as import compensation tends to yield declining offset obligations when local content rises and imports fall."
+        context_conditions:
+          - "Offset obligations are tied mechanically to imported-content shares in procurement projects."
+          - "Local content rises over time, reducing imports."
+        outcome_tendencies:
+          - "Offsets obligations decline as imports fall."
+        supporting_cmo_ids:
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "03_the_defence_offsets_policy_in_australia_pdf__cmo_018"
+            quote: "declining trend in imports and therefore offsets"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly describes the mechanical link between import shares and offset obligations and reports the expected declining-trend implication."
+    theme_notes:
+      - "Coverage: all 9 PM66 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Across cases, offsets appear as an import-compensation instrument: a quid pro quo that enables foreign procurement while extracting domestic work, technology transfer, and market access."
+      - "Within-theme variation includes both political-economy triggers (employment decline, trade deficit) and mechanical design features (offset obligations shrinking when import exposure falls)."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM66.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

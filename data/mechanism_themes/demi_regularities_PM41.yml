@@ -1,0 +1,77 @@
+demi_regularities_by_theme:
+  - theme_id: "PM41"
+    theme_label: "Economic priorities override security restraint"
+    mechanism_explanation: "Economic imperatives can dominate foreign-policy concerns, shifting lead roles toward economic agencies and weakening arms-control functions."
+    cmo_ids_in_theme:
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_018"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_001"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_002"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_010"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM41_DR_01"
+        statement: "In contexts where threat perception is low and defence has low political salience, economic priorities overriding security restraint tends to yield procurement and IRB/offset decisions driven primarily by domestic political-economy objectives rather than military effectiveness."
+        context_conditions:
+          - "No clear military threat is perceived and defence policy salience is low."
+          - "Political and economic goals are prominent in procurement decision-making."
+        outcome_tendencies:
+          - "Offsets/IRBs and procurement choices are shaped more by domestic political-economy aims than by security considerations."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_001"
+            quote: "Canada faces no clear military threat to its security."
+        moderators:
+          - condition: "When multiple departments and Cabinet intervene in procurement decisions, non-defence priorities are more likely to shape product selection and contract requirements."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_002"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs describe low-threat context enabling political-economic priorities to dominate and show multi-department/Cabinet involvement injecting non-defence objectives into procurement."
+      - demi_regularity_id: "PM41_DR_02"
+        statement: "In contexts where arms-trade policy is shaped by interagency economic bargaining and multilateral control forums are weakened, economic priorities overriding security restraint tends to yield reduced integration of security evaluations into trade decisions, potentially increasing long-run proliferation risks."
+        context_conditions:
+          - "Arms-trade policymaking involves interagency conflict and economic bargaining."
+          - "Multilateral control forums are weakened."
+        outcome_tendencies:
+          - "Security evaluations are less integrated into trade decisions."
+          - "Proliferation-risk restraint functions are weakened relative to economic imperatives."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_018"
+            quote: "without integration of security evaluations and economic imperatives"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO articulates the mechanism and risk implication, but within-theme evidence is not multi-case and outcomes are framed at a system level."
+      - demi_regularity_id: "PM41_DR_03"
+        statement: "In contexts where procurement decisions are used to pursue broader political-economic strategies (e.g., trade diversification goals), economic priorities overriding security restraint tends to yield platform selection and contracting choices influenced by political motives even when military requirements and alliance politics create friction."
+        context_conditions:
+          - "Procurement is linked to broader political strategies beyond defence (e.g., trade diversification)."
+          - "Military requirements and alliance politics can conflict with political-economic objectives."
+        outcome_tendencies:
+          - "Platform selection incorporates significant political motives alongside (and sometimes against) military considerations."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_010"
+            quote: "diversify Canadian trade away from dependence on the United States"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case links a concrete procurement decision to explicit political trade-diversification objectives, indicating political-economic motives shaping selection."
+    theme_notes:
+      - "Coverage: all 4 PM41 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a 'low-threat/low-salience' pathway where political-economic objectives dominate procurement and IRB design, reinforced by multi-department governance."
+      - "System-level accounts suggest economic imperatives can weaken integration of security evaluations, but additional case-traced evidence would strengthen claims about proliferation-risk consequences."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM41.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

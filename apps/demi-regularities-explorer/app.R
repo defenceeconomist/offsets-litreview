@@ -185,6 +185,22 @@ ui <- fluidPage(
         width = "360px",
         options = list(placeholder = "Select theme(s)")
       ),
+      selectizeInput(
+        "outcome_family",
+        "Filter by outcome family",
+        choices = NULL,
+        multiple = TRUE,
+        width = "360px",
+        options = list(placeholder = "Select outcome family(s)")
+      ),
+      selectizeInput(
+        "research_question",
+        "Filter by research question",
+        choices = NULL,
+        multiple = TRUE,
+        width = "360px",
+        options = list(placeholder = "Select research question(s)")
+      ),
       selectInput("confidence", "Filter by confidence", choices = NULL, width = "220px")
     ),
     uiOutput("theme_summary"),
@@ -204,6 +220,68 @@ server <- function(input, output, session) {
 
   safe_vec <- function(x) {
     if (is.null(x)) character() else as.character(x)
+  }
+
+  build_outcome_family_map <- function(path) {
+    empty <- list(
+      assignments = tibble(cmo_id = character(), family_id = character()),
+      families = tibble(family_id = character(), family_label = character())
+    )
+
+    if (!file.exists(path)) {
+      return(empty)
+    }
+
+    doc <- yaml::read_yaml(path)
+    if (is.null(doc)) {
+      return(empty)
+    }
+
+    families <- doc$families %||% list()
+    family_tbl <- tibble(
+      family_id = names(families),
+      family_label = vapply(families, function(x) safe_chr(x$label), character(1))
+    )
+
+    assignments <- doc$assignments %||% list()
+    assignment_tbl <- tibble(
+      cmo_id = names(assignments),
+      family_id = vapply(assignments, function(x) safe_chr(x$family_id), character(1))
+    )
+
+    list(assignments = assignment_tbl, families = family_tbl)
+  }
+
+  build_research_question_map <- function(path) {
+    empty <- list(
+      mapping = tibble(chunk_id = character(), research_questions = list()),
+      choices = character()
+    )
+
+    if (!file.exists(path)) {
+      return(empty)
+    }
+
+    data <- utils::read.csv(path, stringsAsFactors = FALSE)
+    if (!("chunk_id" %in% names(data)) || !("research_question_mapped" %in% names(data))) {
+      return(empty)
+    }
+
+    split_values <- function(x) {
+      values <- strsplit(as.character(x), ";")
+      lapply(values, function(items) {
+        items <- trimws(items)
+        items[items != "" & !is.na(items)]
+      })
+    }
+
+    research_questions <- split_values(data$research_question_mapped)
+    choices <- sort(unique(unlist(research_questions, use.names = FALSE)))
+
+    list(
+      mapping = tibble(chunk_id = data$chunk_id, research_questions = research_questions),
+      choices = choices
+    )
   }
 
   build_demi_data <- function(base_dir) {
@@ -307,14 +385,49 @@ server <- function(input, output, session) {
   }
 
   data <- build_demi_data(file.path("..", "..", "data", "mechanism_themes"))
+  outcome_map <- build_outcome_family_map(file.path("..", "..", "data", "outcome_family_mapping.yml"))
+  assignment_tbl <- outcome_map$assignments
+  family_tbl <- outcome_map$families
+  research_map <- build_research_question_map(file.path("..", "..", "data", "cmo_statements.csv"))
+  research_tbl <- research_map$mapping
+
+  resolve_family_ids <- function(ids) {
+    if (length(ids) == 0 || nrow(assignment_tbl) == 0) {
+      return(character())
+    }
+    unique(na.omit(assignment_tbl$family_id[match(ids, assignment_tbl$cmo_id)]))
+  }
+
+  resolve_family_labels <- function(ids) {
+    if (length(ids) == 0 || nrow(family_tbl) == 0) {
+      return(character())
+    }
+    unique(na.omit(family_tbl$family_label[match(ids, family_tbl$family_id)]))
+  }
+
+  resolve_research_questions <- function(ids) {
+    if (length(ids) == 0 || nrow(research_tbl) == 0) {
+      return(character())
+    }
+    matches <- research_tbl$research_questions[match(ids, research_tbl$chunk_id)]
+    unique(na.omit(unlist(matches, use.names = FALSE)))
+  }
 
   demi_data <- data$demi %>%
     mutate(
+      theme_header = ifelse(
+        is.na(theme_label) | theme_label == "",
+        theme_id,
+        paste0(theme_id, " - ", theme_label)
+      ),
       supporting_cmo_count = vapply(supporting_cmo_ids, length, integer(1)),
       anchor_quote_count = vapply(anchor_quotes, length, integer(1)),
       moderator_count = vapply(moderators, length, integer(1)),
       boundary_count = vapply(boundary_conditions, length, integer(1)),
-      counterexample_count = vapply(counterexamples, length, integer(1))
+      counterexample_count = vapply(counterexamples, length, integer(1)),
+      outcome_family_ids = lapply(supporting_cmo_ids, resolve_family_ids),
+      outcome_family_labels = lapply(outcome_family_ids, resolve_family_labels),
+      research_questions = lapply(supporting_cmo_ids, resolve_research_questions)
     )
 
   theme_data <- data$themes %>%
@@ -330,6 +443,26 @@ server <- function(input, output, session) {
     session,
     "theme_id",
     choices = theme_choices,
+    server = TRUE
+  )
+
+  outcome_family_choices <- if (nrow(family_tbl) == 0) {
+    character()
+  } else {
+    setNames(family_tbl$family_id, family_tbl$family_label)
+  }
+
+  updateSelectizeInput(
+    session,
+    "outcome_family",
+    choices = outcome_family_choices,
+    server = TRUE
+  )
+
+  updateSelectizeInput(
+    session,
+    "research_question",
+    choices = research_map$choices,
     server = TRUE
   )
 
@@ -350,6 +483,20 @@ server <- function(input, output, session) {
 
     if (!is.null(input$confidence) && input$confidence != "All") {
       data <- data %>% filter(.data$confidence == input$confidence)
+    }
+
+    if (!is.null(input$outcome_family) && length(input$outcome_family) > 0) {
+      data <- data %>%
+        filter(vapply(outcome_family_ids, function(ids) {
+          any(ids %in% input$outcome_family)
+        }, logical(1)))
+    }
+
+    if (!is.null(input$research_question) && length(input$research_question) > 0) {
+      data <- data %>%
+        filter(vapply(research_questions, function(values) {
+          any(values %in% input$research_question)
+        }, logical(1)))
     }
 
     data %>% arrange(.data$theme_id, .data$demi_regularity_id)
@@ -488,6 +635,7 @@ server <- function(input, output, session) {
           class = "detail-statement",
           row$statement
         ),
+        build_list_section("Outcome families", row$outcome_family_labels[[1]]),
         build_list_section("Context conditions", row$context_conditions[[1]]),
         build_list_section("Outcome tendencies", row$outcome_tendencies[[1]]),
         build_list_section("Supporting CMO IDs", row$supporting_cmo_ids[[1]]),
@@ -549,8 +697,7 @@ server <- function(input, output, session) {
     reactable(
       data %>%
         select(
-          theme_id,
-          theme_label,
+          theme_header,
           demi_regularity_id,
           statement,
           confidence,
@@ -558,8 +705,7 @@ server <- function(input, output, session) {
           anchor_quote_count
         ),
       columns = list(
-        theme_id = colDef(name = "Theme ID", width = 110),
-        theme_label = colDef(name = "Theme label", minWidth = 200),
+        theme_header = colDef(name = "Theme", minWidth = 240, show = FALSE),
         demi_regularity_id = colDef(name = "Demi-regularity ID", width = 160),
         statement = colDef(name = "Statement", minWidth = 320),
         confidence = colDef(

@@ -1,0 +1,77 @@
+demi_regularities_by_theme:
+  - theme_id: "PM26"
+    theme_label: "Buyback hostage aligns incentives"
+    mechanism_explanation: "Buyback obligations make sellers responsible for absorbing output, aligning incentives to avoid transferring obsolete technology that would undermine buyback viability."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_004"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_006"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_007"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_008"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM26_DR_01"
+        statement: "In contexts where buyers face information asymmetry about the quality of transferred plant technology, buyback obligations that make sellers responsible for purchasing output tends to yield reduced technology-quality risk by aligning seller incentives to avoid transferring obsolete or low-quality technology."
+        context_conditions:
+          - "Technology-transfer transactions involve strong information asymmetries about process quality/value."
+          - "Contracts include buyback obligations that require the seller/exporter to absorb output from the transferred facility."
+        outcome_tendencies:
+          - "Incentives are aligned so sellers avoid undermining the buyback by transferring outdated technology."
+          - "Recipients face reduced risk of receiving substandard technology packages compared with a one-off transfer."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_004"
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_007"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_004"
+            quote: "serve to hold the arms seller hostage to its own exported plant technology"
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_007"
+            quote: "the importer of capital goods does not know the value of the equipment ex ante"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly articulates the hostageship incentive alignment, supported by additional medium-confidence evidence linking buyback to adverse-selection mitigation under unobservable quality."
+      - demi_regularity_id: "PM26_DR_02"
+        statement: "In contexts where exporters face buyer skepticism about product quality and reputation, buyback commitments tends to yield a credible quality signal that supports market access and can improve realized prices for the output."
+        context_conditions:
+          - "Exporters/producers face quality and reputation uncertainty in target markets."
+          - "Buyback arrangements commit the exporter to purchase (and thus help market) the output."
+        outcome_tendencies:
+          - "Buyers interpret buyback as a signal of higher-than-baseline product quality."
+          - "Output can gain access in higher-standard markets and/or command higher prices."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_006"
+            quote: "it must signal that these products are of a better quality than it normally produces"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The quality-signaling pathway is described in one medium-confidence CMO; evidence within this theme is not multi-case."
+      - demi_regularity_id: "PM26_DR_03"
+        statement: "In contexts where host-country rules prohibit FDI and contracts cannot specify or enforce technology-process quality, buyback arrangements tends to yield a second-best governance device by tying obligations to observable output and ongoing relationships, enabling technology transfer that otherwise would be blocked or risky."
+        context_conditions:
+          - "FDI/ownership solutions are unavailable due to host-country restrictions."
+          - "Quality-contingent contracting is infeasible or unenforceable."
+        outcome_tendencies:
+          - "Transactions proceed via buyback/countertrade structures that link compensation to future observable output."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_008"
+            quote: "cannot write legally enforceable contracts for the acquisition of a specified quality technology process"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO explicitly states the constraint (no FDI and no enforceable quality contract) and positions buyback as a second-best mechanism, but broader empirical confirmation is limited."
+    theme_notes:
+      - "Coverage: all 4 PM26 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a core governance logic: buyback creates 'hostageship' that mitigates technology-transfer quality risk under information asymmetry."
+      - "Secondary pathways include buyback as a quality signal and as a second-best mechanism under FDI and contract-enforcement constraints."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM26.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

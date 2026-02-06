@@ -1,0 +1,39 @@
+{
+  "best_params": {
+    "cluster_selection_method": "eom",
+    "min_cluster_size": 10,
+    "min_samples": 2,
+    "umap_n_neighbors": 5
+  },
+  "grid": {
+    "cluster_selection_methods": [
+      "eom",
+      "leaf"
+    ],
+    "min_cluster_sizes": [
+      5,
+      8,
+      10,
+      15,
+      20
+    ],
+    "min_samples_list": [
+      1,
+      2,
+      5
+    ],
+    "tuning_sample_size": 2000,
+    "umap_min_dist": 0.0,
+    "umap_n_components": 5,
+    "umap_n_neighbors_list": [
+      5,
+      10,
+      15
+    ]
+  },
+  "targets": {
+    "max_outlier_rate_soft": 0.5,
+    "target_topics_max": 40,
+    "target_topics_min": 8
+  }
+}

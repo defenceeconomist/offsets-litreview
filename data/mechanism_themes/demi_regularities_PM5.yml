@@ -1,0 +1,147 @@
+demi_regularities_by_theme:
+  - theme_id: "PM5"
+    theme_label: "External finance expands resource pool"
+    mechanism_explanation: "When funding comes from external sources, offsets inject new resources rather than reallocating domestic capital, easing the net drain of purchases."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_011"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_002"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_015"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_002"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_021"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_018"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_036"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_026"
+      - "14_us_offset_policy_pdf__cmo_002"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM5_DR_01"
+        statement: "In contexts where arms purchases strain domestic capital and hard-currency resources (especially in capital-short economies), external finance expands resource pool tends to yield partial mitigation of the purchase burden by bringing in fresh, externally financed offset/grant resources rather than reallocating scarce domestic finance."
+        context_conditions:
+          - "Purchasing countries face chronic capital scarcity and/or hard-currency constraints."
+          - "Offset-related investment or development projects are financed through external sources (e.g., grants or capital raised outside the purchasing country)."
+        outcome_tendencies:
+          - "Net inflows of external capital can partially counterbalance the resource drain of the arms purchase."
+          - "Development-oriented projects funded as grants soften the economic burden to a limited extent."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_011"
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012"
+            quote: "If it is fully financed by capital raised outside the weapons purchasing nation, then it is actually bringing in fresh capital."
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_011"
+            quote: "such offsets could provide a limited counterweight to the economic burden of the arms deal"
+        moderators:
+          - condition: "Where offset investment is fully financed from outside the purchasing country (rather than partly domestically financed), the net resource-addition effect is larger."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_012"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Two CMOs provide a coherent causal logic that external financing adds net resources, but the evidence is theory_model and the burden-mitigation is explicitly described as partial/limited."
+      - demi_regularity_id: "PM5_DR_02"
+        statement: "In contexts where small or resource-constrained states seek access to specialized production and know-how that would otherwise be unaffordable, external finance expands resource pool tends to yield sustained high-technology industrial capabilities because offset-linked and partly foreign-financed investments lower the affordability barrier."
+        context_conditions:
+          - "Domestic industrial base is small and sustaining specialized/high-technology production is difficult without external inputs."
+          - "Offset-linked work and investments include foreign-financed components and access to specialized production arrangements."
+        outcome_tendencies:
+          - "Advanced production and know-how can be maintained or acquired that would be difficult to sustain without offsets and foreign-financed components."
+        supporting_cmo_ids:
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_004"
+            quote: "without offsets, it is unlikely that Belgium would have been able to sustain aircraft or engine manufacturers"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case-study CMO directly links offset-linked and partly foreign-financed investments to sustaining specialized production and acquiring know-how that would otherwise be unaffordable."
+      - demi_regularity_id: "PM5_DR_03"
+        statement: "In contexts where buyers face hard-currency and financial-risk constraints in major arms acquisitions, external finance expands resource pool tends to yield greater deal feasibility and supplier advantage because concessional credit, long repayment terms, and local-currency/countertrade arrangements reduce immediate foreign-exchange burdens and effective costs."
+        context_conditions:
+          - "Major procurements are constrained by hard-currency availability, balance-of-payments concerns, or buyer risk exposure."
+          - "Suppliers (often with government backing) can offer concessional finance, long repayment periods, price guarantees, gifts/price cuts, and/or accept payments in local currency/countertrade."
+        outcome_tendencies:
+          - "Procurements become financially feasible with reduced short-term hard-currency burden."
+          - "Favourable finance packages can be decisive in contract outcomes under competition."
+        supporting_cmo_ids:
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_002"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_002"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_002"
+            quote: "cheap long-term credit facilities with low interest to finance these deals"
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_021"
+            quote: "finance package proved decisive in winning the competition"
+        moderators:
+          - condition: "When suppliers accept part of payment in local currency, the foreign-exchange burden is further reduced."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "06_offsets_and_french_arms_exports_pdf__cmo_002"
+        boundary_conditions:
+          - condition: "When macro-financial conditions raise the cost of delayed-payment schemes (higher money costs), concessional payment structures become less attractive and can reduce the appeal of local production/offset-linked arrangements."
+            supporting_cmo_ids:
+              - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_036"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence case evidence links concessional finance and repayment terms to feasibility and competitive outcomes, with an explicit boundary condition showing how higher money costs can erode the attractiveness of delayed-payment/offset arrangements."
+      - demi_regularity_id: "PM5_DR_04"
+        statement: "In contexts where offset ventures require large capital outlays and private equity is constrained, external finance expands resource pool tends to yield venture formation, firm survival, and expansion because concessional development-fund finance, soft loans, and equity injections lower capital costs and fill financing gaps."
+        context_conditions:
+          - "Offset-linked ventures face high capital requirements and constrained local financing/equity availability."
+          - "Concessional or preferential finance is available (development-fund funding, soft loans, or equity investments)."
+        outcome_tendencies:
+          - "Projects become financially feasible with reduced required equity shares and lower capital costs."
+          - "Liquidity injections enable firm survival, facility expansion, and market growth."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_026"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_015"
+            quote: "A soft loan of US$ 2 million for SA Bioproducts proved crucial"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_026"
+            quote: "50% funding by the Saudi Industrial development Fund (SIDF) at preferential rates"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence case-study CMOs directly attribute feasibility and growth to concessional finance, soft loans, and equity investments that reduce capital costs and fill liquidity/capital gaps."
+      - demi_regularity_id: "PM5_DR_05"
+        statement: "In contexts where offset packages bundle supplementary grants, royalties, and associated systems/services beyond headline offset percentages, external finance expands resource pool tends to yield greater total compensation and additional implementation work because added financial and in-kind components increase the value transferred to the purchaser/public sector."
+        context_conditions:
+          - "Offset packages include supplementary grants/royalties and bundled systems/services beyond the base offset obligation categories."
+        outcome_tendencies:
+          - "Total compensation exceeds headline offset percentages through additional grants/royalties and associated implementation tasks."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_018"
+            quote: "some compensations must be added, worth equal to DM52.5 million"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case-study CMO specifies that additional grants/royalties and associated systems/services increase total compensation beyond base offset percentages."
+      - demi_regularity_id: "PM5_DR_06"
+        statement: "In contexts where states face balance-of-payments pressures from overseas security commitments, external finance expands resource pool tends to yield reduced external-payment burdens because offset-style procurement arrangements recycle allied procurement inflows back to the provider economy and offset a large share of force-cost impacts."
+        context_conditions:
+          - "Provider states maintain overseas forces that generate balance-of-payments burdens."
+          - "Financially capable allies are encouraged to procure from the provider, generating procurement inflows that offset external-payment impacts."
+        outcome_tendencies:
+          - "Procurement-linked inflows offset a substantial share of balance-of-payments impacts associated with overseas commitments."
+        supporting_cmo_ids:
+          - "14_us_offset_policy_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_002"
+            quote: "German procurements from the US offset roughly 80 per cent"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence source specifies a large offsetting share of balance-of-payments impacts via allied procurements, matching the mechanism that external inflows recycle resources and reduce payment burdens."
+    theme_notes:
+      - "PM5 evidence spans grant/capital inflows, concessional credit and local-currency/countertrade terms, and development-fund/soft-loan/equity financing that relaxes capital constraints."
+      - "A key boundary condition is macro-financial context: higher money costs can erode the attractiveness of delayed-payment/offset-linked local production schemes."
+      - "Several CMOs focus on finance terms that function as offset-equivalent inducements; future coding could distinguish financing mechanisms from production/technology-transfer offsets where needed."

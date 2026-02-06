@@ -1,0 +1,118 @@
+demi_regularities_by_theme:
+  - theme_id: "PM38"
+    theme_label: "Firms build offset-management capacity"
+    mechanism_explanation: "As offset requirements expand, firms develop specialized offset organizations and negotiate longer, more complex contracts to manage obligations."
+    cmo_ids_in_theme:
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_006"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_009"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_020"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_024"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_017"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_008"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_022"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM38_DR_01"
+        statement: "In contexts where offset requirements spread geographically and escalate toward high percentages with long-term, complex obligations, firms build specialized offset-management capacity tends to yield the creation and expansion of in-house offset organizations that operate like trading companies."
+        context_conditions:
+          - "Offset requirements are widespread and increasing in percentage and complexity (often approaching 100%+)."
+          - "Firms must manage long-term obligations without government brokering of deals."
+        outcome_tendencies:
+          - "Firms build in-house offset organizations that market offset products, source credits, arrange subcontracting, and manage technology search/transfer."
+          - "Offset contracts become longer and more complex as firms adapt."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_006"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_006"
+            quote: "whose work is essentially that of a trading company"
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_009"
+            quote: "the number of countries resorting to them has increased"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs explicitly describe both the spread/escalation of offsets and the corresponding organisational response of firms building trading-company-like offset operations and negotiating longer, more complex contracts."
+      - demi_regularity_id: "PM38_DR_02"
+        statement: "In contexts where offset programmes are large and long-horizon and require continuous sourcing of qualifying projects, firms build specialized offset-management capacity tends to yield institutionalisation of on-the-ground offset capability (e.g., permanent local offices) to identify and structure joint ventures and technology-transfer projects."
+        context_conditions:
+          - "Offset programmes require sustained deal sourcing and project management over long periods."
+          - "Qualifying transactions depend on identifying local partners and structuring joint ventures and transfers."
+        outcome_tendencies:
+          - "Suppliers establish dedicated local offices to generate and manage qualifying offset projects."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_020"
+            quote: "established a permanent office in Abu Dhabi"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a concrete organisational adaptation (permanent office) explicitly linked to structuring joint ventures and technology-transfer projects to meet offset obligations."
+      - demi_regularity_id: "PM38_DR_03"
+        statement: "In contexts where export competition intensifies and offsets become an essential baseline condition for winning sales, firms build specialized offset-management capacity tends to yield active generation of offset proposals and cross-sector coordination to deliver increasingly unavoidable offset programmes."
+        context_conditions:
+          - "Export markets are highly competitive and buyers’ offset requirements diversify."
+          - "Firms perceive offsets as essential for winning contracts."
+        outcome_tendencies:
+          - "Suppliers move from skepticism to actively proposing offset packages to remain viable bidders."
+          - "Offset delivery requires coordination across industrial sectors and project types."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_024"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_024"
+            quote: "essential element in winning any arms exports"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_017"
+            quote: "companies were generally incredulous when told the Saudis would be seeking an offset programme"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports a competitive-adaptation pathway (from skepticism to proposal generation and offsets becoming essential), but one key source is medium-confidence and within-theme triangulation is limited."
+      - demi_regularity_id: "PM38_DR_04"
+        statement: "In contexts where prime contractors differ in size and diversification, firms build specialized offset-management capacity tends to yield different fulfilment strategies: diversified conglomerates can meet obligations internally, while specialised firms must mobilize supply-chain tiers and provide active marketing assistance to generate qualifying transactions."
+        context_conditions:
+          - "Prime contractors vary in corporate diversification and internal purchasing networks."
+          - "Offset obligations require sourcing qualifying transactions and credits."
+        outcome_tendencies:
+          - "Diversified firms fulfil offset commitments largely within the parent corporation."
+          - "Specialised firms rely on subcontractor tiers and active marketing assistance to meet commitments."
+        supporting_cmo_ids:
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_008"
+            quote: "Thus GE was able to meet almost all of its offset commitments within the parent corporation."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence comparative case explicitly attributes different fulfilment pathways to firm structure and diversification."
+      - demi_regularity_id: "PM38_DR_05"
+        statement: "In contexts where firms treat offset requirements as catalysts for needs-led opportunity search and mobilize internal experts, firms build specialized offset-management capacity tends to yield discovery and acceleration of business ventures and technology opportunities that would otherwise be missed."
+        context_conditions:
+          - "Contractors structure engagement around what they want to buy and use offsets to mobilize internal expertise."
+          - "The host economy has potential technology and business opportunities aligned with the contractor’s strategic needs."
+        outcome_tendencies:
+          - "Large sets of opportunities are identified and some projects are executed earlier than would occur without the offset catalyst."
+        supporting_cmo_ids:
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_022"
+            quote: "offsets opened up opportunities that otherwise would have gone unnoticed"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence practitioner case describes a clear discovery mechanism and reported outputs, but generalisability beyond the case is uncertain."
+    theme_notes:
+      - "Coverage: all 7 PM38 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports organisational adaptation: as offsets become unavoidable and complex, firms build dedicated offset capabilities resembling trading companies and establish permanent local presence."
+      - "Firm structure (diversification) moderates fulfilment strategy; some evidence also suggests offsets can catalyze structured opportunity search beyond compliance."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM38.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

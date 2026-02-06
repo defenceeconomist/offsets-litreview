@@ -1,0 +1,56 @@
+demi_regularities_by_theme:
+  - theme_id: "PM86"
+    theme_label: "Buyer coalitions increase bargaining leverage"
+    mechanism_explanation: "When multiple buyers pool purchases and coordinate negotiation, they increase bargaining leverage, improving terms (including offsets) and supporting longer, more efficient production runs."
+    cmo_ids_in_theme:
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_017"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_017"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM86_DR_01"
+        statement: "In contexts where small buyers coordinate procurement with partners and pool purchases, presenting as a coordinated buyers’ cartel tends to yield increased bargaining leverage that improves offset terms and supports longer production runs compared with isolated national purchases."
+        context_conditions:
+          - "Small buyers face limited bargaining power in major procurements when acting alone."
+          - "Purchases are pooled and negotiations are coordinated across partners."
+        outcome_tendencies:
+          - "Improved offsets arrangements and better terms relative to isolated purchases."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_017"
+            quote: "To present themselves as a buyer's cartel"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case explicitly links coordinated procurement (buyers’ cartel) to increased bargaining power and improved offset terms."
+      - demi_regularity_id: "PM86_DR_02"
+        statement: "In contexts where buyer coalitions use procurement structure to pressure for component and parts sub-contracts as offsets, buyer coalition bargaining leverage tends to yield constrained offset delivery when local suppliers cannot meet required quality standards and workforce capability, delaying or reducing component-offset implementation."
+        context_conditions:
+          - "Offsets are pursued through subcontracted components and parts orders."
+          - "Local supplier capability is constrained by quality standards and workforce skills."
+        outcome_tendencies:
+          - "Component-offset delivery is delayed or reduced when local suppliers struggle to meet required quality standards."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_017"
+            quote: "difficult to meet the necessary quality standards"
+        moderators: []
+        boundary_conditions:
+          - condition: "Where local suppliers meet required quality and capability standards, coalition leverage is more likely to translate into realised component workshares."
+            supporting_cmo_ids:
+              - "06_offsets_and_french_arms_exports_pdf__cmo_017"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides an explicit quality-capability constraint on component subcontracting outcomes, indicating a clear boundary condition on coalition leverage translating into realised offsets."
+    theme_notes:
+      - "Coverage: all 2 PM86 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a leverage pathway (coalitions improve terms) and a capability boundary condition (quality/workforce constraints can delay or reduce realised component offsets)."
+      - "More evidence would be needed to assess how coalition governance and internal distribution rules affect who benefits from improved terms."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM86.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

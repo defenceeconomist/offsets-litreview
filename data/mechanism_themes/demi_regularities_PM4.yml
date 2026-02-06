@@ -1,0 +1,163 @@
+demi_regularities_by_theme:
+  - theme_id: "PM4"
+    theme_label: "Offsets crowd out civilian resources"
+    mechanism_explanation: "Offset activity can absorb scarce capital, labour, or productive capacity, diverting resources away from civilian sectors that would otherwise drive development."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_008"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_013"
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_013"
+      - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_018"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_007"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_016"
+      - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_017"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_019"
+      - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_001"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_017"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_018"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM4_DR_01"
+        statement: "In contexts where capital, skilled labour, and productive capacity are scarce, offsets crowd out civilian resources tends to yield weaker civilian-sector development because offset-linked military production absorbs scarce inputs that would otherwise support higher-development-value civilian activity."
+        context_conditions:
+          - "Scarce domestic financial capital and/or limited pools of skilled labour constrain civilian producers (especially in LDC settings)."
+          - "Offset activity concentrates work in military-related production rather than civilian sectors."
+        outcome_tendencies:
+          - "Development is hindered even if some military-sector employment is created or preserved."
+          - "Domestic investment opportunities can be crowded out when offset activity draws on scarce local finance."
+          - "Civilian producers face tighter constraints when offsets hire from an already-limited skilled-labour pool."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_008"
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_013"
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_008"
+            quote: "the military sector itself does not produce economic value and diverts real productive resources"
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_013"
+            quote: "it actually exacerbates the shortage of financial capital facing domestic producers"
+        moderators:
+          - condition: "When offset projects primarily hire already-skilled workers rather than expanding the skilled-labour pool, labour crowd-out pressures intensify."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015"
+        boundary_conditions:
+          - condition: "When the offset activity has substantially greater development value than the displaced civilian activity, crowd-out effects on development are less likely to be net-negative."
+            supporting_cmo_ids:
+              - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_015"
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Three CMOs consistently describe capital/labour scarcity and diversion effects, but the evidence base here is primarily theory_model rather than empirical evaluation, so confidence is moderate despite internal coherence."
+      - demi_regularity_id: "PM4_DR_02"
+        statement: "In contexts where offsets are financed through domestic public resources and require additional state incentives or infrastructure, offsets crowd out civilian resources tends to yield opportunity costs and hidden fiscal burdens because funds are diverted from civilian social sectors and alternative job-creating expenditures."
+        context_conditions:
+          - "Offset-linked industrial activity draws on taxpayer resources and/or substantial additional state investment and incentives."
+          - "Alternative civilian expenditures (health, housing, education, or other job-creating public uses) compete for the same budgets."
+        outcome_tendencies:
+          - "Opportunity costs reduce social welfare unless military/offset-linked returns exceed those of foregone civilian uses."
+          - "Hidden costs (additional incentives and infrastructure commitments) may be excluded from official offset assessments, obscuring full fiscal burden."
+          - "Net job creation is lower than plausible civilian spending alternatives, even under optimistic offset employment estimates."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_017"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013"
+            quote: "has not been directed into health, housing, and education"
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_017"
+            quote: "represent considerably fewer jobs than could be created if the funds were used for purposes other than buying arms."
+        moderators:
+          - condition: "When additional state investments and incentives are excluded from official offset assessments, opportunity-cost and fiscal-burden effects are more likely to be underestimated."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_019"
+        boundary_conditions:
+          - condition: "When offset-linked military-industrial returns demonstrably exceed the social returns of foregone civilian uses, opportunity-cost harms are less likely."
+            supporting_cmo_ids:
+              - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_013"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence theory-model and case-study evidence converge on opportunity-cost logic and provide concrete claims about foregone social spending, lower job creation than civilian alternatives, and hidden state-cost components."
+      - demi_regularity_id: "PM4_DR_03"
+        statement: "In contexts where offset obligations are met by shifting production and workshare to firms in the offset-recipient country, offsets crowd out civilian resources tends to yield domestic job displacement and supplier contraction because offset compliance re-sources work away from domestic supply chains."
+        context_conditions:
+          - "Firms can fulfil offsets by transferring production/workshare overseas or by re-sourcing from domestic subcontractors to foreign firms."
+          - "A domestic supply base (and sometimes a domestic procurement alternative) exists, making reallocation visible as displacement rather than addition."
+        outcome_tendencies:
+          - "Work is displaced from domestic suppliers, with losses concentrated among subcontractors and supplier tiers."
+          - "Net employment impacts can include lost employee-years and supplier base contraction."
+          - "Offsets may be perceived as a 'bad thing' where the alternative is producing domestically rather than importing with offsets."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_013"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_001"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_017"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_018"
+          - "06_defense_offsets_policy_versus_pragmatism_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_013"
+            quote: "supplanted $2.3 billion of US work, or 25,300 work-years"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_018"
+            quote: "taking work from their sub-contractors"
+        moderators:
+          - condition: "When a credible domestic procurement alternative exists (domestic product vs import-with-offset), displacement interpretations and resistance to offsets increase."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "13_the_uk_experience_with_offsets_pdf__cmo_001"
+          - condition: "When reported job losses are small relative to the financial value of the offset package, the perceived severity of displacement is reduced."
+            effect: "weakens"
+            supporting_cmo_ids:
+              - "13_the_uk_experience_with_offsets_pdf__cmo_017"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_017"
+            note: "Reports adverse employment impacts as 'trivial relative to offset value' even while noting lost employee-years, suggesting displacement may not always be salient or large."
+        confidence: "medium"
+        confidence_justification: "Multiple CMOs support displacement via workshare transfer and re-sourcing, but the magnitude and salience of job losses varies (including one case framing losses as trivial relative to package value), and one large job-loss claim is low confidence."
+      - demi_regularity_id: "PM4_DR_04"
+        statement: "In contexts where offsets require domestic investment in dedicated facilities for small or short production runs, offsets crowd out civilian resources tends to yield idle capital and inefficient capacity because sunk infrastructure costs persist after offset work ends."
+        context_conditions:
+          - "Offset obligations require domestic production capability to be created or expanded for relatively small/short runs."
+          - "Post-offset demand is insufficient to utilize the added capacity efficiently."
+        outcome_tendencies:
+          - "Excess production capacity and idle capital result after offset work is completed."
+        supporting_cmo_ids:
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_007"
+        anchor_quotes:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_007"
+            quote: "Offset-related investments have also lead to excess production capacities, resulting in idle capital."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A single high-confidence case-study CMO provides a clear sunk-cost/excess-capacity pathway, but broader cross-case corroboration within this theme is limited."
+      - demi_regularity_id: "PM4_DR_05"
+        statement: "In contexts where offset-linked projects are capital- and skill-intensive and have limited local linkages, offsets crowd out civilian resources tends to yield weak employment outcomes and high cost per job because spending generates relatively few jobs compared with alternative civilian activities (with multipliers varying by sector)."
+        context_conditions:
+          - "Offset activities are capital- and skill-intensive, limiting labour absorption per unit of spending."
+          - "Local linkage structure varies by industrial activity (e.g., diverse input requirements vs narrow ones)."
+        outcome_tendencies:
+          - "Cost per job can be extremely high and headline job claims imply low employment efficiency."
+          - "Employment multipliers vary by activity type (e.g., higher multipliers where input requirements are more diverse)."
+        supporting_cmo_ids:
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_016"
+          - "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_017"
+          - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "19_defense_industrial_participation_the_south_african_experience_pdf__cmo_016"
+            quote: "amounts to a cost of Rl.6 million per job"
+          - cmo_id: "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022"
+            quote: "employment multiplier is estimated at 9"
+        moderators:
+          - condition: "When production has more diverse upstream and downstream input requirements, local employment multipliers are higher."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "20_defense_offsets_and_regional_development_in_south_africa_pdf__cmo_022"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence case-study evidence links capital/skill intensity to high cost per job and fewer jobs than civilian alternatives, and provides within-program variation showing higher multipliers where linkages are more diverse."
+    theme_notes:
+      - "PM4 combines theory-model claims about scarce-input diversion (capital/labour) with case evidence on opportunity costs, hidden state costs, displacement via workshare transfer, and low employment efficiency."
+      - "Several patterns hinge on whether offset work is additive or displaces existing civilian/domestic activity (especially where a domestic alternative or domestic supply chain exists)."
+      - "Further coding could distinguish crowd-out in purchasing countries (capital/labour/budgets) from crowd-out in exporting countries (supplier displacement via outbound offsets)."

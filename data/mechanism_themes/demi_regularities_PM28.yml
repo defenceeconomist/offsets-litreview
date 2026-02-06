@@ -1,0 +1,80 @@
+demi_regularities_by_theme:
+  - theme_id: "PM28"
+    theme_label: "Exporter networks reduce market entry costs"
+    mechanism_explanation: "Large exporters’ established distribution networks lower market-penetration costs for buyer-country products compared to what domestic firms could achieve alone."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_006"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_015"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_005"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_011"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_025"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM28_DR_01"
+        statement: "In contexts where buyer-country firms face high search and transaction costs to penetrate foreign markets, large exporters’ established marketing and distribution networks tends to yield improved market access by enabling marketing-assistance and counterpurchase offsets that place buyer-country products more efficiently than domestic firms could."
+        context_conditions:
+          - "Search, marketing, and transaction costs for foreign market entry are high for buyer-country firms."
+          - "Exporting firms have established networks, product knowledge, and distribution capability."
+        outcome_tendencies:
+          - "Counterpurchase goods and buyer-country products are placed with lower marketing/search costs."
+          - "Purchasers secure third-party buyers or improved export market access as part of offset packages."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_006"
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_005"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_005"
+            quote: "dispose of the countertrade goods more efficiently than if it attempted to do this itself"
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_011"
+            quote: "helping to find buyers"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs directly describe exporters’ superior marketing capability lowering costs of placing countertrade goods and provide a concrete marketing-assistance example; a supporting CMO adds the general network-cost logic."
+      - demi_regularity_id: "PM28_DR_02"
+        statement: "In contexts where offset crediting grants one-for-one (full value) credits for facilitating host-country exports, exporter networks tends to yield stronger contractor incentives to broker matches between host-country products and the contractor’s wider supplier network, increasing supply-chain insertion opportunities."
+        context_conditions:
+          - "Offset crediting includes credit for facilitating exports from the host economy, not only for joint-venture output."
+          - "Credits are awarded on a one-for-one basis, making export facilitation highly credit-efficient."
+        outcome_tendencies:
+          - "Contractors search for and broker matches between host-country products and their supply-chain input needs."
+          - "Host-economy manufacturers gain access to global supply chains associated with the prime contractor."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_025"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_025"
+            quote: "These credits are typically on a one-for-one basis"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a clear incentive mechanism linking one-for-one credits to contractor efforts to integrate host products into wider supply chains."
+      - demi_regularity_id: "PM28_DR_03"
+        statement: "In contexts where offset transactions are predominantly indirect and used to improve foreign firms’ cost/quality competitiveness, exporter networks and offset channels tends to yield asymmetric competitive advantages for foreign firms, with little reverse technology transfer back to the exporter’s home economy."
+        context_conditions:
+          - "Offsets are largely indirect and involve activities that reduce costs or improve quality and competitiveness."
+          - "Reverse technology transfer is not a dominant feature of offset transactions."
+        outcome_tendencies:
+          - "Competitive advantages shift toward foreign firms in world and US markets."
+          - "Reverse technology transfer to the exporter’s home economy is rare."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_015"
+            quote: "Only 4 percent of offset transactions resulted in the transfer of technology from foreign firms back to the US"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The asymmetry claim is supported by a high-confidence CMO reporting rare reverse technology transfer and competitive effects, but it is not triangulated with multiple independent case CMOs in this theme."
+    theme_notes:
+      - "Coverage: all 5 PM28 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The dominant pattern is marketing-network advantage: exporters can reduce market-entry costs for counterpurchase goods and buyer-country exports."
+      - "Design details (e.g., one-for-one export credits) strengthen incentives for supply-chain brokering; however, some indirect-offset patterns may shift competitiveness toward foreign firms rather than facilitating reciprocal gains."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM28.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

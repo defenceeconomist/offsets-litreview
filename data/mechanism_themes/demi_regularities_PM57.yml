@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM57"
+    theme_label: "Export support builds offset capacity"
+    mechanism_explanation: "Government export-support organisations help firms navigate offset rules and identify creditable projects, especially for smaller exporters lacking offset staff."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_010"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_002"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM57_DR_01"
+        statement: "In contexts where export markets increasingly demand offsets and smaller exporters lack dedicated offset staff, government export-support organisations helping firms navigate offset rules tends to yield improved ability to build creditable projects and comply with export offset demands, strengthening export competitiveness."
+        context_conditions:
+          - "Offsets are important in export tenders and can dominate tender decisions."
+          - "Smaller exporters lack dedicated offset-management capacity."
+        outcome_tendencies:
+          - "Firms can better navigate offset rules and identify credit opportunities, improving compliance and competitiveness."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_010"
+            quote: "the offset package is of more importance than the main tender"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes the increased importance of offsets in export tenders and the role of export-support organisations in helping firms (especially smaller exporters) build compliance capacity."
+      - demi_regularity_id: "PM57_DR_02"
+        statement: "In contexts where offset delivery is pursued through government-to-government frameworks (e.g., FMS and MOUs), export support building offset capacity tends to yield reduced barriers to partner-country participation through policy waivers and administrative support (buy-national waivers, export-license support, data access), enabling offset-eligible work via procurement channels."
+        context_conditions:
+          - "Procurement occurs under government-to-government channels with formal agreements assigning offset responsibilities."
+          - "Policy barriers (buy-national rules, licensing, data access) affect partner-country participation."
+        outcome_tendencies:
+          - "Waivers and support provisions increase feasibility of partner-country bids for offset-eligible work."
+        supporting_cmo_ids:
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_002"
+            quote: "provide a waiver of US buy national laws and rules."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO describes concrete government-to-government support provisions that reduce barriers to bids and enable offset-eligible participation through procurement channels."
+    theme_notes:
+      - "Coverage: all 2 PM57 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports both organisational support (helping firms build offset projects) and policy support (waivers and licensing/data assistance) as export-support mechanisms."
+      - "Further evidence would help distinguish effects on small vs large firms and whether export-support capacity primarily improves compliance or also improves additionality/value-for-money."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM57.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

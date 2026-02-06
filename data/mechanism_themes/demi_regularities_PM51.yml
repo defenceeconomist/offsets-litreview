@@ -1,0 +1,79 @@
+demi_regularities_by_theme:
+  - theme_id: "PM51"
+    theme_label: "Offset reciprocity and supply-chain risk"
+    mechanism_explanation: "High offset demands in one market raise reciprocal expectations elsewhere; shifting toward more indirect offsets can reduce financial risk and preserve established supply chains."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_004"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_020"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_010"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_015"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM51_DR_01"
+        statement: "In contexts where high offset demands are pursued (e.g., 100%) and firms compete across multiple markets, offset reciprocity and supply-chain risk tends to yield ratcheting expectations ('going rates') and reciprocal pressure on exporters, increasing caution about escalating demands."
+        context_conditions:
+          - "Purchasers seek high offset percentages and compare requirements to international benchmarks."
+          - "Exporters anticipate being asked for reciprocity in other markets."
+        outcome_tendencies:
+          - "Offset percentage expectations climb over time."
+          - "Exporters and policymakers become wary that demanding high offsets increases what domestic firms will be asked for abroad."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_004"
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_004"
+            quote: "high rates of offsets are not well regarded as it only increases what British firms will be asked for overseas"
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_020"
+            quote: "\"The going offset percentage has been increasingly climbing and we Swiss didn't wish to be left behind.\""
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs explicitly describe both the benchmarking/ratcheting dynamic and the reciprocity concern affecting exporter expectations."
+      - demi_regularity_id: "PM51_DR_02"
+        statement: "In contexts where established production and supplier networks limit scope for direct work on the purchased system, offset reciprocity and supply-chain risk tends to yield predominance of indirect offsets as firms preserve existing supply chains and meet obligations through off-platform work."
+        context_conditions:
+          - "The purchased system is already in production with established supplier sources."
+          - "There is limited scope to reallocate direct work within the platform supply chain."
+        outcome_tendencies:
+          - "Most offset value is delivered as indirect offsets rather than direct work tied to the purchased equipment."
+        supporting_cmo_ids:
+          - "13_the_uk_experience_with_offsets_pdf__cmo_010"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_015"
+        anchor_quotes:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_010"
+            quote: "most of the offset (about 95%) was necessarily indirect"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_015"
+            quote: "reported that this figure was less than 5 %"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case explains indirect dominance given established supplier networks, supported by survey evidence indicating direct-inclusion shares are typically under 5%."
+      - demi_regularity_id: "PM51_DR_03"
+        statement: "In contexts where policymakers seek offsets but want to reduce financial risk and avoid destabilising supply chains under reciprocity pressures, shifting toward indirect offsets tends to yield a perceived stability/efficiency rationale for indirect forms over direct work reallocation."
+        context_conditions:
+          - "There is concern that high direct-offset demands can be counterproductive via reciprocity dynamics."
+          - "Maintaining established supply chains and limiting financial risk are valued."
+        outcome_tendencies:
+          - "Indirect offsets are preferred or justified as more stable and less risky than direct reallocation."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_004"
+            quote: "high rates of offsets are not well regarded as it only increases what British firms will be asked for overseas"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The rationale for preferring indirect offsets to reduce reciprocity-linked risk is supported by a high-confidence comparative statement, but outcome tracing across multiple programmes is limited within this theme."
+    theme_notes:
+      - "Coverage: all 4 PM51 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports two linked patterns: escalating expectations via international benchmarking and reciprocity pressure, and limited scope for direct offsets in mature production supply chains resulting in predominantly indirect delivery."
+      - "Further evidence would help distinguish when indirect offsets genuinely reduce risk versus merely shifting offset burdens to less transparent or less additional transactions."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM51.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

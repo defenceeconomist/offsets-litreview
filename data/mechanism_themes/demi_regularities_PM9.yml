@@ -1,0 +1,103 @@
+demi_regularities_by_theme:
+  - theme_id: "PM9"
+    theme_label: "Barter eases constraints, reduces transparency"
+    mechanism_explanation: "Barter arrangements relax financial constraints but reduce transparency, creating mutual advantage for supplier and buyer."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_009"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_002"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_001"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_011"
+      - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_012"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_004"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_006"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM9_DR_01"
+        statement: "In contexts where purchasers face hard-currency shortages and/or limited access to external borrowing, barter and counterpurchase arrangements tends to yield completion of arms deals with reduced immediate cash payment by substituting in-kind or commodity-linked exchanges."
+        context_conditions:
+          - "Purchasers face liquidity constraints (hard-currency shortages or difficulty borrowing on international markets)."
+          - "Purchasers can offer commodities or reciprocal purchases to finance part of the transaction."
+        outcome_tendencies:
+          - "Arms imports/exports proceed despite financial constraints."
+          - "Upfront cash payment is reduced through in-kind payment, commodity flows, or special-account structures."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_002"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_004"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_006"
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_011"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_002"
+            quote: "can circumvent this difficulty by engaging in non-monetary offset trade"
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_004"
+            quote: "Experts usually name this offset \"financial offset\""
+        moderators:
+          - condition: "When foreign-exchange shortages are acute, commodity/rupee countertrade provides short-term relief and can expand reciprocal trade."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_011"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple CMOs across settings describe barter/counterpurchase as a financing workaround under liquidity and borrowing constraints, with concrete commodity-linked structures and stated foreign-exchange relief effects."
+      - demi_regularity_id: "PM9_DR_02"
+        statement: "In contexts where barter reduces scrutiny and transparency in procurement financing, barter arrangements tends to yield faster or easier deal completion but do not necessarily yield development benefits or reduced economic burden for the purchasing country."
+        context_conditions:
+          - "Buyers seek to conclude deals quickly under financial stress and/or with limited scrutiny."
+          - "Barter structures reduce transparency of the transaction."
+        outcome_tendencies:
+          - "Procurement is facilitated."
+          - "Development benefits are absent or limited and the underlying economic burden of procurement is not mitigated."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_009"
+            quote: "It therefore does nothing to mitigate the economic burden of military procurement."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A single high-confidence CMO explicitly links barter to reduced transparency and concludes it does not mitigate the procurement burden or generate development benefits; broader corroboration within this theme is limited."
+      - demi_regularity_id: "PM9_DR_03"
+        statement: "In contexts where actors have prior experience with countertrade and opaque compensatory deal structures, barter arrangements tends to yield greater willingness and capacity to negotiate and operate within non-transparent offset environments."
+        context_conditions:
+          - "Procurement cadres have historical experience with countertrade and complex offset brokering."
+          - "Compensatory arrangements are negotiated in opaque, bundled deal structures."
+        outcome_tendencies:
+          - "Actors engage readily in modern offset deals and navigate 'smoke-and-mirrors' environments."
+        supporting_cmo_ids:
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_001"
+            quote: "more comfortable than their western procurement counterparts when operating in the smoke-and-mirrors world of defense offset deals"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The familiarity pathway is clearly stated but supported primarily by a single medium-confidence case description rather than multiple comparative examples."
+      - demi_regularity_id: "PM9_DR_04"
+        statement: "In contexts where countertrade relies on unfavorable exchange-rate arrangements and/or diversion of exports from hard-currency markets, barter arrangements tends to yield hidden long-term costs that accumulate as debt and repayment burdens, reducing net benefits over time."
+        context_conditions:
+          - "Exchange-rate arrangements embedded in countertrade are unfavorable to the importer."
+          - "Exports may be diverted away from hard-currency markets to satisfy countertrade obligations."
+        outcome_tendencies:
+          - "Long-term benefits diminish as repayment burdens rise and hidden costs emerge."
+        supporting_cmo_ids:
+          - "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_012"
+            quote: "the rupee-rouble exchange rate since the 1970s was not favorable to India"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a clear account of longer-term hidden costs arising from unfavorable countertrade exchange-rate dynamics and diversionary exports."
+    theme_notes:
+      - "Coverage: all 7 PM9 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a short-term liquidity-relief pathway (barter/counterpurchase enabling deals) alongside concerns about reduced transparency and longer-term hidden costs."
+      - "More case-comparative evidence would help distinguish when barter supports broader development outcomes versus merely shifting timing and visibility of costs."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM9.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

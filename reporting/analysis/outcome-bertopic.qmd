@@ -1,0 +1,507 @@
+---
+title: "Outcome BERTopic Model (for Outcome Families)"
+format: html
+freeze: true
+---
+
+This note fits a BERTopic model over `outcome_statement` to help propose a small set of outcome families (plus optional sub-tags).
+
+## Environment
+
+This note expects a Python environment with the repo dependencies installed:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+The default embedding model (`all-MiniLM-L6-v2`) may download on first run.
+
+```{python}
+import os
+import sys
+
+sys.path.append(os.path.abspath("src/py"))
+```
+
+## Load outcomes
+
+```{python}
+import pandas as pd
+
+input_path = "data/cmo_statements.csv"
+out_dir = "data/topic-models/outcomes"
+os.makedirs(out_dir, exist_ok=True)
+
+model_name = "all-MiniLM-L6-v2"
+batch_size = 32
+normalize = True
+device = "cpu"
+
+df = pd.read_csv(input_path)
+df = df[df["outcome_statement"].notna()].copy()
+df["outcome_statement"] = df["outcome_statement"].astype(str).str.strip()
+df = df[df["outcome_statement"] != ""]
+
+docs = df["outcome_statement"].tolist()
+ids = df["chunk_id"].tolist()
+
+len(df)
+```
+
+## Embeddings (cached)
+
+```{python}
+from embed_mechanisms import embed_texts
+
+cache_path = "data/topic-models/embeddings_cache.sqlite"
+embeddings_csv = os.path.join(out_dir, "embeddings.csv")
+
+embeddings = embed_texts(
+    texts=docs,
+    model_name=model_name,
+    batch_size=batch_size,
+    normalize=normalize,
+    device=device,
+    cache_path=cache_path,
+)
+
+emb_cols = [f"emb_{i}" for i in range(embeddings.shape[1])]
+emb_df = pd.DataFrame(embeddings, columns=emb_cols)
+out = pd.concat(
+    [df[["chunk_id", "file_id", "outcome_statement"]].reset_index(drop=True), emb_df],
+    axis=1,
+)
+out.to_csv(embeddings_csv, index=False)
+print(f"Wrote {embeddings_csv} with {len(out)} rows and {len(emb_cols)} dims")
+```
+
+## BERTopic (UMAP + HDBSCAN + Vectorization + c-TF-IDF)
+
+```{python}
+import itertools
+import numpy as np
+
+from bertopic import BERTopic
+from bertopic.representation import KeyBERTInspired, MaximalMarginalRelevance
+from bertopic.vectorizers import ClassTfidfTransformer
+from hdbscan import HDBSCAN
+from sklearn.feature_extraction.text import CountVectorizer
+from sentence_transformers import SentenceTransformer
+from umap import UMAP
+
+vectorizer_model = CountVectorizer(
+    stop_words="english",
+    ngram_range=(1, 3),
+    min_df=2,
+)
+
+ctfidf_model = ClassTfidfTransformer(
+    reduce_frequent_words=True,
+)
+
+base_representation_model = {
+    "KeyBERT": KeyBERTInspired(top_n_words=12),
+    "MMR": MaximalMarginalRelevance(diversity=0.5),
+}
+
+embedding_backend = SentenceTransformer(model_name, device=device)
+
+random_state = 42
+
+target_topics_min = 8
+target_topics_max = 40
+max_outlier_rate_soft = 0.50
+
+tuning_sample_size = 2000
+
+min_cluster_sizes = [5, 8, 10, 15, 20]
+min_samples_list = [1, 2, 5]
+umap_n_neighbors_list = [5, 10, 15]
+cluster_selection_methods = ["eom", "leaf"]
+umap_n_components = 5
+umap_min_dist = 0.0
+
+use_openai_topic_labels = True
+openai_model = "gpt-4o-mini"
+openai_delay_seconds = 1
+
+openai_representation_model = None
+if use_openai_topic_labels:
+    try:
+        import openai
+        from dotenv import load_dotenv
+        from bertopic.representation import OpenAI as OpenAIRepresentation
+
+        load_dotenv()
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if openai_api_key:
+            openai_client = openai.OpenAI(api_key=openai_api_key)
+            openai_representation_model = OpenAIRepresentation(
+                openai_client,
+                model=openai_model,
+                delay_in_seconds=openai_delay_seconds,
+            )
+            print("OpenAI topic labelling enabled (OPENAI_API_KEY found in environment).")
+        else:
+            print("OpenAI topic labelling disabled (OPENAI_API_KEY not found).")
+    except Exception as e:
+        openai_representation_model = None
+        print("OpenAI topic labelling disabled (optional):", type(e).__name__, str(e)[:200])
+
+
+def _score(outlier_rate: float, n_topics: int) -> float:
+    topic_penalty = 0.0
+    if n_topics < target_topics_min:
+        topic_penalty += (target_topics_min - n_topics) / max(target_topics_min, 1)
+    if n_topics > target_topics_max:
+        topic_penalty += (n_topics - target_topics_max) / max(target_topics_max, 1)
+
+    outlier_penalty = 0.0
+    if outlier_rate > max_outlier_rate_soft:
+        outlier_penalty = (outlier_rate - max_outlier_rate_soft) * 2.0
+
+    return float(outlier_rate + 0.35 * topic_penalty + outlier_penalty)
+
+
+def fit_topic_model(
+    min_cluster_size: int, min_samples: int, umap_n_neighbors: int, cluster_selection_method: str
+):
+    umap_model = UMAP(
+        n_neighbors=umap_n_neighbors,
+        n_components=umap_n_components,
+        min_dist=umap_min_dist,
+        metric="cosine",
+        random_state=random_state,
+    )
+
+    hdbscan_model = HDBSCAN(
+        min_cluster_size=min_cluster_size,
+        min_samples=min_samples,
+        metric="euclidean",
+        cluster_selection_method=cluster_selection_method,
+        prediction_data=True,
+    )
+
+    topic_model = BERTopic(
+        embedding_model=embedding_backend,
+        vectorizer_model=vectorizer_model,
+        ctfidf_model=ctfidf_model,
+        representation_model=base_representation_model,
+        umap_model=umap_model,
+        hdbscan_model=hdbscan_model,
+        top_n_words=12,
+        calculate_probabilities=False,
+        verbose=False,
+    )
+
+    topics, _ = topic_model.fit_transform(tune_docs, tune_embeddings)
+    topic_info = topic_model.get_topic_info()
+    n_non_outlier_topics = int((topic_info["Topic"] != -1).sum())
+    outlier_rate = float(np.mean(np.asarray(topics) == -1))
+    return topic_model, topics, topic_info, n_non_outlier_topics, outlier_rate
+
+
+if len(docs) > tuning_sample_size:
+    rng = np.random.default_rng(random_state)
+    tune_idx = rng.choice(len(docs), size=tuning_sample_size, replace=False)
+    tune_docs = [docs[i] for i in tune_idx]
+    tune_embeddings = embeddings[tune_idx]
+    print(f"Tuning on a random sample of {len(tune_docs)} / {len(docs)} outcome statements")
+else:
+    tune_docs = docs
+    tune_embeddings = embeddings
+    print(f"Tuning on full dataset with {len(docs)} outcome statements")
+
+results = []
+best = None
+
+for min_cluster_size, min_samples, umap_n_neighbors in itertools.product(
+    min_cluster_sizes, min_samples_list, umap_n_neighbors_list
+):
+    for cluster_selection_method in cluster_selection_methods:
+        model, tpcs, info, n_t, out_rate = fit_topic_model(
+            min_cluster_size=min_cluster_size,
+            min_samples=min_samples,
+            umap_n_neighbors=umap_n_neighbors,
+            cluster_selection_method=cluster_selection_method,
+        )
+
+        score = _score(out_rate, n_t)
+        row = {
+            "min_cluster_size": min_cluster_size,
+            "min_samples": min_samples,
+            "umap_n_neighbors": umap_n_neighbors,
+            "cluster_selection_method": cluster_selection_method,
+            "n_topics": n_t,
+            "outlier_rate": out_rate,
+            "score": score,
+        }
+        results.append(row)
+
+        if best is None or score < best["row"]["score"]:
+            best = {"row": row, "model": model, "topics": tpcs, "topic_info": info}
+
+tuning_df = pd.DataFrame(results).sort_values(["score", "outlier_rate", "n_topics"]).reset_index(drop=True)
+tuning_df.to_csv(os.path.join(out_dir, "tuning_results.csv"), index=False)
+print("Saved tuning table to", os.path.join(out_dir, "tuning_results.csv"))
+tuning_df.head(15)
+
+best_params = {
+    k: best["row"][k]
+    for k in ["min_cluster_size", "min_samples", "umap_n_neighbors", "cluster_selection_method"]
+}
+print("Best params from tuning:", best_params)
+import json
+
+with open(os.path.join(out_dir, "best_params.json"), "w", encoding="utf-8") as f:
+    json.dump(
+        {
+            "best_params": best_params,
+            "targets": {
+                "target_topics_min": target_topics_min,
+                "target_topics_max": target_topics_max,
+                "max_outlier_rate_soft": max_outlier_rate_soft,
+            },
+            "grid": {
+                "min_cluster_sizes": min_cluster_sizes,
+                "min_samples_list": min_samples_list,
+                "umap_n_neighbors_list": umap_n_neighbors_list,
+                "cluster_selection_methods": cluster_selection_methods,
+                "umap_n_components": umap_n_components,
+                "umap_min_dist": umap_min_dist,
+                "tuning_sample_size": tuning_sample_size,
+            },
+        },
+        f,
+        indent=2,
+        sort_keys=True,
+    )
+
+# Refit final model on the full dataset with the selected parameters
+def fit_final_topic_model(params: dict):
+    umap_model = UMAP(
+        n_neighbors=int(params["umap_n_neighbors"]),
+        n_components=umap_n_components,
+        min_dist=umap_min_dist,
+        metric="cosine",
+        random_state=random_state,
+    )
+    hdbscan_model = HDBSCAN(
+        min_cluster_size=int(params["min_cluster_size"]),
+        min_samples=int(params["min_samples"]),
+        metric="euclidean",
+        cluster_selection_method=str(params["cluster_selection_method"]),
+        prediction_data=True,
+    )
+    def _fit(rep_model: dict, verbose: bool):
+        topic_model = BERTopic(
+            embedding_model=embedding_backend,
+            vectorizer_model=vectorizer_model,
+            ctfidf_model=ctfidf_model,
+            representation_model=rep_model,
+            umap_model=umap_model,
+            hdbscan_model=hdbscan_model,
+            top_n_words=12,
+            calculate_probabilities=False,
+            verbose=verbose,
+        )
+        topics, _ = topic_model.fit_transform(docs, embeddings)
+        topic_info = topic_model.get_topic_info()
+        n_non_outlier_topics = int((topic_info["Topic"] != -1).sum())
+        outlier_rate = float(np.mean(np.asarray(topics) == -1))
+        return topic_model, topics, topic_info, n_non_outlier_topics, outlier_rate
+
+    rep_model = dict(base_representation_model)
+    if openai_representation_model is not None:
+        rep_model["OpenAI"] = openai_representation_model
+        try:
+            return _fit(rep_model, verbose=True)
+        except Exception as e:
+            print("OpenAI representation failed; refitting without OpenAI:", type(e).__name__, str(e)[:200])
+
+    return _fit(dict(base_representation_model), verbose=True)
+
+
+topic_model, topics, topic_info, n_topics, outlier_rate = fit_final_topic_model(best_params)
+print("Final model | n_topics:", n_topics, "| outlier_rate:", round(outlier_rate, 3))
+
+
+def _coerce_label(value) -> str | None:
+    if value is None:
+        return None
+    if isinstance(value, str):
+        return value.strip() or None
+    if isinstance(value, (list, tuple)) and len(value) > 0:
+        first = value[0]
+        if isinstance(first, tuple) and len(first) > 0:
+            parts = []
+            for item in value[:4]:
+                if isinstance(item, tuple) and len(item) > 0:
+                    parts.append(str(item[0]))
+            label = ", ".join([p for p in parts if p])
+            return label or None
+        if isinstance(first, str):
+            label = ", ".join([str(x) for x in value[:4] if str(x).strip()])
+            return label or None
+    return None
+
+
+topic_labels = {}
+if openai_representation_model is not None and hasattr(topic_model, "topic_aspects_"):
+    aspects = getattr(topic_model, "topic_aspects_", {}) or {}
+    openai_aspects = aspects.get("OpenAI")
+    if isinstance(openai_aspects, dict):
+        for tid in topic_info["Topic"].tolist():
+            if tid == -1:
+                continue
+            topic_labels[int(tid)] = _coerce_label(openai_aspects.get(int(tid)))
+
+# Fallback labels from default c-TF-IDF top words
+for tid in topic_info["Topic"].tolist():
+    if tid == -1:
+        continue
+    if topic_labels.get(int(tid)):
+        continue
+    words = topic_model.get_topic(int(tid)) or []
+    top_words = [w for w, _ in words[:3]]
+    topic_labels[int(tid)] = ", ".join(top_words) if top_words else f"Topic {tid}"
+
+if hasattr(topic_model, "set_topic_labels") and topic_labels:
+    topic_model.set_topic_labels(topic_labels)
+
+labels_csv = os.path.join(out_dir, "topic_labels.csv")
+labels_df = pd.DataFrame(
+    [{"topic": int(t), "label": str(l)} for t, l in sorted(topic_labels.items(), key=lambda x: x[0])]
+)
+labels_df.to_csv(labels_csv, index=False)
+print(f"Wrote {labels_csv} with {len(labels_df)} topic labels")
+```
+
+## Topic overview (candidate families)
+
+```{python}
+topic_info_out = topic_info.copy()
+topic_info_out["label"] = topic_info_out["Topic"].apply(
+    lambda t: "Outlier" if int(t) == -1 else topic_labels.get(int(t), "")
+)
+topic_info_out.to_csv(os.path.join(out_dir, "topic_info.csv"), index=False)
+topic_info_out.head(30)
+```
+
+```{python}
+doc_info = pd.DataFrame(
+    {
+        "chunk_id": ids,
+        "file_id": df["file_id"].tolist(),
+        "outcome_statement": docs,
+        "topic": topics,
+        "topic_label": ["Outlier" if int(t) == -1 else topic_labels.get(int(t), "") for t in topics],
+    }
+)
+doc_info.to_csv(os.path.join(out_dir, "doc_info.csv"), index=False)
+doc_info.head(10)
+```
+
+## Datamap (documents)
+
+```{python}
+reducer_2d = UMAP(
+    n_neighbors=10,
+    n_components=2,
+    min_dist=0.0,
+    metric="cosine",
+    random_state=random_state,
+)
+reduced_embeddings = reducer_2d.fit_transform(embeddings)
+
+umap_csv = os.path.join(out_dir, "umap_2d.csv")
+umap_df = pd.DataFrame(reduced_embeddings, columns=["umap_0", "umap_1"])
+umap_out = pd.concat(
+    [
+        df[["chunk_id", "file_id", "outcome_statement"]].reset_index(drop=True),
+        pd.Series(topics, name="topic"),
+        umap_df,
+    ],
+    axis=1,
+)
+umap_out.to_csv(umap_csv, index=False)
+print(f"Wrote {umap_csv} with {len(umap_out)} rows")
+```
+
+```{python}
+topic_model.visualize_document_datamap(
+    docs,
+    reduced_embeddings=reduced_embeddings,
+    interactive=True,
+)
+```
+
+```{python}
+try:
+    import datamapplot
+
+    topic_label_map = {-1: "Outlier"}
+    for topic_id, label in topic_labels.items():
+        topic_label_map[int(topic_id)] = f"{topic_id}: {label}"
+
+    labels = [topic_label_map.get(int(t), str(t)) for t in topics]
+
+    datamapplot.create_plot(
+        reduced_embeddings,
+        labels=labels,
+        title="Outcome statements datamap (topic labels)",
+        label_wrap_width=22,
+        label_font_size=9,
+        point_size=3,
+        darkmode=False,
+    )
+except Exception as e:
+    print("Skipping datamapplot (optional):", type(e).__name__, str(e)[:200])
+```
+
+```{python}
+if n_topics >= 2:
+    topic_model.visualize_topics(custom_labels=True)
+else:
+    print(
+        "Skipping topic-level visualisations (need >=2 non-outlier topics). "
+        "Try lowering HDBSCAN `min_cluster_size`/`min_samples` or switching `cluster_selection_method`."
+    )
+```
+
+```{python}
+if n_topics >= 2:
+    topic_model.visualize_heatmap(custom_labels=True)
+```
+
+## Hierarchy
+
+```{python}
+if n_topics >= 2:
+    hierarchical_topics = topic_model.hierarchical_topics(docs)
+    try:
+        topic_model.visualize_hierarchy(hierarchical_topics=hierarchical_topics, custom_labels=True)
+    except TypeError:
+        topic_model.visualize_hierarchy(hierarchical_topics=hierarchical_topics)
+else:
+    print(
+        "Skipping hierarchy visualisation (need >=2 non-outlier topics). "
+        "Try lowering HDBSCAN `min_cluster_size`/`min_samples` or switching `cluster_selection_method`."
+    )
+
+```
+
+## Quick inspection helper
+
+```{python}
+def topic_examples(topic_id: int, n: int = 10) -> pd.DataFrame:
+    rows = doc_info[doc_info["topic"] == topic_id].head(n).copy()
+    return rows[["chunk_id", "outcome_statement"]]
+
+
+topic_candidates = topic_info.loc[topic_info["Topic"] != -1, "Topic"].tolist()
+topic_id = int(topic_candidates[0]) if topic_candidates else -1
+topic_examples(topic_id, n=10)
+```

@@ -1,0 +1,59 @@
+demi_regularities_by_theme:
+  - theme_id: "PM12"
+    theme_label: "Development-oriented indirect offset design"
+    mechanism_explanation: "Specifying development-oriented indirect offsets and emphasizing transparency increases the likelihood that promised activities are realized and development-relevant."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_007"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_020"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM12_DR_01"
+        statement: "In contexts where a weapons purchase proceeds regardless of offsets and policymakers aim to reduce collateral economic harm, specifying development-oriented indirect offsets (capital inflows, appropriate technology transfer, transferable skills, new markets) and emphasizing transparency tends to yield more realized and development-relevant offset activity (albeit often modest and contingent on enforceability)."
+        context_conditions:
+          - "The procurement is expected to proceed regardless of whether offsets are attached."
+          - "Offset requirements are specified to target development-oriented outcomes and transparency is emphasized."
+        outcome_tendencies:
+          - "Offset activity is more likely to be development-relevant and realized rather than purely nominal."
+          - "Offsets may modestly soften the procurement’s economic burden, subject to enforceability."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_023"
+            quote: "it is worth attaching the requirement for development-oriented offsets as a condition of purchase"
+        moderators:
+          - condition: "When the offset basket shifts toward higher-value downstream industrial projects (rather than simple crude-lifting repayment), development orientation is more direct."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "06_offsets_and_french_arms_exports_pdf__cmo_007"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "One low-confidence CMO provides a design recommendation linking transparency and development-oriented indirect offsets to increased realization; a high-confidence CMO provides a concrete example of shifting offset content toward development-oriented petrochemical projects."
+      - demi_regularity_id: "PM12_DR_02"
+        statement: "In contexts where immediate employment creation is a political priority (e.g., high unemployment and labor-market absorption needs), development-oriented indirect offset design tends to yield offset baskets emphasizing people-intensive, near-term work (such as software development and contract R&D) rather than only long-term industrial initiatives."
+        context_conditions:
+          - "High unemployment creates pressure for rapid job creation."
+          - "Offset authorities design baskets to prioritize near-term, labor-absorbing activities."
+        outcome_tendencies:
+          - "Offset baskets focus on people-intensive and near-term work and target immediate employment needs."
+        supporting_cmo_ids:
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_020"
+            quote: "needed to target Russian immigrants"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO describes how unemployment and labor absorption priorities shifted offset basket design toward near-term, people-intensive work (software development and contract R&D)."
+    theme_notes:
+      - "Coverage: all 3 PM12 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports two design logics: (a) transparency and development-oriented specifications to improve realization, and (b) tailoring baskets toward near-term employment when job creation is urgent."
+      - "The transparency/design recommendation is largely prescriptive in one source; the employment-priority design is case-traced with high-confidence evidence."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM12.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,115 @@
+demi_regularities_by_theme:
+  - theme_id: "PM21"
+    theme_label: "Market access conditioned on reciprocity"
+    mechanism_explanation: "Requiring reciprocal activity as a condition of market access imposes trade-restricting requirements on exporters."
+    cmo_ids_in_theme:
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_001"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_003"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_012"
+      - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020"
+      - "01_introduction_and_overview_pdf__cmo_001"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_021"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_039"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_001"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_015"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM21_DR_01"
+        statement: "In contexts where defence procurement is treated as an exceptional (security-driven) domain and offsets are mandated by governments rather than privately negotiated, market access conditioned on reciprocity tends to yield trade-restricting procurement arrangements that shape exporter behavior beyond the base arms purchase."
+        context_conditions:
+          - "Offsets are mandatory requirements imposed by the importing state as a condition of market access."
+          - "Arms trade operates under security exceptionalism outside standard liberalized trade regimes."
+        outcome_tendencies:
+          - "Exporters face trade-restricting obligations (countertrade, local content, bundled enhancements) tied to contract award."
+          - "Procurement functions as a protectionist arrangement shaping trade flows beyond the weapon-system purchase."
+        supporting_cmo_ids:
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001"
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_001"
+            quote: "bundling requirements are trade restrictions imposed on the exporter by the importing country"
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_001"
+            quote: "The arms trade must remain illiberal for security reasons, but its regulation must be tougher, multilateral, and more transparent."
+        moderators:
+          - condition: "When a 'full economic compensation' norm is institutionalised, reciprocity requirements become a default expectation for major purchases."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_015"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs explicitly define mandatory offsets as government-imposed trade restrictions and situate this practice within security exceptionalism that permits illiberal contracting."
+      - demi_regularity_id: "PM21_DR_02"
+        statement: "In contexts where defence budgets are constrained, unemployment pressures are salient, and indigenous development is politically or fiscally difficult, market access conditioned on reciprocity tends to yield continued imports alongside compensatory domestic work, technology acquisition, and industrial recovery efforts."
+        context_conditions:
+          - "Budget constraints and unemployment pressures make indigenous development costly and politically difficult."
+          - "Domestic industry seeks work/technology and policymakers want imports to deliver visible domestic economic benefits."
+        outcome_tendencies:
+          - "Imports proceed while offset packages generate procurement-linked domestic work and industrial participation."
+          - "Offsets are used as channels for technology transfer and market access tied to procurement."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_001"
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_003"
+          - "10_the_teeth_of_little_tigers_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_001"
+            quote: "As defence budgets have been cut and unemployment has risen, purchasers have sought a less costly form of procurement."
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_003"
+            quote: "Offsets... are seen as a means of securing work for the ailing defense industry"
+        moderators:
+          - condition: "When buyers standardize very high offset percentages for major deals, suppliers compete more intensely on offset offers."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_012"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs link budget/unemployment constraints and industrial weakness to the use of offsets as quid pro quo that allows imports while generating domestic work and technology-related benefits."
+      - demi_regularity_id: "PM21_DR_03"
+        statement: "In contexts where buyers make advanced technology transfer (e.g., software source code) a core reciprocity condition, market access conditioned on reciprocity tends to yield bidder disadvantage or exclusion for suppliers constrained by export-control and technology-release limits."
+        context_conditions:
+          - "Procurements require deep technology transfer for autonomy (e.g., full software source code)."
+          - "Supplier states impose export-control or technology-release constraints."
+        outcome_tendencies:
+          - "Some suppliers are disadvantaged in competition because they cannot meet the reciprocity requirement."
+        supporting_cmo_ids:
+          - "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_020"
+            quote: "puts the F-16 at a disadvantage"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A high-confidence CMO provides a clear instance of export-control limits translating into competitive disadvantage, but coverage is limited to a single detailed case."
+      - demi_regularity_id: "PM21_DR_04"
+        statement: "In contexts where trade-regime rules and legal interpretations treat offsets as non-tariff barriers (especially for civil contracts), market access conditioned on reciprocity tends to yield external objections and potential prohibition pressures that constrain offset programmes."
+        context_conditions:
+          - "Offsets are interpreted as non-tariff barriers under international trade rules."
+          - "Offset use intersects with trade-regime membership and legal scrutiny (e.g., for civil contracts)."
+        outcome_tendencies:
+          - "Offset programmes face conflict, restriction, or threat of prohibition under strict trade-rule interpretations."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_021"
+          - "09_saudi_arabia_and_offsets_pdf__cmo_039"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_021"
+            quote: "If offsets are regarded as non-tariff barriers they would be in contradiction of the GATT rules"
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_039"
+            quote: "the view that offset is a non-tariff barrier to trade would preclude all GATT members from running offset programmes"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The mechanism is supported by medium-confidence CMOs that describe how trade-rule interpretations can constrain offsets, but the empirical scope depends on legal interpretation and regime context rather than repeated within-country outcome tracing."
+    theme_notes:
+      - "Coverage: all 10 PM21 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports two linked patterns: (a) offsets as mandatory trade restrictions in an illiberal security-exempt market, and (b) offsets as a way to reconcile imports with domestic jobs/technology expectations."
+      - "Constraints and boundary pressures arise from export-control limits on technology transfer and from trade-regime interpretations that treat offsets as non-tariff barriers."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM21.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

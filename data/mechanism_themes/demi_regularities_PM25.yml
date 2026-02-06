@@ -1,0 +1,52 @@
+demi_regularities_by_theme:
+  - theme_id: "PM25"
+    theme_label: "Opacity enables price discrimination"
+    mechanism_explanation: "Lower visibility of offset-related pricing permits price discrimination or dumping in world markets that would be harder under transparent pricing."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_004"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM25_DR_01"
+        statement: "In contexts where barter and in-kind offset trades are statistically less visible than monetary transactions, reduced price visibility tends to yield difficult-to-detect price discrimination and dumping in world markets."
+        context_conditions:
+          - "Transactions are structured as barter or in-kind offset trade rather than transparent monetary sales."
+        outcome_tendencies:
+          - "Price discrimination and dumping become easier to execute and harder to detect."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_003"
+            quote: "barter by its nature is statistically less visible than monetary transactions"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO states the lower-visibility premise and links it to price discrimination/dumping, but provides limited case-specific measurement within this theme."
+      - demi_regularity_id: "PM25_DR_02"
+        statement: "In contexts where exporters face price restrictions, agreements, or political constraints that make explicit price-cutting difficult, using barter and counterpurchase to obscure effective prices tends to yield disposal of surplus output or market entry at lower effective prices without visible nominal price changes."
+        context_conditions:
+          - "Price-cutting is constrained by agreements or political restrictions."
+          - "Barter/counterpurchase structures can obscure the effective transaction price."
+        outcome_tendencies:
+          - "Firms can dispose of stock or enter markets at effectively lower prices while avoiding visible nominal price changes."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_004"
+            quote: "barter can obscure the price at which this stock is being sold"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly links price constraints to the use of barter/counterpurchase as an opacity mechanism enabling effective price discrimination without nominal price changes."
+    theme_notes:
+      - "Coverage: all 2 PM25 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports an opacity pathway: barter/counterpurchase reduces price transparency and enables de facto price discrimination and dumping."
+      - "Further evidence would be needed to quantify the magnitude and distributional consequences of these pricing effects across markets."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM25.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

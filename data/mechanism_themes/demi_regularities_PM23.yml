@@ -1,0 +1,83 @@
+demi_regularities_by_theme:
+  - theme_id: "PM23"
+    theme_label: "Sourcing persists only when viable"
+    mechanism_explanation: "Offset-induced sourcing ends when obligations expire unless continued local production is economically worthwhile, so effects may be temporary."
+    cmo_ids_in_theme:
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_010"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_009"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_005"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_016"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_021"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM23_DR_01"
+        statement: "In contexts where offset-induced local sourcing is only marginally competitive and tied to a one-off procurement, offset-induced sourcing tends to yield temporary industrial participation that dries up once obligations are fulfilled unless there is follow-on work or sustained competitiveness."
+        context_conditions:
+          - "Local sourcing is driven primarily by contract-specific offset obligations."
+          - "Local suppliers are only just competitive or have limited prospects of follow-on work."
+        outcome_tendencies:
+          - "Subcontracting and industrial participation end when the supplier meets its offset requirements."
+          - "Long-run industrial strengthening and durable collaboration are limited."
+        supporting_cmo_ids:
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_010"
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_009"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_010"
+            quote: "local sourcing is likely to cease unless there is a reasonable prospect of the international prime winning further work"
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_005"
+            quote: "benefits drying up once the foreign supplier has completed its offset obligations"
+        moderators:
+          - condition: "When follow-on opportunities exist (further work for the prime or competitive local suppliers), sourcing is more likely to persist beyond the obligation period."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "13_the_uk_experience_with_offsets_pdf__cmo_021"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs across Belgium and conceptual foundations converge on the 'obligation expiry' pattern; an additional high-confidence CMO describes persistence when suppliers are truly competitive or follow-on work exists."
+      - demi_regularity_id: "PM23_DR_02"
+        statement: "In contexts where offset-placement forces exploration of new suppliers, offset-induced sourcing tends to yield durable sourcing relationships when the discovered sources are genuinely lower-cost or otherwise competitive, but short-term placement when they are not."
+        context_conditions:
+          - "Contractors must place work for compliance and may need to identify new suppliers."
+          - "New sources vary in underlying cost/quality competitiveness."
+        outcome_tendencies:
+          - "Competitive new sources are retained after obligations end."
+          - "Uncompetitive sources receive short-term work that relocates once obligations are met."
+        supporting_cmo_ids:
+          - "13_the_uk_experience_with_offsets_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_021"
+            quote: "discovery of new, lower cost, sources of supply"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A high-confidence survey-based CMO provides a clear persistence vs short-term distinction contingent on supplier competitiveness, but corroboration across additional case CMOs within this theme is limited."
+      - demi_regularity_id: "PM23_DR_03"
+        statement: "In contexts where investment-based compensation depends on continued domestic orders and alignment of buyer–seller interests, offset-induced sourcing tends to yield visible foreign-investor dissatisfaction and exit threats when follow-on demand is weak, limiting long-term collaboration benefits."
+        context_conditions:
+          - "Foreign participation benefits depend on a continuing flow of domestic defence orders."
+          - "Buyer–seller interests diverge (investors seek orders and returns; domestic partners seek promised technology/marketing transfers)."
+        outcome_tendencies:
+          - "Long-term benefits may not accrue and investors may press the defence ministry for purchases or threaten withdrawal."
+        supporting_cmo_ids:
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_016"
+            quote: "Hughes has made its disappointment with the poor results of its Spanish investment publicly known."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The pathway is described in one medium-confidence case narrative linking weak follow-on demand to investor dissatisfaction and exit threats, but broader replication across cases is not shown."
+    theme_notes:
+      - "Coverage: all 5 PM23 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "A consistent pattern is that offset-sourcing benefits are often time-bounded to obligation periods unless competitiveness or follow-on demand supports continuation."
+      - "Evidence suggests durability is more likely when offsets reveal genuinely competitive suppliers; otherwise effects are transient and can generate conflict in investment-based arrangements."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM23.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,54 @@
+demi_regularities_by_theme:
+  - theme_id: "PM49"
+    theme_label: "Second-best import offset rules"
+    mechanism_explanation: "When open domestic procurement coexists with foreign protectionism, governments adopt systematic import offset rules as a second-best response to offshore content."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_002"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_022"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM49_DR_01"
+        statement: "In contexts where a country maintains open, competitive domestic defence procurement but faces protectionism abroad, systematic second-best import offset rules tends to yield regular requests for industrial participation on significant offshore content as a necessity to secure technology transfer and investment in prioritized capabilities."
+        context_conditions:
+          - "Domestic procurement is open and competitive."
+          - "Foreign markets apply protectionist policies that limit reciprocal access."
+          - "Import offsets/IP rules are applied systematically to offshore content."
+        outcome_tendencies:
+          - "Import offsets are requested regularly to secure technology transfer and investment in prioritized capability areas."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_002"
+            quote: "accepted import offsets as a necessity so long as protectionist policy exists elsewhere"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly frames import offsets as a second-best necessity in the presence of foreign protectionism and describes systematic application to offshore content."
+      - demi_regularity_id: "PM49_DR_02"
+        statement: "In contexts where offset requirements are asymmetric across partner countries and firms perceive competitive disadvantage in export markets, systematic second-best import offset rules tends to yield calls for reciprocal 'level playing field' policies that require offsets from countries demanding offsets from domestic exporters."
+        context_conditions:
+          - "Domestic firms face offset demands in export markets while domestic import policy is perceived as less demanding."
+          - "Asymmetry creates perceived competitive disadvantage."
+        outcome_tendencies:
+          - "Firms and stakeholders call for reciprocal offset requirements toward countries that demand offsets from domestic industry."
+        supporting_cmo_ids:
+          - "13_the_uk_experience_with_offsets_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_022"
+            quote: "the MoD should require offsets from all countries which demand offset from UK industry."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO reports direct survey-based calls for reciprocity and links them to asymmetric offset demands, supporting the level-playing-field logic."
+    theme_notes:
+      - "Coverage: all 2 PM49 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports second-best framing of import offsets as responses to protectionism and as instruments for reciprocity/level playing field concerns."
+      - "More evidence would be needed to assess whether systematic IP rules reduce or exacerbate broader offset ratcheting dynamics across markets."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM49.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

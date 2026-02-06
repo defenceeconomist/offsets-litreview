@@ -1,0 +1,102 @@
+demi_regularities_by_theme:
+  - theme_id: "PM74"
+    theme_label: "Disclosure constraints obscure evaluation"
+    mechanism_explanation: "Limited data access and vested interests constrain disclosure, making it difficult to separate fact from fiction in offset evaluation."
+    cmo_ids_in_theme:
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_002"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_016"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_006"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_003"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_026"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_002"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_003"
+      - "16_concluding_remarks_pdf__cmo_001"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM74_DR_01"
+        statement: "In contexts where offset transactions are commercially and politically sensitive and routinely published data are scarce, constrained disclosure (limited data access plus vested interests) tends to yield evaluations that are difficult, partial, and vulnerable to selective narratives because analysts cannot easily separate fact from advocacy."
+        context_conditions:
+          - "Offsets are commercially sensitive and politically vulnerable (e.g., jobs claims) and details are not routinely published."
+          - "Industry and government actors have vested interests in shaping how offsets are portrayed."
+        outcome_tendencies:
+          - "Independent economic evaluation is rare and difficult."
+          - "Assessment relies on partial information and goodwill, increasing the risk of biased or selective claims."
+        supporting_cmo_ids:
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_002"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_002"
+          - "16_concluding_remarks_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_002"
+            quote: "there is little, if any, routinely published data on offsets"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_002"
+            quote: "There are very few economic evaluations of offset programs"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs converge on the same barrier (scarce routinely published data plus vested interests), and each explicitly links this to difficulties conducting independent evaluation."
+      - demi_regularity_id: "PM74_DR_02"
+        statement: "In contexts where basic information on offset programme costs, benefits, and contract details is not available (due to secrecy and weak data systems), constrained disclosure tends to yield thin evidence bases and limited ability to assess additionality, cost-benefit, or macroeconomic impact."
+        context_conditions:
+          - "Contract details are confidential and precise programme information is missing."
+          - "Statistical services and data-collection capacity are insufficient for assembling evaluation datasets."
+        outcome_tendencies:
+          - "Quantitative estimates of effectiveness are limited and the empirical literature remains thin."
+          - "Attribution of programme impacts to offsets is difficult."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_016"
+          - "06_offsets_and_french_arms_exports_pdf__cmo_003"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_026"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_016"
+            quote: "basic information on the costs and benefits of these policies is essential. Unfortunately, this is rarely available"
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_003"
+            quote: "absence of precise contract details"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs consistently identify missing cost/benefit and contract-detail data as the proximate constraint on evaluation and learning, including both general statements and case-specific data-collection barriers."
+      - demi_regularity_id: "PM74_DR_03"
+        statement: "In contexts where offsets/IRBs are politically charged and diplomatically sensitive, constrained disclosure tends to yield reduced transparency because officials and industry avoid open discussion and terminology, further impeding research and scrutiny."
+        context_conditions:
+          - "Offsets decisions are sensitive in relation to regional distribution, business–government relations, or international relationships."
+          - "Actors avoid open discussion and may avoid using the term 'offset'."
+        outcome_tendencies:
+          - "Open discussion and disclosure are constrained, impeding research and evaluation."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_006"
+            quote: "government and industry are reluctant to discuss openly Canadian offset policy"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A high-confidence CMO provides a clear political-sensitivity pathway to reduced disclosure, but within-theme evidence of this specific 'avoidance' behavior across additional countries is limited."
+      - demi_regularity_id: "PM74_DR_04"
+        statement: "In contexts where national industries both give and receive offset work, constrained disclosure tends to yield partial verification opportunities when analysts compare incoming vs outgoing offset claims to cross-check likely employment and technology effects."
+        context_conditions:
+          - "The same firms or sector both receive offsets as importers and incur offset obligations as exporters."
+        outcome_tendencies:
+          - "Comparing reported impacts of incoming vs outgoing offsets provides a cross-check that can reduce some bias in claims."
+        supporting_cmo_ids:
+          - "13_the_uk_experience_with_offsets_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_003"
+            quote: "UK industry both gives and receives offset work"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The cross-check strategy is explicitly stated but supported by a single case context; it mitigates bias rather than fully resolving disclosure constraints."
+    theme_notes:
+      - "Coverage: all 8 PM74 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "The central recurring barrier is lack of routinely published, precise programme data due to confidentiality and sensitivity, which limits independent scrutiny and cost-benefit assessment."
+      - "One mitigation pathway appears where an industry both gives and receives offsets, enabling limited cross-checking of claims, but this does not substitute for transparent programme data."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM74.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

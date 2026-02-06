@@ -1,0 +1,132 @@
+demi_regularities_by_theme:
+  - theme_id: "PM30"
+    theme_label: "Second-best offsets distort allocation"
+    mechanism_explanation: "Using offsets as substitutes for broader macro or trade reforms distorts resource allocation and locks in inefficient sector-specific fixes."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_008"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_003"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_014"
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_016"
+      - "01_introduction_and_overview_pdf__cmo_006"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_014"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_006"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_008"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_020"
+      - "14_us_offset_policy_pdf__cmo_015"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM30_DR_01"
+        statement: "In contexts where macro/trade-policy distortions (e.g., overvalued exchange rates or rationed foreign exchange) are addressed through offsets/countertrade rather than direct reforms, using offsets as second-best substitutes for broader macro/trade reform tends to yield continued transactions without overt policy change but embeds inefficient, transaction-specific adjustment and policy mis-targeting."
+        context_conditions:
+          - "Macro/trade distortions exist (e.g., exchange-rate misalignment) and direct reforms are politically constrained or avoided."
+          - "Foreign exchange is rationed or controlled, creating pressure for transaction-specific workarounds."
+        outcome_tendencies:
+          - "Trade can proceed via offsets/countertrade without an overt exchange-rate or trade-policy change."
+          - "Adjustment occurs selectively (akin to multiple rates/selective devaluation), implying allocative distortion and mis-targeted policy substitution."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_008"
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_003"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_008"
+            quote: "it is surely inappropriate to deal with an overvalued exchange rate by means of arms trade offsets"
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_003"
+            quote: "equivalent to a selective devaluation or the establishment of multiple exchange rates"
+        moderators: []
+        boundary_conditions:
+          - condition: "Where procurement regimes explicitly prohibit offsets, second-best substitution via offsets is constrained regardless of macro/trade distortions."
+            supporting_cmo_ids:
+              - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_014"
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports the logic that offsets/countertrade can act as second-best transaction-specific adjustment and may be inappropriate substitutes for reforms, but outcomes are described in general economic terms rather than measured across multiple comparable cases."
+      - demi_regularity_id: "PM30_DR_02"
+        statement: "In contexts where political and regional imperatives drive non-competitive placement of offset work in an already over-capacity defence industry, using offsets as second-best substitutes for competitiveness and restructuring pressures tends to yield preservation of inefficient producers and offset dependence, weakening rationalisation and reducing long-run procurement purchasing power."
+        context_conditions:
+          - "Regional political imperatives shape allocation of industrial work in defence procurement."
+          - "Offset work is steered non-competitively to maintain domestic capacity despite underlying inefficiency."
+        outcome_tendencies:
+          - "Inefficient producers are kept in business and become reliant on offset orders."
+          - "Rationalisation and restructuring are discouraged or delayed, with downstream constraints on future procurement choices."
+        supporting_cmo_ids:
+          - "01_introduction_and_overview_pdf__cmo_006"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_006"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "01_introduction_and_overview_pdf__cmo_006"
+            quote: "offsets, far from encouraging rationalisation, have served to keep inefficient producers in business"
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_008"
+            quote: "become dependent on them"
+        moderators:
+          - condition: "When offsets are justified primarily on employment and regional development grounds, willingness to tolerate allocative distortion increases even if net employment effects are mainly redistributive."
+            effect: "enables"
+            supporting_cmo_ids:
+              - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_014"
+              - "14_us_offset_policy_pdf__cmo_015"
+        boundary_conditions: []
+        counterexamples:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_020"
+            note: "Industrial-promotion choices (domestic prototype development) can fail technically and leave capability shortfalls rather than preserving viable industrial capacity."
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs describe offset-driven preservation of inefficient capacity and offset dependence; supporting CMOs also describe employment-redistribution logic that can sustain political support for such allocation despite inefficiency."
+      - demi_regularity_id: "PM30_DR_03"
+        statement: "In contexts where indirect offsets impose obligations in sectors unrelated to the weapon system, using offsets as second-best substitutes for open competition tends to yield 'hidden injuries' for non-defence firms through offset-driven competition and resource reallocation that affected sectors may not understand."
+        context_conditions:
+          - "Offsets are indirect and create obligations outside the defence supply chain."
+          - "Firms in affected civilian sectors are not party to the defence procurement but face intensified competition."
+        outcome_tendencies:
+          - "Non-defence firms experience competitive disadvantage and distortion of competition linked to offset placements."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+            quote: "hidden injuries of privileged trade are inflicted"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The mechanism is clearly stated but supported primarily by a single medium-confidence source describing indirect-offset spillovers rather than multiple independent case traces."
+      - demi_regularity_id: "PM30_DR_04"
+        statement: "In contexts where defence-industrial overcapacity creates pressure for restructuring and market integration, using offsets as second-best substitutes for market-based restructuring tends to yield delayed or distorted restructuring by subsidising uncompetitive enterprises and steering work non-competitively."
+        context_conditions:
+          - "Defence industries face overcapacity and restructuring pressures."
+          - "Offsets steer work and subsidies in ways that protect existing national capacities."
+        outcome_tendencies:
+          - "Restructuring and market integration are inhibited or distorted."
+        supporting_cmo_ids:
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_016"
+            quote: "Offsets worsen the situation by inhibiting or else distorting European defense industrial restructuring."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A high-confidence CMO makes an explicit restructuring claim, but corroboration across additional independent case CMOs within this theme is limited."
+      - demi_regularity_id: "PM30_DR_05"
+        statement: "In contexts where industrial-promotion goals override military advice and offsets are used to justify domestic prototype development as a substitute for procurement discipline, using offsets as second-best substitutes for more direct capability and reform decisions tends to yield technical failure and capability shortfalls."
+        context_conditions:
+          - "Industrial-promotion objectives dominate decision-making despite negative military advice."
+          - "Funds are set aside for domestic prototype development in lieu of proven procurement solutions."
+        outcome_tendencies:
+          - "Prototype efforts can fail technically and production may not be reached, leaving shortfalls in required equipment."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_020"
+            quote: "technical failure and the production stage was never reached"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "The failure pathway is clearly described but rests on a single high-confidence example rather than multiple replications across settings."
+    theme_notes:
+      - "Coverage: all 11 PM30 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Patterns cluster around offsets as second-best workarounds (macro/FX constraints) and as politically driven allocation tools that sustain inefficient capacity and delay restructuring."
+      - "Within-theme variation includes both generalized economic critiques (appropriateness/inefficiency) and a concrete programme failure case when industrial-promotion overrides military/technical advice."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM30.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

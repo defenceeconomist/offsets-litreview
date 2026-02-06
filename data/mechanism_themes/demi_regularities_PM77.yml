@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM77"
+    theme_label: "Heterogeneity limits generalization"
+    mechanism_explanation: "Differences in offset types and goals produce divergent effects and require different evaluation approaches, limiting generalization."
+    cmo_ids_in_theme:
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_005"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_012"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM77_DR_01"
+        statement: "In contexts where the offset label covers heterogeneous activities and mixes defence and economic objectives, heterogeneity in offset types and goals tends to yield divergent effects and evaluation needs, limiting generalization and making broad claims about 'offsets' unreliable."
+        context_conditions:
+          - "Offsets encompass a broad range of transactions and activities."
+          - "Recipient policies mix defence and economic objectives across offset types."
+        outcome_tendencies:
+          - "Offset impacts must be assessed case-by-case and general claims about offsets are unreliable."
+        supporting_cmo_ids:
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_005"
+            quote: "a collective term for a broad range of transactions and activities"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence evaluation CMO explicitly frames offsets as heterogeneous and links this to divergent effects and limited generalizability."
+      - demi_regularity_id: "PM77_DR_02"
+        statement: "In contexts where indirect offsets dominate and reciprocal purchases are unrelated to the arms deal, heterogeneity in offset types tends to yield especially difficult causal attribution and uncertain goal achievement, even when formal fulfilment appears satisfactory."
+        context_conditions:
+          - "Offsets are indirect and not directly tied to the weapon system."
+          - "Goal achievement depends on attributing effects to the offset rather than baseline trade."
+        outcome_tendencies:
+          - "Effects and goal achievement are difficult to establish for indirect offsets despite formal fulfilment."
+        supporting_cmo_ids:
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_012"
+            quote: "it was difficult to establish the effects of indirect offsets"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence audit finding explicitly identifies indirect-offset attribution as a major evaluation difficulty, consistent with the heterogeneity mechanism."
+    theme_notes:
+      - "Coverage: all 2 PM77 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports heterogeneity as a core barrier to generalization, with indirect offsets highlighted as particularly challenging for attribution and goal assessment."
+      - "This theme is evaluation-oriented; it describes limits to inference rather than programme outcomes per se."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM77.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

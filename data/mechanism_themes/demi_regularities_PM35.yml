@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM35"
+    theme_label: "Offsets displace rather than add trade"
+    mechanism_explanation: "Offset-related export arrangements can reallocate sales and foreign exchange rather than create new demand, leaving net gains unchanged and diverting purchases from other suppliers."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_016"
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_017"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM35_DR_01"
+        statement: "In contexts where offsets are justified as conserving foreign exchange by shipping exports for the exporter to sell, offset-related export arrangements tends to yield no net foreign-exchange conservation because the importing country foregoes foreign exchange it would have earned by selling those exports itself."
+        context_conditions:
+          - "Offsets are framed as conserving scarce foreign exchange for the importer."
+          - "Exports are shipped to the exporter for sale as part of the offset arrangement."
+        outcome_tendencies:
+          - "Net foreign-exchange position is unchanged because foregone export earnings offset the apparent conservation."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_016"
+            quote: "not allow it to obtain any from the world market either"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly describes the foreign-exchange accounting logic and why offset-linked export shipping does not conserve foreign exchange in net terms."
+      - demi_regularity_id: "PM35_DR_02"
+        statement: "In contexts where offset obligations are expected to generate additional trade through guaranteed purchases, offset-related export arrangements tends to yield trade displacement rather than additional demand because world demand is not increased and purchases are diverted from other suppliers or countries (and may be reduced overall by military spending)."
+        context_conditions:
+          - "Offset obligations are justified as creating additional trade."
+          - "World demand is not increased by the existence of offset obligations."
+        outcome_tendencies:
+          - "Purchases are diverted from other suppliers/countries and net trade is displaced rather than added."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_017"
+            quote: "Offsets do not offer additional trade: they merely displace it"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO directly asserts the displacement mechanism and provides the underlying reason (world demand not increased, diversion from other suppliers), consistent with a general displacement logic."
+    theme_notes:
+      - "Coverage: all 2 PM35 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Both CMOs emphasize displacement/accounting effects rather than net demand creation, highlighting foreign-exchange conservation claims as potentially illusory."
+      - "Evidence is primarily conceptual/analytical; additional empirical trade-flow analysis would be needed to quantify displacement magnitudes."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM35.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

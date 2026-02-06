@@ -1,0 +1,69 @@
+demi_regularities_by_theme:
+  - theme_id: "PM24"
+    theme_label: "Indirect offsets stimulate targeted exports"
+    mechanism_explanation: "Indirect offsets that require exporter purchases act like sector-specific price adjustments, stimulating exports in targeted sectors."
+    cmo_ids_in_theme:
+      - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_001"
+      - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_002"
+      - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_018"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM24_DR_01"
+        statement: "In contexts where an importing country’s exports are inhibited by macro constraints (e.g., an overvalued currency), indirect offsets requiring the exporter to purchase goods from the importer tends to yield sector-specific export stimulation that functions like a selective devaluation for the targeted sector."
+        context_conditions:
+          - "Exports are constrained by macro conditions such as an overvalued currency."
+          - "Indirect offsets require the exporter to purchase/importer goods as part of the deal."
+        outcome_tendencies:
+          - "Exports in the targeted sector are supported despite macro overvaluation."
+        supporting_cmo_ids:
+          - "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "04_economic_aspects_of_arms_trade_offsets_pdf__cmo_001"
+            quote: "a selective devaluation"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO explicitly frames indirect offsets as a selective devaluation/sector-specific adjustment, but case-traced export outcomes are not measured across multiple instances in this theme."
+      - demi_regularity_id: "PM24_DR_02"
+        statement: "In contexts where governments use indirect compensations unrelated to arms production, indirect offsets stimulating targeted exports tends to yield redirected procurement-linked activity into non-military sectors that is expected to increase economic activity outside defence."
+        context_conditions:
+          - "Offsets include indirect compensations unrelated to the weapon system or military sector."
+        outcome_tendencies:
+          - "Increased economic activity in non-military sectors (intended effect)."
+        supporting_cmo_ids:
+          - "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_002"
+        anchor_quotes:
+          - cmo_id: "11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_002"
+            quote: "lead to increased economic activity in the non-military sector"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes the intended cross-sector stimulus logic; evidence is not outcome-quantified within this theme."
+      - demi_regularity_id: "PM24_DR_03"
+        statement: "In contexts where buyers impose non-defence offset requirements and countertrade on exporters, indirect offsets stimulating targeted exports tends to yield compelled commodity purchases and acceptance of unrelated technology projects as part of contract execution."
+        context_conditions:
+          - "Offset requirements include non-defence projects and countertrade obligations imposed by the buyer."
+        outcome_tendencies:
+          - "Export contracts include commodity-purchase commitments and unrelated technology transfer obligations."
+        supporting_cmo_ids:
+          - "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_018"
+            quote: "will require Poland to purchase US$ 111 million worth of palm oil"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence case provides a concrete countertrade obligation (commodity purchases) and describes acceptance of unrelated obligations, consistent with targeted-export/countertrade stimulation under indirect offsets."
+    theme_notes:
+      - "Coverage: all 3 PM24 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports both a macro-analogy claim (selective devaluation) and concrete countertrade implementation (commodity purchase obligations)."
+      - "Additional empirical evaluation would be needed to assess net additionality versus displacement for targeted export stimulation."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM24.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

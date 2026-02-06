@@ -1,0 +1,81 @@
+demi_regularities_by_theme:
+  - theme_id: "PM37"
+    theme_label: "Buyer pool expansion loosens controls"
+    mechanism_explanation: "When exports and offsets expand the buyer pool, services shift from restraint to facilitation, adopting more permissive stances on offsets."
+    cmo_ids_in_theme:
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_005"
+      - "14_us_offset_policy_pdf__cmo_001"
+      - "14_us_offset_policy_pdf__cmo_009"
+      - "14_us_offset_policy_pdf__cmo_021"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM37_DR_01"
+        statement: "In contexts where budget constraints motivate export reform to spread development costs across more buyers, expanding the buyer pool through exports and offsets tends to yield a shift from restraint toward facilitation, with more permissive stances on offsets and reduced emphasis on guarding technological edge."
+        context_conditions:
+          - "Military services seek to expand export buyers under budget pressure."
+          - "Exports/offsets are seen as tools to broaden the buyer pool and make sales work for customers."
+        outcome_tendencies:
+          - "Services adopt more permissive stances on offsets."
+          - "Technological-edge guardianship is weakened relative to customer facilitation objectives."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_005"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_005"
+            quote: "their tendency is toward a permissive stand on these as well"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A single medium-confidence CMO describes the budget-driven shift toward permissiveness and ties it to buyer-pool expansion; additional within-theme corroboration is limited."
+      - demi_regularity_id: "PM37_DR_02"
+        statement: "In contexts where offset impacts are uncertain and administrations are reluctant to endanger high-technology export sales, expanding the buyer pool through exports tends to yield ambivalent hands-off governance (\"benign neglect\") and delayed implementation of reporting or regulatory steps that could constrain offsets."
+        context_conditions:
+          - "Policymakers face uncertainty about whether offsets harm national interests."
+          - "Administrations are reluctant to take actions that could threaten export competitiveness."
+        outcome_tendencies:
+          - "Offset policy remains ambivalent and hands-off."
+          - "Reporting/regulation implementation can be delayed, reflecting low priority and avoidance of restricting exporters."
+        supporting_cmo_ids:
+          - "14_us_offset_policy_pdf__cmo_001"
+          - "14_us_offset_policy_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_001"
+            quote: "benign, albeit somewhat confused, neglect."
+          - cmo_id: "14_us_offset_policy_pdf__cmo_009"
+            quote: "offset matters do not represent a high priority of the Clinton Administration."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence evidence describes a sustained hands-off posture driven by uncertainty and reluctance to threaten exports, alongside a documented regulatory delay interpreted as low administrative priority."
+      - demi_regularity_id: "PM37_DR_03"
+        statement: "In contexts where governments seek to uphold free-trade norms while accommodating firms’ commercial flexibility, expanding the buyer pool through exports tends to yield permissive countertrade guidance that restricts government promotion but does not oppose company participation except where national security concerns arise."
+        context_conditions:
+          - "Countertrade and offsets spread beyond defence into civilian exports."
+          - "Policy aims include balancing free-trade principles with exporter flexibility."
+        outcome_tendencies:
+          - "Government agencies are prohibited from promoting countertrade, but may provide advisory/market services."
+          - "Company participation is generally not opposed unless national security would be harmed."
+        supporting_cmo_ids:
+          - "14_us_offset_policy_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "14_us_offset_policy_pdf__cmo_021"
+            quote: "The policy prohibits US agencies from promoting countertrade"
+        moderators: []
+        boundary_conditions:
+          - condition: "Where participation poses national security risks, permissiveness is curtailed and opposition increases."
+            supporting_cmo_ids:
+              - "14_us_offset_policy_pdf__cmo_021"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides explicit policy guidance including the national-security boundary condition."
+    theme_notes:
+      - "Coverage: all 4 PM37 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence indicates permissiveness can emerge from budget/export-competition incentives and from uncertainty about offset harms, producing ambivalent or delayed regulation."
+      - "A clear boundary condition is national security: permissive commercial flexibility is conditional on not crossing security-risk thresholds."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM37.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

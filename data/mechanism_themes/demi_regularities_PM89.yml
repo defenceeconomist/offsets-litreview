@@ -1,0 +1,53 @@
+demi_regularities_by_theme:
+  - theme_id: "PM89"
+    theme_label: "Political reversals raise lifecycle costs"
+    mechanism_explanation: "When procurement decisions are shaped by short-term political incentives, programmes can be cancelled or re-scoped, fragmenting fleet planning and duplicating infrastructures that increase lifecycle costs and create capability gaps."
+    cmo_ids_in_theme:
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_018"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_019"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM89_DR_01"
+        statement: "In contexts where defence procurement has low salience and becomes a political symbol, short-term political incentives driving cancellations tends to yield disrupted capability planning and downstream cost and delay tradeoffs despite near-term political gains."
+        context_conditions:
+          - "Defence procurement is debated in a low-salience environment."
+          - "Procurement decisions become political symbols and are shaped by short-term incentives."
+        outcome_tendencies:
+          - "Cancellation disrupts capability planning and increases long-run costs and delays."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_018"
+            quote: "a clearly political decision"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO characterizes the decision as political and links cancellation to downstream operational and economic consequences."
+      - demi_regularity_id: "PM89_DR_02"
+        statement: "In contexts where cancellation forces separate platform procurements or life-extension paths to cover multiple roles, political reversals raising lifecycle costs tends to yield duplicated infrastructures and procurement cycles that increase total lifecycle costs and can create capability gaps relative to a single-platform approach."
+        context_conditions:
+          - "A canceled programme leaves multiple operational roles still needing coverage."
+          - "Replacement involves separate platforms or extended legacy fleets with duplicative support infrastructures."
+        outcome_tendencies:
+          - "Long-run costs exceed the original decision due to duplication and additional procurement costs."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_019"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_019"
+            quote: "the net result is likely to be more expensive than the original EH-101"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO provides a clear duplication/lifecycle-cost logic, but the counterfactual cost comparison is argued rather than empirically measured across multiple cases."
+    theme_notes:
+      - "Coverage: all 2 PM89 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a reversal/cancellation pathway linking short-term political incentives to long-run cost escalation via duplication and fragmented planning."
+      - "This theme is procurement-lifecycle oriented; it describes downstream cost and capability planning consequences rather than offset delivery mechanisms per se."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM89.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

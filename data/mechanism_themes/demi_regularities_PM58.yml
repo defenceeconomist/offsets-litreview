@@ -1,0 +1,106 @@
+demi_regularities_by_theme:
+  - theme_id: "PM58"
+    theme_label: "Complex governance raises transaction costs"
+    mechanism_explanation: "Multi-layer governance structures and non-competitive work splitting increase transaction costs, blur accountability, and slow decisions."
+    cmo_ids_in_theme:
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_016"
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_022"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_012"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_021"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_027"
+      - "14_us_offset_policy_pdf__cmo_022"
+      - "14_us_offset_policy_pdf__cmo_025"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM58_DR_01"
+        statement: "In contexts where collaborative procurement relies on non-competitive work splitting (juste retour) and multi-layer governance (committees or unanimity rules), multi-layer governance and non-competitive work splitting tends to yield inefficiency, higher costs, and delays through slower decisions and blurred accountability."
+        context_conditions:
+          - "Work is allocated by national shares rather than competition/comparative advantage."
+          - "Decision-making is mediated by multi-layer committees and/or unanimity requirements."
+        outcome_tendencies:
+          - "Programme governance is cumbersome, contributing to delays and inefficiency."
+          - "Accountability is blurred and decisions slow relative to more competitive allocation and simpler governance."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001"
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_012"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_001"
+            quote: "work is not allocated on the basis of competition and comparative advantage"
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_012"
+            quote: "requires unanimity on the decision making process"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence evidence links non-competitive work splitting and layered governance to transaction costs and delays, with an additional case showing unanimity rules that plausibly slow decisions."
+      - demi_regularity_id: "PM58_DR_02"
+        statement: "In contexts where offsets are subject to regional distribution rules and political bargaining (e.g., under federalisation), multi-layer governance around work allocation tends to yield fragmentation, excess capacity, and inefficient production flows that are difficult to rationalise."
+        context_conditions:
+          - "Regional distribution of offset work is politically salient and formalised in allocation requirements."
+          - "Firms respond strategically to capture offset work (e.g., opening facilities in multiple regions)."
+        outcome_tendencies:
+          - "Regionalisation contributes to excess capacity and fragmented industrial structures."
+          - "Production is organized in economically inefficient flows (transport and coordination costs) that cannot be rationalised."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_016"
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_016"
+            quote: "led to even more excess capacity"
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_022"
+            quote: "could not be rationalised from an economic point of view"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence CMOs describe regional allocation rules producing excess capacity and inefficient, non-rationalisable production organization, consistent with transaction-cost and accountability problems from complex governance."
+      - demi_regularity_id: "PM58_DR_03"
+        statement: "In contexts where offset implementation requires coordination among multiple public entities, domestic corporations, and foreign firms’ scrutiny processes, multi-actor governance and coordination requirements tends to yield delayed execution as approvals and goal alignment lag."
+        context_conditions:
+          - "Offset implementation spans public entities and domestic firms, with foreign suppliers conducting scrutiny/due diligence."
+          - "Domestic actors must assimilate goals and coordinate across agencies and firms."
+        outcome_tendencies:
+          - "Offset programmes experience significant delays in materialisation."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_021"
+            quote: "absolute lack of coordination"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly attributes offset implementation delays to coordination failures and scrutiny/assimilation processes, directly matching the transaction-cost pathway."
+      - demi_regularity_id: "PM58_DR_04"
+        statement: "In contexts where offset programmes overlap across contracts or governance spans multiple agencies with contested mandates, multi-layer governance and cross-programme attribution requirements tends to yield administrative complexity (credit attribution/accounting) and fragmented policy capacity (blocked reporting, incoherent frameworks)."
+        context_conditions:
+          - "Offset activities span multiple programmes/contracts, requiring credit attribution across boundaries."
+          - "Governance involves multiple agencies with overlapping responsibilities and interagency conflict."
+        outcome_tendencies:
+          - "Substantial accounting and administrative effort is required to assign offset credit."
+          - "Reporting and coherent policy development are impeded by disputes and contradictory policies."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_027"
+          - "14_us_offset_policy_pdf__cmo_022"
+          - "14_us_offset_policy_pdf__cmo_025"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_027"
+            quote: "A large amount of accounting effort would be needed to identify which programme should receive the offset credit"
+          - cmo_id: "14_us_offset_policy_pdf__cmo_022"
+            quote: "no such reports have ever been published due to interagency disputes."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Multiple high-confidence CMOs describe both operational administrative complexity (credit attribution) and governance fragmentation (interagency disputes and incoherent laws), directly supporting the transaction-cost and accountability mechanisms."
+    theme_notes:
+      - "Coverage: all 8 PM58 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence repeatedly links non-competitive allocation rules and multi-actor governance to slower decisions, delays, and higher administrative/coordination burdens."
+      - "Regional distribution requirements and overlapping programmes appear as recurring sources of fragmentation and transaction-cost inflation."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM58.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

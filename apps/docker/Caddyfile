@@ -1,0 +1,22 @@
+:80 {
+  encode gzip
+
+  @cmo host cmo.localhost
+  handle @cmo {
+    reverse_proxy 127.0.0.1:3838
+  }
+
+  @demi host demi.localhost
+  handle @demi {
+    reverse_proxy 127.0.0.1:3839
+  }
+
+  @proto host proto.localhost
+  handle @proto {
+    reverse_proxy 127.0.0.1:3840
+  }
+
+  handle {
+    respond "Shiny apps available at http://cmo.localhost:8081, http://demi.localhost:8081, and http://proto.localhost:8081" 200
+  }
+}

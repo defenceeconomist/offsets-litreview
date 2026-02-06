@@ -1,0 +1,76 @@
+demi_regularities_by_theme:
+  - theme_id: "PM50"
+    theme_label: "Offset design to protect value-for-money"
+    mechanism_explanation: "By specifying defence-related, new, technically equivalent work within contract scope and at no additional cost, buyers attempt to secure offset benefits without undermining value for money."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_003"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_017"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_007"
+      - "16_concluding_remarks_pdf__cmo_008"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM50_DR_01"
+        statement: "In contexts where buyers pursue industrial participation but must preserve value-for-money procurement, specifying strict eligibility criteria (defence-related/high-technology, \"new\" work, technical equivalence, time-bounded ordering, and no additional cost) tends to yield screened offset crediting that limits re-labelling and prevents offsets from overriding equipment/price decisions."
+        context_conditions:
+          - "Purchasers seek offsets/industrial participation while maintaining value-for-money procurement norms."
+          - "Offset eligibility is defined by criteria emphasizing defence relevance, high-technology content, additionality, and contract scope/duration."
+        outcome_tendencies:
+          - "Only work meeting criteria is eligible for offset credit."
+          - "Industrial participation is treated as secondary to equipment/price; offset offers may lose (not win) contracts."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_003"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_007"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_003"
+            quote: "while IP will not win you a contract, it may lose it"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_007"
+            quote: "it should be 'new' work, placed as a result of the offset agreement"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence evidence describes explicit eligibility criteria and the value-for-money constraint that prevents offsets from overriding equipment/price, corroborated by an additional case describing IP as potentially losing a contract."
+      - demi_regularity_id: "PM50_DR_02"
+        statement: "In contexts where policymakers accept that offsets raise weapon costs relative to off-the-shelf purchases, applying explicit or implicit cost-premium ceilings for direct offsets tends to yield continued political acceptance of offsets while constraining acceptable value-for-money deviations."
+        context_conditions:
+          - "Stakeholders recognise offsets are not costless and may raise weapon costs."
+          - "Rules-of-thumb or thresholds guide acceptable cost differentials for direct offsets."
+        outcome_tendencies:
+          - "Offsets remain accepted with an implicit or explicit cost-premium ceiling."
+        supporting_cmo_ids:
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_017"
+        anchor_quotes:
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_017"
+            quote: "the Swiss recognize that offsets are not \"free.\""
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes both the acknowledged cost premium and a rule-of-thumb ceiling, but comparable thresholds across additional cases are not presented in this theme."
+      - demi_regularity_id: "PM50_DR_03"
+        statement: "In contexts where broad offset programmes are recognised as costly and potentially subsidy-like, tightening eligibility and focusing offsets on priority areas tends to yield a shift away from general programmes toward more targeted measures."
+        context_conditions:
+          - "Offsets are seen as imposing resource costs and risking broad subsidy effects if eligibility is wide."
+          - "Policymakers seek to allocate scarce resources more strategically."
+        outcome_tendencies:
+          - "Countries move away from general offset programmes toward more focused measures."
+        supporting_cmo_ids:
+          - "16_concluding_remarks_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "16_concluding_remarks_pdf__cmo_008"
+            quote: "a move away from rather general offset programmes"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence synthesis CMO reports a directional shift toward focused measures, but does not provide detailed within-theme case tracing of the policy-change process."
+    theme_notes:
+      - "Coverage: all 4 PM50 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a value-for-money protection strategy via strict eligibility and additionality criteria; offsets are framed as constrained secondary considerations."
+      - "Additional evidence would help assess whether cost-premium ceilings and programme narrowing reliably prevent welfare losses or simply re-label them."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM50.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -320,7 +320,7 @@ demi_regularities_by_theme:
         confidence: "high"
         confidence_justification: "Supported by multiple audits and conceptual accounts pointing to the same failure mode (crediting non-additional activity) and by explicit mitigation recommendations (advance criteria, monitoring, restricting banking)."
       - demi_regularity_id: "PM2_DR_04"
-        statement: "In contexts where multipliers/credit weights and waivers are transparent and tied to priority activities, the enforcement regime tends to steer suppliers’ compliance efforts toward capability-relevant deliverables."
+        statement: "In contexts where multipliers/credit weights and waivers are transparent and tied to priority activities, the enforcement regime tends to yield suppliers’ compliance efforts being steered toward capability-relevant deliverables."
         context_conditions:
           - "Authorities use multipliers/credit weights to privilege technology transfer, training, R&D, licensing/copro, and other capability-building deliverables."
           - "Contracts embed deliverables and use credit/waiver rules (e.g., trading participation levels against offset obligations)."
@@ -380,7 +380,7 @@ demi_regularities_by_theme:
         confidence: "medium"
         confidence_justification: "Evidence supports steering effects of multipliers/waivers, but multiple CMOs also show how opacity and inflated crediting can undermine or reverse the intended incentive signal."
       - demi_regularity_id: "PM2_DR_05"
-        statement: "In contexts where offset credits can be banked/transferred and obligations run over long horizons across multiple projects, the enforcement regime tends to reduce contract-level transparency and increase audit and evaluation difficulty."
+        statement: "In contexts where offset credits can be banked/transferred and obligations run over long horizons across multiple projects, the enforcement regime tends to yield reduced contract-level transparency and increased audit and evaluation difficulty."
         context_conditions:
           - "Banking and transfer of offset credits across future sales is permitted."
           - "Fulfilment periods are long (multi-year) and commitments span multiple projects."
@@ -423,7 +423,7 @@ demi_regularities_by_theme:
         confidence: "high"
         confidence_justification: "Multiple CMOs converge that banking, long fulfilment periods, and heterogeneous accounting reduce transparency and complicate evaluation, with explicit policy constraints identified as a mitigating design."
       - demi_regularity_id: "PM2_DR_06"
-        statement: "In contexts where bankable offset credits and long-horizon commitments reward early, sustained participation, the enforcement regime tends to encourage earlier investment and more continuous industrial engagement rather than short-term, end-of-obligation placement."
+        statement: "In contexts where bankable offset credits and long-horizon commitments reward early, sustained participation, the enforcement regime tends to yield earlier investment and more continuous industrial engagement rather than short-term, end-of-obligation placement."
         context_conditions:
           - "Suppliers face intermittent procurement cycles and may otherwise concentrate activity only until an obligation is acquitted."
           - "Rules allow bankable credits (e.g., credit deeds) and/or long-horizon commitments that reward early investment."

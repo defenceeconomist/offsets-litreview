@@ -1,0 +1,94 @@
+demi_regularities_by_theme:
+  - theme_id: "PM65"
+    theme_label: "Partnership packages build durable collaboration"
+    mechanism_explanation: "Broader partnership packages aim to create durable collaboration beyond meeting offset percentages, linking defence and non-defence opportunities."
+    cmo_ids_in_theme:
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_010"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_013"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_001"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_012"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_013"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM65_DR_01"
+        statement: "In contexts where industrial participation offers are framed as broader cooperation packages (including future development partnership, cross-sector opportunities, and 'profitable and sustainable' arrangements), partnership packages building durable collaboration tends to yield emphasis on long-term collaboration and capability development beyond meeting an offset percentage."
+        context_conditions:
+          - "Industrial cooperation offers vary from conventional offsets to longer-term partnership packages."
+          - "Packages include elements beyond defence work-share (e.g., non-defence cooperation opportunities)."
+        outcome_tendencies:
+          - "Bids emphasize durability and sustainability of collaboration and capability development rather than one-off offset fulfilment."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_010"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_010"
+            quote: "profitable and sustainable"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes variation in package structures and explicitly identifies a durability-focused offer, but provides limited downstream outcome tracing."
+      - demi_regularity_id: "PM65_DR_02"
+        statement: "In contexts where buyers can offer valuable non-defence opportunities (e.g., civil infrastructure spending) and face obstacles to acquiring advanced weapons technology, partnership packages building durable collaboration tends to yield increased supplier incentives to provide trouble-free weapons sales and associated technology access."
+        context_conditions:
+          - "Buyers can leverage large non-defence spending plans as inducements."
+          - "Buyers face difficulties securing advanced weapons technology via normal channels."
+        outcome_tendencies:
+          - "Non-defence partnership opportunities are used to facilitate access to modern weapons technology with fewer complications."
+        supporting_cmo_ids:
+          - "10_the_teeth_of_little_tigers_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "10_the_teeth_of_little_tigers_pdf__cmo_013"
+            quote: "Taiwan has dangled the prospect of participation in its multi-billion dollar national development plan"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a clear inducement mechanism linking civil-contract opportunities to supplier incentives for weapons technology access."
+      - demi_regularity_id: "PM65_DR_03"
+        statement: "In contexts where purchasing-country demands for benefits and contractor incentives to minimise costs are treated as a partnership problem rather than a zero-sum contest, partnership packages building durable collaboration tends to yield identification of mutually beneficial projects and improved offset execution."
+        context_conditions:
+          - "Offsets are framed as reconcilable interests rather than adversarial demands."
+          - "Actors seek projects that satisfy national objectives while creating business value for the contractor."
+        outcome_tendencies:
+          - "Offset execution improves as parties move away from adversarial postures."
+        supporting_cmo_ids:
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_001"
+            quote: "can in fact be reconciled"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence practitioner account articulates the partnership framing and expected execution benefits, but does not provide comparative outcome measurement."
+      - demi_regularity_id: "PM65_DR_04"
+        statement: "In contexts where offset policy is designed to link local firms with foreign industry leaders and authorities prioritise genuine, profitable collaborations, partnership packages building durable collaboration tends to yield strategic partnerships and long-term working relationships that can persist after contractual obligations are satisfied."
+        context_conditions:
+          - "Host-economy firms are technologically capable but market-constrained."
+          - "Offsets are used to link local firms with foreign industry leaders via subcontracting, R&D, technology transfer, investment, and market-access pathways."
+          - "Authorities prioritise long-term relationships over opportunistic short-term projects."
+        outcome_tendencies:
+          - "Strategic partnerships and close working relationships are created and may persist beyond offset fulfilment."
+        supporting_cmo_ids:
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_012"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_013"
+        anchor_quotes:
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_012"
+            quote: "very close, long-term working relationships."
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_013"
+            quote: "not in the extraction of opportunistic and short-term projects"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports the intended partnership logic and describes persistence beyond fulfilment, but one key source is medium-confidence and the durability claim is not independently verified across multiple cases."
+    theme_notes:
+      - "Coverage: all 5 PM65 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports partnership packaging as a strategy to move from compliance to durable collaboration, including cross-sector inducements and authority emphasis on profitable long-term relationships."
+      - "Most evidence is descriptive and practitioner-oriented; additional empirical follow-up would strengthen claims about sustained post-obligation collaboration and its outcomes."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM65.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

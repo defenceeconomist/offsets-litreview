@@ -1,0 +1,70 @@
+demi_regularities_by_theme:
+  - theme_id: "PM87"
+    theme_label: "Capability concentrates offset allocation"
+    mechanism_explanation: "In multi-buyer procurements, offsets and workshare concentrate where local industrial capability is strongest and where supplier governments actively enforce implementation, producing unequal distribution across partners."
+    cmo_ids_in_theme:
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_018"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_018"
+      - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_014"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM87_DR_01"
+        statement: "In contexts where multi-buyer procurements involve partners with uneven industrial capability and offset implementation is actively ensured by a powerful supplier government, industrial capability concentrating allocation tends to yield unequal distribution of offsets and production-sharing, concentrating benefits in the more capable partner."
+        context_conditions:
+          - "Buying partners differ in aerospace/industrial capacity."
+          - "Supplier governments actively ensure implementation of production-sharing and offset arrangements."
+        outcome_tendencies:
+          - "Offsets and workshare are distributed unequally, concentrating in the more capable partner."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_018"
+            quote: "distribution of the offset between the EPGs was however unequal"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes unequal distribution tied to capability differences and enforcement, but broader comparative replication across additional multi-buyer cases is limited in this theme."
+      - demi_regularity_id: "PM87_DR_02"
+        statement: "In contexts where direct offsets concentrate in defence-oriented sectors whose major firms’ headquarters and facilities are clustered geographically, industrial capability concentrating allocation tends to yield increasing concentration of offset value and technologically significant work in that region and among a small number of large recipient firms."
+        context_conditions:
+          - "Direct offsets concentrate in aerospace/electronics and major recipient firms are geographically clustered."
+        outcome_tendencies:
+          - "Offset value and technologically significant work cluster geographically and among a small number of large recipients."
+        supporting_cmo_ids:
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_018"
+        anchor_quotes:
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_018"
+            quote: "The concentration of offsets in Madrid has been growing over the years"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly describes growing geographical concentration and attributes it to sectoral and firm-location clustering in direct offset recipients."
+      - demi_regularity_id: "PM87_DR_03"
+        statement: "In contexts where offset-driven market penetration in supplier-country markets becomes visible and politically salient, industrial capability concentrating allocation tends to yield protectionist retaliation (non-tariff barriers) that curtails continued market access for successful foreign suppliers."
+        context_conditions:
+          - "Offset-linked sales and foreign sourcing expand in supplier-country markets."
+          - "Affected domestic interests mobilize for protectionist responses."
+        outcome_tendencies:
+          - "Non-tariff barriers are imposed that reduce or reverse earlier market penetration gains."
+        supporting_cmo_ids:
+          - "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_014"
+        anchor_quotes:
+          - cmo_id: "12_us_swiss_f_5_transaction_and_the_evolution_of_swiss_offset_policy_pdf__cmo_014"
+            quote: "US Congressional retaliation via the establishment of additional nontariff barriers."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a concrete account of protectionist retaliation following market penetration successes, indicating a boundary on durable access even when capability supports initial gains."
+    theme_notes:
+      - "Coverage: all 3 PM87 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports concentration dynamics both across partner countries (capability and enforcement) and within countries (geographical/firm concentration)."
+      - "A key boundary is political retaliation: initial market penetration can be curtailed by protectionist responses when offset-driven sourcing becomes visible."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM87.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

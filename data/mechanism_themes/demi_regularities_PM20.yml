@@ -1,0 +1,54 @@
+demi_regularities_by_theme:
+  - theme_id: "PM20"
+    theme_label: "Alliance incentives via offset waivers"
+    mechanism_explanation: "Governments use bargaining power or offset waivers to encourage alliances, boosting investment and reputational capital while preserving competitive selection."
+    cmo_ids_in_theme:
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008"
+      - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM20_DR_01"
+        statement: "In contexts where exchange hazard is low but domestic firms can benefit from collaboration with reputable incumbents, using bargaining power to encourage alliances without formal offset mandates tends to yield collaboration and reputational gains while preserving competitive selection and reducing administrative burden."
+        context_conditions:
+          - "Market contracting is relatively efficient (low exchange hazard)."
+          - "Reputational economies and collaboration benefits are available via incumbent partners."
+          - "Government can encourage collaboration through non-mandatory instruments (e.g., best-endeavors) rather than formal offsets."
+        outcome_tendencies:
+          - "Collaboration and reputational gains occur with lower administrative burden than formal offset requirements."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_008"
+            quote: "encourage collaborative agreements without formally requiring them (e.g., an offset)"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes alliance encouragement without formal offsets under low hazard, but broader replication and outcome tracing are limited."
+      - demi_regularity_id: "PM20_DR_02"
+        statement: "In contexts where governments waive offset requirements for foreign firms that enter strategic alliances, alliance incentives via offset waivers tends to yield increased long-term investment and transfer of reputational/marketing capital to domestic firms while maintaining competitive selection."
+        context_conditions:
+          - "Offset requirements are waived conditional on foreign firms entering strategic alliances."
+          - "Reputational capital is valuable to domestic firms in the targeted industries."
+        outcome_tendencies:
+          - "Long-term investment is encouraged and domestic firms gain marketing/reputation support via alliance participation."
+        supporting_cmo_ids:
+          - "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_009"
+            quote: "waives “offsets requirements for foreign companies which agree to enter into strategic alliances”"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO provides a specific programme design (waiver for alliances) and associated investment/reputation outcomes, but evidence is limited to a small number of described cases."
+    theme_notes:
+      - "Coverage: all 2 PM20 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a waiver/encouragement approach as an alternative to mandatory offsets when hazards are low and reputational benefits are sought."
+      - "More evidence would be needed to assess whether waivers consistently outperform mandated offsets in sustaining long-term alliances."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM20.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

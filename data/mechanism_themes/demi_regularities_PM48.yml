@@ -1,0 +1,69 @@
+demi_regularities_by_theme:
+  - theme_id: "PM48"
+    theme_label: "Institutional path dependence in offset policy"
+    mechanism_explanation: "State–industry relationships and historical policy trajectories shape how offsets are perceived and operationalized in procurement and exports."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_001"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_022"
+      - "06_offsets_and_french_arms_exports_pdf__cmo_025"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM48_DR_01"
+        statement: "In contexts where countries share similar structural features but differ in defence industrial policy, export policy, and state–industry relationships, institutional path dependence in offset policy tends to yield divergent offset strategies and implementation practices shaped more by historical trajectories and institutional arrangements than by immediate transaction features."
+        context_conditions:
+          - "Countries are structurally similar (e.g., alliance membership, private ownership) but differ in policy histories and state–industry relationships."
+        outcome_tendencies:
+          - "National offset strategies diverge in perception and institutional implementation."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_001"
+            quote: "markedly different in perception if less so in results."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence comparative CMO explicitly attributes differences in offset strategies to institutional and historical variation rather than purely transactional factors."
+      - demi_regularity_id: "PM48_DR_02"
+        statement: "In contexts where earlier IRB/offset packages create and embed firms in defence supply chains, institutional path dependence in offset policy tends to yield constrained future procurement options as later contracts rely on the previously created firm as a default prime, increasing dependence on defence contracts."
+        context_conditions:
+          - "Prior IRB packages created or embedded firms in the defence industrial base."
+          - "Later procurements occur in a context of limited alternative prime options."
+        outcome_tendencies:
+          - "Past IRB packages constrain future contracting options and create dependence pathways."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_022"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_022"
+            quote: "past offset packages can act to constrain options for future contracts"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a clear path-dependence mechanism linking earlier IRB-driven firm creation/embedding to later procurement constraints."
+      - demi_regularity_id: "PM48_DR_03"
+        statement: "In contexts where a state is primarily an exporter, rarely demands offsets on imports, and prefers collaborative development programmes over off-the-shelf imports, institutional path dependence in offset policy tends to yield lack of a stable formal offsets framework and case-by-case handling of import offsets."
+        context_conditions:
+          - "Offsets on imports are infrequent and procurement favors collaborative development rather than import offsets."
+        outcome_tendencies:
+          - "No stable official offsets policy emerges and import offsets are handled case-by-case."
+        supporting_cmo_ids:
+          - "06_offsets_and_french_arms_exports_pdf__cmo_025"
+        anchor_quotes:
+          - cmo_id: "06_offsets_and_french_arms_exports_pdf__cmo_025"
+            quote: "no well defined official policy has emerged"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly links export-dominant posture and collaborative procurement preferences to the absence of a stable import-offset policy framework."
+    theme_notes:
+      - "Coverage: all 3 PM48 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports path dependence at two levels: (a) cross-national institutional trajectories shaping strategy, and (b) firm-creation effects constraining future procurement options."
+      - "Within-theme variation includes contexts with weak institutionalisation (case-by-case import offsets) versus contexts where IRB-driven embedding creates strong procurement dependence."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM48.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

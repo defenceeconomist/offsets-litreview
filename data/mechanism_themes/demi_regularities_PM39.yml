@@ -1,0 +1,58 @@
+demi_regularities_by_theme:
+  - theme_id: "PM39"
+    theme_label: "Hidden injuries from offset competition"
+    mechanism_explanation: "Offset-linked competition and support for foreign firms’ cost/quality improvements can impose unseen harms on non-defence sectors that may not recognize the source of intensified competition."
+    cmo_ids_in_theme:
+      - "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_004"
+      - "14_us_offset_policy_pdf__cmo_016"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM39_DR_01"
+        statement: "In contexts where indirect offsets impose obligations in sectors unrelated to the weapon system and include cost/quality improvement support for foreign firms, hidden injuries from offset competition tends to yield competitive disadvantages and resource misallocation for non-defence firms that may not recognize offsets as the source of intensified competition."
+        context_conditions:
+          - "Offsets are indirect and affect firms outside the defence supply chain."
+          - "Offset activity supports foreign firms’ competitiveness (cost/quality improvements) in broader markets."
+        outcome_tendencies:
+          - "Non-defence firms face competitive disadvantage and 'hidden' harms linked to offset-driven competition."
+          - "Competition intensification may be poorly understood by affected sectors."
+        supporting_cmo_ids:
+          - "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+          - "14_us_offset_policy_pdf__cmo_016"
+        anchor_quotes:
+          - cmo_id: "05_arms_trade_as_illiberal_trade_pdf__cmo_014"
+            quote: "hidden injuries of privileged trade are inflicted"
+          - cmo_id: "14_us_offset_policy_pdf__cmo_016"
+            quote: "to strengthen existing competitors and expand their markets"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A medium-confidence CMO articulates the hidden-injury mechanism and a high-confidence CMO describes offsets strengthening existing competitors and expanding their markets, jointly supporting competitive harm pathways."
+      - demi_regularity_id: "PM39_DR_02"
+        statement: "In contexts where politicians and governments are vote-sensitive and contractors emphasize offset benefits while downplaying costs, hidden injuries from offset competition tends to yield decision-making that privileges visible jobs/technology narratives and obscures diffuse competitive harms borne by other sectors."
+        context_conditions:
+          - "Procurement decisions are politically salient and actors emphasize offset benefits."
+          - "Costs and efficiency losses are downplayed relative to visible narratives."
+        outcome_tendencies:
+          - "Offsets are politically attractive and can distort industrial-participation decision-making, masking who bears costs and competitive harms."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_004"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_004"
+            quote: "Offsets are attractive to vote-sensitive politicians"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly links political incentives to emphasis on offset benefits over costs, consistent with a mechanism that obscures diffuse harms."
+    theme_notes:
+      - "Coverage: all 3 PM39 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports both an economic-competition pathway (offsets strengthening competitors and harming non-defence sectors) and a political pathway (benefit narratives obscuring diffuse harms)."
+      - "Empirical quantification of competitive harm is limited in the extracted CMOs; claims are mainly qualitative/analytical."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM39.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

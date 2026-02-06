@@ -1,0 +1,93 @@
+demi_regularities_by_theme:
+  - theme_id: "PM62"
+    theme_label: "Early partnership enables high-tech roles"
+    mechanism_explanation: "Early partnership and competitive best-value allocation can provide access to development roles and high-technology work shares when technology access agreements and export controls allow."
+    cmo_ids_in_theme:
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_009"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_020"
+      - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_021"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM62_DR_01"
+        statement: "In contexts where buyers join major programmes early as development partners and work is allocated competitively on 'best value' rather than guaranteed shares, early partnership enabling high-tech roles tends to yield opportunities for meaningful industrial participation and development roles, conditional on technology access agreements and export-control approvals."
+        context_conditions:
+          - "Buyers join early as programme partners (including investment contributions)."
+          - "Work allocation is competitive rather than formally apportioned."
+          - "Technology access depends on agreements and export-control approval."
+        outcome_tendencies:
+          - "Industrial participation (jobs, exports, potential technology access) is linked to partnership status and competitiveness rather than a one-off offset package."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006"
+            quote: "no formal arrangement for distributing work between UK and US industry"
+        moderators: []
+        boundary_conditions:
+          - condition: "Where technology access agreements and export-control approvals are not granted, high-technology work share and knowledge access are constrained despite partnership status."
+            supporting_cmo_ids:
+              - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_006"
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO describes a clear partnership/competitive-allocation model and the explicit conditionality of technology access on agreements and approvals, but does not quantify realised high-tech outcomes across multiple cases."
+      - demi_regularity_id: "PM62_DR_02"
+        statement: "In contexts where political and fiscal constraints lead buyers to procure existing proven platforms to minimise technical risk, early partnership enabling high-tech roles tends to yield limited access to development-phase participation and weaker technology-transfer outcomes than would be expected from earlier buy-in."
+        context_conditions:
+          - "Buyers select proven, off-the-shelf platforms to minimise technical risk."
+          - "There is limited appetite for developmental-stage procurement."
+        outcome_tendencies:
+          - "Direct industrial participation and technology-transfer outcomes are constrained and may not materialise as promised."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_009"
+            quote: "purchase of existing proven platforms"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO links proven-platform procurement to reduced development-phase participation and weak technology transfer, but does not provide cross-case replication within this theme."
+      - demi_regularity_id: "PM62_DR_03"
+        statement: "In contexts where no suitable off-the-shelf platform meets unique operational requirements and procurement involves developmental-stage buy-in, early partnership enabling high-tech roles tends to yield higher offset/IRB guarantees and greater technology-transfer potential through deeper participation in production and systems-integration work."
+        context_conditions:
+          - "Operational requirements are unique and off-the-shelf solutions are unsuitable."
+          - "Procurement occurs at a developmental stage with scope for deeper industrial embedding."
+        outcome_tendencies:
+          - "Contracts include higher guarantees and greater technology transfer potential than typical proven-platform buys."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_020"
+            quote: "offset guarantees of 113%"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence case describes higher guarantees and technology-transfer potential associated with deeper participation; broader evidence is limited."
+      - demi_regularity_id: "PM62_DR_04"
+        statement: "In contexts where states pursue long-term autonomy goals while maintaining alliance cooperation, early partnership enabling high-tech roles tends to yield use of joint R&D and co-development as interim measures to incorporate advanced technologies while strengthening defence cooperation."
+        context_conditions:
+          - "States balance autonomy ambitions with alliance cooperation needs."
+          - "Joint R&D/co-development programmes are pursued as stepping stones."
+        outcome_tendencies:
+          - "Joint R&D supports incorporation of advanced technologies and promotes defence cooperation while building domestic capacity over time."
+        supporting_cmo_ids:
+          - "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_021"
+            quote: "promoting defense cooperation between the two countries"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO links joint R&D/co-development to both alliance cooperation and technology incorporation, but within-theme evidence is limited to a single case framing."
+    theme_notes:
+      - "Coverage: all 4 PM62 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence emphasizes conditionality: early partnership and competitive allocation can enable high-tech roles, but outcomes depend on export controls and on whether procurement occurs early enough to embed firms in development."
+      - "Within-theme variation contrasts proven-platform purchases (lower risk, weaker tech transfer) with developmental-stage buy-in (higher guarantees, deeper participation)."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM62.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

@@ -1,0 +1,91 @@
+demi_regularities_by_theme:
+  - theme_id: "PM11"
+    theme_label: "Domestic industry influence on offsets"
+    mechanism_explanation: "Domestic arms-industry influence shapes procurement demands, pushing governments to require direct offsets that effectively subsidize local military industry."
+    cmo_ids_in_theme:
+      - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022"
+      - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_015"
+      - "03_the_defence_offsets_policy_in_australia_pdf__cmo_020"
+      - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_001"
+      - "10_the_teeth_of_little_tigers_pdf__cmo_014"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_021"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM11_DR_01"
+        statement: "In contexts where a significant domestic defence-industrial base faces job/rent protection pressures, domestic arms-industry influence tends to yield demands for direct offsets that function as implicit subsidies by steering procurement-linked work to local military industry."
+        context_conditions:
+          - "A significant domestic arms industry exists with incentives to protect employment and rents."
+          - "Procurement decisions are politically salient and industrial benefits are sought from foreign purchases."
+        outcome_tendencies:
+          - "Direct offsets are adopted as part of procurement packages."
+          - "Domestic defence enterprises receive procurement-linked work that supports industrial survival or adjustment."
+        supporting_cmo_ids:
+          - "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_021"
+        anchor_quotes:
+          - cmo_id: "01_do_offsets_mitigate_or_magnify_the_military_burden_pdf__cmo_022"
+            quote: "direct offsets (which in effect subsidize local military industry)"
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_021"
+            quote: "The defence industry crisis seriously impacted our offset strategy."
+        moderators:
+          - condition: "When the domestic defence industry is in acute crisis (layoffs and high political salience), offsets are more explicitly structured to prioritise defence enterprises and conversion opportunities."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_021"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs explicitly describe domestic-industry influence pushing direct offsets as subsidies and show how industrial crisis conditions shape offset strategy toward defence enterprises."
+      - demi_regularity_id: "PM11_DR_02"
+        statement: "In contexts where standardisation and off-the-shelf procurement would reduce costs but conflicts with domestic political markets and producer/bureaucratic interests, domestic arms-industry influence tends to yield compensatory procurement forms (co-production, work-sharing, licensed production, offsets) as second-best solutions that preserve domestic participation."
+        context_conditions:
+          - "Armament-system costs are rising and there is pressure to reduce defence expenditure."
+          - "Full standardisation conflicts with domestic political-market dynamics and domestic producer/defence-bureaucracy interests."
+        outcome_tendencies:
+          - "Procurement deviates from full standardisation toward arrangements that preserve domestic industrial roles."
+          - "Offsets and related compensation forms are used to reconcile cost pressures with domestic participation aims."
+        supporting_cmo_ids:
+          - "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_001"
+            quote: "policy, however, is inconsistent with the operation of political markets"
+        moderators:
+          - condition: "When industrial-development criteria are explicitly made part of procurement political acceptability, negotiators face stronger pressure to pursue technology transfer and co-production terms."
+            effect: "strengthens"
+            supporting_cmo_ids:
+              - "10_the_teeth_of_little_tigers_pdf__cmo_014"
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "Evidence supports a clear political-market mechanism for second-best compensatory procurement forms, with an additional medium-confidence CMO illustrating industrial-development criteria shaping procurement debates; outcome tracing across multiple cases within this theme is limited."
+      - demi_regularity_id: "PM11_DR_03"
+        statement: "In contexts where interest-group lobbying and political incentives dominate procurement decision-making, domestic arms-industry influence tends to yield persistence of mandatory offsets even when economic-efficiency arguments are contested or would favour alternative approaches."
+        context_conditions:
+          - "Large defence procurements involve strong interest-group influence."
+          - "Governments can mandate offsets even when commercial self-interest would not sustain them."
+        outcome_tendencies:
+          - "Mandatory offsets persist for essentially political reasons."
+          - "Efficiency arguments are discounted or overridden in offset policy choices."
+        supporting_cmo_ids:
+          - "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_015"
+          - "03_the_defence_offsets_policy_in_australia_pdf__cmo_020"
+        anchor_quotes:
+          - cmo_id: "02_countertrade_and_offsets_an_overview_of_the_theory_and_evidence_pdf__cmo_015"
+            quote: "arguments about economic efficiency can be swamped or ignored"
+          - cmo_id: "03_the_defence_offsets_policy_in_australia_pdf__cmo_020"
+            quote: "reasons which are essentially political"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence CMOs explicitly attribute offset persistence to political incentives and interest-group dynamics overriding efficiency considerations."
+    theme_notes:
+      - "Coverage: all 6 PM11 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence is strongest on domestic-industry pressure producing direct-offset subsidies and on political incentives sustaining mandatory offsets despite efficiency critiques."
+      - "A recurring within-theme variation concerns whether offsets are framed as second-best substitutes for standardisation/cost-reduction versus as explicit industrial-crisis responses."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM11.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

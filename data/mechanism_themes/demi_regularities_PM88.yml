@@ -1,0 +1,78 @@
+demi_regularities_by_theme:
+  - theme_id: "PM88"
+    theme_label: "Defence bears economic-policy cost burden"
+    mechanism_explanation: "When offsets pursue economy-wide objectives but the defence ministry bears the procurement cost premium, defence resources are diverted from capability, especially in the absence of cross-departmental cost-sharing."
+    cmo_ids_in_theme:
+      - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_013"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_014"
+      - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_024"
+      - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_006"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM88_DR_01"
+        statement: "In contexts where offsets pursue broad economic objectives that benefit society beyond defence, but the defence ministry bears the offset cost premium without cross-departmental cost-sharing, defence bearing economic-policy cost burden tends to yield reduced defence purchasing power and opportunity costs that can degrade or delay military capability acquisition."
+        context_conditions:
+          - "Offset programmes serve economy-wide objectives beyond the defence ministry’s operational remit."
+          - "Defence budgets absorb offset premiums and opportunity costs without offset-related cost-sharing by other departments."
+        outcome_tendencies:
+          - "Defence purchasing power is reduced and capability acquisition can be degraded or delayed."
+        supporting_cmo_ids:
+          - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_013"
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_024"
+        anchor_quotes:
+          - cmo_id: "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_013"
+            quote: "the burden of this additional cost is carried by the MoD alone"
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_024"
+            quote: "price paid in many cases has been borne by DND"
+        moderators: []
+        boundary_conditions:
+          - condition: "Where other departments share costs consistent with the economic objectives, the capability-diversion effect is reduced."
+            supporting_cmo_ids:
+              - "04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_013"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "High-confidence CMOs explicitly describe misaligned budgeting (defence bearing costs for non-defence objectives) and link this to reduced ability to acquire required capabilities."
+      - demi_regularity_id: "PM88_DR_02"
+        statement: "In contexts where negotiating and implementing offset/IRB packages introduces additional and opportunity costs relative to cost-effective sourcing, defence bearing economic-policy cost burden tends to yield measurable additional costs absorbed by defence departments."
+        context_conditions:
+          - "Offset/IRB packages are negotiated and implemented alongside major procurements."
+          - "Offsets create procurement rigidities and opportunity costs compared with cost-effective sourcing."
+        outcome_tendencies:
+          - "Defence departments absorb substantial additional costs associated with offsets/IRBs."
+        supporting_cmo_ids:
+          - "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_014"
+        anchor_quotes:
+          - cmo_id: "05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_014"
+            quote: "absorbed at least C$125 million in additional costs"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO provides a quantified estimate of additional costs absorbed, directly supporting the cost-burden mechanism."
+      - demi_regularity_id: "PM88_DR_03"
+        statement: "In contexts where domestic firms are less efficient than established suppliers and contractors are unwilling to pay above normal subcontracting costs, defence bearing economic-policy cost burden tends to yield public subsidisation of the cost premium to make direct-offset work viable for domestic suppliers."
+        context_conditions:
+          - "Domestic subcontractors are earlier in learning curves and higher-cost than established suppliers."
+          - "Suppliers will not pay above normal subcontracting costs to place work domestically."
+        outcome_tendencies:
+          - "Public funds cover the difference between domestic and market costs for direct offsets."
+        supporting_cmo_ids:
+          - "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_006"
+            quote: "the difference between domestic and \"market\" costs was covered by Spanish public funds."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO describes a concrete cost-premium subsidy mechanism for direct offsets, directly matching the burden-shifting logic."
+    theme_notes:
+      - "Coverage: all 4 PM88 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence consistently highlights a budgeting mismatch: defence resources bear costs for wider economic objectives, creating opportunity costs for capability."
+      - "Within-theme variation shows multiple cost channels: general purchasing-power diversion, measurable additional costs, and explicit public subsidy to cover direct-offset cost premiums."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM88.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

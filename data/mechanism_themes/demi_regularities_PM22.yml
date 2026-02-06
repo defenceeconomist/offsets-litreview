@@ -1,0 +1,75 @@
+demi_regularities_by_theme:
+  - theme_id: "PM22"
+    theme_label: "Offsets reveal local supplier capability"
+    mechanism_explanation: "Local content requirements compel primes to search for and engage domestic suppliers, reducing information imperfections about local capability."
+    cmo_ids_in_theme:
+      - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_009"
+      - "09_saudi_arabia_and_offsets_pdf__cmo_001"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_006"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM22_DR_01"
+        statement: "In contexts where policymakers believe local suppliers may be world-competitive but foreign primes are unaware or reluctant to restructure supply chains, local content requirements that compel primes to search and engage domestic suppliers tends to yield reduced information imperfections and reveal whether local capability is truly competitive."
+        context_conditions:
+          - "Potentially competitive local suppliers exist but primes lack information and face switching frictions."
+          - "Local content requirements compel supplier search and engagement."
+        outcome_tendencies:
+          - "Local supplier capability is revealed through search and trial engagement."
+          - "Import substitution may occur at little extra cost if capability is competitive (otherwise premiums persist)."
+        supporting_cmo_ids:
+          - "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "03_mandatory_defense_offsets_conceptual_foundations_pdf__cmo_009"
+            quote: "Local content requirements are argued to be addressing an information imperfection"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "medium"
+        confidence_justification: "A medium-confidence CMO provides a clear information-imperfection mechanism and conditional outcome (low-cost import substitution only if capability is truly competitive)."
+      - demi_regularity_id: "PM22_DR_02"
+        statement: "In contexts where offset programmes are implemented as facilitated search-and-match processes with private-sector partner selection, offsets revealing local supplier capability tends to yield long-term partnerships and joint ventures rather than one-off countertrade transactions."
+        context_conditions:
+          - "The state convenes foreign and domestic investors but allows private actors to select and run ventures."
+          - "Offsets are tied to development and technology acquisition objectives."
+        outcome_tendencies:
+          - "Offset programmes take the form of private-sector partnerships and long-term joint ventures."
+        supporting_cmo_ids:
+          - "09_saudi_arabia_and_offsets_pdf__cmo_001"
+        anchor_quotes:
+          - cmo_id: "09_saudi_arabia_and_offsets_pdf__cmo_001"
+            quote: "leading to partnerships between Saudi companies and UK, US and French firms."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly describes offsets creating a facilitated search-and-match process that results in long-term partnerships and joint ventures."
+      - demi_regularity_id: "PM22_DR_03"
+        statement: "In contexts where offsets primarily place domestic firms on bidders’ lists but orders are awarded under competitive selection, offsets revealing local supplier capability tends to yield no guaranteed orders; orders occur only when domestic firms are competitive on price, quality, and delivery."
+        context_conditions:
+          - "Foreign suppliers have offset commitments but buyers can rely on established suppliers."
+          - "Procurement remains competitive on price, quality, and delivery."
+        outcome_tendencies:
+          - "Offset commitments do not guarantee orders; offset effects are mediated by competitiveness."
+        supporting_cmo_ids:
+          - "13_the_uk_experience_with_offsets_pdf__cmo_006"
+        anchor_quotes:
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_006"
+            quote: "does not guarantee that orders will be placed with UK firms."
+        moderators: []
+        boundary_conditions:
+          - condition: "If domestic suppliers are not competitive on price, quality, and delivery, offset-linked listing does not translate into sustained orders."
+            supporting_cmo_ids:
+              - "13_the_uk_experience_with_offsets_pdf__cmo_006"
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence CMO explicitly states that offsets primarily affect listing/visibility and that orders depend on competitiveness, providing a clear boundary condition."
+    theme_notes:
+      - "Coverage: all 3 PM22 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports two pathways: (a) local content as an information-imperfection correction, and (b) offsets as facilitated partner-search creating longer-term ventures."
+      - "A key boundary condition is competitiveness: offsets may increase visibility/listing but do not guarantee orders."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM22.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"

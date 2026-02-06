@@ -1,0 +1,82 @@
+demi_regularities_by_theme:
+  - theme_id: "PM52"
+    theme_label: "Additionality enforced through credit rules"
+    mechanism_explanation: "Conditioning offset credit on demonstrable market use aims to deter paper transfers and improve additionality and effectiveness."
+    cmo_ids_in_theme:
+      - "07_comparing_british_and_german_offset_strategies_pdf__cmo_005"
+      - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_009"
+      - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_002"
+      - "13_the_uk_experience_with_offsets_pdf__cmo_009"
+      - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_008"
+    missing_cmo_ids: []
+    demi_regularities:
+      - demi_regularity_id: "PM52_DR_01"
+        statement: "In contexts where authorities condition offset credit on demonstrable market use and proof of causality, additionality enforcement through credit rules tends to yield reduced 'paper' transfers and tighter governance of third-party fulfilment by rewarding only activity that is plausibly caused by the contractor and used in practice."
+        context_conditions:
+          - "Offset authorities face risks of nominal commitments and third-party fulfilment that may not be attributable to the contractor."
+          - "Crediting rules require evidence of market use and causal linkage to the contractor’s effort."
+        outcome_tendencies:
+          - "Offset crediting incentivizes usable technology/asset transfer rather than nominal commitments."
+          - "Authorities define credit limits and demand proof-of-causality for third-party investments."
+        supporting_cmo_ids:
+          - "07_comparing_british_and_german_offset_strategies_pdf__cmo_005"
+          - "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_008"
+        anchor_quotes:
+          - cmo_id: "07_comparing_british_and_german_offset_strategies_pdf__cmo_005"
+            quote: "award of offset credit rests on the firm actually using the technology in the market place"
+          - cmo_id: "15_the_business_of_offset_a_practitioner_s_perspective_case_study_israel_pdf__cmo_008"
+            quote: "requirements for proof of causality"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Evidence combines a clear policy-rule statement about market-use crediting with a high-confidence account of authorities tightening governance in response to third-party fulfilment by requiring causal proof."
+      - demi_regularity_id: "PM52_DR_02"
+        statement: "In contexts where offset crediting allows firms to count business that would have occurred anyway or that the contractor does not control (e.g., civil purchases determined by third parties), additionality enforcement through credit rules tends to yield overstated benefits and credibility problems because offset obligations can be met without generating genuinely offset-driven work."
+        context_conditions:
+          - "Offset crediting includes non-additional business (work that would have occurred without the offset agreement)."
+          - "Credited purchases are controlled by third parties rather than the contractor (e.g., airlines choosing engines)."
+        outcome_tendencies:
+          - "Reported offsets exaggerate new work and additionality is doubted."
+          - "Industrial participation claims are weakened by verification and attribution problems."
+        supporting_cmo_ids:
+          - "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_002"
+          - "13_the_uk_experience_with_offsets_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_002"
+            quote: "would have been purchased without the offset agreement"
+          - cmo_id: "13_the_uk_experience_with_offsets_pdf__cmo_009"
+            quote: "considerable doubt is cast on the idea that these purchases occurred as a result of the offset."
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "Two high-confidence CMOs converge on the same attribution failure (counting civil purchases not caused/controlled by the contractor) and link it to inflated offset claims and institutional doubt."
+      - demi_regularity_id: "PM52_DR_03"
+        statement: "In contexts where additionality cannot be established and the costs and net benefits of high-percentage offset demands are unknown, additionality enforcement through credit rules tends to yield auditor skepticism and recommendations to reduce compensation levels and target offset activities more narrowly."
+        context_conditions:
+          - "High-percentage offset demands are justified as economic compensation but additionality and net benefits are uncertain."
+          - "Programme costs and benefits are not well known."
+        outcome_tendencies:
+          - "Auditors question whether 100% offsets are expedient."
+          - "Recommendations favor smaller compensation levels and more targeted offset activities."
+        supporting_cmo_ids:
+          - "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_009"
+        anchor_quotes:
+          - cmo_id: "10_evaluating_defense_offsets_the_experience_in_finland_and_sweden_pdf__cmo_009"
+            quote: "whether it is always expedient to demand 100 percent offsets"
+        moderators: []
+        boundary_conditions: []
+        counterexamples: []
+        confidence: "high"
+        confidence_justification: "A high-confidence audit-based CMO directly links uncertain additionality and unclear net benefits to skepticism about 100% offsets and to targeted policy recommendations."
+    theme_notes:
+      - "Coverage: all 5 PM52 mechanisms were found in data/cmo_statements.csv; missing_cmo_ids is empty."
+      - "Evidence supports a credit-rule governance pathway: additionality is improved when credit depends on market use and proof of causality, and undermined when crediting counts non-additional civil purchases outside contractor control."
+      - "Audit findings suggest that when additionality is unprovable, demanding very high offset percentages is questioned and narrower, targeted activities are preferred."
+    suggested_quarto_note:
+      path: "reporting/patterns/PM52.qmd"
+      outline:
+        - "## Demi-regularities"
+        - "## Moderators and boundary conditions"
+        - "## Linked CMO IDs"
