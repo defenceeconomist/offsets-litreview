@@ -1,0 +1,112 @@
+---
+title: "Annotated Bibliography"
+bibliography: references/offsets.bib
+toc: true
+number-sections: false
+---
+
+This annotated bibliography is generated from `data/annotated_bibliography.yml` and citation mappings in `data/cmo/pdf_to_bibtex_key.yml`.
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+
+if (!requireNamespace("yaml", quietly = TRUE)) {
+  stop("Package 'yaml' is required to render this page.")
+}
+
+resolve_path <- function(candidates) {
+  for (p in candidates) {
+    if (file.exists(p)) return(p)
+  }
+  stop("Could not find any of: ", paste(candidates, collapse = ", "))
+}
+
+annotated_path <- resolve_path(c(
+  "data/annotated_bibliography.yml",
+  "../data/annotated_bibliography.yml"
+))
+
+mapping_path <- resolve_path(c(
+  "data/cmo/pdf_to_bibtex_key.yml",
+  "../data/cmo/pdf_to_bibtex_key.yml"
+))
+
+annotated <- yaml::read_yaml(annotated_path)
+mapping <- yaml::read_yaml(mapping_path)$pdf_to_bibtex_key
+books <- annotated$books
+
+if (is.null(books)) {
+  stop("Expected top-level key 'books' in annotated bibliography YAML.")
+}
+
+emit_heading <- function(level, text) {
+  cat(paste0(strrep("#", level), " ", text, "\n\n"))
+}
+
+to_lines <- function(x) {
+  if (is.null(x)) return(character())
+  if (is.list(x)) return(as.character(unlist(x, use.names = FALSE)))
+  as.character(x)
+}
+
+emit_list_section <- function(title, value) {
+  cat(paste0("**", title, "**\n\n"))
+  lines <- to_lines(value)
+  if (length(lines) == 0) {
+    cat("- Not stated.\n\n")
+    return(invisible())
+  }
+  for (line in lines) {
+    line <- trimws(line)
+    if (!nzchar(line)) line <- "Not stated."
+    cat(paste0("- ", line, "\n"))
+  }
+  cat("\n")
+}
+
+emit_summary_section <- function(value) {
+  cat("**Summary**\n\n")
+  lines <- to_lines(value)
+  if (length(lines) == 0) {
+    cat("Not stated.\n\n")
+    return(invisible())
+  }
+  text <- trimws(paste(lines, collapse = "\n"))
+  if (!nzchar(text)) text <- "Not stated."
+  cat(paste0(text, "\n\n"))
+}
+
+emit_details_start <- function() {
+  cat("::: {.callout-note collapse=\"true\" title=\"Details\"}\n\n")
+}
+
+emit_details_end <- function() {
+  cat(":::\n\n")
+}
+
+for (book_title in names(books)) {
+  emit_heading(2, book_title)
+
+  chapters <- books[[book_title]]
+  for (chapter_title in names(chapters)) {
+    entry <- chapters[[chapter_title]]
+    pdf_file <- entry$pdf_file
+    cite_key <- if (!is.null(pdf_file)) mapping[[pdf_file]] else NULL
+    citation <- if (!is.null(cite_key) && nzchar(cite_key)) paste0(" [@", cite_key, "]") else ""
+
+    emit_heading(3, paste0(chapter_title, citation))
+
+    emit_summary_section(entry$summary)
+    emit_details_start()
+    emit_list_section("Aim", entry$aim)
+    emit_list_section("Methods", entry$methods)
+    emit_list_section("Findings", entry$findings)
+    emit_list_section("Conclusions", entry$conclusions)
+    emit_list_section("Limitations", entry$limitations)
+    emit_details_end()
+  }
+}
+```

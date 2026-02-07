@@ -1,0 +1,294 @@
+---
+title: "RQ1 Synthesis (Realist Evidence Synthesis)"
+format: html
+freeze: false
+bibliography: ../references/offsets.bib
+---
+
+# Question
+
+Under what contexts do offsets/industrial participation mechanisms enable alliance-relevant outcomes (interoperability, readiness, security of supply, partnership durability)?
+
+This synthesis treats the research question as an explanatory "what works, for whom, and under what conditions" query, focused on *how* offsets/industrial participation (IP) arrangements translate into alliance-relevant effects.
+
+Interpretive notes used in the synthesis:
+
+- 'Offsets/industrial participation mechanisms' is interpreted broadly, including direct/indirect offsets, local content and industrial participation requirements, IRB-style schemes, co-production/licensed production, industrial cooperation agreements, sustainment/MRO work packages, training, technology transfer, and credit/multiplier rules.
+- 'Alliance-relevant outcomes' is interpreted as outcomes that affect allied integration and operational contribution, including interoperability/standardisation, readiness and sustainment, security of supply/autonomy (including software/control over critical subsystems), and partnership durability (trusted long-term collaboration and supply-chain embedding).
+- 'Enable' is interpreted as: the pathway plausibly increases the likelihood/level of these outcomes compared with a counterfactual of no offset/IP leverage or a different design; where sources only state intent/expectation, those are treated as conceptual rather than directly observed.
+
+Sub-questions used to structure the synthesis:
+
+- Which mechanisms link offsets/IP to each alliance-relevant outcome domain?
+- Under what contexts do these mechanisms fire, and under what contexts do they fail or reverse?
+- What are the main boundary conditions (scale/fleet size, governance capacity, absorptive capacity, export controls/technology release, urgency of supply)?
+- When do procurement-performance tradeoffs (cost/delay/inefficiency) plausibly undermine alliance outcomes?
+- What alternative pathways achieve similar alliance outcomes without traditional offsets (e.g., partnering/joint development/risk sharing)?
+
+# Evidence Used
+
+This synthesis draws on the CMO corpus entries that are explicitly mapped to 'rq1' in 'data/cmo/*.yml' and are citation-mapped via 'data/cmo/pdf_to_bibtex_key.yml'.
+
+- RQ1-coded CMOs reviewed: 75
+- Outcome families represented: 9
+- Confidence profile (as recorded in the CMO YAML): 54 high; 21 medium
+
+# Synthesis By Outcome Family
+
+Outcome families are used here as a stable, cross-document way to group outcome tendencies while keeping traceability to the underlying CMO evidence.
+
+## Alliance Security Outcomes
+
+- **Outcome family description**: Interoperability, standardization, readiness/sustainment, security of supply, deterrence, and other alliance/security effects.
+- **Pathway**: Across multiple cases, offsets/industrial participation are described as enabling alliance-relevant outcomes when they are tightly coupled to sustainment, interoperability, and operational autonomy needs. The dominant pathway is: external procurement creates dependence; offset-linked work/training builds in-country sustainment competence and/or autonomy over critical subsystems (often software), which is then treated as readiness/security-of-supply enabling. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Moderators**: Fleet size and long-run supportability; technology-release constraints (including export controls); and how tightly offsets are targeted toward sustainment-relevant work all condition whether readiness/security-of-supply benefits materialize. [@scheetzArgentineDefenseIndustry2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @skonsEvaluatingDefenseOffsets2004; @bitzingerOffsetsDefenseIndustrialization2004]
+- **Counterclaims**: Interoperability can be achieved without traditional offsets via multinational partnering/joint development/risk sharing, implying offsets are not the only route to alliance integration outcomes. [@chinworthOffsetPoliciesTrends2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple high-confidence case/comparative CMOs converge on sustainment competence, interoperability pressures, and autonomy aims as recurring alliance-relevant outcomes. [@skonsEvaluatingDefenseOffsets2004; @markowskiDefenseIndustryPoland2004; @chinworthOffsetPoliciesTrends2004]
+
+**Relevant quotes**
+- "The main objective of direct military offsets is to support domestic maintenance and modification" [@skonsEvaluatingDefenseOffsets2004]
+- "the prospect of joining NATO meant that the PAF would have to become interoperable with other alliance members" [@markowskiDefenseIndustryPoland2004]
+- "ensure Brazilian autonomy in the operation, maintenance, and technological evolution" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "The reasons include alliance building, promotion of equipment interoperability" [@chinworthOffsetPoliciesTrends2004]
+
+**Moderators (expanded)**
+- Fleet size and long-run supportability can limit sustainment economics and supply assurance for very small fleets. [@scheetzArgentineDefenseIndustry2004]
+- Technology-release constraints condition autonomy-focused pathways (e.g., software/source code) and can reshape procurement competition and feasibility. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- Offsets targeted toward maintenance/modification/upgrade competence are framed as more readiness-relevant than diffuse participation. [@skonsEvaluatingDefenseOffsets2004; @bitzingerOffsetsDefenseIndustrialization2004]
+
+**Counterclaims (expanded)**
+- Alternative program structures (partnering/joint development/risk sharing) are explicitly framed as achieving interoperability objectives without relying on offsets as the main lever. [@chinworthOffsetPoliciesTrends2004]
+
+:::
+
+## Partnerships and Supply Chains
+
+- **Outcome family description**: Joint ventures, co-production/co-development, supplier-network integration, and durable industrial linkages.
+- **Pathway**: Interoperability requirements can narrow supplier options and reinforce path dependence toward US-led buy-multinational models (e.g., JSF-style integration), shaping the structure and durability of industrial ties as much as the offset instrument itself. [@markowskiDefenseOffsetsAustralia2004; @hartleyOffsetsJointStrike2004]
+- **Moderators**: Alliance proximity and operational dependence can increase interoperability-driven narrowing; program architecture (partnering with competitive work allocation) can substitute for, or reshape, traditional offset dynamics. [@markowskiDefenseOffsetsAustralia2004; @hartleyOffsetsJointStrike2004; @chinworthOffsetPoliciesTrends2004]
+- **Counterclaims**: Supplier narrowing may be treated as an acceptable tradeoff if it delivers operational interoperability and sustainment assurance. [@markowskiDefenseOffsetsAustralia2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Only one RQ1-coded CMO is assigned to this family in the current mapping; it is conceptually aligned with broader RQ1 evidence about partnering approaches, but the family coverage is sparse. [@markowskiDefenseOffsetsAustralia2004]
+
+**Relevant quotes**
+- "interoperability with US-made systems becomes an operational necessity" [@markowskiDefenseOffsetsAustralia2004]
+- "no formal arrangement for distributing work between UK and US industry" [@hartleyOffsetsJointStrike2004]
+
+**Moderators (expanded)**
+- Closer operational integration increases the salience of interoperability constraints in supplier selection, which can harden supply-chain alignment with the dominant partner. [@markowskiDefenseOffsetsAustralia2004]
+- Early partnering and competitive "best value" work allocation within a multinational program can substitute for, or reshape, offset dynamics and affect collaboration durability. [@hartleyOffsetsJointStrike2004; @chinworthOffsetPoliciesTrends2004]
+
+:::
+
+## Technology Transfer and Learning
+
+- **Outcome family description**: Transfer depth/quality, licensing/know-how, skills, absorptive capacity, and learning-by-doing (including constraints on transfer).
+- **Pathway**: Alliance-relevant readiness and autonomy are repeatedly linked to technology transfer that is targeted to priority competence areas and matched to absorptive capacity. Eligibility criteria and credit/multiplier incentives can steer offers toward higher-value learning activities (R&D, training, software competence), increasing the plausibility of durable competence rather than one-off activity. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseOffsetsAustralia2004]
+- **Moderators**: Absorptive capacity (institutions and skills) and exporter political calculus (alliance politics and shifting strategic need) condition whether transfer is approved and internalized. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @chengTeethLittleTigers1996; @martinIntroductionOverview1996]
+- **Counterclaims**: Licensing/transfer can proceed despite the risk of creating future competitors, implying constraints can tighten under different strategic conditions even when transfer was previously tolerated. [@martinIntroductionOverview1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs support the conditional logic (targeting + absorptive capacity), while other CMOs highlight exporter-side political constraints that can limit transfer generosity over time. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @chengTeethLittleTigers1996]
+
+**Relevant quotes**
+- "the objective of indirect military offsets is to secure defense technological competence in Sweden more generally" [@skonsEvaluatingDefenseOffsets2004]
+- "a gradual ascent of the technology ladder through technology transfer" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "Offset multipliers were used to enhance the value of some particularly desirable offset activities such as R&D and training." [@markowskiDefenseOffsetsAustralia2004]
+- "With the end of the Cold War, the need to preserve political ties through technology transfer has declined." [@chengTeethLittleTigers1996]
+
+**Moderators (expanded)**
+- R&D infrastructure and trained personnel are repeatedly framed as prerequisites for internalizing transfer into operationally relevant competence. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- Transfer can be conditioned by alliance politics and perceived strategic need; geopolitical shifts can tighten exporter-side willingness. [@chengTeethLittleTigers1996; @martinIntroductionOverview1996]
+- Where offset credit rules reward higher-value learning activities (R&D, training), the expected learning content of proposals is described as shifting upward. [@markowskiDefenseOffsetsAustralia2004]
+
+:::
+
+## Industrial Capability and Base
+
+- **Outcome family description**: Defense-industrial capacity, self-reliance, sector growth/decline, and shifts in the domestic defense-industrial base.
+- **Pathway**: Industrial participation is frequently framed as a means to preserve or build defense-industrial capability that then supports alliance-relevant sustainment readiness, security of supply, or negotiating leverage when importing allied equipment. A recurring pathway is: autonomy/sustainment priorities lead to licensed production, MRO/upgrade capability, or targeted domestic production; resulting capacity is treated as enabling readiness and security-of-supply (sometimes with explicit deterrence framing). [@martinIntroductionOverview1996; @chinworthOffsetPoliciesTrends2004; @bitzingerOffsetsDefenseIndustrialization2004; @al-ghrairSaudiArabiaOffsets1996]
+- **Moderators**: Scale and follow-on demand; objective alignment (broad industrialization vs readiness); and domestic procurement priority/negotiating leverage shape whether capability persists and stays alliance-relevant. [@scheetzArgentineDefenseIndustry2004; @chinworthOffsetPoliciesTrends2004; @bitzingerOffsetsDefenseIndustrialization2004]
+- **Counterclaims**: Capability gains can be partial and bounded (self-sufficiency improves in some categories while dependence persists for leading-edge systems), limiting strong autonomy claims. [@baskaranRoleOffsetsIndian2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Evidence volume is high and confidence is frequently high, but alliance relevance is sometimes indirect (industrial capability as an intermediate that may or may not translate to interoperability/readiness benefits without additional integration conditions). [@chinworthOffsetPoliciesTrends2004; @bitzingerOffsetsDefenseIndustrialization2004]
+
+**Relevant quotes**
+- "Japan required a local ability to research, innovate, design and manufacture. Hence offsets have taken the form of licensed production." [@martinIntroductionOverview1996]
+- "it helps secure a high operating ratio and sustainability" [@chinworthOffsetPoliciesTrends2004]
+- "engages in Industrial Cooperation Programs... require technology transfer and training" [@bitzingerOffsetsDefenseIndustrialization2004]
+- "the first Saudi electronics industry production to support indigenous defence requirements" [@al-ghrairSaudiArabiaOffsets1996]
+
+**Moderators (expanded)**
+- Where production runs are long and sustainment demand is stable, capability retention is framed as more plausible than where output is episodic or fleet size is tiny. [@scheetzArgentineDefenseIndustry2004; @chinworthOffsetPoliciesTrends2004]
+- CMOs contrast ambitious, economy-wide industrialization aims with more selective, sustainment-aligned capability building (e.g., Singapore's use of offsets mainly for readiness-relevant areas). [@bitzingerOffsetsDefenseIndustrialization2004]
+- Some pathways frame domestic production capacity as influencing bargaining position and autonomy in future imports. [@chinworthOffsetPoliciesTrends2004]
+
+:::
+
+## Procurement Performance
+
+- **Outcome family description**: Cost/price premia, delays, administrative burden, restricted options, and other value-for-money/efficiency impacts.
+- **Pathway**: A recurring RQ1-coded tradeoff is that procurement choices embedding industrial participation (offsets, workshare constraints, IRB priorities) can impose cost/time penalties and efficiency losses, which can degrade readiness if they delay capability delivery or divert resources. These costs are sometimes framed as justifiable when participation directly supports sustainment readiness (maintenance/modification) or reduces strategic dependence. [@hartleyOffsetsJointStrike2004; @markowskiDefenceOffsetsPolicy1996; @fergussonSearchStrategyEvolution1996; @skonsEvaluatingDefenseOffsets2004]
+- **Moderators**: Urgency of supply; workshare governance rules; and budget constraints/escalation dynamics shape whether performance costs remain tolerable or become alliance-relevant risks. [@matthewsDefenseOffsetsPolicy2004; @hartleyOffsetsJointStrike2004; @mawdsleyComparingBritishGerman2004; @markusenArmsTradeIlliberal]
+- **Counterclaims**: Offsets can be framed as a readiness investment when they build sustainment/modify capability and therefore support readiness and security of supply. [@markowskiDefenceOffsetsPolicy1996; @skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple sources converge on performance costs and delivery/efficiency tradeoffs; RQ1 relevance depends on whether those tradeoffs transmit into readiness/interoperability outcomes (sometimes explicit, sometimes implicit). [@hartleyOffsetsJointStrike2004; @fergussonSearchStrategyEvolution1996; @markowskiDefenceOffsetsPolicy1996]
+
+**Relevant quotes**
+- "work is not allocated on the basis of competition and comparative advantage" [@hartleyOffsetsJointStrike2004]
+- "cost and delivery time penalties (incurred by Australian industry involvement) ... must be justified" [@markowskiDefenceOffsetsPolicy1996]
+- "price paid in many cases has been borne by DND" [@fergussonSearchStrategyEvolution1996]
+- "the … purchaser's choice of supplier must not be influenced by any offsets on offer" [@hagelinNordicOffsetPolicies2004]
+
+**Moderators (expanded)**
+- Where urgent delivery dominates, participation demands are described as minimized or rejected, implying readiness timelines can outweigh industrialization objectives. [@matthewsDefenseOffsetsPolicy2004]
+- Collaborative governance rules that override comparative advantage are repeatedly linked to inefficiency and delay risk. [@hartleyOffsetsJointStrike2004; @mawdsleyComparingBritishGerman2004]
+- Some pathways frame interoperability/technology-sharing pressures as contributing to earlier next-generation pushes and higher costs. [@markusenArmsTradeIlliberal]
+
+:::
+
+## Governance, Compliance and Evaluation
+
+- **Outcome family description**: Monitoring, fulfilment, enforceability, credit accounting, transparency, disputes, auditing, and evaluability/evaluation quality.
+- **Pathway**: Coordinated procurement is described as a governance mechanism through which small buyers can improve bargaining outcomes (including offset arrangements and production-run leverage) by increasing bargaining power relative to isolated national purchases. [@struysOffsetsWeaponsProcurement1996]
+- **Moderators**: Coalition feasibility (aligned timelines and requirements) conditions whether coordination delivers net bargaining benefits. [@struysOffsetsWeaponsProcurement1996]
+- **Counterclaims**: Without coordination, small buyers face limited leverage in major procurements, reducing their ability to secure favorable industrial participation terms. [@struysOffsetsWeaponsProcurement1996]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Only one RQ1-coded CMO is assigned to this family; it is high-confidence but does not establish frequency across settings. [@struysOffsetsWeaponsProcurement1996]
+
+**Relevant quotes**
+- "To present themselves as a buyer's cartel" [@struysOffsetsWeaponsProcurement1996]
+
+:::
+
+## Policy and Institutional Dynamics
+
+- **Outcome family description**: Adoption, persistence, termination, or redesign of offset regimes; durable institutional or regulatory shifts.
+- **Pathway**: Policy evolution is described as driven by security concerns and practicality: perceived vulnerability motivates domestic capability building and industrial participation; later, ill-focused offset programs can be abandoned in favor of more specific contractual provisions or alternative instruments. [@antonakisOffsetBenefitsGreek1996; @markowskiDefenseOffsetsAustralia2004]
+- **Moderators**: Threat perception/vulnerability and observed instrument performance (especially relative to sustainment needs) shape whether regimes persist, tighten, or are replaced. [@antonakisOffsetBenefitsGreek1996; @markowskiDefenseOffsetsAustralia2004]
+- **Counterclaims**: Even where formal schemes change, offset-like industrial compensation can persist as a feature of defense contracting, implying institutional path dependence. [@chinworthOffsetPoliciesTrends2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Two high-confidence case/comparative CMOs support the general pattern, but they do not establish how common the transition is across countries. [@antonakisOffsetBenefitsGreek1996; @markowskiDefenseOffsetsAustralia2004]
+
+**Relevant quotes**
+- "created the need for a domestic defence capability" [@antonakisOffsetBenefitsGreek1996]
+- "ADOP was abolished de facto and replaced by more specific provisions implemented through normal contracts." [@markowskiDefenseOffsetsAustralia2004]
+
+**Moderators (expanded)**
+- Security shocks elevate interest in autonomy and domestic capability; when this salience changes, instruments and thresholds can shift. [@antonakisOffsetBenefitsGreek1996]
+- Where offsets are judged ill-focused relative to sustainment needs, policy shifts toward more directly specified provisions. [@markowskiDefenseOffsetsAustralia2004]
+
+:::
+
+## Trade Finance and Market Effects
+
+- **Outcome family description**: Exports/countertrade, trade balance/FX/financing constraints, market access/competitiveness, and related market-position effects.
+- **Pathway**: Trade/market pathways connect alliance ties, autonomy, and feasibility: arms packages (including training/maintenance alongside offsets) are described as strengthening ties; autonomy-focused technology transfer can be prioritized in competitions; export-control constraints can disadvantage some bidders; and weak spares/support guarantees can undermine export prospects and sustainment credibility. [@chengTeethLittleTigers1996; @perlo-freemanOffsetsDevelopmentBrazilian2004; @scheetzArgentineDefenseIndustry2004]
+- **Moderators**: Export-control/technology-release limits and support guarantees/market confidence are key moderators of whether autonomy and durable support outcomes are achievable. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @scheetzArgentineDefenseIndustry2004]
+- **Counterclaims**: Tie-strengthening does not guarantee autonomy; autonomy outcomes depend on specific transferred content and recipient-side absorption capacity. [@chengTeethLittleTigers1996; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence case/comparative CMOs articulate these mechanisms clearly, though they address different subdomains (ties, competition, export feasibility) rather than one single repeated effect. [@chengTeethLittleTigers1996; @perlo-freemanOffsetsDevelopmentBrazilian2004; @scheetzArgentineDefenseIndustry2004]
+
+**Relevant quotes**
+- "arms sales packages (including not only offsets, but provision of training, maintenance, etc.) have served to strengthen diplomatic and military ties" [@chengTeethLittleTigers1996]
+- "transferring technology that allows FAB [the Brazilian air force] to maintain the aircraft software on its own" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "puts the F-16 at a disadvantage" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "production of spare parts for (only) 180 days" [@scheetzArgentineDefenseIndustry2004]
+
+**Moderators (expanded)**
+- Export-control/technology-release limits can override otherwise attractive industrial participation offers, reshaping competition and feasibility. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- Short spares windows reduce perceived supportability, constraining export prospects and long-run sustainment credibility. [@scheetzArgentineDefenseIndustry2004]
+
+:::
+
+## Domestic Economic Benefits (Secondary For RQ1)
+
+- **Outcome family description**: Jobs, investment, regional development, and other economic/development effects (including opportunity-cost framing).
+- **Pathway**: Domestic economic benefits are sometimes framed as co-produced alongside alliance-relevant participation, especially where localization/production-line transfer supports both industrial activity and sustainment capability; however, the alliance link is not always direct without additional integration steps. [@markowskiDefenseIndustryPoland2004; @hartleyOffsetsJointStrike2004]
+- **Moderators**: Localization sequencing (training, assembly, line transfer) is described as conditioning feasibility and risk in building capability and economic activity over time. [@markowskiDefenseIndustryPoland2004]
+- **Counterclaims**: Indirect offsets and investment can dilute defense linkage, weakening the alliance-readiness rationale if benefits flow mainly through non-defense channels. [@dunneDefenceIndustrialParticipation2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Few RQ1-coded CMOs are mapped here; alliance relevance is often indirect. [@markowskiDefenseIndustryPoland2004; @hartleyOffsetsJointStrike2004]
+
+**Relevant quotes**
+- "local content to grow from about 1 percent in the first year to nearly 53 percent in 2010" [@markowskiDefenseIndustryPoland2004]
+- "no formal arrangement for distributing work between UK and US industry" [@hartleyOffsetsJointStrike2004]
+
+:::
+
+# Cross-Family Synthesis
+
+### Key Enabling Contexts (Repeated)
+
+- **Interoperability pressure and alliance integration needs** (e.g., NATO accession, operational dependence) raise the salience of standardization and push procurement toward alliance-compatible systems, sometimes using offsets/participation to connect modernization to domestic transformation. [@markowskiDefenseIndustryPoland2004; @markowskiDefenseOffsetsAustralia2004]
+- **Sustainment dependence** creates a direct readiness logic for participation targeted to MRO/modification/upgrade competence. [@skonsEvaluatingDefenseOffsets2004; @bitzingerOffsetsDefenseIndustrialization2004]
+- **Autonomy priorities for critical subsystems** (especially software) drive designs that emphasize technology transfer for in-country maintenance, but these are conditioned by export-control constraints. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+### Main Boundary Conditions / Failure Points
+
+- **Scale constraints** (tiny fleets, limited follow-on demand) can undermine sustainment economics and long-run supportability, limiting payoff from industrial participation. [@scheetzArgentineDefenseIndustry2004]
+- **Governance/workshare constraints** can produce inefficiency and delay, which can erode readiness if delivery timelines slip or resources are diverted. [@hartleyOffsetsJointStrike2004; @fergussonSearchStrategyEvolution1996]
+- **Absorptive capacity gaps** limit the extent to which technology transfer becomes durable competence. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+### Alliance-Relevant Takeaways (Conditional)
+
+- When offsets/industrial participation are **tightly aligned to sustainment and autonomy**, the RQ1-coded evidence most consistently frames them as enabling readiness/security-of-supply outcomes. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- When participation is **diffuse or governed by non-efficiency workshare rules**, CMOs more frequently emphasize cost/delay inefficiencies that can undermine capability delivery and strain value-for-money. [@hartleyOffsetsJointStrike2004; @mawdsleyComparingBritishGerman2004]
+- Multinational partnering/joint development is repeatedly described as an **alternative integration pathway** that can achieve interoperability objectives without relying on offsets as the main lever. [@chinworthOffsetPoliciesTrends2004; @hartleyOffsetsJointStrike2004]
+
+# Evidence Audit
+
+- Total RQ1-coded CMOs reviewed: 75
+- Outcome families represented in the RQ1-coded set: Industrial Capability and Base, Procurement Performance, Technology Transfer and Learning, Alliance Security Outcomes, Trade Finance and Market Effects, Domestic Economic Benefits, Policy and Institutional Dynamics, Partnerships and Supply Chains, Governance, Compliance and Evaluation
+- CMOs excluded as out-of-scope: 0 (this write-up uses the corpus’ 'rq1' mapping as the scope boundary)
+- Missing citation mappings: none (all referenced PDFs are mapped to BibTeX keys in 'data/cmo/pdf_to_bibtex_key.yml')
+
+# References
+
+::: {#refs}
+:::

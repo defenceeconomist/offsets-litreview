@@ -1,0 +1,378 @@
+---
+title: "RQ2 Synthesis (Realist Evidence Synthesis)"
+format: html
+freeze: false
+bibliography: ../references/offsets.bib
+---
+
+# Question
+
+Which mechanisms systematically hinder alliance-relevant outcomes, and through what governance or market conditions?
+
+This synthesis treats the research question as an explanatory “what fails, for whom, and under what conditions” query, focused on *how* governance and market conditions shape recurrent barriers.
+
+Interpretive notes used in the synthesis:
+
+- The synthesis prioritizes negative/frictional pathways; positive findings are treated as counterclaims or boundary conditions.
+- Systemic barriers (incentives, enforcement, transparency, accounting, market/scale constraints, export-control frictions, absorptive capacity) are separated from one-off implementation failures.
+- “Alliance-relevant outcomes” are interpreted broadly as outcomes affecting interoperability, readiness/sustainment, security of supply/autonomy, and partnership durability.
+
+Sub-questions used to structure the synthesis:
+
+- Which hindering mechanisms recur across outcome families?
+- Under what governance conditions (enforcement, transparency, credit rules, banking) do these mechanisms fire?
+- Under what market conditions (scale, export demand, supplier competitiveness) do they dominate or attenuate?
+- What mitigation clues appear in the evidence (design alternatives, institutional capacity, pre-negotiated work packages)?
+
+# Evidence Used
+
+This synthesis draws on the CMO corpus entries that are explicitly mapped to 'rq2' in `data/cmo/*.yml` and are citation-mapped via `data/cmo/pdf_to_bibtex_key.yml`.
+
+- RQ2-coded CMOs reviewed: 248
+- Outcome families represented: 10
+- Confidence profile (as recorded in the CMO YAML): 171 high; 73 medium; 4 low
+
+# Synthesis By Outcome Family
+
+Outcome families are used here as a stable, cross-document way to group outcome tendencies while keeping traceability to the underlying CMO evidence.
+
+## Governance, Compliance and Evaluation
+
+- **Outcome family description**: Monitoring, fulfilment, enforceability, credit accounting, transparency, disputes, auditing, and evaluability/evaluation quality.
+- **Pathway**: Weak enforceability (few hard penalties) plus complex credit/multiplier/accounting rules makes delivery contingent on vendor goodwill and repeat-business incentives; this creates space for drift, renegotiation, decoupling (e.g., banking), and high transaction costs rather than reliably delivered, auditable value. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996; @martinIntroductionOverview1996; @chinworthDefenseIndustrialisationOffsets1996]
+- **Moderators**: Strong buyer governance capacity (clear additionality criteria, credible sanctions, audit access) and buyer coordination can tighten compliance; conversely, rising technological parity and sensitivity increases complexity/friction and can thicken transaction costs. [@markowskiDefenceOffsetsPolicy1996; @chinworthDefenseIndustrialisationOffsets1996; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Where governance is designed to reduce ambiguity (explicit criteria) or leverage market power (buyer coordination), additionality and compliance can improve relative to looser schemes. [@markowskiDefenceOffsetsPolicy1996; @struysOffsetsWeaponsProcurement1996]
+- **Mitigation clues**: Move from adversarial “percentage chasing” to fewer, pre-specified work packages; make sanctioning credible; constrain/limit banking rules; and simplify credit rules to reduce gaming/verification burden. [@markowskiDefenceOffsetsPolicy1996; @martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high/medium-confidence CMOs converge on enforcement-lite regimes (reputation rather than penalties), increasing complexity, and intertemporal crediting/banking as recurring governance features that can undermine evaluability and predictable delivery.
+
+**Relevant quotes**
+- "The sole penalty is that consideration of future bids" [@matthewsDefenseOffsetsPolicy2004]
+- "There are no sanctions in the event of non-compliance" [@markowskiDefenceOffsetsPolicy1996]
+- "Offset arrangements are decidedly more complex today" [@chinworthDefenseIndustrialisationOffsets1996]
+- "such purchases could be banked as offset credit." [@martinIntroductionOverview1996]
+
+**CMOs used (traceability)**
+- `06_defense_offsets_policy_versus_pragmatism_pdf__cmo_005` (pdf: `06-defense-offsets-policy-versus-pragmatism.pdf`) [@matthewsDefenseOffsetsPolicy2004]
+- `03_the_defence_offsets_policy_in_australia_pdf__cmo_013` (pdf: `03-the-defence-offsets-policy-in-australia.pdf`) [@markowskiDefenceOffsetsPolicy1996]
+- `08_defense_industrialisation_through_offsets_the_case_of_japan_pdf__cmo_012` (pdf: `08-defense-industrialisation-through-offsets-the-case-of-japan.pdf`) [@chinworthDefenseIndustrialisationOffsets1996]
+- `01_introduction_and_overview_pdf__cmo_017` (pdf: `01-introduction-and-overview.pdf`) [@martinIntroductionOverview1996]
+
+:::
+
+## Procurement Performance
+
+- **Outcome family description**: Cost/price premia, delays, administrative burden, restricted options, and other value-for-money/efficiency impacts.
+- **Pathway**: Industrial participation often creates a cost/time/complexity wedge (premia, quality delays, administrative burden), especially where domestic capacity is thin or where participation is pursued for sovereignty/industrial reasons rather than pure value-for-money. [@markowskiDefenceOffsetsPolicy1996; @06offsetsandfrencharmsexports; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Moderators**: (i) scale/fleet size and export demand (commercial viability); (ii) supplier quality/capability; and (iii) the policy objective (hazardous exchange governance vs broad development) shape whether costs are accepted, containable, or destabilizing. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @06offsetsandfrencharmsexports; @taylorUsingProcurementOffsets2004]
+- **Counterclaims**: Commercially-competitive subcontracting can deliver “participation” without traditional offsets, but shifts the burden onto smaller states to pay for access and accept less influence/less guaranteed work. [@hagelinNordicOffsetPolicies2004]
+- **Mitigation clues**: Use direct offsets when the goal is to safeguard an exchange tied to the procured system; avoid overreaching indirect demands that exceed seller capabilities; and treat supplier qualification/quality as a binding constraint (otherwise schedule slips). [@taylorUsingProcurementOffsets2004; @06offsetsandfrencharmsexports]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs across different national contexts and procurement settings explicitly describe cost/time penalties, quality constraints, and scale-driven commercial weakness; the corpus also contains a coherent conceptual distinction between “exchange safeguarding” and “development strategy” use cases.
+
+**Relevant quotes**
+- "cost and delivery time penalties (incurred by Australian industry involvement) ... must be justified" [@markowskiDefenceOffsetsPolicy1996]
+- "difficult to meet the necessary quality standards" [@06offsetsandfrencharmsexports]
+- "the unit cost of the AMX doubled from its original $10 million" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "if government uses the instrument largely to safeguard an exchange in a hazardous setting, the direct offset is preferable" [@taylorUsingProcurementOffsets2004]
+- "common defense planning should have been attempted" [@scheetzArgentineDefenseIndustry2004]
+- "no buyer should expect offset benefits" [@hagelinNordicOffsetPolicies2004]
+
+**CMOs used (traceability)**
+- `03_the_defence_offsets_policy_in_australia_pdf__cmo_001` (pdf: `03-the-defence-offsets-policy-in-australia.pdf`) [@markowskiDefenceOffsetsPolicy1996]
+- `06_offsets_and_french_arms_exports_pdf__cmo_017` (pdf: `06-offsets-and-french-arms-exports.pdf`) [@06offsetsandfrencharmsexports]
+- `13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_016` (pdf: `13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf`) [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- `02_using_procurement_offsets_as_an_economic_development_strategy_pdf__cmo_014` (pdf: `02-using-procurement-offsets-as-an-economic-development-strategy.pdf`) [@taylorUsingProcurementOffsets2004]
+- `14_the_argentine_defense_industry_an_evaluation_pdf__cmo_011` (pdf: `14-the-argentine-defense-industry-an-evaluation.pdf`) [@scheetzArgentineDefenseIndustry2004]
+- `09_nordic_offset_policies_changes_and_challenges_pdf__cmo_010` (pdf: `09-nordic-offset-policies-changes-and-challenges.pdf`) [@hagelinNordicOffsetPolicies2004]
+
+:::
+
+## Trade Finance and Market Effects
+
+- **Outcome family description**: Exports/countertrade, FX/financing constraints, market access/competitiveness, and related market-position effects.
+- **Pathway**: Market conditions (small quantities, competitive global subcontracting, and displacement effects) can mean “offset value” does not translate into durable orders or broad-based participation; benefits concentrate where firms are already internationally competitive, and local assembly can become commercially unviable at low volumes. [@markowskiDefenseOffsetsAustralia2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @martinUKExperienceOffsets1996]
+- **Moderators**: Procurement volume and export-market access determine whether local production/assembly has a sustainable demand base; global-prime supply chains can discipline participation to cost/quality, limiting policy discretion. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseOffsetsAustralia2004]
+- **Counterclaims**: In some alliance-linked procurements, participation is explicitly structured around life-cycle support and export-oriented work (rather than nominal local-assembly shares), which can be a more realistic route to market integration. [@markowskiDefenseOffsetsAustralia2004]
+- **Mitigation clues**: Target offset/industrial participation toward niches where domestic firms can be internationally competitive (or credibly become so), and avoid “assembly for its own sake” in low-volume buys. [@markowskiDefenseOffsetsAustralia2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Several high-confidence CMOs directly describe binding market/scale constraints and the limits of nominal offset commitments in generating durable orders; the pattern is consistent across different countries and program types.
+
+**Relevant quotes**
+- "traditional offset and work share arrangements are specifically excluded from the JSF program as all subcontractors are expected to be internationally competitive." [@markowskiDefenseOffsetsAustralia2004]
+- "local assembly could rapidly become unviable" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "does not guarantee that orders will be placed with UK firms." [@martinUKExperienceOffsets1996]
+- "Taiwan chose to forego (albeit unwillingly) significant production shares in the F-16 deal in order to secure the aircraft." [@chengTeethLittleTigers1996]
+- "67 percent of which were in the form of subcontracts" [@markusenArmsTradeIlliberal]
+
+**CMOs used (traceability)**
+- `18_defense_offsets_in_australia_and_new_zealand_pdf__cmo_020` (pdf: `18-defense-offsets-in-australia-and-new-zealand.pdf`) [@markowskiDefenseOffsetsAustralia2004]
+- `13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_021` (pdf: `13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf`) [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- `13_the_uk_experience_with_offsets_pdf__cmo_006` (pdf: `13-the-uk-experience-with-offsets.pdf`) [@martinUKExperienceOffsets1996]
+- `10_the_teeth_of_little_tigers_pdf__cmo_015` (pdf: `10-the-teeth-of-little-tigers.pdf`) [@chengTeethLittleTigers1996]
+- `05_arms_trade_as_illiberal_trade_pdf__cmo_011` (pdf: `05-arms-trade-as-illiberal-trade.pdf`) [@markusenArmsTradeIlliberal]
+
+:::
+
+## Policy and Institutional Dynamics
+
+- **Outcome family description**: Adoption, persistence, termination, or redesign of offset regimes; durable institutional or regulatory shifts.
+- **Pathway**: Offset regimes adapt when transaction/verification burden and market integration pressures make post-hoc, percentage-based offsets increasingly cumbersome; systems shift toward earlier, pre-negotiated worksharing and industrial cooperation models to reduce implementation friction. [@chinworthOffsetPoliciesTrends2004; @martinIntroductionOverview1996]
+- **Moderators**: Institutional capacity to manage programs (e.g., permanent in-country offices), and policy learning that reorients requirements toward commercial viability, shapes whether regimes persist, change form, or downshift. [@06offsetsandfrencharmsexports; @al-ghrairSaudiArabiaOffsets1996]
+- **Counterclaims**: Where policy remains “headline percentage” focused, programmes can misallocate effort toward nominal credit rather than durable capability/market outcomes—creating pressure for later redesign. [@fergussonSearchStrategyEvolution1996]
+- **Mitigation clues**: Pre-negotiate work packages/shares where feasible; institutionalise implementation capability; and explicitly prioritize long-term direct benefits and export viability over nominal offset percentages. [@chinworthOffsetPoliciesTrends2004; @06offsetsandfrencharmsexports; @fergussonSearchStrategyEvolution1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: High/medium-confidence CMOs across several national settings describe consistent policy evolution patterns: movement from post-production offsets toward pre-production sharing/industrial cooperation, and redesign away from simple “100% offsets” targets.
+
+**Relevant quotes**
+- "The new model replaces post-production offsets with pre-production sharing agreements." [@chinworthOffsetPoliciesTrends2004]
+- "joint development and production allows the tasks that Spanish industry will undertake to be defined in advance" [@martinIntroductionOverview1996]
+- "rejection of the previous goal of seeking 100% offsets" [@fergussonSearchStrategyEvolution1996]
+- "established a permanent office in Abu Dhabi" [@06offsetsandfrencharmsexports]
+- "the Kingdom should concentrate mainly on the production of non-military items that have a wide market" [@al-ghrairSaudiArabiaOffsets1996]
+
+**CMOs used (traceability)**
+- `16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_003` (pdf: `16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf`) [@chinworthOffsetPoliciesTrends2004]
+- `01_introduction_and_overview_pdf__cmo_013` (pdf: `01-introduction-and-overview.pdf`) [@martinIntroductionOverview1996]
+- `05_in_search_of_a_strategy_the_evolution_of_canadian_defence_industrial_and_regional_benefits_policy_pdf__cmo_015` (pdf: `05-in-search-of-a-strategy-the-evolution-of-canadian-defence-industrial-and-regional-benefits-policy.pdf`) [@fergussonSearchStrategyEvolution1996]
+- `06_offsets_and_french_arms_exports_pdf__cmo_020` (pdf: `06-offsets-and-french-arms-exports.pdf`) [@06offsetsandfrencharmsexports]
+- `09_saudi_arabia_and_offsets_pdf__cmo_010` (pdf: `09-saudi-arabia-and-offsets.pdf`) [@al-ghrairSaudiArabiaOffsets1996]
+
+:::
+
+## Procurement Politics and Decision Outcomes
+
+- **Outcome family description**: Deal approval dynamics, supplier selection, political acceptance/legitimation, and procurement likelihood (distinct from cost/schedule performance).
+- **Pathway**: Offsets can reweight procurement politics by shifting debate from “military spend” to “industrial/technology gains,” and can make “access to technology” a decisive selection criterion—potentially distorting competition and embedding politics into supplier choice. [@martinIntroductionOverview1996; @chengTeethLittleTigers1996]
+- **Moderators**: High-level political backing can accelerate approvals and resolve bottlenecks; learning from early failures can shift programs toward feasible (often medium-tech) transfers rather than aspirational technology. [@al-ghrairSaudiArabiaOffsets1996]
+- **Counterclaims**: In some settings, offsets can surface opportunities and accelerate pre-selection collaboration (suggesting procurement politics can be a channel for capability-building, not only distortion). [@al-ghrairSaudiArabiaOffsets1996]
+- **Mitigation clues**: Make “technology access” criteria explicit, auditable, and matched to absorptive capacity; avoid using headline offset claims as a substitute for rigorous value-for-money and deliverability checks. [@al-ghrairSaudiArabiaOffsets1996; @martinIntroductionOverview1996]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: The RQ2-coded evidence in this family is small but includes clear, explicit statements about offsets’ political-acceptability function and about technology-access terms driving supplier choice.
+
+**Relevant quotes**
+- "The objective for the offset was to improve the industrial and technological base... and to increase the political acceptability" [@martinIntroductionOverview1996]
+- "the key reason for the switch was “greater access to technology offered by General Dynamics.”" [@chengTeethLittleTigers1996]
+- "the 'transfer' element is more important than the 'high' aspect of technology" [@al-ghrairSaudiArabiaOffsets1996]
+- "Government support and commitment can speed up consideration and approval of projects" [@al-ghrairSaudiArabiaOffsets1996]
+
+**CMOs used (traceability)**
+- `01_introduction_and_overview_pdf__cmo_012` (pdf: `01-introduction-and-overview.pdf`) [@martinIntroductionOverview1996]
+- `10_the_teeth_of_little_tigers_pdf__cmo_007` (pdf: `10-the-teeth-of-little-tigers.pdf`) [@chengTeethLittleTigers1996]
+- `09_saudi_arabia_and_offsets_pdf__cmo_014` (pdf: `09-saudi-arabia-and-offsets.pdf`) [@al-ghrairSaudiArabiaOffsets1996]
+- `09_saudi_arabia_and_offsets_pdf__cmo_007` (pdf: `09-saudi-arabia-and-offsets.pdf`) [@al-ghrairSaudiArabiaOffsets1996]
+
+:::
+
+## Alliance Security Outcomes
+
+- **Outcome family description**: Interoperability, standardization, readiness/sustainment, security of supply, deterrence, and other alliance/security effects.
+- **Pathway**: Where industrial participation is configured as short-run assembly/placement without sustained capability development, any readiness/sovereignty gains can decay quickly after completion—leaving limited long-run security-of-supply or autonomy benefits. [@matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Interoperability pressures (e.g., alliance accession) can shift procurement standards and create demand for domestic capability transformation, but outcomes still depend on sustained investment and absorptive capacity. [@markowskiDefenseIndustryPoland2004]
+- **Counterclaims**: Offsets/compensation can be used intentionally to pursue autonomy over operation/maintenance/software and to embed alliance-building/interoperability aims; these are boundary conditions showing offsets are not *always* net-hindering for alliance outcomes. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @chinworthOffsetPoliciesTrends2004]
+- **Mitigation clues**: Tie industrial participation explicitly to life-cycle sustainment/software autonomy and to durable skill/capability pathways (rather than one-off assembly). [@perlo-freemanOffsetsDevelopmentBrazilian2004; @matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Only a small number of RQ2-coded CMOs map directly to alliance/security outcomes, though those CMOs are high-confidence and include explicit statements about decay of benefits and about interoperability/autonomy aims.
+
+**Relevant quotes**
+- "as soon as they were completed, the assembly line and the factory were closed" [@matthewsDefenseOffsetsPolicy2004]
+- "the prospect of joining NATO meant that the PAF would have to become interoperable with other alliance members" [@markowskiDefenseIndustryPoland2004]
+- "The reasons include alliance building, promotion of equipment interoperability" [@chinworthOffsetPoliciesTrends2004]
+- "ensure Brazilian autonomy in the operation, maintenance, and technological evolution" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+**CMOs used (traceability)**
+- `06_defense_offsets_policy_versus_pragmatism_pdf__cmo_010` (pdf: `06-defense-offsets-policy-versus-pragmatism.pdf`) [@matthewsDefenseOffsetsPolicy2004]
+- `12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_002` (pdf: `12-the-defense-industry-in-poland-an-offsets-based-revival.pdf`) [@markowskiDefenseIndustryPoland2004]
+- `16_offset_policies_and_trends_in_japan_south_korea_and_taiwan_pdf__cmo_001` (pdf: `16-offset-policies-and-trends-in-japan-south-korea-and-taiwan.pdf`) [@chinworthOffsetPoliciesTrends2004]
+- `13_offsets_and_the_development_of_the_brazilian_arms_industry_pdf__cmo_017` (pdf: `13-offsets-and-the-development-of-the-brazilian-arms-industry.pdf`) [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+:::
+
+## Technology Transfer and Learning
+
+- **Outcome family description**: Transfer depth/quality, licensing/know-how, skills, absorptive capacity, and learning-by-doing (including constraints on transfer).
+- **Pathway**: Systemic constraints on meaningful transfer recur: exporters withhold “key” technologies; off-the-shelf procurement offers limited opportunities; and recipient skill/absorptive-capacity limits can block projects or convert “transfer” into shallow assembly/maintenance dependence. [@chengTeethLittleTigers1996; @hartleyOffsetsJointStrike2004; @al-ghrairSaudiArabiaOffsets1996]
+- **Moderators**: Absorptive capacity (skills, institutions) and bargaining power determine whether transfer is deep enough to change autonomy; where enabling institutions are weak, gains are described as illusory. [@matthewsDefenseOffsetsPolicy2004; @al-ghrairSaudiArabiaOffsets1996]
+- **Counterclaims**: Some transfers can still be valuable (especially sustainment/software autonomy and structured learning), but these are contingent on institutional capacity and realistic project selection. [@matthewsDefenseOffsetsPolicy2004; @al-ghrairSaudiArabiaOffsets1996]
+- **Mitigation clues**: Specify transfer deliverables and access rights (beyond “marketing” claims); align project choice to skill pipelines; and privilege life-cycle/software competence over prestige high-tech labels. [@al-ghrairSaudiArabiaOffsets1996; @matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple high-confidence CMOs across different regions converge on the same hindering mechanisms—technology withholding, limited opportunity structures in off-the-shelf buys, and skills/absorptive-capacity constraints.
+
+**Relevant quotes**
+- "key, advanced technologies — the “good stuff’ — are withheld, thwarting further development." [@chengTeethLittleTigers1996]
+- "trained Saudis are not available in the required numbers and with the appropriate skills" [@al-ghrairSaudiArabiaOffsets1996]
+- "there are few opportunities for acquiring new technology" [@hartleyOffsetsJointStrike2004]
+- "reluctant to provide complete technical information" [@baskaranRoleOffsetsIndian2004]
+- "buyback arrangements as part of technology transfer did not produce the desired results" [@baskaranRoleOffsetsIndian2004]
+
+**CMOs used (traceability)**
+- `10_the_teeth_of_little_tigers_pdf__cmo_010` (pdf: `10-the-teeth-of-little-tigers.pdf`) [@chengTeethLittleTigers1996]
+- `09_saudi_arabia_and_offsets_pdf__cmo_013` (pdf: `09-saudi-arabia-and-offsets.pdf`) [@al-ghrairSaudiArabiaOffsets1996]
+- `08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_003` (pdf: `08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf`) [@hartleyOffsetsJointStrike2004]
+- `15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_006` (pdf: `15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf`) [@baskaranRoleOffsetsIndian2004]
+- `15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_007` (pdf: `15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf`) [@baskaranRoleOffsetsIndian2004]
+
+:::
+
+## Partnerships and Supply Chains
+
+- **Outcome family description**: Joint ventures, co-production/co-development, supplier-network integration, and durable industrial linkages.
+- **Pathway**: Offset-induced industrial cooperation can be short-lived—benefits “dry up” once obligations are discharged—unless projects are commercially viable and embedded in durable program/supply-chain logic. [@struysOffsetsWeaponsProcurement1996]
+- **Moderators**: Downstream demand (international sales) and procurement rule design (pure global best value vs “strategic” set-asides) shape whether partnerships persist or collapse after the offset window. [@antonakisOffsetBenefitsGreek1996; @hartleyOffsetsJointStrike2004]
+- **Counterclaims**: Joint ventures can reduce market-entry/compliance burdens for foreign firms and can be a practical governance workaround in institutionally complex environments; this can enable longer-term presence (but does not guarantee deep capability transfer). [@al-ghrairSaudiArabiaOffsets1996]
+- **Mitigation clues**: Prefer industrial-cooperation models that reduce administrative burden and anchor firm-to-firm relationships beyond the obligation clock; ensure partnership incentives remain after credits are earned. [@molas-gallartOffsetsIndustrialCooperation1996; @struysOffsetsWeaponsProcurement1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Several high-confidence CMOs explicitly describe the “post-obligation drop-off” problem and identify market-demand and program-rule design as recurring moderators.
+
+**Relevant quotes**
+- "benefits drying up once the foreign supplier has completed its offset obligations" [@struysOffsetsWeaponsProcurement1996]
+- "mainly due to the low sales of this aircraft internationally" [@antonakisOffsetBenefitsGreek1996]
+- "modified its global best value approach…to include a “strategic best value” exemption" [@hartleyOffsetsJointStrike2004]
+- "there is no need to oversee a large number of offset applications to determine whether they conform to the agreement." [@molas-gallartOffsetsIndustrialCooperation1996]
+- "Joint ventures enable foreign businesses to rely on their local partner and avoid the steep learning curve" [@al-ghrairSaudiArabiaOffsets1996]
+
+**CMOs used (traceability)**
+- `04_offsets_and_weapons_procurement_the_belgium_experience_pdf__cmo_005` (pdf: `04-offsets-and-weapons-procurement-the-belgium-experience.pdf`) [@struysOffsetsWeaponsProcurement1996]
+- `07_offset_benefits_in_greek_defence_procurement_policy_developments_and_some_empirical_evidence_pdf__cmo_023` (pdf: `07-offset-benefits-in-greek-defence-procurement-policy-developments-and-some-empirical-evidence.pdf`) [@antonakisOffsetBenefitsGreek1996]
+- `08_offsets_and_the_joint_strike_fighter_in_the_uk_and_the_netherlands_pdf__cmo_008` (pdf: `08-offsets-and-the-joint-strike-fighter-in-the-uk-and-the-netherlands.pdf`) [@hartleyOffsetsJointStrike2004]
+- `11_from_offsets_to_industrial_cooperation_spain_s_changing_strategies_as_an_arms_importer_pdf__cmo_013` (pdf: `11-from-offsets-to-industrial-cooperation-spain-s-changing-strategies-as-an-arms-importer.pdf`) [@molas-gallartOffsetsIndustrialCooperation1996]
+- `09_saudi_arabia_and_offsets_pdf__cmo_002` (pdf: `09-saudi-arabia-and-offsets.pdf`) [@al-ghrairSaudiArabiaOffsets1996]
+
+:::
+
+## Industrial Capability and Base
+
+- **Outcome family description**: Defense-industrial capacity, self-reliance, sector growth/decline, and shifts in the domestic defense-industrial base.
+- **Pathway**: In small markets, offset-driven “capability” can be hard to sustain (thin/volatile domestic orders and limited exports), and offsets can even inhibit longer-run international cooperation—leaving a weaker structural position after short-run strengthening. [@markowskiDefenseIndustryPoland2004; @struysOffsetsBelgiumScylla2004]
+- **Moderators**: Export-market access, the ability to retain specialized human capital, and the depth of technology access condition whether initial investments become durable industrial capacity or decay/exit. [@scheetzArgentineDefenseIndustry2004; @baskaranRoleOffsetsIndian2004]
+- **Counterclaims**: Some offset-linked modernization can coincide with alliance-driven procurement transformation (e.g., interoperability shifts), but industrial-base outcomes remain contingent on sustainment economics and ongoing demand. [@markowskiDefenseIndustryPoland2004]
+- **Mitigation clues**: Focus on sustainment- and upgrade-relevant niches with plausible steady demand; treat human-capital retention and export strategy as core design constraints rather than afterthoughts. [@scheetzArgentineDefenseIndustry2004; @markowskiDefenseIndustryPoland2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Many RQ2-coded CMOs populate this family; the selected high-confidence CMOs illustrate recurring, cross-case constraints (scale/export limits, cooperation inhibition, dependence via incomplete transfer, and human-capital fragility).
+
+**Relevant quotes**
+- "investments in defense-related industry capabilities are difficult to sustain over time" [@markowskiDefenseIndustryPoland2004]
+- "Offsets strengthened Belgian defense firms in the short-run, but inhibited international cooperation" [@struysOffsetsBelgiumScylla2004]
+- "Much of the specialized human capital either went into retirement or migrated to Embraer in Brazil." [@scheetzArgentineDefenseIndustry2004]
+- "reluctant to provide complete technical information" [@baskaranRoleOffsetsIndian2004]
+
+**CMOs used (traceability)**
+- `12_the_defense_industry_in_poland_an_offsets_based_revival_pdf__cmo_020` (pdf: `12-the-defense-industry-in-poland-an-offsets-based-revival.pdf`) [@markowskiDefenseIndustryPoland2004]
+- `11_offsets_in_belgium_between_scylla_and_charybdis_pdf__cmo_018` (pdf: `11-offsets-in-belgium-between-scylla-and-charybdis.pdf`) [@struysOffsetsBelgiumScylla2004]
+- `14_the_argentine_defense_industry_an_evaluation_pdf__cmo_008` (pdf: `14-the-argentine-defense-industry-an-evaluation.pdf`) [@scheetzArgentineDefenseIndustry2004]
+- `15_the_role_of_offsets_in_indian_defense_procurement_policy_pdf__cmo_006` (pdf: `15-the-role-of-offsets-in-indian-defense-procurement-policy.pdf`) [@baskaranRoleOffsetsIndian2004]
+
+:::
+
+## Domestic Economic Benefits
+
+- **Outcome family description**: Jobs, investment, and broader economic/development effects (including opportunity-cost framing).
+- **Pathway**: “Economic benefits” can be overstated if technology is not absorbed, if participation is shallow, or if foreign participation is mainly financial (equity) rather than fixed-capital expansion—limiting durable spillovers and leaving dependence. [@matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- **Moderators**: National innovation institutions and workforce skills shape whether benefits are real or illusory; ambitious indigenous projects can still remain dependent if key subsystems/components remain foreign. [@matthewsDefenseOffsetsPolicy2004; @bitzingerOffsetsDefenseIndustrialization2004]
+- **Counterclaims**: Where institutions and skills are strong, the same mechanisms (transfer + learning) can support more sustainable gains; the barrier is not “offsets per se” but capability to internalize and evolve transferred knowledge. [@matthewsDefenseOffsetsPolicy2004]
+- **Mitigation clues**: Treat absorptive capacity as a prerequisite; audit “benefit” claims against workforce/skills realities and the degree of subsystem autonomy (not just project completion). [@matthewsDefenseOffsetsPolicy2004; @bitzingerOffsetsDefenseIndustrialization2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: High-confidence CMOs explicitly link outcomes to absorptive-capacity constraints and to the form of foreign participation (equity vs fixed investment); the pattern is coherent but is partly conditional (“if capacity exists…”).
+
+**Relevant quotes**
+- "it is fundamental that the technology is effectively absorbed" [@matthewsDefenseOffsetsPolicy2004]
+- "designed and manufactured entirely in Indonesia, but still using a large number of foreign components" [@bitzingerOffsetsDefenseIndustrialization2004]
+- "Most of this investment has involved equity purchases rather than fixed investment in plant and capital." [@dunneDefenceIndustrialParticipation2004]
+
+**CMOs used (traceability)**
+- `06_defense_offsets_policy_versus_pragmatism_pdf__cmo_008` (pdf: `06-defense-offsets-policy-versus-pragmatism.pdf`) [@matthewsDefenseOffsetsPolicy2004]
+- `17_offsets_and_defense_industrialization_in_indonesia_and_singapore_pdf__cmo_008` (pdf: `17-offsets-and-defense-industrialization-in-indonesia-and-singapore.pdf`) [@bitzingerOffsetsDefenseIndustrialization2004]
+- `19_defense_industrial_participation_the_south_african_experience_pdf__cmo_011` (pdf: `19-defense-industrial-participation-the-south-african-experience.pdf`) [@dunneDefenceIndustrialParticipation2004]
+
+:::
+
+# Cross-Family Synthesis
+
+### Key Enabling Contexts (Repeated)
+
+Contexts in which hindering mechanisms are least likely to dominate (or are credibly mitigated) recur across families:
+
+- **Credible governance and enforceability**: clear additionality criteria, auditable deliverables, and real sanctions (or credible repeat-business leverage) reduce gaming and drift. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996]
+- **High absorptive capacity**: skilled workforce and innovation institutions allow technology-transfer claims to convert into autonomy rather than shallow dependence. [@matthewsDefenseOffsetsPolicy2004; @al-ghrairSaudiArabiaOffsets1996]
+- **Scale and market access**: sustainable domestic capability is more plausible when there is enough volume and/or export access to keep production runs, skills, and supply chains alive. [@scheetzArgentineDefenseIndustry2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseIndustryPoland2004]
+- **Program architectures that reduce friction**: pre-negotiated sharing/industrial cooperation and institutionalised implementation capacity reduce the administrative/verification burden and help align incentives. [@chinworthOffsetPoliciesTrends2004; @06offsetsandfrencharmsexports; @molas-gallartOffsetsIndustrialCooperation1996]
+
+### Main Boundary Conditions / Failure Points
+
+Recurring systemic failure points (distinct from one-off implementation mistakes) include:
+
+- **Enforcement-lite compliance**: few penalties and high complexity makes delivery contingent on goodwill/reputation rather than contractible performance. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996; @chinworthDefenseIndustrialisationOffsets1996]
+- **Opportunity-structure limits for learning**: off-the-shelf buys and exporter withholding constrain “meaningful” transfer; skills shortages can be binding constraints. [@hartleyOffsetsJointStrike2004; @chengTeethLittleTigers1996; @al-ghrairSaudiArabiaOffsets1996]
+- **Market/scale constraints**: low procurement quantities and limited export demand can make local assembly or production economically unviable and can cause benefits to decay post-obligation. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseIndustryPoland2004; @struysOffsetsWeaponsProcurement1996]
+- **Politicised decision weights**: “technology access” and political acceptability can dominate selection/approval, increasing the risk that offsets become a substitute for (rather than a complement to) rigorous deliverability/value-for-money assessment. [@martinIntroductionOverview1996; @chengTeethLittleTigers1996]
+
+### Alliance-Relevant Takeaways (Conditional)
+
+Across this corpus, the most systematic hindering mechanisms for alliance-relevant outcomes are governance- and market-structured:
+
+- Where **governance is weak** (complex rules, low sanctions, limited auditability), offsets tend to create administrative drag and compliance uncertainty, undermining credible evaluation and long-run alliance-relevant capability building. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996; @chinworthDefenseIndustrialisationOffsets1996]
+- Where **markets and scale are constraining** (low volume, limited exports, globally competitive subcontracting), participation concentrates in already-competitive niches and “headline” commitments may not translate into durable supply-chain embedding or autonomy. [@markowskiDefenseOffsetsAustralia2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @martinUKExperienceOffsets1996]
+- Where **technology transfer is politically constrained** and **absorptive capacity is low**, “transfer” is shallow, dependence persists, and alliance-relevant autonomy/readiness pathways are least likely to materialize. [@chengTeethLittleTigers1996; @al-ghrairSaudiArabiaOffsets1996; @matthewsDefenseOffsetsPolicy2004; @baskaranRoleOffsetsIndian2004]
+
+# Evidence Audit
+
+- Total RQ2-coded CMOs reviewed: 248
+- Total CMOs used in write-up: 44
+- Outcome families represented in the RQ2-coded set: Industrial Capability and Base, Technology Transfer and Learning, Trade Finance and Market Effects, Partnerships and Supply Chains, Domestic Economic Benefits, Policy and Institutional Dynamics, Governance, Compliance and Evaluation, Procurement Performance, Procurement Politics and Decision Outcomes, Alliance Security Outcomes
+- CMOs excluded as out-of-scope: 204 (RQ2-coded CMOs not used here to keep the synthesis focused on mechanisms that systematically hinder outcomes; many remaining CMOs are enabling/neutral, highly case-specific, or redundant with the patterns traced above)
+- Missing citation mappings: none (all referenced PDFs are mapped to BibTeX keys in `data/cmo/pdf_to_bibtex_key.yml`)
+
+# References
+
+::: {#refs}
+:::
