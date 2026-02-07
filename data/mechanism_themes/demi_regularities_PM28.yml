@@ -73,7 +73,7 @@ demi_regularities_by_theme:
       - "The dominant pattern is marketing-network advantage: exporters can reduce market-entry costs for counterpurchase goods and buyer-country exports."
       - "Design details (e.g., one-for-one export credits) strengthen incentives for supply-chain brokering; however, some indirect-offset patterns may shift competitiveness toward foreign firms rather than facilitating reciprocal gains."
     suggested_quarto_note:
-      path: "reporting/patterns/PM28.qmd"
+      path: "docs/patterns/PM28.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports a core foreign-exchange conservation rationale (imports proceed with reciprocal requirements) and a design feature of shifting payment timing via deferred counter-sales and local manufacturing."
       - "This theme describes intended macro constraints management; it does not by itself establish net welfare gains relative to alternative macro adjustments."
     suggested_quarto_note:
-      path: "reporting/patterns/PM83.qmd"
+      path: "docs/patterns/PM83.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports both organisational support (helping firms build offset projects) and policy support (waivers and licensing/data assistance) as export-support mechanisms."
       - "Further evidence would help distinguish effects on small vs large firms and whether export-support capacity primarily improves compliance or also improves additionality/value-for-money."
     suggested_quarto_note:
-      path: "reporting/patterns/PM57.qmd"
+      path: "docs/patterns/PM57.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

@@ -8,7 +8,7 @@ This repo supports a realist evidence synthesis workflow for offsets / industria
 - CMO extractions (per source YAML): `data/cmo/`
 - Consolidated analysis table: `data/cmo_statements.csv`
 - Prompt templates (LLM instructions): `prompts/`
-- Synthesis outputs (Quarto docs): `reporting/synthesis/`
+- Synthesis outputs (Quarto docs): `docs/synthesis/`
 - Exploration UI:
   - CMO-Explorer: `apps/cmo-explorer`
   - Demi-regularities Explorer: `apps/demi-regularities-explorer`
@@ -136,7 +136,7 @@ Notes:
 - Per-theme C→M→O statements of the form “In contexts where X, mechanism Z tends to yield Y…”, each with:
   - supporting CMO IDs (`chunk_id`)
   - moderators/boundary conditions (counterexamples + what differs)
-- Where to store: embed directly in an RQ synthesis doc (e.g. `reporting/synthesis/rq1.qmd`) or create a per-theme Quarto note (e.g. `reporting/patterns/PM1.qmd`) if you want a reusable theme library.
+- Where to store: embed directly in an RQ synthesis doc (e.g. `docs/synthesis/rq1.qmd`) or create a per-theme Quarto note (e.g. `docs/patterns/PM1.qmd`) if you want a reusable theme library.
 
 ### 5) Re-describe outcomes at a higher level (outcome families)
 
@@ -160,7 +160,7 @@ Notes:
 
 **Outputs**
 - One or more chain candidates (ordered links), e.g. “Offset design → vendor behaviour → depth of transfer → capability trajectory → alliance-relevant effects”, each citing the supporting CMO IDs.
-- Where to store: usually embedded in the relevant RQ synthesis doc (e.g. `reporting/synthesis/rq1.qmd`), optionally with a diagram (Mermaid) for reuse.
+- Where to store: usually embedded in the relevant RQ synthesis doc (e.g. `docs/synthesis/rq1.qmd`), optionally with a diagram (Mermaid) for reuse.
 
 ### 7) Turn patterns into propositions (middle-range explanations)
 
@@ -174,7 +174,7 @@ Notes:
 - A small set of propositions of the form “When X context holds, offsets/IP may support Y via mechanism Z…”, each:
   - citing the supporting CMO IDs
   - stating boundary conditions when evidence is mixed or mainly conceptual
-- Where to store: typically as a section in the relevant RQ synthesis doc (e.g. “Conditional takeaways” in `reporting/synthesis/rq1.qmd`).
+- Where to store: typically as a section in the relevant RQ synthesis doc (e.g. “Conditional takeaways” in `docs/synthesis/rq1.qmd`).
 
 ### 8) Write RQ-focused synthesis outputs
 
@@ -186,8 +186,8 @@ Notes:
 - Your outcome families, propositions, and chains from steps 5–7.
 
 **Outputs**
-- Quarto synthesis doc per RQ, e.g. `reporting/synthesis/rq1.qmd`.
-- Rendered HTML under `_output/` when you run `quarto render`.
+- Quarto synthesis doc per RQ, e.g. `docs/synthesis/rq1.qmd`.
+- Rendered HTML under `docs/_output/` when you run `quarto render docs`.
 
 ### 9) Optional: exploration notebooks (for sensemaking, not “truth”)
 
@@ -198,11 +198,11 @@ Notes:
 - Sometimes: `data/mechanism_themes/proto_themes.yml` and cached artifacts (e.g. `data/embeddings_cache.sqlite`).
 
 **Outputs**
-- Analysis notebooks in `reporting/analysis/` rendered to `_output/reporting/analysis/` (plus any cached artifacts written under `data/`).
+- Analysis notebooks in `docs/analysis/` rendered to `docs/_output/analysis/` (plus any cached artifacts written under `data/`).
 
 **Current notebooks**
-- `reporting/analysis/mechanism-cosine-similarity.qmd` (mechanism embeddings/similarity; writes embedding artifacts under `data/`)
-- `reporting/analysis/theme-by-rq-crosstab.qmd` (counts CMOs by mechanism theme × research question)
+- `docs/analysis/mechanism-cosine-similarity.qmd` (mechanism embeddings/similarity; writes embedding artifacts under `data/`)
+- `docs/analysis/theme-by-rq-crosstab.qmd` (counts CMOs by mechanism theme × research question)
 
 ## Realist Quality Checks (V&V)
 

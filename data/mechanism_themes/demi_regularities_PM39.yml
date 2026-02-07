@@ -51,7 +51,7 @@ demi_regularities_by_theme:
       - "Evidence supports both an economic-competition pathway (offsets strengthening competitors and harming non-defence sectors) and a political pathway (benefit narratives obscuring diffuse harms)."
       - "Empirical quantification of competitive harm is limited in the extracted CMOs; claims are mainly qualitative/analytical."
     suggested_quarto_note:
-      path: "reporting/patterns/PM39.qmd"
+      path: "docs/patterns/PM39.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

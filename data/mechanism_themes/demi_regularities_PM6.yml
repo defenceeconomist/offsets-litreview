@@ -56,7 +56,7 @@ demi_regularities_by_theme:
       - "The key boundary implied by the evidence is additionality: net gains depend on whether counterpurchase creates genuinely new export revenue and employment rather than reallocation."
       - "Evidence includes both a conceptual additionality requirement and a concrete commodity-counterpurchase implementation example."
     suggested_quarto_note:
-      path: "reporting/patterns/PM6.qmd"
+      path: "docs/patterns/PM6.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

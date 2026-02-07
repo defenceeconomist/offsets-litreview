@@ -224,7 +224,7 @@ demi_regularities_by_theme:
       - "Across cases, absorptive capacity repeatedly hinges on skills/human capital, institutionalised R&D and innovation systems, and the fit between offset work packages and domestic industrial structure."
       - "Where constraints are binding (skills, finance, infrastructure, institutional readiness), offsets tend to shift toward more feasible transfer modalities (medium-tech, tailored proposals, alternative fulfilment) and/or deliver contested outcomes."
     suggested_quarto_note:
-      path: "reporting/patterns/PM46.qmd"
+      path: "docs/patterns/PM46.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

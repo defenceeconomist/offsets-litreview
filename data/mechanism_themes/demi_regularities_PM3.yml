@@ -207,7 +207,7 @@ demi_regularities_by_theme:
       - "Evidence consistently indicates that offsets are rarely 'free': suppliers can embed administrative, risk, and technology-transfer costs in prices, and opaque pricing makes the premium hard to observe."
       - "Country cases (especially Belgium) provide concrete magnitudes (e.g., ~20–35% penalties and even larger overruns) linked to offset-driven industrial arrangements; keep those as illustrative rather than universal."
     suggested_quarto_note:
-      path: "reporting/patterns/PM3.qmd"
+      path: "docs/patterns/PM3.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

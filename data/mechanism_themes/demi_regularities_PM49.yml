@@ -47,7 +47,7 @@ demi_regularities_by_theme:
       - "Evidence supports second-best framing of import offsets as responses to protectionism and as instruments for reciprocity/level playing field concerns."
       - "More evidence would be needed to assess whether systematic IP rules reduce or exacerbate broader offset ratcheting dynamics across markets."
     suggested_quarto_note:
-      path: "reporting/patterns/PM49.qmd"
+      path: "docs/patterns/PM49.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

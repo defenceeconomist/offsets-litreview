@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence emphasizes that scale-economy benefits from exports can be offset by subsidy burdens and that employment outcomes may be expensive per job when subsidisation is required."
       - "More empirical cost-effectiveness evidence would be needed to characterize net welfare impacts beyond illustrative subsidy claims."
     suggested_quarto_note:
-      path: "reporting/patterns/PM33.qmd"
+      path: "docs/patterns/PM33.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

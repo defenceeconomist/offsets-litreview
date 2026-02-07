@@ -238,7 +238,7 @@ demi_regularities_by_theme:
       - "The evidence base spans conceptual arguments, audit findings, and country cases; several outcomes emphasize governance/evaluability rather than downstream industrial performance."
       - "Next step: when writing PM17 up, separate 'administrative burden/cost' from 'rent-seeking/corruption' sub-patterns to keep the causal logic tight."
     suggested_quarto_note:
-      path: "reporting/patterns/PM17.qmd"
+      path: "docs/patterns/PM17.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

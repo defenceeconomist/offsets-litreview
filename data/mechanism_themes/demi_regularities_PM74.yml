@@ -95,7 +95,7 @@ demi_regularities_by_theme:
       - "The central recurring barrier is lack of routinely published, precise programme data due to confidentiality and sensitivity, which limits independent scrutiny and cost-benefit assessment."
       - "One mitigation pathway appears where an industry both gives and receives offsets, enabling limited cross-checking of claims, but this does not substitute for transparent programme data."
     suggested_quarto_note:
-      path: "reporting/patterns/PM74.qmd"
+      path: "docs/patterns/PM74.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

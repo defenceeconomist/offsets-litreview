@@ -4,7 +4,7 @@ format: html
 freeze: false
 ---
 
-This note cross-tabulates **mechanism themes** (from `data/mechanism_themes/proto_themes.yml`) by **research question** (from `data/cmo_statements.csv`), counting CMO statements per cell.
+This note cross-tabulates **mechanism themes** (from `../data/mechanism_themes/proto_themes.yml`) by **research question** (from `../data/cmo_statements.csv`), counting CMO statements per cell.
 
 ```{r}
 library(dplyr)
@@ -15,8 +15,8 @@ library(purrr)
 library(stringr)
 library(knitr)
 
-cmo_path <- "data/cmo_statements.csv"
-themes_path <- "data/mechanism_themes/proto_themes.yml"
+cmo_path <- "../data/cmo_statements.csv"
+themes_path <- "../data/mechanism_themes/proto_themes.yml"
 
 cmo <- readr::read_csv(cmo_path, show_col_types = FALSE)
 

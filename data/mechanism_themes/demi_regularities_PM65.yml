@@ -87,7 +87,7 @@ demi_regularities_by_theme:
       - "Evidence supports partnership packaging as a strategy to move from compliance to durable collaboration, including cross-sector inducements and authority emphasis on profitable long-term relationships."
       - "Most evidence is descriptive and practitioner-oriented; additional empirical follow-up would strengthen claims about sustained post-obligation collaboration and its outcomes."
     suggested_quarto_note:
-      path: "reporting/patterns/PM65.qmd"
+      path: "docs/patterns/PM65.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

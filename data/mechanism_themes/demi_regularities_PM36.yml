@@ -245,7 +245,7 @@ demi_regularities_by_theme:
       - "The evidence base emphasizes how offsets and offset-like workshare arrangements create durable cross-border ties via subcontracting, export-linked workshare, and JV/equity embedding."
       - "Several CMOs highlight a boundary: cross-border ties may embed ownership/relationships without expanding domestic fixed capacity, and offsets can sometimes inhibit longer-run structured cooperation."
     suggested_quarto_note:
-      path: "reporting/patterns/PM36.qmd"
+      path: "docs/patterns/PM36.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

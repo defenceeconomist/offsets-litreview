@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports a clear substitution mechanism: quality constraints impede industrial counterpurchase and encourage shifts toward service-based offsets."
       - "This theme highlights an implementation boundary: what counts as fulfilment can change in response to feasibility constraints."
     suggested_quarto_note:
-      path: "reporting/patterns/PM91.qmd"
+      path: "docs/patterns/PM91.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

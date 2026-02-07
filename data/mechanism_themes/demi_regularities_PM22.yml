@@ -68,7 +68,7 @@ demi_regularities_by_theme:
       - "Evidence supports two pathways: (a) local content as an information-imperfection correction, and (b) offsets as facilitated partner-search creating longer-term ventures."
       - "A key boundary condition is competitiveness: offsets may increase visibility/listing but do not guarantee orders."
     suggested_quarto_note:
-      path: "reporting/patterns/PM22.qmd"
+      path: "docs/patterns/PM22.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

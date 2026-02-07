@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports a consistent priority ordering: when urgent security needs dominate, offsets and co-production aims are traded away for timely procurement."
       - "Bargaining leverage appears as a key contextual moderator: isolation and supplier resistance increase the likelihood of reduced participation outcomes."
     suggested_quarto_note:
-      path: "reporting/patterns/PM45.qmd"
+      path: "docs/patterns/PM45.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

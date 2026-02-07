@@ -62,7 +62,7 @@ demi_regularities_by_theme:
       - "Evidence supports both a macro-analogy claim (selective devaluation) and concrete countertrade implementation (commodity purchase obligations)."
       - "Additional empirical evaluation would be needed to assess net additionality versus displacement for targeted export stimulation."
     suggested_quarto_note:
-      path: "reporting/patterns/PM24.qmd"
+      path: "docs/patterns/PM24.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

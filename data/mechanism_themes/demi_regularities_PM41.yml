@@ -70,7 +70,7 @@ demi_regularities_by_theme:
       - "Evidence supports a 'low-threat/low-salience' pathway where political-economic objectives dominate procurement and IRB design, reinforced by multi-department governance."
       - "System-level accounts suggest economic imperatives can weaken integration of security evaluations, but additional case-traced evidence would strengthen claims about proliferation-risk consequences."
     suggested_quarto_note:
-      path: "reporting/patterns/PM41.qmd"
+      path: "docs/patterns/PM41.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

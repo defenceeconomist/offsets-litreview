@@ -96,7 +96,7 @@ demi_regularities_by_theme:
       - "Evidence supports a short-term liquidity-relief pathway (barter/counterpurchase enabling deals) alongside concerns about reduced transparency and longer-term hidden costs."
       - "More case-comparative evidence would help distinguish when barter supports broader development outcomes versus merely shifting timing and visibility of costs."
     suggested_quarto_note:
-      path: "reporting/patterns/PM9.qmd"
+      path: "docs/patterns/PM9.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

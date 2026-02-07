@@ -75,7 +75,7 @@ demi_regularities_by_theme:
       - "Evidence supports a credit-rule governance pathway: additionality is improved when credit depends on market use and proof of causality, and undermined when crediting counts non-additional civil purchases outside contractor control."
       - "Audit findings suggest that when additionality is unprovable, demanding very high offset percentages is questioned and narrower, targeted activities are preferred."
     suggested_quarto_note:
-      path: "reporting/patterns/PM52.qmd"
+      path: "docs/patterns/PM52.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

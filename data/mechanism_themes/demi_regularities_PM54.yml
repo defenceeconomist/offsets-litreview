@@ -230,7 +230,7 @@ demi_regularities_by_theme:
       - "The evidence strongly clusters into (a) autonomy/security-of-supply via licensed production, (b) staged localization and capacity build-up, and (c) sustainment-focused technology transfer (MRO/infrastructure)."
       - "When drafting narrative synthesis, separate 'licensed production for autonomy' from 'licensed production for exports/industrial ladder climbing' to avoid conflating readiness outcomes with commercial competitiveness."
     suggested_quarto_note:
-      path: "reporting/patterns/PM54.qmd"
+      path: "docs/patterns/PM54.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

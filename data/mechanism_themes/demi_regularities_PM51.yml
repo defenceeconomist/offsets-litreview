@@ -72,7 +72,7 @@ demi_regularities_by_theme:
       - "Evidence supports two linked patterns: escalating expectations via international benchmarking and reciprocity pressure, and limited scope for direct offsets in mature production supply chains resulting in predominantly indirect delivery."
       - "Further evidence would help distinguish when indirect offsets genuinely reduce risk versus merely shifting offset burdens to less transparent or less additional transactions."
     suggested_quarto_note:
-      path: "reporting/patterns/PM51.qmd"
+      path: "docs/patterns/PM51.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

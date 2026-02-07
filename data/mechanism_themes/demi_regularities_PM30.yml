@@ -125,7 +125,7 @@ demi_regularities_by_theme:
       - "Patterns cluster around offsets as second-best workarounds (macro/FX constraints) and as politically driven allocation tools that sustain inefficient capacity and delay restructuring."
       - "Within-theme variation includes both generalized economic critiques (appropriateness/inefficiency) and a concrete programme failure case when industrial-promotion overrides military/technical advice."
     suggested_quarto_note:
-      path: "reporting/patterns/PM30.qmd"
+      path: "docs/patterns/PM30.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

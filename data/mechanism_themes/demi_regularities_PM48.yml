@@ -62,7 +62,7 @@ demi_regularities_by_theme:
       - "Evidence supports path dependence at two levels: (a) cross-national institutional trajectories shaping strategy, and (b) firm-creation effects constraining future procurement options."
       - "Within-theme variation includes contexts with weak institutionalisation (case-by-case import offsets) versus contexts where IRB-driven embedding creates strong procurement dependence."
     suggested_quarto_note:
-      path: "reporting/patterns/PM48.qmd"
+      path: "docs/patterns/PM48.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

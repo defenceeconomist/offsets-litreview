@@ -195,7 +195,7 @@ demi_regularities_by_theme:
       - "Evidence supports two linked pathways: (a) embedded coaching/learning-by-doing, and (b) reputational certification lowering market-entry transaction costs."
       - "Several mechanisms are theory-model or inferred (especially learning-curve and vendor-effort incentives); keep confidence conservative where effects are not directly outcome-traced."
     suggested_quarto_note:
-      path: "reporting/patterns/PM19.qmd"
+      path: "docs/patterns/PM19.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

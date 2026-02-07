@@ -252,7 +252,7 @@ demi_regularities_by_theme:
       - "The strongest convergent patterns are (a) absorptive-capacity limits, (b) scale/export fragility and market shocks, and (c) discontinuity/human-capital loss."
       - "Several CMOs concern policy design and diffusion/multiplier effects; treat these as moderators explaining why initial capability injections do not generalize or persist."
     suggested_quarto_note:
-      path: "reporting/patterns/PM34.qmd"
+      path: "docs/patterns/PM34.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

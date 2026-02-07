@@ -22,7 +22,7 @@ The default embedding model (`all-MiniLM-L6-v2`) may download on first run.
 import os
 import sys
 
-sys.path.append(os.path.abspath("src/py"))
+sys.path.append(os.path.abspath("../src/py"))
 ```
 
 ## Load outcomes
@@ -30,8 +30,8 @@ sys.path.append(os.path.abspath("src/py"))
 ```{python}
 import pandas as pd
 
-input_path = "data/cmo_statements.csv"
-out_dir = "data/topic-models/outcomes"
+input_path = "../data/cmo_statements.csv"
+out_dir = "../data/topic-models/outcomes"
 os.makedirs(out_dir, exist_ok=True)
 
 model_name = "all-MiniLM-L6-v2"
@@ -55,7 +55,7 @@ len(df)
 ```{python}
 from embed_mechanisms import embed_texts
 
-cache_path = "data/topic-models/embeddings_cache.sqlite"
+cache_path = "../data/topic-models/embeddings_cache.sqlite"
 embeddings_csv = os.path.join(out_dir, "embeddings.csv")
 
 embeddings = embed_texts(

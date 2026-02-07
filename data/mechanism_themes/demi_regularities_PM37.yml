@@ -74,7 +74,7 @@ demi_regularities_by_theme:
       - "Evidence indicates permissiveness can emerge from budget/export-competition incentives and from uncertainty about offset harms, producing ambivalent or delayed regulation."
       - "A clear boundary condition is national security: permissive commercial flexibility is conditional on not crossing security-risk thresholds."
     suggested_quarto_note:
-      path: "reporting/patterns/PM37.qmd"
+      path: "docs/patterns/PM37.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

@@ -108,7 +108,7 @@ demi_regularities_by_theme:
       - "Evidence supports two linked patterns: (a) offsets as mandatory trade restrictions in an illiberal security-exempt market, and (b) offsets as a way to reconcile imports with domestic jobs/technology expectations."
       - "Constraints and boundary pressures arise from export-control limits on technology transfer and from trade-regime interpretations that treat offsets as non-tariff barriers."
     suggested_quarto_note:
-      path: "reporting/patterns/PM21.qmd"
+      path: "docs/patterns/PM21.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

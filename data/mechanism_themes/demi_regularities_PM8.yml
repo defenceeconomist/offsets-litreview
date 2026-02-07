@@ -192,7 +192,7 @@ demi_regularities_by_theme:
       - "Evidence clusters into (a) poor transferability of military-origin skills/tech to civilian sectors, (b) compatibility with local complementary infrastructure, and (c) supplier/political/security constraints shaping what is transferable."
       - "Several CMOs are prescriptive (e.g., recommended sequencing) or conceptual; keep confidence conservative where outcomes are not directly observed."
     suggested_quarto_note:
-      path: "reporting/patterns/PM8.qmd"
+      path: "docs/patterns/PM8.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

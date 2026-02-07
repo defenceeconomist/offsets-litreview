@@ -71,7 +71,7 @@ demi_regularities_by_theme:
       - "Evidence consistently highlights a budgeting mismatch: defence resources bear costs for wider economic objectives, creating opportunity costs for capability."
       - "Within-theme variation shows multiple cost channels: general purchasing-power diversion, measurable additional costs, and explicit public subsidy to cover direct-offset cost premiums."
     suggested_quarto_note:
-      path: "reporting/patterns/PM88.qmd"
+      path: "docs/patterns/PM88.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

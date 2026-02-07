@@ -111,7 +111,7 @@ demi_regularities_by_theme:
       - "Evidence supports organisational adaptation: as offsets become unavoidable and complex, firms build dedicated offset capabilities resembling trading companies and establish permanent local presence."
       - "Firm structure (diversification) moderates fulfilment strategy; some evidence also suggests offsets can catalyze structured opportunity search beyond compliance."
     suggested_quarto_note:
-      path: "reporting/patterns/PM38.qmd"
+      path: "docs/patterns/PM38.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

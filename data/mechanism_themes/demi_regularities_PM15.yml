@@ -265,7 +265,7 @@ demi_regularities_by_theme:
       - "Evidence strongly supports the 'rigidity → diseconomies' logic and provides multiple concrete flexibility mechanisms (variable bargaining, capped/tie-break offsets, voluntary/niche participation, and substitution away from expensive modes)."
       - "When synthesizing, keep distinct the sub-cases: (a) bilateral procurement bargaining flexibility, (b) policy guardrails that prevent offsets distorting supplier choice, and (c) multinational program constraints where offsets are institutionally excluded."
     suggested_quarto_note:
-      path: "reporting/patterns/PM15.qmd"
+      path: "docs/patterns/PM15.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

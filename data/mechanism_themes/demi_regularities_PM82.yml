@@ -45,7 +45,7 @@ demi_regularities_by_theme:
       - "Evidence links definitional inconsistency to both measurement/comparability issues and to practical implementation confusion when rules are introduced without clear shared definitions."
       - "This theme is methodological/administrative; it implies that policy evaluation needs explicit operational definitions of offset forms."
     suggested_quarto_note:
-      path: "reporting/patterns/PM82.qmd"
+      path: "docs/patterns/PM82.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

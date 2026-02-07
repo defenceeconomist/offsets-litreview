@@ -86,7 +86,7 @@ demi_regularities_by_theme:
       - "Evidence emphasizes conditionality: early partnership and competitive allocation can enable high-tech roles, but outcomes depend on export controls and on whether procurement occurs early enough to embed firms in development."
       - "Within-theme variation contrasts proven-platform purchases (lower risk, weaker tech transfer) with developmental-stage buy-in (higher guarantees, deeper participation)."
     suggested_quarto_note:
-      path: "reporting/patterns/PM62.qmd"
+      path: "docs/patterns/PM62.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

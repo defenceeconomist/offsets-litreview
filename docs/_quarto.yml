@@ -12,10 +12,10 @@ website:
     collapse-level: 1
     contents: 
       - text: "Home"
-        href: reporting/index.qmd
+        href: index.qmd
       - section: "Analysis"
         contents:
-          - auto: "reporting/analysis/*.qmd"
+          - auto: "analysis/*.qmd"
 
 format:
   html:
@@ -23,4 +23,4 @@ format:
 
 toc: true
 number-sections: true
-bibliography: references/offsets.bib  
+bibliography: references/offsets.bib

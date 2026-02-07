@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports heterogeneity as a core barrier to generalization, with indirect offsets highlighted as particularly challenging for attribution and goal assessment."
       - "This theme is evaluation-oriented; it describes limits to inference rather than programme outcomes per se."
     suggested_quarto_note:
-      path: "reporting/patterns/PM77.qmd"
+      path: "docs/patterns/PM77.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

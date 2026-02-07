@@ -76,7 +76,7 @@ demi_regularities_by_theme:
       - "A consistent pattern is that offset-sourcing benefits are often time-bounded to obligation periods unless competitiveness or follow-on demand supports continuation."
       - "Evidence suggests durability is more likely when offsets reveal genuinely competitive suppliers; otherwise effects are transient and can generate conflict in investment-based arrangements."
     suggested_quarto_note:
-      path: "reporting/patterns/PM23.qmd"
+      path: "docs/patterns/PM23.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

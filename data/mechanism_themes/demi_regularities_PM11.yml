@@ -84,7 +84,7 @@ demi_regularities_by_theme:
       - "Evidence is strongest on domestic-industry pressure producing direct-offset subsidies and on political incentives sustaining mandatory offsets despite efficiency critiques."
       - "A recurring within-theme variation concerns whether offsets are framed as second-best substitutes for standardisation/cost-reduction versus as explicit industrial-crisis responses."
     suggested_quarto_note:
-      path: "reporting/patterns/PM11.qmd"
+      path: "docs/patterns/PM11.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

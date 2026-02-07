@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Evidence supports a reversal/cancellation pathway linking short-term political incentives to long-run cost escalation via duplication and fragmented planning."
       - "This theme is procurement-lifecycle oriented; it describes downstream cost and capability planning consequences rather than offset delivery mechanisms per se."
     suggested_quarto_note:
-      path: "reporting/patterns/PM89.qmd"
+      path: "docs/patterns/PM89.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

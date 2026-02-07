@@ -49,7 +49,7 @@ demi_regularities_by_theme:
       - "Evidence supports a leverage pathway (coalitions improve terms) and a capability boundary condition (quality/workforce constraints can delay or reduce realised component offsets)."
       - "More evidence would be needed to assess how coalition governance and internal distribution rules affect who benefits from improved terms."
     suggested_quarto_note:
-      path: "reporting/patterns/PM86.qmd"
+      path: "docs/patterns/PM86.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

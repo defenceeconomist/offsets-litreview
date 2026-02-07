@@ -459,7 +459,7 @@ demi_regularities_by_theme:
       - "Evidence concentrates on governance/crediting design and auditability; fewer CMOs trace downstream outcomes beyond compliance/valuation disputes."
       - "Next step: check whether banking/credit-transfer evidence (PM2_DR_05/06) should be separated further from additionality/evaluation issues (PM2_DR_03) in the write-up."
     suggested_quarto_note:
-      path: "reporting/patterns/PM2.qmd"
+      path: "docs/patterns/PM2.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

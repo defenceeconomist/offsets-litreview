@@ -46,7 +46,7 @@ demi_regularities_by_theme:
       - "Both CMOs emphasize displacement/accounting effects rather than net demand creation, highlighting foreign-exchange conservation claims as potentially illusory."
       - "Evidence is primarily conceptual/analytical; additional empirical trade-flow analysis would be needed to quantify displacement magnitudes."
     suggested_quarto_note:
-      path: "reporting/patterns/PM35.qmd"
+      path: "docs/patterns/PM35.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

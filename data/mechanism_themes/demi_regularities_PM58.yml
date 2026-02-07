@@ -99,7 +99,7 @@ demi_regularities_by_theme:
       - "Evidence repeatedly links non-competitive allocation rules and multi-actor governance to slower decisions, delays, and higher administrative/coordination burdens."
       - "Regional distribution requirements and overlapping programmes appear as recurring sources of fragmentation and transaction-cost inflation."
     suggested_quarto_note:
-      path: "reporting/patterns/PM58.qmd"
+      path: "docs/patterns/PM58.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

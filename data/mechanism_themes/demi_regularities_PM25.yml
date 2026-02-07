@@ -45,7 +45,7 @@ demi_regularities_by_theme:
       - "Evidence supports an opacity pathway: barter/counterpurchase reduces price transparency and enables de facto price discrimination and dumping."
       - "Further evidence would be needed to quantify the magnitude and distributional consequences of these pricing effects across markets."
     suggested_quarto_note:
-      path: "reporting/patterns/PM25.qmd"
+      path: "docs/patterns/PM25.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

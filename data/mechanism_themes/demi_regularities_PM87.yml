@@ -63,7 +63,7 @@ demi_regularities_by_theme:
       - "Evidence supports concentration dynamics both across partner countries (capability and enforcement) and within countries (geographical/firm concentration)."
       - "A key boundary is political retaliation: initial market penetration can be curtailed by protectionist responses when offset-driven sourcing becomes visible."
     suggested_quarto_note:
-      path: "reporting/patterns/PM87.qmd"
+      path: "docs/patterns/PM87.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

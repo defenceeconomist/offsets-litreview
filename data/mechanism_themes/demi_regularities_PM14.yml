@@ -89,7 +89,7 @@ demi_regularities_by_theme:
       - "The dominant pattern emphasizes offsets as a bargaining/rent-extraction instrument used to pursue multiple non-price objectives (employment, technology transfer, investment, market access)."
       - "Evidence is stronger on buyer leverage and objective expansion than on systematic measurement of net welfare effects or distributional consequences."
     suggested_quarto_note:
-      path: "reporting/patterns/PM14.qmd"
+      path: "docs/patterns/PM14.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

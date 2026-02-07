@@ -69,7 +69,7 @@ demi_regularities_by_theme:
       - "Evidence supports a value-for-money protection strategy via strict eligibility and additionality criteria; offsets are framed as constrained secondary considerations."
       - "Additional evidence would help assess whether cost-premium ceilings and programme narrowing reliably prevent welfare losses or simply re-label them."
     suggested_quarto_note:
-      path: "reporting/patterns/PM50.qmd"
+      path: "docs/patterns/PM50.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

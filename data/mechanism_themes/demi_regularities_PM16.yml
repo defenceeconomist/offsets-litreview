@@ -72,7 +72,7 @@ demi_regularities_by_theme:
       - "Evidence supports a strong hazard-based boundary: offsets are argued to be appropriate primarily under high exchange hazard and high expected recipient benefits."
       - "Within-theme variation is mainly about offset form choice (direct vs indirect) and the welfare consequences of extending mandates into low-hazard procurement categories."
     suggested_quarto_note:
-      path: "reporting/patterns/PM16.qmd"
+      path: "docs/patterns/PM16.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

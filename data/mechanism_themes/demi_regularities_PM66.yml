@@ -101,7 +101,7 @@ demi_regularities_by_theme:
       - "Across cases, offsets appear as an import-compensation instrument: a quid pro quo that enables foreign procurement while extracting domestic work, technology transfer, and market access."
       - "Within-theme variation includes both political-economy triggers (employment decline, trade deficit) and mechanical design features (offset obligations shrinking when import exposure falls)."
     suggested_quarto_note:
-      path: "reporting/patterns/PM66.qmd"
+      path: "docs/patterns/PM66.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

@@ -70,7 +70,7 @@ demi_regularities_by_theme:
       - "Evidence supports a core governance logic: buyback creates 'hostageship' that mitigates technology-transfer quality risk under information asymmetry."
       - "Secondary pathways include buyback as a quality signal and as a second-best mechanism under FDI and contract-enforcement constraints."
     suggested_quarto_note:
-      path: "reporting/patterns/PM26.qmd"
+      path: "docs/patterns/PM26.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"

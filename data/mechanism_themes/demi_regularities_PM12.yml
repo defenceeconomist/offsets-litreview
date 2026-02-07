@@ -52,7 +52,7 @@ demi_regularities_by_theme:
       - "Evidence supports two design logics: (a) transparency and development-oriented specifications to improve realization, and (b) tailoring baskets toward near-term employment when job creation is urgent."
       - "The transparency/design recommendation is largely prescriptive in one source; the employment-priority design is case-traced with high-confidence evidence."
     suggested_quarto_note:
-      path: "reporting/patterns/PM12.qmd"
+      path: "docs/patterns/PM12.qmd"
       outline:
         - "## Demi-regularities"
         - "## Moderators and boundary conditions"
