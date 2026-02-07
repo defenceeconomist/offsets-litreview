@@ -1,0 +1,566 @@
+---
+title: "RQ4 Synthesis (Realist Evidence Synthesis)"
+format: html
+freeze: false
+bibliography: ../references/offsets.bib
+---
+
+# Question
+
+How can each pathway be summarized with enabling/limiting conditions and alliance-relevant outcomes?
+
+# Evidence Used
+
+This synthesis builds pathway summaries from CMOs across the corpus, using `research_questions_mapped` as a guide but prioritising pathway completeness over strict RQ tags when needed.
+
+- CMOs reviewed: 740
+- Outcome families represented: 11
+- Confidence profile (as recorded in the CMO YAML): 536 high; 197 medium; 7 low
+- Pathways extracted: 22
+
+# Synthesis By Outcome Family
+
+Outcome families are used here as a stable, cross-document way to group pathway tendencies while keeping traceability to the underlying CMO evidence.
+
+## Alliance Security Outcomes
+
+- **Outcome family description**: Interoperability, standardization, readiness/sustainment, security of supply, deterrence, and other alliance/security effects.
+
+### Pathway: Sustainment competence as readiness/autonomy
+
+- **C-M-O**: Dependency and sustainment risk (especially for imported systems) -> direct offsets/IP targeted to maintenance/modification/upgrade work and training -> greater in-country sustainment competence and autonomy, improving readiness/security-of-supply tendencies. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Moderators**: Export-control/technology-release constraints and domestic capability/scale condition how far autonomy pathways can extend beyond basic maintenance. [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Counterclaims**: Interoperability/readiness benefits can be achieved via alternative alliance integration approaches (e.g., joint development/partnering) rather than offsets per se. [@chinworthOffsetPoliciesTrends2004]
+- **Alliance relevance**: Directly links participation design to alliance-relevant outputs (interoperability readiness, sustainment resilience, and security-of-supply). [@skonsEvaluatingDefenseOffsets2004; @markowskiDefenseIndustryPoland2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs describe sustainment and autonomy mechanisms as alliance-relevant outcomes, but the durability of effects depends on technology-release and absorption conditions. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseIndustryPoland2004]
+
+**Relevant quotes**
+- "The main objective of direct military offsets is to support domestic maintenance and modification" [@skonsEvaluatingDefenseOffsets2004]
+- "ensure Brazilian autonomy in the operation, maintenance, and technological evolution" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "the prospect of joining NATO meant that the PAF would have to become interoperable with other alliance members" [@markowskiDefenseIndustryPoland2004]
+
+:::
+
+### Pathway: Technology transfer and leakage/proliferation risk
+
+- **C-M-O**: Sensitive technology sharing and licensed production associated with offsets -> expanded pathways for diversion/leakage -> heightened conventional-weapons proliferation and security risk tendencies. [@markusenArmsTradeIlliberal]
+- **Moderators**: Where security evaluation is not integrated with economic imperatives, risk management weakens; multilateral constraints face feasibility and enforceability limits. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+- **Counterclaims**: Alliance-level codes of conduct can be proposed as governance responses, but may have limited practical effect when commitments are weak. [@udisUSOffsetPolicy1996]
+- **Alliance relevance**: Maps collaboration depth (technology sharing) to alliance security externalities (proliferation, trust, and control over critical technologies). [@markusenArmsTradeIlliberal]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: The pathway is conceptually explicit and mapped to alliance/security outcomes, but the number of CMOs directly addressing leakage and alliance constraint-setting is smaller than for performance/governance pathways. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+
+**Relevant quotes**
+- "To the extent that offsets multiply the possibilities for leakage" [@markusenArmsTradeIlliberal]
+- "the Code of Conduct will achieve little" [@udisUSOffsetPolicy1996]
+
+:::
+
+## Partnerships and Supply Chains
+
+- **Outcome family description**: Joint ventures, co-production/co-development, supplier-network integration, and durable industrial linkages.
+
+### Pathway: Joint development/co-production creates deeper embedding
+
+- **C-M-O**: Desire for durable industrial linkages and capability building -> joint development/production with defined work tasks -> deeper, more structured collaboration and supply-chain embedding tendencies. [@martinIntroductionOverview1996]
+- **Moderators**: Depth depends on whether work is defined ex ante and tied to system life-cycle needs (vs. credit-clearing), and on domestic partner capability. [@martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Where designs prioritize indirect obligations or general investment, partnership depth may be a secondary objective relative to political/financial aims. [@redlichBusinessOffsetPractitioners1996]
+- **Alliance relevance**: Deeper, durable supply-chain embedding supports long-run interoperability/sustainment relationships and reduces single-source dependence. [@skonsEvaluatingDefenseOffsets2004; @martinIntroductionOverview1996]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Partnership-depth pathways are recurrent but less densely evidenced than governance/performance; the corpus shows both “deep” collaboration designs and “shallow” credit-clearing forms. [@martinIntroductionOverview1996; @udisUSSwissF51996; @martinConcludingRemarks1996]
+
+**Relevant quotes**
+- "joint development and production allows the tasks that Spanish industry will undertake to be defined in advance" [@martinIntroductionOverview1996]
+
+:::
+
+### Pathway: Permissive fulfillment yields shallow partnerships
+
+- **C-M-O**: Permissive counting rules and flexibility in fulfillment -> suppliers discharge obligations via intra-firm transfers or pre-existing business -> compliance without substantial new supply-chain embedding (shallow partnership) tendencies. [@udisUSSwissF51996; @martinConcludingRemarks1996]
+- **Moderators**: Where authorities impose proof-of-causality and stricter additionality criteria, shallow fulfillment becomes harder. [@redlichBusinessOffsetPractitioners1996; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Even shallow fulfillment can be politically acceptable if the primary objective is procurement acceptance or macro benefits rather than deep industrial integration. [@dumasOffsetsMitigateMagnify; @struysOffsetsWeaponsProcurement1996]
+- **Alliance relevance**: Shallow partnerships provide less durable interoperability/sustainment linkage and can increase long-run risk of dependence and fragile workshare. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Fewer CMOs map directly to supply-chain outcomes; those that do consistently distinguish between “paper” fulfillment and genuinely embedding relationships. [@udisUSSwissF51996; @martinConcludingRemarks1996; @redlichBusinessOffsetPractitioners1996]
+
+**Relevant quotes**
+- "Thus GE was able to meet almost all of its offset commitments within the parent corporation." [@udisUSSwissF51996]
+- "merely reflected existing business relations." [@martinConcludingRemarks1996]
+- "requirements for proof of causality" [@redlichBusinessOffsetPractitioners1996]
+
+:::
+
+## Industrial Capability and Base
+
+- **Outcome family description**: Defense-industrial capacity, self-reliance, sector growth/decline, and shifts in the domestic defense-industrial base.
+
+### Pathway: Participation requirements “compensate” the industrial base
+
+- **C-M-O**: Political/strategic desire to sustain domestic capacity amid import dependence -> mandatory direct/indirect offsets and local participation requirements -> domestic activity intended to compensate and support the industrial base. [@martinIntroductionOverview1996]
+- **Moderators**: Outcomes depend on commercial viability (scale, competitiveness) and on whether participation builds durable capability rather than temporary work. [@molas-gallartOffsetsIndustrialCooperation1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: High local content targets can force inefficient subcontracting and create performance premia, undermining net benefits and encouraging rollback. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004]
+- **Alliance relevance**: A stronger domestic base can support security-of-supply and sustainment resilience, but only if capability is durable and not purely symbolic. [@skonsEvaluatingDefenseOffsets2004; @martinIntroductionOverview1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs articulate the industrial-base logic and also specify binding feasibility constraints (cost, competitiveness), yielding conditional and context-sensitive outcomes. [@martinIntroductionOverview1996; @molas-gallartOffsetsIndustrialCooperation1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+
+**Relevant quotes**
+- "Direct and indirect offsets offered the opportunity to buy the aircraft required and at the same time to compensate the defence industrial base" [@martinIntroductionOverview1996]
+- "Although local assembly was finally ruled out because of the excessive expense involved" [@molas-gallartOffsetsIndustrialCooperation1996]
+
+:::
+
+### Pathway: Short-run assembly without durability
+
+- **C-M-O**: Offset packages focused on immediate assembly/work placement without sustained demand -> learning and capacity not sustained -> post-program closure and limited durable base effects. [@matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Durability is more likely when work is anchored in through-life sustainment, exports, or repeated production runs; otherwise, scale and demand constraints dominate. [@matthewsDefenseOffsetsPolicy2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Even temporary work can serve short-run political objectives, though it provides weaker industrial-base resilience. [@dumasOffsetsMitigateMagnify; @struysOffsetsWeaponsProcurement1996]
+- **Alliance relevance**: Short-lived capacity provides less reliable allied sustainment contribution and can worsen long-run dependency risk after “showcase” periods end. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The “temporary assembly” limitation is explicitly stated and recurs as a boundary condition on industrialization pathways. [@matthewsDefenseOffsetsPolicy2004; @molas-gallartOffsetsIndustrialCooperation1996]
+
+**Relevant quotes**
+- "as soon as they were completed, the assembly line and the factory were closed" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+## Technology Transfer and Learning
+
+- **Outcome family description**: Transfer depth/quality, licensing/know-how, skills, absorptive capacity, and learning-by-doing (including constraints on transfer).
+
+### Pathway: Absorptive capacity enables durable learning
+
+- **C-M-O**: Presence of skilled workforce, institutional capability, and complementary industrial base -> technology transfer can be effectively absorbed -> deeper, more durable learning-by-doing tendencies. [@matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Where transfer is restricted (black-boxing/IP constraints) or where domestic capabilities are thin, learning depth and persistence are limited even under ambitious designs. [@matthewsDefenseOffsetsPolicy2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Counterclaims**: Some designs seek broader economic activity (indirect offsets) rather than deep defense-technology transfer, implying “learning depth” is not always the target outcome. [@redlichBusinessOffsetPractitioners1996]
+- **Alliance relevance**: Durable learning supports sustainment reliability and interoperability contribution (through improved in-country competence), reinforcing alliance readiness. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The absorptive-capacity condition is repeatedly stated as a necessary enabling context for durable technology outcomes, but measured outcomes are heterogeneous across settings. [@matthewsDefenseOffsetsPolicy2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+**Relevant quotes**
+- "it is fundamental that the technology is effectively absorbed" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+### Pathway: Credit inflation and low additionality yields shallow learning
+
+- **C-M-O**: Complex credit rules (multipliers) and weak additionality criteria -> nominal compliance can be achieved via re-labelling or inflated credit -> shallow learning/technology transfer tendencies relative to headline “offset value.” [@markowskiDefenceOffsetsPolicy1996; @fergussonSearchStrategyEvolution1996]
+- **Moderators**: Tighter proof-of-causality and criteria for what counts reduce this risk; otherwise, evaluation ambiguity sustains optimistic claims. [@redlichBusinessOffsetPractitioners1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where capability is genuinely competitive or where transfer is anchored in real production/sustainment needs, learning may be deeper than the “paper compliance” critique suggests. [@matthewsDefenseOffsetsPolicy2004; @skonsEvaluatingDefenseOffsets2004]
+- **Alliance relevance**: Shallow learning reduces the reliability of sustainment/autonomy pathways and can create false confidence about allied industrial contribution. [@skonsEvaluatingDefenseOffsets2004; @matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs directly describe additionality and credit-inflation problems and link them to weaker substantive technology gains, though evidence is not uniformly quantified. [@fergussonSearchStrategyEvolution1996; @markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "57% consisted of work which would have been done in Canada regardless" [@fergussonSearchStrategyEvolution1996]
+- "credited at three times their nominal value" [@markowskiDefenceOffsetsPolicy1996]
+- "American offset-related technology in 85 percent of the cases was over 10 years old" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+## Governance, Compliance and Evaluation
+
+- **Outcome family description**: Monitoring, fulfilment, enforceability, credit accounting, transparency, disputes, auditing, and evaluability/evaluation quality.
+
+### Pathway: Enforcement-lite regimes increase non-fulfilment risk
+
+- **C-M-O**: Weak legal enforceability and reliance on reputational pressure -> suppliers can accept obligations and later drift/default -> non-fulfilment and reduced predictability of delivered value tendencies. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Repeat-business dependence and buyer market power can partially substitute for formal penalties; conversely, one-off deals and low transparency increase drift risk. [@matthewsDefenseOffsetsPolicy2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where contracts specify liquidated damages or other remedies, compliance incentives tighten (at the cost of higher administrative/legal overhead). [@markowskiDefenceOffsetsPolicy1996; @udisUSSwissF51996]
+- **Alliance relevance**: Governance designs determine whether collaboration promises translate into auditable capabilities that can be relied upon for allied readiness and sustainment. [@skonsEvaluatingDefenseOffsets2004; @markowskiDefenceOffsetsPolicy1996]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple high-confidence CMOs repeatedly contrast enforcement-lite designs with stronger contractual remedies, with consistent implications for predictability and compliance risk. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @udisUSSwissF51996]
+
+**Relevant quotes**
+- "no legal mechanism to enforce compliance" [@markowskiDefenceOffsetsPolicy1996]
+- "The sole penalty is that consideration of future bids" [@matthewsDefenseOffsetsPolicy2004]
+- "compensation for non-performance of the agreed offsets programs by means of pre-agreed Liquidated Damages" [@markowskiDefenceOffsetsPolicy1996]
+
+:::
+
+### Pathway: Banking and multipliers reduce transparency
+
+- **C-M-O**: Permission to bank credits and use multipliers -> intertemporal credit-clearing across projects -> reduced transparency and auditability for any single procurement’s claimed benefits. [@martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Stronger reporting, proof-of-causality, and constraints on banking can improve evaluability; otherwise, complexity increases administrative burden and disputes. [@redlichBusinessOffsetPractitioners1996; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Banking can allow longer-horizon industrial cooperation planning when governance is strong, potentially enabling deeper projects rather than short-term “check-the-box” delivery. [@matthewsDefenseOffsetsPolicy2004]
+- **Alliance relevance**: Reduced transparency increases alliance risk when offset-linked capabilities are assumed for readiness/security-of-supply but are not verifiable. [@skonsEvaluatingDefenseOffsets2004; @matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The corpus repeatedly flags banking and multiplier logic as increasing complexity and reducing case-level traceability, though governance responses vary. [@martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996]
+
+**Relevant quotes**
+- "such purchases could be banked as offset credit." [@martinIntroductionOverview1996]
+- "countries allow vendor companies to bank offset credits" [@matthewsDefenseOffsetsPolicy2004]
+- "normally imposes offset multipliers on the vendor" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+### Pathway: Mixed objectives create evaluation ambiguity
+
+- **C-M-O**: Multiple heterogeneous objectives and unclear incidence of benefits -> evaluation criteria are hard to specify -> measurement and adjudication of “net benefits” remains ambiguous, enabling rhetoric to outpace verified results. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Clear ex ante objectives, operational definitions of additionality, and access to data/audit rights can reduce ambiguity. [@markowskiDefenceOffsetsPolicy1996; @redlichBusinessOffsetPractitioners1996]
+- **Counterclaims**: Where objectives are narrow and operational (e.g., sustainment competence), evaluation can be more tractable than for broad macro-development claims. [@skonsEvaluatingDefenseOffsets2004; @taylorUsingProcurementOffsets2004]
+- **Alliance relevance**: Evaluation ambiguity matters because alliance-relevant claims (readiness/security-of-supply) require credible evidence to support planning and interoperability assumptions. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple CMOs explicitly identify unclear objectives and limited empirical data as recurring constraints on evaluability and accountability. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "Lack of clarity as to what is to be achieved by their use is a key problem in evaluation exercises." [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- "empirical data are difficult to come by" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+## Procurement Performance
+
+- **Outcome family description**: Cost/price premia, delays, administrative burden, restricted options, and other value-for-money/efficiency impacts.
+
+### Pathway: Local content mandates generate premia and delay risk
+
+- **C-M-O**: Mandatory local content and fixed-percentage schemes -> forced inclusion of less efficient domestic subcontractors and constrained sourcing -> higher costs/premia and delivery risks. [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Moderators**: When domestic suppliers are genuinely competitive, premia may be limited; otherwise, the buyer bears cost pass-through and schedule friction. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: If the policy objective is to safeguard a hazardous exchange, direct offsets tied to the procured system are argued to be more coherent than diffuse mandates. [@taylorUsingProcurementOffsets2004]
+- **Alliance relevance**: Cost/delay risks can transmit into readiness and alliance contribution when delivery schedules slip or resources are diverted from capability. [@skonsEvaluatingDefenseOffsets2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs describe premia and incidence mechanisms, but the magnitude varies by programme and domestic capability. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "substantial premiums will need to be paid to attract high-cost (less efficient) domestic subcontractors" [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- "the vendor is almost certain to factor expected offset demands into its offer price for product a" [@markowskiMandatoryDefenseOffsetsconceptual2004]
+
+:::
+
+### Pathway: Administrative burden slows procurement
+
+- **C-M-O**: Complex offset obligations and governance requirements -> higher administrative burden and process friction -> slower procurement and higher transaction costs. [@markowskiDefenceOffsetsPolicy1996; @al-ghrairSaudiArabiaOffsets1996]
+- **Moderators**: Clear criteria and streamlined designs (fewer, specified work packages) can reduce burden; banking/multipliers can increase it. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Some administrative cost is accepted as the price of achieving non-commercial objectives (industrial base, political acceptance), implying trade-offs rather than “failure.” [@struysOffsetsWeaponsProcurement1996; @dumasOffsetsMitigateMagnify]
+- **Alliance relevance**: Slower procurement can degrade readiness timelines; conversely, effective governance can reduce longer-run sustainment risk if it delivers real capacity. [@skonsEvaluatingDefenseOffsets2004; @markowskiDefenceOffsetsPolicy1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The pathway is consistently described across multiple settings as an administrative/transaction-cost wedge, but severity is context-dependent. [@markowskiDefenceOffsetsPolicy1996; @al-ghrairSaudiArabiaOffsets1996; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "administratively costly offsets obligations" [@markowskiDefenceOffsetsPolicy1996]
+- "the offset requirement has slowed the already laborious procurement process" [@al-ghrairSaudiArabiaOffsets1996]
+
+:::
+
+## Procurement Politics and Decision
+
+- **Outcome family description**: Deal approval dynamics, supplier selection, political acceptance/legitimation, and procurement likelihood (distinct from cost/schedule performance).
+
+### Pathway: Offsets increase political acceptability and procurement likelihood
+
+- **C-M-O**: Political resistance to costly procurement -> offsets framed as compensating benefits -> increased public/elite acceptance and higher procurement likelihood tendencies. [@dumasOffsetsMitigateMagnify; @matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Where evaluation is ambiguous and transparency is weak, persuasive promises can dominate; stricter rules and evidence requirements can limit rhetorical overreach. [@markowskiMandatoryDefenseOffsetsconceptual2004; @redlichBusinessOffsetPractitioners1996]
+- **Counterclaims**: Some norms argue offsets should not influence the decision to buy (only supplier choice), implying bounded legitimacy of the pathway. [@dumasOffsetsMitigateMagnify]
+- **Alliance relevance**: Political acceptability shapes procurement timing and coalition support for alliance-relevant capabilities, but also risks prioritizing “offset optics” over interoperability/readiness. [@markowskiDefenseIndustryPoland2004; @skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs explicitly describe offsets as persuasive devices in decision politics; the pathway is recurrent, though value judgments differ. [@dumasOffsetsMitigateMagnify; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "cost offsets are a marketing tool, a way of building enthusiasm for or overcoming resistance" [@dumasOffsetsMitigateMagnify]
+- "hyperbole of politicians seeking to persuade skeptical public opinion" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+### Pathway: Competition escalation increases selection and delivery risk
+
+- **C-M-O**: Competitive tendering with offset expectations -> bidders escalate commitments to win -> spiralling obligations and higher risk of overpromising and later non-fulfilment. [@redlichBusinessOffsetPractitioners1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Moderators**: Strong enforceability and proof-of-causality can constrain overpromising; permissive banking/crediting can mask escalation. [@markowskiDefenceOffsetsPolicy1996; @redlichBusinessOffsetPractitioners1996]
+- **Counterclaims**: Offsets can be framed as a legitimate differentiator when core offers are equivalent, if bounded by transparent rules. [@redlichBusinessOffsetPractitioners1996]
+- **Alliance relevance**: Escalation dynamics raise downstream procurement performance and governance risks that can undermine readiness and trust in collaboration commitments. [@matthewsDefenseOffsetsPolicy2004; @skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The corpus contains recurring descriptions of escalation/competition and related governance risk, though not always quantified. [@redlichBusinessOffsetPractitioners1996; @markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "Offsets offer companies a way to compete beyond the products themselves." [@redlichBusinessOffsetPractitioners1996]
+- "spiralling offset competition" [@redlichBusinessOffsetPractitioners1996]
+- "such contracts are difficult to enforce" [@markowskiMandatoryDefenseOffsetsconceptual2004]
+
+:::
+
+## Domestic Economic Benefits
+
+- **Outcome family description**: Jobs, investment, regional development, and other economic/development effects (including opportunity-cost framing).
+
+### Pathway: Offsets as a “less costly” alternative to indigenous production
+
+- **C-M-O**: Budget cuts and unemployment pressure -> offsets/industrial participation used to generate domestic work without full indigenous development -> some domestic employment/industrial activity alongside continued imports. [@martinIntroductionOverview1996]
+- **Moderators**: Where obligations are indirect and weakly audited, additionality risk rises; where designs are direct and specified, claims can be more evaluable (but narrower). [@martinIntroductionOverview1996; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Some settings interpret offsets as displacement rather than addition when a domestic procurement option exists. [@martinUKExperienceOffsets1996]
+- **Alliance relevance**: Political-economic acceptability can enable procurement of alliance-relevant systems, but may also distort priorities if economic claims dominate capability evaluation. [@markowskiDefenseIndustryPoland2004; @dumasOffsetsMitigateMagnify]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs directly state the unemployment/budget motivation for offset designs; the net benefit depends on design transparency and displacement counterfactuals. [@martinIntroductionOverview1996; @martinUKExperienceOffsets1996]
+
+**Relevant quotes**
+- "As defence budgets have been cut and unemployment has risen, purchasers have sought a less costly form of procurement." [@martinIntroductionOverview1996]
+
+:::
+
+### Pathway: Domestic benefits can trade off against military capability
+
+- **C-M-O**: Pursuit of domestic economic benefits through offsets -> resources and procurement choices shift toward economic compensation -> possible trade-offs against military capability/performance. [@martinIntroductionOverview1996]
+- **Moderators**: Governance capacity and clarity on objectives can limit harmful trade-offs; urgent supply or strict capability needs can also constrain economic add-ons. [@matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Where offsets are tightly aligned to sustainment competence, domestic activity can also support readiness outcomes rather than competing with them. [@skonsEvaluatingDefenseOffsets2004; @taylorUsingProcurementOffsets2004]
+- **Alliance relevance**: Trade-offs matter for alliance contribution when economic designs delay delivery or reduce capability quality; conversely, sustainment-linked designs can reinforce readiness. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: The trade-off is explicitly stated but is less systematically evidenced across many cases than governance/performance mechanisms. [@martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "offsets have served to improve Canada's technological capability and unemployment record but at the cost of its military capability." [@martinIntroductionOverview1996]
+
+:::
+
+## Trade Finance and Market Effects
+
+- **Outcome family description**: Exports/countertrade, trade balance/FX/financing constraints, market access/competitiveness, and related market-position effects.
+
+### Pathway: Countertrade reduces trade-balance/financing constraints
+
+- **C-M-O**: External financing constraints and trade-balance concerns -> countertrade/counterpurchase obligations -> reduced perceived uncertainty and greater feasibility of arms imports. [@martinCounterTradeOffsets1996]
+- **Moderators**: Additionality requirements (new activity) affect whether countertrade is substantive or re-labelled; weak verification increases evaluability risk. [@markowskiMandatoryDefenseOffsetsconceptual2004; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Some buyers later reduce or abandon maximalist targets (e.g., 100%) as feasibility and incidence constraints become salient. [@fergussonSearchStrategyEvolution1996]
+- **Alliance relevance**: Finance-enabled procurement can affect alliance capability acquisition, but the pathway often targets financial clearing more than durable collaboration depth. [@markowskiDefenseIndustryPoland2004; @martinCounterTradeOffsets1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The trade-balance logic is explicit and recurring, while “depth of collaboration” implications depend on design and evaluability. [@martinCounterTradeOffsets1996; @fergussonSearchStrategyEvolution1996]
+
+**Relevant quotes**
+- "reducing uncertainty associated with the trade balance" [@martinCounterTradeOffsets1996]
+- "rejection of the previous goal of seeking 100% offsets" [@fergussonSearchStrategyEvolution1996]
+
+:::
+
+### Pathway: Packaged finance/counterpurchase shapes market outcomes
+
+- **C-M-O**: Competitive export markets and buyer constraints -> vendors bundle finance and counterpurchase -> deal wins and trade/market effects beyond the base procurement. [@06offsetsandfrencharmsexports]
+- **Moderators**: Where payment in local currency or commodity-linked counterpurchase is used, the package shifts risk and can change supplier selection; weak transparency complicates evaluation. [@06offsetsandfrencharmsexports; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where buyers prioritize urgency of supply, finance/counterpurchase demands may be downweighted relative to delivery and security needs. [@matthewsDefenseOffsetsPolicy2004]
+- **Alliance relevance**: Market-based procurement shaping can change which systems are acquired and under what conditions, indirectly affecting interoperability and sustainment choices. [@markowskiDefenseIndustryPoland2004; @06offsetsandfrencharmsexports]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs directly state finance and counterpurchase as decisive; broader alliance-relevant effects depend on what is procured and how offset-linked work translates into capability. [@06offsetsandfrencharmsexports; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "counterpurchase raw materials for 50% of the contract value" [@06offsetsandfrencharmsexports]
+- "finance package proved decisive in winning the competition" [@06offsetsandfrencharmsexports]
+
+:::
+
+## Policy and Institutional Dynamics
+
+- **Outcome family description**: Adoption, persistence, termination, or redesign of offset regimes; durable institutional or regulatory shifts.
+
+### Pathway: Buyer leverage drives diffusion of offset demands
+
+- **C-M-O**: Buyer’s market conditions and purchaser leverage -> extracting concessions (offsets/IP) becomes feasible -> offsets re-emerge and spread as a policy tool. [@matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Where security urgency dominates, offset demands are minimized or rejected in favor of simpler/faster procurement. [@matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: In some settings, “voluntary” offset proposals are still expected, implying that formal policy status may understate practical institutional persistence. [@redlichBusinessOffsetPractitioners1996]
+- **Alliance relevance**: Policy diffusion shapes the baseline governance environment for alliance procurement cooperation and the predictability of industrial participation demands. [@matthewsDefenseOffsetsPolicy2004; @udisUSOffsetPolicy1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs explicitly describe leverage/market structure and urgency-of-supply as recurring drivers of regime insistence versus pragmatism. [@matthewsDefenseOffsetsPolicy2004; @redlichBusinessOffsetPractitioners1996]
+
+**Relevant quotes**
+- "This reversal of fortunes affords buying nations substantial leverage in extracting concessions" [@matthewsDefenseOffsetsPolicy2004]
+- "urgency of supply has historically held a higher priority over offset-induced defense industrialization" [@matthewsDefenseOffsetsPolicy2004]
+- "must present a substantial offset proposal on a \"voluntary\" basis." [@redlichBusinessOffsetPractitioners1996]
+
+:::
+
+### Pathway: Policy stress triggers redesign and retreat from maximalism
+
+- **C-M-O**: Escalating obligations and feasibility/evaluability stress -> policy stress and non-fulfilment -> institutional redesign toward more pragmatic, specified, or reduced targets. [@markowskiDefenceOffsetsPolicy1996; @fergussonSearchStrategyEvolution1996; @matthewsDefenseOffsetsPolicy2004]
+- **Moderators**: Stronger enforcement instruments can tighten compliance, but may increase administrative burden; weak enforcement sustains overpromising risk. [@markowskiDefenceOffsetsPolicy1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where objectives are narrow (e.g., direct sustainment competence), stringent designs may be more sustainable than for broad macro-development offsets. [@taylorUsingProcurementOffsets2004; @skonsEvaluatingDefenseOffsets2004]
+- **Alliance relevance**: Regime redesign affects whether offset-linked collaboration produces dependable capability contributions or persistent compliance/evaluation risk that undermines alliance planning. [@skonsEvaluatingDefenseOffsets2004; @markowskiDefenceOffsetsPolicy1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs describe shifts away from maximalist targets and stress-related non-fulfilment, but pathways and endpoints vary across countries. [@fergussonSearchStrategyEvolution1996; @matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996]
+
+**Relevant quotes**
+- "rejection of the previous goal of seeking 100% offsets" [@fergussonSearchStrategyEvolution1996]
+- "this has led to policy stress and the non-fulfillment of vendor offset commitments" [@matthewsDefenseOffsetsPolicy2004]
+
+:::
+
+## Other / Unclear
+
+- **Outcome family description**: Use only when none of the above fit; explain what is unclear.
+
+### Pathway: Domestic option changes the counterfactual (displacement risk)
+
+- **C-M-O**: Presence of a credible domestic procurement alternative -> importing with offsets is treated as substituting for domestic production -> offsets perceived as displacement rather than additionality. [@martinUKExperienceOffsets1996]
+- **Moderators**: The stronger the domestic alternative, the more likely offsets are framed as harmful to domestic industry (and therefore politically contested). [@martinUKExperienceOffsets1996]
+- **Counterclaims**: Where domestic alternatives are absent, offsets may be framed as comparatively more additive (even if imperfect), changing the political economy. [@martinIntroductionOverview1996]
+- **Alliance relevance**: Displacement framing affects whether offset designs are politically sustainable in allied settings and whether industrial participation is seen as supporting or undermining alliance-relevant capability generation. [@martinUKExperienceOffsets1996; @skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Only one CMO is mapped to this family; it highlights an important counterfactual structure but does not establish frequency across settings. [@martinUKExperienceOffsets1996]
+
+**Relevant quotes**
+- "the choice is either the domestic option or an import with offset." [@martinUKExperienceOffsets1996]
+
+:::
+
+# Cross-Family Synthesis
+
+### Key Enabling Contexts (Repeated)
+
+- **Clear, operational objectives**: Pathways are easiest to summarize (and evaluate) when objectives are narrow and operational (e.g., sustainment competence) rather than heterogeneous macro-development claims. [@skonsEvaluatingDefenseOffsets2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Governance capacity and enforceability**: Credible enforcement (contractual remedies or strong repeat-business leverage) and audit access repeatedly appear as enabling contexts for turning “promised” offsets into delivered, alliance-relevant capability. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004]
+- **Absorptive capacity**: Skilled labor, institutions, and complementary industrial bases are enabling contexts for technology-transfer pathways to produce durable learning rather than short-lived assembly. [@matthewsDefenseOffsetsPolicy2004]
+
+### Main Boundary Conditions / Failure Points
+
+- **Evaluation ambiguity and weak transparency**: Mixed objectives, limited data, and complex crediting (banking/multipliers) make pathway outcomes hard to verify, allowing rhetoric and “paper compliance” to dominate. [@markowskiMandatoryDefenseOffsetsconceptual2004; @martinIntroductionOverview1996; @matthewsDefenseOffsetsPolicy2004]
+- **Scale/competitiveness constraints**: When domestic suppliers are not competitive or demand is too small, mandatory participation/local production tends to create premia, delays, and eventual rollback or closure. [@markowskiMandatoryDefenseOffsetsconceptual2004; @molas-gallartOffsetsIndustrialCooperation1996]
+- **Security externalities**: Technology-sharing pathways can raise leakage/proliferation risk when security evaluation is not integrated and multilateral controls are weak. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+
+### Implications for RQ4 (Conditional)
+
+Across families, the most communicable pathway summaries take the form of conditional propositions:
+
+- **If** the context includes clear objectives, enforceability, auditability, and absorptive capacity, **then** direct, program-linked designs are more likely to produce deeper collaboration and alliance-relevant readiness/sustainment outcomes.
+- **If** the context includes weak enforceability, complex credit rules, and heterogeneous objectives, **then** pathways tend to shift toward shallow, hard-to-verify compliance with higher risk of non-fulfilment and politicized over-claiming.
+
+This suggests that pathway summaries should explicitly state (i) the enabling/limiting conditions (governance capacity, market power, absorptive capacity, security constraints), and (ii) how the outcome tendency maps onto alliance-relevant outcomes (readiness/sustainment, interoperability, security-of-supply, partnership durability), rather than presenting offsets as uniformly beneficial or harmful. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @skonsEvaluatingDefenseOffsets2004; @markusenArmsTradeIlliberal]
+
+# Evidence Audit
+
+- CMOs reviewed: 740
+- Outcome families represented: alliance_security_outcomes, partnerships_and_supply_chains, industrial_capability_and_base, technology_transfer_and_learning, governance_compliance_and_evaluation, procurement_performance, procurement_politics_and_decision, domestic_economic_benefits, trade_finance_and_market_effects, policy_and_institutional_dynamics, other_unclear
+- Pathways extracted: 22
+- Missing citation mappings: none (all referenced PDFs are mapped to BibTeX keys in `data/cmo/pdf_to_bibtex_key.yml`)
+
+# References
+
+- [@06offsetsandfrencharmsexports]
+- [@al-ghrairSaudiArabiaOffsets1996]
+- [@chinworthOffsetPoliciesTrends2004]
+- [@dumasOffsetsMitigateMagnify]
+- [@fergussonSearchStrategyEvolution1996]
+- [@markowskiDefenceOffsetsPolicy1996]
+- [@markowskiDefenseIndustryPoland2004]
+- [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- [@markusenArmsTradeIlliberal]
+- [@martinConcludingRemarks1996]
+- [@martinCounterTradeOffsets1996]
+- [@martinIntroductionOverview1996]
+- [@martinUKExperienceOffsets1996]
+- [@matthewsDefenseOffsetsPolicy2004]
+- [@molas-gallartOffsetsIndustrialCooperation1996]
+- [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- [@redlichBusinessOffsetPractitioners1996]
+- [@skonsEvaluatingDefenseOffsets2004]
+- [@struysOffsetsWeaponsProcurement1996]
+- [@taylorUsingProcurementOffsets2004]
+- [@udisUSOffsetPolicy1996]
+- [@udisUSSwissF51996]
+
+::: {#refs}
+:::

@@ -1,0 +1,531 @@
+---
+title: "RQ5 Synthesis (Realist Evidence Synthesis)"
+format: html
+freeze: false
+bibliography: ../references/offsets.bib
+---
+
+# Question
+
+What recurrent pathways can be mapped across countries to explain positive, negative, or mixed outcomes?
+
+# Evidence Used
+
+This synthesis draws on country-coded CMOs where possible (`country != unknown_country`), using multi-country syntheses when they clarify cross-country pathway recurrence.
+
+- CMOs reviewed: 740
+- Countries represented: Argentina, Australia, Belgium, Brazil, Canada, Finland, France, Germany, Greece, India, Indonesia, Israel, Japan, multi-country, Netherlands, New Zealand, Norway, Philippines, Poland, Saudi Arabia, Singapore, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, United Kingdom, United States
+- Outcome families represented: 11
+- Confidence profile (as recorded in the CMO YAML): 536 high; 197 medium; 7 low
+- Recurrent pathways extracted: 17 (plus 1 single-country “Other / Unclear” pattern)
+- Pathways classified as positive/negative/mixed: 2 positive; 9 negative; 6 mixed
+
+# Synthesis By Outcome Family
+
+Outcome families are used here as a stable, cross-document way to group outcome tendencies while keeping traceability to the underlying CMO evidence.
+
+## Alliance Security Outcomes
+
+- **Outcome family description**: Interoperability, standardization, readiness/sustainment, security of supply, deterrence, and other alliance/security effects.
+
+### Recurrent Pathway: Sustainment competence and operational autonomy (direct offsets)
+
+- **Pathway**: Import dependence and sustainment vulnerability -> direct offsets/industrial participation targeted to maintenance/modification/upgrade work and associated know-how -> greater in-country sustainment competence/autonomy, improving readiness and security-of-supply tendencies. [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+- **Cross-country pattern**: Finland/Sweden (maintenance/modification focus), Brazil (autonomy language), and NATO-accession contexts where interoperability pressures shape modernization and sustainment choices (e.g., Poland). [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseIndustryPoland2004]
+- **Polarity**: positive
+- **Moderators**: Export-control/technology-release constraints and domestic absorptive capacity condition how far “autonomy” pathways extend beyond basic MRO competence. [@perlo-freemanOffsetsDevelopmentBrazilian2004; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Interoperability/readiness benefits can be achieved via alternative integration pathways (partnering/joint development/risk sharing) without traditional offsets. [@chinworthOffsetPoliciesTrends2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence country-coded CMOs converge on sustainment competence and autonomy framing as alliance-relevant outcomes, but they also flag binding constraints (technology release, absorption, scale). [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenseIndustryPoland2004]
+
+**Relevant quotes**
+- "The main objective of direct military offsets is to support domestic maintenance and modification" [@skonsEvaluatingDefenseOffsets2004]
+- "ensure Brazilian autonomy in the operation, maintenance, and technological evolution" [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- "the prospect of joining NATO meant that the PAF would have to become interoperable with other alliance members" [@markowskiDefenseIndustryPoland2004]
+
+:::
+
+### Recurrent Pathway: Technology transfer expands leakage/proliferation risk
+
+- **Pathway**: Offset-linked licensed production/technology sharing -> additional channels for diversion/leakage -> increased proliferation and long-run security risk tendencies. [@markusenArmsTradeIlliberal]
+- **Cross-country pattern**: Treated as a cross-country/security-externalities dynamic in multi-country syntheses, with constraints on alliance-wide restraint (e.g., NATO code-of-conduct limitations). [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+- **Polarity**: negative
+- **Moderators**: The degree of integration between security evaluation and economic imperatives; and the feasibility/enforceability of multilateral restraint regimes. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+- **Counterclaims**: Governance responses (codes of conduct) can be proposed, but may have limited impact when politically constrained or weakly binding. [@udisUSOffsetPolicy1996]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: The security-risk mechanism is clearly articulated and alliance-relevant, but fewer CMOs map directly to this family than to performance/governance mechanisms. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+
+**Relevant quotes**
+- "To the extent that offsets multiply the possibilities for leakage" [@markusenArmsTradeIlliberal]
+- "the Code of Conduct will achieve little" [@udisUSOffsetPolicy1996]
+
+:::
+
+## Partnerships and Supply Chains
+
+- **Outcome family description**: Joint ventures, co-production/co-development, supplier-network integration, and durable industrial linkages.
+
+### Recurrent Pathway: Pre-defined workshare and joint production deepen partnerships
+
+- **Pathway**: Buyer demand for durable industrial linkages -> joint development/production with tasks defined in advance -> deeper, more structured collaboration and supply-chain embedding tendencies. [@martinIntroductionOverview1996; @chinworthOffsetPoliciesTrends2004]
+- **Cross-country pattern**: Spain’s shift toward industrial cooperation/joint production is used as an illustrative case; comparable logic is discussed in multi-country syntheses that contrast post-production “offsets” with pre-production sharing/workshare models. [@martinIntroductionOverview1996; @chinworthOffsetPoliciesTrends2004]
+- **Polarity**: positive
+- **Moderators**: Partnership depth increases when work is tied to through-life support and capability accumulation (not just credit clearing), and when domestic firms can meet quality/scale thresholds. [@matthewsDefenseOffsetsPolicy2004; @skonsEvaluatingDefenseOffsets2004]
+- **Counterclaims**: Where prime-led competitive supply chains dominate (e.g., “best value” global sourcing), offset-style workshare can be constrained or substituted by competitive subcontracting. [@markowskiDefenseOffsetsAustralia2004; @chinworthOffsetPoliciesTrends2004]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Multiple sources discuss the mechanism, but fewer CMOs are mapped directly to partnerships/supply chains than to governance/performance families; evidence is more design-logic and case-illustrative than systematically measured. [@martinIntroductionOverview1996; @chinworthOffsetPoliciesTrends2004]
+
+**Relevant quotes**
+- "joint development and production allows the tasks that Spanish industry will undertake to be defined in advance" [@martinIntroductionOverview1996]
+- "The new model replaces post-production offsets with pre-production sharing agreements." [@chinworthOffsetPoliciesTrends2004]
+
+:::
+
+### Recurrent Pathway: Fragmented or permissive fulfillment yields shallow embedding
+
+- **Pathway**: Permissive counting rules and/or fragmented offset offerings -> obligations discharged through intra-firm transfers, pre-existing business, or poorly integrated packages -> shallow partnership outcomes and weak supply-chain integration tendencies. [@udisUSSwissF51996; @martinConcludingRemarks1996; @hainesDefenseOffsetsRegional2004]
+- **Cross-country pattern**: Switzerland (intra-firm fulfillment), multi-country commentary on “existing relations,” and South Africa evidence of poor integration of diverse offerings. [@udisUSSwissF51996; @martinConcludingRemarks1996; @hainesDefenseOffsetsRegional2004]
+- **Polarity**: negative
+- **Moderators**: Stronger proof-of-causality/additionality criteria and packaging around fewer, specified work packages can reduce shallow-fulfillment risk. [@redlichBusinessOffsetPractitioners1996; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Even shallow fulfillment can be judged adequate when procurement politics or macro objectives dominate rather than long-run partnership depth. [@dumasOffsetsMitigateMagnify; @struysOffsetsWeaponsProcurement1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs describe shallow-fulfillment mechanisms and integration failures across different countries and program types. [@udisUSSwissF51996; @martinConcludingRemarks1996; @hainesDefenseOffsetsRegional2004]
+
+**Relevant quotes**
+- "Thus GE was able to meet almost all of its offset commitments within the parent corporation." [@udisUSSwissF51996]
+- "merely reflected existing business relations." [@martinConcludingRemarks1996]
+- "there is a lack of integration with the diverse offset offerings" [@hainesDefenseOffsetsRegional2004]
+
+:::
+
+## Industrial Capability and Base
+
+- **Outcome family description**: Defense-industrial capacity, self-reliance, sector growth/decline, and shifts in the domestic defense-industrial base.
+
+### Recurrent Pathway: From “all-purpose” industry to niche and supply-chain integration
+
+- **Pathway**: Recognition that an all-purpose national defense industry is not commercially supportable -> policy shifts toward niche competitiveness and selective integration -> offsets/IP used to generate orders and support niche positioning rather than full-spectrum industrial autonomy. [@dunneDefenceIndustrialParticipation2004]
+- **Cross-country pattern**: South Africa’s DIP experience (niche framing) aligns with broader multi-country synthesis emphasizing competitiveness and supply-chain positioning as binding constraints on “industrialization through offsets.” [@dunneDefenceIndustrialParticipation2004; @matthewsDefenseOffsetsPolicy2004]
+- **Polarity**: mixed
+- **Moderators**: Market access and scale (including export restrictions) condition whether niche integration is durable; without scale, participation can remain low-tech or short-lived. [@chinworthDefenseIndustrialisationOffsets1996; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Some countries pursue licensed production/local content primarily for autonomy aims, which can prioritize sovereignty over commercial viability. [@chinworthDefenseIndustrialisationOffsets1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The niche-versus-all-purpose distinction is explicitly stated in high-confidence country-coded evidence and coheres with wider cross-country constraints described in syntheses. [@dunneDefenceIndustrialParticipation2004; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "provide orders to domestic companies and opportunities for companies to develop niches in the international arms market." [@dunneDefenceIndustrialParticipation2004]
+- "Technology is power, providing the key to self-determination and autonomy." [@chinworthDefenseIndustrialisationOffsets1996]
+
+:::
+
+### Recurrent Pathway: Scale and cost constraints limit local assembly/production
+
+- **Pathway**: Small markets and high local production costs -> local assembly/production becomes unviable -> rollback to alternative cooperation forms or post-program closure, limiting durable industrial-base gains. [@molas-gallartOffsetsIndustrialCooperation1996; @matthewsDefenseOffsetsPolicy2004; @chinworthOffsetPoliciesTrends2004]
+- **Cross-country pattern**: Spain (local assembly ruled out), multi-country accounts of “assembly then closure,” and cases where domestic industry operates below efficient scale (e.g., South Korea capacity utilization). [@molas-gallartOffsetsIndustrialCooperation1996; @matthewsDefenseOffsetsPolicy2004; @chinworthOffsetPoliciesTrends2004]
+- **Polarity**: negative
+- **Moderators**: Sustained demand (exports or long-run through-life work) can counteract scale limits; absent demand, industrial-base effects are transient. [@matthewsDefenseOffsetsPolicy2004; @skonsEvaluatingDefenseOffsets2004]
+- **Counterclaims**: Some “industrial base” outcomes are pursued for strategic reasons even when cost-inefficient, implying negative economic assessments do not always drive policy reversal. [@chinworthDefenseIndustrialisationOffsets1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs across countries explicitly identify cost and scale as binding constraints that explain why industrial-base effects are often short-lived. [@molas-gallartOffsetsIndustrialCooperation1996; @matthewsDefenseOffsetsPolicy2004; @chinworthOffsetPoliciesTrends2004]
+
+**Relevant quotes**
+- "Although local assembly was finally ruled out because of the excessive expense involved" [@molas-gallartOffsetsIndustrialCooperation1996]
+- "as soon as they were completed, the assembly line and the factory were closed" [@matthewsDefenseOffsetsPolicy2004]
+- "operating at between 30 and 50 percent of total capacity" [@chinworthOffsetPoliciesTrends2004]
+
+:::
+
+## Technology Transfer and Learning
+
+- **Outcome family description**: Transfer depth/quality, licensing/know-how, skills, absorptive capacity, and learning-by-doing (including constraints on transfer).
+
+### Recurrent Pathway: Absorptive capacity enables durable learning (conditional)
+
+- **Pathway**: Skilled workforce, institutions, and complementary industrial base -> effective absorption of transferred know-how -> deeper, more durable learning-by-doing tendencies. [@matthewsDefenseOffsetsPolicy2004]
+- **Cross-country pattern**: Highlighted in multi-country syntheses and echoed in country cases where technology-release and domestic capability shape outcomes (e.g., Brazil, Japan). [@matthewsDefenseOffsetsPolicy2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @chinworthDefenseIndustrialisationOffsets1996]
+- **Polarity**: mixed
+- **Moderators**: Export controls/black-boxing and IP constraints limit learning depth even when formal transfer is promised; scale and sustained work are needed for persistence. [@chinworthDefenseIndustrialisationOffsets1996; @matthewsDefenseOffsetsPolicy2004]
+- **Counterclaims**: Some designs pursue indirect economic activity rather than deep defense-technology learning, implying “shallow learning” may be consistent with intent. [@redlichBusinessOffsetPractitioners1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: The absorptive-capacity condition is repeatedly stated as necessary, but cross-country outcomes vary with technology-release, scale, and institutional context. [@matthewsDefenseOffsetsPolicy2004; @chinworthDefenseIndustrialisationOffsets1996; @perlo-freemanOffsetsDevelopmentBrazilian2004]
+
+**Relevant quotes**
+- "it is fundamental that the technology is effectively absorbed" [@matthewsDefenseOffsetsPolicy2004]
+- "The US 'black-boxing' of F-15" [@chinworthDefenseIndustrialisationOffsets1996]
+
+:::
+
+### Recurrent Pathway: “Nominal” transfer (old tech, low additionality) limits learning
+
+- **Pathway**: Supplier risk management (older/limited scope technology) plus weak additionality/credit rules -> nominal compliance -> limited substantive learning and overstatement of technology-transfer success. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996; @markowskiDefenceOffsetsPolicy1996]
+- **Cross-country pattern**: Multi-country synthesis of “old tech” transfers; Canada evidence of low additionality; Australia evidence of credit inflation. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996; @markowskiDefenceOffsetsPolicy1996]
+- **Polarity**: negative
+- **Moderators**: Tight proof-of-causality and additionality criteria can reduce overstatement; otherwise, evaluation ambiguity persists. [@redlichBusinessOffsetPractitioners1996; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where transfer is anchored in real sustainment/production needs, outcomes can be more durable than the “paper transfer” critique suggests. [@skonsEvaluatingDefenseOffsets2004; @taylorUsingProcurementOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple high-confidence CMOs explicitly describe additionality and “old tech” constraints; net learning remains heterogeneous and often weakly measured. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996; @markowskiDefenceOffsetsPolicy1996]
+
+**Relevant quotes**
+- "American offset-related technology in 85 percent of the cases was over 10 years old" [@matthewsDefenseOffsetsPolicy2004]
+- "57% consisted of work which would have been done in Canada regardless" [@fergussonSearchStrategyEvolution1996]
+- "credited at three times their nominal value" [@markowskiDefenceOffsetsPolicy1996]
+
+:::
+
+## Governance, Compliance and Evaluation
+
+- **Outcome family description**: Monitoring, fulfilment, enforceability, credit accounting, transparency, disputes, auditing, and evaluability/evaluation quality.
+
+### Recurrent Pathway: Enforcement-lite governance increases non-fulfilment risk
+
+- **Pathway**: Weak enforceability (no sanctions or only reputational consequences) -> suppliers can drift/default or “buy out” obligations -> higher non-fulfilment and lower predictability of delivered value. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- **Cross-country pattern**: Australia (no legal mechanism/no sanctions), multi-country evidence that “future bids” is the main penalty, and South Africa evidence of reneging with penalties. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- **Polarity**: negative
+- **Moderators**: Repeat-business dependence and buyer market power can partially substitute for formal enforcement; one-off deals with low audit access elevate drift risk. [@matthewsDefenseOffsetsPolicy2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Stronger contractual remedies (e.g., liquidated damages) can tighten compliance incentives but also raise administrative/legal overhead and negotiation friction. [@markowskiDefenceOffsetsPolicy1996; @udisUSSwissF51996]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple high-confidence CMOs across countries converge on enforcement-lite designs as a core risk driver for compliance and auditability. [@markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+
+**Relevant quotes**
+- "no legal mechanism to enforce compliance" [@markowskiDefenceOffsetsPolicy1996]
+- "There are no sanctions in the event of non-compliance" [@markowskiDefenceOffsetsPolicy1996]
+- "The sole penalty is that consideration of future bids" [@matthewsDefenseOffsetsPolicy2004]
+- "There is also the possibility of firms reneging on contracts and simply paying agreed penalties." [@dunneDefenceIndustrialParticipation2004]
+
+:::
+
+### Recurrent Pathway: Banking/multipliers and mixed objectives reduce transparency
+
+- **Pathway**: Banking, multipliers, and heterogeneous objectives -> intertemporal credit clearing and complex accounting -> reduced transparency and difficulty assessing net benefits. [@martinIntroductionOverview1996; @hagelinNordicOffsetPolicies2004; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- **Cross-country pattern**: Nordic acceptance of banking rules; Australia and multi-country evidence of banking/multiplier logic; South Africa evidence that net benefits cannot be assessed. [@hagelinNordicOffsetPolicies2004; @markowskiDefenceOffsetsPolicy1996; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- **Polarity**: negative
+- **Moderators**: Proof-of-causality requirements and clear criteria can improve evaluability; absent these, complexity increases disputes and allows over-claiming. [@redlichBusinessOffsetPractitioners1996; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Banking can enable longer-horizon industrial cooperation planning where governance is strong and objectives are narrow enough to be audited. [@matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Across multiple countries and multi-country syntheses, banking/multiplier designs recur as mechanisms that increase complexity and reduce traceability, with consistent evaluability implications. [@hagelinNordicOffsetPolicies2004; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+
+**Relevant quotes**
+- "such purchases could be banked as offset credit." [@martinIntroductionOverview1996]
+- "All Nordic countries accept offset banking" [@hagelinNordicOffsetPolicies2004]
+- "countries allow vendor companies to bank offset credits" [@matthewsDefenseOffsetsPolicy2004]
+- "net benefits cannot be assessed." [@dunneDefenceIndustrialParticipation2004]
+
+:::
+
+## Procurement Performance
+
+- **Outcome family description**: Cost/price premia, delays, administrative burden, restricted options, and other value-for-money/efficiency impacts.
+
+### Recurrent Pathway: Mandatory participation creates premia and cost pass-through
+
+- **Pathway**: Mandatory local content/participation targets -> forced use of higher-cost domestic subcontractors and constrained options -> price premia and buyer-borne cost incidence. [@markowskiMandatoryDefenseOffsetsconceptual2004; @struysOffsetsWeaponsProcurement1996; @fergussonSearchStrategyEvolution1996]
+- **Cross-country pattern**: Multi-country conceptual accounts of premia and price factoring; Belgium evidence of additional costs borne by the MoD; Canada evidence that “price paid” was borne by the defence department. [@markowskiMandatoryDefenseOffsetsconceptual2004; @struysOffsetsWeaponsProcurement1996; @fergussonSearchStrategyEvolution1996]
+- **Polarity**: negative
+- **Moderators**: Premia are lower where domestic suppliers are genuinely competitive and where participation is tightly scoped to capability-relevant work (vs. diffuse “percentage chasing”). [@matthewsDefenseOffsetsPolicy2004; @taylorUsingProcurementOffsets2004]
+- **Counterclaims**: Some buyers adopt designs that treat direct offsets as preferable for safeguarding an exchange in hazardous settings, implying a design route to controlling performance risk. [@taylorUsingProcurementOffsets2004]
+- **Strength of evidence**: Strong.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **strong**
+- Why: Multiple high-confidence sources converge on cost pass-through/premia and constrained sourcing as recurrent consequences of mandatory participation designs. [@markowskiMandatoryDefenseOffsetsconceptual2004; @fergussonSearchStrategyEvolution1996; @struysOffsetsWeaponsProcurement1996]
+
+**Relevant quotes**
+- "substantial premiums will need to be paid to attract high-cost (less efficient) domestic subcontractors" [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- "the vendor is almost certain to factor expected offset demands into its offer price for product a" [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- "the burden of this additional cost is carried by the MoD alone" [@struysOffsetsWeaponsProcurement1996]
+- "price paid in many cases has been borne by DND" [@fergussonSearchStrategyEvolution1996]
+
+:::
+
+### Recurrent Pathway: Implementation and quality risks create delays and rework
+
+- **Pathway**: Offset-driven domestic content and complex implementation -> quality problems, rework, and schedule slippage -> delayed capability delivery and higher transaction costs. [@dunneDefenceIndustrialParticipation2004; @al-ghrairSaudiArabiaOffsets1996; @udisUSSwissF51996]
+- **Cross-country pattern**: South Africa (fault-related schedule slippage), Saudi Arabia (slower procurement), and multi-country accounts of early delays/disappointments in offset implementation. [@dunneDefenceIndustrialParticipation2004; @al-ghrairSaudiArabiaOffsets1996; @udisUSSwissF51996]
+- **Polarity**: negative
+- **Moderators**: Strong supplier qualification/quality assurance and realistic scoping (aligned to domestic capability) reduce schedule risk; overreach increases slippage. [@matthewsDefenseOffsetsPolicy2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Counterclaims**: Where participation is anchored in sustainment competence (rather than “new production”), some delays may be accepted as a readiness investment, but evidence remains conditional. [@skonsEvaluatingDefenseOffsets2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple country-coded CMOs describe delay/quality mechanisms, though effects vary by program governance and domestic capability. [@dunneDefenceIndustrialParticipation2004; @al-ghrairSaudiArabiaOffsets1996; @udisUSSwissF51996]
+
+**Relevant quotes**
+- "the corvette delivery schedule was set back by a year due to the installation of faulty copper communication cabling" [@dunneDefenceIndustrialParticipation2004]
+- "the offset requirement has slowed the already laborious procurement process" [@al-ghrairSaudiArabiaOffsets1996]
+- "a combination of inexperience and naivete contributed to the early delays and disappointments." [@udisUSSwissF51996]
+
+:::
+
+## Procurement Politics and Decision
+
+- **Outcome family description**: Deal approval dynamics, supplier selection, political acceptance/legitimation, and procurement likelihood (distinct from cost/schedule performance).
+
+### Recurrent Pathway: Offsets provide political cover and enable procurement
+
+- **Pathway**: Political resistance to procurement -> offsets framed as compensatory benefits -> increased acceptance/legitimacy and procurement likelihood tendencies. [@dumasOffsetsMitigateMagnify; @dunneDefenceIndustrialParticipation2004]
+- **Cross-country pattern**: Multi-country framing of offsets as persuasion/marketing; South Africa framing of offsets/DIP as justification to win public support; Canada evidence that competitions are “fought on offset packages.” [@dumasOffsetsMitigateMagnify; @dunneDefenceIndustrialParticipation2004; @fergussonSearchStrategyEvolution1996]
+- **Polarity**: mixed
+- **Moderators**: Where governance and evaluation are weak, persuasion can dominate; where offset valuation and compliance are transparent, political legitimation is more likely to align with delivered value. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Normative positions argue buyers should not expect offset benefits or should restrict offsets’ influence, limiting the legitimate scope of this pathway. [@hagelinNordicOffsetPolicies2004; @markowskiMandatoryDefenseOffsetsconceptual2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple sources explicitly describe offsets’ role in procurement politics; however, the link to substantive delivered benefits is often contested or difficult to verify. [@dumasOffsetsMitigateMagnify; @dunneDefenceIndustrialParticipation2004; @matthewsDefenseOffsetsPolicy2004]
+
+**Relevant quotes**
+- "cost offsets are a marketing tool, a way of building enthusiasm for or overcoming resistance" [@dumasOffsetsMitigateMagnify]
+- "offsets will give them political cover for what amounts to providing hidden subsidies to indigenous military industrial firms" [@dumasOffsetsMitigateMagnify]
+- "To justify its decision to purchase arms from foreign suppliers and to win public support" [@dunneDefenceIndustrialParticipation2004]
+- "fought on offset packages" [@fergussonSearchStrategyEvolution1996]
+
+:::
+
+### Recurrent Pathway: Offsets influence selection and can amplify integrity risk
+
+- **Pathway**: Offsets used as a differentiator/criterion in procurement decisions -> bargaining and domestic contestation over side deals -> heightened politicization and (in some contexts) bribery/corruption risk tendencies. [@chinworthOffsetPoliciesTrends2004; @dunneDefenceIndustrialParticipation2004]
+- **Cross-country pattern**: South Korea explicitly includes offsets as a criterion; South Africa evidence includes bribery allegations in tendering; multi-country evidence emphasizes offsets as a competitive tool. [@chinworthOffsetPoliciesTrends2004; @dunneDefenceIndustrialParticipation2004; @martinIntroductionOverview1996]
+- **Polarity**: negative
+- **Moderators**: Strong transparency/enforcement and clear rules on how offsets may influence selection can reduce integrity risk; otherwise, opacity and competition escalation amplify it. [@markowskiDefenceOffsetsPolicy1996; @redlichBusinessOffsetPractitioners1996]
+- **Counterclaims**: Practitioner accounts argue offsets can be a legitimate competitive dimension when bounded by clear rules and aligned projects. [@redlichBusinessOffsetPractitioners1996]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple country-coded CMOs point to decision influence and integrity risk, but direct evidence of corruption is necessarily case-specific and unevenly documented across the corpus. [@dunneDefenceIndustrialParticipation2004; @chinworthOffsetPoliciesTrends2004]
+
+**Relevant quotes**
+- "South Korea explicitly included offsets as a criterion for this competition" [@chinworthOffsetPoliciesTrends2004]
+- "received bribes from certain bidders." [@dunneDefenceIndustrialParticipation2004]
+- "offsets have become an important competitive tool in the armaments market" [@martinIntroductionOverview1996]
+
+:::
+
+## Domestic Economic Benefits
+
+- **Outcome family description**: Jobs, investment, regional development, and other economic/development effects (including opportunity-cost framing).
+
+### Recurrent Pathway: Economic “benefits” often concentrate and can be costly
+
+- **Pathway**: Use of offsets to secure domestic jobs/investment -> orders and niche opportunities occur, but investment may be equity-heavy and job creation can be high-cost -> mixed economic benefit tendencies. [@dunneDefenceIndustrialParticipation2004; @struysOffsetsWeaponsProcurement1996]
+- **Cross-country pattern**: South Africa DIP evidence on orders, equity purchases, and high cost per job; Belgium’s macro/cyclical framing of benefits; multi-country evidence on unemployment/budget motivations for offset use. [@dunneDefenceIndustrialParticipation2004; @struysOffsetsWeaponsProcurement1996; @martinIntroductionOverview1996]
+- **Polarity**: mixed
+- **Moderators**: Benefits are more plausible where projects align with competitive niches and where additionality is credible; otherwise, displacement and overstatement risks dominate. [@markowskiDefenceOffsetsPolicy1996; @fergussonSearchStrategyEvolution1996]
+- **Counterclaims**: Some pathways justify domestic benefits as acceptable even with high costs because they support political coalitions for procurement and, indirectly, alliance capability acquisition. [@dumasOffsetsMitigateMagnify; @markowskiDefenseIndustryPoland2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs describe domestic-benefit claims and their cost/quality limitations; net benefit is repeatedly treated as difficult to assess and context-dependent. [@dunneDefenceIndustrialParticipation2004; @martinIntroductionOverview1996; @fergussonSearchStrategyEvolution1996]
+
+**Relevant quotes**
+- "provide orders to domestic companies and opportunities for companies to develop niches in the international arms market." [@dunneDefenceIndustrialParticipation2004]
+- "Most of this investment has involved equity purchases rather than fixed investment in plant and capital." [@dunneDefenceIndustrialParticipation2004]
+- "amounts to a cost of Rl.6 million per job" [@dunneDefenceIndustrialParticipation2004]
+- "the main goal is the achievement of important cyclical macro-economic advantages" [@struysOffsetsWeaponsProcurement1996]
+
+:::
+
+## Trade Finance and Market Effects
+
+- **Outcome family description**: Exports/countertrade, trade balance/FX/financing constraints, market access/competitiveness, and related market-position effects.
+
+### Recurrent Pathway: Countertrade and finance packages enable deals (with valuation risk)
+
+- **Pathway**: FX and financing constraints -> countertrade/counterpurchase and long-term credit/finance packages -> increased deal feasibility and competition outcomes, but with risks of obscured pricing and hard-to-evaluate “value.” [@martinCounterTradeOffsets1996; @06offsetsandfrencharmsexports; @baskaranRoleOffsetsIndian2004]
+- **Cross-country pattern**: Multi-country countertrade logic (FX reserves and price obscuring), French export competition accounts (finance/counterpurchase), and India evidence of consistent use of long-term credit and countertrade-like tools. [@martinCounterTradeOffsets1996; @06offsetsandfrencharmsexports; @baskaranRoleOffsetsIndian2004]
+- **Polarity**: mixed
+- **Moderators**: Strong transparency/additionality rules can reduce re-labelling risk; weak governance increases valuation disputes and overstatement. [@markowskiMandatoryDefenseOffsetsconceptual2004; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Where procurement urgency or security constraints dominate, offset/finance demands may be downweighted relative to delivery needs. [@matthewsDefenseOffsetsPolicy2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple sources across countries explicitly describe countertrade/finance mechanisms and their valuation challenges; alliance-relevant implications are indirect and conditional on what is procured and how obligations are verified. [@martinCounterTradeOffsets1996; @06offsetsandfrencharmsexports; @baskaranRoleOffsetsIndian2004]
+
+**Relevant quotes**
+- "it protects the often small foreign exchange reserves" [@martinCounterTradeOffsets1996]
+- "barter can obscure the price at which this stock is being sold" [@martinCounterTradeOffsets1996]
+- "finance package proved decisive in winning the competition" [@06offsetsandfrencharmsexports]
+- "availability of long-term credit... encouraged Indian policymakers to approve large scale defense procurement" [@baskaranRoleOffsetsIndian2004]
+
+:::
+
+## Policy and Institutional Dynamics
+
+- **Outcome family description**: Adoption, persistence, termination, or redesign of offset regimes; durable institutional or regulatory shifts.
+
+### Recurrent Pathway: Diffusion via buyer leverage, then redesign under stress
+
+- **Pathway**: Buyer leverage in a buyer’s market -> offsets become a dominant procurement feature -> escalating demands and feasibility/evaluability stress -> policy redesign or partial retreat from maximalist targets. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996]
+- **Cross-country pattern**: Multi-country leverage and policy-stress claims; Canada retreat from 100% targets; South Africa governance arrangements and partial/non-implementation of regional schemes. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996; @hainesDefenseOffsetsRegional2004; @dunneDefenceIndustrialParticipation2004]
+- **Polarity**: mixed
+- **Moderators**: Urgency of supply/treaty imperatives can override offset insistence; stronger governance capacity can make more ambitious designs sustainable. [@matthewsDefenseOffsetsPolicy2004; @markowskiDefenceOffsetsPolicy1996]
+- **Counterclaims**: Some regimes shift toward pre-production sharing/workshare models rather than abolishing collaboration demands, implying institutional persistence with redesign rather than pure rollback. [@chinworthOffsetPoliciesTrends2004]
+- **Strength of evidence**: Moderate.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **moderate**
+- Why: Multiple CMOs explicitly describe diffusion under leverage and subsequent stress-induced redesign; exact trajectories differ by country and institution. [@matthewsDefenseOffsetsPolicy2004; @fergussonSearchStrategyEvolution1996; @hainesDefenseOffsetsRegional2004]
+
+**Relevant quotes**
+- "This reversal of fortunes affords buying nations substantial leverage in extracting concessions" [@matthewsDefenseOffsetsPolicy2004]
+- "this has led to policy stress and the non-fulfillment of vendor offset commitments" [@matthewsDefenseOffsetsPolicy2004]
+- "rejection of the previous goal of seeking 100% offsets" [@fergussonSearchStrategyEvolution1996]
+- "RILS was never seriously implemented" [@hainesDefenseOffsetsRegional2004]
+
+:::
+
+## Other / Unclear
+
+- **Outcome family description**: Use only when none of the above fit; explain what is unclear.
+
+### Single-country pattern: Domestic alternative makes “import-with-offset” look displacement-like
+
+- **Pathway**: Presence of a credible domestic procurement alternative -> import-with-offset competes with domestic production -> offsets framed as displacement rather than addition. [@martinUKExperienceOffsets1996]
+- **Cross-country pattern**: UK-specific framing in the corpus; treated here as an idiosyncratic counterfactual structure rather than a widely evidenced cross-country pathway.
+- **Polarity**: mixed
+- **Moderators**: The stronger the domestic alternative, the more offsets are framed as substituting for domestic work; where domestic alternatives are weak/absent, the framing can invert. [@martinUKExperienceOffsets1996; @martinIntroductionOverview1996]
+- **Counterclaims**: In settings without domestic options, offsets may be framed as more additive (even if imperfect), reducing displacement concerns. [@martinIntroductionOverview1996]
+- **Strength of evidence**: Limited.
+
+::: {.callout-note collapse="true" title="Detail"}
+
+**Strength of evidence**
+- Rating: **limited**
+- Why: Only one CMO is mapped to this family; it highlights an important counterfactual structure but does not establish frequency across settings. [@martinUKExperienceOffsets1996]
+
+**Relevant quotes**
+- "the choice is either the domestic option or an import with offset." [@martinUKExperienceOffsets1996]
+
+:::
+
+# Cross-Family Synthesis
+
+### Key Enabling Contexts (Repeated)
+
+- **Direct, program-linked obligations**: Pathways are most consistently “positive” for alliance-relevant collaboration when obligations are tied to sustainment/autonomy/interoperability needs (maintenance/modification/upgrade competence) rather than diffuse percentage targets. [@skonsEvaluatingDefenseOffsets2004; @taylorUsingProcurementOffsets2004]
+- **Governance capacity (audit + enforcement)**: Stronger evaluability (clear criteria, proof-of-causality, access to audit) and credible enforcement correlate with more predictable delivery and deeper collaboration. [@markowskiDefenceOffsetsPolicy1996; @redlichBusinessOffsetPractitioners1996; @dunneDefenceIndustrialParticipation2004]
+- **Absorptive capacity and scale**: Skilled workforce, institutions, and scale/sustained demand repeatedly enable technology-transfer and industrial-base pathways to persist. [@matthewsDefenseOffsetsPolicy2004; @chinworthDefenseIndustrialisationOffsets1996]
+
+### Main Boundary Conditions / Failure Points
+
+- **Enforcement-lite + complexity**: Where penalties are weak and accounting is complex (banking/multipliers), non-fulfilment and over-claiming risk rises and net benefits become hard to assess. [@matthewsDefenseOffsetsPolicy2004; @hagelinNordicOffsetPolicies2004; @dunneDefenceIndustrialParticipation2004]
+- **Scale and competitiveness constraints**: Mandatory local production/assembly tends to produce premia and closure/rollback where demand is too small or domestic suppliers are not competitive. [@markowskiMandatoryDefenseOffsetsconceptual2004; @molas-gallartOffsetsIndustrialCooperation1996; @matthewsDefenseOffsetsPolicy2004]
+- **Security externalities**: Technology-transfer designs can increase leakage/proliferation risk when security evaluation is not integrated and multilateral restraint is weak. [@markusenArmsTradeIlliberal; @udisUSOffsetPolicy1996]
+
+### Implications for RQ5 (Conditional)
+
+The cross-country “direction” of outcomes is best explained by a small set of recurrent moderators:
+
+- Positive outcomes recur when **direct, capability-relevant collaboration** is combined with **auditability/enforcement** and **absorption capacity** (e.g., sustainment competence and autonomy pathways). [@skonsEvaluatingDefenseOffsets2004; @perlo-freemanOffsetsDevelopmentBrazilian2004; @markowskiDefenceOffsetsPolicy1996]
+- Negative outcomes recur when designs emphasize **mandatory percentage targets**, **weak enforcement**, and **complex crediting**, producing shallow fulfillment, cost pass-through, and hard-to-verify claims. [@markowskiMandatoryDefenseOffsetsconceptual2004; @matthewsDefenseOffsetsPolicy2004; @dunneDefenceIndustrialParticipation2004]
+- Mixed outcomes recur when offsets primarily serve **political legitimation** or **finance/trade-balance objectives**, where procurement may proceed but collaboration depth and evaluability remain contingent. [@dumasOffsetsMitigateMagnify; @martinCounterTradeOffsets1996; @06offsetsandfrencharmsexports]
+
+# Evidence Audit
+
+- CMOs reviewed: 740
+- Countries represented: Argentina, Australia, Belgium, Brazil, Canada, Finland, France, Germany, Greece, India, Indonesia, Israel, Japan, multi-country, Netherlands, New Zealand, Norway, Philippines, Poland, Saudi Arabia, Singapore, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, United Kingdom, United States
+- Outcome families represented: alliance_security_outcomes, partnerships_and_supply_chains, industrial_capability_and_base, technology_transfer_and_learning, governance_compliance_and_evaluation, procurement_performance, procurement_politics_and_decision, domestic_economic_benefits, trade_finance_and_market_effects, policy_and_institutional_dynamics, other_unclear
+- Recurrent pathways extracted: 17 (plus 1 single-country “Other / Unclear” pattern)
+- Pathways classified as positive/negative/mixed: 2 positive; 9 negative; 6 mixed
+- Missing citation mappings: none (all referenced PDFs are mapped to BibTeX keys in `data/cmo/pdf_to_bibtex_key.yml`)
+
+# References
+
+- [@06offsetsandfrencharmsexports]
+- [@al-ghrairSaudiArabiaOffsets1996]
+- [@baskaranRoleOffsetsIndian2004]
+- [@chinworthDefenseIndustrialisationOffsets1996]
+- [@chinworthOffsetPoliciesTrends2004]
+- [@dumasOffsetsMitigateMagnify]
+- [@dunneDefenceIndustrialParticipation2004]
+- [@fergussonSearchStrategyEvolution1996]
+- [@hagelinNordicOffsetPolicies2004]
+- [@hainesDefenseOffsetsRegional2004]
+- [@markowskiDefenceOffsetsPolicy1996]
+- [@markowskiDefenseIndustryPoland2004]
+- [@markowskiDefenseOffsetsAustralia2004]
+- [@markowskiMandatoryDefenseOffsetsconceptual2004]
+- [@markusenArmsTradeIlliberal]
+- [@martinConcludingRemarks1996]
+- [@martinCounterTradeOffsets1996]
+- [@martinIntroductionOverview1996]
+- [@martinUKExperienceOffsets1996]
+- [@matthewsDefenseOffsetsPolicy2004]
+- [@molas-gallartOffsetsIndustrialCooperation1996]
+- [@perlo-freemanOffsetsDevelopmentBrazilian2004]
+- [@redlichBusinessOffsetPractitioners1996]
+- [@skonsEvaluatingDefenseOffsets2004]
+- [@struysOffsetsWeaponsProcurement1996]
+- [@taylorUsingProcurementOffsets2004]
+- [@udisUSOffsetPolicy1996]
+- [@udisUSSwissF51996]
+
+::: {#refs}
+:::
