@@ -16,6 +16,11 @@ website:
       - section: "Analysis"
         contents:
           - auto: "analysis/*.qmd"
+      - section: "Synthesis"
+        contents:
+          - auto: "synthesis/*.qmd"
+      - text: Annotated Bibliography
+        href: annotated_bibliography.qmd
 
 format:
   html:
