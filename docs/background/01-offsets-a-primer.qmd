@@ -1,0 +1,131 @@
+---
+title: Offsets in Defence Procurement
+subtitle: A Primer
+---
+
+## What offsets are
+
+In defence procurement and the international arms trade,  **offsets are best understood as side obligations attached to a purchase contract**: the buyer requires the seller to provide additional economic/industrial/technology benefits alongside delivery of the weapon system or defence service. 
+[@matthewsRiseDemiseGovernmentMandated2019; @anicettiDefenceOffsetsGlobal2023]
+
+A widely used official definition comes from the Bureau of Industry and Security in the "U.S. Department of Commerce. In its annual reporting on offsets involving United States contractors, it describes “offsets in defense trade” as **industrial compensation arrangements required by foreign governments** as a condition of purchasing defence articles and services from a non-domestic source. [@bis_offsets_report_28th_2024] 
+
+That same report emphasises two important practical points about what “offsets” include in real deals:
+
+- Offsets can take many forms—such as **co-production, licensed production, subcontracting, technology transfer, purchasing, and credit assistance**—and can be either directly related to the defence item sold or unrelated to it.  [@bis_offsets_report_28th_2024]  
+- Offsets are not merely informal “goodwill”: they are typically documented and managed as obligations, with monitoring and crediting of compliance. [@bis_offsets_report_28th_2024] 
+
+A complementary (trade-law) lens is found in the World Trade Organization’s Government Procurement Agreement (GPA). The GPA uses “offsets” to mean measures used to encourage local development or improve balance-of-payments **via requirements like domestic content, technology licensing, investment requirements, countertrade, or similar conditions** (wording appears in the GPA’s explanatory footnote to the offsets article). [@wto_gpa_1994] This is conceptually useful because it clarifies that offsets are a **policy instrument category** (a family of performance requirements), not a single mechanism.
+
+Across the academic and policy literature, there is **no single universally accepted definition** of defence offsets, in part because practices differ by country and by programme, and because “offset-like” requirements are sometimes re-labelled (for example as “industrial participation” or “industrial co-operation”) while retaining similar substance. [@matthewsRiseDemiseGovernmentMandated2019; @anicettiDefenceOffsetsGlobal2023]
+
+
+Finally, it helps to distinguish offsets from neighbouring “countertrade” concepts. One defence-offset reference text treats offsets as part of countertrade but notes that—unlike barter—offsets generally involve currency-based procurement (the main contract is paid normally) while the offset is an additional set of undertakings; and unlike classic counterpurchase, the supplier is not simply committing to buy back a specified set of goods from the buyer. [@anicettiDefenceOffsetsGlobal2023]
+
+## Where offsets fit conceptually
+
+Offsets sit at the intersection of four systems: defence procurement, industrial policy, trade rules, and national security.
+
+**Defence procurement package (contract architecture).** A helpful way to locate offsets conceptually is to treat them as one element inside a broader procurement “bundle”: the buyer acquires the platform/service; in parallel, the seller undertakes compensatory obligations. The BIS reporting framework formalises this bundle as:
+
+- a **defence export sales contract** (the main sale),  
+- an **offset agreement** (the seller’s agreed offset obligations), and  
+- **offset transactions** (the concrete projects/activities for which the seller claims credit toward fulfilling its obligations). [@bis_offsets_report_28th_2024] 
+
+BIS defines an “offset agreement” as the offsets a firm agrees to in order to conclude an export sale, and an “offset transaction” as an activity for which credit is claimed toward fulfilling the offset agreement. [@bis_offsets_report_28th_2024]  This is more than semantics: it underpins how governments administer programmes (obligation-setting, project approval, monitoring, and closure).
+
+**Industrial policy tool (why buyers want them).** Offsets are commonly justified as a way to convert a one-off procurement spend into longer-run domestic capability: jobs, supply chains, skills, R&D, and technology learning. fileciteturn2file6 fileciteturn2file7 In Matthews’ account of defence market political economy, offsets are demanded because they are perceived as leveraging foreign vendors to expand indigenous capability, even though outcomes are contested and uneven. 
+
+**Trade-policy and competition lens (why they are constrained).** Because offsets can discriminate in favour of domestic firms and can redirect supply chains, they conflict with standard procurement non-discrimination principles. The WTO GPA’s rule is explicit: for procurements covered by the GPA, entities shall not impose, seek, or consider offsets in supplier qualification, tender evaluation, or contract award (with a limited pathway for negotiated conditions for developing countries at accession, and with offsets not to be used as contract-award criteria). [@wto_gpa_1994]
+
+Within the European Union legal order, the European Commission’s guidance on the Defence and Security Procurement Directive is blunt: offset requirements violate primary EU law principles and the Directive “cannot allow, tolerate or regulate” them; any justification must be exceptional and Treaty-based (notably Article 346 TFEU), with strict interpretation, proportionality, and case-by-case assessment—and economic considerations are not accepted as grounds for restricting Treaty freedoms. [@ec_offsets_guidance_15413]
+
+**National security and the “non-normal” market.** Defence markets are atypical: security-of-supply, sovereignty, and export controls create conditions where governments commonly intervene and where textbook competitive assumptions often do not apply. Matthews frames defence procurement and trade as inherently protectionist and institutionally constrained relative to normal commercial sectors, which helps explain why offsets persist even when criticised as trade-distorting. [@matthewsRiseDemiseGovernmentMandated2019]
+
+## Main types and taxonomies
+
+Offsets are classified in several overlapping ways. The key is to see these as different *cuts* through the same phenomenon: one cut by relationship to the purchased system; another cut by policy regime design; another by economic sector targeted.
+
+**Direct vs indirect (relationship to the purchased system).** BIS defines:
+
+- **Direct offsets** as transactions directly related to the defence export sale covered by the offset agreement. 
+- **Indirect offsets** as transactions unrelated to the exported article(s) or service(s) under the military export sales agreement. 
+
+BIS also reports that, in its dataset, indirect offsets often constitute a large share of offset activity (for example, in 2022, indirect offsets accounted for a majority of the reported actual value of offset transactions), underscoring how often offsets move beyond the specific platform being purchased. [@bis_offsets_report_28th_2024]
+
+**Defence-related vs civil-related (sectoral target).** One defence-offset text notes that typologies can diverge across US and European usage, but a workable synthesis is: direct offsets are linked to the purchased weapon system; indirect offsets are not—yet indirect offsets can still be either defence-related or civil/commercial depending on where the investment and activity land. 
+
+**Mandatory vs non-mandatory policy regimes (how the state structures the requirement).** Matthews provides a widely used policy taxonomy: many buyers operate mandatory (government-mandated) offset policies that range from more flexible/competitive approaches to more prescriptive rules-based regimes; other countries operate non-mandatory or “offset-equivalent” models in which formal offset quotas may be absent, but industrial engagement is still an important condition of procurement success. 
+
+A practical implication of this taxonomy is that “offset intensity” depends as much on policy design (flexibility, auditing, penalties) as on the headline quota percentage, and that offset-like outcomes can be pursued even when “offsets” as a term is legally or politically sensitive. [@matthewsRiseDemiseGovernmentMandated2019]
+
+
+## How offsets work in practice
+
+Offsets are often discussed abstractly, but they are administered through recognisable programme mechanics. While details vary by jurisdiction, most regimes share a common life-cycle.
+
+**Requirement trigger and obligation setting.** Many offset regimes define (i) a monetary threshold above which offsets apply, and (ii) an expected offset obligation expressed as a percentage of the main contract value. A comparative discussion in one defence offsets text notes that policies typically specify the offset authority, thresholds, penalties, and multipliers, as well as desired types and values of compensation. [@anicettiDefenceOffsetsGlobal2023]
+
+**Negotiation and project/portfolio design.** In rules-based regimes, the buyer often specifies preferred categories (technology transfer, local content, export promotion, investment, training) and the foreign supplier proposes a set of projects to discharge the obligation. Matthews describes how an Offset Authority may set strategic goals (diversification, jobs, skills, R&D investment, supply chains, export opportunities) and how suppliers respond by proposing multiple projects or by structuring delivery through supply chains and partners. 
+
+**Implementation through transactions and crediting.** BIS’s reporting framework distinguishes the *actual value* of an activity from the *credit value* earned toward the obligation, which becomes critical once multipliers are introduced. 
+
+BIS categorises offset transactions into common activity types (co-production, technology transfer, subcontracting, credit assistance, training, licensed production, investment, purchases, and other). This is a useful “menu” for thinking about how offsets show up on the ground:
+
+- **Work placement/local content** (subcontracting; co-production; licensed production) can build production capacity and supply chain integration. 
+- **Technology transfer and training** focus on knowledge, IP-constrained know-how, skills, and operational readiness. 
+- **Purchases and investment** can be used to steer economic benefits into targeted sectors, sometimes well beyond the purchased platform. 
+
+**Multipliers (credit engineering).** Multipliers are central to how modern offset regimes steer effort into priority areas. BIS defines a multiplier as a factor applied to actual value to calculate credit value; foreign purchasers use multipliers to incentivise offsets aligned with targeted areas of economic growth. 
+
+This creates a “policy dial”: with higher multipliers, buyers can induce suppliers to prioritise certain categories (for example higher-end R&D or high-technology transfer) even where actual spend is smaller. [@bis_offsets_report_28th_2024]
+
+**Banking, penalties, and enforcement.** Many regimes use mechanisms such as banking (credit carryover), penalties for non-fulfilment, and—informally or formally—effects on future eligibility. Matthews notes a trend toward increasingly punitive postures in some regimes (including limits on banking and tougher penalties), and also observes that vendors facing default may sometimes prefer to pay the penalty unless reputational and future-access costs bite. 
+
+At the firm level, Matthews reports several strategies suppliers may use to discharge obligations: employ specialist brokers, cascade liabilities down their supply chain, propose multiple projects, or (least desirably) default and pay penalties. [@matthewsRiseDemiseGovernmentMandated2019]
+
+**Illustrative country designs.** A single “average offset policy” does not exist, but concrete examples help clarify what sits inside the policy envelope:
+
+- Turkey is described in one defence-offset overview as requiring offsets above a threshold, splitting requirements across local content/industrial participation and other goals (such as export promotion and technology transfer), using multipliers, and applying penalties that do not extinguish the underlying obligation.  
+- Peru is described as permitting a mix of direct and indirect projects, using positive and negative multipliers, allowing offset banking (including for pre-performance and over-achievement), and applying penalties within its regime. 
+- Taiwan is described as setting typical offset values as a share of contract value, specifying a direct/indirect balance, using a wide multiplier range (including high multipliers for R&D and high-end technology transfer), and linking non-fulfilment to penalties and potential blacklisting, while noting that offset banking was discontinued. 
+
+These examples illustrate the conceptual point: in practice, offsets are a **governed credit-and-compliance system**, not merely an aspiration. [@anicettiDefenceOffsetsGlobal2023]
+
+## Why offsets are controversial
+
+Offsets persist globally, but they remain controversial because they are often asked to deliver multiple objectives simultaneously (industrial upgrading, employment, strategic autonomy, and political legitimacy) while operating through opaque and hard-to-evaluate contractual mechanisms. 
+
+**Cost and efficiency debates.** A recurring critique is that offsets can increase the effective cost of procurement: suppliers may price in the cost of meeting offset requirements, and the buyer may ultimately bear the burden through higher contract prices. Matthews argues that offset is “not costless” and that added costs will, in most circumstances, be borne by the customer via inflated primary contract prices. [@matthewsRiseDemiseGovernmentMandated2019]
+
+The Transparency International offsets report similarly stresses that offsets need to be paid for and that cost falls on the buying government rather than the supplier; it also highlights opportunity cost (resources could be deployed through other industrial policy instruments) and potential inefficiencies from restricted competition and hidden premiums. [@magahyDefenceOffsetsAddressing2010d]
+
+**Market distortion and trade diversion.** Defence offsets are widely characterised as market-distorting and capable of driving trade diversion and misallocation of resources (for instance by imposing supply chains that are less efficient than the ones they replace). This is also why “offsets” are explicitly disciplined in international procurement rules like the WTO GPA for covered procurements. [@wto_gpa_1994]
+
+**Transparency and corruption risk.** Offsets have long been criticised for opacity: complex project portfolios, discretion in crediting, and limited public reporting can create risk. The Transparency International report argues that, in many countries, weak due diligence, limited monitoring, absent audits, and lack of publication of results can make offsets a permissive environment for corruption, especially when complexity is high and when causality (“would this investment have happened anyway?”) is hard to verify. [@magahyDefenceOffsetsAddressing2010d]
+
+Matthews notes that concern about corruption risk has pushed some firms to align offset operations closely with compliance and legal functions, and that due diligence on beneficiaries is treated as central by many firms engaged in offsets. [@matthewsRiseDemiseGovernmentMandated2019]
+
+**Technology transfer sustainability and absorptive capacity.** A central offset promise is technology transfer, but outcomes depend on whether the recipient can absorb, adapt, and sustain capability (skills, supplier ecosystems, and R&D base). Matthews highlights tensions between customers seeking maximum technology transfer and vendors protecting intellectual property and competitive advantage, and argues that offset goals are often only partially achieved across recipient countries. 
+
+He also identifies three structural conditions shaping offset feasibility and success: procurement scale (buyer leverage), recipient absorptive capacity, and the nature/flexibility of the offset strategy.  This provides a conceptual diagnostic: offsets are more likely to “work” where capability-building is complementary to existing industrial and knowledge ecosystems, and less likely where offsets are treated as a shortcut to leapfrogging without the underlying capacity. [@matthewsRiseDemiseGovernmentMandated2019]
+
+**Evidence challenges.** A persistent meta-problem is that offsets are difficult to evaluate rigorously: projects differ, counterfactuals are contested, and reporting is uneven. Transparency International argues there is often a general lack of monitoring by importing governments and that impacts are not known with certainty in many settings, motivating calls for value-for-money audits and independent evaluations across programme life-cycles. [@magahyDefenceOffsetsAddressing2010d]
+
+## Trends and evolving alternatives
+
+Offsets are not static. Two shifts stand out: tighter governance and gradual migration toward broader “industrial co-operation” frameworks.
+
+**From prescription to partnership.** Matthews proposes that persistent frictions (over-prescription, disputes over technology valuation, and implementation burdens) can push relationships from mandated offsets toward broader partnership models. He argues offsets are unlikely to disappear quickly, but may diminish in importance relative to a spectrum of partnership options (co-development, long-run industrial collaboration, and more proactive government-to-government industrial strategies). [@matthewsRiseDemiseGovernmentMandated2019]
+
+This evolution is also presented as demand-driven: buyers still want capability and suppliers still want market access and profitability, but “partnership” can sometimes package these aims with more flexibility and less confrontational compliance logic. 
+
+**Regulatory constraint and semantic adaptation.** In Europe, the core legal tension is that across-the-board offset requirements are treated as incompatible with EU internal market principles. The European Commission’s guidance reiterates that offsets cannot be required or induced under the Directive and can only be justified in exceptional cases under Article 346 TFEU, with strict limits and case-by-case assessment. citeturn1view1
+
+Matthews links these constraints to the decline of some earlier national practices, including the end of the UK’s Industrial Participation approach after transposition of the Directive, alongside continued pressure for national-security-based exemptions in major programmes. [@matthewsRiseDemiseGovernmentMandated2019]
+
+**Non-mandated and “offset-equivalent” models.** Even where governments deny operating formal offset policies, they may still create offset-like effects via domestic content rules or industrial engagement expectations. Matthews describes a “proxy” model in which domestic-preference rules operate like offsets in everything but name, and an Australian model where formal offsets were abandoned but overseas suppliers are still expected to engage with domestic industry (with industrial investment treated as a practical condition of success). [@matthewsRiseDemiseGovernmentMandated2019]
+
+BIS’s own reporting underscores another dimension of this tension: while US policy characterises offsets as economically inefficient and trade distorting—and prohibits US government agencies from encouraging or entering directly into offset arrangements—industry nonetheless reports offsets as a marketplace reality for winning international defence sales. [@bis_offsets_report_28th_2024]
+
+**A conceptual “bottom line.”** Offsets are best seen neither as a minor contractual add-on nor as a guaranteed development engine. Conceptually, they are a **governed system of procurement-linked performance requirements**, used to steer parts of the economic surplus from defence procurement toward domestic capability objectives, operating in—and constrained by—trade and competition rules, and shaped by the non-standard political economy of defence markets. 

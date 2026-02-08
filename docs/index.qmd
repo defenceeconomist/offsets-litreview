@@ -20,7 +20,7 @@ A realist evidence synthesis and comparative case mapping of defence offsets/ind
 ## Method
 
 - **Realist evidence synthesis (CMO):** Extracts Context-Mechanism-Outcome configurations from sources, then clusters mechanism tags into a small set of pathways (themes) to explain what works, for whom, and under what conditions; thematic summaries link pathways to alliance-relevant outcomes and enabling or constraining contexts.
-- **Comparative case mapping:** Uses a consistent rubric to compare countries and programmes on policy design, depth of collaboration, alliance integration markers, and documented risks.
+- **Comparative case mapping:** Uses a consistent rubric to compare countries and programmes on policy design, depth of collaboration, alliance integration markers, and documented risks (prompt: `prompts/comparative_case_mapping_prompt.md`).
 - **Two-lane search strategy:** Parallel searches for (1) offsets/industrial participation literature and (2) alliance-relevant industrial cooperation/interoperability literature to avoid terminology gaps.
 - **Evidence mix:** Academic literature plus targeted grey literature (government policy, audits, NATO/EU material, and governance analyses).
 
